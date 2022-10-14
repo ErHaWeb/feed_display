@@ -1,0 +1,28 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+       data-namespace-typo3-fluid="true" lang="en">
+
+<f:comment><!-- Title --></f:comment>
+<f:if condition="{item.title}">
+    <div class="item-title">
+        <h3>
+            <f:if condition="{item.links.0}">
+                <f:then>
+                    <f:link.external uri="{item.links.0}" target="{settings.linkTarget}">
+                        <f:if condition="{settings.maxHeaderLength}">
+                            <f:then>{item.title -> f:format.crop(maxCharacters:settings.maxHeaderLength,respectWordBoundaries: 0) -> f:format.htmlentitiesDecode()}</f:then>
+                            <f:else>{item.title -> f:format.htmlentitiesDecode()}</f:else>
+                        </f:if>
+                    </f:link.external>
+                </f:then>
+                <f:else>
+                    <f:if condition="{settings.maxHeaderLength}">
+                        <f:then>{item.title -> f:format.crop(maxCharacters: settings.maxHeaderLength,respectWordBoundaries:0) -> f:format.htmlentitiesDecode()}</f:then>
+                        <f:else>{item.title -> f:format.htmlentitiesDecode()}</f:else>
+                    </f:if>
+                </f:else>
+            </f:if>
+        </h3>
+    </div>
+</f:if>
+
+</html>

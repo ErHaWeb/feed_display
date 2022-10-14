@@ -1,0 +1,14 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+       data-namespace-typo3-fluid="true" lang="en">
+
+<f:comment><!-- Update Date --></f:comment>
+<f:if condition="{item.updatedDate}">
+    <div class="item-updatedDate">
+        <strong>
+            <f:translate key="item.updatedDate"/>
+        </strong>
+        <f:format.date date="{item.updatedDate}" format="%d.%m.%Y"/>
+    </div>
+</f:if>
+
+</html>

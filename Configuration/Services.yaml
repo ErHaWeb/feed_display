@@ -1,0 +1,22 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  ErHaWeb\FeedDisplay\:
+    resource: '../Classes/*'
+    exclude: '../Classes/Domain/Model/*'
+
+  ErHaWeb\FeedDisplay\Controller\FeedController:
+    arguments:
+      $cache: '@cache.feeddisplay'
+      $feed: '@SimplePie\SimplePie'
+
+  SimplePie\SimplePie:
+    public: true
+
+  cache.feeddisplay:
+    class: TYPO3\CMS\Core\Cache\Frontend\FrontendInterface
+    factory: [ '@TYPO3\CMS\Core\Cache\CacheManager', 'getCache' ]
+    arguments: [ 'feeddisplay' ]

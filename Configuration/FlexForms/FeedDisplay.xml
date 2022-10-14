@@ -1,0 +1,266 @@
+<T3DataStructure>
+    <sheets>
+        <general>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>
+                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.sheet_general
+                    </sheetTitle>
+                </TCEforms>
+                <el>
+                    <settings.feedUrl>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.feedUrl.label
+                            </label>
+                            <description>
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.feedUrl.description
+                            </description>
+                            <config>
+                                <type>input</type>
+                                <size>50</size>
+                                <default>https://typo3.org/rss</default>
+                                <placeholder>https://typo3.org/rss</placeholder>
+                                <eval>required,nospace</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.feedUrl>
+                    <settings.maxFeedCount>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.maxFeedCount.label
+                            </label>
+                            <description>
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.maxFeedCount.description
+                            </description>
+                            <config>
+                                <type>input</type>
+                                <eval>num</eval>
+                                <size>3</size>
+                                <default>10</default>
+                                <placeholder>999</placeholder>
+                            </config>
+                        </TCEforms>
+                    </settings.maxFeedCount>
+                    <settings.maxContentLength>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.maxContentLength.label
+                            </label>
+                            <description>
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.maxContentLength.description
+                            </description>
+                            <config>
+                                <type>input</type>
+                                <eval>num</eval>
+                                <size>3</size>
+                                <default>500</default>
+                                <placeholder>999</placeholder>
+                            </config>
+                        </TCEforms>
+                    </settings.maxContentLength>
+                    <settings.maxHeaderLength>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.maxHeaderLength.label
+                            </label>
+                            <description>
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.maxHeaderLength.description
+                            </description>
+                            <config>
+                                <type>input</type>
+                                <eval>num</eval>
+                                <size>3</size>
+                                <default>80</default>
+                                <placeholder>999</placeholder>
+                            </config>
+                        </TCEforms>
+                    </settings.maxHeaderLength>
+                    <settings.logoWidth>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.logoWidth.label
+                            </label>
+                            <description>
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.logoWidth.description
+                            </description>
+                            <config>
+                                <type>input</type>
+                                <size>10</size>
+                                <placeholder>feed image width</placeholder>
+                            </config>
+                        </TCEforms>
+                    </settings.logoWidth>
+                    <settings.logoHeight>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.logoHeight.label
+                            </label>
+                            <description>
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.logoHeight.description
+                            </description>
+                            <config>
+                                <type>input</type>
+                                <size>10</size>
+                                <placeholder>feed image height</placeholder>
+                            </config>
+                        </TCEforms>
+                    </settings.logoHeight>
+                    <settings.feedIconWidth>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.feedIconWidth.label
+                            </label>
+                            <description>
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.feedIconWidth.description
+                            </description>
+                            <config>
+                                <type>input</type>
+                                <size>10</size>
+                                <default>26</default>
+                                <placeholder>feed icon width</placeholder>
+                            </config>
+                        </TCEforms>
+                    </settings.feedIconWidth>
+                    <settings.feedIconHeight>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.feedIconHeight.label
+                            </label>
+                            <description>
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.feedIconHeight.description
+                            </description>
+                            <config>
+                                <type>input</type>
+                                <size>10</size>
+                                <default>26</default>
+                                <placeholder>feed icon height</placeholder>
+                            </config>
+                        </TCEforms>
+                    </settings.feedIconHeight>
+                </el>
+            </ROOT>
+        </general>
+        <advanced>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>
+                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.sheet_advanced
+                    </sheetTitle>
+                </TCEforms>
+                <el>
+                    <settings.dateFormat>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.dateFormat.label
+                            </label>
+                            <description>
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.dateFormat.description
+                            </description>
+                            <config>
+                                <type>input</type>
+                                <size>40</size>
+                                <default>%d. %B %Y</default>
+                                <placeholder>%d. %B %Y</placeholder>
+                            </config>
+                        </TCEforms>
+                    </settings.dateFormat>
+                    <settings.stripTags>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.stripTags.label
+                            </label>
+                            <description>
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.stripTags.description
+                            </description>
+                            <config>
+                                <type>check</type>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.stripTags.I.yes</numIndex>
+                                        <numIndex index="1"/>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.stripTags>
+                    <settings.linkTarget>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.linkTarget.label
+                            </label>
+                            <description>
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.linkTarget.description
+                            </description>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.linkTarget.I.blank
+                                        </numIndex>
+                                        <numIndex index="1">_blank</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.linkTarget.I.self
+                                        </numIndex>
+                                        <numIndex index="1">_self</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.linkTarget.I.parent
+                                        </numIndex>
+                                        <numIndex index="1">_parent</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.linkTarget.I.top
+                                        </numIndex>
+                                        <numIndex index="1">_top</numIndex>
+                                    </numIndex>
+                                </items>
+                                <default>_blank</default>
+                                <minitems>0</minitems>
+                                <maxitems>1</maxitems>
+                                <size>1</size>
+                            </config>
+                        </TCEforms>
+                    </settings.linkTarget>
+                    <settings.errorMessage>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.errorMessage.label
+                            </label>
+                            <description>
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.errorMessage.description
+                            </description>
+                            <config>
+                                <type>input</type>
+                                <size>40</size>
+                                <placeholder>It's not possible to reach the feed.</placeholder>
+                            </config>
+                        </TCEforms>
+                    </settings.errorMessage>
+                    <settings.cacheDuration>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.cacheDuration.label
+                            </label>
+                            <description>
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.cacheDuration.description
+                            </description>
+                            <config>
+                                <type>input</type>
+                                <size>40</size>
+                                <default>3600</default>
+                                <placeholder>3600</placeholder>
+                            </config>
+                        </TCEforms>
+                    </settings.cacheDuration>
+                </el>
+            </ROOT>
+        </advanced>
+    </sheets>
+</T3DataStructure>

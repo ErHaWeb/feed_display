@@ -1,0 +1,14 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+       data-namespace-typo3-fluid="true" lang="en">
+
+<f:comment><!-- Source --></f:comment>
+<f:if condition="{item.source}">
+    <div class="item-source">
+        <strong>
+            <f:translate key="item.source"/>
+        </strong>
+        <f:format.number>{item.source}</f:format.number>
+    </div>
+</f:if>
+
+</html>

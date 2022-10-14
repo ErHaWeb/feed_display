@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2022-10-14T10:27:00Z" product-name="feed_display">
+        <header/>
+        <body>
+            <trans-unit id="pi1_title" xml:space="preserve">
+                <source>Feed Display</source>
+            </trans-unit>
+            <trans-unit id="pi1_plus_wiz_description" xml:space="preserve">
+                <source>Fetch and parse RSS, Atom or RDF web feeds for frontend display</source>
+            </trans-unit>
+            <trans-unit id="flexform.sheet_general" xml:space="preserve">
+                <source>General</source>
+            </trans-unit>
+            <trans-unit id="flexform.feedUrl.label" xml:space="preserve">
+                <source>Feed URL</source>
+            </trans-unit>
+            <trans-unit id="flexform.feedUrl.description" xml:space="preserve">
+                <source>URL that is fetched by the service</source>
+            </trans-unit>
+            <trans-unit id="flexform.maxFeedCount.label" xml:space="preserve">
+                <source>Max. items</source>
+            </trans-unit>
+            <trans-unit id="flexform.maxFeedCount.description" xml:space="preserve">
+                <source>Maximum feed items to show</source>
+            </trans-unit>
+            <trans-unit id="flexform.maxContentLength.label" xml:space="preserve">
+                <source>Max. content length</source>
+            </trans-unit>
+            <trans-unit id="flexform.maxContentLength.description" xml:space="preserve">
+                <source>Crop the characters of the feed content to the configured length</source>
+            </trans-unit>
+            <trans-unit id="flexform.maxHeaderLength.label" xml:space="preserve">
+                <source>Max. header length</source>
+            </trans-unit>
+            <trans-unit id="flexform.maxHeaderLength.description" xml:space="preserve">
+                <source>Crop the characters of the feed header to the configured length</source>
+            </trans-unit>
+            <trans-unit id="flexform.linkTarget.label" xml:space="preserve">
+                <source>Target</source>
+            </trans-unit>
+            <trans-unit id="flexform.linkTarget.description" xml:space="preserve">
+                <source>Target attribute to define the feed link behavior</source>
+            </trans-unit>
+            <trans-unit id="flexform.linkTarget.I.blank" xml:space="preserve">
+                <source>Opens in a new window or tab</source>
+            </trans-unit>
+            <trans-unit id="flexform.linkTarget.I.self" xml:space="preserve">
+                <source>Opens in the same frame as it was clicked</source>
+            </trans-unit>
+            <trans-unit id="flexform.linkTarget.I.parent" xml:space="preserve">
+                <source>Opens in the parent frame</source>
+            </trans-unit>
+            <trans-unit id="flexform.linkTarget.I.top" xml:space="preserve">
+                <source>Opens in the full body of the window</source>
+            </trans-unit>
+            <trans-unit id="flexform.logoWidth.label" xml:space="preserve">
+                <source>Logo width</source>
+            </trans-unit>
+            <trans-unit id="flexform.logoWidth.description" xml:space="preserve">
+                <source>Width of the feeds logo image</source>
+            </trans-unit>
+            <trans-unit id="flexform.logoHeight.label" xml:space="preserve">
+                <source>Logo height</source>
+            </trans-unit>
+            <trans-unit id="flexform.logoHeight.description" xml:space="preserve">
+                <source>Height of the feeds logo image</source>
+            </trans-unit>
+            <trans-unit id="flexform.feedIconWidth.label" xml:space="preserve">
+                <source>Feed icon width</source>
+            </trans-unit>
+            <trans-unit id="flexform.feedIconWidth.description" xml:space="preserve">
+                <source>Width of the feeds icon image</source>
+            </trans-unit>
+            <trans-unit id="flexform.feedIconHeight.label" xml:space="preserve">
+                <source>Feed icon height</source>
+            </trans-unit>
+            <trans-unit id="flexform.feedIconHeight.description" xml:space="preserve">
+                <source>Height of the feeds icon image</source>
+            </trans-unit>
+            <trans-unit id="flexform.errorMessage.label" xml:space="preserve">
+                <source>Error message</source>
+            </trans-unit>
+            <trans-unit id="flexform.errorMessage.description" xml:space="preserve">
+                <source>This message is displayed if no feed items could be fetched</source>
+            </trans-unit>
+            <trans-unit id="flexform.sheet_advanced" xml:space="preserve">
+                <source>Advanced</source>
+            </trans-unit>
+            <trans-unit id="flexform.dateFormat.label" xml:space="preserve">
+                <source>Date format</source>
+            </trans-unit>
+            <trans-unit id="flexform.dateFormat.description" xml:space="preserve">
+                <source>Use PHP's strftime() function format</source>
+            </trans-unit>
+            <trans-unit id="flexform.stripTags.label" xml:space="preserve">
+                <source>Strip tags</source>
+            </trans-unit>
+            <trans-unit id="flexform.stripTags.description" xml:space="preserve">
+                <source>Remove HTML tags from the feed content</source>
+            </trans-unit>
+            <trans-unit id="flexform.stripTags.I.yes" xml:space="preserve">
+                <source>yes</source>
+            </trans-unit>
+            <trans-unit id="flexform.cacheDuration.label" xml:space="preserve">
+                <source>Feed cache</source>
+            </trans-unit>
+            <trans-unit id="flexform.cacheDuration.description" xml:space="preserve">
+                <source>Time in seconds (0 = no cache)</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

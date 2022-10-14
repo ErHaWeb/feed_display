@@ -1,0 +1,18 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+       data-namespace-typo3-fluid="true" lang="en">
+
+<f:comment><!-- Content --></f:comment>
+<f:if condition="{item.content}">
+    <div class="item-content">
+        <f:if condition="{settings.maxContentLength}">
+            <f:then>
+                <f:format.html>{item.content -> f:format.crop(maxCharacters: settings.maxContentLength)}</f:format.html>
+            </f:then>
+            <f:else>
+                <f:format.html>{item.content}</f:format.html>
+            </f:else>
+        </f:if>
+    </div>
+</f:if>
+
+</html>

@@ -1,0 +1,52 @@
+{
+  "name": "erhaweb/feed-display",
+  "type": "typo3-cms-extension",
+  "description": "Fetches and parses RSS and Atom web feeds with the SimplePie library and prepares them for frontend display",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "typo3/cms-core": "^11.5 || ^12.0",
+    "simplepie/simplepie": "^1.7"
+  }
+  ,
+  "require-dev": {
+    "roave/security-advisories": "dev-latest"
+  },
+  "authors": [
+    {
+      "name": "Eric Bode",
+      "role": "Developer",
+      "email": "eric.bode@gmx.de",
+      "homepage": "https://www.eric-bode.de"
+    }
+  ],
+  "keywords": [
+    "TYPO3 CMS",
+    "Extension",
+    "Feed",
+    "RSS",
+    "Atom",
+    "RDF"
+  ],
+  "support": {
+    "issues": "https://github.com/EricBode/feed_display/issues"
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "feed_display"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "ErHaWeb\\FeedDisplay\\": "Classes"
+    }
+  },
+  "replace": {
+    "typo3-ter/feed-display": "self.version"
+  },
+  "config": {
+    "allow-plugins": {
+      "typo3/class-alias-loader": true,
+      "typo3/cms-composer-installers": true
+    }
+  }
+}

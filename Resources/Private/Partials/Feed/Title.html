@@ -1,0 +1,22 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+       data-namespace-typo3-fluid="true" lang="en">
+
+<f:comment><!-- Feed Title --></f:comment>
+<f:if condition="{feed.title} || {feed.subscribeUrl}">
+    <div class="feed-title">
+        <h1>
+            <f:if condition="{feed.title}">
+                {feed.title}
+            </f:if>
+            <f:if condition="{feed.subscribeUrl}">
+                <f:link.external uri="{feed.subscribeUrl}" target="{settings.linkTarget}">
+                    <f:image src="EXT:feed_display/Resources/Public/Icons/Extension.svg"
+                             maxWidth="{settings.feedIconWidth}"
+                             maxHeight="{settings.feedIconHeight}"/>
+                </f:link.external>
+            </f:if>
+        </h1>
+    </div>
+</f:if>
+
+</html>

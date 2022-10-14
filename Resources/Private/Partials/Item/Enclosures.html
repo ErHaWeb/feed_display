@@ -1,0 +1,41 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+       data-namespace-typo3-fluid="true" lang="en">
+
+<f:comment><!-- Enclosures --></f:comment>
+<f:if condition="{item.enclosures}">
+    <div class="item-enclosures">
+        <f:variable name="count" value="0"/>
+        <f:for each="{item.enclosures}" as="enclosure">
+            <f:if condition="{enclosure.link}">
+                <f:variable name="count" value="{count + 1}"/>
+            </f:if>
+        </f:for>
+        <f:if condition="{count} > 1">
+            <f:then>
+                <strong>
+                    <f:translate key="item.enclosures"/>
+                </strong>
+                <ul>
+                    <f:for each="{item.enclosures}" as="enclosure">
+                        <li>
+                            <f:link.external uri="{enclosure.link}" target="{settings.linkTarget}">{enclosure.link}
+                            </f:link.external>
+                        </li>
+                    </f:for>
+                </ul>
+            </f:then>
+            <f:else>
+                <f:if condition="{item.enclosures.0.link}">
+                    <strong>
+                        <f:translate key="item.enclosure"/>
+                    </strong>
+                    <f:link.external uri="{item.enclosures.0.link}" target="{settings.linkTarget}">
+                        {item.enclosures.0.link}
+                    </f:link.external>
+                </f:if>
+            </f:else>
+        </f:if>
+    </div>
+</f:if>
+
+</html>

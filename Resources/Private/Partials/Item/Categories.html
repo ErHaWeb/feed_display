@@ -1,0 +1,30 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+       data-namespace-typo3-fluid="true" lang="en">
+
+<f:comment><!-- Categories --></f:comment>
+<f:if condition="{item.categories}">
+    <div class="item-categories">
+        <f:if condition="{item.categories -> f:count()} > 1">
+            <f:then>
+                <strong>
+                    <f:translate key="item.categories"/>
+                </strong>
+                <ul>
+                    <f:for each="{item.categories}" as="category">
+                        <li>
+                            {category.term -> f:format.htmlentitiesDecode()}
+                        </li>
+                    </f:for>
+                </ul>
+            </f:then>
+            <f:else>
+                <strong>
+                    <f:translate key="item.category"/>
+                </strong>
+                {item.categories.0.term -> f:format.htmlentitiesDecode()}
+            </f:else>
+        </f:if>
+    </div>
+</f:if>
+
+</html>
