@@ -1,0 +1,22 @@
+plugin.tx_feeddisplay_pi1 {
+    settings {
+        getFields {
+            feed = {$plugin.tx_feeddisplay_pi1.settings.getFields.feed}
+            items = {$plugin.tx_feeddisplay_pi1.settings.getFields.items}
+        }
+
+        overrideFlexformSettingsIfEmpty = {$plugin.tx_feeddisplay_pi1.settings.overrideFlexformSettingsIfEmpty}
+        maxFeedCount = {$plugin.tx_feeddisplay_pi1.settings.maxFeedCount}
+        maxContentLength = {$plugin.tx_feeddisplay_pi1.settings.maxContentLength}
+        maxHeaderLength = {$plugin.tx_feeddisplay_pi1.settings.maxHeaderLength}
+        logoWidth = {$plugin.tx_feeddisplay_pi1.settings.logoWidth}
+        logoHeight = {$plugin.tx_feeddisplay_pi1.settings.logoHeight}
+        feedIconWidth = {$plugin.tx_feeddisplay_pi1.settings.feedIconWidth}
+        feedIconHeight = {$plugin.tx_feeddisplay_pi1.settings.feedIconHeight}
+        dateFormat = {$plugin.tx_feeddisplay_pi1.settings.dateFormat}
+        stripTags = {$plugin.tx_feeddisplay_pi1.settings.stripTags}
+        linkTarget = {$plugin.tx_feeddisplay_pi1.settings.linkTarget}
+        errorMessage = {$plugin.tx_feeddisplay_pi1.settings.errorMessage}
+        cacheDuration = {$plugin.tx_feeddisplay_pi1.settings.cacheDuration}
+    }
+}

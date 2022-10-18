@@ -1,7 +1,7 @@
 <?php
 
-/*
- * This file is part of the TYPO3 CMS project.
+/**
+ * This file is part of the "feed_display" Extension for TYPO3 CMS.
  *
  * It is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License, either version 2
@@ -21,11 +21,14 @@ declare(strict_types=1);
 
 namespace ErHaWeb\FeedDisplay\Controller;
 
+use ErHaWeb\FeedDisplay\Utility\TypoScript;
 use Psr\Http\Message\ResponseInterface;
 use SimplePie\SimplePie;
 use TYPO3\CMS\Core\Cache\Frontend\FrontendInterface;
 use TYPO3\CMS\Core\Core\Environment;
+use TYPO3\CMS\Core\TypoScript\TypoScriptService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 class FeedController extends ActionController
@@ -47,21 +50,30 @@ class FeedController extends ActionController
     }
 
     /**
+     * Initializes the current action
+     *
+     * @return void
+     */
+    public function initializeAction(): void
+    {
+        $this->buildSettings();
+    }
+
+    /**
      * @return ResponseInterface
      */
     public function displayAction(): ResponseInterface
     {
         $cacheIdentifier = "feeddisplay";
+        $data = $this->cache->get($cacheIdentifier);
         $cacheDuration = (int)$this->settings['cacheDuration'];
 
-        if ($cacheDuration) {
-            if (($data = $this->cache->get($cacheIdentifier)) === false) {
-                $data = $this->getFeedData();
-                $lifetime = (int)$this->settings['cacheDuration'];
-                $this->cache->set($cacheIdentifier, $data, [], $lifetime);
-            }
-        } else {
+        if ($cacheDuration === 0) {
             $data = $this->getFeedData();
+            $this->cache->remove($cacheIdentifier);
+        } else if ($data === false || $data['settings'] !== $this->settings) {
+            $data = $this->getFeedData();
+            $this->cache->set($cacheIdentifier, $data, [], $cacheDuration);
         }
 
         $assignedValues = [
@@ -69,7 +81,6 @@ class FeedController extends ActionController
         ];
 
         $this->view->assignMultiple($assignedValues);
-
         return $this->htmlResponse();
     }
 
@@ -79,50 +90,70 @@ class FeedController extends ActionController
     private function getFeedData(): array
     {
         $this->initFeed();
+
+        $getFeedFields = GeneralUtility::trimExplode(',', $this->settings['getFields']['feed']);
+
         $data = [];
-        $data['feed'] = [
-            'encoding' => $this->feed->get_encoding(),
-            'type' => $this->feed->get_type(),
-            'subscribeUrl' => $this->feed->subscribe_url(),
-            'base' => $this->feed->get_base(),
-            'title' => $this->feed->get_title(),
-            'categories' => $this->feed->get_categories(),
-            'authors' => $this->feed->get_authors(),
-            'contributors' => $this->feed->get_contributors(),
-            'links' => $this->feed->get_links(),
-            'description' => $this->feed->get_description(),
-            'copyright' => $this->feed->get_copyright(),
-            'language' => $this->feed->get_language(),
-            'latitude' => $this->feed->get_latitude(),
-            'longitude' => $this->feed->get_longitude(),
-            'imageTitle' => $this->feed->get_image_title(),
-            'image' => $this->getImage($this->feed->get_image_url()),
-            'imageLink' => $this->feed->get_image_link(),
-            'imageWidth' => $this->feed->get_image_width(),
-            'imageHeight' => $this->feed->get_image_height(),
-        ];
+        $data['settings'] = $this->settings;
+        $data['feed']['subscribeUrl'] = $this->feed->subscribe_url();
+
+        foreach ($getFeedFields as $getFeedField) {
+            $fieldParts = GeneralUtility::trimExplode('|', $getFeedField);
+            $field = GeneralUtility::underscoredToLowerCamelCase($fieldParts[0]);
+            $value = $this->getValue($this->feed, $fieldParts);
+
+            if ($getFeedField === 'image_url') {
+                $data['feed']['image'] = $this->getImage($value);
+            }
+
+            $data['feed'][$field] = $value;
+        }
+
 
         $maxFeedCount = (int)($this->settings['maxFeedCount'] ?? 0);
         foreach ($this->feed->get_items(0, $maxFeedCount) as $item) {
-            $data['items'][] = [
-                'id' => $item->get_id(),
-                'title' => $item->get_title(),
-                'content' => $item->get_content(),
-                'categories' => $item->get_categories(),
-                'authors' => $item->get_authors(),
-                'contributors' => $item->get_contributors(),
-                'copyright' => $item->get_copyright(),
-                'date' => (int)$item->get_date('U'),
-                'updatedDate' => (int)$item->get_updated_date('U'),
-                'links' => $item->get_links(),
-                'enclosures' => $item->get_enclosures(),
-                'latitude' => $item->get_latitude(),
-                'longitude' => $item->get_longitude(),
-                'source' => $item->get_source(),
-            ];
-        }
+            $getItemsFields = GeneralUtility::trimExplode(',', $this->settings['getFields']['items']);
+            $itemProperties = [];
 
+            foreach ($getItemsFields as $getItemsField) {
+                $fieldParts = GeneralUtility::trimExplode('|', $getItemsField);
+                $field = GeneralUtility::underscoredToLowerCamelCase($fieldParts[0]);
+                $value = $this->getValue($item, $fieldParts);
+                $itemProperties[$field] = $value;
+            }
+
+            $data['items'][] = $itemProperties;
+        }
         return $data;
+    }
+
+    /**
+     * @param object $object
+     * @param array $fieldParts
+     * @return mixed
+     */
+    private function getValue(object $object, array $fieldParts): mixed
+    {
+        $getMethod = 'get_' . $fieldParts[0];
+        $value = null;
+
+        if (method_exists($object, $getMethod)) {
+            switch (count($fieldParts)) {
+                case 1:
+                    $value = $object->$getMethod();
+                    break;
+                case 2:
+                    $value = $object->$getMethod($fieldParts[1]);
+                    break;
+                case 3:
+                    $value = $object->$getMethod($fieldParts[1], $fieldParts[2]);
+                    break;
+                case 4:
+                    $value = $object->$getMethod($fieldParts[1], $fieldParts[2], $fieldParts[3]);
+                    break;
+            }
+        }
+        return $value;
     }
 
 
@@ -160,19 +191,56 @@ class FeedController extends ActionController
     {
         $feedUrl = $this->settings['feedUrl'] ?? '';
         if (isset($feedUrl) && $feedUrl !== '') {
-            if (function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc()) {
-                $feedUrl = stripslashes($feedUrl);
-            }
-
+            $feedUrl = stripslashes($feedUrl);
             $this->feed->set_feed_url($feedUrl);
-
-            $stripTags = (int)($this->settings['stripTags'] ?? 0);
-            if ($stripTags) {
-                $this->feed->strip_htmltags();
-            }
-
             $this->feed->enable_cache(false);
             $this->feed->init();
         }
+    }
+
+    /**
+     * @return void
+     */
+    private function buildSettings(): void
+    {
+        $fullTypoScriptSettings = $this->configurationManager->getConfiguration(
+            ConfigurationManagerInterface::CONFIGURATION_TYPE_FULL_TYPOSCRIPT
+        );
+        $tsSettings = $fullTypoScriptSettings['plugin.']['tx_feeddisplay_pi1.']['settings.'];
+
+        $originalSettings = $this->configurationManager->getConfiguration(
+            ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS
+        );
+
+        // Use stdWrap for given defined settings
+        if (isset($originalSettings['useStdWrap']) && !empty($originalSettings['useStdWrap'])) {
+            $typoScriptService = GeneralUtility::makeInstance(TypoScriptService::class);
+            $typoScriptArray = $typoScriptService->convertPlainArrayToTypoScriptArray($originalSettings);
+            $stdWrapProperties = GeneralUtility::trimExplode(',', $originalSettings['useStdWrap'], true);
+            foreach ($stdWrapProperties as $key) {
+                if (is_array($typoScriptArray[$key . '.']) && $this->configurationManager->getContentObject()) {
+                    $originalSettings[$key] = $this->configurationManager->getContentObject()->stdWrap(
+                        $typoScriptArray[$key] ?? '',
+                        $typoScriptArray[$key . '.']
+                    );
+                }
+            }
+        }
+
+        // start override
+        if (isset($tsSettings['overrideFlexformSettingsIfEmpty'])) {
+            $typoScriptUtility = GeneralUtility::makeInstance(TypoScript::class);
+            $originalSettings = $typoScriptUtility->override($originalSettings, $tsSettings);
+        }
+
+        foreach (($GLOBALS['TYPO3_CONF_VARS']['EXT']['feed_display']['Controller/FeedController.php']['overrideSettings'] ?? []) as $_funcRef) {
+            $_params = [
+                'originalSettings' => $originalSettings,
+                'tsSettings' => $tsSettings,
+            ];
+            $originalSettings = GeneralUtility::callUserFunction($_funcRef, $_params, $this);
+        }
+
+        $this->settings = $originalSettings;
     }
 }

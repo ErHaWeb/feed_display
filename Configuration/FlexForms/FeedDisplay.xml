@@ -18,9 +18,9 @@
                             </description>
                             <config>
                                 <type>input</type>
-                                <size>50</size>
-                                <default>https://typo3.org/rss</default>
-                                <placeholder>https://typo3.org/rss</placeholder>
+                                <placeholder>
+                                    LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.placeholder.typoscript
+                                </placeholder>
                                 <eval>required,nospace</eval>
                             </config>
                         </TCEforms>
@@ -35,10 +35,10 @@
                             </description>
                             <config>
                                 <type>input</type>
-                                <eval>num</eval>
-                                <size>3</size>
-                                <default>10</default>
-                                <placeholder>999</placeholder>
+                                <eval>trim,int</eval>
+                                <placeholder>
+                                    LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.placeholder.typoscript
+                                </placeholder>
                             </config>
                         </TCEforms>
                     </settings.maxFeedCount>
@@ -52,10 +52,10 @@
                             </description>
                             <config>
                                 <type>input</type>
-                                <eval>num</eval>
-                                <size>3</size>
-                                <default>500</default>
-                                <placeholder>999</placeholder>
+                                <eval>trim,int</eval>
+                                <placeholder>
+                                    LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.placeholder.typoscript
+                                </placeholder>
                             </config>
                         </TCEforms>
                     </settings.maxContentLength>
@@ -69,10 +69,10 @@
                             </description>
                             <config>
                                 <type>input</type>
-                                <eval>num</eval>
-                                <size>3</size>
-                                <default>80</default>
-                                <placeholder>999</placeholder>
+                                <eval>trim,int</eval>
+                                <placeholder>
+                                    LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.placeholder.typoscript
+                                </placeholder>
                             </config>
                         </TCEforms>
                     </settings.maxHeaderLength>
@@ -86,8 +86,10 @@
                             </description>
                             <config>
                                 <type>input</type>
-                                <size>10</size>
-                                <placeholder>feed image width</placeholder>
+                                <eval>trim,int</eval>
+                                <placeholder>
+                                    LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.placeholder.feed
+                                </placeholder>
                             </config>
                         </TCEforms>
                     </settings.logoWidth>
@@ -101,8 +103,10 @@
                             </description>
                             <config>
                                 <type>input</type>
-                                <size>10</size>
-                                <placeholder>feed image height</placeholder>
+                                <eval>trim,int</eval>
+                                <placeholder>
+                                    LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.placeholder.feed
+                                </placeholder>
                             </config>
                         </TCEforms>
                     </settings.logoHeight>
@@ -116,9 +120,10 @@
                             </description>
                             <config>
                                 <type>input</type>
-                                <size>10</size>
-                                <default>26</default>
-                                <placeholder>feed icon width</placeholder>
+                                <eval>trim,int</eval>
+                                <placeholder>
+                                    LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.placeholder.typoscript
+                                </placeholder>
                             </config>
                         </TCEforms>
                     </settings.feedIconWidth>
@@ -132,9 +137,10 @@
                             </description>
                             <config>
                                 <type>input</type>
-                                <size>10</size>
-                                <default>26</default>
-                                <placeholder>feed icon height</placeholder>
+                                <eval>trim,int</eval>
+                                <placeholder>
+                                    LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.placeholder.typoscript
+                                </placeholder>
                             </config>
                         </TCEforms>
                     </settings.feedIconHeight>
@@ -159,9 +165,10 @@
                             </description>
                             <config>
                                 <type>input</type>
-                                <size>40</size>
-                                <default>%d. %B %Y</default>
-                                <placeholder>%d. %B %Y</placeholder>
+                                <eval>trim</eval>
+                                <placeholder>
+                                    LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.placeholder.typoscript
+                                </placeholder>
                             </config>
                         </TCEforms>
                     </settings.dateFormat>
@@ -174,11 +181,26 @@
                                 LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.stripTags.description
                             </description>
                             <config>
-                                <type>check</type>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
                                 <items type="array">
                                     <numIndex index="0" type="array">
-                                        <numIndex index="0">LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.stripTags.I.yes</numIndex>
+                                        <numIndex index="0">
+                                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.placeholder.typoscript
+                                        </numIndex>
                                         <numIndex index="1"/>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.stripTags.I.yes
+                                        </numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.stripTags.I.no
+                                        </numIndex>
+                                        <numIndex index="1">0</numIndex>
                                     </numIndex>
                                 </items>
                             </config>
@@ -198,30 +220,35 @@
                                 <items type="array">
                                     <numIndex index="0" type="array">
                                         <numIndex index="0">
+                                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.linkTarget.I.default
+                                        </numIndex>
+                                        <numIndex index="1"/>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">
                                             LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.linkTarget.I.blank
                                         </numIndex>
                                         <numIndex index="1">_blank</numIndex>
                                     </numIndex>
-                                    <numIndex index="1" type="array">
+                                    <numIndex index="2" type="array">
                                         <numIndex index="0">
                                             LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.linkTarget.I.self
                                         </numIndex>
                                         <numIndex index="1">_self</numIndex>
                                     </numIndex>
-                                    <numIndex index="2" type="array">
+                                    <numIndex index="3" type="array">
                                         <numIndex index="0">
                                             LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.linkTarget.I.parent
                                         </numIndex>
                                         <numIndex index="1">_parent</numIndex>
                                     </numIndex>
-                                    <numIndex index="3" type="array">
+                                    <numIndex index="4" type="array">
                                         <numIndex index="0">
                                             LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.linkTarget.I.top
                                         </numIndex>
                                         <numIndex index="1">_top</numIndex>
                                     </numIndex>
                                 </items>
-                                <default>_blank</default>
                                 <minitems>0</minitems>
                                 <maxitems>1</maxitems>
                                 <size>1</size>
@@ -238,8 +265,10 @@
                             </description>
                             <config>
                                 <type>input</type>
-                                <size>40</size>
-                                <placeholder>It's not possible to reach the feed.</placeholder>
+                                <eval>trim</eval>
+                                <placeholder>
+                                    LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.placeholder.typoscript
+                                </placeholder>
                             </config>
                         </TCEforms>
                     </settings.errorMessage>
@@ -253,9 +282,10 @@
                             </description>
                             <config>
                                 <type>input</type>
-                                <size>40</size>
-                                <default>3600</default>
-                                <placeholder>3600</placeholder>
+                                <eval>trim,int</eval>
+                                <placeholder>
+                                    LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.placeholder.typoscript
+                                </placeholder>
                             </config>
                         </TCEforms>
                     </settings.cacheDuration>

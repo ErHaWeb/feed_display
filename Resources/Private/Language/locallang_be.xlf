@@ -42,6 +42,9 @@
             <trans-unit id="flexform.linkTarget.description" xml:space="preserve">
                 <source>Target attribute to define the feed link behavior</source>
             </trans-unit>
+            <trans-unit id="flexform.linkTarget.I.default" xml:space="preserve">
+                <source>Defined by TypoScript (default)</source>
+            </trans-unit>
             <trans-unit id="flexform.linkTarget.I.blank" xml:space="preserve">
                 <source>Opens in a new window or tab</source>
             </trans-unit>
@@ -102,11 +105,20 @@
             <trans-unit id="flexform.stripTags.I.yes" xml:space="preserve">
                 <source>yes</source>
             </trans-unit>
+            <trans-unit id="flexform.stripTags.I.no" xml:space="preserve">
+                <source>no</source>
+            </trans-unit>
             <trans-unit id="flexform.cacheDuration.label" xml:space="preserve">
                 <source>Feed cache</source>
             </trans-unit>
             <trans-unit id="flexform.cacheDuration.description" xml:space="preserve">
                 <source>Time in seconds (0 = no cache)</source>
+            </trans-unit>
+            <trans-unit id="flexform.placeholder.feed" xml:space="preserve">
+                <source>Defined by Feed or TypoScript (default)</source>
+            </trans-unit>
+            <trans-unit id="flexform.placeholder.typoscript" xml:space="preserve">
+                <source>Defined by TypoScript (default)</source>
             </trans-unit>
         </body>
     </file>

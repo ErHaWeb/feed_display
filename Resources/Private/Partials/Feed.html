@@ -1,7 +1,6 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       data-namespace-typo3-fluid="true" lang="en">
 
-<f:comment><!-- Feed Properties --></f:comment>
 <f:render partial="Feed/Title" arguments="{feed:feed}"/>
 <f:render partial="Feed/Image" arguments="{feed:feed}"/>
 <f:render partial="Feed/Description" arguments="{feed:feed}"/>
@@ -25,5 +24,7 @@
         </ul>
     </div>
 </f:if>
+
+<f:render partial="Feed/Copyright" arguments="{feed:feed}"/>
 
 </html>

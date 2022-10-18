@@ -1,17 +1,21 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-       data-namespace-typo3-fluid="true" lang="en">
+      data-namespace-typo3-fluid="true" lang="en">
 
 <f:comment><!-- Content --></f:comment>
 <f:if condition="{item.content}">
     <div class="item-content">
-        <f:if condition="{settings.maxContentLength}">
+        <f:if condition="{settings.stripTags}">
             <f:then>
-                <f:format.html>{item.content -> f:format.crop(maxCharacters: settings.maxContentLength)}</f:format.html>
+                <f:variable name="content" value="{item.content -> f:format.stripTags()}"/>
             </f:then>
             <f:else>
-                <f:format.html>{item.content}</f:format.html>
+                <f:variable name="content" value="{item.content}"/>
             </f:else>
         </f:if>
+        <f:if condition="{settings.maxContentLength}">
+            <f:variable name="content" value="{content -> f:format.crop(maxCharacters: settings.maxContentLength)}"/>
+        </f:if>
+        <f:format.html>{content}</f:format.html>
     </div>
 </f:if>
 

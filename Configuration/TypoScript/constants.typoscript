@@ -1,0 +1,68 @@
+plugin.tx_feeddisplay_pi1 {
+    settings {
+        getFields {
+            # Each field is internally converted to a SimplePie getter method.
+            # Field name "author" results in function name get_author()
+            # If the method does not exist null will be returned.
+            # You can pass up to three arguments to the resulting function
+            #
+            # Have a look at the SimplePie reference to get an overview:
+            # https://simplepie.org/wiki/reference/
+            #
+            # Examples:
+            # The following TypoScript line gets the third item (= array index 2)
+            # feed := addToList(item|2)
+            # > this results in function call get_item('2')
+            #
+            # If the feed contains the namespace attribute:
+            # xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+            #
+            # and the tag:
+            # <itunes:image href="https://domain.tld/image.jpg"/>
+            #
+            # you can get the image URL by using the following TypoScript line:
+            # feed := addToList(channel_tags|http://www.itunes.com/dtds/podcast-1.0.dtd|image)
+            # > this results in function call get_channel('http://www.itunes.com/dtds/podcast-1.0.dtd', 'image')
+
+            # Feed-Level Data (Basic)
+            feed := addToList(author, authors, contributor, contributors, copyright, description, encoding, favicon, items, item_quantity, language, link, links, permalink, title, type)
+            # For field "item" you must parse the feed-dependent arguments
+
+            # Feed-Level GeoData
+            feed := addToList(latitude, longitude)
+
+            # Feed Logo
+            feed := addToList(image_height, image_link, image_title, image_url, image_width)
+
+            # Feed-Level Data Hacking (Advanced)
+            feed := addToList(all_discovered_feeds, base)
+            # For fields "channel_tags", "feed_tags" and "image_tags" you must parse the feed-dependent arguments
+
+            # Item-Level Data (Basic)
+            items := addToList(author, authors, categories, category, content, contributor, contributors, copyright, date, description, enclosure, enclosures, feed, id, link, links, local_date, permalink, source, title)
+
+            # Item-Level GeoData
+            items := addToList(latitude, longitude)
+
+            # Item-Level Data Hacking (Advanced)
+            items := addToList(base)
+            # For field "item_tags" you must parse the feed-dependent arguments
+        }
+
+        overrideFlexformSettingsIfEmpty = maxFeedCount,maxContentLength,maxHeaderLength,logoWidth,logoHeight,feedIconWidth,feedIconHeight,dateFormat,stripTags,linkTarget,errorMessage,cacheDuration
+
+        feedUrl = https://typo3.org/rss
+        maxFeedCount = 10
+        maxContentLength = 500
+        maxHeaderLength = 80
+        logoWidth =
+        logoHeight =
+        feedIconWidth = 26
+        feedIconHeight = 26
+        dateFormat = %d. %B %Y
+        stripTags = 1
+        linkTarget = _blank
+        errorMessage =
+        cacheDuration = 3600
+    }
+}
