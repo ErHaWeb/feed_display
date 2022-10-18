@@ -1,5 +1,45 @@
+# customcategory=plugin.tx_feeddisplay_pi1=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.customcategory.plugin.tx_feeddisplay_pi1
+# customsubcategory=general=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.subcategory.general
+# customsubcategory=advanced=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.subcategory.advanced
+
 plugin.tx_feeddisplay_pi1 {
+    view {
+        # cat=plugin.tx_feeddisplay_pi1/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:feed_display/Resources/Private/Templates/
+        # cat=plugin.tx_feeddisplay_pi1/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:feed_display/Resources/Private/Partials/
+        # cat=plugin.tx_feeddisplay_pi1/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:feed_display/Resources/Private/Layouts/
+    }
+    
     settings {
+        # cat=plugin.tx_feeddisplay_pi1/general; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.feedUrl
+        feedUrl = https://typo3.org/rss
+        # cat=plugin.tx_feeddisplay_pi1/general; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.maxFeedCount
+        maxFeedCount = 10
+        # cat=plugin.tx_feeddisplay_pi1/general; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.maxContentLength
+        maxContentLength = 500
+        # cat=plugin.tx_feeddisplay_pi1/general; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.maxHeaderLength
+        maxHeaderLength = 80
+        # cat=plugin.tx_feeddisplay_pi1/general; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.logoWidth
+        logoWidth =
+        # cat=plugin.tx_feeddisplay_pi1/general; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.logoHeight
+        logoHeight =
+        # cat=plugin.tx_feeddisplay_pi1/general; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.feedIconWidth
+        feedIconWidth = 26
+        # cat=plugin.tx_feeddisplay_pi1/general; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.feedIconHeight
+        feedIconHeight = 26
+        # cat=plugin.tx_feeddisplay_pi1/advanced; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.dateFormat
+        dateFormat = %d. %B %Y
+        # cat=plugin.tx_feeddisplay_pi1/advanced; type=boolean; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.stripTags
+        stripTags = 1
+        # cat=plugin.tx_feeddisplay_pi1/advanced; type=options[_blank,_self,_parent,_top]; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.linkTarget
+        linkTarget = _blank
+        # cat=plugin.tx_feeddisplay_pi1/advanced; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.errorMessage
+        errorMessage =
+        # cat=plugin.tx_feeddisplay_pi1/advanced; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.cacheDuration
+        cacheDuration = 3600
+
         getFields {
             # Each field is internally converted to a SimplePie getter method.
             # Field name "author" results in function name get_author()
@@ -50,19 +90,5 @@ plugin.tx_feeddisplay_pi1 {
         }
 
         overrideFlexformSettingsIfEmpty = maxFeedCount,maxContentLength,maxHeaderLength,logoWidth,logoHeight,feedIconWidth,feedIconHeight,dateFormat,stripTags,linkTarget,errorMessage,cacheDuration
-
-        feedUrl = https://typo3.org/rss
-        maxFeedCount = 10
-        maxContentLength = 500
-        maxHeaderLength = 80
-        logoWidth =
-        logoHeight =
-        feedIconWidth = 26
-        feedIconHeight = 26
-        dateFormat = %d. %B %Y
-        stripTags = 1
-        linkTarget = _blank
-        errorMessage =
-        cacheDuration = 3600
     }
 }

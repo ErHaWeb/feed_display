@@ -1,4 +1,21 @@
 plugin.tx_feeddisplay_pi1 {
+    view {
+        templateRootPaths {
+            0 = EXT:feed_display/Resources/Private/Templates/
+            1 = {$plugin.tx_feeddisplay_pi1.view.templateRootPath}
+        }
+
+        partialRootPaths {
+            0 = EXT:feed_display/Resources/Private/Partials/
+            1 = {$plugin.tx_feeddisplay_pi1.view.partialRootPath}
+        }
+
+        layoutRootPaths {
+            0 = EXT:feed_display/Resources/Private/Layouts/
+            1 = {$plugin.tx_feeddisplay_pi1.view.layoutRootPath}
+        }
+    }
+
     settings {
         getFields {
             feed = {$plugin.tx_feeddisplay_pi1.settings.getFields.feed}
