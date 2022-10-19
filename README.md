@@ -17,7 +17,7 @@ Example:
 ```
 plugin.tx_feeddisplay_pi1.settings.getFields.feed := addToList(author)
 ```
-executes the `get_author() method in the feed object.
+executes the `get_author()` method in the feed object.
 
 Some of the SimplePie methods expect parameters. For this reason, up to three parameters can be passed using a special syntax.
 
