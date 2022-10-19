@@ -89,40 +89,40 @@ class FeedController extends ActionController
      */
     private function getFeedData(): array
     {
-        $this->initFeed();
-
-        $getFeedFields = GeneralUtility::trimExplode(',', $this->settings['getFields']['feed']);
-
         $data = [];
         $data['settings'] = $this->settings;
-        $data['feed']['subscribeUrl'] = $this->feed->subscribe_url();
 
-        foreach ($getFeedFields as $getFeedField) {
-            $fieldParts = GeneralUtility::trimExplode('|', $getFeedField);
-            $field = GeneralUtility::underscoredToLowerCamelCase($fieldParts[0]);
-            $value = $this->getValue($this->feed, $fieldParts);
+        if ($this->initFeed()) {
+            $getFeedFields = GeneralUtility::trimExplode(',', $this->settings['getFields']['feed']);
+            $data['feed']['subscribeUrl'] = $this->feed->subscribe_url();
 
-            if ($getFeedField === 'image_url') {
-                $data['feed']['image'] = $this->getImage($value);
-            }
-
-            $data['feed'][$field] = $value;
-        }
-
-
-        $maxFeedCount = (int)($this->settings['maxFeedCount'] ?? 0);
-        foreach ($this->feed->get_items(0, $maxFeedCount) as $item) {
-            $getItemsFields = GeneralUtility::trimExplode(',', $this->settings['getFields']['items']);
-            $itemProperties = [];
-
-            foreach ($getItemsFields as $getItemsField) {
-                $fieldParts = GeneralUtility::trimExplode('|', $getItemsField);
+            foreach ($getFeedFields as $getFeedField) {
+                $fieldParts = GeneralUtility::trimExplode('|', $getFeedField);
                 $field = GeneralUtility::underscoredToLowerCamelCase($fieldParts[0]);
-                $value = $this->getValue($item, $fieldParts);
-                $itemProperties[$field] = $value;
+                $value = $this->getValue($this->feed, $fieldParts);
+
+                if ($getFeedField === 'image_url') {
+                    $data['feed']['image'] = $this->getImage($value);
+                }
+
+                $data['feed'][$field] = $value;
             }
 
-            $data['items'][] = $itemProperties;
+
+            $maxFeedCount = (int)($this->settings['maxFeedCount'] ?? 0);
+            foreach ($this->feed->get_items(0, $maxFeedCount) as $item) {
+                $getItemsFields = GeneralUtility::trimExplode(',', $this->settings['getFields']['items']);
+                $itemProperties = [];
+
+                foreach ($getItemsFields as $getItemsField) {
+                    $fieldParts = GeneralUtility::trimExplode('|', $getItemsField);
+                    $field = GeneralUtility::underscoredToLowerCamelCase($fieldParts[0]);
+                    $value = $this->getValue($item, $fieldParts);
+                    $itemProperties[$field] = $value;
+                }
+
+                $data['items'][] = $itemProperties;
+            }
         }
         return $data;
     }
@@ -132,10 +132,10 @@ class FeedController extends ActionController
      * @param array $fieldParts
      * @return mixed
      */
-    private function getValue(object $object, array $fieldParts): mixed
+    private function getValue(object $object, array $fieldParts)
     {
         $getMethod = 'get_' . $fieldParts[0];
-        $value = null;
+        $value = '';
 
         if (method_exists($object, $getMethod)) {
             switch (count($fieldParts)) {
@@ -185,9 +185,9 @@ class FeedController extends ActionController
     }
 
     /**
-     * @return void
+     * @return bool
      */
-    private function initFeed(): void
+    private function initFeed(): bool
     {
         $feedUrl = $this->settings['feedUrl'] ?? '';
         if (isset($feedUrl) && $feedUrl !== '') {
@@ -195,7 +195,9 @@ class FeedController extends ActionController
             $this->feed->set_feed_url($feedUrl);
             $this->feed->enable_cache(false);
             $this->feed->init();
+            return true;
         }
+        return false;
     }
 
     /**

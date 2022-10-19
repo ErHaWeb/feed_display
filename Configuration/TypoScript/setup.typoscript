@@ -23,13 +23,15 @@ plugin.tx_feeddisplay_pi1 {
         }
 
         overrideFlexformSettingsIfEmpty = {$plugin.tx_feeddisplay_pi1.settings.overrideFlexformSettingsIfEmpty}
+
+        feedUrl = {$plugin.tx_feeddisplay_pi1.settings.feedUrl}
         maxFeedCount = {$plugin.tx_feeddisplay_pi1.settings.maxFeedCount}
         maxContentLength = {$plugin.tx_feeddisplay_pi1.settings.maxContentLength}
         maxHeaderLength = {$plugin.tx_feeddisplay_pi1.settings.maxHeaderLength}
-        logoWidth = {$plugin.tx_feeddisplay_pi1.settings.logoWidth}
-        logoHeight = {$plugin.tx_feeddisplay_pi1.settings.logoHeight}
-        feedIconWidth = {$plugin.tx_feeddisplay_pi1.settings.feedIconWidth}
-        feedIconHeight = {$plugin.tx_feeddisplay_pi1.settings.feedIconHeight}
+        logoMaxWidth = {$plugin.tx_feeddisplay_pi1.settings.logoMaxWidth}
+        logoMaxHeight = {$plugin.tx_feeddisplay_pi1.settings.logoMaxHeight}
+        feedIconMaxWidth = {$plugin.tx_feeddisplay_pi1.settings.feedIconMaxWidth}
+        feedIconMaxHeight = {$plugin.tx_feeddisplay_pi1.settings.feedIconMaxHeight}
         dateFormat = {$plugin.tx_feeddisplay_pi1.settings.dateFormat}
         stripTags = {$plugin.tx_feeddisplay_pi1.settings.stripTags}
         linkTarget = {$plugin.tx_feeddisplay_pi1.settings.linkTarget}

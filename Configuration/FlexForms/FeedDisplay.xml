@@ -4,8 +4,11 @@
             <ROOT>
                 <TCEforms>
                     <sheetTitle>
-                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.sheet_general
+                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.sheet_general.title
                     </sheetTitle>
+                    <sheetDescription>
+                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.sheet_general.description
+                    </sheetDescription>
                 </TCEforms>
                 <el>
                     <settings.feedUrl>
@@ -18,10 +21,8 @@
                             </description>
                             <config>
                                 <type>input</type>
-                                <placeholder>
-                                    LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.placeholder.typoscript
-                                </placeholder>
-                                <eval>required,nospace</eval>
+                                <placeholder>https://typo3.org/rss</placeholder>
+                                <eval>nospace</eval>
                             </config>
                         </TCEforms>
                     </settings.feedUrl>
@@ -36,9 +37,7 @@
                             <config>
                                 <type>input</type>
                                 <eval>trim,int</eval>
-                                <placeholder>
-                                    LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.placeholder.typoscript
-                                </placeholder>
+                                <placeholder>-</placeholder>
                             </config>
                         </TCEforms>
                     </settings.maxFeedCount>
@@ -53,9 +52,7 @@
                             <config>
                                 <type>input</type>
                                 <eval>trim,int</eval>
-                                <placeholder>
-                                    LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.placeholder.typoscript
-                                </placeholder>
+                                <placeholder>-</placeholder>
                             </config>
                         </TCEforms>
                     </settings.maxContentLength>
@@ -70,80 +67,70 @@
                             <config>
                                 <type>input</type>
                                 <eval>trim,int</eval>
-                                <placeholder>
-                                    LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.placeholder.typoscript
-                                </placeholder>
+                                <placeholder>-</placeholder>
                             </config>
                         </TCEforms>
                     </settings.maxHeaderLength>
-                    <settings.logoWidth>
+                    <settings.logoMaxWidth>
                         <TCEforms>
                             <label>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.logoWidth.label
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.logoMaxWidth.label
                             </label>
                             <description>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.logoWidth.description
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.logoMaxWidth.description
                             </description>
                             <config>
                                 <type>input</type>
                                 <eval>trim,int</eval>
-                                <placeholder>
-                                    LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.placeholder.feed
-                                </placeholder>
+                                <placeholder>-</placeholder>
                             </config>
                         </TCEforms>
-                    </settings.logoWidth>
-                    <settings.logoHeight>
+                    </settings.logoMaxWidth>
+                    <settings.logoMaxHeight>
                         <TCEforms>
                             <label>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.logoHeight.label
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.logoMaxHeight.label
                             </label>
                             <description>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.logoHeight.description
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.logoMaxHeight.description
                             </description>
                             <config>
                                 <type>input</type>
                                 <eval>trim,int</eval>
-                                <placeholder>
-                                    LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.placeholder.feed
-                                </placeholder>
+                                <placeholder>-</placeholder>
                             </config>
                         </TCEforms>
-                    </settings.logoHeight>
-                    <settings.feedIconWidth>
+                    </settings.logoMaxHeight>
+                    <settings.feedIconMaxWidth>
                         <TCEforms>
                             <label>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.feedIconWidth.label
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.feedIconMaxWidth.label
                             </label>
                             <description>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.feedIconWidth.description
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.feedIconMaxWidth.description
                             </description>
                             <config>
                                 <type>input</type>
                                 <eval>trim,int</eval>
-                                <placeholder>
-                                    LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.placeholder.typoscript
-                                </placeholder>
+                                <placeholder>-</placeholder>
                             </config>
                         </TCEforms>
-                    </settings.feedIconWidth>
-                    <settings.feedIconHeight>
+                    </settings.feedIconMaxWidth>
+                    <settings.feedIconMaxHeight>
                         <TCEforms>
                             <label>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.feedIconHeight.label
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.feedIconMaxHeight.label
                             </label>
                             <description>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.feedIconHeight.description
+                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.feedIconMaxHeight.description
                             </description>
                             <config>
                                 <type>input</type>
                                 <eval>trim,int</eval>
-                                <placeholder>
-                                    LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.placeholder.typoscript
-                                </placeholder>
+                                <placeholder>-</placeholder>
                             </config>
                         </TCEforms>
-                    </settings.feedIconHeight>
+                    </settings.feedIconMaxHeight>
                 </el>
             </ROOT>
         </general>
@@ -151,8 +138,11 @@
             <ROOT>
                 <TCEforms>
                     <sheetTitle>
-                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.sheet_advanced
+                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.sheet_advanced.title
                     </sheetTitle>
+                    <sheetDescription>
+                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.sheet_advanced.description
+                    </sheetDescription>
                 </TCEforms>
                 <el>
                     <settings.dateFormat>
@@ -166,9 +156,7 @@
                             <config>
                                 <type>input</type>
                                 <eval>trim</eval>
-                                <placeholder>
-                                    LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.placeholder.typoscript
-                                </placeholder>
+                                <placeholder>-</placeholder>
                             </config>
                         </TCEforms>
                     </settings.dateFormat>
@@ -266,9 +254,7 @@
                             <config>
                                 <type>input</type>
                                 <eval>trim</eval>
-                                <placeholder>
-                                    LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.placeholder.typoscript
-                                </placeholder>
+                                <placeholder>-</placeholder>
                             </config>
                         </TCEforms>
                     </settings.errorMessage>
@@ -282,10 +268,8 @@
                             </description>
                             <config>
                                 <type>input</type>
-                                <eval>trim,int</eval>
-                                <placeholder>
-                                    LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.placeholder.typoscript
-                                </placeholder>
+                                <eval>trim</eval>
+                                <placeholder>-</placeholder>
                             </config>
                         </TCEforms>
                     </settings.cacheDuration>

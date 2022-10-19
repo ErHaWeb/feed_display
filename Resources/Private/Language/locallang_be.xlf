@@ -11,36 +11,39 @@
             </trans-unit>
 
             <!-- Sheet: General -->
-            <trans-unit id="flexform.sheet_general" xml:space="preserve">
+            <trans-unit id="flexform.sheet_general.title" xml:space="preserve">
                 <source>General</source>
+            </trans-unit>
+            <trans-unit id="flexform.sheet_general.description" xml:space="preserve">
+                <source/>
             </trans-unit>
 
             <trans-unit id="flexform.feedUrl.label" xml:space="preserve">
                 <source>Feed URL</source>
             </trans-unit>
             <trans-unit id="flexform.feedUrl.description" xml:space="preserve">
-                <source>URL that is fetched by the service</source>
+                <source>URL that is fetched by the service (empty = Defined by TypoScript)</source>
             </trans-unit>
 
             <trans-unit id="flexform.maxFeedCount.label" xml:space="preserve">
                 <source>Max. items</source>
             </trans-unit>
             <trans-unit id="flexform.maxFeedCount.description" xml:space="preserve">
-                <source>Maximum feed items to show</source>
+                <source>Maximum feed items to show (0 or empty = Defined by TypoScript)</source>
             </trans-unit>
 
             <trans-unit id="flexform.maxContentLength.label" xml:space="preserve">
                 <source>Max. content length</source>
             </trans-unit>
             <trans-unit id="flexform.maxContentLength.description" xml:space="preserve">
-                <source>Crop the characters of the feed content to the configured length</source>
+                <source>Crop the characters of the feed content to the configured length (0 or empty = Defined by TypoScript)</source>
             </trans-unit>
 
             <trans-unit id="flexform.maxHeaderLength.label" xml:space="preserve">
                 <source>Max. header length</source>
             </trans-unit>
             <trans-unit id="flexform.maxHeaderLength.description" xml:space="preserve">
-                <source>Crop the characters of the feed header to the configured length</source>
+                <source>Crop the characters of the feed header to the configured length (0 or empty = Defined by TypoScript)</source>
             </trans-unit>
 
             <trans-unit id="flexform.linkTarget.label" xml:space="preserve">
@@ -65,51 +68,54 @@
                 <source>Opens in the full body of the window</source>
             </trans-unit>
 
-            <trans-unit id="flexform.logoWidth.label" xml:space="preserve">
-                <source>Logo width</source>
+            <trans-unit id="flexform.logoMaxWidth.label" xml:space="preserve">
+                <source>Logo max. width</source>
             </trans-unit>
-            <trans-unit id="flexform.logoWidth.description" xml:space="preserve">
-                <source>Width of the feeds logo image</source>
-            </trans-unit>
-
-            <trans-unit id="flexform.logoHeight.label" xml:space="preserve">
-                <source>Logo height</source>
-            </trans-unit>
-            <trans-unit id="flexform.logoHeight.description" xml:space="preserve">
-                <source>Height of the feeds logo image</source>
+            <trans-unit id="flexform.logoMaxWidth.description" xml:space="preserve">
+                <source>Maximum width of the feeds logo image (0 or empty = Defined by TypoScript)</source>
             </trans-unit>
 
-            <trans-unit id="flexform.feedIconWidth.label" xml:space="preserve">
-                <source>Feed icon width</source>
+            <trans-unit id="flexform.logoMaxHeight.label" xml:space="preserve">
+                <source>Logo max. height</source>
             </trans-unit>
-            <trans-unit id="flexform.feedIconWidth.description" xml:space="preserve">
-                <source>Width of the feeds icon image</source>
+            <trans-unit id="flexform.logoMaxHeight.description" xml:space="preserve">
+                <source>Maximum height of the feeds logo image (0 or empty = Defined by TypoScript)</source>
             </trans-unit>
 
-            <trans-unit id="flexform.feedIconHeight.label" xml:space="preserve">
-                <source>Feed icon height</source>
+            <trans-unit id="flexform.feedIconMaxWidth.label" xml:space="preserve">
+                <source>Feed icon max. width</source>
             </trans-unit>
-            <trans-unit id="flexform.feedIconHeight.description" xml:space="preserve">
-                <source>Height of the feeds icon image</source>
+            <trans-unit id="flexform.feedIconMaxWidth.description" xml:space="preserve">
+                <source>Maximum width of the feeds icon image (0 or empty = Defined by TypoScript)</source>
+            </trans-unit>
+
+            <trans-unit id="flexform.feedIconMaxHeight.label" xml:space="preserve">
+                <source>Feed icon max. height</source>
+            </trans-unit>
+            <trans-unit id="flexform.feedIconMaxHeight.description" xml:space="preserve">
+                <source>Maximum height of the feeds icon image (0 or empty = Defined by TypoScript)</source>
             </trans-unit>
 
             <trans-unit id="flexform.errorMessage.label" xml:space="preserve">
                 <source>Error message</source>
             </trans-unit>
             <trans-unit id="flexform.errorMessage.description" xml:space="preserve">
-                <source>This message is displayed if no feed items could be fetched</source>
+                <source>This message is displayed if no feed items could be fetched (empty = Defined by TypoScript)</source>
             </trans-unit>
 
             <!-- Sheet Advanced -->
-            <trans-unit id="flexform.sheet_advanced" xml:space="preserve">
+            <trans-unit id="flexform.sheet_advanced.title" xml:space="preserve">
                 <source>Advanced</source>
+            </trans-unit>
+            <trans-unit id="flexform.sheet_advanced.description" xml:space="preserve">
+                <source/>
             </trans-unit>
 
             <trans-unit id="flexform.dateFormat.label" xml:space="preserve">
                 <source>Date format</source>
             </trans-unit>
             <trans-unit id="flexform.dateFormat.description" xml:space="preserve">
-                <source>Use PHP's strftime() function format</source>
+                <source>Use PHP's strftime() function format (empty = Defined by TypoScript)</source>
             </trans-unit>
 
             <trans-unit id="flexform.stripTags.label" xml:space="preserve">
@@ -129,7 +135,7 @@
                 <source>Feed cache</source>
             </trans-unit>
             <trans-unit id="flexform.cacheDuration.description" xml:space="preserve">
-                <source>Time in seconds (0 = no cache)</source>
+                <source>Time in seconds (0 = no cache, empty = Defined by TypoScript)</source>
             </trans-unit>
 
             <trans-unit id="flexform.placeholder.feed" xml:space="preserve">
@@ -179,16 +185,16 @@
             <trans-unit id="constants.linkTarget.I.top" xml:space="preserve">
                 <source>Opens in the full body of the window</source>
             </trans-unit>
-            <trans-unit id="constants.logoWidth" xml:space="preserve">
+            <trans-unit id="constants.logoMaxWidth" xml:space="preserve">
                 <source>Logo width:Width of the feeds logo image</source>
             </trans-unit>
-            <trans-unit id="constants.logoHeight" xml:space="preserve">
+            <trans-unit id="constants.logoMaxHeight" xml:space="preserve">
                 <source>Logo height:Height of the feeds logo image</source>
             </trans-unit>
-            <trans-unit id="constants.feedIconWidth" xml:space="preserve">
+            <trans-unit id="constants.feedIconMaxWidth" xml:space="preserve">
                 <source>Feed icon width:Width of the feeds icon image</source>
             </trans-unit>
-            <trans-unit id="constants.feedIconHeight" xml:space="preserve">
+            <trans-unit id="constants.feedIconMaxHeight" xml:space="preserve">
                 <source>Feed icon height:Height of the feeds icon image</source>
             </trans-unit>
             <trans-unit id="constants.errorMessage" xml:space="preserve">

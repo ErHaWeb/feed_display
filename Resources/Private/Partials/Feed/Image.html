@@ -4,10 +4,10 @@
 <f:comment><!-- Image --></f:comment>
 <f:if condition="{feed.image}">
     <div class="feed-image">
-        <f:if condition="{settings.logoWidth} || {settings.logoHeight}">
+        <f:if condition="{settings.logoMaxWidth} || {settings.logoMaxHeight}">
             <f:then>
-                <f:variable name="imageWidth" value="{settings.logoWidth}"/>
-                <f:variable name="imageHeight" value="{settings.logoHeight}"/>
+                <f:variable name="imageWidth" value="{settings.logoMaxWidth}"/>
+                <f:variable name="imageHeight" value="{settings.logoMaxHeight}"/>
             </f:then>
             <f:else>
                 <f:variable name="imageWidth" value="{feed.imageWidth}"/>

@@ -46,7 +46,7 @@ class TypoScript
                         $base = $this->setValue($base, $keyAsArray, $foundInOriginal);
                     }
                 }
-            } else if ((!isset($base[$fieldName]) || ($base[$fieldName] === ''))
+            } else if (((!isset($base[$fieldName]) || $base[$fieldName] === '0') || ($base[$fieldName] === ''))
                 && isset($overload[$fieldName])
             ) {
                 $base[$fieldName] = $overload[$fieldName];
