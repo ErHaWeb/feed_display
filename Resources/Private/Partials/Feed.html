@@ -11,18 +11,25 @@
 
 <f:comment><!-- Feed Items --></f:comment>
 <f:if condition="{items}">
-    <div class="feed-items">
-        <h2>
-            <f:translate key="feed.items"/>
-        </h2>
-        <ul>
-            <f:for each="{items}" as="item">
-                <li id="item-{item.id}">
-                    <f:render partial="Item" arguments="{item:item}"/>
-                </li>
-            </f:for>
-        </ul>
-    </div>
+    <f:then>
+        <div class="feed-items">
+            <h2>
+                <f:translate key="feed.items"/>
+            </h2>
+            <ul>
+                <f:for each="{items}" as="item">
+                    <li id="item-{item.id}">
+                        <f:render partial="Item" arguments="{item:item}"/>
+                    </li>
+                </f:for>
+            </ul>
+        </div>
+    </f:then>
+    <f:else>
+        <div class="error error-no-items">
+            <p><f:translate key="noItemsError"/></p>
+        </div>
+    </f:else>
 </f:if>
 
 <f:render partial="Feed/Copyright" arguments="{feed:feed}"/>

@@ -1,9 +1,9 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-       data-namespace-typo3-fluid="true" lang="en">
+      data-namespace-typo3-fluid="true" lang="en">
 
 <f:layout name="General"/>
 <f:section name="content">
-    <f:if condition="{data.feed} && {data.items}">
+    <f:if condition="{data.feed}">
         <f:then>
             <f:render partial="Feed" arguments="{feed:data.feed, items:data.items}"/>
         </f:then>
@@ -13,7 +13,20 @@
                     <f:format.html>{settings.errorMessage}</f:format.html>
                 </f:then>
                 <f:else>
-                    <f:translate key="errorMessage"/>
+                    <div class="error error-no-feed">
+                        <f:if condition="!({settings})">
+                            <f:then>
+                                <p>
+                                    <f:translate key="noTemplateError"/>
+                                </p>
+                            </f:then>
+                            <f:else>
+                                <p>
+                                    <f:translate key="errorMessage"/>
+                                </p>
+                            </f:else>
+                        </f:if>
+                    </div>
                 </f:else>
             </f:if>
         </f:else>

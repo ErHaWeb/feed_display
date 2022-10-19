@@ -64,23 +64,21 @@ class FeedController extends ActionController
      */
     public function displayAction(): ResponseInterface
     {
-        $cacheIdentifier = "feeddisplay";
-        $data = $this->cache->get($cacheIdentifier);
-        $cacheDuration = (int)$this->settings['cacheDuration'];
+        if ($this->settings) {
+            $cacheIdentifier = "feeddisplay";
+            $data = $this->cache->get($cacheIdentifier);
+            $cacheDuration = (int)$this->settings['cacheDuration'];
 
-        if ($cacheDuration === 0) {
-            $data = $this->getFeedData();
-            $this->cache->remove($cacheIdentifier);
-        } else if ($data === false || $data['settings'] !== $this->settings) {
-            $data = $this->getFeedData();
-            $this->cache->set($cacheIdentifier, $data, [], $cacheDuration);
+            if ($cacheDuration === 0) {
+                $data = $this->getFeedData();
+                $this->cache->remove($cacheIdentifier);
+            } else if ($data === false || $data['settings'] !== $this->settings) {
+                $data = $this->getFeedData();
+                $this->cache->set($cacheIdentifier, $data, [], $cacheDuration);
+            }
+
+            $this->view->assign('data', $data);
         }
-
-        $assignedValues = [
-            'data' => $data
-        ];
-
-        $this->view->assignMultiple($assignedValues);
         return $this->htmlResponse();
     }
 
@@ -115,13 +113,17 @@ class FeedController extends ActionController
                 $itemProperties = [];
 
                 foreach ($getItemsFields as $getItemsField) {
-                    $fieldParts = GeneralUtility::trimExplode('|', $getItemsField);
-                    $field = GeneralUtility::underscoredToLowerCamelCase($fieldParts[0]);
-                    $value = $this->getValue($item, $fieldParts);
-                    $itemProperties[$field] = $value;
+                    if ($getItemsField) {
+                        $fieldParts = GeneralUtility::trimExplode('|', $getItemsField);
+                        $field = GeneralUtility::underscoredToLowerCamelCase($fieldParts[0]);
+                        $value = $this->getValue($item, $fieldParts);
+                        $itemProperties[$field] = $value;
+                    }
                 }
 
-                $data['items'][] = $itemProperties;
+                if ($itemProperties) {
+                    $data['items'][] = $itemProperties;
+                }
             }
         }
         return $data;
@@ -208,7 +210,11 @@ class FeedController extends ActionController
         $fullTypoScriptSettings = $this->configurationManager->getConfiguration(
             ConfigurationManagerInterface::CONFIGURATION_TYPE_FULL_TYPOSCRIPT
         );
-        $tsSettings = $fullTypoScriptSettings['plugin.']['tx_feeddisplay_pi1.']['settings.'];
+        if (!($fullTypoScriptSettings['plugin.']['tx_feeddisplay_pi1.'] ?? null)) {
+            $this->settings = [];
+            return;
+        }
+        $tsSettings = ($fullTypoScriptSettings['plugin.']['tx_feeddisplay_pi1.'])['settings.'];
 
         $originalSettings = $this->configurationManager->getConfiguration(
             ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS

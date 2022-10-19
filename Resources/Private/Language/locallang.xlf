@@ -78,6 +78,12 @@
             <trans-unit id="errorMessage" xml:space="preserve">
                 <source>Sorry, the feed could not be fetched.</source>
             </trans-unit>
+            <trans-unit id="noTemplateError" xml:space="preserve">
+                <source>Feed Display: Please include static TypoScript [EXT:feed_display/Configuration/TypoScript/]</source>
+            </trans-unit>
+            <trans-unit id="noItemsError" xml:space="preserve">
+                <source>Sorry, no items could be fetched.</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
