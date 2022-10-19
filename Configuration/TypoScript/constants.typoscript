@@ -11,7 +11,7 @@ plugin.tx_feeddisplay_pi1 {
         # cat=plugin.tx_feeddisplay_pi1/file/120; type=string; label=Path to template layouts (FE)
         layoutRootPath = EXT:feed_display/Resources/Private/Layouts/
     }
-    
+
     settings {
         # cat=plugin.tx_feeddisplay_pi1/100_general/200; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.feedUrl
         feedUrl = https://typo3.org/rss
@@ -79,7 +79,8 @@ plugin.tx_feeddisplay_pi1 {
             # For fields "channel_tags", "feed_tags" and "image_tags" you must parse the feed-dependent arguments
 
             # Item-Level Data (Basic)
-            items := addToList(author, authors, categories, category, content, contributor, contributors, copyright, date, description, enclosure, enclosures, feed, id, link, links, local_date, permalink, source, title)
+            items := addToList(author, authors, categories, category, content, contributor, contributors, copyright, date|U, description, enclosure, enclosures, feed, id, link, links, local_date|, permalink, source, title)
+            # Attention: Adding field "local_date" without an empty parameter in PHP 8.1 leads to a deprecation notice "strftime() is deprecated" in simplepie/src/Item.php
 
             # Item-Level GeoData
             items := addToList(latitude, longitude)
