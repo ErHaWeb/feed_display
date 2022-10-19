@@ -7,7 +7,7 @@
                 <source>Feed Display</source>
             </trans-unit>
             <trans-unit id="pi1_plus_wiz_description" xml:space="preserve">
-                <source>Fetch and parse RSS, Atom or RDF web feeds for frontend display</source>
+                <source>RSS/Atom web feed parsing and frontend display based on Extbase/Fluid</source>
             </trans-unit>
 
             <!-- Sheet: General -->

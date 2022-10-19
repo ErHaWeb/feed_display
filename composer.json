@@ -24,8 +24,7 @@
     "Extension",
     "Feed",
     "RSS",
-    "Atom",
-    "RDF"
+    "Atom"
   ],
   "support": {
     "issues": "https://github.com/EricBode/feed_display/issues"
