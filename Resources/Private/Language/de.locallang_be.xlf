@@ -5,120 +5,120 @@
     <body>
       <trans-unit id="pi1_title" xml:space="preserve">
                 <source>Feed Display</source>
-            <target state="needs-translation">Feed Display</target></trans-unit>
+            <target state="translated">Feed-Anzeige</target></trans-unit>
       <trans-unit id="pi1_plus_wiz_description" xml:space="preserve">
                 <source>RSS/Atom web feed parsing and frontend display based on Extbase/Fluid</source>
-            <target state="needs-translation">RSS/Atom web feed parsing and frontend display based on Extbase/Fluid</target></trans-unit>
+            <target state="translated">RSS/Atom-Webfeed-Parsing und Frontend-Anzeige auf Basis von Extbase/Fluid</target></trans-unit>
       <!-- Sheet: General -->
       <trans-unit id="flexform.sheet_general.title" xml:space="preserve">
                 <source>General</source>
-            <target state="needs-translation">General</target></trans-unit>
+            <target state="translated">Allgemein</target></trans-unit>
       <trans-unit id="flexform.sheet_general.description" xml:space="preserve">
                 <source>These are general settings for the frontend display of the feed. If no value is given, then the value of the TypoScript configuration is used by default.</source>
-            <target state="needs-translation">These are general settings for the frontend display of the feed. If no value is given, then the value of the TypoScript configuration is used by default.</target></trans-unit>
+            <target state="translated">Dies sind allgemeine Einstellungen für die Frontend-Anzeige des Feeds. Wenn kein Wert angegeben wird, wird standardmäßig der Wert der TypoScript-Konfiguration verwendet.</target></trans-unit>
       <trans-unit id="flexform.feedUrl.label" xml:space="preserve">
                 <source>Feed URL</source>
-            <target state="needs-translation">Feed URL</target></trans-unit>
+            <target state="translated">Feed-URL</target></trans-unit>
       <trans-unit id="flexform.feedUrl.description" xml:space="preserve">
                 <source>URL that is fetched by the service (empty = Defined by TypoScript)</source>
-            <target state="needs-translation">URL that is fetched by the service (empty = Defined by TypoScript)</target></trans-unit>
+            <target state="translated">URL, die vom Dienst abgerufen wird (leer = von TypoScript definiert)</target></trans-unit>
       <trans-unit id="flexform.maxFeedCount.label" xml:space="preserve">
                 <source>Max. items</source>
-            <target state="needs-translation">Max. items</target></trans-unit>
+            <target state="translated">Max. Artikel</target></trans-unit>
       <trans-unit id="flexform.maxFeedCount.description" xml:space="preserve">
                 <source>Maximum feed items to show (0 or empty = Defined by TypoScript)</source>
-            <target state="needs-translation">Maximum feed items to show (0 or empty = Defined by TypoScript)</target></trans-unit>
+            <target state="translated">Maximal anzuzeigende Feed-Elemente (0 oder leer = von TypoScript festgelegt)</target></trans-unit>
       <trans-unit id="flexform.maxContentLength.label" xml:space="preserve">
                 <source>Max. content length</source>
-            <target state="needs-translation">Max. content length</target></trans-unit>
+            <target state="translated">Max. Länge des Inhalts</target></trans-unit>
       <trans-unit id="flexform.maxContentLength.description" xml:space="preserve">
                 <source>Crop the characters of the feed content to the configured length (0 or empty = Defined by TypoScript)</source>
-            <target state="needs-translation">Crop the characters of the feed content to the configured length (0 or empty = Defined by TypoScript)</target></trans-unit>
+            <target state="translated">Beschneidet die Zeichen des Feed-Inhalts auf die konfigurierte Länge (0 oder leer = Definiert durch TypoScript)</target></trans-unit>
       <trans-unit id="flexform.maxHeaderLength.label" xml:space="preserve">
                 <source>Max. header length</source>
-            <target state="needs-translation">Max. header length</target></trans-unit>
+            <target state="translated">Max. Länge der Kopfzeile</target></trans-unit>
       <trans-unit id="flexform.maxHeaderLength.description" xml:space="preserve">
                 <source>Crop the characters of the feed header to the configured length (0 or empty = Defined by TypoScript)</source>
-            <target state="needs-translation">Crop the characters of the feed header to the configured length (0 or empty = Defined by TypoScript)</target></trans-unit>
+            <target state="translated">Beschneidet die Zeichen des Feed-Headers auf die konfigurierte Länge (0 oder leer = Definiert durch TypoScript)</target></trans-unit>
       <trans-unit id="flexform.linkTarget.label" xml:space="preserve">
                 <source>Target</source>
-            <target state="needs-translation">Target</target></trans-unit>
+            <target state="translated">Link-Ziel</target></trans-unit>
       <trans-unit id="flexform.linkTarget.description" xml:space="preserve">
                 <source>Target attribute to define the feed link behavior</source>
-            <target state="needs-translation">Target attribute to define the feed link behavior</target></trans-unit>
+            <target state="translated">Konfiguration des Link-Verhaltens anhand des target-Attributs</target></trans-unit>
       <trans-unit id="flexform.linkTarget.I.default" xml:space="preserve">
                 <source>Defined by TypoScript (default)</source>
-            <target state="needs-translation">Defined by TypoScript (default)</target></trans-unit>
+            <target state="translated">Definiert durch TypoScript (Standard)</target></trans-unit>
       <trans-unit id="flexform.linkTarget.I.blank" xml:space="preserve">
                 <source>Opens in a new window or tab</source>
-            <target state="needs-translation">Opens in a new window or tab</target></trans-unit>
+            <target state="translated">Wird in einem neuen Fenster oder Tab geöffnet</target></trans-unit>
       <trans-unit id="flexform.linkTarget.I.self" xml:space="preserve">
                 <source>Opens in the same frame as it was clicked</source>
-            <target state="needs-translation">Opens in the same frame as it was clicked</target></trans-unit>
+            <target state="translated">Öffnet sich in demselben Rahmen, in dem es angeklickt wurde</target></trans-unit>
       <trans-unit id="flexform.linkTarget.I.parent" xml:space="preserve">
                 <source>Opens in the parent frame</source>
-            <target state="needs-translation">Opens in the parent frame</target></trans-unit>
+            <target state="translated">Öffnet sich im übergeordneten Rahmen</target></trans-unit>
       <trans-unit id="flexform.linkTarget.I.top" xml:space="preserve">
                 <source>Opens in the full body of the window</source>
-            <target state="needs-translation">Opens in the full body of the window</target></trans-unit>
+            <target state="translated">Öffnet sich in der gesamten Anzeigefläche des Fensters</target></trans-unit>
       <trans-unit id="flexform.logoMaxWidth.label" xml:space="preserve">
                 <source>Logo max. width</source>
-            <target state="needs-translation">Logo max. width</target></trans-unit>
+            <target state="translated">Max. Breite des Logos</target></trans-unit>
       <trans-unit id="flexform.logoMaxWidth.description" xml:space="preserve">
                 <source>Maximum width of the feeds logo image (0 or empty = Defined by TypoScript)</source>
-            <target state="needs-translation">Maximum width of the feeds logo image (0 or empty = Defined by TypoScript)</target></trans-unit>
+            <target state="translated">Maximale Breite des Feeds-Logo-Bildes (0 oder leer = von TypoScript festgelegt)</target></trans-unit>
       <trans-unit id="flexform.logoMaxHeight.label" xml:space="preserve">
                 <source>Logo max. height</source>
-            <target state="needs-translation">Logo max. height</target></trans-unit>
+            <target state="translated">Max. Höhe des Logos</target></trans-unit>
       <trans-unit id="flexform.logoMaxHeight.description" xml:space="preserve">
                 <source>Maximum height of the feeds logo image (0 or empty = Defined by TypoScript)</source>
-            <target state="needs-translation">Maximum height of the feeds logo image (0 or empty = Defined by TypoScript)</target></trans-unit>
+            <target state="translated">Maximale Höhe des Feeds-Logo-Bildes (0 oder leer = von TypoScript definiert)</target></trans-unit>
       <trans-unit id="flexform.feedIconMaxWidth.label" xml:space="preserve">
                 <source>Feed icon max. width</source>
-            <target state="needs-translation">Feed icon max. width</target></trans-unit>
+            <target state="translated">Maximale Breite des Feed-Icons</target></trans-unit>
       <trans-unit id="flexform.feedIconMaxWidth.description" xml:space="preserve">
                 <source>Maximum width of the feeds icon image (0 or empty = Defined by TypoScript)</source>
-            <target state="needs-translation">Maximum width of the feeds icon image (0 or empty = Defined by TypoScript)</target></trans-unit>
+            <target state="translated">Maximale Breite des Feeds-Icon-Bildes (0 oder leer = von TypoScript festgelegt)</target></trans-unit>
       <trans-unit id="flexform.feedIconMaxHeight.label" xml:space="preserve">
                 <source>Feed icon max. height</source>
-            <target state="needs-translation">Feed icon max. height</target></trans-unit>
+            <target state="translated">Max. Höhe des Feed-Icons</target></trans-unit>
       <trans-unit id="flexform.feedIconMaxHeight.description" xml:space="preserve">
                 <source>Maximum height of the feeds icon image (0 or empty = Defined by TypoScript)</source>
-            <target state="needs-translation">Maximum height of the feeds icon image (0 or empty = Defined by TypoScript)</target></trans-unit>
+            <target state="translated">Maximale Höhe des Feeds-Icon-Bildes (0 oder leer = von TypoScript festgelegt)</target></trans-unit>
       <trans-unit id="flexform.errorMessage.label" xml:space="preserve">
                 <source>Error message</source>
-            <target state="needs-translation">Error message</target></trans-unit>
+            <target state="translated">Fehlermeldung</target></trans-unit>
       <trans-unit id="flexform.errorMessage.description" xml:space="preserve">
                 <source>This message is displayed if no feed items could be fetched (empty = Defined by TypoScript)</source>
-            <target state="needs-translation">This message is displayed if no feed items could be fetched (empty = Defined by TypoScript)</target></trans-unit>
+            <target state="translated">Diese Meldung wird angezeigt, wenn keine Feed-Artikel abgeholt werden konnten (leer = von TypoScript definiert)</target></trans-unit>
       <!-- Sheet Advanced -->
       <trans-unit id="flexform.sheet_advanced.title" xml:space="preserve">
                 <source>Advanced</source>
-            <target state="needs-translation">Advanced</target></trans-unit>
+            <target state="translated">Erweitert</target></trans-unit>
       <trans-unit id="flexform.sheet_advanced.description" xml:space="preserve">
                 <source>These are advanced settings. If you are unsure, simply use the default values here. If no value is given, then the value of the TypoScript configuration is used by default.</source>
-            <target state="needs-translation">These are advanced settings. If you are unsure, simply use the default values here. If no value is given, then the value of the TypoScript configuration is used by default.</target></trans-unit>
+            <target state="translated">Dies sind erweiterte Einstellungen. Wenn Sie unsicher sind, verwenden Sie einfach die Standardwerte. Wenn kein Wert angegeben wird, wird standardmäßig der Wert aus der TypoScript-Konfiguration verwendet.</target></trans-unit>
       <trans-unit id="flexform.dateFormat.label" xml:space="preserve">
                 <source>Date format</source>
-            <target state="needs-translation">Date format</target></trans-unit>
+            <target state="translated">Datumsformat</target></trans-unit>
       <trans-unit id="flexform.dateFormat.description" xml:space="preserve">
                 <source>Use PHP's strftime() function format (empty = Defined by TypoScript)</source>
-            <target state="needs-translation">Use PHP's strftime() function format (empty = Defined by TypoScript)</target></trans-unit>
+            <target state="translated">Verwenden Sie das Format der PHP-Funktion strftime() (leer = von TypoScript definiert)</target></trans-unit>
       <trans-unit id="flexform.stripTags.label" xml:space="preserve">
                 <source>Strip tags</source>
-            <target state="needs-translation">Strip tags</target></trans-unit>
+            <target state="translated">Tags entfernen</target></trans-unit>
       <trans-unit id="flexform.stripTags.description" xml:space="preserve">
                 <source>Remove HTML tags from the feed content</source>
-            <target state="needs-translation">Remove HTML tags from the feed content</target></trans-unit>
+            <target state="translated">HTML-Tags aus dem Feed-Inhalt entfernen</target></trans-unit>
       <trans-unit id="flexform.stripTags.I.yes" xml:space="preserve">
                 <source>yes</source>
-            <target state="needs-translation">yes</target></trans-unit>
+            <target state="translated">Ja</target></trans-unit>
       <trans-unit id="flexform.stripTags.I.no" xml:space="preserve">
                 <source>no</source>
-            <target state="needs-translation">no</target></trans-unit>
+            <target state="translated">Nein</target></trans-unit>
       <trans-unit id="flexform.cacheDuration.label" xml:space="preserve">
                 <source>Feed cache</source>
-            <target state="needs-translation">Feed cache</target></trans-unit>
+            <target state="translated">Feed-Cache</target></trans-unit>
       <trans-unit id="flexform.cacheDuration.description" xml:space="preserve">
                 <source>Time in seconds (0 = no cache, empty = Defined by TypoScript)</source>
             <target state="needs-translation">Time in seconds (0 = no cache, empty = Defined by TypoScript)</target></trans-unit>
