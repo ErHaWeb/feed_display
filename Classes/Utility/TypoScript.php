@@ -30,6 +30,7 @@ class TypoScript
      */
     public function override(array $base, array $overload): array
     {
+        $overload = $this->removeDotsFromArrayKeys($overload);
         $configuration = $overload['overrideFlexformSettingsIfEmpty'] ?? '';
         $validFields = GeneralUtility::trimExplode(',', $configuration, true);
         foreach ($validFields as $fieldName) {
@@ -38,12 +39,13 @@ class TypoScript
             if (str_contains($fieldName, '.')) {
                 $keyAsArray = explode('.', $fieldName);
 
-                $foundInCurrentTs = $this->getValue($base, $keyAsArray);
-
-                if ($foundInCurrentTs === '') {
-                    $foundInOriginal = $this->getValue($overload, $keyAsArray);
-                    if ($foundInOriginal) {
-                        $base = $this->setValue($base, $keyAsArray, $foundInOriginal);
+                $foundInOriginal = $this->getValue($base, $keyAsArray);
+                if ($foundInOriginal) {
+                    $base = $this->setValue($base, $keyAsArray, $foundInOriginal);
+                } else {
+                    $foundInCurrentTs = $this->getValue($overload, $keyAsArray);
+                    if ($foundInCurrentTs) {
+                        $base = $this->setValue($base, $keyAsArray, $foundInCurrentTs);
                     }
                 }
             } else if (((!isset($base[$fieldName]) || $base[$fieldName] === '0') || ($base[$fieldName] === ''))
@@ -119,5 +121,18 @@ class TypoScript
 
         $key = reset($path);
         $array[$key] = $value;
+    }
+
+    /**
+     * @param array $array
+     * @return array
+     */
+    protected function removeDotsFromArrayKeys(array $array): array
+    {
+        $newArray = [];
+        foreach ($array as $key => $value) {
+            $newArray[rtrim($key, '.')] = $value;
+        }
+        return $newArray;
     }
 }

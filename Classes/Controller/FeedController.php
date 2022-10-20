@@ -92,12 +92,16 @@ class FeedController extends ActionController
 
         if ($this->initFeed()) {
             $getFeedFields = GeneralUtility::trimExplode(',', $this->settings['getFields']['feed']);
-            $data['feed']['subscribeUrl'] = $this->feed->subscribe_url();
 
             foreach ($getFeedFields as $getFeedField) {
                 $fieldParts = GeneralUtility::trimExplode('|', $getFeedField);
                 $field = GeneralUtility::underscoredToLowerCamelCase($fieldParts[0]);
-                $value = $this->getValue($this->feed, $fieldParts);
+
+                if ($getFeedField === 'subscribe_url') {
+                    $value = $this->feed->subscribe_url();
+                } else {
+                    $value = $this->getValue($this->feed, $fieldParts);
+                }
 
                 if ($getFeedField === 'image_url') {
                     $data['feed']['image'] = $this->getImage($value);
@@ -105,7 +109,6 @@ class FeedController extends ActionController
 
                 $data['feed'][$field] = $value;
             }
-
 
             $maxFeedCount = (int)($this->settings['maxFeedCount'] ?? 0);
             foreach ($this->feed->get_items(0, $maxFeedCount) as $item) {

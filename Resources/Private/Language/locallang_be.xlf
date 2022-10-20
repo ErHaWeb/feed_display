@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
     <file source-language="en" datatype="plaintext" original="messages" date="2022-10-14T10:27:00Z" product-name="feed_display">
-        <header/>
+        <header />
         <body>
             <trans-unit id="pi1_title" xml:space="preserve">
                 <source>Feed Display</source>
@@ -10,12 +10,12 @@
                 <source>RSS/Atom web feed parsing and frontend display based on Extbase/Fluid</source>
             </trans-unit>
 
-            <!-- Sheet: General -->
+        <!-- Sheet: General -->
             <trans-unit id="flexform.sheet_general.title" xml:space="preserve">
                 <source>General</source>
             </trans-unit>
             <trans-unit id="flexform.sheet_general.description" xml:space="preserve">
-                <source/>
+                <source>These are general settings for the frontend display of the feed. If no value is given, then the value of the TypoScript configuration is used by default.</source>
             </trans-unit>
 
             <trans-unit id="flexform.feedUrl.label" xml:space="preserve">
@@ -103,12 +103,12 @@
                 <source>This message is displayed if no feed items could be fetched (empty = Defined by TypoScript)</source>
             </trans-unit>
 
-            <!-- Sheet Advanced -->
+        <!-- Sheet Advanced -->
             <trans-unit id="flexform.sheet_advanced.title" xml:space="preserve">
                 <source>Advanced</source>
             </trans-unit>
             <trans-unit id="flexform.sheet_advanced.description" xml:space="preserve">
-                <source/>
+                <source>These are advanced settings. If you are unsure, simply use the default values here. If no value is given, then the value of the TypoScript configuration is used by default.</source>
             </trans-unit>
 
             <trans-unit id="flexform.dateFormat.label" xml:space="preserve">
@@ -145,7 +145,182 @@
                 <source>Defined by TypoScript (default)</source>
             </trans-unit>
 
-            <!-- Constant Editor -->
+        <!-- Sheet: Fields -->
+            <trans-unit id="flexform.sheet_getFields.title" xml:space="preserve">
+                <source>Get Fields</source>
+            </trans-unit>
+            <trans-unit id="flexform.sheet_getFields.description" xml:space="preserve">
+                <source>Select here which fields from the feed and feed items should be read using the SimplePie library and should be available as variables in the fluid template. If no fields were selected, then the TypoScript configuration is used.</source>
+            </trans-unit>
+
+            <trans-unit id="flexform.getFields.feed.label" xml:space="preserve">
+                <source>Get fields from feed</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.feed.description" xml:space="preserve">
+                <source>Selection of the fields to be read from the feed.</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.group.feed" xml:space="preserve">
+                <source>Feed</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.feed.I.author" xml:space="preserve">
+                <source>Author</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.feed.I.authors" xml:space="preserve">
+                <source>Authors</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.feed.I.contributor" xml:space="preserve">
+                <source>Contributor</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.feed.I.contributors" xml:space="preserve">
+                <source>Contributors</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.feed.I.copyright" xml:space="preserve">
+                <source>Copyright</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.feed.I.description" xml:space="preserve">
+                <source>Description</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.feed.I.encoding" xml:space="preserve">
+                <source>Encoding</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.feed.I.favicon" xml:space="preserve">
+                <source>Favicon</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.feed.I.items" xml:space="preserve">
+                <source>Items</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.feed.I.item_quantity" xml:space="preserve">
+                <source>Item_quantity</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.feed.I.language" xml:space="preserve">
+                <source>Language</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.feed.I.link" xml:space="preserve">
+                <source>Link</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.feed.I.links" xml:space="preserve">
+                <source>Links</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.feed.I.permalink" xml:space="preserve">
+                <source>Permalink</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.feed.I.title" xml:space="preserve">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.feed.I.type" xml:space="preserve">
+                <source>Type</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.feed.I.latitude" xml:space="preserve">
+                <source>Latitude</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.feed.I.longitude" xml:space="preserve">
+                <source>Longitude</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.feed.I.image_height" xml:space="preserve">
+                <source>Image Height</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.feed.I.image_link" xml:space="preserve">
+                <source>Image Link</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.feed.I.image_title" xml:space="preserve">
+                <source>Image Title</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.feed.I.image_url" xml:space="preserve">
+                <source>Image URL</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.feed.I.image_width" xml:space="preserve">
+                <source>Image Width</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.feed.I.all_discovered_feeds" xml:space="preserve">
+                <source>All Discovered Feeds</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.feed.I.base" xml:space="preserve">
+                <source>Base</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.feed.I.subscribe_url" xml:space="preserve">
+                <source>Subscribe URL</source>
+            </trans-unit>
+
+            <trans-unit id="flexform.getFields.items.label" xml:space="preserve">
+                <source>Get fields from feed items</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.items.description" xml:space="preserve">
+                <source>Selection of the fields to be read from the feed items.</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.group.items" xml:space="preserve">
+                <source>Items</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.items.I.author" xml:space="preserve">
+                <source>Author</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.items.I.authors" xml:space="preserve">
+                <source>Authors</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.items.I.categories" xml:space="preserve">
+                <source>Categories</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.items.I.category" xml:space="preserve">
+                <source>Category</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.items.I.content" xml:space="preserve">
+                <source>Content</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.items.I.contributor" xml:space="preserve">
+                <source>Contributor</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.items.I.contributors" xml:space="preserve">
+                <source>Contributors</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.items.I.copyright" xml:space="preserve">
+                <source>Copyright</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.items.I.date|U" xml:space="preserve">
+                <source>Date (with parameter "U")</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.items.I.description" xml:space="preserve">
+                <source>Description</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.items.I.enclosure" xml:space="preserve">
+                <source>Enclosure</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.items.I.enclosures" xml:space="preserve">
+                <source>Enclosures</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.items.I.feed" xml:space="preserve">
+                <source>Feed</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.items.I.id" xml:space="preserve">
+                <source>ID</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.items.I.link" xml:space="preserve">
+                <source>Link</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.items.I.links" xml:space="preserve">
+                <source>Links</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.items.I.local_date|" xml:space="preserve">
+                <source>Local Date (with empty parameter)</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.items.I.permalink" xml:space="preserve">
+                <source>Permalink</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.items.I.source" xml:space="preserve">
+                <source>Source</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.items.I.title" xml:space="preserve">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.items.I.latitude" xml:space="preserve">
+                <source>Latitude</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.items.I.longitude" xml:space="preserve">
+                <source>Longitude</source>
+            </trans-unit>
+            <trans-unit id="flexform.getFields.items.I.base" xml:space="preserve">
+                <source>Base</source>
+            </trans-unit>
+
+        <!-- Constant Editor -->
             <trans-unit id="constants.customcategory.plugin.tx_feeddisplay_pi1" xml:space="preserve">
                 <source>Feed Display</source>
             </trans-unit>
@@ -154,6 +329,9 @@
             </trans-unit>
             <trans-unit id="constants.subcategory.advanced" xml:space="preserve">
                 <source>Advanced</source>
+            </trans-unit>
+            <trans-unit id="constants.subcategory.getFields" xml:space="preserve">
+                <source>Fields to get from Feed and Items</source>
             </trans-unit>
             <trans-unit id="constants.feedUrl" xml:space="preserve">
                 <source>Feed URL:URL that is fetched by the service</source>
@@ -208,6 +386,15 @@
             </trans-unit>
             <trans-unit id="constants.cacheDuration" xml:space="preserve">
                 <source>Feed cache:Time in seconds (0 = no cache)</source>
+            </trans-unit>
+            <trans-unit id="constants.overrideFlexformSettingsIfEmpty" xml:space="preserve">
+                <source>Override FlexForm Settings if empty:Comma separated list of settings to be overridden by TypoScript if the plugin settings value is either empty or 0.</source>
+            </trans-unit>
+            <trans-unit id="constants.getFields.feed" xml:space="preserve">
+                <source>Feed fields to get:Comma-separated list of fields to be read from the feed by SimplePie and made available as variables in Fluid.</source>
+            </trans-unit>
+            <trans-unit id="constants.getFields.items" xml:space="preserve">
+                <source>Feed items fields to get:Comma-separated list of fields to be read from the feed items by SimplePie and made available as variables in Fluid.</source>
             </trans-unit>
         </body>
     </file>

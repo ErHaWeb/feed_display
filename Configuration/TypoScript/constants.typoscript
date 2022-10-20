@@ -1,6 +1,7 @@
 # customcategory=plugin.tx_feeddisplay_pi1=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.customcategory.plugin.tx_feeddisplay_pi1
 # customsubcategory=100_general=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.subcategory.general
 # customsubcategory=200_advanced=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.subcategory.advanced
+# customsubcategory=300_getfields=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.subcategory.getFields
 
 plugin.tx_feeddisplay_pi1 {
     view {
@@ -38,7 +39,9 @@ plugin.tx_feeddisplay_pi1 {
         # cat=plugin.tx_feeddisplay_pi1/200_advanced/330; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.errorMessage
         errorMessage =
         # cat=plugin.tx_feeddisplay_pi1/200_advanced/340; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.cacheDuration
-        cacheDuration =
+        cacheDuration = 3600
+        # cat=plugin.tx_feeddisplay_pi1/200_advanced/350; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.overrideFlexformSettingsIfEmpty
+        overrideFlexformSettingsIfEmpty = feedUrl,maxFeedCount,maxContentLength,maxHeaderLength,logoMaxWidth,logoMaxHeight,feedIconMaxWidth,feedIconMaxHeight,dateFormat,stripTags,linkTarget,errorMessage,cacheDuration,getFields.feed,getFields.items
 
         getFields {
             # Each field is internally converted to a SimplePie getter method.
@@ -62,34 +65,34 @@ plugin.tx_feeddisplay_pi1 {
             #
             # you can get the image URL by using the following TypoScript line:
             # feed := addToList(channel_tags|http://www.itunes.com/dtds/podcast-1.0.dtd|image)
-            # > this results in function call get_channel('http://www.itunes.com/dtds/podcast-1.0.dtd', 'image')
+            # > this results in function call get_channel('http://www.itunes.com/dtds/podcast-1.0.dtd','image')
 
             # Feed-Level Data (Basic)
-            feed := addToList(author, authors, contributor, contributors, copyright, description, encoding, favicon, items, item_quantity, language, link, links, permalink, title, type)
+            # cat=plugin.tx_feeddisplay_pi1/300_getfields/100; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.getFields.feed
+            feed := addToList(author,authors,contributor,contributors,copyright,description,encoding,favicon,items,item_quantity,language,link,links,permalink,title,type,subscribe_url)
             # For field "item" you must parse the feed-dependent arguments
 
             # Feed-Level GeoData
-            feed := addToList(latitude, longitude)
+            feed := addToList(latitude,longitude)
 
             # Feed Logo
-            feed := addToList(image_height, image_link, image_title, image_url, image_width)
+            feed := addToList(image_height,image_link,image_title,image_url,image_width)
 
             # Feed-Level Data Hacking (Advanced)
-            feed := addToList(all_discovered_feeds, base)
-            # For fields "channel_tags", "feed_tags" and "image_tags" you must parse the feed-dependent arguments
+            feed := addToList(all_discovered_feeds,base)
+            # For fields "channel_tags","feed_tags" and "image_tags" you must parse the feed-dependent arguments
 
             # Item-Level Data (Basic)
-            items := addToList(author, authors, categories, category, content, contributor, contributors, copyright, date|U, description, enclosure, enclosures, feed, id, link, links, local_date|, permalink, source, title)
+            # cat=plugin.tx_feeddisplay_pi1/300_getfields/200; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.getFields.items
+            items := addToList(author,authors,categories,category,content,contributor,contributors,copyright,date|U,description,enclosure,enclosures,feed,id,link,links,local_date|,permalink,source,title)
             # Attention: Adding field "local_date" without an empty parameter in PHP 8.1 leads to a deprecation notice "strftime() is deprecated" in simplepie/src/Item.php
 
             # Item-Level GeoData
-            items := addToList(latitude, longitude)
+            items := addToList(latitude,longitude)
 
             # Item-Level Data Hacking (Advanced)
             items := addToList(base)
             # For field "item_tags" you must parse the feed-dependent arguments
         }
-
-        overrideFlexformSettingsIfEmpty = feedUrl, maxFeedCount, maxContentLength, maxHeaderLength, logoMaxWidth, logoMaxHeight, feedIconMaxWidth, feedIconMaxHeight, dateFormat, stripTags, linkTarget, errorMessage, cacheDuration
     }
 }
