@@ -64,7 +64,7 @@ class TypoScript
      * @param mixed $path
      * @return mixed
      */
-    protected function getValue(mixed $data, mixed $path): mixed
+    protected function getValue($data, $path)
     {
         $found = true;
 
@@ -93,7 +93,7 @@ class TypoScript
      * @param mixed $value
      * @return array
      */
-    protected function setValue(array $array, array $path, mixed $value): array
+    protected function setValue(array $array, array $path, $value): array
     {
         $this->setValueByReference($array, $path, $value);
 
