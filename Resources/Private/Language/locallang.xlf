@@ -43,7 +43,7 @@
                 <source>Contributor</source>
             </trans-unit>
             <trans-unit id="item.copyright" xml:space="preserve">
-                <source>copyright</source>
+                <source>Copyright</source>
             </trans-unit>
             <trans-unit id="item.date" xml:space="preserve">
                 <source>Date</source>
