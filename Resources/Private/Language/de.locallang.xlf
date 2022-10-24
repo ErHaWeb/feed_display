@@ -18,9 +18,9 @@
       <trans-unit id="feed.contributors" xml:space="preserve">
                 <source>Contributors</source>
             <target state="translated">Mitwirkende</target></trans-unit>
-      <trans-unit id="feed.contributor" xml:space="preserve">
+      <trans-unit id="feed.contributor" xml:space="preserve" approved="yes">
                 <source>Contributor</source>
-            <target state="translated">Mitwirkende(r)</target></trans-unit>
+            <target state="final">Mitwirkende(r)</target></trans-unit>
       <trans-unit id="feed.items" xml:space="preserve">
                 <source>Items</source>
             <target state="translated">Elemente</target></trans-unit>
@@ -39,12 +39,12 @@
       <trans-unit id="item.contributors" xml:space="preserve">
                 <source>Contributors</source>
             <target state="translated">Mitwirkende</target></trans-unit>
-      <trans-unit id="item.contributor" xml:space="preserve">
+      <trans-unit id="item.contributor" xml:space="preserve" approved="yes">
                 <source>Contributor</source>
-            <target state="translated">Mitwirkende(r)</target></trans-unit>
-      <trans-unit id="item.copyright" xml:space="preserve">
+            <target state="final">Mitwirkende(r)</target></trans-unit>
+      <trans-unit id="item.copyright" xml:space="preserve" approved="yes">
                 <source>copyright</source>
-            <target state="translated">Copyright</target></trans-unit>
+            <target state="final">Copyright</target></trans-unit>
       <trans-unit id="item.date" xml:space="preserve">
                 <source>Date</source>
             <target state="translated">Datum</target></trans-unit>
