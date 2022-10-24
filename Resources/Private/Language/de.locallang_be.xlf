@@ -257,125 +257,125 @@
             <target state="translated">Copyright</target></trans-unit>
       <trans-unit id="flexform.getFields.items.I.date|U" xml:space="preserve">
                 <source>Date (with parameter "U")</source>
-            <target state="needs-translation">Date (with parameter "U")</target></trans-unit>
+            <target state="translated">Datum (mit Parameter "U")</target></trans-unit>
       <trans-unit id="flexform.getFields.items.I.description" xml:space="preserve">
                 <source>Description</source>
-            <target state="needs-translation">Description</target></trans-unit>
+            <target state="translated">Beschreibung</target></trans-unit>
       <trans-unit id="flexform.getFields.items.I.enclosure" xml:space="preserve">
                 <source>Enclosure</source>
-            <target state="needs-translation">Enclosure</target></trans-unit>
+            <target state="translated">Anhang</target></trans-unit>
       <trans-unit id="flexform.getFields.items.I.enclosures" xml:space="preserve">
                 <source>Enclosures</source>
-            <target state="needs-translation">Enclosures</target></trans-unit>
+            <target state="translated">Anhänge</target></trans-unit>
       <trans-unit id="flexform.getFields.items.I.feed" xml:space="preserve">
                 <source>Feed</source>
-            <target state="needs-translation">Feed</target></trans-unit>
+            <target state="translated">Feed</target></trans-unit>
       <trans-unit id="flexform.getFields.items.I.id" xml:space="preserve">
                 <source>ID</source>
-            <target state="needs-translation">ID</target></trans-unit>
+            <target state="translated">ID</target></trans-unit>
       <trans-unit id="flexform.getFields.items.I.link" xml:space="preserve">
                 <source>Link</source>
-            <target state="needs-translation">Link</target></trans-unit>
+            <target state="translated">Link</target></trans-unit>
       <trans-unit id="flexform.getFields.items.I.links" xml:space="preserve">
                 <source>Links</source>
-            <target state="needs-translation">Links</target></trans-unit>
+            <target state="translated">Links</target></trans-unit>
       <trans-unit id="flexform.getFields.items.I.local_date|" xml:space="preserve">
                 <source>Local Date (with empty parameter)</source>
-            <target state="needs-translation">Local Date (with empty parameter)</target></trans-unit>
+            <target state="translated">Lokales Datum (mit leerem Parameter)</target></trans-unit>
       <trans-unit id="flexform.getFields.items.I.permalink" xml:space="preserve">
                 <source>Permalink</source>
-            <target state="needs-translation">Permalink</target></trans-unit>
+            <target state="translated">Permalink</target></trans-unit>
       <trans-unit id="flexform.getFields.items.I.source" xml:space="preserve">
                 <source>Source</source>
-            <target state="needs-translation">Source</target></trans-unit>
+            <target state="translated">Quelle</target></trans-unit>
       <trans-unit id="flexform.getFields.items.I.title" xml:space="preserve">
                 <source>Title</source>
-            <target state="needs-translation">Title</target></trans-unit>
+            <target state="translated">Titel</target></trans-unit>
       <trans-unit id="flexform.getFields.items.I.latitude" xml:space="preserve">
                 <source>Latitude</source>
-            <target state="needs-translation">Latitude</target></trans-unit>
+            <target state="translated">Breitengrad</target></trans-unit>
       <trans-unit id="flexform.getFields.items.I.longitude" xml:space="preserve">
                 <source>Longitude</source>
-            <target state="needs-translation">Longitude</target></trans-unit>
+            <target state="translated">Längengrad</target></trans-unit>
       <trans-unit id="flexform.getFields.items.I.base" xml:space="preserve">
                 <source>Base</source>
-            <target state="needs-translation">Base</target></trans-unit>
+            <target state="translated">Basis</target></trans-unit>
       <!-- Constant Editor -->
       <trans-unit id="constants.customcategory.plugin.tx_feeddisplay_pi1" xml:space="preserve">
                 <source>Feed Display</source>
-            <target state="needs-translation">Feed Display</target></trans-unit>
+            <target state="translated">Feed-Anzeige</target></trans-unit>
       <trans-unit id="constants.subcategory.general" xml:space="preserve">
                 <source>General</source>
-            <target state="needs-translation">General</target></trans-unit>
+            <target state="translated">Allgemein</target></trans-unit>
       <trans-unit id="constants.subcategory.advanced" xml:space="preserve">
                 <source>Advanced</source>
-            <target state="needs-translation">Advanced</target></trans-unit>
+            <target state="translated">Erweitert</target></trans-unit>
       <trans-unit id="constants.subcategory.getFields" xml:space="preserve">
                 <source>Fields to get from Feed and Items</source>
-            <target state="needs-translation">Fields to get from Feed and Items</target></trans-unit>
+            <target state="translated">Felder, die von Feed und Items abgerufen werden</target></trans-unit>
       <trans-unit id="constants.feedUrl" xml:space="preserve">
                 <source>Feed URL:URL that is fetched by the service</source>
-            <target state="needs-translation">Feed URL:URL that is fetched by the service</target></trans-unit>
+            <target state="translated">Feed-URL:URL, die vom Dienst abgerufen wird</target></trans-unit>
       <trans-unit id="constants.maxFeedCount" xml:space="preserve">
                 <source>Max. items:Maximum feed items to show</source>
-            <target state="needs-translation">Max. items:Maximum feed items to show</target></trans-unit>
+            <target state="translated">Max. Artikel:Maximal anzuzeigende Feed-Artikel</target></trans-unit>
       <trans-unit id="constants.maxContentLength" xml:space="preserve">
                 <source>Max. content length:Crop the characters of the feed content to the configured length</source>
-            <target state="needs-translation">Max. content length:Crop the characters of the feed content to the configured length</target></trans-unit>
+            <target state="translated">Maximale Inhaltslänge: Beschneidet die Zeichen des Feed-Inhalts auf die konfigurierte Länge</target></trans-unit>
       <trans-unit id="constants.maxHeaderLength" xml:space="preserve">
                 <source>Max. header length:Crop the characters of the feed header to the configured length</source>
-            <target state="needs-translation">Max. header length:Crop the characters of the feed header to the configured length</target></trans-unit>
+            <target state="translated">Max. Header-Länge: Beschneidet die Zeichen des Feed-Headers auf die konfigurierte Länge</target></trans-unit>
       <trans-unit id="constants.linkTarget" xml:space="preserve">
                 <source>Target:Target attribute to define the feed link behavior</source>
-            <target state="needs-translation">Target:Target attribute to define the feed link behavior</target></trans-unit>
+            <target state="translated">Target:Target-Attribut zur Festlegung des Verhaltens von Feed-Links</target></trans-unit>
       <trans-unit id="constants.linkTarget.I.default" xml:space="preserve">
                 <source>Defined by TypoScript (default)</source>
-            <target state="needs-translation">Defined by TypoScript (default)</target></trans-unit>
+            <target state="translated">Definiert durch TypoScript (Standard)</target></trans-unit>
       <trans-unit id="constants.linkTarget.I.blank" xml:space="preserve">
                 <source>Opens in a new window or tab</source>
-            <target state="needs-translation">Opens in a new window or tab</target></trans-unit>
+            <target state="translated">Wird in einem neuen Fenster oder Tab geöffnet</target></trans-unit>
       <trans-unit id="constants.linkTarget.I.self" xml:space="preserve">
                 <source>Opens in the same frame as it was clicked</source>
-            <target state="needs-translation">Opens in the same frame as it was clicked</target></trans-unit>
+            <target state="translated">Öffnet sich in demselben Rahmen, in dem es angeklickt wurde</target></trans-unit>
       <trans-unit id="constants.linkTarget.I.parent" xml:space="preserve">
                 <source>Opens in the parent frame</source>
-            <target state="needs-translation">Opens in the parent frame</target></trans-unit>
+            <target state="translated">Öffnet sich im übergeordneten Rahmen</target></trans-unit>
       <trans-unit id="constants.linkTarget.I.top" xml:space="preserve">
                 <source>Opens in the full body of the window</source>
-            <target state="needs-translation">Opens in the full body of the window</target></trans-unit>
+            <target state="translated">Öffnet sich in der gesamten Anzeigefläche des Fensters</target></trans-unit>
       <trans-unit id="constants.logoMaxWidth" xml:space="preserve">
                 <source>Logo width:Width of the feeds logo image</source>
-            <target state="needs-translation">Logo width:Width of the feeds logo image</target></trans-unit>
+            <target state="translated">Logobreite: Breite des Feeds-Logo-Bildes</target></trans-unit>
       <trans-unit id="constants.logoMaxHeight" xml:space="preserve">
                 <source>Logo height:Height of the feeds logo image</source>
-            <target state="needs-translation">Logo height:Height of the feeds logo image</target></trans-unit>
+            <target state="translated">Logohöhe: Höhe des Feeds-Logo-Bildes</target></trans-unit>
       <trans-unit id="constants.feedIconMaxWidth" xml:space="preserve">
                 <source>Feed icon width:Width of the feeds icon image</source>
-            <target state="needs-translation">Feed icon width:Width of the feeds icon image</target></trans-unit>
+            <target state="translated">Breite des Feed-Symbols: Breite des Feed-Symbolbildes</target></trans-unit>
       <trans-unit id="constants.feedIconMaxHeight" xml:space="preserve">
                 <source>Feed icon height:Height of the feeds icon image</source>
-            <target state="needs-translation">Feed icon height:Height of the feeds icon image</target></trans-unit>
+            <target state="translated">Höhe des Feed-Symbols: Höhe des Bildes des Feed-Symbols</target></trans-unit>
       <trans-unit id="constants.errorMessage" xml:space="preserve">
                 <source>Error message:This message is displayed if no feed items could be fetched</source>
-            <target state="needs-translation">Error message:This message is displayed if no feed items could be fetched</target></trans-unit>
+            <target state="translated">Fehlermeldung: Diese Meldung wird angezeigt, wenn kein Feed abgerufen werden konnten.</target></trans-unit>
       <trans-unit id="constants.dateFormat" xml:space="preserve">
                 <source>Date format:Use PHP's strftime() function format</source>
-            <target state="needs-translation">Date format:Use PHP's strftime() function format</target></trans-unit>
+            <target state="translated">Datumsformat: Verwenden Sie das Format der PHP-Funktion strftime()</target></trans-unit>
       <trans-unit id="constants.stripTags" xml:space="preserve">
                 <source>Strip tags:Remove HTML tags from the feed content</source>
-            <target state="needs-translation">Strip tags:Remove HTML tags from the feed content</target></trans-unit>
+            <target state="translated">Tags entfernen: Entfernen Sie HTML-Tags aus dem Feed-Inhalt.</target></trans-unit>
       <trans-unit id="constants.cacheDuration" xml:space="preserve">
                 <source>Feed cache:Time in seconds (0 = no cache)</source>
-            <target state="needs-translation">Feed cache:Time in seconds (0 = no cache)</target></trans-unit>
+            <target state="translated">Feed-Cache:Zeit in Sekunden (0 = kein Cache)</target></trans-unit>
       <trans-unit id="constants.overrideFlexformSettingsIfEmpty" xml:space="preserve">
                 <source>Override FlexForm Settings if empty:Comma separated list of settings to be overridden by TypoScript if the plugin settings value is either empty or 0.</source>
-            <target state="needs-translation">Override FlexForm Settings if empty:Comma separated list of settings to be overridden by TypoScript if the plugin settings value is either empty or 0.</target></trans-unit>
+            <target state="translated">Überschreibe FlexForm Settings wenn leer:Kommagetrennte Liste von Einstellungen, die von TypoScript überschrieben werden sollen, wenn der Wert der Plugin-Einstellungen entweder leer oder 0 ist.</target></trans-unit>
       <trans-unit id="constants.getFields.feed" xml:space="preserve">
                 <source>Feed fields to get:Comma-separated list of fields to be read from the feed by SimplePie and made available as variables in Fluid.</source>
-            <target state="needs-translation">Feed fields to get:Comma-separated list of fields to be read from the feed by SimplePie and made available as variables in Fluid.</target></trans-unit>
+            <target state="translated">Feed-Felder, die abgerufen werden sollen:Kommagetrennte Liste von Feldern, die von SimplePie aus dem Feed gelesen und als Variablen in Fluid zur Verfügung gestellt werden sollen.</target></trans-unit>
       <trans-unit id="constants.getFields.items" xml:space="preserve">
                 <source>Feed items fields to get:Comma-separated list of fields to be read from the feed items by SimplePie and made available as variables in Fluid.</source>
-            <target state="needs-translation">Feed items fields to get:Comma-separated list of fields to be read from the feed items by SimplePie and made available as variables in Fluid.</target></trans-unit>
+            <target state="translated">Abzurufende Felder der Feed-Elemente:Komma-getrennte Liste von Feldern, die von SimplePie aus den Feed-Elementen gelesen und als Variablen in Fluid verfügbar gemacht werden sollen.</target></trans-unit>
     </body>
   </file>
 </xliff>
