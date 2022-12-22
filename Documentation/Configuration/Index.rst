@@ -12,4 +12,3 @@ Configuration
 
    TypoScriptReference/Index
    TSconfig
-
