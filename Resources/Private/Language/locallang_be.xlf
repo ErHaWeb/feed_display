@@ -135,7 +135,7 @@
                 <source>Feed cache</source>
             </trans-unit>
             <trans-unit id="flexform.cacheDuration.description" xml:space="preserve">
-                <source>Time in seconds (0 = no cache, empty = Defined by TypoScript)</source>
+                <source>Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache, empty = Defined by TypoScript)</source>
             </trans-unit>
 
             <trans-unit id="flexform.placeholder.feed" xml:space="preserve">
@@ -385,7 +385,7 @@
                 <source>Strip tags:Remove HTML tags from the feed content</source>
             </trans-unit>
             <trans-unit id="constants.cacheDuration" xml:space="preserve">
-                <source>Feed cache:Time in seconds (0 = no cache)</source>
+                <source>Feed cache:Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</source>
             </trans-unit>
             <trans-unit id="constants.overrideFlexformSettingsIfEmpty" xml:space="preserve">
                 <source>Override FlexForm Settings if empty:Comma separated list of settings to be overridden by TypoScript if the plugin settings value is either empty or 0.</source>
