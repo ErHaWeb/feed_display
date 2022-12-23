@@ -72,8 +72,6 @@ The following options are located under the following path:
 Use these settings if you want to define values globally for all Feed
 Display Plugin content elements.
 
-Benutze
-
 ..  _configuration-typoscript-constants-settings-feedurl:
 
 Feed URL
