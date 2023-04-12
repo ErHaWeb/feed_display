@@ -13,10 +13,10 @@
   },
   "authors": [
     {
-      "name": "Eric Bode",
+      "name": "Eric Harrer",
       "role": "Developer",
-      "email": "eric.bode@gmx.de",
-      "homepage": "https://www.eric-bode.de"
+      "email": "info@eric-harrer.de",
+      "homepage": "https://www.eric-harrer.de"
     }
   ],
   "keywords": [
@@ -27,7 +27,7 @@
     "Atom"
   ],
   "support": {
-    "issues": "https://github.com/EricBode/feed_display/issues"
+    "issues": "https://github.com/ErHaWeb/feed_display/issues"
   },
   "extra": {
     "typo3/cms": {

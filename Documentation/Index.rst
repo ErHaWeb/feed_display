@@ -17,7 +17,7 @@ Feed Display
     en
 
 :Author:
-    Eric Bode
+    Eric Harrer
 
 :License:
     This document is published under the
