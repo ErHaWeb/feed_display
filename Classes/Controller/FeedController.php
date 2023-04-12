@@ -21,6 +21,7 @@ declare(strict_types=1);
 
 namespace ErHaWeb\FeedDisplay\Controller;
 
+use ErHaWeb\FeedDisplay\Event\SingleFeedDataEvent;
 use ErHaWeb\FeedDisplay\Utility\TypoScript;
 use Psr\Http\Message\ResponseInterface;
 use SimplePie\SimplePie;
@@ -123,6 +124,8 @@ class FeedController extends ActionController
                         $itemProperties[$field] = $value;
                     }
                 }
+
+                $itemProperties = $this->eventDispatcher->dispatch(new SingleFeedDataEvent($itemProperties, $item, $this->settings, $this->feed))->getItemProperties();
 
                 if ($itemProperties) {
                     $data['items'][] = $itemProperties;
