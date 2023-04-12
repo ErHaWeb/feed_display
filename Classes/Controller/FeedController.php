@@ -125,7 +125,7 @@ class FeedController extends ActionController
                     }
                 }
 
-                $itemProperties = $this->eventDispatcher->dispatch(new SingleFeedDataEvent($itemProperties, $item, $this->settings, $this->feed));
+                $itemProperties = $this->eventDispatcher->dispatch(new SingleFeedDataEvent($itemProperties, $item, $this->settings, $this->feed))->getItemProperties();
 
                 if ($itemProperties) {
                     $data['items'][] = $itemProperties;
