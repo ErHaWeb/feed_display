@@ -12,3 +12,4 @@ Configuration
 
    TypoScriptReference/Index
    TSconfig
+   Events
