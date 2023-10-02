@@ -3,379 +3,379 @@
   <file source-language="en" datatype="plaintext" original="messages" date="2022-10-14T10:27:00Z" product-name="feed_display" target-language="de">
     <header/>
     <body>
-      <trans-unit id="pi1_title" xml:space="preserve">
+      <trans-unit id="pi1_title" xml:space="preserve" approved="yes">
                 <source>Feed Display</source>
-            <target state="translated">Feed-Anzeige</target></trans-unit>
-      <trans-unit id="pi1_plus_wiz_description" xml:space="preserve">
+            <target state="final">Feed-Anzeige</target></trans-unit>
+      <trans-unit id="pi1_plus_wiz_description" xml:space="preserve" approved="yes">
                 <source>RSS/Atom web feed parsing and frontend display based on Extbase/Fluid</source>
-            <target state="translated">RSS/Atom-Webfeed-Parsing und Frontend-Anzeige auf Basis von Extbase/Fluid</target></trans-unit>
+            <target state="final">RSS/Atom-Webfeed-Parsing und Frontend-Anzeige auf Basis von Extbase/Fluid</target></trans-unit>
       <!-- Sheet: General -->
-      <trans-unit id="flexform.sheet_general.title" xml:space="preserve">
+      <trans-unit id="flexform.sheet_general.title" xml:space="preserve" approved="yes">
                 <source>General</source>
-            <target state="translated">Allgemein</target></trans-unit>
-      <trans-unit id="flexform.sheet_general.description" xml:space="preserve">
+            <target state="final">Allgemein</target></trans-unit>
+      <trans-unit id="flexform.sheet_general.description" xml:space="preserve" approved="yes">
                 <source>These are general settings for the frontend display of the feed. If no value is given, then the value of the TypoScript configuration is used by default.</source>
-            <target state="translated">Dies sind allgemeine Einstellungen für die Frontend-Anzeige des Feeds. Wenn kein Wert angegeben wird, wird standardmäßig der Wert der TypoScript-Konfiguration verwendet.</target></trans-unit>
-      <trans-unit id="flexform.feedUrl.label" xml:space="preserve">
+            <target state="final">Dies sind allgemeine Einstellungen für die Frontend-Anzeige des Feeds. Wenn kein Wert angegeben wird, wird standardmäßig der Wert der TypoScript-Konfiguration verwendet.</target></trans-unit>
+      <trans-unit id="flexform.feedUrl.label" xml:space="preserve" approved="yes">
                 <source>Feed URL</source>
-            <target state="translated">Feed-URL</target></trans-unit>
-      <trans-unit id="flexform.feedUrl.description" xml:space="preserve">
+            <target state="final">Feed-URL</target></trans-unit>
+      <trans-unit id="flexform.feedUrl.description" xml:space="preserve" approved="yes">
                 <source>URL that is fetched by the service (empty = Defined by TypoScript)</source>
-            <target state="translated">URL, die vom Dienst abgerufen wird (leer = von TypoScript definiert)</target></trans-unit>
-      <trans-unit id="flexform.maxFeedCount.label" xml:space="preserve">
+            <target state="final">URL, die vom Dienst abgerufen wird (leer = von TypoScript definiert)</target></trans-unit>
+      <trans-unit id="flexform.maxFeedCount.label" xml:space="preserve" approved="yes">
                 <source>Max. items</source>
-            <target state="translated">Max. Artikel</target></trans-unit>
-      <trans-unit id="flexform.maxFeedCount.description" xml:space="preserve">
+            <target state="final">Max. Artikel</target></trans-unit>
+      <trans-unit id="flexform.maxFeedCount.description" xml:space="preserve" approved="yes">
                 <source>Maximum feed items to show (0 or empty = Defined by TypoScript)</source>
-            <target state="translated">Maximal anzuzeigende Feed-Elemente (0 oder leer = von TypoScript festgelegt)</target></trans-unit>
-      <trans-unit id="flexform.maxContentLength.label" xml:space="preserve">
+            <target state="final">Maximal anzuzeigende Feed-Elemente (0 oder leer = von TypoScript festgelegt)</target></trans-unit>
+      <trans-unit id="flexform.maxContentLength.label" xml:space="preserve" approved="yes">
                 <source>Max. content length</source>
-            <target state="translated">Max. Länge des Inhalts</target></trans-unit>
-      <trans-unit id="flexform.maxContentLength.description" xml:space="preserve">
+            <target state="final">Max. Länge des Inhalts</target></trans-unit>
+      <trans-unit id="flexform.maxContentLength.description" xml:space="preserve" approved="yes">
                 <source>Crop the characters of the feed content to the configured length (0 or empty = Defined by TypoScript)</source>
-            <target state="translated">Beschneidet die Zeichen des Feed-Inhalts auf die konfigurierte Länge (0 oder leer = Definiert durch TypoScript)</target></trans-unit>
-      <trans-unit id="flexform.maxHeaderLength.label" xml:space="preserve">
+            <target state="final">Beschneidet die Zeichen des Feed-Inhalts auf die konfigurierte Länge (0 oder leer = Definiert durch TypoScript)</target></trans-unit>
+      <trans-unit id="flexform.maxHeaderLength.label" xml:space="preserve" approved="yes">
                 <source>Max. header length</source>
-            <target state="translated">Max. Länge der Kopfzeile</target></trans-unit>
-      <trans-unit id="flexform.maxHeaderLength.description" xml:space="preserve">
+            <target state="final">Max. Länge der Kopfzeile</target></trans-unit>
+      <trans-unit id="flexform.maxHeaderLength.description" xml:space="preserve" approved="yes">
                 <source>Crop the characters of the feed header to the configured length (0 or empty = Defined by TypoScript)</source>
-            <target state="translated">Beschneidet die Zeichen des Feed-Headers auf die konfigurierte Länge (0 oder leer = Definiert durch TypoScript)</target></trans-unit>
-      <trans-unit id="flexform.linkTarget.label" xml:space="preserve">
+            <target state="final">Beschneidet die Zeichen des Feed-Headers auf die konfigurierte Länge (0 oder leer = Definiert durch TypoScript)</target></trans-unit>
+      <trans-unit id="flexform.linkTarget.label" xml:space="preserve" approved="yes">
                 <source>Target</source>
-            <target state="translated">Link-Ziel</target></trans-unit>
+            <target state="final">Link-Ziel</target></trans-unit>
       <trans-unit id="flexform.linkTarget.description" xml:space="preserve" approved="yes">
                 <source>Target attribute to define the feed link behavior</source>
             <target state="final">Konfiguration des Link-Verhaltens anhand des target-Attributs</target></trans-unit>
-      <trans-unit id="flexform.linkTarget.I.default" xml:space="preserve">
+      <trans-unit id="flexform.linkTarget.I.default" xml:space="preserve" approved="yes">
                 <source>Defined by TypoScript (default)</source>
-            <target state="translated">Definiert durch TypoScript (Standard)</target></trans-unit>
-      <trans-unit id="flexform.linkTarget.I.blank" xml:space="preserve">
+            <target state="final">Definiert durch TypoScript (Standard)</target></trans-unit>
+      <trans-unit id="flexform.linkTarget.I.blank" xml:space="preserve" approved="yes">
                 <source>Opens in a new window or tab</source>
-            <target state="translated">Wird in einem neuen Fenster oder Tab geöffnet</target></trans-unit>
-      <trans-unit id="flexform.linkTarget.I.self" xml:space="preserve">
+            <target state="final">Wird in einem neuen Fenster oder Tab geöffnet</target></trans-unit>
+      <trans-unit id="flexform.linkTarget.I.self" xml:space="preserve" approved="yes">
                 <source>Opens in the same frame as it was clicked</source>
-            <target state="translated">Öffnet sich in demselben Rahmen, in dem es angeklickt wurde</target></trans-unit>
-      <trans-unit id="flexform.linkTarget.I.parent" xml:space="preserve">
+            <target state="final">Öffnet sich in demselben Rahmen, in dem es angeklickt wurde</target></trans-unit>
+      <trans-unit id="flexform.linkTarget.I.parent" xml:space="preserve" approved="yes">
                 <source>Opens in the parent frame</source>
-            <target state="translated">Öffnet sich im übergeordneten Rahmen</target></trans-unit>
-      <trans-unit id="flexform.linkTarget.I.top" xml:space="preserve">
+            <target state="final">Öffnet sich im übergeordneten Rahmen</target></trans-unit>
+      <trans-unit id="flexform.linkTarget.I.top" xml:space="preserve" approved="yes">
                 <source>Opens in the full body of the window</source>
-            <target state="translated">Öffnet sich in der gesamten Anzeigefläche des Fensters</target></trans-unit>
-      <trans-unit id="flexform.logoMaxWidth.label" xml:space="preserve">
+            <target state="final">Öffnet sich in der gesamten Anzeigefläche des Fensters</target></trans-unit>
+      <trans-unit id="flexform.logoMaxWidth.label" xml:space="preserve" approved="yes">
                 <source>Logo max. width</source>
-            <target state="translated">Max. Breite des Logos</target></trans-unit>
-      <trans-unit id="flexform.logoMaxWidth.description" xml:space="preserve">
+            <target state="final">Max. Breite des Logos</target></trans-unit>
+      <trans-unit id="flexform.logoMaxWidth.description" xml:space="preserve" approved="yes">
                 <source>Maximum width of the feeds logo image (0 or empty = Defined by TypoScript)</source>
-            <target state="translated">Maximale Breite des Feeds-Logo-Bildes (0 oder leer = von TypoScript festgelegt)</target></trans-unit>
-      <trans-unit id="flexform.logoMaxHeight.label" xml:space="preserve">
+            <target state="final">Maximale Breite des Feeds-Logo-Bildes (0 oder leer = von TypoScript festgelegt)</target></trans-unit>
+      <trans-unit id="flexform.logoMaxHeight.label" xml:space="preserve" approved="yes">
                 <source>Logo max. height</source>
-            <target state="translated">Max. Höhe des Logos</target></trans-unit>
-      <trans-unit id="flexform.logoMaxHeight.description" xml:space="preserve">
+            <target state="final">Max. Höhe des Logos</target></trans-unit>
+      <trans-unit id="flexform.logoMaxHeight.description" xml:space="preserve" approved="yes">
                 <source>Maximum height of the feeds logo image (0 or empty = Defined by TypoScript)</source>
-            <target state="translated">Maximale Höhe des Feeds-Logo-Bildes (0 oder leer = von TypoScript definiert)</target></trans-unit>
-      <trans-unit id="flexform.feedIconMaxWidth.label" xml:space="preserve">
+            <target state="final">Maximale Höhe des Feeds-Logo-Bildes (0 oder leer = von TypoScript definiert)</target></trans-unit>
+      <trans-unit id="flexform.feedIconMaxWidth.label" xml:space="preserve" approved="yes">
                 <source>Feed icon max. width</source>
-            <target state="translated">Maximale Breite des Feed-Icons</target></trans-unit>
-      <trans-unit id="flexform.feedIconMaxWidth.description" xml:space="preserve">
+            <target state="final">Maximale Breite des Feed-Icons</target></trans-unit>
+      <trans-unit id="flexform.feedIconMaxWidth.description" xml:space="preserve" approved="yes">
                 <source>Maximum width of the feeds icon image (0 or empty = Defined by TypoScript)</source>
-            <target state="translated">Maximale Breite des Feeds-Icon-Bildes (0 oder leer = von TypoScript festgelegt)</target></trans-unit>
-      <trans-unit id="flexform.feedIconMaxHeight.label" xml:space="preserve">
+            <target state="final">Maximale Breite des Feeds-Icon-Bildes (0 oder leer = von TypoScript festgelegt)</target></trans-unit>
+      <trans-unit id="flexform.feedIconMaxHeight.label" xml:space="preserve" approved="yes">
                 <source>Feed icon max. height</source>
-            <target state="translated">Max. Höhe des Feed-Icons</target></trans-unit>
+            <target state="final">Max. Höhe des Feed-Icons</target></trans-unit>
       <trans-unit id="flexform.feedIconMaxHeight.description" xml:space="preserve" approved="yes">
                 <source>Maximum height of the feeds icon image (0 or empty = Defined by TypoScript)</source>
             <target state="final">Maximale Höhe des Feeds-Icon-Bildes (0 oder leer = von TypoScript festgelegt)</target></trans-unit>
-      <trans-unit id="flexform.errorMessage.label" xml:space="preserve">
+      <trans-unit id="flexform.errorMessage.label" xml:space="preserve" approved="yes">
                 <source>Error message</source>
-            <target state="translated">Fehlermeldung</target></trans-unit>
-      <trans-unit id="flexform.errorMessage.description" xml:space="preserve">
+            <target state="final">Fehlermeldung</target></trans-unit>
+      <trans-unit id="flexform.errorMessage.description" xml:space="preserve" approved="yes">
                 <source>This message is displayed if no feed items could be fetched (empty = Defined by TypoScript)</source>
-            <target state="translated">Diese Meldung wird angezeigt, wenn keine Feed-Artikel abgeholt werden konnten (leer = von TypoScript definiert)</target></trans-unit>
+            <target state="final">Diese Meldung wird angezeigt, wenn keine Feed-Artikel abgeholt werden konnten (leer = von TypoScript definiert)</target></trans-unit>
       <!-- Sheet Advanced -->
-      <trans-unit id="flexform.sheet_advanced.title" xml:space="preserve">
+      <trans-unit id="flexform.sheet_advanced.title" xml:space="preserve" approved="yes">
                 <source>Advanced</source>
-            <target state="translated">Erweitert</target></trans-unit>
-      <trans-unit id="flexform.sheet_advanced.description" xml:space="preserve">
+            <target state="final">Erweitert</target></trans-unit>
+      <trans-unit id="flexform.sheet_advanced.description" xml:space="preserve" approved="yes">
                 <source>These are advanced settings. If you are unsure, simply use the default values here. If no value is given, then the value of the TypoScript configuration is used by default.</source>
-            <target state="translated">Dies sind erweiterte Einstellungen. Wenn Sie unsicher sind, verwenden Sie einfach die Standardwerte. Wenn kein Wert angegeben wird, wird standardmäßig der Wert aus der TypoScript-Konfiguration verwendet.</target></trans-unit>
-      <trans-unit id="flexform.dateFormat.label" xml:space="preserve">
+            <target state="final">Dies sind erweiterte Einstellungen. Wenn Sie unsicher sind, verwenden Sie einfach die Standardwerte. Wenn kein Wert angegeben wird, wird standardmäßig der Wert aus der TypoScript-Konfiguration verwendet.</target></trans-unit>
+      <trans-unit id="flexform.dateFormat.label" xml:space="preserve" approved="yes">
                 <source>Date format</source>
-            <target state="translated">Datumsformat</target></trans-unit>
+            <target state="final">Datumsformat</target></trans-unit>
       <trans-unit id="flexform.dateFormat.description" xml:space="preserve" approved="yes">
                 <source>Use PHP's strftime() function format (empty = Defined by TypoScript)</source>
             <target state="final">Verwenden Sie das Format der PHP-Funktion strftime() (leer = von TypoScript definiert)</target></trans-unit>
-      <trans-unit id="flexform.stripTags.label" xml:space="preserve">
+      <trans-unit id="flexform.stripTags.label" xml:space="preserve" approved="yes">
                 <source>Strip tags</source>
-            <target state="translated">Tags entfernen</target></trans-unit>
-      <trans-unit id="flexform.stripTags.description" xml:space="preserve">
+            <target state="final">Tags entfernen</target></trans-unit>
+      <trans-unit id="flexform.stripTags.description" xml:space="preserve" approved="yes">
                 <source>Remove HTML tags from the feed content</source>
-            <target state="translated">HTML-Tags aus dem Feed-Inhalt entfernen</target></trans-unit>
+            <target state="final">HTML-Tags aus dem Feed-Inhalt entfernen</target></trans-unit>
       <trans-unit id="flexform.stripTags.I.yes" xml:space="preserve" approved="yes">
                 <source>yes</source>
             <target state="final">Ja</target></trans-unit>
       <trans-unit id="flexform.stripTags.I.no" xml:space="preserve" approved="yes">
                 <source>no</source>
             <target state="final">Nein</target></trans-unit>
-      <trans-unit id="flexform.cacheDuration.label" xml:space="preserve">
+      <trans-unit id="flexform.cacheDuration.label" xml:space="preserve" approved="yes">
                 <source>Feed cache</source>
-            <target state="translated">Feed-Cache</target></trans-unit>
-      <trans-unit id="flexform.cacheDuration.description" xml:space="preserve">
+            <target state="final">Feed-Cache</target></trans-unit>
+      <trans-unit id="flexform.cacheDuration.description" xml:space="preserve" approved="yes">
                 <source>Time in seconds (0 = no cache, empty = Defined by TypoScript)</source>
-            <target state="translated">Zeit in Sekunden (0 = kein Cache, leer = durch TypoScript festgelegt)</target></trans-unit>
-      <trans-unit id="flexform.placeholder.feed" xml:space="preserve">
+            <target state="final">Zeit in Sekunden (0 = kein Cache, leer = durch TypoScript festgelegt)</target></trans-unit>
+      <trans-unit id="flexform.placeholder.feed" xml:space="preserve" approved="yes">
                 <source>Defined by Feed or TypoScript (default)</source>
-            <target state="translated">Definiert durch Feed oder TypoScript (Standard)</target></trans-unit>
-      <trans-unit id="flexform.placeholder.typoscript" xml:space="preserve">
+            <target state="final">Definiert durch Feed oder TypoScript (Standard)</target></trans-unit>
+      <trans-unit id="flexform.placeholder.typoscript" xml:space="preserve" approved="yes">
                 <source>Defined by TypoScript (default)</source>
-            <target state="translated">Definiert durch TypoScript (Standard)</target></trans-unit>
+            <target state="final">Definiert durch TypoScript (Standard)</target></trans-unit>
       <!-- Sheet: Fields -->
-      <trans-unit id="flexform.sheet_getFields.title" xml:space="preserve">
+      <trans-unit id="flexform.sheet_getFields.title" xml:space="preserve" approved="yes">
                 <source>Get Fields</source>
-            <target state="translated">Felder abrufen</target></trans-unit>
-      <trans-unit id="flexform.sheet_getFields.description" xml:space="preserve">
+            <target state="final">Felder abrufen</target></trans-unit>
+      <trans-unit id="flexform.sheet_getFields.description" xml:space="preserve" approved="yes">
                 <source>Select here which fields from the feed and feed items should be read using the SimplePie library and should be available as variables in the fluid template. If no fields were selected, then the TypoScript configuration is used.</source>
-            <target state="translated">Wählen Sie hier aus, welche Felder aus dem Feed und den Feed-Elementen mit Hilfe der SimplePie-Bibliothek gelesen werden und als Variablen in der Fluid-Vorlage zur Verfügung stehen sollen. Wurden keine Felder ausgewählt, so wird die TypoScript-Konfiguration verwendet.</target></trans-unit>
-      <trans-unit id="flexform.getFields.feed.label" xml:space="preserve">
+            <target state="final">Wählen Sie hier aus, welche Felder aus dem Feed und den Feed-Elementen mit Hilfe der SimplePie-Bibliothek gelesen werden und als Variablen in der Fluid-Vorlage zur Verfügung stehen sollen. Wurden keine Felder ausgewählt, so wird die TypoScript-Konfiguration verwendet.</target></trans-unit>
+      <trans-unit id="flexform.getFields.feed.label" xml:space="preserve" approved="yes">
                 <source>Get fields from feed</source>
-            <target state="translated">Felder aus Feed abrufen</target></trans-unit>
-      <trans-unit id="flexform.getFields.feed.description" xml:space="preserve">
+            <target state="final">Felder aus Feed abrufen</target></trans-unit>
+      <trans-unit id="flexform.getFields.feed.description" xml:space="preserve" approved="yes">
                 <source>Selection of the fields to be read from the feed.</source>
-            <target state="translated">Auswahl der Felder, die aus dem Feed gelesen werden sollen.</target></trans-unit>
-      <trans-unit id="flexform.getFields.group.feed" xml:space="preserve">
+            <target state="final">Auswahl der Felder, die aus dem Feed gelesen werden sollen.</target></trans-unit>
+      <trans-unit id="flexform.getFields.group.feed" xml:space="preserve" approved="yes">
                 <source>Feed</source>
-            <target state="translated">Feed</target></trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.author" xml:space="preserve">
+            <target state="final">Feed</target></trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.author" xml:space="preserve" approved="yes">
                 <source>Author</source>
-            <target state="translated">Autor</target></trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.authors" xml:space="preserve">
+            <target state="final">Autor</target></trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.authors" xml:space="preserve" approved="yes">
                 <source>Authors</source>
-            <target state="translated">Autoren</target></trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.contributor" xml:space="preserve">
+            <target state="final">Autoren</target></trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.contributor" xml:space="preserve" approved="yes">
                 <source>Contributor</source>
-            <target state="translated">Mitwirkende(r)</target></trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.contributors" xml:space="preserve">
+            <target state="final">Mitwirkende(r)</target></trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.contributors" xml:space="preserve" approved="yes">
                 <source>Contributors</source>
-            <target state="translated">Mitwirkende</target></trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.copyright" xml:space="preserve">
+            <target state="final">Mitwirkende</target></trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.copyright" xml:space="preserve" approved="yes">
                 <source>Copyright</source>
-            <target state="translated">Copyright</target></trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.description" xml:space="preserve">
+            <target state="final">Copyright</target></trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.description" xml:space="preserve" approved="yes">
                 <source>Description</source>
-            <target state="translated">Beschreibung</target></trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.encoding" xml:space="preserve">
+            <target state="final">Beschreibung</target></trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.encoding" xml:space="preserve" approved="yes">
                 <source>Encoding</source>
-            <target state="translated">Kodierung</target></trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.favicon" xml:space="preserve">
+            <target state="final">Kodierung</target></trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.favicon" xml:space="preserve" approved="yes">
                 <source>Favicon</source>
-            <target state="translated">Favicon</target></trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.items" xml:space="preserve">
+            <target state="final">Favicon</target></trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.items" xml:space="preserve" approved="yes">
                 <source>Items</source>
-            <target state="translated">Elemente</target></trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.item_quantity" xml:space="preserve">
+            <target state="final">Elemente</target></trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.item_quantity" xml:space="preserve" approved="yes">
                 <source>Item_quantity</source>
-            <target state="translated">Zahl der Elemente</target></trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.language" xml:space="preserve">
+            <target state="final">Zahl der Elemente</target></trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.language" xml:space="preserve" approved="yes">
                 <source>Language</source>
-            <target state="translated">Sprache</target></trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.link" xml:space="preserve">
+            <target state="final">Sprache</target></trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.link" xml:space="preserve" approved="yes">
                 <source>Link</source>
-            <target state="translated">Link</target></trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.links" xml:space="preserve">
+            <target state="final">Link</target></trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.links" xml:space="preserve" approved="yes">
                 <source>Links</source>
-            <target state="translated">Links</target></trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.permalink" xml:space="preserve">
+            <target state="final">Links</target></trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.permalink" xml:space="preserve" approved="yes">
                 <source>Permalink</source>
-            <target state="translated">Permalink</target></trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.title" xml:space="preserve">
+            <target state="final">Permalink</target></trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.title" xml:space="preserve" approved="yes">
                 <source>Title</source>
-            <target state="translated">Titel</target></trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.type" xml:space="preserve">
+            <target state="final">Titel</target></trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.type" xml:space="preserve" approved="yes">
                 <source>Type</source>
-            <target state="translated">Typ</target></trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.latitude" xml:space="preserve">
+            <target state="final">Typ</target></trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.latitude" xml:space="preserve" approved="yes">
                 <source>Latitude</source>
-            <target state="translated">Breitengrad</target></trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.longitude" xml:space="preserve">
+            <target state="final">Breitengrad</target></trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.longitude" xml:space="preserve" approved="yes">
                 <source>Longitude</source>
-            <target state="translated">Längengrad</target></trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.image_height" xml:space="preserve">
+            <target state="final">Längengrad</target></trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.image_height" xml:space="preserve" approved="yes">
                 <source>Image Height</source>
-            <target state="translated">Bildhöhe</target></trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.image_link" xml:space="preserve">
+            <target state="final">Bildhöhe</target></trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.image_link" xml:space="preserve" approved="yes">
                 <source>Image Link</source>
-            <target state="translated">Bild-Link</target></trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.image_title" xml:space="preserve">
+            <target state="final">Bild-Link</target></trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.image_title" xml:space="preserve" approved="yes">
                 <source>Image Title</source>
-            <target state="translated">Bild-Titel</target></trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.image_url" xml:space="preserve">
+            <target state="final">Bild-Titel</target></trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.image_url" xml:space="preserve" approved="yes">
                 <source>Image URL</source>
-            <target state="translated">URL des Bildes</target></trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.image_width" xml:space="preserve">
+            <target state="final">URL des Bildes</target></trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.image_width" xml:space="preserve" approved="yes">
                 <source>Image Width</source>
-            <target state="translated">Bildbreite</target></trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.all_discovered_feeds" xml:space="preserve">
+            <target state="final">Bildbreite</target></trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.all_discovered_feeds" xml:space="preserve" approved="yes">
                 <source>All Discovered Feeds</source>
-            <target state="translated">Alle entdeckten Feeds</target></trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.base" xml:space="preserve">
+            <target state="final">Alle entdeckten Feeds</target></trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.base" xml:space="preserve" approved="yes">
                 <source>Base</source>
-            <target state="translated">Basis</target></trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.subscribe_url" xml:space="preserve">
+            <target state="final">Basis</target></trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.subscribe_url" xml:space="preserve" approved="yes">
                 <source>Subscribe URL</source>
-            <target state="translated">URL zum Abonnieren</target></trans-unit>
-      <trans-unit id="flexform.getFields.items.label" xml:space="preserve">
+            <target state="final">URL zum Abonnieren</target></trans-unit>
+      <trans-unit id="flexform.getFields.items.label" xml:space="preserve" approved="yes">
                 <source>Get fields from feed items</source>
-            <target state="translated">Felder aus Feed abrufen</target></trans-unit>
-      <trans-unit id="flexform.getFields.items.description" xml:space="preserve">
+            <target state="final">Felder aus Feed abrufen</target></trans-unit>
+      <trans-unit id="flexform.getFields.items.description" xml:space="preserve" approved="yes">
                 <source>Selection of the fields to be read from the feed items.</source>
-            <target state="translated">Auswahl der Felder, die aus dem Feed gelesen werden sollen.</target></trans-unit>
-      <trans-unit id="flexform.getFields.group.items" xml:space="preserve">
+            <target state="final">Auswahl der Felder, die aus dem Feed gelesen werden sollen.</target></trans-unit>
+      <trans-unit id="flexform.getFields.group.items" xml:space="preserve" approved="yes">
                 <source>Items</source>
-            <target state="translated">Elemente</target></trans-unit>
-      <trans-unit id="flexform.getFields.items.I.author" xml:space="preserve">
+            <target state="final">Elemente</target></trans-unit>
+      <trans-unit id="flexform.getFields.items.I.author" xml:space="preserve" approved="yes">
                 <source>Author</source>
-            <target state="translated">Autor</target></trans-unit>
-      <trans-unit id="flexform.getFields.items.I.authors" xml:space="preserve">
+            <target state="final">Autor</target></trans-unit>
+      <trans-unit id="flexform.getFields.items.I.authors" xml:space="preserve" approved="yes">
                 <source>Authors</source>
-            <target state="translated">Autoren</target></trans-unit>
-      <trans-unit id="flexform.getFields.items.I.categories" xml:space="preserve">
+            <target state="final">Autoren</target></trans-unit>
+      <trans-unit id="flexform.getFields.items.I.categories" xml:space="preserve" approved="yes">
                 <source>Categories</source>
-            <target state="translated">Kategorien</target></trans-unit>
-      <trans-unit id="flexform.getFields.items.I.category" xml:space="preserve">
+            <target state="final">Kategorien</target></trans-unit>
+      <trans-unit id="flexform.getFields.items.I.category" xml:space="preserve" approved="yes">
                 <source>Category</source>
-            <target state="translated">Kategorie</target></trans-unit>
-      <trans-unit id="flexform.getFields.items.I.content" xml:space="preserve">
+            <target state="final">Kategorie</target></trans-unit>
+      <trans-unit id="flexform.getFields.items.I.content" xml:space="preserve" approved="yes">
                 <source>Content</source>
-            <target state="translated">Inhalt</target></trans-unit>
-      <trans-unit id="flexform.getFields.items.I.contributor" xml:space="preserve">
+            <target state="final">Inhalt</target></trans-unit>
+      <trans-unit id="flexform.getFields.items.I.contributor" xml:space="preserve" approved="yes">
                 <source>Contributor</source>
-            <target state="translated">Mitwirkende(r)</target></trans-unit>
-      <trans-unit id="flexform.getFields.items.I.contributors" xml:space="preserve">
+            <target state="final">Mitwirkende(r)</target></trans-unit>
+      <trans-unit id="flexform.getFields.items.I.contributors" xml:space="preserve" approved="yes">
                 <source>Contributors</source>
-            <target state="translated">Mitwirkende</target></trans-unit>
-      <trans-unit id="flexform.getFields.items.I.copyright" xml:space="preserve">
+            <target state="final">Mitwirkende</target></trans-unit>
+      <trans-unit id="flexform.getFields.items.I.copyright" xml:space="preserve" approved="yes">
                 <source>Copyright</source>
-            <target state="translated">Copyright</target></trans-unit>
-      <trans-unit id="flexform.getFields.items.I.date|U" xml:space="preserve">
+            <target state="final">Copyright</target></trans-unit>
+      <trans-unit id="flexform.getFields.items.I.date|U" xml:space="preserve" approved="yes">
                 <source>Date (with parameter "U")</source>
-            <target state="translated">Datum (mit Parameter "U")</target></trans-unit>
-      <trans-unit id="flexform.getFields.items.I.description" xml:space="preserve">
+            <target state="final">Datum (mit Parameter "U")</target></trans-unit>
+      <trans-unit id="flexform.getFields.items.I.description" xml:space="preserve" approved="yes">
                 <source>Description</source>
-            <target state="translated">Beschreibung</target></trans-unit>
-      <trans-unit id="flexform.getFields.items.I.enclosure" xml:space="preserve">
+            <target state="final">Beschreibung</target></trans-unit>
+      <trans-unit id="flexform.getFields.items.I.enclosure" xml:space="preserve" approved="yes">
                 <source>Enclosure</source>
-            <target state="translated">Anhang</target></trans-unit>
-      <trans-unit id="flexform.getFields.items.I.enclosures" xml:space="preserve">
+            <target state="final">Anhang</target></trans-unit>
+      <trans-unit id="flexform.getFields.items.I.enclosures" xml:space="preserve" approved="yes">
                 <source>Enclosures</source>
-            <target state="translated">Anhänge</target></trans-unit>
-      <trans-unit id="flexform.getFields.items.I.feed" xml:space="preserve">
+            <target state="final">Anhänge</target></trans-unit>
+      <trans-unit id="flexform.getFields.items.I.feed" xml:space="preserve" approved="yes">
                 <source>Feed</source>
-            <target state="translated">Feed</target></trans-unit>
-      <trans-unit id="flexform.getFields.items.I.id" xml:space="preserve">
+            <target state="final">Feed</target></trans-unit>
+      <trans-unit id="flexform.getFields.items.I.id" xml:space="preserve" approved="yes">
                 <source>ID</source>
-            <target state="translated">ID</target></trans-unit>
-      <trans-unit id="flexform.getFields.items.I.link" xml:space="preserve">
+            <target state="final">ID</target></trans-unit>
+      <trans-unit id="flexform.getFields.items.I.link" xml:space="preserve" approved="yes">
                 <source>Link</source>
-            <target state="translated">Link</target></trans-unit>
-      <trans-unit id="flexform.getFields.items.I.links" xml:space="preserve">
+            <target state="final">Link</target></trans-unit>
+      <trans-unit id="flexform.getFields.items.I.links" xml:space="preserve" approved="yes">
                 <source>Links</source>
-            <target state="translated">Links</target></trans-unit>
-      <trans-unit id="flexform.getFields.items.I.local_date|" xml:space="preserve">
+            <target state="final">Links</target></trans-unit>
+      <trans-unit id="flexform.getFields.items.I.local_date|" xml:space="preserve" approved="yes">
                 <source>Local Date (with empty parameter)</source>
-            <target state="translated">Lokales Datum (mit leerem Parameter)</target></trans-unit>
-      <trans-unit id="flexform.getFields.items.I.permalink" xml:space="preserve">
+            <target state="final">Lokales Datum (mit leerem Parameter)</target></trans-unit>
+      <trans-unit id="flexform.getFields.items.I.permalink" xml:space="preserve" approved="yes">
                 <source>Permalink</source>
-            <target state="translated">Permalink</target></trans-unit>
-      <trans-unit id="flexform.getFields.items.I.source" xml:space="preserve">
+            <target state="final">Permalink</target></trans-unit>
+      <trans-unit id="flexform.getFields.items.I.source" xml:space="preserve" approved="yes">
                 <source>Source</source>
-            <target state="translated">Quelle</target></trans-unit>
-      <trans-unit id="flexform.getFields.items.I.title" xml:space="preserve">
+            <target state="final">Quelle</target></trans-unit>
+      <trans-unit id="flexform.getFields.items.I.title" xml:space="preserve" approved="yes">
                 <source>Title</source>
-            <target state="translated">Titel</target></trans-unit>
-      <trans-unit id="flexform.getFields.items.I.latitude" xml:space="preserve">
+            <target state="final">Titel</target></trans-unit>
+      <trans-unit id="flexform.getFields.items.I.latitude" xml:space="preserve" approved="yes">
                 <source>Latitude</source>
-            <target state="translated">Breitengrad</target></trans-unit>
-      <trans-unit id="flexform.getFields.items.I.longitude" xml:space="preserve">
+            <target state="final">Breitengrad</target></trans-unit>
+      <trans-unit id="flexform.getFields.items.I.longitude" xml:space="preserve" approved="yes">
                 <source>Longitude</source>
-            <target state="translated">Längengrad</target></trans-unit>
-      <trans-unit id="flexform.getFields.items.I.base" xml:space="preserve">
+            <target state="final">Längengrad</target></trans-unit>
+      <trans-unit id="flexform.getFields.items.I.base" xml:space="preserve" approved="yes">
                 <source>Base</source>
-            <target state="translated">Basis</target></trans-unit>
+            <target state="final">Basis</target></trans-unit>
       <!-- Constant Editor -->
-      <trans-unit id="constants.customcategory.plugin.tx_feeddisplay_pi1" xml:space="preserve">
+      <trans-unit id="constants.customcategory.plugin.tx_feeddisplay_pi1" xml:space="preserve" approved="yes">
                 <source>Feed Display</source>
-            <target state="translated">Feed-Anzeige</target></trans-unit>
-      <trans-unit id="constants.subcategory.general" xml:space="preserve">
+            <target state="final">Feed-Anzeige</target></trans-unit>
+      <trans-unit id="constants.subcategory.general" xml:space="preserve" approved="yes">
                 <source>General</source>
-            <target state="translated">Allgemein</target></trans-unit>
-      <trans-unit id="constants.subcategory.advanced" xml:space="preserve">
+            <target state="final">Allgemein</target></trans-unit>
+      <trans-unit id="constants.subcategory.advanced" xml:space="preserve" approved="yes">
                 <source>Advanced</source>
-            <target state="translated">Erweitert</target></trans-unit>
-      <trans-unit id="constants.subcategory.getFields" xml:space="preserve">
+            <target state="final">Erweitert</target></trans-unit>
+      <trans-unit id="constants.subcategory.getFields" xml:space="preserve" approved="yes">
                 <source>Fields to get from Feed and Items</source>
-            <target state="translated">Felder, die von Feed und Items abgerufen werden</target></trans-unit>
-      <trans-unit id="constants.feedUrl" xml:space="preserve">
+            <target state="final">Felder, die von Feed und Items abgerufen werden</target></trans-unit>
+      <trans-unit id="constants.feedUrl" xml:space="preserve" approved="yes">
                 <source>Feed URL:URL that is fetched by the service</source>
-            <target state="translated">Feed-URL:URL, die vom Dienst abgerufen wird</target></trans-unit>
-      <trans-unit id="constants.maxFeedCount" xml:space="preserve">
+            <target state="final">Feed-URL:URL, die vom Dienst abgerufen wird</target></trans-unit>
+      <trans-unit id="constants.maxFeedCount" xml:space="preserve" approved="yes">
                 <source>Max. items:Maximum feed items to show</source>
-            <target state="translated">Max. Artikel:Maximal anzuzeigende Feed-Artikel</target></trans-unit>
-      <trans-unit id="constants.maxContentLength" xml:space="preserve">
+            <target state="final">Max. Artikel:Maximal anzuzeigende Feed-Artikel</target></trans-unit>
+      <trans-unit id="constants.maxContentLength" xml:space="preserve" approved="yes">
                 <source>Max. content length:Crop the characters of the feed content to the configured length</source>
-            <target state="translated">Maximale Inhaltslänge: Beschneidet die Zeichen des Feed-Inhalts auf die konfigurierte Länge</target></trans-unit>
-      <trans-unit id="constants.maxHeaderLength" xml:space="preserve">
+            <target state="final">Maximale Inhaltslänge: Beschneidet die Zeichen des Feed-Inhalts auf die konfigurierte Länge</target></trans-unit>
+      <trans-unit id="constants.maxHeaderLength" xml:space="preserve" approved="yes">
                 <source>Max. header length:Crop the characters of the feed header to the configured length</source>
-            <target state="translated">Max. Header-Länge: Beschneidet die Zeichen des Feed-Headers auf die konfigurierte Länge</target></trans-unit>
-      <trans-unit id="constants.linkTarget" xml:space="preserve">
+            <target state="final">Max. Header-Länge: Beschneidet die Zeichen des Feed-Headers auf die konfigurierte Länge</target></trans-unit>
+      <trans-unit id="constants.linkTarget" xml:space="preserve" approved="yes">
                 <source>Target:Target attribute to define the feed link behavior</source>
-            <target state="translated">Target:Target-Attribut zur Festlegung des Verhaltens von Feed-Links</target></trans-unit>
-      <trans-unit id="constants.linkTarget.I.default" xml:space="preserve">
+            <target state="final">Target:Target-Attribut zur Festlegung des Verhaltens von Feed-Links</target></trans-unit>
+      <trans-unit id="constants.linkTarget.I.default" xml:space="preserve" approved="yes">
                 <source>Defined by TypoScript (default)</source>
-            <target state="translated">Definiert durch TypoScript (Standard)</target></trans-unit>
-      <trans-unit id="constants.linkTarget.I.blank" xml:space="preserve">
+            <target state="final">Definiert durch TypoScript (Standard)</target></trans-unit>
+      <trans-unit id="constants.linkTarget.I.blank" xml:space="preserve" approved="yes">
                 <source>Opens in a new window or tab</source>
-            <target state="translated">Wird in einem neuen Fenster oder Tab geöffnet</target></trans-unit>
-      <trans-unit id="constants.linkTarget.I.self" xml:space="preserve">
+            <target state="final">Wird in einem neuen Fenster oder Tab geöffnet</target></trans-unit>
+      <trans-unit id="constants.linkTarget.I.self" xml:space="preserve" approved="yes">
                 <source>Opens in the same frame as it was clicked</source>
-            <target state="translated">Öffnet sich in demselben Rahmen, in dem es angeklickt wurde</target></trans-unit>
-      <trans-unit id="constants.linkTarget.I.parent" xml:space="preserve">
+            <target state="final">Öffnet sich in demselben Rahmen, in dem es angeklickt wurde</target></trans-unit>
+      <trans-unit id="constants.linkTarget.I.parent" xml:space="preserve" approved="yes">
                 <source>Opens in the parent frame</source>
-            <target state="translated">Öffnet sich im übergeordneten Rahmen</target></trans-unit>
-      <trans-unit id="constants.linkTarget.I.top" xml:space="preserve">
+            <target state="final">Öffnet sich im übergeordneten Rahmen</target></trans-unit>
+      <trans-unit id="constants.linkTarget.I.top" xml:space="preserve" approved="yes">
                 <source>Opens in the full body of the window</source>
-            <target state="translated">Öffnet sich in der gesamten Anzeigefläche des Fensters</target></trans-unit>
-      <trans-unit id="constants.logoMaxWidth" xml:space="preserve">
+            <target state="final">Öffnet sich in der gesamten Anzeigefläche des Fensters</target></trans-unit>
+      <trans-unit id="constants.logoMaxWidth" xml:space="preserve" approved="yes">
                 <source>Logo width:Width of the feeds logo image</source>
-            <target state="translated">Logobreite: Breite des Feeds-Logo-Bildes</target></trans-unit>
-      <trans-unit id="constants.logoMaxHeight" xml:space="preserve">
+            <target state="final">Logobreite: Breite des Feeds-Logo-Bildes</target></trans-unit>
+      <trans-unit id="constants.logoMaxHeight" xml:space="preserve" approved="yes">
                 <source>Logo height:Height of the feeds logo image</source>
-            <target state="translated">Logohöhe: Höhe des Feeds-Logo-Bildes</target></trans-unit>
-      <trans-unit id="constants.feedIconMaxWidth" xml:space="preserve">
+            <target state="final">Logohöhe: Höhe des Feeds-Logo-Bildes</target></trans-unit>
+      <trans-unit id="constants.feedIconMaxWidth" xml:space="preserve" approved="yes">
                 <source>Feed icon width:Width of the feeds icon image</source>
-            <target state="translated">Breite des Feed-Symbols: Breite des Feed-Symbolbildes</target></trans-unit>
-      <trans-unit id="constants.feedIconMaxHeight" xml:space="preserve">
+            <target state="final">Breite des Feed-Symbols: Breite des Feed-Symbolbildes</target></trans-unit>
+      <trans-unit id="constants.feedIconMaxHeight" xml:space="preserve" approved="yes">
                 <source>Feed icon height:Height of the feeds icon image</source>
-            <target state="translated">Höhe des Feed-Symbols: Höhe des Bildes des Feed-Symbols</target></trans-unit>
-      <trans-unit id="constants.errorMessage" xml:space="preserve">
+            <target state="final">Höhe des Feed-Symbols: Höhe des Bildes des Feed-Symbols</target></trans-unit>
+      <trans-unit id="constants.errorMessage" xml:space="preserve" approved="yes">
                 <source>Error message:This message is displayed if no feed items could be fetched</source>
-            <target state="translated">Fehlermeldung: Diese Meldung wird angezeigt, wenn kein Feed abgerufen werden konnten.</target></trans-unit>
-      <trans-unit id="constants.dateFormat" xml:space="preserve">
+            <target state="final">Fehlermeldung: Diese Meldung wird angezeigt, wenn kein Feed abgerufen werden konnten.</target></trans-unit>
+      <trans-unit id="constants.dateFormat" xml:space="preserve" approved="yes">
                 <source>Date format:Use PHP's strftime() function format</source>
-            <target state="translated">Datumsformat: Verwenden Sie das Format der PHP-Funktion strftime()</target></trans-unit>
-      <trans-unit id="constants.stripTags" xml:space="preserve">
+            <target state="final">Datumsformat: Verwenden Sie das Format der PHP-Funktion strftime()</target></trans-unit>
+      <trans-unit id="constants.stripTags" xml:space="preserve" approved="yes">
                 <source>Strip tags:Remove HTML tags from the feed content</source>
-            <target state="translated">Tags entfernen: Entfernen Sie HTML-Tags aus dem Feed-Inhalt.</target></trans-unit>
-      <trans-unit id="constants.cacheDuration" xml:space="preserve">
+            <target state="final">Tags entfernen: Entfernen Sie HTML-Tags aus dem Feed-Inhalt.</target></trans-unit>
+      <trans-unit id="constants.cacheDuration" xml:space="preserve" approved="yes">
                 <source>Feed cache:Time in seconds (0 = no cache)</source>
-            <target state="translated">Feed-Cache:Zeit in Sekunden (0 = kein Cache)</target></trans-unit>
-      <trans-unit id="constants.overrideFlexformSettingsIfEmpty" xml:space="preserve">
+            <target state="final">Feed-Cache:Zeit in Sekunden (0 = kein Cache)</target></trans-unit>
+      <trans-unit id="constants.overrideFlexformSettingsIfEmpty" xml:space="preserve" approved="yes">
                 <source>Override FlexForm Settings if empty:Comma separated list of settings to be overridden by TypoScript if the plugin settings value is either empty or 0.</source>
-            <target state="translated">Überschreibe FlexForm Settings wenn leer:Kommagetrennte Liste von Einstellungen, die von TypoScript überschrieben werden sollen, wenn der Wert der Plugin-Einstellungen entweder leer oder 0 ist.</target></trans-unit>
-      <trans-unit id="constants.getFields.feed" xml:space="preserve">
+            <target state="final">Überschreibe FlexForm Settings wenn leer:Kommagetrennte Liste von Einstellungen, die von TypoScript überschrieben werden sollen, wenn der Wert der Plugin-Einstellungen entweder leer oder 0 ist.</target></trans-unit>
+      <trans-unit id="constants.getFields.feed" xml:space="preserve" approved="yes">
                 <source>Feed fields to get:Comma-separated list of fields to be read from the feed by SimplePie and made available as variables in Fluid.</source>
-            <target state="translated">Feed-Felder, die abgerufen werden sollen:Kommagetrennte Liste von Feldern, die von SimplePie aus dem Feed gelesen und als Variablen in Fluid zur Verfügung gestellt werden sollen.</target></trans-unit>
-      <trans-unit id="constants.getFields.items" xml:space="preserve">
+            <target state="final">Feed-Felder, die abgerufen werden sollen:Kommagetrennte Liste von Feldern, die von SimplePie aus dem Feed gelesen und als Variablen in Fluid zur Verfügung gestellt werden sollen.</target></trans-unit>
+      <trans-unit id="constants.getFields.items" xml:space="preserve" approved="yes">
                 <source>Feed items fields to get:Comma-separated list of fields to be read from the feed items by SimplePie and made available as variables in Fluid.</source>
-            <target state="translated">Abzurufende Felder der Feed-Elemente:Komma-getrennte Liste von Feldern, die von SimplePie aus den Feed-Elementen gelesen und als Variablen in Fluid verfügbar gemacht werden sollen.</target></trans-unit>
+            <target state="final">Abzurufende Felder der Feed-Elemente:Komma-getrennte Liste von Feldern, die von SimplePie aus den Feed-Elementen gelesen und als Variablen in Fluid verfügbar gemacht werden sollen.</target></trans-unit>
     </body>
   </file>
 </xliff>
