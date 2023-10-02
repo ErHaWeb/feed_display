@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2022-10-14T10:27:00Z" product-name="feed_display" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="sys_template.TypoScript.feed_display_title" xml:space="preserve">
+                <source>Feed Display: Static TypoScript Include (feed_display)</source>
+            <target state="needs-translation">Feed Display: Static TypoScript Include (feed_display)</target></trans-unit>
+    </body>
+  </file>
+</xliff>
