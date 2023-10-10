@@ -122,7 +122,7 @@ all content elements.
         **Constant Editor: "Files"**
 
         ..  figure:: /Images/ConstantEditor-Files.png
-            :alt: Plugin Options: General Tab
+            :alt: Constant Editor: "Files"
             :width: 534px
 
             Constant Editor: "Files"
@@ -132,7 +132,7 @@ all content elements.
         **Constant Editor: "General"**
 
         ..  figure:: /Images/ConstantEditor-General.png
-            :alt: Plugin Options: General Tab
+            :alt: Constant Editor: "General"
             :width: 534px
 
             Constant Editor: "General"
@@ -142,7 +142,7 @@ all content elements.
         **Constant Editor: "Advanced"**
 
         ..  figure:: /Images/ConstantEditor-Advanced.png
-            :alt: Plugin Options: Advanced Tab
+            :alt: Constant Editor: "Advanced"
             :width: 534px
 
             Constant Editor: "Advanced"
@@ -152,7 +152,7 @@ all content elements.
         **Constant Editor: "Fields to get from Feed and Items"**
 
         ..  figure:: /Images/ConstantEditor-GetFields.png
-            :alt: Plugin Options: Get Fields Tab
+            :alt: Constant Editor: "Fields to get from Feed and Items"
             :width: 534px
 
             Constant Editor: "Fields to get from Feed and Items"
