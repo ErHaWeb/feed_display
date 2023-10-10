@@ -3,87 +3,87 @@
   <file source-language="en" datatype="plaintext" original="messages" date="2022-10-14T10:27:00Z" product-name="feed_display" target-language="de">
     <header/>
     <body>
-      <trans-unit id="feed.categories" xml:space="preserve">
+      <trans-unit id="feed.categories" xml:space="preserve" approved="yes">
                 <source>Categories</source>
-            <target state="needs-translation">Categories</target></trans-unit>
-      <trans-unit id="feed.category" xml:space="preserve">
+            <target state="final">Kategorien</target></trans-unit>
+      <trans-unit id="feed.category" xml:space="preserve" approved="yes">
                 <source>Category</source>
-            <target state="needs-translation">Category</target></trans-unit>
-      <trans-unit id="feed.authors" xml:space="preserve">
+            <target state="final">Kategorie</target></trans-unit>
+      <trans-unit id="feed.authors" xml:space="preserve" approved="yes">
                 <source>Authors</source>
-            <target state="needs-translation">Authors</target></trans-unit>
-      <trans-unit id="feed.author" xml:space="preserve">
+            <target state="final">Autoren</target></trans-unit>
+      <trans-unit id="feed.author" xml:space="preserve" approved="yes">
                 <source>Author</source>
-            <target state="needs-translation">Author</target></trans-unit>
-      <trans-unit id="feed.contributors" xml:space="preserve">
+            <target state="final">Autor</target></trans-unit>
+      <trans-unit id="feed.contributors" xml:space="preserve" approved="yes">
                 <source>Contributors</source>
-            <target state="needs-translation">Contributors</target></trans-unit>
-      <trans-unit id="feed.contributor" xml:space="preserve">
+            <target state="final">Mitwirkende</target></trans-unit>
+      <trans-unit id="feed.contributor" xml:space="preserve" approved="yes">
                 <source>Contributor</source>
-            <target state="needs-translation">Contributor</target></trans-unit>
-      <trans-unit id="feed.items" xml:space="preserve">
+            <target state="final">Mitwirkende(r)</target></trans-unit>
+      <trans-unit id="feed.items" xml:space="preserve" approved="yes">
                 <source>Items</source>
-            <target state="needs-translation">Items</target></trans-unit>
-      <trans-unit id="item.categories" xml:space="preserve">
+            <target state="final">Elemente</target></trans-unit>
+      <trans-unit id="item.categories" xml:space="preserve" approved="yes">
                 <source>Categories</source>
-            <target state="needs-translation">Categories</target></trans-unit>
-      <trans-unit id="item.category" xml:space="preserve">
+            <target state="final">Kategorien</target></trans-unit>
+      <trans-unit id="item.category" xml:space="preserve" approved="yes">
                 <source>Category</source>
-            <target state="needs-translation">Category</target></trans-unit>
-      <trans-unit id="item.authors" xml:space="preserve">
+            <target state="final">Kategorie</target></trans-unit>
+      <trans-unit id="item.authors" xml:space="preserve" approved="yes">
                 <source>Authors</source>
-            <target state="needs-translation">Authors</target></trans-unit>
-      <trans-unit id="item.author" xml:space="preserve">
+            <target state="final">Autoren</target></trans-unit>
+      <trans-unit id="item.author" xml:space="preserve" approved="yes">
                 <source>Author</source>
-            <target state="needs-translation">Author</target></trans-unit>
-      <trans-unit id="item.contributors" xml:space="preserve">
+            <target state="final">Autor</target></trans-unit>
+      <trans-unit id="item.contributors" xml:space="preserve" approved="yes">
                 <source>Contributors</source>
-            <target state="needs-translation">Contributors</target></trans-unit>
-      <trans-unit id="item.contributor" xml:space="preserve">
+            <target state="final">Mitwirkende</target></trans-unit>
+      <trans-unit id="item.contributor" xml:space="preserve" approved="yes">
                 <source>Contributor</source>
-            <target state="needs-translation">Contributor</target></trans-unit>
-      <trans-unit id="item.copyright" xml:space="preserve">
+            <target state="final">Mitwirkende(r)</target></trans-unit>
+      <trans-unit id="item.copyright" xml:space="preserve" approved="yes">
                 <source>Copyright</source>
-            <target state="needs-translation">Copyright</target></trans-unit>
-      <trans-unit id="item.date" xml:space="preserve">
+            <target state="final">Copyright</target></trans-unit>
+      <trans-unit id="item.date" xml:space="preserve" approved="yes">
                 <source>Date</source>
-            <target state="needs-translation">Date</target></trans-unit>
-      <trans-unit id="item.updatedDate" xml:space="preserve">
+            <target state="final">Datum</target></trans-unit>
+      <trans-unit id="item.updatedDate" xml:space="preserve" approved="yes">
                 <source>Updated</source>
-            <target state="needs-translation">Updated</target></trans-unit>
-      <trans-unit id="item.links" xml:space="preserve">
+            <target state="final">Aktualisiert</target></trans-unit>
+      <trans-unit id="item.links" xml:space="preserve" approved="yes">
                 <source>Links</source>
-            <target state="needs-translation">Links</target></trans-unit>
-      <trans-unit id="item.link" xml:space="preserve">
+            <target state="final">Links</target></trans-unit>
+      <trans-unit id="item.link" xml:space="preserve" approved="yes">
                 <source>Link</source>
-            <target state="needs-translation">Link</target></trans-unit>
-      <trans-unit id="item.links" xml:space="preserve">
+            <target state="final">Link</target></trans-unit>
+      <trans-unit id="item.links" xml:space="preserve" approved="yes">
                 <source>Links</source>
-            <target state="needs-translation">Links</target></trans-unit>
-      <trans-unit id="item.enclosure" xml:space="preserve">
+            <target state="final">Links</target></trans-unit>
+      <trans-unit id="item.enclosure" xml:space="preserve" approved="yes">
                 <source>Enclosure</source>
-            <target state="needs-translation">Enclosure</target></trans-unit>
-      <trans-unit id="item.enclosures" xml:space="preserve">
+            <target state="final">Einfassung</target></trans-unit>
+      <trans-unit id="item.enclosures" xml:space="preserve" approved="yes">
                 <source>Enclosures</source>
-            <target state="needs-translation">Enclosures</target></trans-unit>
-      <trans-unit id="item.latitude" xml:space="preserve">
+            <target state="final">Einfassungen</target></trans-unit>
+      <trans-unit id="item.latitude" xml:space="preserve" approved="yes">
                 <source>Latitude</source>
-            <target state="needs-translation">Latitude</target></trans-unit>
-      <trans-unit id="item.longitude" xml:space="preserve">
+            <target state="final">Breitengrad</target></trans-unit>
+      <trans-unit id="item.longitude" xml:space="preserve" approved="yes">
                 <source>Longitude</source>
-            <target state="needs-translation">Longitude</target></trans-unit>
-      <trans-unit id="item.source" xml:space="preserve">
+            <target state="final">Längengrad</target></trans-unit>
+      <trans-unit id="item.source" xml:space="preserve" approved="yes">
                 <source>Source</source>
-            <target state="needs-translation">Source</target></trans-unit>
-      <trans-unit id="errorMessage" xml:space="preserve">
+            <target state="final">Quelle</target></trans-unit>
+      <trans-unit id="errorMessage" xml:space="preserve" approved="yes">
                 <source>Sorry, the feed could not be fetched.</source>
-            <target state="needs-translation">Sorry, the feed could not be fetched.</target></trans-unit>
-      <trans-unit id="noTemplateError" xml:space="preserve">
+            <target state="final">Sorry, der Feed konnte nicht abgerufen werden.</target></trans-unit>
+      <trans-unit id="noTemplateError" xml:space="preserve" approved="yes">
                 <source>Feed Display: Please include static TypoScript [EXT:feed_display/Configuration/TypoScript/]</source>
-            <target state="needs-translation">Feed Display: Please include static TypoScript [EXT:feed_display/Configuration/TypoScript/]</target></trans-unit>
-      <trans-unit id="noItemsError" xml:space="preserve">
+            <target state="final">Feed-Anzeige: Bitte statisches TypoScript einbinden [EXT:feed_display/Configuration/TypoScript/]</target></trans-unit>
+      <trans-unit id="noItemsError" xml:space="preserve" approved="yes">
                 <source>Sorry, no items could be fetched.</source>
-            <target state="needs-translation">Sorry, no items could be fetched.</target></trans-unit>
+            <target state="final">Es konnten leider keine Artikel abgerufen werden.</target></trans-unit>
     </body>
   </file>
 </xliff>
