@@ -1,0 +1,28 @@
+.. include:: /Includes.rst.txt
+
+1.0.0 - October 19, 2022
+========================
+
+
+.. only:: html
+
+   .. contents::
+        :local:
+        :depth: 3
+
+Breaking changes
+----------------
+No breaking changes!
+
+All Changes
+-----------
+This is a list of all changes in this release: ::
+
+    2022-10-19 [DOCS] Update composer keywords and plugin description label (Commit ff7f971 by Eric Bode)
+    2022-10-19 [DOCS] Update main README.md file (Commit 92d2e81 by Eric Bode)
+    2022-10-19 [BUGFIX] Restore compatibility with TYPO3 11 (Commit 0345947 by Eric Bode)
+    2022-10-19 Add constant editor configuration (Commit ea7b62b by Eric Bode)
+    2022-10-19 Add current development state (Commit e07e79b by Eric Bode)
+    2022-10-15 first commit (Commit 965d4eb by Eric Bode)
+
+This list has been created by using `git log $(git describe --tags --abbrev=0)..HEAD --abbrev-commit --pretty='%ad %s (Commit %h by %an)' --date=short`.

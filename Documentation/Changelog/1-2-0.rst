@@ -1,0 +1,24 @@
+.. include:: /Includes.rst.txt
+
+1.2.0 - December 22, 2022
+=========================
+
+
+.. only:: html
+
+   .. contents::
+        :local:
+        :depth: 3
+
+Breaking changes
+----------------
+No breaking changes!
+
+All Changes
+-----------
+This is a list of all changes in this release: ::
+
+    2022-12-22 [DOCS] Add centralized documentation on docs.typo3.org in reST format (Commit f8473b2 by Eric Bode)
+    2022-12-22 [TASK] Update backend labels (Commit f65b100 by Eric Bode)
+
+This list has been created by using `git log $(git describe --tags --abbrev=0)..HEAD --abbrev-commit --pretty='%ad %s (Commit %h by %an)' --date=short`.

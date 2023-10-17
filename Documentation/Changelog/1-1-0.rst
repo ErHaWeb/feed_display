@@ -1,0 +1,23 @@
+.. include:: /Includes.rst.txt
+
+1.1.0 - October 20, 2022
+========================
+
+
+.. only:: html
+
+   .. contents::
+        :local:
+        :depth: 3
+
+Breaking changes
+----------------
+No breaking changes!
+
+All Changes
+-----------
+This is a list of all changes in this release: ::
+
+    2022-10-20 [FEATURE] FlexForm-based selection of feed and feed item fields (Commit a058d1d by Eric Bode)
+
+This list has been created by using `git log $(git describe --tags --abbrev=0)..HEAD --abbrev-commit --pretty='%ad %s (Commit %h by %an)' --date=short`.

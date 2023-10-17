@@ -1,0 +1,27 @@
+.. include:: /Includes.rst.txt
+
+1.3.0 - April 12, 2023
+======================
+
+
+.. only:: html
+
+   .. contents::
+        :local:
+        :depth: 3
+
+Breaking changes
+----------------
+No breaking changes!
+
+All Changes
+-----------
+This is a list of all changes in this release: ::
+
+    2023-04-12 [TASK] Increase the version number to 1.3.0 (Commit 4a1b670 by Eric Harrer)
+    2023-04-12 [FEATURE] Provide an event to modify feed data (Commit f88518c by Georg Ringer)
+    2023-04-12 [TASK] Replace the author's name "Bode" with "Harrer" (Commit d0a5e31 by Eric Harrer)
+    2022-12-23 [DOCS] Remove accidentally created lines (Commit 6b92c41 by Eric Bode)
+    2022-12-22 [DOCS] Remove unnecessary blank lines (Commit a364ba8 by Eric Bode)
+
+This list has been created by using `git log $(git describe --tags --abbrev=0)..HEAD --abbrev-commit --pretty='%ad %s (Commit %h by %an)' --date=short`.

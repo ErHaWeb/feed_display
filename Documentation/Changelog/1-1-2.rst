@@ -1,0 +1,25 @@
+.. include:: /Includes.rst.txt
+
+1.1.2 - November 09, 2022
+=========================
+
+
+.. only:: html
+
+   .. contents::
+        :local:
+        :depth: 3
+
+Breaking changes
+----------------
+No breaking changes!
+
+All Changes
+-----------
+This is a list of all changes in this release: ::
+
+    2022-11-09 [TASK] Increase the version number to 1.1.2 (Commit 6ca99bc by Eric Bode)
+    2022-11-09 [BUGFIX] Use "dateFormat" plugin setting as date format in fluid template (Commit 61f9f75 by Eric Bode)
+    2022-10-20 [BUGIFX] Fix case of translation (Commit b5041b9 by Eric Bode)
+
+This list has been created by using `git log $(git describe --tags --abbrev=0)..HEAD --abbrev-commit --pretty='%ad %s (Commit %h by %an)' --date=short`.

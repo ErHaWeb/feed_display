@@ -1,0 +1,24 @@
+1-0-1.rst.. include:: /Includes.rst.txt
+
+1.0.2 - October 19, 2022
+========================
+
+
+.. only:: html
+
+   .. contents::
+        :local:
+        :depth: 3
+
+Breaking changes
+----------------
+No breaking changes!
+
+All Changes
+-----------
+This is a list of all changes in this release: ::
+
+    2022-10-19 [BUGFIX] Prevent deprecation message from SimplePie function in PHP 8.1 (Commit bad3662 by Eric Bode)
+    2022-10-19 [DOCS] Fix typo in README.md (Commit 32a87a2 by Eric Bode)
+
+This list has been created by using `git log $(git describe --tags --abbrev=0)..HEAD --abbrev-commit --pretty='%ad %s (Commit %h by %an)' --date=short`.

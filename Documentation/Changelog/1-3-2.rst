@@ -1,0 +1,28 @@
+.. include:: /Includes.rst.txt
+
+1.3.2 - October 10, 2023
+========================
+
+
+.. only:: html
+
+   .. contents::
+        :local:
+        :depth: 3
+
+Breaking changes
+----------------
+No breaking changes!
+
+All Changes
+-----------
+This is a list of all changes in this release: ::
+
+    2023-10-10 [TASK] Increase the version number to 1.3.2 (Commit 49e0d6a by Eric Harrer)
+    2023-10-10 [DOCS] Fix alternative texts for screenshots (Commit b2d5a3a by Eric Harrer)
+    2023-10-10 [DOCS] Update README.md (Commit 2eb8a05 by Eric Harrer)
+    2023-10-10 [DOCS] Add known problem (Commit 7c0ddea by Eric Harrer)
+    2023-10-02 Update Crowdin configuration file (Commit 5a73ae6 by Eric Harrer)
+    2023-04-14 [TASK] Adjust version number in docs and ext_emconf.php (Commit cbb80dc by Eric Harrer)
+
+This list has been created by using `git log $(git describe --tags --abbrev=0)..HEAD --abbrev-commit --pretty='%ad %s (Commit %h by %an)' --date=short`.

@@ -57,5 +57,6 @@ TypoScript or directly in the plugin options.
 ..  toctree::
     :hidden:
 
+    Changelog/Index
     Sitemap
     genindex

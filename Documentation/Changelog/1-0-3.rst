@@ -1,0 +1,24 @@
+.. include:: /Includes.rst.txt
+
+1.0.3 - October 19, 2022
+========================
+
+
+.. only:: html
+
+   .. contents::
+        :local:
+        :depth: 3
+
+Breaking changes
+----------------
+No breaking changes!
+
+All Changes
+-----------
+This is a list of all changes in this release: ::
+
+    2022-10-19 [TASK] Increase the version number to 1.0.3 (Commit 9113f65 by Eric Bode)
+    2022-10-19 [BUGFIX] Fixed warning about missing static TypoScript include and added new error messages (Commit c7b389c by Eric Bode)
+
+This list has been created by using `git log $(git describe --tags --abbrev=0)..HEAD --abbrev-commit --pretty='%ad %s (Commit %h by %an)' --date=short`.
