@@ -1,0 +1,27 @@
+.. include:: /Includes.rst.txt
+
+1.3.3 - October 17, 2023
+========================
+
+
+.. only:: html
+
+   .. contents::
+        :local:
+        :depth: 3
+
+Breaking changes
+----------------
+No breaking changes!
+
+All Changes
+-----------
+This is a list of all changes in this release: ::
+
+    2023-10-17 [DOCS] Add ChangeLog (Commit d9563bb by Eric Harrer)
+    2023-10-17 [BUGFIX] Fix empty tags in item content (Commit 1eb7744 by Eric Harrer)
+    2023-10-17 [BUGFIX] Fix display of items links (Commit b86b9d7 by Eric Harrer)
+    2023-10-17 [BUGFIX] Wrap item enclosures only if at least one exists (Commit 9731214 by Eric Harrer)
+    2023-10-17 [BUGFIX] Use item id for list items id attribute only if available (Commit 97ff1a5 by Eric Harrer)
+
+This list has been created by using `git log $(git describe --tags --abbrev=0)..HEAD --abbrev-commit --pretty='%ad %s (Commit %h by %an)' --date=short`.
