@@ -2,10 +2,17 @@
        data-namespace-typo3-fluid="true" lang="en">
 
 <f:comment><!-- Links --></f:comment>
-<f:if condition="{item.links}">
+<f:if condition="{item.links.0}">
     <div class="item-links">
-        <f:if condition="{item.links -> f:count()} > 2">
-            <f:then>
+        <f:switch expression="{item.links -> f:count()}">
+            <f:case value="0"/>
+            <f:case value="1">
+                <strong>
+                    <f:translate key="item.link"/>
+                </strong>
+                <f:link.external uri="{item.links.0}" target="{settings.linkTarget}">{item.links.0}</f:link.external>
+            </f:case>
+            <f:defaultCase>
                 <strong>
                     <f:translate key="item.links"/>
                 </strong>
@@ -21,16 +28,8 @@
                         </f:if>
                     </f:for>
                 </ul>
-            </f:then>
-            <f:else>
-                <f:if condition="{item.links -> f:count()} > 1">
-                    <strong>
-                        <f:translate key="item.link"/>
-                    </strong>
-                    <f:link.external uri="{item.links.1}" target="{settings.linkTarget}">{item.links.1}</f:link.external>
-                </f:if>
-            </f:else>
-        </f:if>
+            </f:defaultCase>
+        </f:switch>
     </div>
 </f:if>
 
