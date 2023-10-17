@@ -18,9 +18,18 @@
             </h2>
             <ul>
                 <f:for each="{items}" as="item">
-                    <li id="item-{item.id}">
-                        <f:render partial="Item" arguments="{item:item}"/>
-                    </li>
+                    <f:if condition="{item.id}">
+                        <f:then>
+                            <li id="item-{item.id}">
+                                <f:render partial="Item" arguments="{item:item}"/>
+                            </li>
+                        </f:then>
+                        <f:else>
+                            <li>
+                                <f:render partial="Item" arguments="{item:item}"/>
+                            </li>
+                        </f:else>
+                    </f:if>
                 </f:for>
             </ul>
         </div>
