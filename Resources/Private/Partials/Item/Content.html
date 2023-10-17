@@ -4,18 +4,21 @@
 <f:comment><!-- Content --></f:comment>
 <f:if condition="{item.content}">
     <div class="item-content">
+        <f:variable name="content" value="{item.content -> f:spaceless()}"/>
         <f:if condition="{settings.stripTags}">
             <f:then>
-                <f:variable name="content" value="{item.content -> f:format.stripTags()}"/>
+                <f:if condition="{settings.maxContentLength}">
+                    <f:then>{content -> f:format.stripTags() -> f:format.crop(maxCharacters: settings.maxContentLength)}</f:then>
+                    <f:else>{content -> f:format.stripTags()}</f:else>
+                </f:if>
             </f:then>
             <f:else>
-                <f:variable name="content" value="{item.content}"/>
+                <f:if condition="{settings.maxContentLength}">
+                    <f:then>{content -> f:format.html() -> f:format.crop(maxCharacters: settings.maxContentLength)}</f:then>
+                    <f:else>{content -> f:format.html()}</f:else>
+                </f:if>
             </f:else>
         </f:if>
-        <f:if condition="{settings.maxContentLength}">
-            <f:variable name="content" value="{content -> f:format.crop(maxCharacters: settings.maxContentLength)}"/>
-        </f:if>
-        <f:format.html>{content}</f:format.html>
     </div>
 </f:if>
 
