@@ -47,5 +47,16 @@
       "typo3/class-alias-loader": true,
       "typo3/cms-composer-installers": true
     }
+  },
+  "scripts": {
+    "create-libs": [
+      "mkdir -p Libraries",
+      "@composer global require clue/phar-composer",
+      "[ -f Libraries/simplepie-simplepie.phar ] || $HOME/.composer/vendor/bin/phar-composer build 'simplepie/simplepie=^1.8' Libraries/simplepie-simplepie.phar",
+      "chmod -x Libraries/*"
+    ],
+    "build-extension": [
+      "@create-libs"
+    ]
   }
 }

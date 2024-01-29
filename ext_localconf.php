@@ -15,6 +15,7 @@
 
 declare(strict_types=1);
 
+use TYPO3\CMS\Core\Core\Environment;
 use TYPO3\CMS\Core\Information\Typo3Version;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -51,4 +52,11 @@ defined('TYPO3') or die();
      * Cache Registration
      */
     $GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['feeddisplay'] ??= [];
+
+    /*
+     * Load SimplePie library from phar file if not in composer mode
+     */
+    if (!class_exists(\SimplePie\SimplePie::class) && !Environment::isComposerMode()) {
+        require_once 'phar://' . ExtensionManagementUtility::extPath('feed_display') . 'Libraries/simplepie-simplepie.phar/vendor/autoload.php';
+    }
 })();
