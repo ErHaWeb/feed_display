@@ -1,0 +1,23 @@
+.. include:: /Includes.rst.txt
+
+1.3.5 - February 05, 2024
+=========================
+
+
+.. only:: html
+
+   .. contents::
+        :local:
+        :depth: 3
+
+Breaking changes
+----------------
+No breaking changes!
+
+All Changes
+-----------
+This is a list of all changes in this release: ::
+
+    2024-02-05 [TASK] Additions to ext_emconf.php (Commit 839552a by Eric Harrer)
+
+This list has been created by using `git log $(git describe --tags --abbrev=0)..HEAD --abbrev-commit --pretty='%ad %s (Commit %h by %an)' --date=short`.
