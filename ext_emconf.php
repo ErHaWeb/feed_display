@@ -19,12 +19,19 @@ $EM_CONF[$_EXTKEY] = [
     'category' => 'plugin',
     'author' => 'Eric Harrer',
     'author_email' => 'info@eric-harrer.de',
+    'author_company' => 'eric-harrer.de',
     'state' => 'stable',
     'clearCacheOnLoad' => true,
     'version' => '1.3.4',
     'constraints' => [
         'depends' => [
             'typo3' => '11.5.0-12.99.99',
+            'php' => '7.4.0-8.2.99',
+        ],
+    ],
+    'autoload' => [
+        'psr-4' => [
+            'ErHaWeb\\FeedDisplay\\' => 'Classes',
         ],
     ],
 ];
