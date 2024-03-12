@@ -15,27 +15,15 @@
 
 declare(strict_types=1);
 
+use ErHaWeb\FeedDisplay\Controller\FeedController;
+use SimplePie\SimplePie;
 use TYPO3\CMS\Core\Core\Environment;
-use TYPO3\CMS\Core\Information\Typo3Version;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
 defined('TYPO3') or die();
 
 (static function () {
-    /**
-     * Adding the default Page TSconfig
-     */
-    $versionInformation = GeneralUtility::makeInstance(Typo3Version::class);
-    if ($versionInformation->getMajorVersion() < 12) {
-        ExtensionManagementUtility::addPageTSConfig(trim(
-            '
-                @import "EXT:feed_display/Configuration/page.tsconfig"
-            '
-        ));
-    }
-
     /**
      * Add plugin configuration
      */
@@ -43,9 +31,8 @@ defined('TYPO3') or die();
         'FeedDisplay',
         'Pi1',
         [
-            ErHaWeb\FeedDisplay\Controller\FeedController::class => 'display',
-        ],
-        []
+            FeedController::class => 'display',
+        ]
     );
 
     /**
@@ -56,7 +43,7 @@ defined('TYPO3') or die();
     /*
      * Load SimplePie library from phar file if not in composer mode
      */
-    if (!class_exists(\SimplePie\SimplePie::class) && !Environment::isComposerMode()) {
+    if (!class_exists(SimplePie::class) && !Environment::isComposerMode()) {
         require_once 'phar://' . ExtensionManagementUtility::extPath('feed_display') . 'Libraries/simplepie-simplepie.phar/vendor/autoload.php';
     }
 })();

@@ -22,12 +22,6 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
  */
 class TypoScript
 {
-
-    /**
-     * @param array $base
-     * @param array $overload
-     * @return array
-     */
     public function override(array $base, array $overload): array
     {
         $overload = $this->removeDotsFromArrayKeys($overload);
@@ -57,14 +51,24 @@ class TypoScript
         return $base;
     }
 
-    /**
-     * Get value from array by path
-     *
-     * @param mixed $data
-     * @param mixed $path
-     * @return mixed
-     */
-    protected function getValue($data, $path)
+    public function convertPlainArrayToTypoScriptArray(array $plainArray): array
+    {
+        $typoScriptArray = [];
+        foreach ($plainArray as $key => $value) {
+            if (is_array($value)) {
+                if (isset($value['_typoScriptNodeValue'])) {
+                    $typoScriptArray[$key] = $value['_typoScriptNodeValue'];
+                    unset($value['_typoScriptNodeValue']);
+                }
+                $typoScriptArray[$key . '.'] = $this->convertPlainArrayToTypoScriptArray($value);
+            } else {
+                $typoScriptArray[$key] = $value ?? '';
+            }
+        }
+        return $typoScriptArray;
+    }
+
+    protected function getValue(mixed $data, mixed $path): mixed
     {
         $found = true;
 
@@ -84,31 +88,13 @@ class TypoScript
         return null;
     }
 
-    /**
-     * Set value in array by path
-     *
-     * @param array $array
-     * @param string[] $path
-     *
-     * @param mixed $value
-     * @return array
-     */
-    protected function setValue(array $array, array $path, $value): array
+    protected function setValue(array $array, array $path, mixed $value): array
     {
         $this->setValueByReference($array, $path, $value);
 
         return array_merge_recursive([], $array);
     }
 
-    /**
-     * Set value by reference
-     *
-     * @param array $array
-     * @param array $path
-     * @param $value
-     *
-     * @return void
-     */
     private function setValueByReference(array &$array, array $path, $value): void
     {
         while (count($path) > 1) {
@@ -123,10 +109,6 @@ class TypoScript
         $array[$key] = $value;
     }
 
-    /**
-     * @param array $array
-     * @return array
-     */
     protected function removeDotsFromArrayKeys(array $array): array
     {
         $newArray = [];

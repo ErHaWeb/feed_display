@@ -27,42 +27,22 @@ use Psr\Http\Message\ResponseInterface;
 use SimplePie\SimplePie;
 use TYPO3\CMS\Core\Cache\Frontend\FrontendInterface;
 use TYPO3\CMS\Core\Core\Environment;
-use TYPO3\CMS\Core\TypoScript\TypoScriptService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
+use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 
 class FeedController extends ActionController
 {
-    /**
-     * @var FrontendInterface
-     */
-    private FrontendInterface $cache;
-
-    /**
-     * @var SimplePie
-     */
-    private SimplePie $feed;
-
-    public function __construct(FrontendInterface $cache, SimplePie $feed)
+    public function __construct(private readonly FrontendInterface $cache, private readonly SimplePie $feed)
     {
-        $this->cache = $cache;
-        $this->feed = $feed;
     }
 
-    /**
-     * Initializes the current action
-     *
-     * @return void
-     */
     public function initializeAction(): void
     {
         $this->buildSettings();
     }
 
-    /**
-     * @return ResponseInterface
-     */
     public function displayAction(): ResponseInterface
     {
         if ($this->settings) {
@@ -83,9 +63,6 @@ class FeedController extends ActionController
         return $this->htmlResponse();
     }
 
-    /**
-     * @return array
-     */
     private function getFeedData(): array
     {
         $data = [];
@@ -135,12 +112,7 @@ class FeedController extends ActionController
         return $data;
     }
 
-    /**
-     * @param object $object
-     * @param array $fieldParts
-     * @return mixed
-     */
-    private function getValue(object $object, array $fieldParts)
+    private function getValue(object $object, array $fieldParts): string
     {
         $getMethod = 'get_' . $fieldParts[0];
         $value = '';
@@ -164,15 +136,10 @@ class FeedController extends ActionController
         return $value;
     }
 
-
-    /**
-     * @param $fileUrl
-     * @return string|null
-     */
     private function getImage($fileUrl): ?string
     {
         if ($fileUrl) {
-            $urlParts = parse_url($fileUrl);
+            $urlParts = parse_url((string)$fileUrl);
             $pathParts = pathinfo($urlParts['path']);
 
             $fileName = $pathParts['filename'];
@@ -192,14 +159,11 @@ class FeedController extends ActionController
         return null;
     }
 
-    /**
-     * @return bool
-     */
     private function initFeed(): bool
     {
         $feedUrl = $this->settings['feedUrl'] ?? '';
         if (isset($feedUrl) && $feedUrl !== '') {
-            $feedUrl = stripslashes($feedUrl);
+            $feedUrl = stripslashes((string)$feedUrl);
             $this->feed->set_feed_url($feedUrl);
             $this->feed->enable_cache(false);
             $this->feed->init();
@@ -208,11 +172,10 @@ class FeedController extends ActionController
         return false;
     }
 
-    /**
-     * @return void
-     */
     private function buildSettings(): void
     {
+        $typoScriptUtility = GeneralUtility::makeInstance(TypoScript::class);
+
         $fullTypoScriptSettings = $this->configurationManager->getConfiguration(
             ConfigurationManagerInterface::CONFIGURATION_TYPE_FULL_TYPOSCRIPT
         );
@@ -227,13 +190,14 @@ class FeedController extends ActionController
         );
 
         // Use stdWrap for given defined settings
-        if (isset($originalSettings['useStdWrap']) && !empty($originalSettings['useStdWrap'])) {
-            $typoScriptService = GeneralUtility::makeInstance(TypoScriptService::class);
-            $typoScriptArray = $typoScriptService->convertPlainArrayToTypoScriptArray($originalSettings);
+        if ($originalSettings['useStdWrap'] ?? false) {
+            $typoScriptArray = $typoScriptUtility->convertPlainArrayToTypoScriptArray($originalSettings);
             $stdWrapProperties = GeneralUtility::trimExplode(',', $originalSettings['useStdWrap'], true);
             foreach ($stdWrapProperties as $key) {
-                if (is_array($typoScriptArray[$key . '.']) && $this->configurationManager->getContentObject()) {
-                    $originalSettings[$key] = $this->configurationManager->getContentObject()->stdWrap(
+                /** @var ContentObjectRenderer $contentObject */
+                $contentObject = $this->request->getAttribute('currentContentObject');
+                if (is_array($typoScriptArray[$key . '.']) && $contentObject) {
+                    $originalSettings[$key] = $contentObject->stdWrap(
                         $typoScriptArray[$key] ?? '',
                         $typoScriptArray[$key . '.']
                     );
@@ -243,7 +207,6 @@ class FeedController extends ActionController
 
         // start override
         if (isset($tsSettings['overrideFlexformSettingsIfEmpty'])) {
-            $typoScriptUtility = GeneralUtility::makeInstance(TypoScript::class);
             $originalSettings = $typoScriptUtility->override($originalSettings, $tsSettings);
         }
 
