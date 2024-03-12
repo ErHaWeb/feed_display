@@ -8,7 +8,7 @@
         <f:if condition="{settings.stripTags}">
             <f:then>
                 <f:if condition="{settings.maxContentLength}">
-                    <f:then>{content -> f:format.stripTags() -> f:format.crop(maxCharacters: settings.maxContentLength)}</f:then>
+                    <f:then>{content -> f:format.stripTags() -> f:format.crop(maxCharacters:settings.maxContentLength)}</f:then>
                     <f:else>{content -> f:format.stripTags()}</f:else>
                 </f:if>
             </f:then>
