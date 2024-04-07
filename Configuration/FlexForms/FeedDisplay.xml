@@ -2,290 +2,258 @@
     <sheets>
         <general>
             <ROOT>
-                <TCEforms>
-                    <sheetTitle>
-                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.sheet_general.title
-                    </sheetTitle>
-                    <sheetDescription>
-                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.sheet_general.description
-                    </sheetDescription>
-                </TCEforms>
+                <sheetTitle>
+                    LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.sheet_general.title
+                </sheetTitle>
+                <sheetDescription>
+                    LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.sheet_general.description
+                </sheetDescription>
                 <el>
                     <settings.feedUrl>
-                        <TCEforms>
-                            <label>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.feedUrl.label
-                            </label>
-                            <description>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.feedUrl.description
-                            </description>
-                            <config>
-                                <type>input</type>
-                                <placeholder>https://typo3.org/rss</placeholder>
-                                <eval>nospace</eval>
-                            </config>
-                        </TCEforms>
+                        <label>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.feedUrl.label
+                        </label>
+                        <description>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.feedUrl.description
+                        </description>
+                        <config>
+                            <type>input</type>
+                            <placeholder>https://typo3.org/rss</placeholder>
+                            <eval>nospace</eval>
+                        </config>
                     </settings.feedUrl>
                     <settings.maxFeedCount>
-                        <TCEforms>
-                            <label>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.maxFeedCount.label
-                            </label>
-                            <description>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.maxFeedCount.description
-                            </description>
-                            <config>
-                                <type>input</type>
-                                <eval>trim,int</eval>
-                                <placeholder>-</placeholder>
-                            </config>
-                        </TCEforms>
+                        <label>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.maxFeedCount.label
+                        </label>
+                        <description>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.maxFeedCount.description
+                        </description>
+                        <config>
+                            <type>input</type>
+                            <eval>trim,int</eval>
+                            <placeholder>-</placeholder>
+                        </config>
                     </settings.maxFeedCount>
                     <settings.maxContentLength>
-                        <TCEforms>
-                            <label>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.maxContentLength.label
-                            </label>
-                            <description>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.maxContentLength.description
-                            </description>
-                            <config>
-                                <type>input</type>
-                                <eval>trim,int</eval>
-                                <placeholder>-</placeholder>
-                            </config>
-                        </TCEforms>
+                        <label>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.maxContentLength.label
+                        </label>
+                        <description>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.maxContentLength.description
+                        </description>
+                        <config>
+                            <type>input</type>
+                            <eval>trim,int</eval>
+                            <placeholder>-</placeholder>
+                        </config>
                     </settings.maxContentLength>
                     <settings.maxHeaderLength>
-                        <TCEforms>
-                            <label>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.maxHeaderLength.label
-                            </label>
-                            <description>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.maxHeaderLength.description
-                            </description>
-                            <config>
-                                <type>input</type>
-                                <eval>trim,int</eval>
-                                <placeholder>-</placeholder>
-                            </config>
-                        </TCEforms>
+                        <label>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.maxHeaderLength.label
+                        </label>
+                        <description>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.maxHeaderLength.description
+                        </description>
+                        <config>
+                            <type>input</type>
+                            <eval>trim,int</eval>
+                            <placeholder>-</placeholder>
+                        </config>
                     </settings.maxHeaderLength>
                     <settings.logoMaxWidth>
-                        <TCEforms>
-                            <label>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.logoMaxWidth.label
-                            </label>
-                            <description>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.logoMaxWidth.description
-                            </description>
-                            <config>
-                                <type>input</type>
-                                <eval>trim,int</eval>
-                                <placeholder>-</placeholder>
-                            </config>
-                        </TCEforms>
+                        <label>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.logoMaxWidth.label
+                        </label>
+                        <description>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.logoMaxWidth.description
+                        </description>
+                        <config>
+                            <type>input</type>
+                            <eval>trim,int</eval>
+                            <placeholder>-</placeholder>
+                        </config>
                     </settings.logoMaxWidth>
                     <settings.logoMaxHeight>
-                        <TCEforms>
-                            <label>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.logoMaxHeight.label
-                            </label>
-                            <description>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.logoMaxHeight.description
-                            </description>
-                            <config>
-                                <type>input</type>
-                                <eval>trim,int</eval>
-                                <placeholder>-</placeholder>
-                            </config>
-                        </TCEforms>
+                        <label>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.logoMaxHeight.label
+                        </label>
+                        <description>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.logoMaxHeight.description
+                        </description>
+                        <config>
+                            <type>input</type>
+                            <eval>trim,int</eval>
+                            <placeholder>-</placeholder>
+                        </config>
                     </settings.logoMaxHeight>
                     <settings.feedIconMaxWidth>
-                        <TCEforms>
-                            <label>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.feedIconMaxWidth.label
-                            </label>
-                            <description>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.feedIconMaxWidth.description
-                            </description>
-                            <config>
-                                <type>input</type>
-                                <eval>trim,int</eval>
-                                <placeholder>-</placeholder>
-                            </config>
-                        </TCEforms>
+                        <label>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.feedIconMaxWidth.label
+                        </label>
+                        <description>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.feedIconMaxWidth.description
+                        </description>
+                        <config>
+                            <type>input</type>
+                            <eval>trim,int</eval>
+                            <placeholder>-</placeholder>
+                        </config>
                     </settings.feedIconMaxWidth>
                     <settings.feedIconMaxHeight>
-                        <TCEforms>
-                            <label>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.feedIconMaxHeight.label
-                            </label>
-                            <description>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.feedIconMaxHeight.description
-                            </description>
-                            <config>
-                                <type>input</type>
-                                <eval>trim,int</eval>
-                                <placeholder>-</placeholder>
-                            </config>
-                        </TCEforms>
+                        <label>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.feedIconMaxHeight.label
+                        </label>
+                        <description>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.feedIconMaxHeight.description
+                        </description>
+                        <config>
+                            <type>input</type>
+                            <eval>trim,int</eval>
+                            <placeholder>-</placeholder>
+                        </config>
                     </settings.feedIconMaxHeight>
                 </el>
             </ROOT>
         </general>
         <advanced>
             <ROOT>
-                <TCEforms>
-                    <sheetTitle>
-                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.sheet_advanced.title
-                    </sheetTitle>
-                    <sheetDescription>
-                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.sheet_advanced.description
-                    </sheetDescription>
-                </TCEforms>
+                <sheetTitle>
+                    LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.sheet_advanced.title
+                </sheetTitle>
+                <sheetDescription>
+                    LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.sheet_advanced.description
+                </sheetDescription>
                 <el>
                     <settings.dateFormat>
-                        <TCEforms>
-                            <label>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.dateFormat.label
-                            </label>
-                            <description>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.dateFormat.description
-                            </description>
-                            <config>
-                                <type>input</type>
-                                <eval>trim</eval>
-                                <placeholder>-</placeholder>
-                            </config>
-                        </TCEforms>
+                        <label>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.dateFormat.label
+                        </label>
+                        <description>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.dateFormat.description
+                        </description>
+                        <config>
+                            <type>input</type>
+                            <eval>trim</eval>
+                            <placeholder>-</placeholder>
+                        </config>
                     </settings.dateFormat>
                     <settings.stripTags>
-                        <TCEforms>
-                            <label>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.stripTags.label
-                            </label>
-                            <description>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.stripTags.description
-                            </description>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingle</renderType>
-                                <items type="array">
-                                    <numIndex index="0" type="array">
-                                        <numIndex index="0">
-                                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.placeholder.typoscript
-                                        </numIndex>
-                                        <numIndex index="1"/>
+                        <label>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.stripTags.label
+                        </label>
+                        <description>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.stripTags.description
+                        </description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingle</renderType>
+                            <items type="array">
+                                <numIndex index="0" type="array">
+                                    <numIndex index="0">
+                                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.placeholder.typoscript
                                     </numIndex>
-                                    <numIndex index="1" type="array">
-                                        <numIndex index="0">
-                                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.stripTags.I.yes
-                                        </numIndex>
-                                        <numIndex index="1">1</numIndex>
+                                    <numIndex index="1"/>
+                                </numIndex>
+                                <numIndex index="1" type="array">
+                                    <numIndex index="0">
+                                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.stripTags.I.yes
                                     </numIndex>
-                                    <numIndex index="2" type="array">
-                                        <numIndex index="0">
-                                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.stripTags.I.no
-                                        </numIndex>
-                                        <numIndex index="1">0</numIndex>
+                                    <numIndex index="1">1</numIndex>
+                                </numIndex>
+                                <numIndex index="2" type="array">
+                                    <numIndex index="0">
+                                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.stripTags.I.no
                                     </numIndex>
-                                </items>
-                            </config>
-                        </TCEforms>
+                                    <numIndex index="1">0</numIndex>
+                                </numIndex>
+                            </items>
+                        </config>
                     </settings.stripTags>
                     <settings.linkTarget>
-                        <TCEforms>
-                            <label>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.linkTarget.label
-                            </label>
-                            <description>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.linkTarget.description
-                            </description>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingle</renderType>
-                                <items type="array">
-                                    <numIndex index="0" type="array">
-                                        <numIndex index="0">
-                                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.linkTarget.I.default
-                                        </numIndex>
-                                        <numIndex index="1"/>
+                        <label>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.linkTarget.label
+                        </label>
+                        <description>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.linkTarget.description
+                        </description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingle</renderType>
+                            <items type="array">
+                                <numIndex index="0" type="array">
+                                    <numIndex index="0">
+                                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.linkTarget.I.default
                                     </numIndex>
-                                    <numIndex index="1" type="array">
-                                        <numIndex index="0">
-                                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.linkTarget.I.blank
-                                        </numIndex>
-                                        <numIndex index="1">_blank</numIndex>
+                                    <numIndex index="1"/>
+                                </numIndex>
+                                <numIndex index="1" type="array">
+                                    <numIndex index="0">
+                                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.linkTarget.I.blank
                                     </numIndex>
-                                    <numIndex index="2" type="array">
-                                        <numIndex index="0">
-                                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.linkTarget.I.self
-                                        </numIndex>
-                                        <numIndex index="1">_self</numIndex>
+                                    <numIndex index="1">_blank</numIndex>
+                                </numIndex>
+                                <numIndex index="2" type="array">
+                                    <numIndex index="0">
+                                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.linkTarget.I.self
                                     </numIndex>
-                                    <numIndex index="3" type="array">
-                                        <numIndex index="0">
-                                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.linkTarget.I.parent
-                                        </numIndex>
-                                        <numIndex index="1">_parent</numIndex>
+                                    <numIndex index="1">_self</numIndex>
+                                </numIndex>
+                                <numIndex index="3" type="array">
+                                    <numIndex index="0">
+                                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.linkTarget.I.parent
                                     </numIndex>
-                                    <numIndex index="4" type="array">
-                                        <numIndex index="0">
-                                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.linkTarget.I.top
-                                        </numIndex>
-                                        <numIndex index="1">_top</numIndex>
+                                    <numIndex index="1">_parent</numIndex>
+                                </numIndex>
+                                <numIndex index="4" type="array">
+                                    <numIndex index="0">
+                                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.linkTarget.I.top
                                     </numIndex>
-                                </items>
-                                <minitems>0</minitems>
-                                <maxitems>1</maxitems>
-                                <size>1</size>
-                            </config>
-                        </TCEforms>
+                                    <numIndex index="1">_top</numIndex>
+                                </numIndex>
+                            </items>
+                            <minitems>0</minitems>
+                            <maxitems>1</maxitems>
+                            <size>1</size>
+                        </config>
                     </settings.linkTarget>
                     <settings.errorMessage>
-                        <TCEforms>
-                            <label>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.errorMessage.label
-                            </label>
-                            <description>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.errorMessage.description
-                            </description>
-                            <config>
-                                <type>input</type>
-                                <eval>trim</eval>
-                                <placeholder>-</placeholder>
-                            </config>
-                        </TCEforms>
+                        <label>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.errorMessage.label
+                        </label>
+                        <description>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.errorMessage.description
+                        </description>
+                        <config>
+                            <type>input</type>
+                            <eval>trim</eval>
+                            <placeholder>-</placeholder>
+                        </config>
                     </settings.errorMessage>
                     <settings.cacheDuration>
-                        <TCEforms>
-                            <label>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.cacheDuration.label
-                            </label>
-                            <description>
-                                LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.cacheDuration.description
-                            </description>
-                            <config>
-                                <type>input</type>
-                                <eval>trim</eval>
-                                <placeholder>-</placeholder>
-                            </config>
-                        </TCEforms>
+                        <label>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.cacheDuration.label
+                        </label>
+                        <description>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.cacheDuration.description
+                        </description>
+                        <config>
+                            <type>input</type>
+                            <eval>trim</eval>
+                            <placeholder>-</placeholder>
+                        </config>
                     </settings.cacheDuration>
                 </el>
             </ROOT>
         </advanced>
         <getFields>
             <ROOT>
-                <TCEforms>
-                    <sheetTitle>
-                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.sheet_getFields.title
-                    </sheetTitle>
-                    <sheetDescription>
-                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.sheet_getFields.description
-                    </sheetDescription>
-                </TCEforms>
+                <sheetTitle>
+                    LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.sheet_getFields.title
+                </sheetTitle>
+                <sheetDescription>
+                    LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.sheet_getFields.description
+                </sheetDescription>
                 <el>
                     <settings.getFields.feed>
                         <label>
