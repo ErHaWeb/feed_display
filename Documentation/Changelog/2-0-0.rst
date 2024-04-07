@@ -1,0 +1,41 @@
+.. include:: /Includes.rst.txt
+
+2.0.0 - April 07, 2024
+======================
+
+
+.. only:: html
+
+   .. contents::
+        :local:
+        :depth: 3
+
+Breaking changes
+----------------
+The former custom property `plugin.tx_feeddisplay_pi1.settings.overrideFlexformSettingsIfEmpty` has now been replaced by
+the native property :ref:`ignoreFlexFormSettingsIfEmpty <t3tsref:setup-plugin-configuration-ignoreFlexFormSettingsIfEmpty>`.
+
+If you have made changes to this property, you must migrate them to the new TypoScript path.
+
+.. code-block:: typoscript
+
+    # Old:
+    plugin.tx_feeddisplay_pi1.settings.overrideFlexformSettingsIfEmpty = feedUrl, maxFeedCount, maxContentLength, maxHeaderLength, logoMaxWidth, logoMaxHeight, feedIconMaxWidth, feedIconMaxHeight, dateFormat, stripTags, linkTarget, errorMessage, cacheDuration, getFields.feed, getFields.items
+
+    # New:
+    plugin.tx_feeddisplay_pi1.ignoreFlexFormSettingsIfEmpty = feedUrl, maxFeedCount, maxContentLength, maxHeaderLength, logoMaxWidth, logoMaxHeight, feedIconMaxWidth, feedIconMaxHeight, dateFormat, stripTags, linkTarget, errorMessage, cacheDuration, getFields.feed, getFields.items
+
+All Changes
+-----------
+This is a list of all changes in this release: ::
+
+    2024-04-07 [DOCS] Update docs based on TYPO3 version 12 and 13 (Commit 2e23c20 by Eric Harrer)
+    2024-04-07 [TASK] Migrate to native ignoreFlexFormSettingsIfEmpty property (Commit 595abd5 by Eric Harrer)
+    2024-04-07 [BUGFIX] Fix type error (Commit 2e43655 by Eric Harrer)
+    2024-04-07 [TASK] Refactor fluid template files (Commit 78af0cb by Eric Harrer)
+    2024-04-07 [TASK] Use new plugin signature return value (Commit 8208b36 by Eric Harrer)
+    2024-04-07 [TASK] Simplify static TypoScript include (Commit bf36a0b by Eric Harrer)
+    2024-04-07 [TASK] Remove deprecated TCEforms tag (Commit 5a1f6d7 by Eric Harrer)
+    2024-03-12 [TASK] Establishing compatibility with v13 (Commit 41d4afd by Eric Harrer)
+
+This list has been created by using `git log $(git describe --tags --abbrev=0)..HEAD --abbrev-commit --pretty='%ad %s (Commit %h by %an)' --date=short`.
