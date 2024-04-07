@@ -483,9 +483,9 @@
         <source>Feed cache:Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</source>
         <target state="final">Feed cache:Zeit in Sekunden, in der die Daten bis zur nächsten Erneuerung des Caches aus dem Cache gelesen werden sollen. (0 = kein Cache)</target>
       </trans-unit>
-      <trans-unit id="constants.ignoreFlexFormSettingsIfEmpty" resname="constants.ignoreFlexFormSettingsIfEmpty">
+      <trans-unit id="constants.ignoreFlexFormSettingsIfEmpty" resname="constants.ignoreFlexFormSettingsIfEmpty" approved="yes">
         <source>Ignore FlexForm Settings if empty:Comma separated list of FlexForm settings that will be ignored in the extension settings merge process, if their value is considered empty (either an empty string or a string containing 0).</source>
-        <target state="needs-translation">Ignore FlexForm Settings if empty:Comma separated list of FlexForm settings that will be ignored in the extension settings merge process, if their value is considered empty (either an empty string or a string containing 0).</target>
+        <target state="final">FlexForm Einstellungen ignorieren, wenn leer:Durch Komma getrennte Liste von FlexForm Settings, die beim Zusammenführen der Extension Settings ignoriert werden, wenn ihr Wert als leer betrachtet wird (leerer String oder ein String mit 0).</target>
       </trans-unit>
       <trans-unit id="constants.getFields.feed" resname="constants.getFields.feed" approved="yes">
         <source>Feed fields to get:Comma-separated list of fields to be read from the feed by SimplePie and made available as variables in Fluid.</source>
