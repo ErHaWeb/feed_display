@@ -1,7 +1,4 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      data-namespace-typo3-fluid="true" lang="en">
-
-<f:comment><!-- Content --></f:comment>
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true" lang="en">
 <f:if condition="{item.content}">
     <div class="item-content">
         <f:variable name="content" value="{item.content -> f:spaceless()}"/>
@@ -21,5 +18,4 @@
         </f:if>
     </div>
 </f:if>
-
 </html>

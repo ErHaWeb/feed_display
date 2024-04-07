@@ -1,7 +1,4 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      data-namespace-typo3-fluid="true" lang="en">
-
-<f:comment><!-- Links --></f:comment>
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true" lang="en">
 <f:if condition="{item.links.0}">
     <div class="item-links">
         <f:switch expression="{item.links -> f:count()}">
@@ -32,5 +29,4 @@
         </f:switch>
     </div>
 </f:if>
-
 </html>

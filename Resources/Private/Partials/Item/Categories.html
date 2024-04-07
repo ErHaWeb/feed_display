@@ -1,7 +1,4 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      data-namespace-typo3-fluid="true" lang="en">
-
-<f:comment><!-- Categories --></f:comment>
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true" lang="en">
 <f:if condition="{item.categories}">
     <div class="item-categories">
         <f:if condition="{item.categories -> f:count()} > 1">
@@ -26,5 +23,4 @@
         </f:if>
     </div>
 </f:if>
-
 </html>

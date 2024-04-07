@@ -1,6 +1,4 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      data-namespace-typo3-fluid="true" lang="en">
-
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true" lang="en">
 <f:render partial="Feed/Title" arguments="{feed:feed}"/>
 <f:render partial="Feed/Image" arguments="{feed:feed}"/>
 <f:render partial="Feed/Description" arguments="{feed:feed}"/>
@@ -8,8 +6,6 @@
 <f:render partial="Feed/Authors" arguments="{feed:feed}"/>
 <f:render partial="Feed/Contributors" arguments="{feed:feed}"/>
 <f:render partial="Feed/Links" arguments="{feed:feed}"/>
-
-<f:comment><!-- Feed Items --></f:comment>
 <f:if condition="{items}">
     <f:then>
         <div class="feed-items">
@@ -40,7 +36,5 @@
         </div>
     </f:else>
 </f:if>
-
 <f:render partial="Feed/Copyright" arguments="{feed:feed}"/>
-
 </html>
