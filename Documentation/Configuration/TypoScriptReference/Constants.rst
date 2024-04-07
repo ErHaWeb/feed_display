@@ -254,20 +254,6 @@ Cache duration
     Time in seconds in which the data is to be read from the
     cache until the next renewal of the cache. (0 = no cache)
 
-..  _configuration-typoscript-constants-settings-overrideflexformsettingsifempty:
-
-Override Flexform Settings if empty
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-..  confval:: overrideFlexformSettingsIfEmpty
-
-    :type: list of strings, separated by comma
-    :Default: feedUrl, maxFeedCount, maxContentLength, maxHeaderLength, logoMaxWidth, logoMaxHeight, feedIconMaxWidth, feedIconMaxHeight, dateFormat, stripTags, linkTarget, errorMessage, cacheDuration, getFields.feed, getFields.items
-    :Path: plugin.tx_feeddisplay_pi1.settings
-
-    Comma separated list of settings to be overridden by TypoScript if the
-    plugin settings value is either empty or 0.
-
 ..  _configuration-typoscript-constants-settings-getfields:
 
 Get Fields
@@ -340,3 +326,23 @@ Get Fields: Items
 
     As in :ref:`getFields.feed <configuration-typoscript-constants-settings-getfields-feed>`
     up to three parameters are supported.
+
+..  _configuration-typoscript-constants-ignoreflexformsettingsifempty:
+
+Ignore Flexform Settings if empty
+---------------------------------
+
+..  confval:: ignoreFlexFormSettingsIfEmpty
+
+    :type: list of strings, separated by comma
+    :Default: feedUrl, maxFeedCount, maxContentLength, maxHeaderLength, logoMaxWidth, logoMaxHeight, feedIconMaxWidth, feedIconMaxHeight, dateFormat, stripTags, linkTarget, errorMessage, cacheDuration, getFields.feed, getFields.items
+    :Path: plugin.tx_feeddisplay_pi1
+
+    Comma separated list of settings to be overridden by TypoScript if the
+    plugin settings value is either empty or 0.
+
+    ..  attention::
+        This property has been introduced as a native property for Extbase-based frontend plugins since TYPO3 v12 and
+        replaces the previous custom property `plugin.tx_feeddisplay_pi1.settings.overrideFlexformSettingsIfEmpty`.
+
+        See also :ref:`ignoreFlexFormSettingsIfEmpty <t3tsref:setup-plugin-configuration-ignoreFlexFormSettingsIfEmpty>`.

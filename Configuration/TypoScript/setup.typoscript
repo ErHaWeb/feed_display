@@ -22,8 +22,6 @@ plugin.tx_feeddisplay_pi1 {
             items = {$plugin.tx_feeddisplay_pi1.settings.getFields.items}
         }
 
-        overrideFlexformSettingsIfEmpty = {$plugin.tx_feeddisplay_pi1.settings.overrideFlexformSettingsIfEmpty}
-
         feedUrl = {$plugin.tx_feeddisplay_pi1.settings.feedUrl}
         maxFeedCount = {$plugin.tx_feeddisplay_pi1.settings.maxFeedCount}
         maxContentLength = {$plugin.tx_feeddisplay_pi1.settings.maxContentLength}
@@ -38,4 +36,6 @@ plugin.tx_feeddisplay_pi1 {
         errorMessage = {$plugin.tx_feeddisplay_pi1.settings.errorMessage}
         cacheDuration = {$plugin.tx_feeddisplay_pi1.settings.cacheDuration}
     }
+
+    ignoreFlexFormSettingsIfEmpty = {$plugin.tx_feeddisplay_pi1.ignoreFlexFormSettingsIfEmpty}
 }

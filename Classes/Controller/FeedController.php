@@ -22,25 +22,17 @@ declare(strict_types=1);
 namespace ErHaWeb\FeedDisplay\Controller;
 
 use ErHaWeb\FeedDisplay\Event\SingleFeedDataEvent;
-use ErHaWeb\FeedDisplay\Utility\TypoScript;
 use Psr\Http\Message\ResponseInterface;
 use SimplePie\SimplePie;
 use TYPO3\CMS\Core\Cache\Frontend\FrontendInterface;
 use TYPO3\CMS\Core\Core\Environment;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
-use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 
 class FeedController extends ActionController
 {
     public function __construct(private readonly FrontendInterface $cache, private readonly SimplePie $feed)
     {
-    }
-
-    public function initializeAction(): void
-    {
-        $this->buildSettings();
     }
 
     public function displayAction(): ResponseInterface
@@ -170,54 +162,5 @@ class FeedController extends ActionController
             return true;
         }
         return false;
-    }
-
-    private function buildSettings(): void
-    {
-        $typoScriptUtility = GeneralUtility::makeInstance(TypoScript::class);
-
-        $fullTypoScriptSettings = $this->configurationManager->getConfiguration(
-            ConfigurationManagerInterface::CONFIGURATION_TYPE_FULL_TYPOSCRIPT
-        );
-        if (!($fullTypoScriptSettings['plugin.']['tx_feeddisplay_pi1.'] ?? null)) {
-            $this->settings = [];
-            return;
-        }
-        $tsSettings = ($fullTypoScriptSettings['plugin.']['tx_feeddisplay_pi1.'])['settings.'];
-
-        $originalSettings = $this->configurationManager->getConfiguration(
-            ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS
-        );
-
-        // Use stdWrap for given defined settings
-        if ($originalSettings['useStdWrap'] ?? false) {
-            $typoScriptArray = $typoScriptUtility->convertPlainArrayToTypoScriptArray($originalSettings);
-            $stdWrapProperties = GeneralUtility::trimExplode(',', $originalSettings['useStdWrap'], true);
-            foreach ($stdWrapProperties as $key) {
-                /** @var ContentObjectRenderer $contentObject */
-                $contentObject = $this->request->getAttribute('currentContentObject');
-                if (is_array($typoScriptArray[$key . '.']) && $contentObject) {
-                    $originalSettings[$key] = $contentObject->stdWrap(
-                        $typoScriptArray[$key] ?? '',
-                        $typoScriptArray[$key . '.']
-                    );
-                }
-            }
-        }
-
-        // start override
-        if (isset($tsSettings['overrideFlexformSettingsIfEmpty'])) {
-            $originalSettings = $typoScriptUtility->override($originalSettings, $tsSettings);
-        }
-
-        foreach (($GLOBALS['TYPO3_CONF_VARS']['EXT']['feed_display']['Controller/FeedController.php']['overrideSettings'] ?? []) as $_funcRef) {
-            $_params = [
-                'originalSettings' => $originalSettings,
-                'tsSettings' => $tsSettings,
-            ];
-            $originalSettings = GeneralUtility::callUserFunction($_funcRef, $_params, $this);
-        }
-
-        $this->settings = $originalSettings;
     }
 }

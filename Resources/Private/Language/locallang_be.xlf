@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns:t3="http://typo3.org/schemas/xliff" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" original="messages" datatype="plaintext" product-name="feed_display" date="2024-03-12T22:30:27+01:00">
+    <file source-language="en" original="messages" datatype="plaintext" product-name="feed_display" date="2024-04-07T17:24:43+02:00">
         <header></header>
         <body>
             <trans-unit id="pi1_title" resname="pi1_title">
@@ -363,8 +363,8 @@
             <trans-unit id="constants.cacheDuration" resname="constants.cacheDuration">
                 <source>Feed cache:Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</source>
             </trans-unit>
-            <trans-unit id="constants.overrideFlexformSettingsIfEmpty" resname="constants.overrideFlexformSettingsIfEmpty">
-                <source>Override FlexForm Settings if empty:Comma separated list of settings to be overridden by TypoScript if the plugin settings value is either empty or 0.</source>
+            <trans-unit id="constants.ignoreFlexFormSettingsIfEmpty" resname="constants.ignoreFlexFormSettingsIfEmpty">
+                <source>Ignore FlexForm Settings if empty:Comma separated list of FlexForm settings that will be ignored in the extension settings merge process, if their value is considered empty (either an empty string or a string containing 0).</source>
             </trans-unit>
             <trans-unit id="constants.getFields.feed" resname="constants.getFields.feed">
                 <source>Feed fields to get:Comma-separated list of fields to be read from the feed by SimplePie and made available as variables in Fluid.</source>

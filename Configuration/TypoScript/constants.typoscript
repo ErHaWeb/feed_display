@@ -40,8 +40,6 @@ plugin.tx_feeddisplay_pi1 {
         errorMessage =
         # cat=plugin.tx_feeddisplay_pi1/200_advanced/340; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.cacheDuration
         cacheDuration = 3600
-        # cat=plugin.tx_feeddisplay_pi1/200_advanced/350; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.overrideFlexformSettingsIfEmpty
-        overrideFlexformSettingsIfEmpty = feedUrl,maxFeedCount,maxContentLength,maxHeaderLength,logoMaxWidth,logoMaxHeight,feedIconMaxWidth,feedIconMaxHeight,dateFormat,stripTags,linkTarget,errorMessage,cacheDuration,getFields.feed,getFields.items
 
         getFields {
             # Each field is internally converted to a SimplePie getter method.
@@ -95,4 +93,7 @@ plugin.tx_feeddisplay_pi1 {
             # For field "item_tags" you must parse the feed-dependent arguments
         }
     }
+
+    # cat=plugin.tx_feeddisplay_pi1/200_advanced/350; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.ignoreFlexFormSettingsIfEmpty
+    ignoreFlexFormSettingsIfEmpty = feedUrl,maxFeedCount,maxContentLength,maxHeaderLength,logoMaxWidth,logoMaxHeight,feedIconMaxWidth,feedIconMaxHeight,dateFormat,stripTags,linkTarget,errorMessage,cacheDuration,getFields.feed,getFields.items
 }
