@@ -112,10 +112,10 @@ class FeedController extends ActionController
         return $data;
     }
 
-    private function getValue(object $object, array $fieldParts): string
+    private function getValue(object $object, array $fieldParts): mixed
     {
         $getMethod = 'get_' . $fieldParts[0];
-        $value = '';
+        $value = null;
 
         if (method_exists($object, $getMethod)) {
             switch (count($fieldParts)) {
