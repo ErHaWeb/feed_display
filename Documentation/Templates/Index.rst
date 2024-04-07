@@ -6,7 +6,7 @@
 Templates
 =========
 
-This chapter is all about templating EXT:feed_display
+This chapter is all about templating `EXT:feed_display`
 
 ..  toctree::
     :maxdepth: 5

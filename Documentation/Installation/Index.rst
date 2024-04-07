@@ -29,7 +29,7 @@ Installation
             ..  figure:: /Images/Maintenance-AnalyzeDatabaseStructure.png
                 :class: with-shadow
                 :alt: Maintenance: Analyze Database Structure
-                :width: 986px
+                :width: 993px
 
                 Maintenance: Analyze Database Structure
 
@@ -39,7 +39,7 @@ Installation
 
                 ..  code-block:: bash
 
-                    typo3cms database:updateschema "*.add,*.change"
+                    typo3 database:updateschema "*.add,*.change"
 
     ..  group-tab:: Composer/DDEV
 
@@ -62,7 +62,7 @@ Installation
             ..  figure:: /Images/Maintenance-AnalyzeDatabaseStructure.png
                 :class: with-shadow
                 :alt: Maintenance: Analyze Database Structure
-                :width: 986px
+                :width: 993px
 
                 Maintenance: Analyze Database Structure
 
@@ -72,7 +72,7 @@ Installation
 
                 ..  code-block:: bash
 
-                    ddev typo3cms database:updateschema "*.add,*.change"
+                    ddev typo3 database:updateschema "*.add,*.change"
 
     ..  group-tab:: Classic
 
@@ -91,6 +91,6 @@ Installation
         ..  figure:: /Images/AdminTools-Extensions-GetExtensions.png
             :class: with-shadow
             :alt: The "Get Extensions" dialog
-            :width: 753px
+            :width: 782px
 
             The "Get Extensions" dialog

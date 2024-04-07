@@ -12,15 +12,15 @@ Quick start
 
 2.  Include the static TypoScript
 
-    #.  Go to the Template module under `Web` → `Template`.
+    #.  Go to the TypoScript module under `Site Management` → `TypoScript`.
 
-    #.  Select `Info/Modify` in the module header.
+    #.  Select `Edit TypoScript Record` in the module header.
 
     #.  Click the button `Edit the whole template record`.
 
     #.  Switch to the tab `Advanced Options`.
 
-    #.  Select `Feed Display: Static TypoScript Include (feed_display)` under `Include static (from extensions)` → `Available Items`.
+    #.  Select `Feed Display: Static TypoScript Include (feed_display)` under `Include TypoScript sets` → `Available Items`.
 
     #.  Click `Save` and `Close`.
 
@@ -28,7 +28,7 @@ Quick start
 
     #.  Go to the Page module under `Web` → `Page`.
 
-    #.  In the Pagetree view click on the page where you want the feed to be displayed.
+    #.  In the pagetree view click on the page where you want the feed to be displayed.
 
     #.  Click the `+ Content` button where you want the feed plugin content element to be placed.
 

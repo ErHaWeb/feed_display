@@ -39,9 +39,8 @@ Below you can find an example of the frontend output of the official TYPO3
 news feed. Styling and structure can be customized as you like.
 
 ..  figure:: /Images/FrontendView.png
-    :class: with-shadow
     :alt: Frontend View
-    :width: 727px
+    :width: 720px
 
     Frontend View
 
@@ -51,8 +50,9 @@ New Content Element Wizard
 --------------------------
 
 ..  figure:: /Images/NewContentElementWizard.png
+    :class: with-shadow
     :alt: New Content Element Wizard
-    :width: 799px
+    :width: 952px
 
     New Content Element Wizard
 
@@ -75,7 +75,7 @@ constant editor.
 
         ..  figure:: /Images/PluginOptions-General.png
             :alt: Plugin Options: General Tab
-            :width: 720px
+            :width: 608px
 
             Plugin Options: "General" Tab
 
@@ -85,7 +85,7 @@ constant editor.
 
         ..  figure:: /Images/PluginOptions-Advanced.png
             :alt: Plugin Options: Advanced Tab
-            :width: 720px
+            :width: 608px
 
             Plugin Options: "Advanced" Tab
 
@@ -95,7 +95,7 @@ constant editor.
 
         ..  figure:: /Images/PluginOptions-GetFields.png
             :alt: Plugin Options: Get Fields Tab
-            :width: 720px
+            :width: 608px
 
             Plugin Options: "Get Fields" Tab
 
@@ -110,8 +110,9 @@ editor. Use these options if you want to make settings on a global level for
 all content elements.
 
 ..  figure:: /Images/ConstantEditor-Options.png
+    :class: with-shadow
     :alt: Constant Editor Feed Display Options
-    :width: 534px
+    :width: 682px
 
     Constant Editor Feed Display Options
 
@@ -123,7 +124,7 @@ all content elements.
 
         ..  figure:: /Images/ConstantEditor-Files.png
             :alt: Constant Editor: "Files"
-            :width: 534px
+            :width: 634px
 
             Constant Editor: "Files"
 
@@ -133,7 +134,7 @@ all content elements.
 
         ..  figure:: /Images/ConstantEditor-General.png
             :alt: Constant Editor: "General"
-            :width: 534px
+            :width: 634px
 
             Constant Editor: "General"
 
@@ -143,7 +144,7 @@ all content elements.
 
         ..  figure:: /Images/ConstantEditor-Advanced.png
             :alt: Constant Editor: "Advanced"
-            :width: 534px
+            :width: 634px
 
             Constant Editor: "Advanced"
 
@@ -153,6 +154,6 @@ all content elements.
 
         ..  figure:: /Images/ConstantEditor-GetFields.png
             :alt: Constant Editor: "Fields to get from Feed and Items"
-            :width: 534px
+            :width: 634px
 
             Constant Editor: "Fields to get from Feed and Items"

@@ -7,7 +7,7 @@
 Overriding Templates
 ====================
 
-EXT:feed_display is using Fluid as template engine.
+`EXT:feed_display` is using Fluid as template engine.
 
 This documentation won't bring you all information about Fluid but only the
 most important things you need for using it. You can get
@@ -78,9 +78,8 @@ In the constant editor under `Web` → `Template` → `Constant Editor` you can
 define your own fluid paths in addition to the default paths.
 
 ..  figure:: /Images/ConstantEditor-FluidPaths.png
-    :class: with-shadow
     :alt: Constant Editor: Fluid Template Paths
-    :width: 579px
+    :width: 634px
 
     Constant Editor: Fluid Template Paths
 
@@ -90,8 +89,8 @@ Alternatively you can define the following TypoScript constants directly:
 
     plugin.tx_feeddisplay_pi1 {
         view {
-            templateRootPath = EXT:your_extension/Resources/Private/Templates/
-            partialRootPath = EXT:your_extension/Resources/Private/Partials/
-            layoutRootPath = EXT:your_extension/Resources/Private/Layouts/
+            templateRootPath = EXT:your_sitepackage/Resources/Private/Templates/FeedDisplay/
+            partialRootPath = EXT:your_sitepackage/Resources/Private/Partials/FeedDisplay/
+            layoutRootPath = EXT:your_sitepackage/Resources/Private/Layouts/FeedDisplay/
         }
     }

@@ -6,7 +6,7 @@
 Known problems
 ==============
 
-The following issues are known problems. However those are not fixable inside EXT:feed_display.
+The following issues are known problems. However those are not fixable inside `EXT:feed_display`.
 
 If you notice anything else feel free to open an issue on `Github <https://github.com/ErHaWeb/feed_display/issues>`__.
 
