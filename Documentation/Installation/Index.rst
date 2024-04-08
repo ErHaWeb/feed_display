@@ -89,7 +89,6 @@ Installation
         In the result list click the `Import & Install` button under `Actions`
 
         ..  figure:: /Images/AdminTools-Extensions-GetExtensions.png
-            :class: with-shadow
             :alt: The "Get Extensions" dialog
             :width: 782px
 
