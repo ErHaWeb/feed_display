@@ -40,7 +40,7 @@ Quick start
 
     #.  Switch to tab `Plugin`.
 
-    #.  Under `Plugin Options` → `General` → `Feed URL` enter the full URL of your Feed. (By default `https://typo3.org/rss` us used here.)
+    #.  Under `Plugin Options` → `General` → `Feed URL` enter the full URL of your Feed. (By default `https://typo3.org/rss` is used here.)
 
     #.  Click `Save` and `Close`.
 
