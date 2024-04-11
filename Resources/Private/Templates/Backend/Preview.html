@@ -1,0 +1,12 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true" lang="en">
+<table>
+    <f:for each="{pi_flexform_transformed.settings}" key="key" as="value">
+        <f:if condition="{value} != '' && {value} != '0' && {key} != 'getFields'">
+            <tr>
+                <th style="padding-right: 5px;"><f:translate key="LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.{key}.label"/><br></th>
+                <td>{value}</td>
+            </tr>
+        </f:if>
+    </f:for>
+</table>
+</html>
