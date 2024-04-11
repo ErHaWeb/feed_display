@@ -239,7 +239,7 @@
                         </description>
                         <config>
                             <type>input</type>
-                            <eval>trim</eval>
+                            <eval>trim,int</eval>
                             <placeholder>-</placeholder>
                         </config>
                     </settings.cacheDuration>
