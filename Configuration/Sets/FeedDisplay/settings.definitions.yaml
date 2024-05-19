@@ -1,0 +1,77 @@
+settings:
+  plugin.tx_feeddisplay_pi1.view.templateRootPath:
+    label: 'LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.view.templateRootPath'
+    type: string
+    default: ''
+  plugin.tx_feeddisplay_pi1.view.partialRootPath:
+    label: 'LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.view.partialRootPath'
+    type: string
+    default: ''
+  plugin.tx_feeddisplay_pi1.view.layoutRootPath:
+    label: 'LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.view.layoutRootPath'
+    type: string
+    default: ''
+  plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty:
+    label: 'LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.ignoreFlexFormSettingsIfEmpty'
+    type: string
+    default: 'feedUrl,maxFeedCount,maxContentLength,maxHeaderLength,logoMaxWidth,logoMaxHeight,feedIconMaxWidth,feedIconMaxHeight,dateFormat,stripTags,linkTarget,errorMessage,cacheDuration,getFields.feed,getFields.items'
+  plugin.tx_feeddisplay_pi1.settings.feedUrl:
+    label: 'LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.feedUrl'
+    type: string
+    default: https://typo3.org/rss
+  plugin.tx_feeddisplay_pi1.settings.maxFeedCount:
+    label: 'LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.maxFeedCount'
+    type: int
+    default: 10
+  plugin.tx_feeddisplay_pi1.settings.maxContentLength:
+    label: 'LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.maxContentLength'
+    type: int
+    default: 500
+  plugin.tx_feeddisplay_pi1.settings.maxHeaderLength:
+    label: 'LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.maxHeaderLength'
+    type: int
+    default: 80
+  plugin.tx_feeddisplay_pi1.settings.logoMaxWidth:
+    label: 'LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.logoMaxWidth'
+    type: int
+    default: 0
+  plugin.tx_feeddisplay_pi1.settings.logoMaxHeight:
+    label: 'LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.logoMaxHeight'
+    type: int
+    default: 0
+  plugin.tx_feeddisplay_pi1.settings.feedIconMaxWidth:
+    label: 'LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.feedIconMaxWidth'
+    type: int
+    default: 26
+  plugin.tx_feeddisplay_pi1.settings.feedIconMaxHeight:
+    label: 'LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.feedIconMaxHeight'
+    type: int
+    default: 26
+  plugin.tx_feeddisplay_pi1.settings.dateFormat:
+    label: 'LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.dateFormat'
+    type: string
+    default: '%d. %B %Y'
+  plugin.tx_feeddisplay_pi1.settings.stripTags:
+    label: 'LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.stripTags'
+    type: int
+    default: 1
+  plugin.tx_feeddisplay_pi1.settings.linkTarget:
+    label: 'LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.linkTarget'
+    type: string
+    default: '_blank'
+  plugin.tx_feeddisplay_pi1.settings.errorMessage:
+    label: 'LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.errorMessage'
+    type: string
+    default: ''
+  plugin.tx_feeddisplay_pi1.settings.cacheDuration:
+    label: 'LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.cacheDuration'
+    type: int
+    default: 3600
+  plugin.tx_feeddisplay_pi1.settings.getFields.feed:
+    label: 'LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.getFields.feed'
+    type: string
+    default: 'author,authors,contributor,contributors,copyright,description,encoding,favicon,items,item_quantity,language,link,links,permalink,title,type,subscribe_url,latitude,longitude,image_height,image_link,image_title,image_url,image_width,all_discovered_feeds,base'
+  plugin.tx_feeddisplay_pi1.settings.getFields.items:
+    label: 'LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.getFields.items'
+    type: string
+    default: 'author,authors,categories,category,content,contributor,contributors,copyright,date|U,description,enclosure,enclosures,feed,id,link,links,local_date|,permalink,source,title,latitude,longitude,base'

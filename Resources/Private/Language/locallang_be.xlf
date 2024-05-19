@@ -381,6 +381,9 @@
             <trans-unit id="constants.settings.getFields.items" resname="constants.settings.getFields.items">
                 <source>Feed items fields to get:Comma-separated list of fields to be read from the feed items by SimplePie and made available as variables in Fluid.</source>
             </trans-unit>
+            <trans-unit id="sets.feeddisplay.label" resname="sets.feeddisplay.label">
+                <source>Feed Display</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
