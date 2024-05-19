@@ -1,0 +1,26 @@
+.. include:: /Includes.rst.txt
+
+2.1.0 - May 20, 2024
+====================
+
+
+.. only:: html
+
+   .. contents::
+        :local:
+        :depth: 3
+
+Breaking changes
+----------------
+No breaking changes!
+
+All Changes
+-----------
+This is a list of all changes in this release: ::
+
+    2024-05-20 [FEATURE] Add configuration as Site Set (Commit 7b7f830 by Eric Harrer)
+    2024-05-20 [TASK] Add language label for view root paths (Commit b882485 by Eric Harrer)
+    2024-05-20 [BUGFIX] Use error message from settings if exists (Commit 338394a by Eric Harrer)
+    2024-05-19 [BUGFIX] Fix plugin registration (Commit 107ec0d by Eric Harrer)
+
+This list has been created by using `git log $(git describe --tags --abbrev=0)..HEAD --abbrev-commit --pretty='%ad %s (Commit %h by %an)' --date=short`.
