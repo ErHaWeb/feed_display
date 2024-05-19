@@ -20,7 +20,10 @@
                             </f:then>
                             <f:else>
                                 <p>
-                                    <f:translate key="errorMessage"/>
+                                    <f:if condition="{settings.errorMessage}">
+                                        <f:then>{settings.errorMessage}</f:then>
+                                        <f:else><f:translate key="errorMessage"/></f:else>
+                                    </f:if>
                                 </p>
                             </f:else>
                         </f:if>
