@@ -22,7 +22,10 @@ defined('TYPO3') or die();
     $pluginSignature = ExtensionUtility::registerPlugin(
         'FeedDisplay',
         'Pi1',
-        'LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:pi1_title'
+        'LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:pi1_title',
+        'feed-display',
+        'plugins',
+        'LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:pi1_plus_wiz_description',
     );
 
     $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature] = 'recursive,select_key,pages';
