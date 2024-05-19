@@ -5,40 +5,40 @@
 
 plugin.tx_feeddisplay_pi1 {
     view {
-        # cat=plugin.tx_feeddisplay_pi1/file/100; type=string; label=Path to template root (FE)
+        # cat=plugin.tx_feeddisplay_pi1/file/100; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.view.templateRootPath
         templateRootPath = EXT:feed_display/Resources/Private/Templates/
-        # cat=plugin.tx_feeddisplay_pi1/file/110; type=string; label=Path to template partials (FE)
+        # cat=plugin.tx_feeddisplay_pi1/file/110; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.view.partialRootPath
         partialRootPath = EXT:feed_display/Resources/Private/Partials/
-        # cat=plugin.tx_feeddisplay_pi1/file/120; type=string; label=Path to template layouts (FE)
+        # cat=plugin.tx_feeddisplay_pi1/file/120; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.view.layoutRootPath
         layoutRootPath = EXT:feed_display/Resources/Private/Layouts/
     }
 
     settings {
-        # cat=plugin.tx_feeddisplay_pi1/100_general/200; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.feedUrl
+        # cat=plugin.tx_feeddisplay_pi1/100_general/200; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.feedUrl
         feedUrl = https://typo3.org/rss
-        # cat=plugin.tx_feeddisplay_pi1/100_general/210; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.maxFeedCount
+        # cat=plugin.tx_feeddisplay_pi1/100_general/210; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.maxFeedCount
         maxFeedCount = 10
-        # cat=plugin.tx_feeddisplay_pi1/100_general/220; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.maxContentLength
+        # cat=plugin.tx_feeddisplay_pi1/100_general/220; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.maxContentLength
         maxContentLength = 500
-        # cat=plugin.tx_feeddisplay_pi1/100_general/230; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.maxHeaderLength
+        # cat=plugin.tx_feeddisplay_pi1/100_general/230; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.maxHeaderLength
         maxHeaderLength = 80
-        # cat=plugin.tx_feeddisplay_pi1/100_general/240; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.logoMaxWidth
+        # cat=plugin.tx_feeddisplay_pi1/100_general/240; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.logoMaxWidth
         logoMaxWidth =
-        # cat=plugin.tx_feeddisplay_pi1/100_general/250; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.logoMaxHeight
+        # cat=plugin.tx_feeddisplay_pi1/100_general/250; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.logoMaxHeight
         logoMaxHeight =
-        # cat=plugin.tx_feeddisplay_pi1/100_general/260; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.feedIconMaxWidth
+        # cat=plugin.tx_feeddisplay_pi1/100_general/260; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.feedIconMaxWidth
         feedIconMaxWidth = 26
-        # cat=plugin.tx_feeddisplay_pi1/100_general/270; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.feedIconMaxHeight
+        # cat=plugin.tx_feeddisplay_pi1/100_general/270; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.feedIconMaxHeight
         feedIconMaxHeight = 26
-        # cat=plugin.tx_feeddisplay_pi1/200_advanced/300; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.dateFormat
+        # cat=plugin.tx_feeddisplay_pi1/200_advanced/300; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.dateFormat
         dateFormat = %d. %B %Y
-        # cat=plugin.tx_feeddisplay_pi1/200_advanced/310; type=boolean; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.stripTags
+        # cat=plugin.tx_feeddisplay_pi1/200_advanced/310; type=boolean; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.stripTags
         stripTags = 1
-        # cat=plugin.tx_feeddisplay_pi1/200_advanced/320; type=options[_blank,_self,_parent,_top]; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.linkTarget
+        # cat=plugin.tx_feeddisplay_pi1/200_advanced/320; type=options[_blank,_self,_parent,_top]; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.linkTarget
         linkTarget = _blank
-        # cat=plugin.tx_feeddisplay_pi1/200_advanced/330; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.errorMessage
+        # cat=plugin.tx_feeddisplay_pi1/200_advanced/330; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.errorMessage
         errorMessage =
-        # cat=plugin.tx_feeddisplay_pi1/200_advanced/340; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.cacheDuration
+        # cat=plugin.tx_feeddisplay_pi1/200_advanced/340; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.cacheDuration
         cacheDuration = 3600
 
         getFields {
@@ -66,7 +66,7 @@ plugin.tx_feeddisplay_pi1 {
             # > this results in function call get_channel('http://www.itunes.com/dtds/podcast-1.0.dtd','image')
 
             # Feed-Level Data (Basic)
-            # cat=plugin.tx_feeddisplay_pi1/300_getfields/100; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.getFields.feed
+            # cat=plugin.tx_feeddisplay_pi1/300_getfields/100; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.getFields.feed
             feed := addToList(author,authors,contributor,contributors,copyright,description,encoding,favicon,items,item_quantity,language,link,links,permalink,title,type,subscribe_url)
             # For field "item" you must parse the feed-dependent arguments
 
@@ -81,7 +81,7 @@ plugin.tx_feeddisplay_pi1 {
             # For fields "channel_tags","feed_tags" and "image_tags" you must parse the feed-dependent arguments
 
             # Item-Level Data (Basic)
-            # cat=plugin.tx_feeddisplay_pi1/300_getfields/200; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.getFields.items
+            # cat=plugin.tx_feeddisplay_pi1/300_getfields/200; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.getFields.items
             items := addToList(author,authors,categories,category,content,contributor,contributors,copyright,date|U,description,enclosure,enclosures,feed,id,link,links,local_date|,permalink,source,title)
             # Attention: Adding field "local_date" without an empty parameter in PHP 8.1 leads to a deprecation notice "strftime() is deprecated" in simplepie/src/Item.php
 
@@ -94,6 +94,6 @@ plugin.tx_feeddisplay_pi1 {
         }
     }
 
-    # cat=plugin.tx_feeddisplay_pi1/200_advanced/350; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.ignoreFlexFormSettingsIfEmpty
+    # cat=plugin.tx_feeddisplay_pi1/200_advanced/350; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.ignoreFlexFormSettingsIfEmpty
     ignoreFlexFormSettingsIfEmpty = feedUrl,maxFeedCount,maxContentLength,maxHeaderLength,logoMaxWidth,logoMaxHeight,feedIconMaxWidth,feedIconMaxHeight,dateFormat,stripTags,linkTarget,errorMessage,cacheDuration,getFields.feed,getFields.items
 }
