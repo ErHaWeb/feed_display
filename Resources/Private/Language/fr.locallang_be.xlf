@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff xmlns:t3="http://typo3.org/schemas/xliff" xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file source-language="en" original="messages" datatype="plaintext" product-name="feed_display" date="2024-04-07T17:24:43+02:00" target-language="fr">
+  <file source-language="en" original="messages" datatype="plaintext" product-name="feed_display" date="2024-05-20T00:44:14+02:00" target-language="fr">
     <header/>
     <body>
       <trans-unit id="pi1_title" resname="pi1_title" approved="yes">
@@ -411,89 +411,105 @@
         <source>Fields to get from Feed and Items</source>
         <target state="final">Champs à récupérer du flux et des éléments</target>
       </trans-unit>
-      <trans-unit id="constants.feedUrl" resname="constants.feedUrl" approved="yes">
+      <trans-unit id="constants.view.templateRootPath" resname="constants.view.templateRootPath">
+        <source>Path to template root (FE)</source>
+        <target state="needs-translation">Path to template root (FE)</target>
+      </trans-unit>
+      <trans-unit id="constants.view.partialRootPath" resname="constants.view.partialRootPath">
+        <source>Path to template partials (FE)</source>
+        <target state="needs-translation">Path to template partials (FE)</target>
+      </trans-unit>
+      <trans-unit id="constants.view.layoutRootPath" resname="constants.view.layoutRootPath">
+        <source>Path to template layouts (FE)</source>
+        <target state="needs-translation">Path to template layouts (FE)</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.feedUrl" resname="constants.settings.feedUrl">
         <source>Feed URL:URL that is fetched by the service</source>
-        <target state="final">Flux URL:URL qui est récupéré par le service</target>
+        <target state="needs-translation">Feed URL:URL that is fetched by the service</target>
       </trans-unit>
-      <trans-unit id="constants.maxFeedCount" resname="constants.maxFeedCount" approved="yes">
+      <trans-unit id="constants.settings.maxFeedCount" resname="constants.settings.maxFeedCount">
         <source>Max. items:Maximum feed items to show</source>
-        <target state="final">Éléments Max. : Nombre maximum d'éléments à afficher</target>
+        <target state="needs-translation">Max. items:Maximum feed items to show</target>
       </trans-unit>
-      <trans-unit id="constants.maxContentLength" resname="constants.maxContentLength" approved="yes">
+      <trans-unit id="constants.settings.maxContentLength" resname="constants.settings.maxContentLength">
         <source>Max. content length:Crop the characters of the feed content to the configured length</source>
-        <target state="final">Longueur maximale du contenu: rogner les caractères du contenu du flux à la longueur configurée</target>
+        <target state="needs-translation">Max. content length:Crop the characters of the feed content to the configured length</target>
       </trans-unit>
-      <trans-unit id="constants.maxHeaderLength" resname="constants.maxHeaderLength" approved="yes">
+      <trans-unit id="constants.settings.maxHeaderLength" resname="constants.settings.maxHeaderLength">
         <source>Max. header length:Crop the characters of the feed header to the configured length</source>
-        <target state="final">Longueur maximale du contenu: rogner les caractères du contenu du flux à la longueur configurée</target>
+        <target state="needs-translation">Max. header length:Crop the characters of the feed header to the configured length</target>
       </trans-unit>
-      <trans-unit id="constants.linkTarget" resname="constants.linkTarget" approved="yes">
+      <trans-unit id="constants.settings.linkTarget" resname="constants.settings.linkTarget">
         <source>Target:Target attribute to define the feed link behavior</source>
-        <target state="final">Attribut cible pour définir le comportement du lien du flux</target>
+        <target state="needs-translation">Target:Target attribute to define the feed link behavior</target>
       </trans-unit>
-      <trans-unit id="constants.linkTarget.I.default" resname="constants.linkTarget.I.default" approved="yes">
+      <trans-unit id="constants.settings.linkTarget.I.default" resname="constants.settings.linkTarget.I.default">
         <source>Defined by TypoScript (default)</source>
-        <target state="final">Défini par TypoScript (par défaut)</target>
+        <target state="needs-translation">Defined by TypoScript (default)</target>
       </trans-unit>
-      <trans-unit id="constants.linkTarget.I.blank" resname="constants.linkTarget.I.blank" approved="yes">
+      <trans-unit id="constants.settings.linkTarget.I.blank" resname="constants.settings.linkTarget.I.blank">
         <source>Opens in a new window or tab</source>
-        <target state="final">S'ouvre dans une nouvelle fenêtre ou un nouvel onglet</target>
+        <target state="needs-translation">Opens in a new window or tab</target>
       </trans-unit>
-      <trans-unit id="constants.linkTarget.I.self" resname="constants.linkTarget.I.self" approved="yes">
+      <trans-unit id="constants.settings.linkTarget.I.self" resname="constants.settings.linkTarget.I.self">
         <source>Opens in the same frame as it was clicked</source>
-        <target state="final">S'ouvre dans le même cadre que celui où il a été cliqué</target>
+        <target state="needs-translation">Opens in the same frame as it was clicked</target>
       </trans-unit>
-      <trans-unit id="constants.linkTarget.I.parent" resname="constants.linkTarget.I.parent" approved="yes">
+      <trans-unit id="constants.settings.linkTarget.I.parent" resname="constants.settings.linkTarget.I.parent">
         <source>Opens in the parent frame</source>
-        <target state="final">S'ouvre dans le cadre parent</target>
+        <target state="needs-translation">Opens in the parent frame</target>
       </trans-unit>
-      <trans-unit id="constants.linkTarget.I.top" resname="constants.linkTarget.I.top" approved="yes">
+      <trans-unit id="constants.settings.linkTarget.I.top" resname="constants.settings.linkTarget.I.top">
         <source>Opens in the full body of the window</source>
-        <target state="final">S'ouvre dans le corps complet de la fenêtre</target>
+        <target state="needs-translation">Opens in the full body of the window</target>
       </trans-unit>
-      <trans-unit id="constants.logoMaxWidth" resname="constants.logoMaxWidth" approved="yes">
+      <trans-unit id="constants.settings.logoMaxWidth" resname="constants.settings.logoMaxWidth">
         <source>Logo width:Width of the feeds logo image</source>
-        <target state="final">Largeur du logo : Largeur du logo du flux</target>
+        <target state="needs-translation">Logo width:Width of the feeds logo image</target>
       </trans-unit>
-      <trans-unit id="constants.logoMaxHeight" resname="constants.logoMaxHeight" approved="yes">
+      <trans-unit id="constants.settings.logoMaxHeight" resname="constants.settings.logoMaxHeight">
         <source>Logo height:Height of the feeds logo image</source>
-        <target state="final">Largeur du logo : Largeur du logo du flux</target>
+        <target state="needs-translation">Logo height:Height of the feeds logo image</target>
       </trans-unit>
-      <trans-unit id="constants.feedIconMaxWidth" resname="constants.feedIconMaxWidth" approved="yes">
+      <trans-unit id="constants.settings.feedIconMaxWidth" resname="constants.settings.feedIconMaxWidth">
         <source>Feed icon width:Width of the feeds icon image</source>
-        <target state="final">Largeur du logo : Largeur du logo du flux</target>
+        <target state="needs-translation">Feed icon width:Width of the feeds icon image</target>
       </trans-unit>
-      <trans-unit id="constants.feedIconMaxHeight" resname="constants.feedIconMaxHeight" approved="yes">
+      <trans-unit id="constants.settings.feedIconMaxHeight" resname="constants.settings.feedIconMaxHeight">
         <source>Feed icon height:Height of the feeds icon image</source>
-        <target state="final">Largeur du logo : Largeur du logo du flux</target>
+        <target state="needs-translation">Feed icon height:Height of the feeds icon image</target>
       </trans-unit>
-      <trans-unit id="constants.errorMessage" resname="constants.errorMessage" approved="yes">
+      <trans-unit id="constants.settings.errorMessage" resname="constants.settings.errorMessage">
         <source>Error message:This message is displayed if no feed items could be fetched</source>
-        <target state="final">Message d'erreur:Ce message est affiché si aucun élément de flux ne peut être récupéré</target>
+        <target state="needs-translation">Error message:This message is displayed if no feed items could be fetched</target>
       </trans-unit>
-      <trans-unit id="constants.dateFormat" resname="constants.dateFormat" approved="yes">
+      <trans-unit id="constants.settings.dateFormat" resname="constants.settings.dateFormat">
         <source>Date format:Use PHP's strftime() function format</source>
-        <target state="final">Format de la date:Utiliser le format de la fonction PHP strftime()</target>
+        <target state="needs-translation">Date format:Use PHP's strftime() function format</target>
       </trans-unit>
-      <trans-unit id="constants.stripTags" resname="constants.stripTags" approved="yes">
+      <trans-unit id="constants.settings.stripTags" resname="constants.settings.stripTags">
         <source>Strip tags:Remove HTML tags from the feed content</source>
-        <target state="final">Supprimer les balises:Supprimer les balises HTML du contenu du flux</target>
+        <target state="needs-translation">Strip tags:Remove HTML tags from the feed content</target>
       </trans-unit>
-      <trans-unit id="constants.cacheDuration" resname="constants.cacheDuration" approved="yes">
+      <trans-unit id="constants.settings.cacheDuration" resname="constants.settings.cacheDuration">
         <source>Feed cache:Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</source>
-        <target state="final">Feed cache:Temps en secondes pendant lequel les données doivent être lues à partir du cache jusqu'au prochain renouvellement du cache. (0 = pas de cache)</target>
+        <target state="needs-translation">Feed cache:Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</target>
       </trans-unit>
-      <trans-unit id="constants.ignoreFlexFormSettingsIfEmpty" resname="constants.ignoreFlexFormSettingsIfEmpty" approved="yes">
+      <trans-unit id="constants.settings.ignoreFlexFormSettingsIfEmpty" resname="constants.settings.ignoreFlexFormSettingsIfEmpty">
         <source>Ignore FlexForm Settings if empty:Comma separated list of FlexForm settings that will be ignored in the extension settings merge process, if their value is considered empty (either an empty string or a string containing 0).</source>
-        <target state="final">Ignorer les paramètres FlexForm si vide:Liste séparée par des virgules des paramètres FlexForm qui seront ignorés dans le processus de fusion des paramètres d'extension, si leur valeur est considérée comme vide (soit une chaîne vide soit une chaîne de caractères contenant 0).</target>
+        <target state="needs-translation">Ignore FlexForm Settings if empty:Comma separated list of FlexForm settings that will be ignored in the extension settings merge process, if their value is considered empty (either an empty string or a string containing 0).</target>
       </trans-unit>
-      <trans-unit id="constants.getFields.feed" resname="constants.getFields.feed" approved="yes">
+      <trans-unit id="constants.settings.getFields.feed" resname="constants.settings.getFields.feed">
         <source>Feed fields to get:Comma-separated list of fields to be read from the feed by SimplePie and made available as variables in Fluid.</source>
-        <target state="final">Flux de champs pour get:Liste de champs séparés par des virgules à lire à partir du flux par SimplePie et rendus disponibles en tant que variables dans Fluid.</target>
+        <target state="needs-translation">Feed fields to get:Comma-separated list of fields to be read from the feed by SimplePie and made available as variables in Fluid.</target>
       </trans-unit>
-      <trans-unit id="constants.getFields.items" resname="constants.getFields.items" approved="yes">
+      <trans-unit id="constants.settings.getFields.items" resname="constants.settings.getFields.items">
         <source>Feed items fields to get:Comma-separated list of fields to be read from the feed items by SimplePie and made available as variables in Fluid.</source>
-        <target state="final">Champs de flux d'éléments pour get:liste de champs séparés par des virgules à lire à partir des éléments du flux par SimplePie et rendus disponibles en tant que variables dans Fluid.</target>
+        <target state="needs-translation">Feed items fields to get:Comma-separated list of fields to be read from the feed items by SimplePie and made available as variables in Fluid.</target>
+      </trans-unit>
+      <trans-unit id="sets.feeddisplay.label" resname="sets.feeddisplay.label">
+        <source>Feed Display</source>
+        <target state="needs-translation">Feed Display</target>
       </trans-unit>
     </body>
   </file>
