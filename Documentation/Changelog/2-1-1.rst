@@ -1,0 +1,26 @@
+.. include:: /Includes.rst.txt
+
+2.1.1 - July 04, 2024
+=====================
+
+
+.. only:: html
+
+   .. contents::
+        :local:
+        :depth: 3
+
+Breaking changes
+----------------
+No breaking changes!
+
+All Changes
+-----------
+This is a list of all changes in this release: ::
+
+    2024-07-04 [TASK] Switch to associated array keys for TCA item definition (Commit 31fd01f by Eric Harrer)
+    2024-07-04 [TASK] Move TypoScript files to Site Set directory (Commit b128bee by Eric Harrer)
+    2024-07-04 [TASK] Replace eval=int by TCA type number (Commit 7124865 by Eric Harrer)
+    2024-07-04 [TASK] Switch to associated array keys for TCA item definition (Commit f788c19 by Eric Harrer)
+
+This list has been created by using `git log $(git describe --tags --abbrev=0)..HEAD --abbrev-commit --pretty='%ad %s (Commit %h by %an)' --date=short`.
