@@ -1,89 +1,112 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<xliff version="1.0">
-  <file source-language="en" datatype="plaintext" original="messages" date="2022-10-14T10:27:00Z" product-name="feed_display" target-language="sr">
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns:t3="http://typo3.org/schemas/xliff" xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" original="messages" datatype="plaintext" product-name="feed_display" date="2024-03-12T22:30:10+01:00" target-language="sr">
     <header/>
     <body>
-      <trans-unit id="feed.categories" xml:space="preserve">
-                <source>Categories</source>
-            <target state="needs-translation">Categories</target></trans-unit>
-      <trans-unit id="feed.category" xml:space="preserve">
-                <source>Category</source>
-            <target state="needs-translation">Category</target></trans-unit>
-      <trans-unit id="feed.authors" xml:space="preserve">
-                <source>Authors</source>
-            <target state="needs-translation">Authors</target></trans-unit>
-      <trans-unit id="feed.author" xml:space="preserve">
-                <source>Author</source>
-            <target state="needs-translation">Author</target></trans-unit>
-      <trans-unit id="feed.contributors" xml:space="preserve">
-                <source>Contributors</source>
-            <target state="needs-translation">Contributors</target></trans-unit>
-      <trans-unit id="feed.contributor" xml:space="preserve">
-                <source>Contributor</source>
-            <target state="needs-translation">Contributor</target></trans-unit>
-      <trans-unit id="feed.items" xml:space="preserve">
-                <source>Items</source>
-            <target state="needs-translation">Items</target></trans-unit>
-      <trans-unit id="item.categories" xml:space="preserve">
-                <source>Categories</source>
-            <target state="needs-translation">Categories</target></trans-unit>
-      <trans-unit id="item.category" xml:space="preserve">
-                <source>Category</source>
-            <target state="needs-translation">Category</target></trans-unit>
-      <trans-unit id="item.authors" xml:space="preserve">
-                <source>Authors</source>
-            <target state="needs-translation">Authors</target></trans-unit>
-      <trans-unit id="item.author" xml:space="preserve">
-                <source>Author</source>
-            <target state="needs-translation">Author</target></trans-unit>
-      <trans-unit id="item.contributors" xml:space="preserve">
-                <source>Contributors</source>
-            <target state="needs-translation">Contributors</target></trans-unit>
-      <trans-unit id="item.contributor" xml:space="preserve">
-                <source>Contributor</source>
-            <target state="needs-translation">Contributor</target></trans-unit>
-      <trans-unit id="item.copyright" xml:space="preserve">
-                <source>Copyright</source>
-            <target state="needs-translation">Copyright</target></trans-unit>
-      <trans-unit id="item.date" xml:space="preserve">
-                <source>Date</source>
-            <target state="needs-translation">Date</target></trans-unit>
-      <trans-unit id="item.updatedDate" xml:space="preserve">
-                <source>Updated</source>
-            <target state="needs-translation">Updated</target></trans-unit>
-      <trans-unit id="item.links" xml:space="preserve">
-                <source>Links</source>
-            <target state="needs-translation">Links</target></trans-unit>
-      <trans-unit id="item.link" xml:space="preserve">
-                <source>Link</source>
-            <target state="needs-translation">Link</target></trans-unit>
-      <trans-unit id="item.links" xml:space="preserve">
-                <source>Links</source>
-            <target state="needs-translation">Links</target></trans-unit>
-      <trans-unit id="item.enclosure" xml:space="preserve">
-                <source>Enclosure</source>
-            <target state="needs-translation">Enclosure</target></trans-unit>
-      <trans-unit id="item.enclosures" xml:space="preserve">
-                <source>Enclosures</source>
-            <target state="needs-translation">Enclosures</target></trans-unit>
-      <trans-unit id="item.latitude" xml:space="preserve">
-                <source>Latitude</source>
-            <target state="needs-translation">Latitude</target></trans-unit>
-      <trans-unit id="item.longitude" xml:space="preserve">
-                <source>Longitude</source>
-            <target state="needs-translation">Longitude</target></trans-unit>
-      <trans-unit id="item.source" xml:space="preserve">
-                <source>Source</source>
-            <target state="needs-translation">Source</target></trans-unit>
-      <trans-unit id="errorMessage" xml:space="preserve">
-                <source>Sorry, the feed could not be fetched.</source>
-            <target state="needs-translation">Sorry, the feed could not be fetched.</target></trans-unit>
-      <trans-unit id="noTemplateError" xml:space="preserve">
-                <source>Feed Display: Please include static TypoScript [EXT:feed_display/Configuration/TypoScript/]</source>
-            <target state="needs-translation">Feed Display: Please include static TypoScript [EXT:feed_display/Configuration/TypoScript/]</target></trans-unit>
-      <trans-unit id="noItemsError" xml:space="preserve">
-                <source>Sorry, no items could be fetched.</source>
-            <target state="needs-translation">Sorry, no items could be fetched.</target></trans-unit>
+      <trans-unit id="feed.categories" resname="feed.categories">
+        <source>Categories</source>
+        <target state="needs-translation">Categories</target>
+      </trans-unit>
+      <trans-unit id="feed.category" resname="feed.category">
+        <source>Category</source>
+        <target state="needs-translation">Category</target>
+      </trans-unit>
+      <trans-unit id="feed.authors" resname="feed.authors">
+        <source>Authors</source>
+        <target state="needs-translation">Authors</target>
+      </trans-unit>
+      <trans-unit id="feed.author" resname="feed.author">
+        <source>Author</source>
+        <target state="needs-translation">Author</target>
+      </trans-unit>
+      <trans-unit id="feed.contributors" resname="feed.contributors">
+        <source>Contributors</source>
+        <target state="needs-translation">Contributors</target>
+      </trans-unit>
+      <trans-unit id="feed.contributor" resname="feed.contributor">
+        <source>Contributor</source>
+        <target state="needs-translation">Contributor</target>
+      </trans-unit>
+      <trans-unit id="feed.items" resname="feed.items">
+        <source>Items</source>
+        <target state="needs-translation">Items</target>
+      </trans-unit>
+      <trans-unit id="item.categories" resname="item.categories">
+        <source>Categories</source>
+        <target state="needs-translation">Categories</target>
+      </trans-unit>
+      <trans-unit id="item.category" resname="item.category">
+        <source>Category</source>
+        <target state="needs-translation">Category</target>
+      </trans-unit>
+      <trans-unit id="item.authors" resname="item.authors">
+        <source>Authors</source>
+        <target state="needs-translation">Authors</target>
+      </trans-unit>
+      <trans-unit id="item.author" resname="item.author">
+        <source>Author</source>
+        <target state="needs-translation">Author</target>
+      </trans-unit>
+      <trans-unit id="item.contributors" resname="item.contributors">
+        <source>Contributors</source>
+        <target state="needs-translation">Contributors</target>
+      </trans-unit>
+      <trans-unit id="item.contributor" resname="item.contributor">
+        <source>Contributor</source>
+        <target state="needs-translation">Contributor</target>
+      </trans-unit>
+      <trans-unit id="item.copyright" resname="item.copyright">
+        <source>Copyright</source>
+        <target state="needs-translation">Copyright</target>
+      </trans-unit>
+      <trans-unit id="item.date" resname="item.date">
+        <source>Date</source>
+        <target state="needs-translation">Date</target>
+      </trans-unit>
+      <trans-unit id="item.updatedDate" resname="item.updatedDate">
+        <source>Updated</source>
+        <target state="needs-translation">Updated</target>
+      </trans-unit>
+      <trans-unit id="item.links" resname="item.links">
+        <source>Links</source>
+        <target state="needs-translation">Links</target>
+      </trans-unit>
+      <trans-unit id="item.link" resname="item.link">
+        <source>Link</source>
+        <target state="needs-translation">Link</target>
+      </trans-unit>
+      <trans-unit id="item.enclosure" resname="item.enclosure">
+        <source>Enclosure</source>
+        <target state="needs-translation">Enclosure</target>
+      </trans-unit>
+      <trans-unit id="item.enclosures" resname="item.enclosures">
+        <source>Enclosures</source>
+        <target state="needs-translation">Enclosures</target>
+      </trans-unit>
+      <trans-unit id="item.latitude" resname="item.latitude">
+        <source>Latitude</source>
+        <target state="needs-translation">Latitude</target>
+      </trans-unit>
+      <trans-unit id="item.longitude" resname="item.longitude">
+        <source>Longitude</source>
+        <target state="needs-translation">Longitude</target>
+      </trans-unit>
+      <trans-unit id="item.source" resname="item.source">
+        <source>Source</source>
+        <target state="needs-translation">Source</target>
+      </trans-unit>
+      <trans-unit id="errorMessage" resname="errorMessage">
+        <source>Sorry, the feed could not be fetched.</source>
+        <target state="needs-translation">Sorry, the feed could not be fetched.</target>
+      </trans-unit>
+      <trans-unit id="noTemplateError" resname="noTemplateError">
+        <source>Feed Display: Please include static TypoScript [EXT:feed_display/Configuration/TypoScript/]</source>
+        <target state="needs-translation">Feed Display: Please include static TypoScript [EXT:feed_display/Configuration/TypoScript/]</target>
+      </trans-unit>
+      <trans-unit id="noItemsError" resname="noItemsError">
+        <source>Sorry, no items could be fetched.</source>
+        <target state="needs-translation">Sorry, no items could be fetched.</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
