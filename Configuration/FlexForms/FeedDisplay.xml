@@ -30,9 +30,7 @@
                             LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.maxFeedCount.description
                         </description>
                         <config>
-                            <type>input</type>
-                            <eval>trim,int</eval>
-                            <placeholder>-</placeholder>
+                            <type>number</type>
                         </config>
                     </settings.maxFeedCount>
                     <settings.maxContentLength>
@@ -43,9 +41,7 @@
                             LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.maxContentLength.description
                         </description>
                         <config>
-                            <type>input</type>
-                            <eval>trim,int</eval>
-                            <placeholder>-</placeholder>
+                            <type>number</type>
                         </config>
                     </settings.maxContentLength>
                     <settings.maxHeaderLength>
@@ -56,9 +52,7 @@
                             LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.maxHeaderLength.description
                         </description>
                         <config>
-                            <type>input</type>
-                            <eval>trim,int</eval>
-                            <placeholder>-</placeholder>
+                            <type>number</type>
                         </config>
                     </settings.maxHeaderLength>
                     <settings.logoMaxWidth>
@@ -69,9 +63,7 @@
                             LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.logoMaxWidth.description
                         </description>
                         <config>
-                            <type>input</type>
-                            <eval>trim,int</eval>
-                            <placeholder>-</placeholder>
+                            <type>number</type>
                         </config>
                     </settings.logoMaxWidth>
                     <settings.logoMaxHeight>
@@ -82,9 +74,7 @@
                             LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.logoMaxHeight.description
                         </description>
                         <config>
-                            <type>input</type>
-                            <eval>trim,int</eval>
-                            <placeholder>-</placeholder>
+                            <type>number</type>
                         </config>
                     </settings.logoMaxHeight>
                     <settings.feedIconMaxWidth>
@@ -95,9 +85,7 @@
                             LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.feedIconMaxWidth.description
                         </description>
                         <config>
-                            <type>input</type>
-                            <eval>trim,int</eval>
-                            <placeholder>-</placeholder>
+                            <type>number</type>
                         </config>
                     </settings.feedIconMaxWidth>
                     <settings.feedIconMaxHeight>
@@ -108,9 +96,7 @@
                             LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.feedIconMaxHeight.description
                         </description>
                         <config>
-                            <type>input</type>
-                            <eval>trim,int</eval>
-                            <placeholder>-</placeholder>
+                            <type>number</type>
                         </config>
                     </settings.feedIconMaxHeight>
                 </el>
@@ -238,9 +224,7 @@
                             LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.cacheDuration.description
                         </description>
                         <config>
-                            <type>input</type>
-                            <eval>trim,int</eval>
-                            <placeholder>-</placeholder>
+                            <type>number</type>
                         </config>
                     </settings.cacheDuration>
                 </el>
