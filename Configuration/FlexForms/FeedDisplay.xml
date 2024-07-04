@@ -136,22 +136,22 @@
                             <renderType>selectSingle</renderType>
                             <items type="array">
                                 <numIndex index="0" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.placeholder.typoscript
                                     </numIndex>
-                                    <numIndex index="1"/>
+                                    <numIndex index="value"/>
                                 </numIndex>
                                 <numIndex index="1" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.stripTags.I.yes
                                     </numIndex>
-                                    <numIndex index="1">1</numIndex>
+                                    <numIndex index="value">1</numIndex>
                                 </numIndex>
                                 <numIndex index="2" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.stripTags.I.no
                                     </numIndex>
-                                    <numIndex index="1">0</numIndex>
+                                    <numIndex index="value">0</numIndex>
                                 </numIndex>
                             </items>
                         </config>
@@ -168,34 +168,35 @@
                             <renderType>selectSingle</renderType>
                             <items type="array">
                                 <numIndex index="0" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.linkTarget.I.default
                                     </numIndex>
-                                    <numIndex index="1"/>
+                                    <numIndex index="value"/>
+
                                 </numIndex>
                                 <numIndex index="1" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.linkTarget.I.blank
                                     </numIndex>
-                                    <numIndex index="1">_blank</numIndex>
+                                    <numIndex index="value">_blank</numIndex>
                                 </numIndex>
                                 <numIndex index="2" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.linkTarget.I.self
                                     </numIndex>
-                                    <numIndex index="1">_self</numIndex>
+                                    <numIndex index="value">_self</numIndex>
                                 </numIndex>
                                 <numIndex index="3" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.linkTarget.I.parent
                                     </numIndex>
-                                    <numIndex index="1">_parent</numIndex>
+                                    <numIndex index="value">_parent</numIndex>
                                 </numIndex>
                                 <numIndex index="4" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.linkTarget.I.top
                                     </numIndex>
-                                    <numIndex index="1">_top</numIndex>
+                                    <numIndex index="value">_top</numIndex>
                                 </numIndex>
                             </items>
                             <minitems>0</minitems>
@@ -251,212 +252,185 @@
                             <renderType>selectCheckBox</renderType>
                             <items type="array">
                                 <numIndex index="0" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.feed.I.author
                                     </numIndex>
-                                    <numIndex index="1">author</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">feed</numIndex>
+                                    <numIndex index="value">author</numIndex>
+                                    <numIndex index="group">feed</numIndex>
                                 </numIndex>
                                 <numIndex index="1" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.feed.I.authors
                                     </numIndex>
-                                    <numIndex index="1">authors</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">feed</numIndex>
+                                    <numIndex index="value">authors</numIndex>
+                                    <numIndex index="group">feed</numIndex>
                                 </numIndex>
                                 <numIndex index="2" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.feed.I.contributor
                                     </numIndex>
-                                    <numIndex index="1">contributor</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">feed</numIndex>
+                                    <numIndex index="value">contributor</numIndex>
+                                    <numIndex index="group">feed</numIndex>
                                 </numIndex>
                                 <numIndex index="3" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.feed.I.contributors
                                     </numIndex>
-                                    <numIndex index="1">contributors</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">feed</numIndex>
+                                    <numIndex index="value">contributors</numIndex>
+                                    <numIndex index="group">feed</numIndex>
                                 </numIndex>
                                 <numIndex index="4" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.feed.I.copyright
                                     </numIndex>
-                                    <numIndex index="1">copyright</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">feed</numIndex>
+                                    <numIndex index="value">copyright</numIndex>
+                                    <numIndex index="group">feed</numIndex>
                                 </numIndex>
                                 <numIndex index="5" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.feed.I.description
                                     </numIndex>
-                                    <numIndex index="1">description</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">feed</numIndex>
+                                    <numIndex index="value">description</numIndex>
+                                    <numIndex index="group">feed</numIndex>
                                 </numIndex>
                                 <numIndex index="6" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.feed.I.encoding
                                     </numIndex>
-                                    <numIndex index="1">encoding</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">feed</numIndex>
+                                    <numIndex index="value">encoding</numIndex>
+                                    <numIndex index="group">feed</numIndex>
                                 </numIndex>
                                 <numIndex index="7" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.feed.I.favicon
                                     </numIndex>
-                                    <numIndex index="1">favicon</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">feed</numIndex>
+                                    <numIndex index="value">favicon</numIndex>
+                                    <numIndex index="group">feed</numIndex>
                                 </numIndex>
                                 <numIndex index="8" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.feed.I.items
                                     </numIndex>
-                                    <numIndex index="1">items</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">feed</numIndex>
+                                    <numIndex index="value">items</numIndex>
+                                    <numIndex index="group">feed</numIndex>
                                 </numIndex>
                                 <numIndex index="9" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.feed.I.item_quantity
                                     </numIndex>
-                                    <numIndex index="1">item_quantity</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">feed</numIndex>
+                                    <numIndex index="value">item_quantity</numIndex>
+                                    <numIndex index="group">feed</numIndex>
                                 </numIndex>
                                 <numIndex index="10" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.feed.I.language
                                     </numIndex>
-                                    <numIndex index="1">language</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">feed</numIndex>
+                                    <numIndex index="value">language</numIndex>
+                                    <numIndex index="group">feed</numIndex>
                                 </numIndex>
                                 <numIndex index="11" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.feed.I.link
                                     </numIndex>
-                                    <numIndex index="1">link</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">feed</numIndex>
+                                    <numIndex index="value">link</numIndex>
+                                    <numIndex index="group">feed</numIndex>
                                 </numIndex>
                                 <numIndex index="12" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.feed.I.links
                                     </numIndex>
-                                    <numIndex index="1">links</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">feed</numIndex>
+                                    <numIndex index="value">links</numIndex>
+                                    <numIndex index="group">feed</numIndex>
                                 </numIndex>
                                 <numIndex index="13" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.feed.I.permalink
                                     </numIndex>
-                                    <numIndex index="1">permalink</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">feed</numIndex>
+                                    <numIndex index="value">permalink</numIndex>
+                                    <numIndex index="group">feed</numIndex>
                                 </numIndex>
                                 <numIndex index="14" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.feed.I.title
                                     </numIndex>
-                                    <numIndex index="1">title</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">feed</numIndex>
+                                    <numIndex index="group">feed</numIndex>
                                 </numIndex>
                                 <numIndex index="15" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.feed.I.type
                                     </numIndex>
-                                    <numIndex index="1">type</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">feed</numIndex>
+                                    <numIndex index="value">type</numIndex>
+                                    <numIndex index="group">feed</numIndex>
                                 </numIndex>
                                 <numIndex index="16" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.feed.I.latitude
                                     </numIndex>
-                                    <numIndex index="1">latitude</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">feed</numIndex>
+                                    <numIndex index="value">latitude</numIndex>
+                                    <numIndex index="group">feed</numIndex>
                                 </numIndex>
                                 <numIndex index="17" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.feed.I.longitude
                                     </numIndex>
-                                    <numIndex index="1">longitude</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">feed</numIndex>
+                                    <numIndex index="value">longitude</numIndex>
+                                    <numIndex index="group">feed</numIndex>
                                 </numIndex>
                                 <numIndex index="18" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.feed.I.image_height
                                     </numIndex>
-                                    <numIndex index="1">image_height</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">feed</numIndex>
+                                    <numIndex index="value">image_height</numIndex>
+                                    <numIndex index="group">feed</numIndex>
                                 </numIndex>
                                 <numIndex index="19" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.feed.I.image_link
                                     </numIndex>
-                                    <numIndex index="1">image_link</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">feed</numIndex>
+                                    <numIndex index="value">image_link</numIndex>
+                                    <numIndex index="group">feed</numIndex>
                                 </numIndex>
                                 <numIndex index="20" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.feed.I.image_title
                                     </numIndex>
-                                    <numIndex index="1">image_title</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">feed</numIndex>
+                                    <numIndex index="value">image_title</numIndex>
+                                    <numIndex index="group">feed</numIndex>
                                 </numIndex>
                                 <numIndex index="21" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.feed.I.image_url
                                     </numIndex>
-                                    <numIndex index="1">image_url</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">feed</numIndex>
+                                    <numIndex index="value">image_url</numIndex>
+                                    <numIndex index="group">feed</numIndex>
                                 </numIndex>
                                 <numIndex index="22" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.feed.I.image_width
                                     </numIndex>
-                                    <numIndex index="1">image_width</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">feed</numIndex>
+                                    <numIndex index="value">image_width</numIndex>
+                                    <numIndex index="group">feed</numIndex>
                                 </numIndex>
                                 <numIndex index="23" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.feed.I.all_discovered_feeds
                                     </numIndex>
-                                    <numIndex index="1">all_discovered_feeds</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">feed</numIndex>
+                                    <numIndex index="value">all_discovered_feeds</numIndex>
+                                    <numIndex index="group">feed</numIndex>
                                 </numIndex>
                                 <numIndex index="24" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.feed.I.base
                                     </numIndex>
-                                    <numIndex index="1">base</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">feed</numIndex>
+                                    <numIndex index="value">base</numIndex>
+                                    <numIndex index="group">feed</numIndex>
                                 </numIndex>
                                 <numIndex index="25" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.feed.I.subscribe_url
                                     </numIndex>
-                                    <numIndex index="1">subscribe_url</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">feed</numIndex>
+                                    <numIndex index="value">subscribe_url</numIndex>
+                                    <numIndex index="group">feed</numIndex>
                                 </numIndex>
                             </items>
                             <itemGroups>
@@ -478,188 +452,164 @@
                             <renderType>selectCheckBox</renderType>
                             <items type="array">
                                 <numIndex index="0" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.items.I.author
                                     </numIndex>
-                                    <numIndex index="1">author</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">items</numIndex>
+                                    <numIndex index="value">author</numIndex>
+                                    <numIndex index="group">items</numIndex>
                                 </numIndex>
                                 <numIndex index="1" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.items.I.authors
                                     </numIndex>
-                                    <numIndex index="1">authors</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">items</numIndex>
+                                    <numIndex index="value">authors</numIndex>
+                                    <numIndex index="group">items</numIndex>
                                 </numIndex>
                                 <numIndex index="2" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.items.I.categories
                                     </numIndex>
-                                    <numIndex index="1">categories</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">items</numIndex>
+                                    <numIndex index="value">categories</numIndex>
+                                    <numIndex index="group">items</numIndex>
                                 </numIndex>
                                 <numIndex index="3" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.items.I.category
                                     </numIndex>
-                                    <numIndex index="1">category</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">items</numIndex>
+                                    <numIndex index="value">category</numIndex>
+                                    <numIndex index="group">items</numIndex>
                                 </numIndex>
                                 <numIndex index="4" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.items.I.content
                                     </numIndex>
-                                    <numIndex index="1">content</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">items</numIndex>
+                                    <numIndex index="value">content</numIndex>
+                                    <numIndex index="group">items</numIndex>
                                 </numIndex>
                                 <numIndex index="5" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.items.I.contributor
                                     </numIndex>
-                                    <numIndex index="1">contributor</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">items</numIndex>
+                                    <numIndex index="value">contributor</numIndex>
+                                    <numIndex index="group">items</numIndex>
                                 </numIndex>
                                 <numIndex index="6" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.items.I.contributors
                                     </numIndex>
-                                    <numIndex index="1">contributors</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">items</numIndex>
+                                    <numIndex index="value">contributors</numIndex>
+                                    <numIndex index="group">items</numIndex>
                                 </numIndex>
                                 <numIndex index="7" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.items.I.copyright
                                     </numIndex>
-                                    <numIndex index="1">copyright</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">items</numIndex>
+                                    <numIndex index="value">copyright</numIndex>
+                                    <numIndex index="group">items</numIndex>
                                 </numIndex>
                                 <numIndex index="8" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.items.I.date|U
                                     </numIndex>
-                                    <numIndex index="1">date|U</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">items</numIndex>
+                                    <numIndex index="value">date|U</numIndex>
+                                    <numIndex index="group">items</numIndex>
                                 </numIndex>
                                 <numIndex index="9" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.items.I.description
                                     </numIndex>
-                                    <numIndex index="1">description</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">items</numIndex>
+                                    <numIndex index="value">description</numIndex>
+                                    <numIndex index="group">items</numIndex>
                                 </numIndex>
                                 <numIndex index="10" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.items.I.enclosure
                                     </numIndex>
-                                    <numIndex index="1">enclosure</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">items</numIndex>
+                                    <numIndex index="value">enclosure</numIndex>
+                                    <numIndex index="group">items</numIndex>
                                 </numIndex>
                                 <numIndex index="11" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.items.I.enclosures
                                     </numIndex>
-                                    <numIndex index="1">enclosures</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">items</numIndex>
+                                    <numIndex index="value">enclosures</numIndex>
+                                    <numIndex index="group">items</numIndex>
                                 </numIndex>
                                 <numIndex index="12" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.items.I.feed
                                     </numIndex>
-                                    <numIndex index="1">feed</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">items</numIndex>
+                                    <numIndex index="value">feed</numIndex>
+                                    <numIndex index="group">items</numIndex>
                                 </numIndex>
                                 <numIndex index="13" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.items.I.id
                                     </numIndex>
-                                    <numIndex index="1">id</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">items</numIndex>
+                                    <numIndex index="value">id</numIndex>
+                                    <numIndex index="group">items</numIndex>
                                 </numIndex>
                                 <numIndex index="14" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.items.I.link
                                     </numIndex>
-                                    <numIndex index="1">link</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">items</numIndex>
+                                    <numIndex index="value">link</numIndex>
+                                    <numIndex index="group">items</numIndex>
                                 </numIndex>
                                 <numIndex index="15" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.items.I.links
                                     </numIndex>
-                                    <numIndex index="1">links</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">items</numIndex>
+                                    <numIndex index="value">links</numIndex>
+                                    <numIndex index="group">items</numIndex>
                                 </numIndex>
                                 <numIndex index="16" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.items.I.local_date|
                                     </numIndex>
-                                    <numIndex index="1">local_date|</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">items</numIndex>
+                                    <numIndex index="value">local_date|</numIndex>
+                                    <numIndex index="group">items</numIndex>
                                 </numIndex>
                                 <numIndex index="17" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.items.I.permalink
                                     </numIndex>
-                                    <numIndex index="1">permalink</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">items</numIndex>
+                                    <numIndex index="value">permalink</numIndex>
+                                    <numIndex index="group">items</numIndex>
                                 </numIndex>
                                 <numIndex index="18" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.items.I.source
                                     </numIndex>
-                                    <numIndex index="1">source</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">items</numIndex>
+                                    <numIndex index="value">source</numIndex>
+                                    <numIndex index="group">items</numIndex>
                                 </numIndex>
                                 <numIndex index="19" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.items.I.title
                                     </numIndex>
-                                    <numIndex index="1">title</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">items</numIndex>
+                                    <numIndex index="group">items</numIndex>
                                 </numIndex>
                                 <numIndex index="20" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.items.I.latitude
                                     </numIndex>
-                                    <numIndex index="1">latitude</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">items</numIndex>
+                                    <numIndex index="value">latitude</numIndex>
+                                    <numIndex index="group">items</numIndex>
                                 </numIndex>
                                 <numIndex index="21" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.items.I.longitude
                                     </numIndex>
-                                    <numIndex index="1">longitude</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">items</numIndex>
+                                    <numIndex index="value">longitude</numIndex>
+                                    <numIndex index="group">items</numIndex>
                                 </numIndex>
                                 <numIndex index="22" type="array">
-                                    <numIndex index="0">
+                                    <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.items.I.base
                                     </numIndex>
-                                    <numIndex index="1">base</numIndex>
-                                    <numIndex index="2"/>
-                                    <numIndex index="3">items</numIndex>
+                                    <numIndex index="value">base</numIndex>
+                                    <numIndex index="group">items</numIndex>
                                 </numIndex>
                             </items>
                             <itemGroups>
