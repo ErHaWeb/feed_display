@@ -41,6 +41,6 @@ defined('TYPO3') || die();
      */
     if (is_array($GLOBALS['TCA']['sys_template']['columns'])) {
         $value = str_replace(',', '', 'EXT:' . $extKey . '/' . $path);
-        $GLOBALS['TCA']['sys_template']['columns']['include_static_file']['config']['items'][] = [$title, $value];
+        $GLOBALS['TCA']['sys_template']['columns']['include_static_file']['config']['items'][] = ['label' => $title, 'value' => $value];
     }
 })();
