@@ -12,7 +12,6 @@
  *
  * The TYPO3 project - inspiring people to share!
  */
-
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Feed Display',
     'description' => 'Fetches and parses RSS and Atom web feeds with the SimplePie library and prepares them for frontend display',

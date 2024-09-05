@@ -12,7 +12,6 @@ plugin.tx_feeddisplay_pi1 {
         # cat=plugin.tx_feeddisplay_pi1/file/120; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.view.layoutRootPath
         layoutRootPath = EXT:feed_display/Resources/Private/Layouts/
     }
-
     settings {
         # cat=plugin.tx_feeddisplay_pi1/100_general/200; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.feedUrl
         feedUrl = https://typo3.org/rss
@@ -23,9 +22,9 @@ plugin.tx_feeddisplay_pi1 {
         # cat=plugin.tx_feeddisplay_pi1/100_general/230; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.maxHeaderLength
         maxHeaderLength = 80
         # cat=plugin.tx_feeddisplay_pi1/100_general/240; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.logoMaxWidth
-        logoMaxWidth =
+        logoMaxWidth = 
         # cat=plugin.tx_feeddisplay_pi1/100_general/250; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.logoMaxHeight
-        logoMaxHeight =
+        logoMaxHeight = 
         # cat=plugin.tx_feeddisplay_pi1/100_general/260; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.feedIconMaxWidth
         feedIconMaxWidth = 26
         # cat=plugin.tx_feeddisplay_pi1/100_general/270; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.feedIconMaxHeight
@@ -37,7 +36,7 @@ plugin.tx_feeddisplay_pi1 {
         # cat=plugin.tx_feeddisplay_pi1/200_advanced/320; type=options[_blank,_self,_parent,_top]; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.linkTarget
         linkTarget = _blank
         # cat=plugin.tx_feeddisplay_pi1/200_advanced/330; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.errorMessage
-        errorMessage =
+        errorMessage = 
         # cat=plugin.tx_feeddisplay_pi1/200_advanced/340; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.cacheDuration
         cacheDuration = 3600
 
@@ -93,7 +92,6 @@ plugin.tx_feeddisplay_pi1 {
             # For field "item_tags" you must parse the feed-dependent arguments
         }
     }
-
     # cat=plugin.tx_feeddisplay_pi1/200_advanced/350; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.ignoreFlexFormSettingsIfEmpty
     ignoreFlexFormSettingsIfEmpty = feedUrl,maxFeedCount,maxContentLength,maxHeaderLength,logoMaxWidth,logoMaxHeight,feedIconMaxWidth,feedIconMaxHeight,dateFormat,stripTags,linkTarget,errorMessage,cacheDuration,getFields.feed,getFields.items
 }

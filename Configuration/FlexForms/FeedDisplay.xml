@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <T3DataStructure>
     <sheets>
         <general>
@@ -172,7 +173,6 @@
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.linkTarget.I.default
                                     </numIndex>
                                     <numIndex index="value"/>
-
                                 </numIndex>
                                 <numIndex index="1" type="array">
                                     <numIndex index="label">

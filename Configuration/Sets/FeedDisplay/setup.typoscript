@@ -4,24 +4,20 @@ plugin.tx_feeddisplay_pi1 {
             0 = EXT:feed_display/Resources/Private/Templates/
             1 = {$plugin.tx_feeddisplay_pi1.view.templateRootPath}
         }
-
         partialRootPaths {
             0 = EXT:feed_display/Resources/Private/Partials/
             1 = {$plugin.tx_feeddisplay_pi1.view.partialRootPath}
         }
-
         layoutRootPaths {
             0 = EXT:feed_display/Resources/Private/Layouts/
             1 = {$plugin.tx_feeddisplay_pi1.view.layoutRootPath}
         }
     }
-
     settings {
         getFields {
             feed = {$plugin.tx_feeddisplay_pi1.settings.getFields.feed}
             items = {$plugin.tx_feeddisplay_pi1.settings.getFields.items}
         }
-
         feedUrl = {$plugin.tx_feeddisplay_pi1.settings.feedUrl}
         maxFeedCount = {$plugin.tx_feeddisplay_pi1.settings.maxFeedCount}
         maxContentLength = {$plugin.tx_feeddisplay_pi1.settings.maxContentLength}
@@ -36,6 +32,5 @@ plugin.tx_feeddisplay_pi1 {
         errorMessage = {$plugin.tx_feeddisplay_pi1.settings.errorMessage}
         cacheDuration = {$plugin.tx_feeddisplay_pi1.settings.cacheDuration}
     }
-
     ignoreFlexFormSettingsIfEmpty = {$plugin.tx_feeddisplay_pi1.ignoreFlexFormSettingsIfEmpty}
 }

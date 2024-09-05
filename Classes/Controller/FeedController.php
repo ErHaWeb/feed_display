@@ -31,21 +31,22 @@ use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 class FeedController extends ActionController
 {
-    public function __construct(private readonly FrontendInterface $cache, private readonly SimplePie $feed)
-    {
-    }
+    public function __construct(
+        private readonly FrontendInterface $cache,
+        private readonly SimplePie $feed
+    ) {}
 
     public function displayAction(): ResponseInterface
     {
         if ($this->settings) {
-            $cacheIdentifier = "feeddisplay";
+            $cacheIdentifier = 'feeddisplay';
             $data = $this->cache->get($cacheIdentifier);
             $cacheDuration = (int)$this->settings['cacheDuration'];
 
             if ($cacheDuration === 0) {
                 $data = $this->getFeedData();
                 $this->cache->remove($cacheIdentifier);
-            } else if ($data === false || $data['settings'] !== $this->settings) {
+            } elseif ($data === false || $data['settings'] !== $this->settings) {
                 $data = $this->getFeedData();
                 $this->cache->set($cacheIdentifier, $data, [], $cacheDuration);
             }

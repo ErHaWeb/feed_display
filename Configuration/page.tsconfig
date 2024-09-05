@@ -12,7 +12,6 @@ mod {
             }
         }
     }
-
     web_layout {
         tt_content.preview.list.feeddisplay_pi1 = EXT:feed_display/Resources/Private/Templates/Backend/Preview.html
     }

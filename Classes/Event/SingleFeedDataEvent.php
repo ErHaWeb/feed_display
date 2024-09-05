@@ -7,10 +7,12 @@ use SimplePie\SimplePie;
 
 final class SingleFeedDataEvent
 {
-
-    public function __construct(protected array $itemProperties, protected Item $item, protected array $settings, protected SimplePie $feed)
-    {
-    }
+    public function __construct(
+        protected array $itemProperties,
+        protected Item $item,
+        protected array $settings,
+        protected SimplePie $feed
+    ) {}
 
     public function getItemProperties(): array
     {
@@ -51,6 +53,4 @@ final class SingleFeedDataEvent
     {
         $this->feed = $feed;
     }
-
-
 }
