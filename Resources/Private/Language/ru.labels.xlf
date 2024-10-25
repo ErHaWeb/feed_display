@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" original="EXT:seo/Configuration/Sets/Sitemap/labels.xlf" datatype="plaintext" product-name="seo" date="2024-10-25T16:42:27+02:00" target-language="ru">
+    <header/>
+    <body>
+      <trans-unit id="label" resname="label">
+        <source>Feed Display</source>
+        <target state="needs-translation">Feed Display</target>
+      </trans-unit>
+      <trans-unit id="categories.feeddisplay" resname="categories.feeddisplay.templates">
+        <source>Feed Display</source>
+        <target state="needs-translation">Feed Display</target>
+      </trans-unit>
+      <trans-unit id="categories.feeddisplay.templates" resname="categories.feeddisplay.templates">
+        <source>Templates</source>
+        <target state="needs-translation">Templates</target>
+      </trans-unit>
+      <trans-unit id="categories.feeddisplay.general" resname="categories.feeddisplay.general">
+        <source>General</source>
+        <target state="needs-translation">General</target>
+      </trans-unit>
+      <trans-unit id="categories.feeddisplay.advanced" resname="categories.feeddisplay.advanced">
+        <source>Advanced</source>
+        <target state="needs-translation">Advanced</target>
+      </trans-unit>
+      <trans-unit id="categories.feeddisplay.getFields" resname="categories.feeddisplay.getFields">
+        <source>Get Fields</source>
+        <target state="needs-translation">Get Fields</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.view.templateRootPath" resname="settings.plugin.tx_feeddisplay_pi1.view.templateRootPath">
+        <source>Path to template root (FE)</source>
+        <target state="needs-translation">Path to template root (FE)</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.view.partialRootPath" resname="settings.plugin.tx_feeddisplay_pi1.view.partialRootPath">
+        <source>Path to template partials (FE)</source>
+        <target state="needs-translation">Path to template partials (FE)</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.view.layoutRootPath" resname="settings.plugin.tx_feeddisplay_pi1.view.layoutRootPath">
+        <source>Path to template layouts (FE)</source>
+        <target state="needs-translation">Path to template layouts (FE)</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.feedUrl" resname="settings.plugin.tx_feeddisplay_pi1.settings.feedUrl">
+        <source>Feed URL</source>
+        <target state="needs-translation">Feed URL</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.feedUrl" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.feedUrl">
+        <source>URL that is fetched by the service</source>
+        <target state="needs-translation">URL that is fetched by the service</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.maxFeedCount" resname="settings.plugin.tx_feeddisplay_pi1.settings.maxFeedCount">
+        <source>Max. items</source>
+        <target state="needs-translation">Max. items</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.maxFeedCount" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.maxFeedCount">
+        <source>Maximum feed items to show</source>
+        <target state="needs-translation">Maximum feed items to show</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.maxContentLength" resname="settings.plugin.tx_feeddisplay_pi1.settings.maxContentLength">
+        <source>Max. content length</source>
+        <target state="needs-translation">Max. content length</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.maxContentLength" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.maxContentLength">
+        <source>Crop the characters of the feed content to the configured length</source>
+        <target state="needs-translation">Crop the characters of the feed content to the configured length</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.maxHeaderLength" resname="settings.plugin.tx_feeddisplay_pi1.settings.maxHeaderLength">
+        <source>Max. header length</source>
+        <target state="needs-translation">Max. header length</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.maxHeaderLength" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.maxHeaderLength">
+        <source>Crop the characters of the feed header to the configured length</source>
+        <target state="needs-translation">Crop the characters of the feed header to the configured length</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget">
+        <source>Target</source>
+        <target state="needs-translation">Target</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.linkTarget" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.linkTarget">
+        <source>Target attribute to define the feed link behavior</source>
+        <target state="needs-translation">Target attribute to define the feed link behavior</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.default" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.default">
+        <source>Defined by TypoScript (default)</source>
+        <target state="needs-translation">Defined by TypoScript (default)</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.blank" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.blank">
+        <source>Opens in a new window or tab</source>
+        <target state="needs-translation">Opens in a new window or tab</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.self" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.self">
+        <source>Opens in the same frame as it was clicked</source>
+        <target state="needs-translation">Opens in the same frame as it was clicked</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.parent" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.parent">
+        <source>Opens in the parent frame</source>
+        <target state="needs-translation">Opens in the parent frame</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.top" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.top">
+        <source>Opens in the full body of the window</source>
+        <target state="needs-translation">Opens in the full body of the window</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.logoMaxWidth" resname="settings.plugin.tx_feeddisplay_pi1.settings.logoMaxWidth">
+        <source>Logo width</source>
+        <target state="needs-translation">Logo width</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.logoMaxWidth" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.logoMaxWidth">
+        <source>Width of the feeds logo image</source>
+        <target state="needs-translation">Width of the feeds logo image</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.logoMaxHeight" resname="settings.plugin.tx_feeddisplay_pi1.settings.logoMaxHeight">
+        <source>Logo height</source>
+        <target state="needs-translation">Logo height</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.logoMaxHeight" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.logoMaxHeight">
+        <source>Height of the feeds logo image</source>
+        <target state="needs-translation">Height of the feeds logo image</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.feedIconMaxWidth" resname="settings.plugin.tx_feeddisplay_pi1.settings.feedIconMaxWidth">
+        <source>Feed icon width</source>
+        <target state="needs-translation">Feed icon width</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.feedIconMaxWidth" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.feedIconMaxWidth">
+        <source>Width of the feeds icon image</source>
+        <target state="needs-translation">Width of the feeds icon image</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.feedIconMaxHeight" resname="settings.plugin.tx_feeddisplay_pi1.settings.feedIconMaxHeight">
+        <source>Feed icon height</source>
+        <target state="needs-translation">Feed icon height</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.feedIconMaxHeight" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.feedIconMaxHeight">
+        <source>Height of the feeds icon image</source>
+        <target state="needs-translation">Height of the feeds icon image</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.errorMessage" resname="settings.plugin.tx_feeddisplay_pi1.settings.errorMessage">
+        <source>Error message</source>
+        <target state="needs-translation">Error message</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.errorMessage" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.errorMessage">
+        <source>This message is displayed if no feed items could be fetched</source>
+        <target state="needs-translation">This message is displayed if no feed items could be fetched</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.dateFormat" resname="settings.plugin.tx_feeddisplay_pi1.settings.dateFormat">
+        <source>Date format</source>
+        <target state="needs-translation">Date format</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.dateFormat" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.dateFormat">
+        <source>Use PHP's strftime() function format</source>
+        <target state="needs-translation">Use PHP's strftime() function format</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.stripTags" resname="settings.plugin.tx_feeddisplay_pi1.settings.stripTags">
+        <source>Strip tags</source>
+        <target state="needs-translation">Strip tags</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.stripTags" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.stripTags">
+        <source>Remove HTML tags from the feed content</source>
+        <target state="needs-translation">Remove HTML tags from the feed content</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.cacheDuration" resname="settings.plugin.tx_feeddisplay_pi1.settings.cacheDuration">
+        <source>Feed cache</source>
+        <target state="needs-translation">Feed cache</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.cacheDuration" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.cacheDuration">
+        <source>Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</source>
+        <target state="needs-translation">Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty" resname="settings.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty">
+        <source>Ignore FlexForm Settings if empty</source>
+        <target state="needs-translation">Ignore FlexForm Settings if empty</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty">
+        <source>Comma separated list of FlexForm settings that will be ignored in the extension settings merge process, if their value is considered empty (either an empty string or a string containing 0).</source>
+        <target state="needs-translation">Comma separated list of FlexForm settings that will be ignored in the extension settings merge process, if their value is considered empty (either an empty string or a string containing 0).</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.getFields.feed" resname="settings.plugin.tx_feeddisplay_pi1.settings.getFields.feed">
+        <source>Feed fields to get</source>
+        <target state="needs-translation">Feed fields to get</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.getFields.feed" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.getFields.feed">
+        <source>Comma-separated list of fields to be read from the feed by SimplePie and made available as variables in Fluid.</source>
+        <target state="needs-translation">Comma-separated list of fields to be read from the feed by SimplePie and made available as variables in Fluid.</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.getFields.items" resname="settings.plugin.tx_feeddisplay_pi1.settings.getFields.items">
+        <source>Feed items fields to get</source>
+        <target state="needs-translation">Feed items fields to get</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.getFields.items" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.getFields.items">
+        <source>Comma-separated list of fields to be read from the feed items by SimplePie and made available as variables in Fluid.</source>
+        <target state="needs-translation">Comma-separated list of fields to be read from the feed items by SimplePie and made available as variables in Fluid.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
