@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file source-language="en" original="EXT:feed_display/Configuration/Sets/Sitemap/labels.xlf" datatype="plaintext" product-name="feed_display" date="2024-10-25T17:35:40+02:00" target-language="hu">
+  <file source-language="en" original="EXT:feed_display/Configuration/Sets/FeedDisplay/labels.xlf" datatype="plaintext" product-name="feed_display" date="2024-10-25T17:35:40+02:00" target-language="hu">
     <header/>
     <body>
       <trans-unit id="label" resname="label">
