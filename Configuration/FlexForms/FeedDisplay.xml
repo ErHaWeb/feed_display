@@ -353,6 +353,7 @@
                                     <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.feed.I.title
                                     </numIndex>
+                                    <numIndex index="value">title</numIndex>
                                     <numIndex index="group">feed</numIndex>
                                 </numIndex>
                                 <numIndex index="15" type="array">
@@ -588,6 +589,7 @@
                                     <numIndex index="label">
                                         LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.items.I.title
                                     </numIndex>
+                                    <numIndex index="value">title</numIndex>
                                     <numIndex index="group">items</numIndex>
                                 </numIndex>
                                 <numIndex index="20" type="array">
