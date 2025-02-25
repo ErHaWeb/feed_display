@@ -1,111 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xliff xmlns:t3="http://typo3.org/schemas/xliff" xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file source-language="en" original="messages" datatype="plaintext" product-name="feed_display" date="2024-03-12T22:30:10+01:00" target-language="hu">
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" original="EXT:feed_display/Resources/Private/Language/locallang.xlf" datatype="plaintext" product-name="feed_display" date="2025-02-25T11:12:27+01:00" target-language="hu">
     <header/>
     <body>
-      <trans-unit id="feed.categories" resname="feed.categories" approved="yes">
+      <trans-unit id="feed.categories">
         <source>Categories</source>
-        <target state="final">Kategóriák</target>
+        <target state="needs-translation">Categories</target>
       </trans-unit>
-      <trans-unit id="feed.category" resname="feed.category" approved="yes">
+      <trans-unit id="feed.category">
         <source>Category</source>
-        <target state="final">Kategória</target>
+        <target state="needs-translation">Category</target>
       </trans-unit>
-      <trans-unit id="feed.authors" resname="feed.authors" approved="yes">
+      <trans-unit id="feed.authors">
         <source>Authors</source>
-        <target state="final">Fejlesztők</target>
+        <target state="needs-translation">Authors</target>
       </trans-unit>
-      <trans-unit id="feed.author" resname="feed.author" approved="yes">
+      <trans-unit id="feed.author">
         <source>Author</source>
-        <target state="final">Fejlesztő</target>
+        <target state="needs-translation">Author</target>
       </trans-unit>
-      <trans-unit id="feed.contributors" resname="feed.contributors" approved="yes">
+      <trans-unit id="feed.contributors">
         <source>Contributors</source>
-        <target state="final">Közreműködők</target>
+        <target state="needs-translation">Contributors</target>
       </trans-unit>
-      <trans-unit id="feed.contributor" resname="feed.contributor" approved="yes">
+      <trans-unit id="feed.contributor">
         <source>Contributor</source>
-        <target state="final">Közreműködő</target>
+        <target state="needs-translation">Contributor</target>
       </trans-unit>
-      <trans-unit id="feed.items" resname="feed.items" approved="yes">
+      <trans-unit id="feed.items">
         <source>Items</source>
-        <target state="final">Tárgyak</target>
+        <target state="needs-translation">Items</target>
       </trans-unit>
-      <trans-unit id="item.categories" resname="item.categories" approved="yes">
+      <trans-unit id="item.categories">
         <source>Categories</source>
-        <target state="final">Kategóriák</target>
+        <target state="needs-translation">Categories</target>
       </trans-unit>
-      <trans-unit id="item.category" resname="item.category" approved="yes">
+      <trans-unit id="item.category">
         <source>Category</source>
-        <target state="final">Kategória</target>
+        <target state="needs-translation">Category</target>
       </trans-unit>
-      <trans-unit id="item.authors" resname="item.authors" approved="yes">
+      <trans-unit id="item.authors">
         <source>Authors</source>
-        <target state="final">Fejlesztők</target>
+        <target state="needs-translation">Authors</target>
       </trans-unit>
-      <trans-unit id="item.author" resname="item.author" approved="yes">
+      <trans-unit id="item.author">
         <source>Author</source>
-        <target state="final">Fejlesztő</target>
+        <target state="needs-translation">Author</target>
       </trans-unit>
-      <trans-unit id="item.contributors" resname="item.contributors" approved="yes">
+      <trans-unit id="item.contributors">
         <source>Contributors</source>
-        <target state="final">Közreműködők</target>
+        <target state="needs-translation">Contributors</target>
       </trans-unit>
-      <trans-unit id="item.contributor" resname="item.contributor" approved="yes">
+      <trans-unit id="item.contributor">
         <source>Contributor</source>
-        <target state="final">Közreműködő</target>
+        <target state="needs-translation">Contributor</target>
       </trans-unit>
-      <trans-unit id="item.copyright" resname="item.copyright" approved="yes">
+      <trans-unit id="item.copyright">
         <source>Copyright</source>
-        <target state="final">Szerzői jog</target>
+        <target state="needs-translation">Copyright</target>
       </trans-unit>
-      <trans-unit id="item.date" resname="item.date" approved="yes">
+      <trans-unit id="item.date">
         <source>Date</source>
-        <target state="final">Dátum</target>
+        <target state="needs-translation">Date</target>
       </trans-unit>
-      <trans-unit id="item.updatedDate" resname="item.updatedDate" approved="yes">
+      <trans-unit id="item.updatedDate">
         <source>Updated</source>
-        <target state="final">Frissítve</target>
+        <target state="needs-translation">Updated</target>
       </trans-unit>
-      <trans-unit id="item.links" resname="item.links" approved="yes">
+      <trans-unit id="item.links">
         <source>Links</source>
-        <target state="final">Linkek</target>
+        <target state="needs-translation">Links</target>
       </trans-unit>
-      <trans-unit id="item.link" resname="item.link" approved="yes">
+      <trans-unit id="item.link">
         <source>Link</source>
-        <target state="final">Link</target>
+        <target state="needs-translation">Link</target>
       </trans-unit>
-      <trans-unit id="item.enclosure" resname="item.enclosure" approved="yes">
+      <trans-unit id="item.enclosure">
         <source>Enclosure</source>
-        <target state="final">Körítés</target>
+        <target state="needs-translation">Enclosure</target>
       </trans-unit>
-      <trans-unit id="item.enclosures" resname="item.enclosures" approved="yes">
+      <trans-unit id="item.enclosures">
         <source>Enclosures</source>
-        <target state="final">Körítések</target>
+        <target state="needs-translation">Enclosures</target>
       </trans-unit>
-      <trans-unit id="item.latitude" resname="item.latitude" approved="yes">
+      <trans-unit id="item.latitude">
         <source>Latitude</source>
-        <target state="final">Szélességi fok</target>
+        <target state="needs-translation">Latitude</target>
       </trans-unit>
-      <trans-unit id="item.longitude" resname="item.longitude" approved="yes">
+      <trans-unit id="item.longitude">
         <source>Longitude</source>
-        <target state="final">Hosszúsági fok</target>
+        <target state="needs-translation">Longitude</target>
       </trans-unit>
-      <trans-unit id="item.source" resname="item.source" approved="yes">
+      <trans-unit id="item.source">
         <source>Source</source>
-        <target state="final">Forrás</target>
+        <target state="needs-translation">Source</target>
       </trans-unit>
-      <trans-unit id="errorMessage" resname="errorMessage" approved="yes">
+      <trans-unit id="errorMessage">
         <source>Sorry, the feed could not be fetched.</source>
-        <target state="final">Sajnáljuk, a hírcsatornát nem sikerült frissíteni.</target>
+        <target state="needs-translation">Sorry, the feed could not be fetched.</target>
       </trans-unit>
-      <trans-unit id="noTemplateError" resname="noTemplateError" approved="yes">
+      <trans-unit id="noTemplateError">
         <source>Feed Display: Please include static TypoScript [EXT:feed_display/Configuration/TypoScript/]</source>
-        <target state="final">Hírcsatorna megjelenítése: Kérlek, statikusan add meg a TypoScript-et [EXT:feed_display/Configuration/TypoScript/]</target>
+        <target state="needs-translation">Feed Display: Please include static TypoScript [EXT:feed_display/Configuration/TypoScript/]</target>
       </trans-unit>
-      <trans-unit id="noItemsError" resname="noItemsError" approved="yes">
+      <trans-unit id="noItemsError">
         <source>Sorry, no items could be fetched.</source>
-        <target state="final">Sajnáljuk, a tárgyak nem frissíthetők.</target>
+        <target state="needs-translation">Sorry, no items could be fetched.</target>
       </trans-unit>
     </body>
   </file>
