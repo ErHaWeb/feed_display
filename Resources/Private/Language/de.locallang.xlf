@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" original="EXT:feed_display/Resources/Private/Language/locallang.xlf" datatype="plaintext" product-name="feed_display" date="2025-02-25T11:12:27+01:00" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="feed.categories">
+        <source>Categories</source>
+        <target state="needs-translation">Categories</target>
+      </trans-unit>
+      <trans-unit id="feed.category">
+        <source>Category</source>
+        <target state="needs-translation">Category</target>
+      </trans-unit>
+      <trans-unit id="feed.authors">
+        <source>Authors</source>
+        <target state="needs-translation">Authors</target>
+      </trans-unit>
+      <trans-unit id="feed.author">
+        <source>Author</source>
+        <target state="needs-translation">Author</target>
+      </trans-unit>
+      <trans-unit id="feed.contributors">
+        <source>Contributors</source>
+        <target state="needs-translation">Contributors</target>
+      </trans-unit>
+      <trans-unit id="feed.contributor">
+        <source>Contributor</source>
+        <target state="needs-translation">Contributor</target>
+      </trans-unit>
+      <trans-unit id="feed.items">
+        <source>Items</source>
+        <target state="needs-translation">Items</target>
+      </trans-unit>
+      <trans-unit id="item.categories">
+        <source>Categories</source>
+        <target state="needs-translation">Categories</target>
+      </trans-unit>
+      <trans-unit id="item.category">
+        <source>Category</source>
+        <target state="needs-translation">Category</target>
+      </trans-unit>
+      <trans-unit id="item.authors">
+        <source>Authors</source>
+        <target state="needs-translation">Authors</target>
+      </trans-unit>
+      <trans-unit id="item.author">
+        <source>Author</source>
+        <target state="needs-translation">Author</target>
+      </trans-unit>
+      <trans-unit id="item.contributors">
+        <source>Contributors</source>
+        <target state="needs-translation">Contributors</target>
+      </trans-unit>
+      <trans-unit id="item.contributor">
+        <source>Contributor</source>
+        <target state="needs-translation">Contributor</target>
+      </trans-unit>
+      <trans-unit id="item.copyright">
+        <source>Copyright</source>
+        <target state="needs-translation">Copyright</target>
+      </trans-unit>
+      <trans-unit id="item.date">
+        <source>Date</source>
+        <target state="needs-translation">Date</target>
+      </trans-unit>
+      <trans-unit id="item.updatedDate">
+        <source>Updated</source>
+        <target state="needs-translation">Updated</target>
+      </trans-unit>
+      <trans-unit id="item.links">
+        <source>Links</source>
+        <target state="needs-translation">Links</target>
+      </trans-unit>
+      <trans-unit id="item.link">
+        <source>Link</source>
+        <target state="needs-translation">Link</target>
+      </trans-unit>
+      <trans-unit id="item.enclosure">
+        <source>Enclosure</source>
+        <target state="needs-translation">Enclosure</target>
+      </trans-unit>
+      <trans-unit id="item.enclosures">
+        <source>Enclosures</source>
+        <target state="needs-translation">Enclosures</target>
+      </trans-unit>
+      <trans-unit id="item.latitude">
+        <source>Latitude</source>
+        <target state="needs-translation">Latitude</target>
+      </trans-unit>
+      <trans-unit id="item.longitude">
+        <source>Longitude</source>
+        <target state="needs-translation">Longitude</target>
+      </trans-unit>
+      <trans-unit id="item.source">
+        <source>Source</source>
+        <target state="needs-translation">Source</target>
+      </trans-unit>
+      <trans-unit id="errorMessage">
+        <source>Sorry, the feed could not be fetched.</source>
+        <target state="needs-translation">Sorry, the feed could not be fetched.</target>
+      </trans-unit>
+      <trans-unit id="noTemplateError">
+        <source>Feed Display: Please include static TypoScript [EXT:feed_display/Configuration/TypoScript/]</source>
+        <target state="needs-translation">Feed Display: Please include static TypoScript [EXT:feed_display/Configuration/TypoScript/]</target>
+      </trans-unit>
+      <trans-unit id="noItemsError">
+        <source>Sorry, no items could be fetched.</source>
+        <target state="needs-translation">Sorry, no items could be fetched.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
