@@ -6,7 +6,7 @@
   "require": {
     "typo3/cms-core": "^12.4 || ^13.0",
     "php": "^8.1 || ^8.2 || ^8.3",
-    "simplepie/simplepie": "^1.8"
+    "simplepie/simplepie": "^1.9 || dev-master"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest"
