@@ -22,6 +22,9 @@ declare(strict_types=1);
 namespace ErHaWeb\FeedDisplay\Controller;
 
 use ErHaWeb\FeedDisplay\Event\SingleFeedDataEvent;
+use Psr\Http\Client\ClientInterface;
+use Psr\Http\Message\RequestFactoryInterface;
+use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\ResponseInterface;
 use SimplePie\SimplePie;
 use TYPO3\CMS\Core\Cache\Frontend\FrontendInterface;
@@ -33,6 +36,9 @@ class FeedController extends ActionController
 {
     public function __construct(
         private readonly FrontendInterface $cache,
+        private readonly ClientInterface $client,
+        private readonly RequestFactoryInterface $requestFactory,
+        private readonly UriFactoryInterface $uriFactory,
         private readonly SimplePie $feed
     ) {}
 
@@ -159,6 +165,7 @@ class FeedController extends ActionController
             $feedUrl = stripslashes((string)$feedUrl);
             $this->feed->set_feed_url($feedUrl);
             $this->feed->enable_cache(false);
+            $this->feed->set_http_client($this->client, $this->requestFactory, $this->uriFactory);
             $this->feed->init();
             return true;
         }
