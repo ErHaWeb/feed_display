@@ -3,77 +3,77 @@
   <file source-language="en" original="EXT:feed_display/Resources/Private/Language/locallang.xlf" datatype="plaintext" product-name="feed_display" date="2025-02-25T11:12:27+01:00" target-language="da">
     <header/>
     <body>
-      <trans-unit id="feed.categories">
+      <trans-unit id="feed.categories" approved="yes">
         <source>Categories</source>
-        <target state="needs-translation">Categories</target>
+        <target state="final">Kategorier</target>
       </trans-unit>
-      <trans-unit id="feed.category">
+      <trans-unit id="feed.category" approved="yes">
         <source>Category</source>
-        <target state="needs-translation">Category</target>
+        <target state="final">Kategori</target>
       </trans-unit>
-      <trans-unit id="feed.authors">
+      <trans-unit id="feed.authors" approved="yes">
         <source>Authors</source>
-        <target state="needs-translation">Authors</target>
+        <target state="final">Forfattere</target>
       </trans-unit>
-      <trans-unit id="feed.author">
+      <trans-unit id="feed.author" approved="yes">
         <source>Author</source>
-        <target state="needs-translation">Author</target>
+        <target state="final">Forfatter</target>
       </trans-unit>
-      <trans-unit id="feed.contributors">
+      <trans-unit id="feed.contributors" approved="yes">
         <source>Contributors</source>
-        <target state="needs-translation">Contributors</target>
+        <target state="final">Bidragydere</target>
       </trans-unit>
-      <trans-unit id="feed.contributor">
+      <trans-unit id="feed.contributor" approved="yes">
         <source>Contributor</source>
-        <target state="needs-translation">Contributor</target>
+        <target state="final">Bidragsyder</target>
       </trans-unit>
-      <trans-unit id="feed.items">
+      <trans-unit id="feed.items" approved="yes">
         <source>Items</source>
-        <target state="needs-translation">Items</target>
+        <target state="final">Emner</target>
       </trans-unit>
-      <trans-unit id="item.categories">
+      <trans-unit id="item.categories" approved="yes">
         <source>Categories</source>
-        <target state="needs-translation">Categories</target>
+        <target state="final">Kategorier</target>
       </trans-unit>
-      <trans-unit id="item.category">
+      <trans-unit id="item.category" approved="yes">
         <source>Category</source>
-        <target state="needs-translation">Category</target>
+        <target state="final">Kategori</target>
       </trans-unit>
-      <trans-unit id="item.authors">
+      <trans-unit id="item.authors" approved="yes">
         <source>Authors</source>
-        <target state="needs-translation">Authors</target>
+        <target state="final">Forfattere</target>
       </trans-unit>
-      <trans-unit id="item.author">
+      <trans-unit id="item.author" approved="yes">
         <source>Author</source>
-        <target state="needs-translation">Author</target>
+        <target state="final">Forfatter</target>
       </trans-unit>
-      <trans-unit id="item.contributors">
+      <trans-unit id="item.contributors" approved="yes">
         <source>Contributors</source>
-        <target state="needs-translation">Contributors</target>
+        <target state="final">Bidragydere</target>
       </trans-unit>
-      <trans-unit id="item.contributor">
+      <trans-unit id="item.contributor" approved="yes">
         <source>Contributor</source>
-        <target state="needs-translation">Contributor</target>
+        <target state="final">Bidragsyder</target>
       </trans-unit>
-      <trans-unit id="item.copyright">
+      <trans-unit id="item.copyright" approved="yes">
         <source>Copyright</source>
-        <target state="needs-translation">Copyright</target>
+        <target state="final">Ophavsret</target>
       </trans-unit>
-      <trans-unit id="item.date">
+      <trans-unit id="item.date" approved="yes">
         <source>Date</source>
-        <target state="needs-translation">Date</target>
+        <target state="final">Dato</target>
       </trans-unit>
-      <trans-unit id="item.updatedDate">
+      <trans-unit id="item.updatedDate" approved="yes">
         <source>Updated</source>
-        <target state="needs-translation">Updated</target>
+        <target state="final">Opdateret</target>
       </trans-unit>
-      <trans-unit id="item.links">
+      <trans-unit id="item.links" approved="yes">
         <source>Links</source>
-        <target state="needs-translation">Links</target>
+        <target state="final">Links</target>
       </trans-unit>
-      <trans-unit id="item.link">
+      <trans-unit id="item.link" approved="yes">
         <source>Link</source>
-        <target state="needs-translation">Link</target>
+        <target state="final">Link</target>
       </trans-unit>
       <trans-unit id="item.enclosure">
         <source>Enclosure</source>
