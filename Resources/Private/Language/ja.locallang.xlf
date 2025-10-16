@@ -5,107 +5,107 @@
     <body>
       <trans-unit id="feed.categories">
         <source>Categories</source>
-        <target state="needs-translation">Categories</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">カテゴリ</target>
       </trans-unit>
       <trans-unit id="feed.category">
         <source>Category</source>
-        <target state="needs-translation">Category</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">カテゴリ</target>
       </trans-unit>
       <trans-unit id="feed.authors">
         <source>Authors</source>
-        <target state="needs-translation">Authors</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">著者</target>
       </trans-unit>
       <trans-unit id="feed.author">
         <source>Author</source>
-        <target state="needs-translation">Author</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">作成者</target>
       </trans-unit>
       <trans-unit id="feed.contributors">
         <source>Contributors</source>
-        <target state="needs-translation">Contributors</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">貢献者</target>
       </trans-unit>
       <trans-unit id="feed.contributor">
         <source>Contributor</source>
-        <target state="needs-translation">Contributor</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">貢献者</target>
       </trans-unit>
       <trans-unit id="feed.items">
         <source>Items</source>
-        <target state="needs-translation">Items</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">アイテム</target>
       </trans-unit>
       <trans-unit id="item.categories">
         <source>Categories</source>
-        <target state="needs-translation">Categories</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">カテゴリ</target>
       </trans-unit>
       <trans-unit id="item.category">
         <source>Category</source>
-        <target state="needs-translation">Category</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">カテゴリ</target>
       </trans-unit>
       <trans-unit id="item.authors">
         <source>Authors</source>
-        <target state="needs-translation">Authors</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">著者</target>
       </trans-unit>
       <trans-unit id="item.author">
         <source>Author</source>
-        <target state="needs-translation">Author</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">作成者</target>
       </trans-unit>
       <trans-unit id="item.contributors">
         <source>Contributors</source>
-        <target state="needs-translation">Contributors</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">貢献者</target>
       </trans-unit>
       <trans-unit id="item.contributor">
         <source>Contributor</source>
-        <target state="needs-translation">Contributor</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">貢献者</target>
       </trans-unit>
       <trans-unit id="item.copyright">
         <source>Copyright</source>
-        <target state="needs-translation">Copyright</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">著作権</target>
       </trans-unit>
       <trans-unit id="item.date">
         <source>Date</source>
-        <target state="needs-translation">Date</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">日付</target>
       </trans-unit>
       <trans-unit id="item.updatedDate">
         <source>Updated</source>
-        <target state="needs-translation">Updated</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">更新日時</target>
       </trans-unit>
       <trans-unit id="item.links">
         <source>Links</source>
-        <target state="needs-translation">Links</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">リンク</target>
       </trans-unit>
       <trans-unit id="item.link">
         <source>Link</source>
-        <target state="needs-translation">Link</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">リンク</target>
       </trans-unit>
       <trans-unit id="item.enclosure">
         <source>Enclosure</source>
-        <target state="needs-translation">Enclosure</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">エンクロージャー</target>
       </trans-unit>
       <trans-unit id="item.enclosures">
         <source>Enclosures</source>
-        <target state="needs-translation">Enclosures</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">エンクロージャー数</target>
       </trans-unit>
       <trans-unit id="item.latitude">
         <source>Latitude</source>
-        <target state="needs-translation">Latitude</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">緯度：</target>
       </trans-unit>
       <trans-unit id="item.longitude">
         <source>Longitude</source>
-        <target state="needs-translation">Longitude</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">経度：</target>
       </trans-unit>
       <trans-unit id="item.source">
         <source>Source</source>
-        <target state="needs-translation">Source</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">ソース</target>
       </trans-unit>
       <trans-unit id="errorMessage">
         <source>Sorry, the feed could not be fetched.</source>
-        <target state="needs-translation">Sorry, the feed could not be fetched.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">フィードを取得できませんでした。</target>
       </trans-unit>
       <trans-unit id="noTemplateError">
         <source>Feed Display: Please include static TypoScript [EXT:feed_display/Configuration/TypoScript/]</source>
-        <target state="needs-translation">Feed Display: Please include static TypoScript [EXT:feed_display/Configuration/TypoScript/]</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">フィード表示: 静的なTypoScriptを含めてください [EXT:feed_display/Configuration/TypoScript/]</target>
       </trans-unit>
       <trans-unit id="noItemsError">
         <source>Sorry, no items could be fetched.</source>
-        <target state="needs-translation">Sorry, no items could be fetched.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">アイテムを取得できませんでした。</target>
       </trans-unit>
     </body>
   </file>
