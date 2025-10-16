@@ -3,109 +3,109 @@
   <file source-language="en" original="EXT:feed_display/Resources/Private/Language/locallang.xlf" datatype="plaintext" product-name="feed_display" date="2025-02-25T11:12:27+01:00" target-language="pt-PT">
     <header/>
     <body>
-      <trans-unit id="feed.categories">
+      <trans-unit id="feed.categories" approved="yes">
         <source>Categories</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">categorias</target>
+        <target state="final">categorias</target>
       </trans-unit>
-      <trans-unit id="feed.category">
+      <trans-unit id="feed.category" approved="yes">
         <source>Category</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">categoria</target>
+        <target state="final">categoria</target>
       </trans-unit>
-      <trans-unit id="feed.authors">
+      <trans-unit id="feed.authors" approved="yes">
         <source>Authors</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Autores</target>
+        <target state="final">Autores</target>
       </trans-unit>
-      <trans-unit id="feed.author">
+      <trans-unit id="feed.author" approved="yes">
         <source>Author</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Autor</target>
+        <target state="final">Autor</target>
       </trans-unit>
-      <trans-unit id="feed.contributors">
+      <trans-unit id="feed.contributors" approved="yes">
         <source>Contributors</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Colaboradores</target>
+        <target state="final">Colaboradores</target>
       </trans-unit>
-      <trans-unit id="feed.contributor">
+      <trans-unit id="feed.contributor" approved="yes">
         <source>Contributor</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Colaborador</target>
+        <target state="final">Colaborador</target>
       </trans-unit>
-      <trans-unit id="feed.items">
+      <trans-unit id="feed.items" approved="yes">
         <source>Items</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">itens</target>
+        <target state="final">itens</target>
       </trans-unit>
-      <trans-unit id="item.categories">
+      <trans-unit id="item.categories" approved="yes">
         <source>Categories</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">categorias</target>
+        <target state="final">categorias</target>
       </trans-unit>
-      <trans-unit id="item.category">
+      <trans-unit id="item.category" approved="yes">
         <source>Category</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">categoria</target>
+        <target state="final">categoria</target>
       </trans-unit>
-      <trans-unit id="item.authors">
+      <trans-unit id="item.authors" approved="yes">
         <source>Authors</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Autores</target>
+        <target state="final">Autores</target>
       </trans-unit>
-      <trans-unit id="item.author">
+      <trans-unit id="item.author" approved="yes">
         <source>Author</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Autor</target>
+        <target state="final">Autor</target>
       </trans-unit>
-      <trans-unit id="item.contributors">
+      <trans-unit id="item.contributors" approved="yes">
         <source>Contributors</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Colaboradores</target>
+        <target state="final">Colaboradores</target>
       </trans-unit>
-      <trans-unit id="item.contributor">
+      <trans-unit id="item.contributor" approved="yes">
         <source>Contributor</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Colaborador</target>
+        <target state="final">Colaborador</target>
       </trans-unit>
-      <trans-unit id="item.copyright">
+      <trans-unit id="item.copyright" approved="yes">
         <source>Copyright</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Direitos autorais</target>
+        <target state="final">Direitos autorais</target>
       </trans-unit>
-      <trans-unit id="item.date">
+      <trans-unit id="item.date" approved="yes">
         <source>Date</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Encontro</target>
+        <target state="final">Encontro</target>
       </trans-unit>
-      <trans-unit id="item.updatedDate">
+      <trans-unit id="item.updatedDate" approved="yes">
         <source>Updated</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Atualizado</target>
+        <target state="final">Atualizado</target>
       </trans-unit>
-      <trans-unit id="item.links">
+      <trans-unit id="item.links" approved="yes">
         <source>Links</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Links</target>
+        <target state="final">Links</target>
       </trans-unit>
-      <trans-unit id="item.link">
+      <trans-unit id="item.link" approved="yes">
         <source>Link</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Vincular</target>
+        <target state="final">Vincular</target>
       </trans-unit>
-      <trans-unit id="item.enclosure">
+      <trans-unit id="item.enclosure" approved="yes">
         <source>Enclosure</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Anexo</target>
+        <target state="final">Anexo</target>
       </trans-unit>
-      <trans-unit id="item.enclosures">
+      <trans-unit id="item.enclosures" approved="yes">
         <source>Enclosures</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Fechas</target>
+        <target state="final">Fechas</target>
       </trans-unit>
-      <trans-unit id="item.latitude">
+      <trans-unit id="item.latitude" approved="yes">
         <source>Latitude</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Latitude</target>
+        <target state="final">Latitude</target>
       </trans-unit>
-      <trans-unit id="item.longitude">
+      <trans-unit id="item.longitude" approved="yes">
         <source>Longitude</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Longitude</target>
+        <target state="final">Longitude</target>
       </trans-unit>
-      <trans-unit id="item.source">
+      <trans-unit id="item.source" approved="yes">
         <source>Source</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">fonte</target>
+        <target state="final">fonte</target>
       </trans-unit>
-      <trans-unit id="errorMessage">
+      <trans-unit id="errorMessage" approved="yes">
         <source>Sorry, the feed could not be fetched.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Desculpe, o feed não pôde ser obtido.</target>
+        <target state="final">Desculpe, o feed não pôde ser obtido.</target>
       </trans-unit>
-      <trans-unit id="noTemplateError">
+      <trans-unit id="noTemplateError" approved="yes">
         <source>Feed Display: Please include static TypoScript [EXT:feed_display/Configuration/TypoScript/]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Exibição de Feed: Por favor incluir TypoScript estático [EXT:feed_display/Configuration/TypoScript/]</target>
+        <target state="final">Exibição de Feed: Por favor incluir TypoScript estático [EXT:feed_display/Configuration/TypoScript/]</target>
       </trans-unit>
-      <trans-unit id="noItemsError">
+      <trans-unit id="noItemsError" approved="yes">
         <source>Sorry, no items could be fetched.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Desculpe, não foi possível buscar nenhum item.</target>
+        <target state="final">Desculpe, não foi possível buscar nenhum item.</target>
       </trans-unit>
     </body>
   </file>
