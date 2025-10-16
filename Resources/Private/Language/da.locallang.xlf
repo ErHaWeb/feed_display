@@ -75,37 +75,37 @@
         <source>Link</source>
         <target state="final">Link</target>
       </trans-unit>
-      <trans-unit id="item.enclosure">
+      <trans-unit id="item.enclosure" approved="yes">
         <source>Enclosure</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Indlæg</target>
+        <target state="final">Indlæg</target>
       </trans-unit>
-      <trans-unit id="item.enclosures">
+      <trans-unit id="item.enclosures" approved="yes">
         <source>Enclosures</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Anlæg</target>
+        <target state="final">Anlæg</target>
       </trans-unit>
-      <trans-unit id="item.latitude">
+      <trans-unit id="item.latitude" approved="yes">
         <source>Latitude</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Breddegrad</target>
+        <target state="final">Breddegrad</target>
       </trans-unit>
-      <trans-unit id="item.longitude">
+      <trans-unit id="item.longitude" approved="yes">
         <source>Longitude</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Længdegrad</target>
+        <target state="final">Længdegrad</target>
       </trans-unit>
-      <trans-unit id="item.source">
+      <trans-unit id="item.source" approved="yes">
         <source>Source</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Kilde</target>
+        <target state="final">Kilde</target>
       </trans-unit>
-      <trans-unit id="errorMessage">
+      <trans-unit id="errorMessage" approved="yes">
         <source>Sorry, the feed could not be fetched.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Beklager, feedet kunne ikke hentes.</target>
+        <target state="final">Beklager, feedet kunne ikke hentes.</target>
       </trans-unit>
-      <trans-unit id="noTemplateError">
+      <trans-unit id="noTemplateError" approved="yes">
         <source>Feed Display: Please include static TypoScript [EXT:feed_display/Configuration/TypoScript/]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Feed Display: Vær venlig at inkludere statisk TypoScript [EXT:feed_display/Configuration/TypoScript/]</target>
+        <target state="final">Feed Display: Vær venlig at inkludere statisk TypoScript [EXT:feed_display/Configuration/TypoScript/]</target>
       </trans-unit>
-      <trans-unit id="noItemsError">
+      <trans-unit id="noItemsError" approved="yes">
         <source>Sorry, no items could be fetched.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Beklager, ingen elementer kunne hentes.</target>
+        <target state="final">Beklager, ingen elementer kunne hentes.</target>
       </trans-unit>
     </body>
   </file>
