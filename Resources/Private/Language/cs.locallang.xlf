@@ -3,109 +3,109 @@
   <file source-language="en" original="EXT:feed_display/Resources/Private/Language/locallang.xlf" datatype="plaintext" product-name="feed_display" date="2025-02-25T11:12:27+01:00" target-language="cs">
     <header/>
     <body>
-      <trans-unit id="feed.categories">
+      <trans-unit id="feed.categories" approved="yes">
         <source>Categories</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Kategorie</target>
+        <target state="final">Kategorie</target>
       </trans-unit>
-      <trans-unit id="feed.category">
+      <trans-unit id="feed.category" approved="yes">
         <source>Category</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Kategorie</target>
+        <target state="final">Kategorie</target>
       </trans-unit>
-      <trans-unit id="feed.authors">
+      <trans-unit id="feed.authors" approved="yes">
         <source>Authors</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Autoři</target>
+        <target state="final">Autoři</target>
       </trans-unit>
-      <trans-unit id="feed.author">
+      <trans-unit id="feed.author" approved="yes">
         <source>Author</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Autor</target>
+        <target state="final">Autor</target>
       </trans-unit>
-      <trans-unit id="feed.contributors">
+      <trans-unit id="feed.contributors" approved="yes">
         <source>Contributors</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Přispěvatelé</target>
+        <target state="final">Přispěvatelé</target>
       </trans-unit>
-      <trans-unit id="feed.contributor">
+      <trans-unit id="feed.contributor" approved="yes">
         <source>Contributor</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Přispěvatel</target>
+        <target state="final">Přispěvatel</target>
       </trans-unit>
-      <trans-unit id="feed.items">
+      <trans-unit id="feed.items" approved="yes">
         <source>Items</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Položky</target>
+        <target state="final">Položky</target>
       </trans-unit>
-      <trans-unit id="item.categories">
+      <trans-unit id="item.categories" approved="yes">
         <source>Categories</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Kategorie</target>
+        <target state="final">Kategorie</target>
       </trans-unit>
-      <trans-unit id="item.category">
+      <trans-unit id="item.category" approved="yes">
         <source>Category</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Kategorie</target>
+        <target state="final">Kategorie</target>
       </trans-unit>
-      <trans-unit id="item.authors">
+      <trans-unit id="item.authors" approved="yes">
         <source>Authors</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Autoři</target>
+        <target state="final">Autoři</target>
       </trans-unit>
-      <trans-unit id="item.author">
+      <trans-unit id="item.author" approved="yes">
         <source>Author</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Autor</target>
+        <target state="final">Autor</target>
       </trans-unit>
-      <trans-unit id="item.contributors">
+      <trans-unit id="item.contributors" approved="yes">
         <source>Contributors</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Přispěvatelé</target>
+        <target state="final">Přispěvatelé</target>
       </trans-unit>
-      <trans-unit id="item.contributor">
+      <trans-unit id="item.contributor" approved="yes">
         <source>Contributor</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Přispěvatel</target>
+        <target state="final">Přispěvatel</target>
       </trans-unit>
-      <trans-unit id="item.copyright">
+      <trans-unit id="item.copyright" approved="yes">
         <source>Copyright</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Autorská práva</target>
+        <target state="final">Autorská práva</target>
       </trans-unit>
-      <trans-unit id="item.date">
+      <trans-unit id="item.date" approved="yes">
         <source>Date</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Datum:</target>
+        <target state="final">Datum:</target>
       </trans-unit>
-      <trans-unit id="item.updatedDate">
+      <trans-unit id="item.updatedDate" approved="yes">
         <source>Updated</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Aktualizováno</target>
+        <target state="final">Aktualizováno</target>
       </trans-unit>
-      <trans-unit id="item.links">
+      <trans-unit id="item.links" approved="yes">
         <source>Links</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Odkazy</target>
+        <target state="final">Odkazy</target>
       </trans-unit>
-      <trans-unit id="item.link">
+      <trans-unit id="item.link" approved="yes">
         <source>Link</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Odkaz</target>
+        <target state="final">Odkaz</target>
       </trans-unit>
-      <trans-unit id="item.enclosure">
+      <trans-unit id="item.enclosure" approved="yes">
         <source>Enclosure</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Uzavření</target>
+        <target state="final">Uzavření</target>
       </trans-unit>
-      <trans-unit id="item.enclosures">
+      <trans-unit id="item.enclosures" approved="yes">
         <source>Enclosures</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Prostory</target>
+        <target state="final">Prostory</target>
       </trans-unit>
-      <trans-unit id="item.latitude">
+      <trans-unit id="item.latitude" approved="yes">
         <source>Latitude</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Zeměpisná šířka</target>
+        <target state="final">Zeměpisná šířka</target>
       </trans-unit>
-      <trans-unit id="item.longitude">
+      <trans-unit id="item.longitude" approved="yes">
         <source>Longitude</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Zeměpisná délka</target>
+        <target state="final">Zeměpisná délka</target>
       </trans-unit>
-      <trans-unit id="item.source">
+      <trans-unit id="item.source" approved="yes">
         <source>Source</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Zdroj</target>
+        <target state="final">Zdroj</target>
       </trans-unit>
-      <trans-unit id="errorMessage">
+      <trans-unit id="errorMessage" approved="yes">
         <source>Sorry, the feed could not be fetched.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Je nám líto, zdroj nelze načíst.</target>
+        <target state="final">Je nám líto, zdroj nelze načíst.</target>
       </trans-unit>
-      <trans-unit id="noTemplateError">
+      <trans-unit id="noTemplateError" approved="yes">
         <source>Feed Display: Please include static TypoScript [EXT:feed_display/Configuration/TypoScript/]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Zobrazení kanálu: Uveďte statický TypoScript [EXT:feed_display/Configuration/TypoScript/]</target>
+        <target state="final">Zobrazení kanálu: Uveďte statický TypoScript [EXT:feed_display/Configuration/TypoScript/]</target>
       </trans-unit>
-      <trans-unit id="noItemsError">
+      <trans-unit id="noItemsError" approved="yes">
         <source>Sorry, no items could be fetched.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Omlouváme se, nelze načíst žádné položky.</target>
+        <target state="final">Omlouváme se, nelze načíst žádné položky.</target>
       </trans-unit>
     </body>
   </file>
