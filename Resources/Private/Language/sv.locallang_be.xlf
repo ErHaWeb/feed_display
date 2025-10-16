@@ -5,511 +5,511 @@
     <body>
       <trans-unit id="pi1_title">
         <source>Feed Display</source>
-        <target state="needs-translation">Feed Display</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Flöde Display</target>
       </trans-unit>
       <trans-unit id="pi1_plus_wiz_description">
         <source>RSS/Atom web feed parsing and frontend display based on Extbase/Fluid</source>
-        <target state="needs-translation">RSS/Atom web feed parsing and frontend display based on Extbase/Fluid</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">RSS/Atom webbfeed parsing och frontend display baserad på Extbase/Fluid</target>
       </trans-unit>
       <trans-unit id="flexform.sheet_general.title">
         <source>General</source>
-        <target state="needs-translation">General</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Allmänt</target>
       </trans-unit>
       <trans-unit id="flexform.sheet_general.description">
         <source>These are general settings for the frontend display of the feed. If no value is given, then the value of the TypoScript configuration is used by default.</source>
-        <target state="needs-translation">These are general settings for the frontend display of the feed. If no value is given, then the value of the TypoScript configuration is used by default.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Detta är allmänna inställningar för frontend visning av flödet. Om inget värde anges, används värdet av TypoScript-konfigurationen som standard.</target>
       </trans-unit>
       <trans-unit id="flexform.feedUrl.label">
         <source>Feed URL</source>
-        <target state="needs-translation">Feed URL</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">URL för flöde</target>
       </trans-unit>
       <trans-unit id="flexform.feedUrl.description">
         <source>URL that is fetched by the service (empty = Defined by TypoScript)</source>
-        <target state="needs-translation">URL that is fetched by the service (empty = Defined by TypoScript)</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">URL som hämtas av tjänsten (tom = Definieras av TypoScript)</target>
       </trans-unit>
       <trans-unit id="flexform.maxFeedCount.label">
         <source>Max. items</source>
-        <target state="needs-translation">Max. items</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Max. artiklar</target>
       </trans-unit>
       <trans-unit id="flexform.maxFeedCount.description">
         <source>Maximum feed items to show (0 or empty = Defined by TypoScript)</source>
-        <target state="needs-translation">Maximum feed items to show (0 or empty = Defined by TypoScript)</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Maximalt antal matningsobjekt att visa (0 eller tomma = Definieras av TypoScript)</target>
       </trans-unit>
       <trans-unit id="flexform.maxContentLength.label">
         <source>Max. content length</source>
-        <target state="needs-translation">Max. content length</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Maximal innehållslängd</target>
       </trans-unit>
       <trans-unit id="flexform.maxContentLength.description">
         <source>Crop the characters of the feed content to the configured length (0 or empty = Defined by TypoScript)</source>
-        <target state="needs-translation">Crop the characters of the feed content to the configured length (0 or empty = Defined by TypoScript)</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Beskär tecknen i flödesinnehållet till den konfigurerade längden (0 eller tomma = Definieras av TypoScript)</target>
       </trans-unit>
       <trans-unit id="flexform.maxHeaderLength.label">
         <source>Max. header length</source>
-        <target state="needs-translation">Max. header length</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Max. sidhuvudslängd</target>
       </trans-unit>
       <trans-unit id="flexform.maxHeaderLength.description">
         <source>Crop the characters of the feed header to the configured length (0 or empty = Defined by TypoScript)</source>
-        <target state="needs-translation">Crop the characters of the feed header to the configured length (0 or empty = Defined by TypoScript)</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Beskär tecknen i flödeshuvudet till den konfigurerade längden (0 eller tomma = Definieras av TypoScript)</target>
       </trans-unit>
       <trans-unit id="flexform.linkTarget.label">
         <source>Target</source>
-        <target state="needs-translation">Target</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Target</target>
       </trans-unit>
       <trans-unit id="flexform.linkTarget.description">
         <source>Target attribute to define the feed link behavior</source>
-        <target state="needs-translation">Target attribute to define the feed link behavior</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Mål attribut för att definiera flödeslänkens beteende</target>
       </trans-unit>
       <trans-unit id="flexform.linkTarget.I.default">
         <source>Defined by TypoScript (default)</source>
-        <target state="needs-translation">Defined by TypoScript (default)</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Definierad av TypoScript (standard)</target>
       </trans-unit>
       <trans-unit id="flexform.linkTarget.I.blank">
         <source>Opens in a new window or tab</source>
-        <target state="needs-translation">Opens in a new window or tab</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Öppnas i ett nytt fönster eller flik</target>
       </trans-unit>
       <trans-unit id="flexform.linkTarget.I.self">
         <source>Opens in the same frame as it was clicked</source>
-        <target state="needs-translation">Opens in the same frame as it was clicked</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Öppnar i samma ram som det klickades på.</target>
       </trans-unit>
       <trans-unit id="flexform.linkTarget.I.parent">
         <source>Opens in the parent frame</source>
-        <target state="needs-translation">Opens in the parent frame</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Öppnar i överordnad ram</target>
       </trans-unit>
       <trans-unit id="flexform.linkTarget.I.top">
         <source>Opens in the full body of the window</source>
-        <target state="needs-translation">Opens in the full body of the window</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Öppnas i hela kroppen av fönstret</target>
       </trans-unit>
       <trans-unit id="flexform.logoMaxWidth.label">
         <source>Logo max. width</source>
-        <target state="needs-translation">Logo max. width</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Logotyp max. bredd</target>
       </trans-unit>
       <trans-unit id="flexform.logoMaxWidth.description">
         <source>Maximum width of the feeds logo image (0 or empty = Defined by TypoScript)</source>
-        <target state="needs-translation">Maximum width of the feeds logo image (0 or empty = Defined by TypoScript)</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Maximal bredd på feeds logotyp bild (0 eller tom = Definieras av TypoScript)</target>
       </trans-unit>
       <trans-unit id="flexform.logoMaxHeight.label">
         <source>Logo max. height</source>
-        <target state="needs-translation">Logo max. height</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Logotyp max. höjd</target>
       </trans-unit>
       <trans-unit id="flexform.logoMaxHeight.description">
         <source>Maximum height of the feeds logo image (0 or empty = Defined by TypoScript)</source>
-        <target state="needs-translation">Maximum height of the feeds logo image (0 or empty = Defined by TypoScript)</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Maximal höjd för feeds logotyp bild (0 eller tom = Definieras av TypoScript)</target>
       </trans-unit>
       <trans-unit id="flexform.feedIconMaxWidth.label">
         <source>Feed icon max. width</source>
-        <target state="needs-translation">Feed icon max. width</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Feed ikon max. bredd</target>
       </trans-unit>
       <trans-unit id="flexform.feedIconMaxWidth.description">
         <source>Maximum width of the feeds icon image (0 or empty = Defined by TypoScript)</source>
-        <target state="needs-translation">Maximum width of the feeds icon image (0 or empty = Defined by TypoScript)</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Maximal bredd på ikonbilden för feeds (0 eller tom = Definieras av TypoScript)</target>
       </trans-unit>
       <trans-unit id="flexform.feedIconMaxHeight.label">
         <source>Feed icon max. height</source>
-        <target state="needs-translation">Feed icon max. height</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Feed ikon max. höjd</target>
       </trans-unit>
       <trans-unit id="flexform.feedIconMaxHeight.description">
         <source>Maximum height of the feeds icon image (0 or empty = Defined by TypoScript)</source>
-        <target state="needs-translation">Maximum height of the feeds icon image (0 or empty = Defined by TypoScript)</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Maximal höjd på ikonbilden för feeds (0 eller tom = Definieras av TypoScript)</target>
       </trans-unit>
       <trans-unit id="flexform.errorMessage.label">
         <source>Error message</source>
-        <target state="needs-translation">Error message</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Felmeddelande</target>
       </trans-unit>
       <trans-unit id="flexform.errorMessage.description">
         <source>This message is displayed if no feed items could be fetched (empty = Defined by TypoScript)</source>
-        <target state="needs-translation">This message is displayed if no feed items could be fetched (empty = Defined by TypoScript)</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Detta meddelande visas om inga flödesobjekt kunde hämtas (tomt = Definierat av TypoScript)</target>
       </trans-unit>
       <trans-unit id="flexform.sheet_advanced.title">
         <source>Advanced</source>
-        <target state="needs-translation">Advanced</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Avancerat</target>
       </trans-unit>
       <trans-unit id="flexform.sheet_advanced.description">
         <source>These are advanced settings. If you are unsure, simply use the default values here. If no value is given, then the value of the TypoScript configuration is used by default.</source>
-        <target state="needs-translation">These are advanced settings. If you are unsure, simply use the default values here. If no value is given, then the value of the TypoScript configuration is used by default.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Dessa är avancerade inställningar. Om du är osäker, använd bara standardvärdena här. Om inget värde anges, används värdet av TypoScript-konfigurationen som standard.</target>
       </trans-unit>
       <trans-unit id="flexform.dateFormat.label">
         <source>Date format</source>
-        <target state="needs-translation">Date format</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Datumformat</target>
       </trans-unit>
       <trans-unit id="flexform.dateFormat.description">
         <source>Use PHP's strftime() function format (empty = Defined by TypoScript)</source>
-        <target state="needs-translation">Use PHP's strftime() function format (empty = Defined by TypoScript)</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Använd PHP:s strftime() funktionsformat (tomt = Definierat av TypoScript)</target>
       </trans-unit>
       <trans-unit id="flexform.stripTags.label">
         <source>Strip tags</source>
-        <target state="needs-translation">Strip tags</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ta bort taggar</target>
       </trans-unit>
       <trans-unit id="flexform.stripTags.description">
         <source>Remove HTML tags from the feed content</source>
-        <target state="needs-translation">Remove HTML tags from the feed content</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ta bort HTML-taggar från flödets innehåll</target>
       </trans-unit>
       <trans-unit id="flexform.stripTags.I.yes">
         <source>yes</source>
-        <target state="needs-translation">yes</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">ja</target>
       </trans-unit>
       <trans-unit id="flexform.stripTags.I.no">
         <source>no</source>
-        <target state="needs-translation">no</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">nej</target>
       </trans-unit>
       <trans-unit id="flexform.cacheDuration.label">
         <source>Feed cache</source>
-        <target state="needs-translation">Feed cache</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Flöde cache</target>
       </trans-unit>
       <trans-unit id="flexform.cacheDuration.description">
         <source>Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache, empty = Defined by TypoScript)</source>
-        <target state="needs-translation">Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache, empty = Defined by TypoScript)</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Tid i sekunder där data ska läsas från cachen till nästa förnyelse av cachen. (0 = ingen cache, tom = Definierad av TypoScript)</target>
       </trans-unit>
       <trans-unit id="flexform.placeholder.feed">
         <source>Defined by Feed or TypoScript (default)</source>
-        <target state="needs-translation">Defined by Feed or TypoScript (default)</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Definierat av Feed eller TypoScript (standard)</target>
       </trans-unit>
       <trans-unit id="flexform.placeholder.typoscript">
         <source>Defined by TypoScript (default)</source>
-        <target state="needs-translation">Defined by TypoScript (default)</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Definierad av TypoScript (standard)</target>
       </trans-unit>
       <trans-unit id="flexform.sheet_getFields.title">
         <source>Get Fields</source>
-        <target state="needs-translation">Get Fields</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Hämta fält</target>
       </trans-unit>
       <trans-unit id="flexform.sheet_getFields.description">
         <source>Select here which fields from the feed and feed items should be read using the SimplePie library and should be available as variables in the fluid template. If no fields were selected, then the TypoScript configuration is used.</source>
-        <target state="needs-translation">Select here which fields from the feed and feed items should be read using the SimplePie library and should be available as variables in the fluid template. If no fields were selected, then the TypoScript configuration is used.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Välj här vilka fält från foder och matningsobjekt som ska läsas med hjälp av biblioteket SimplePie och ska vara tillgängliga som variabler i den flytande mallen. Om inga fält har valts används TypoScript-konfigurationen.</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.label">
         <source>Get fields from feed</source>
-        <target state="needs-translation">Get fields from feed</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Hämta fält från flöde</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.description">
         <source>Selection of the fields to be read from the feed.</source>
-        <target state="needs-translation">Selection of the fields to be read from the feed.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Val av de fält som ska läsas från flödet.</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.group.feed">
         <source>Feed</source>
-        <target state="needs-translation">Feed</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Flöde</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.author">
         <source>Author</source>
-        <target state="needs-translation">Author</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Författare</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.authors">
         <source>Authors</source>
-        <target state="needs-translation">Authors</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Författare</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.contributor">
         <source>Contributor</source>
-        <target state="needs-translation">Contributor</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Bidragsgivare</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.contributors">
         <source>Contributors</source>
-        <target state="needs-translation">Contributors</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Bidragsgivare</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.copyright">
         <source>Copyright</source>
-        <target state="needs-translation">Copyright</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Upphovsrätt</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.description">
         <source>Description</source>
-        <target state="needs-translation">Description</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Beskrivning</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.encoding">
         <source>Encoding</source>
-        <target state="needs-translation">Encoding</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Kodning</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.favicon">
         <source>Favicon</source>
-        <target state="needs-translation">Favicon</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Favicon</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.items">
         <source>Items</source>
-        <target state="needs-translation">Items</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Objekt</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.item_quantity">
         <source>Item_quantity</source>
-        <target state="needs-translation">Item_quantity</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Objektkvantitet</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.language">
         <source>Language</source>
-        <target state="needs-translation">Language</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Språk</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.link">
         <source>Link</source>
-        <target state="needs-translation">Link</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Länk</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.links">
         <source>Links</source>
-        <target state="needs-translation">Links</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Länkar</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.permalink">
         <source>Permalink</source>
-        <target state="needs-translation">Permalink</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Permalänk</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.title">
         <source>Title</source>
-        <target state="needs-translation">Title</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Titel</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.type">
         <source>Type</source>
-        <target state="needs-translation">Type</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Typ</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.latitude">
         <source>Latitude</source>
-        <target state="needs-translation">Latitude</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Latitud</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.longitude">
         <source>Longitude</source>
-        <target state="needs-translation">Longitude</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Longitud</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.image_height">
         <source>Image Height</source>
-        <target state="needs-translation">Image Height</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Bildens höjd</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.image_link">
         <source>Image Link</source>
-        <target state="needs-translation">Image Link</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Bild länk</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.image_title">
         <source>Image Title</source>
-        <target state="needs-translation">Image Title</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Bildens titel</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.image_url">
         <source>Image URL</source>
-        <target state="needs-translation">Image URL</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Bild URL</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.image_width">
         <source>Image Width</source>
-        <target state="needs-translation">Image Width</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Bildens bredd</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.all_discovered_feeds">
         <source>All Discovered Feeds</source>
-        <target state="needs-translation">All Discovered Feeds</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Alla upptäckta flöden</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.base">
         <source>Base</source>
-        <target state="needs-translation">Base</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Bas</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.subscribe_url">
         <source>Subscribe URL</source>
-        <target state="needs-translation">Subscribe URL</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Subscribe URL</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.label">
         <source>Get fields from feed items</source>
-        <target state="needs-translation">Get fields from feed items</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Hämta fält från flödesobjekt</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.description">
         <source>Selection of the fields to be read from the feed items.</source>
-        <target state="needs-translation">Selection of the fields to be read from the feed items.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Val av de fält som ska läsas från foder objekt.</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.group.items">
         <source>Items</source>
-        <target state="needs-translation">Items</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Objekt</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.author">
         <source>Author</source>
-        <target state="needs-translation">Author</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Författare</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.authors">
         <source>Authors</source>
-        <target state="needs-translation">Authors</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Författare</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.categories">
         <source>Categories</source>
-        <target state="needs-translation">Categories</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Kategorier</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.category">
         <source>Category</source>
-        <target state="needs-translation">Category</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Kategori</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.content">
         <source>Content</source>
-        <target state="needs-translation">Content</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Innehåll</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.contributor">
         <source>Contributor</source>
-        <target state="needs-translation">Contributor</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Bidragsgivare</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.contributors">
         <source>Contributors</source>
-        <target state="needs-translation">Contributors</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Bidragsgivare</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.copyright">
         <source>Copyright</source>
-        <target state="needs-translation">Copyright</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Upphovsrätt</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.date|U">
         <source>Date (with parameter "U")</source>
-        <target state="needs-translation">Date (with parameter "U")</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Datum (med parameter "U")</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.description">
         <source>Description</source>
-        <target state="needs-translation">Description</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Beskrivning</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.enclosure">
         <source>Enclosure</source>
-        <target state="needs-translation">Enclosure</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Kapsling</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.enclosures">
         <source>Enclosures</source>
-        <target state="needs-translation">Enclosures</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Bilagor</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.feed">
         <source>Feed</source>
-        <target state="needs-translation">Feed</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Flöde</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.id">
         <source>ID</source>
-        <target state="needs-translation">ID</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">ID</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.link">
         <source>Link</source>
-        <target state="needs-translation">Link</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Länk</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.links">
         <source>Links</source>
-        <target state="needs-translation">Links</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Länkar</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.local_date|">
         <source>Local Date (with empty parameter)</source>
-        <target state="needs-translation">Local Date (with empty parameter)</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Lokalt datum (med tom parameter)</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.permalink">
         <source>Permalink</source>
-        <target state="needs-translation">Permalink</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Permalänk</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.source">
         <source>Source</source>
-        <target state="needs-translation">Source</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Källa</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.title">
         <source>Title</source>
-        <target state="needs-translation">Title</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Titel</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.latitude">
         <source>Latitude</source>
-        <target state="needs-translation">Latitude</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Latitud</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.longitude">
         <source>Longitude</source>
-        <target state="needs-translation">Longitude</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Longitud</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.base">
         <source>Base</source>
-        <target state="needs-translation">Base</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Bas</target>
       </trans-unit>
       <trans-unit id="constants.customcategory.plugin.tx_feeddisplay_pi1">
         <source>Feed Display</source>
-        <target state="needs-translation">Feed Display</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Flöde Display</target>
       </trans-unit>
       <trans-unit id="constants.subcategory.general">
         <source>General</source>
-        <target state="needs-translation">General</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Allmänt</target>
       </trans-unit>
       <trans-unit id="constants.subcategory.advanced">
         <source>Advanced</source>
-        <target state="needs-translation">Advanced</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Avancerat</target>
       </trans-unit>
       <trans-unit id="constants.subcategory.getFields">
         <source>Fields to get from Feed and Items</source>
-        <target state="needs-translation">Fields to get from Feed and Items</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Fält att hämta från Feed och objekt</target>
       </trans-unit>
       <trans-unit id="constants.view.templateRootPath">
         <source>Path to template root (FE)</source>
-        <target state="needs-translation">Path to template root (FE)</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Sökväg till mallroten (FE)</target>
       </trans-unit>
       <trans-unit id="constants.view.partialRootPath">
         <source>Path to template partials (FE)</source>
-        <target state="needs-translation">Path to template partials (FE)</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Sökväg till mallpartialer (FE)</target>
       </trans-unit>
       <trans-unit id="constants.view.layoutRootPath">
         <source>Path to template layouts (FE)</source>
-        <target state="needs-translation">Path to template layouts (FE)</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Sökväg till malllayouter (FE)</target>
       </trans-unit>
       <trans-unit id="constants.settings.feedUrl">
         <source>Feed URL:URL that is fetched by the service</source>
-        <target state="needs-translation">Feed URL:URL that is fetched by the service</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Feed-URL::URL som hämtas av tjänsten</target>
       </trans-unit>
       <trans-unit id="constants.settings.maxFeedCount">
         <source>Max. items:Maximum feed items to show</source>
-        <target state="needs-translation">Max. items:Maximum feed items to show</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Max. objekt: Maximalt flöde objekt att visa</target>
       </trans-unit>
       <trans-unit id="constants.settings.maxContentLength">
         <source>Max. content length:Crop the characters of the feed content to the configured length</source>
-        <target state="needs-translation">Max. content length:Crop the characters of the feed content to the configured length</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Max. innehållslängd: Beskär karaktärerna i flödesinnehållet till den konfigurerade längden</target>
       </trans-unit>
       <trans-unit id="constants.settings.maxHeaderLength">
         <source>Max. header length:Crop the characters of the feed header to the configured length</source>
-        <target state="needs-translation">Max. header length:Crop the characters of the feed header to the configured length</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Max. sidhuvudslängd: Beskär karaktärerna i foderhuvudet till den konfigurerade längden</target>
       </trans-unit>
       <trans-unit id="constants.settings.linkTarget">
         <source>Target:Target attribute to define the feed link behavior</source>
-        <target state="needs-translation">Target:Target attribute to define the feed link behavior</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Mål: Målattribut för att definiera flödeslänkens beteende</target>
       </trans-unit>
       <trans-unit id="constants.settings.linkTarget.I.default">
         <source>Defined by TypoScript (default)</source>
-        <target state="needs-translation">Defined by TypoScript (default)</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Definierad av TypoScript (standard)</target>
       </trans-unit>
       <trans-unit id="constants.settings.linkTarget.I.blank">
         <source>Opens in a new window or tab</source>
-        <target state="needs-translation">Opens in a new window or tab</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Öppnas i ett nytt fönster eller flik</target>
       </trans-unit>
       <trans-unit id="constants.settings.linkTarget.I.self">
         <source>Opens in the same frame as it was clicked</source>
-        <target state="needs-translation">Opens in the same frame as it was clicked</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Öppnar i samma ram som det klickades på.</target>
       </trans-unit>
       <trans-unit id="constants.settings.linkTarget.I.parent">
         <source>Opens in the parent frame</source>
-        <target state="needs-translation">Opens in the parent frame</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Öppnar i överordnad ram</target>
       </trans-unit>
       <trans-unit id="constants.settings.linkTarget.I.top">
         <source>Opens in the full body of the window</source>
-        <target state="needs-translation">Opens in the full body of the window</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Öppnas i hela kroppen av fönstret</target>
       </trans-unit>
       <trans-unit id="constants.settings.logoMaxWidth">
         <source>Logo width:Width of the feeds logo image</source>
-        <target state="needs-translation">Logo width:Width of the feeds logo image</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Logotyp bredd: Bredd på feeds logotyp bild</target>
       </trans-unit>
       <trans-unit id="constants.settings.logoMaxHeight">
         <source>Logo height:Height of the feeds logo image</source>
-        <target state="needs-translation">Logo height:Height of the feeds logo image</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Logotypen höjd: Höjden på feeds logotyp bild</target>
       </trans-unit>
       <trans-unit id="constants.settings.feedIconMaxWidth">
         <source>Feed icon width:Width of the feeds icon image</source>
-        <target state="needs-translation">Feed icon width:Width of the feeds icon image</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Feed ikon bredd: Bredd på feeds ikon bild</target>
       </trans-unit>
       <trans-unit id="constants.settings.feedIconMaxHeight">
         <source>Feed icon height:Height of the feeds icon image</source>
-        <target state="needs-translation">Feed icon height:Height of the feeds icon image</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Feed ikon höjd:Höjden på feeds ikon bild</target>
       </trans-unit>
       <trans-unit id="constants.settings.errorMessage">
         <source>Error message:This message is displayed if no feed items could be fetched</source>
-        <target state="needs-translation">Error message:This message is displayed if no feed items could be fetched</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Felmeddelande: Detta meddelande visas om inga flödesobjekt kunde hämtas</target>
       </trans-unit>
       <trans-unit id="constants.settings.dateFormat">
         <source>Date format:Use PHP's strftime() function format</source>
-        <target state="needs-translation">Date format:Use PHP's strftime() function format</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Datumformat:Använd PHP:s strftime() funktionsformat</target>
       </trans-unit>
       <trans-unit id="constants.settings.stripTags">
         <source>Strip tags:Remove HTML tags from the feed content</source>
-        <target state="needs-translation">Strip tags:Remove HTML tags from the feed content</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ta bort taggar:Ta bort HTML-taggar från flödets innehåll</target>
       </trans-unit>
       <trans-unit id="constants.settings.cacheDuration">
         <source>Feed cache:Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</source>
-        <target state="needs-translation">Feed cache:Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Feed cache:Tid i sekunder där data ska läsas från cachen till nästa förnyelse av cachen. (0 = ingen cache)</target>
       </trans-unit>
       <trans-unit id="constants.settings.ignoreFlexFormSettingsIfEmpty">
         <source>Ignore FlexForm Settings if empty:Comma separated list of FlexForm settings that will be ignored in the extension settings merge process, if their value is considered empty (either an empty string or a string containing 0).</source>
-        <target state="needs-translation">Ignore FlexForm Settings if empty:Comma separated list of FlexForm settings that will be ignored in the extension settings merge process, if their value is considered empty (either an empty string or a string containing 0).</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ignorera FlexForm-inställningar om tom:Kommaseparerad lista med FlexForm-inställningar som kommer att ignoreras i sammanslagningsprocessen för tilläggsinställningar, om deras värde anses vara tomt (antingen en tom sträng eller en sträng som innehåller 0).</target>
       </trans-unit>
       <trans-unit id="constants.settings.getFields.feed">
         <source>Feed fields to get:Comma-separated list of fields to be read from the feed by SimplePie and made available as variables in Fluid.</source>
-        <target state="needs-translation">Feed fields to get:Comma-separated list of fields to be read from the feed by SimplePie and made available as variables in Fluid.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Flödesfält att få:Kommaseparerad lista över fält som ska läsas från flödet av SimplePie och göras tillgänglig som variabler i Fluid.</target>
       </trans-unit>
       <trans-unit id="constants.settings.getFields.items">
         <source>Feed items fields to get:Comma-separated list of fields to be read from the feed items by SimplePie and made available as variables in Fluid.</source>
-        <target state="needs-translation">Feed items fields to get:Comma-separated list of fields to be read from the feed items by SimplePie and made available as variables in Fluid.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Mata objekt fält att få:Kommaseparerad lista över fält som ska läsas från foder objekt av SimplePie och görs tillgängliga som variabler i Fluid.</target>
       </trans-unit>
       <trans-unit id="sets.feeddisplay.label">
         <source>Feed Display</source>
-        <target state="needs-translation">Feed Display</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Flöde Display</target>
       </trans-unit>
     </body>
   </file>
