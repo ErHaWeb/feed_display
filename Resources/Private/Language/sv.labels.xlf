@@ -3,189 +3,189 @@
   <file source-language="en" original="EXT:feed_display/Configuration/Sets/FeedDisplay/labels.xlf" datatype="plaintext" product-name="feed_display" date="2024-10-25T17:35:40+02:00" target-language="sv-SE">
     <header/>
     <body>
-      <trans-unit id="label" resname="label">
+      <trans-unit id="label" resname="label" approved="yes">
         <source>Feed Display</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Flöde Display</target>
+        <target state="final">Flöde Display</target>
       </trans-unit>
-      <trans-unit id="categories.feeddisplay" resname="categories.feeddisplay">
+      <trans-unit id="categories.feeddisplay" resname="categories.feeddisplay" approved="yes">
         <source>Feed Display</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Flöde Display</target>
+        <target state="final">Flöde Display</target>
       </trans-unit>
-      <trans-unit id="categories.feeddisplay.templates" resname="categories.feeddisplay.templates">
+      <trans-unit id="categories.feeddisplay.templates" resname="categories.feeddisplay.templates" approved="yes">
         <source>Templates</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Mallar</target>
+        <target state="final">Mallar</target>
       </trans-unit>
-      <trans-unit id="categories.feeddisplay.general" resname="categories.feeddisplay.general">
+      <trans-unit id="categories.feeddisplay.general" resname="categories.feeddisplay.general" approved="yes">
         <source>General</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Allmänt</target>
+        <target state="final">Allmänt</target>
       </trans-unit>
-      <trans-unit id="categories.feeddisplay.advanced" resname="categories.feeddisplay.advanced">
+      <trans-unit id="categories.feeddisplay.advanced" resname="categories.feeddisplay.advanced" approved="yes">
         <source>Advanced</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Avancerat</target>
+        <target state="final">Avancerat</target>
       </trans-unit>
-      <trans-unit id="categories.feeddisplay.getFields" resname="categories.feeddisplay.getFields">
+      <trans-unit id="categories.feeddisplay.getFields" resname="categories.feeddisplay.getFields" approved="yes">
         <source>Get Fields</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Hämta fält</target>
+        <target state="final">Hämta fält</target>
       </trans-unit>
-      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.view.templateRootPath" resname="settings.plugin.tx_feeddisplay_pi1.view.templateRootPath">
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.view.templateRootPath" resname="settings.plugin.tx_feeddisplay_pi1.view.templateRootPath" approved="yes">
         <source>Path to template root (FE)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Sökväg till mallroten (FE)</target>
+        <target state="final">Sökväg till mallroten (FE)</target>
       </trans-unit>
-      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.view.partialRootPath" resname="settings.plugin.tx_feeddisplay_pi1.view.partialRootPath">
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.view.partialRootPath" resname="settings.plugin.tx_feeddisplay_pi1.view.partialRootPath" approved="yes">
         <source>Path to template partials (FE)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Sökväg till mallpartialer (FE)</target>
+        <target state="final">Sökväg till mallpartialer (FE)</target>
       </trans-unit>
-      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.view.layoutRootPath" resname="settings.plugin.tx_feeddisplay_pi1.view.layoutRootPath">
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.view.layoutRootPath" resname="settings.plugin.tx_feeddisplay_pi1.view.layoutRootPath" approved="yes">
         <source>Path to template layouts (FE)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Sökväg till malllayouter (FE)</target>
+        <target state="final">Sökväg till malllayouter (FE)</target>
       </trans-unit>
-      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.feedUrl" resname="settings.plugin.tx_feeddisplay_pi1.settings.feedUrl">
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.feedUrl" resname="settings.plugin.tx_feeddisplay_pi1.settings.feedUrl" approved="yes">
         <source>Feed URL</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">URL för flöde</target>
+        <target state="final">URL för flöde</target>
       </trans-unit>
-      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.feedUrl" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.feedUrl">
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.feedUrl" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.feedUrl" approved="yes">
         <source>URL that is fetched by the service</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">URL som hämtas av tjänsten</target>
+        <target state="final">URL som hämtas av tjänsten</target>
       </trans-unit>
-      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.maxFeedCount" resname="settings.plugin.tx_feeddisplay_pi1.settings.maxFeedCount">
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.maxFeedCount" resname="settings.plugin.tx_feeddisplay_pi1.settings.maxFeedCount" approved="yes">
         <source>Max. items</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Max. artiklar</target>
+        <target state="final">Max. artiklar</target>
       </trans-unit>
-      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.maxFeedCount" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.maxFeedCount">
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.maxFeedCount" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.maxFeedCount" approved="yes">
         <source>Maximum feed items to show</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Maximalt antal matningsobjekt att visa</target>
+        <target state="final">Maximalt antal matningsobjekt att visa</target>
       </trans-unit>
-      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.maxContentLength" resname="settings.plugin.tx_feeddisplay_pi1.settings.maxContentLength">
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.maxContentLength" resname="settings.plugin.tx_feeddisplay_pi1.settings.maxContentLength" approved="yes">
         <source>Max. content length</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Maximal innehållslängd</target>
+        <target state="final">Maximal innehållslängd</target>
       </trans-unit>
-      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.maxContentLength" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.maxContentLength">
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.maxContentLength" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.maxContentLength" approved="yes">
         <source>Crop the characters of the feed content to the configured length</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Beskär karaktärerna i flödets innehåll till den konfigurerade längden</target>
+        <target state="final">Beskär karaktärerna i flödets innehåll till den konfigurerade längden</target>
       </trans-unit>
-      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.maxHeaderLength" resname="settings.plugin.tx_feeddisplay_pi1.settings.maxHeaderLength">
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.maxHeaderLength" resname="settings.plugin.tx_feeddisplay_pi1.settings.maxHeaderLength" approved="yes">
         <source>Max. header length</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Max. sidhuvudslängd</target>
+        <target state="final">Max. sidhuvudslängd</target>
       </trans-unit>
-      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.maxHeaderLength" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.maxHeaderLength">
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.maxHeaderLength" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.maxHeaderLength" approved="yes">
         <source>Crop the characters of the feed header to the configured length</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Beskär karaktärerna i flödeshuvudet till den konfigurerade längden</target>
+        <target state="final">Beskär karaktärerna i flödeshuvudet till den konfigurerade längden</target>
       </trans-unit>
-      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget">
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget" approved="yes">
         <source>Target</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Target</target>
+        <target state="final">Target</target>
       </trans-unit>
-      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.linkTarget" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.linkTarget">
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.linkTarget" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.linkTarget" approved="yes">
         <source>Target attribute to define the feed link behavior</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Mål attribut för att definiera flödeslänkens beteende</target>
+        <target state="final">Mål attribut för att definiera flödeslänkens beteende</target>
       </trans-unit>
-      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.default" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.default">
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.default" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.default" approved="yes">
         <source>Defined by TypoScript (default)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Definierad av TypoScript (standard)</target>
+        <target state="final">Definierad av TypoScript (standard)</target>
       </trans-unit>
-      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.blank" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.blank">
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.blank" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.blank" approved="yes">
         <source>Opens in a new window or tab</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Öppnas i ett nytt fönster eller flik</target>
+        <target state="final">Öppnas i ett nytt fönster eller flik</target>
       </trans-unit>
-      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.self" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.self">
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.self" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.self" approved="yes">
         <source>Opens in the same frame as it was clicked</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Öppnar i samma ram som det klickades på.</target>
+        <target state="final">Öppnar i samma ram som det klickades på.</target>
       </trans-unit>
-      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.parent" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.parent">
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.parent" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.parent" approved="yes">
         <source>Opens in the parent frame</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Öppnar i överordnad ram</target>
+        <target state="final">Öppnar i överordnad ram</target>
       </trans-unit>
-      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.top" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.top">
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.top" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.top" approved="yes">
         <source>Opens in the full body of the window</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Öppnas i hela kroppen av fönstret</target>
+        <target state="final">Öppnas i hela kroppen av fönstret</target>
       </trans-unit>
-      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.logoMaxWidth" resname="settings.plugin.tx_feeddisplay_pi1.settings.logoMaxWidth">
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.logoMaxWidth" resname="settings.plugin.tx_feeddisplay_pi1.settings.logoMaxWidth" approved="yes">
         <source>Logo width</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Logotyp bredd</target>
+        <target state="final">Logotyp bredd</target>
       </trans-unit>
-      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.logoMaxWidth" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.logoMaxWidth">
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.logoMaxWidth" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.logoMaxWidth" approved="yes">
         <source>Width of the feeds logo image</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Bredd på feeds logotyp bild</target>
+        <target state="final">Bredd på feeds logotyp bild</target>
       </trans-unit>
-      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.logoMaxHeight" resname="settings.plugin.tx_feeddisplay_pi1.settings.logoMaxHeight">
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.logoMaxHeight" resname="settings.plugin.tx_feeddisplay_pi1.settings.logoMaxHeight" approved="yes">
         <source>Logo height</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Logotyp höjd</target>
+        <target state="final">Logotyp höjd</target>
       </trans-unit>
-      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.logoMaxHeight" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.logoMaxHeight">
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.logoMaxHeight" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.logoMaxHeight" approved="yes">
         <source>Height of the feeds logo image</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Höjd på feeds logotyp bild</target>
+        <target state="final">Höjd på feeds logotyp bild</target>
       </trans-unit>
-      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.feedIconMaxWidth" resname="settings.plugin.tx_feeddisplay_pi1.settings.feedIconMaxWidth">
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.feedIconMaxWidth" resname="settings.plugin.tx_feeddisplay_pi1.settings.feedIconMaxWidth" approved="yes">
         <source>Feed icon width</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Feed ikonens bredd</target>
+        <target state="final">Feed ikonens bredd</target>
       </trans-unit>
-      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.feedIconMaxWidth" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.feedIconMaxWidth">
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.feedIconMaxWidth" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.feedIconMaxWidth" approved="yes">
         <source>Width of the feeds icon image</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Bredd på ikonbilden för feeds</target>
+        <target state="final">Bredd på ikonbilden för feeds</target>
       </trans-unit>
-      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.feedIconMaxHeight" resname="settings.plugin.tx_feeddisplay_pi1.settings.feedIconMaxHeight">
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.feedIconMaxHeight" resname="settings.plugin.tx_feeddisplay_pi1.settings.feedIconMaxHeight" approved="yes">
         <source>Feed icon height</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Flöde ikon höjd</target>
+        <target state="final">Flöde ikon höjd</target>
       </trans-unit>
-      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.feedIconMaxHeight" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.feedIconMaxHeight">
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.feedIconMaxHeight" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.feedIconMaxHeight" approved="yes">
         <source>Height of the feeds icon image</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Höjden på ikonbilden för flödena</target>
+        <target state="final">Höjden på ikonbilden för flödena</target>
       </trans-unit>
-      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.errorMessage" resname="settings.plugin.tx_feeddisplay_pi1.settings.errorMessage">
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.errorMessage" resname="settings.plugin.tx_feeddisplay_pi1.settings.errorMessage" approved="yes">
         <source>Error message</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Felmeddelande</target>
+        <target state="final">Felmeddelande</target>
       </trans-unit>
-      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.errorMessage" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.errorMessage">
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.errorMessage" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.errorMessage" approved="yes">
         <source>This message is displayed if no feed items could be fetched</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Detta meddelande visas om inga feed objekt kunde hämtas</target>
+        <target state="final">Detta meddelande visas om inga feed objekt kunde hämtas</target>
       </trans-unit>
-      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.dateFormat" resname="settings.plugin.tx_feeddisplay_pi1.settings.dateFormat">
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.dateFormat" resname="settings.plugin.tx_feeddisplay_pi1.settings.dateFormat" approved="yes">
         <source>Date format</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Datumformat</target>
+        <target state="final">Datumformat</target>
       </trans-unit>
-      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.dateFormat" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.dateFormat">
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.dateFormat" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.dateFormat" approved="yes">
         <source>Use PHP's strftime() function format</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Använd PHP-funktionens strftime() format</target>
+        <target state="final">Använd PHP-funktionens strftime() format</target>
       </trans-unit>
-      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.stripTags" resname="settings.plugin.tx_feeddisplay_pi1.settings.stripTags">
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.stripTags" resname="settings.plugin.tx_feeddisplay_pi1.settings.stripTags" approved="yes">
         <source>Strip tags</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ta bort taggar</target>
+        <target state="final">Ta bort taggar</target>
       </trans-unit>
-      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.stripTags" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.stripTags">
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.stripTags" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.stripTags" approved="yes">
         <source>Remove HTML tags from the feed content</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ta bort HTML-taggar från flödets innehåll</target>
+        <target state="final">Ta bort HTML-taggar från flödets innehåll</target>
       </trans-unit>
-      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.cacheDuration" resname="settings.plugin.tx_feeddisplay_pi1.settings.cacheDuration">
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.cacheDuration" resname="settings.plugin.tx_feeddisplay_pi1.settings.cacheDuration" approved="yes">
         <source>Feed cache</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Flöde cache</target>
+        <target state="final">Flöde cache</target>
       </trans-unit>
-      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.cacheDuration" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.cacheDuration">
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.cacheDuration" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.cacheDuration" approved="yes">
         <source>Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Tid i sekunder då data ska läsas från cachen till nästa förnyelse av cachen. (0 = ingen cache)</target>
+        <target state="final">Tid i sekunder då data ska läsas från cachen till nästa förnyelse av cachen. (0 = ingen cache)</target>
       </trans-unit>
-      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty" resname="settings.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty">
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty" resname="settings.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty" approved="yes">
         <source>Ignore FlexForm Settings if empty</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ignorera Flexformulärinställningar om tomt</target>
+        <target state="final">Ignorera Flexformulärinställningar om tomt</target>
       </trans-unit>
-      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty">
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty" approved="yes">
         <source>Comma separated list of FlexForm settings that will be ignored in the extension settings merge process, if their value is considered empty (either an empty string or a string containing 0).</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Kommaseparerad lista med FlexForm-inställningar som kommer att ignoreras i sammanslagningsprocessen för tilläggsinställningar, om deras värde anses vara tomt (antingen en tom sträng eller en sträng som innehåller 0).</target>
+        <target state="final">Kommaseparerad lista med FlexForm-inställningar som kommer att ignoreras i sammanslagningsprocessen för tilläggsinställningar, om deras värde anses vara tomt (antingen en tom sträng eller en sträng som innehåller 0).</target>
       </trans-unit>
-      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.getFields.feed" resname="settings.plugin.tx_feeddisplay_pi1.settings.getFields.feed">
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.getFields.feed" resname="settings.plugin.tx_feeddisplay_pi1.settings.getFields.feed" approved="yes">
         <source>Feed fields to get</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Flödesfält att hämta</target>
+        <target state="final">Flödesfält att hämta</target>
       </trans-unit>
-      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.getFields.feed" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.getFields.feed">
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.getFields.feed" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.getFields.feed" approved="yes">
         <source>Comma-separated list of fields to be read from the feed by SimplePie and made available as variables in Fluid.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Kommaseparerad lista över fält som ska läsas från flödet av SimplePie och göras tillgänglig som variabler i Fluid.</target>
+        <target state="final">Kommaseparerad lista över fält som ska läsas från flödet av SimplePie och göras tillgänglig som variabler i Fluid.</target>
       </trans-unit>
-      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.getFields.items" resname="settings.plugin.tx_feeddisplay_pi1.settings.getFields.items">
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.getFields.items" resname="settings.plugin.tx_feeddisplay_pi1.settings.getFields.items" approved="yes">
         <source>Feed items fields to get</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Feed objekt fält att få</target>
+        <target state="final">Feed objekt fält att få</target>
       </trans-unit>
-      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.getFields.items" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.getFields.items">
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.getFields.items" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.getFields.items" approved="yes">
         <source>Comma-separated list of fields to be read from the feed items by SimplePie and made available as variables in Fluid.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Kommaseparerad lista över fält som ska läsas från foder objekt av SimplePie och göras tillgänglig som variabler i Fluid.</target>
+        <target state="final">Kommaseparerad lista över fält som ska läsas från foder objekt av SimplePie och göras tillgänglig som variabler i Fluid.</target>
       </trans-unit>
     </body>
   </file>
