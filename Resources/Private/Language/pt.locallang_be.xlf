@@ -3,513 +3,513 @@
   <file source-language="en" original="EXT:feed_display/Resources/Private/Language/locallang_be.xlf" datatype="plaintext" product-name="feed_display" date="2025-02-25T11:12:50+01:00" target-language="pt-PT">
     <header/>
     <body>
-      <trans-unit id="pi1_title">
+      <trans-unit id="pi1_title" approved="yes">
         <source>Feed Display</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Exibição de Feed</target>
+        <target state="final">Exibição de Feed</target>
       </trans-unit>
-      <trans-unit id="pi1_plus_wiz_description">
+      <trans-unit id="pi1_plus_wiz_description" approved="yes">
         <source>RSS/Atom web feed parsing and frontend display based on Extbase/Fluid</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Análise da web RSS/Atom e exibição frontend baseado em Extbase/Fluid</target>
+        <target state="final">Análise da web RSS/Atom e exibição frontend baseado em Extbase/Fluid</target>
       </trans-unit>
-      <trans-unit id="flexform.sheet_general.title">
+      <trans-unit id="flexform.sheet_general.title" approved="yes">
         <source>General</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Gerais</target>
+        <target state="final">Gerais</target>
       </trans-unit>
-      <trans-unit id="flexform.sheet_general.description">
+      <trans-unit id="flexform.sheet_general.description" approved="yes">
         <source>These are general settings for the frontend display of the feed. If no value is given, then the value of the TypoScript configuration is used by default.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Estas são configurações gerais para a exibição frontend do feed. Se nenhum valor for dado, então o valor da configuração de TypoScript é usado por padrão.</target>
+        <target state="final">Estas são configurações gerais para a exibição frontend do feed. Se nenhum valor for dado, então o valor da configuração de TypoScript é usado por padrão.</target>
       </trans-unit>
-      <trans-unit id="flexform.feedUrl.label">
+      <trans-unit id="flexform.feedUrl.label" approved="yes">
         <source>Feed URL</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">URL do Feed</target>
+        <target state="final">URL do Feed</target>
       </trans-unit>
-      <trans-unit id="flexform.feedUrl.description">
+      <trans-unit id="flexform.feedUrl.description" approved="yes">
         <source>URL that is fetched by the service (empty = Defined by TypoScript)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">URL que é obtida pelo serviço (vazio = definido pelo TypoScript)</target>
+        <target state="final">URL que é obtida pelo serviço (vazio = definido pelo TypoScript)</target>
       </trans-unit>
-      <trans-unit id="flexform.maxFeedCount.label">
+      <trans-unit id="flexform.maxFeedCount.label" approved="yes">
         <source>Max. items</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Máx. itens</target>
+        <target state="final">Máx. itens</target>
       </trans-unit>
-      <trans-unit id="flexform.maxFeedCount.description">
+      <trans-unit id="flexform.maxFeedCount.description" approved="yes">
         <source>Maximum feed items to show (0 or empty = Defined by TypoScript)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Máximo de itens de feed para mostrar (0 ou vazio = Definido pelo TypoScript)</target>
+        <target state="final">Máximo de itens de feed para mostrar (0 ou vazio = Definido pelo TypoScript)</target>
       </trans-unit>
-      <trans-unit id="flexform.maxContentLength.label">
+      <trans-unit id="flexform.maxContentLength.label" approved="yes">
         <source>Max. content length</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Tamanho máximo do conteúdo</target>
+        <target state="final">Tamanho máximo do conteúdo</target>
       </trans-unit>
-      <trans-unit id="flexform.maxContentLength.description">
+      <trans-unit id="flexform.maxContentLength.description" approved="yes">
         <source>Crop the characters of the feed content to the configured length (0 or empty = Defined by TypoScript)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Cortar os caracteres do conteúdo do feed com tamanho configurado (0 ou vazio = Definido pelo TypoScript)</target>
+        <target state="final">Cortar os caracteres do conteúdo do feed com tamanho configurado (0 ou vazio = Definido pelo TypoScript)</target>
       </trans-unit>
-      <trans-unit id="flexform.maxHeaderLength.label">
+      <trans-unit id="flexform.maxHeaderLength.label" approved="yes">
         <source>Max. header length</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Tamanho máximo do cabeçalho</target>
+        <target state="final">Tamanho máximo do cabeçalho</target>
       </trans-unit>
-      <trans-unit id="flexform.maxHeaderLength.description">
+      <trans-unit id="flexform.maxHeaderLength.description" approved="yes">
         <source>Crop the characters of the feed header to the configured length (0 or empty = Defined by TypoScript)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Cortar os caracteres do cabeçalho do feed para o comprimento configurado (0 ou vazio = Definido pelo TypoScript)</target>
+        <target state="final">Cortar os caracteres do cabeçalho do feed para o comprimento configurado (0 ou vazio = Definido pelo TypoScript)</target>
       </trans-unit>
-      <trans-unit id="flexform.linkTarget.label">
+      <trans-unit id="flexform.linkTarget.label" approved="yes">
         <source>Target</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Target</target>
+        <target state="final">Target</target>
       </trans-unit>
-      <trans-unit id="flexform.linkTarget.description">
+      <trans-unit id="flexform.linkTarget.description" approved="yes">
         <source>Target attribute to define the feed link behavior</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">O atributo alvo para definir o comportamento do link do feed</target>
+        <target state="final">O atributo alvo para definir o comportamento do link do feed</target>
       </trans-unit>
-      <trans-unit id="flexform.linkTarget.I.default">
+      <trans-unit id="flexform.linkTarget.I.default" approved="yes">
         <source>Defined by TypoScript (default)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Definido pelo TypoScript (padrão)</target>
+        <target state="final">Definido pelo TypoScript (padrão)</target>
       </trans-unit>
-      <trans-unit id="flexform.linkTarget.I.blank">
+      <trans-unit id="flexform.linkTarget.I.blank" approved="yes">
         <source>Opens in a new window or tab</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Abre em uma nova janela ou aba</target>
+        <target state="final">Abre em uma nova janela ou aba</target>
       </trans-unit>
-      <trans-unit id="flexform.linkTarget.I.self">
+      <trans-unit id="flexform.linkTarget.I.self" approved="yes">
         <source>Opens in the same frame as it was clicked</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Abre no mesmo quadro que foi clicado</target>
+        <target state="final">Abre no mesmo quadro que foi clicado</target>
       </trans-unit>
-      <trans-unit id="flexform.linkTarget.I.parent">
+      <trans-unit id="flexform.linkTarget.I.parent" approved="yes">
         <source>Opens in the parent frame</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Abre no quadro-pai</target>
+        <target state="final">Abre no quadro-pai</target>
       </trans-unit>
-      <trans-unit id="flexform.linkTarget.I.top">
+      <trans-unit id="flexform.linkTarget.I.top" approved="yes">
         <source>Opens in the full body of the window</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Abre em todo o corpo da janela</target>
+        <target state="final">Abre em todo o corpo da janela</target>
       </trans-unit>
-      <trans-unit id="flexform.logoMaxWidth.label">
+      <trans-unit id="flexform.logoMaxWidth.label" approved="yes">
         <source>Logo max. width</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Largura máx. do logotipo</target>
+        <target state="final">Largura máx. do logotipo</target>
       </trans-unit>
-      <trans-unit id="flexform.logoMaxWidth.description">
+      <trans-unit id="flexform.logoMaxWidth.description" approved="yes">
         <source>Maximum width of the feeds logo image (0 or empty = Defined by TypoScript)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Largura máxima da imagem do logotipo de feeds (0 ou vazio = Definido pelo TypoScript)</target>
+        <target state="final">Largura máxima da imagem do logotipo de feeds (0 ou vazio = Definido pelo TypoScript)</target>
       </trans-unit>
-      <trans-unit id="flexform.logoMaxHeight.label">
+      <trans-unit id="flexform.logoMaxHeight.label" approved="yes">
         <source>Logo max. height</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Altura máx. do logotipo</target>
+        <target state="final">Altura máx. do logotipo</target>
       </trans-unit>
-      <trans-unit id="flexform.logoMaxHeight.description">
+      <trans-unit id="flexform.logoMaxHeight.description" approved="yes">
         <source>Maximum height of the feeds logo image (0 or empty = Defined by TypoScript)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Altura máxima da imagem do logotipo de feeds (0 ou vazio = Definido pelo TypoScript)</target>
+        <target state="final">Altura máxima da imagem do logotipo de feeds (0 ou vazio = Definido pelo TypoScript)</target>
       </trans-unit>
-      <trans-unit id="flexform.feedIconMaxWidth.label">
+      <trans-unit id="flexform.feedIconMaxWidth.label" approved="yes">
         <source>Feed icon max. width</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Largura máxima do ícone Feed</target>
+        <target state="final">Largura máxima do ícone Feed</target>
       </trans-unit>
-      <trans-unit id="flexform.feedIconMaxWidth.description">
+      <trans-unit id="flexform.feedIconMaxWidth.description" approved="yes">
         <source>Maximum width of the feeds icon image (0 or empty = Defined by TypoScript)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Largura máxima da imagem do ícone de feeds (0 ou vazio = Definido pelo TypoScript)</target>
+        <target state="final">Largura máxima da imagem do ícone de feeds (0 ou vazio = Definido pelo TypoScript)</target>
       </trans-unit>
-      <trans-unit id="flexform.feedIconMaxHeight.label">
+      <trans-unit id="flexform.feedIconMaxHeight.label" approved="yes">
         <source>Feed icon max. height</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Altura máxima do ícone Feed</target>
+        <target state="final">Altura máxima do ícone Feed</target>
       </trans-unit>
-      <trans-unit id="flexform.feedIconMaxHeight.description">
+      <trans-unit id="flexform.feedIconMaxHeight.description" approved="yes">
         <source>Maximum height of the feeds icon image (0 or empty = Defined by TypoScript)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Altura máxima da imagem do ícone de feeds (0 ou vazio = Definido pelo TypoScript)</target>
+        <target state="final">Altura máxima da imagem do ícone de feeds (0 ou vazio = Definido pelo TypoScript)</target>
       </trans-unit>
-      <trans-unit id="flexform.errorMessage.label">
+      <trans-unit id="flexform.errorMessage.label" approved="yes">
         <source>Error message</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Mensagem de erro</target>
+        <target state="final">Mensagem de erro</target>
       </trans-unit>
-      <trans-unit id="flexform.errorMessage.description">
+      <trans-unit id="flexform.errorMessage.description" approved="yes">
         <source>This message is displayed if no feed items could be fetched (empty = Defined by TypoScript)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Esta mensagem é exibida se nenhum item de feed pode ser obtido (vazio = Definido pelo TypoScript)</target>
+        <target state="final">Esta mensagem é exibida se nenhum item de feed pode ser obtido (vazio = Definido pelo TypoScript)</target>
       </trans-unit>
-      <trans-unit id="flexform.sheet_advanced.title">
+      <trans-unit id="flexform.sheet_advanced.title" approved="yes">
         <source>Advanced</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Avançado</target>
+        <target state="final">Avançado</target>
       </trans-unit>
-      <trans-unit id="flexform.sheet_advanced.description">
+      <trans-unit id="flexform.sheet_advanced.description" approved="yes">
         <source>These are advanced settings. If you are unsure, simply use the default values here. If no value is given, then the value of the TypoScript configuration is used by default.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Estas são configurações avançadas. Se você não tem certeza, basta usar os valores padrão aqui. Se nenhum valor for dado, então o valor da configuração de TypoScript é usado por padrão.</target>
+        <target state="final">Estas são configurações avançadas. Se você não tem certeza, basta usar os valores padrão aqui. Se nenhum valor for dado, então o valor da configuração de TypoScript é usado por padrão.</target>
       </trans-unit>
-      <trans-unit id="flexform.dateFormat.label">
+      <trans-unit id="flexform.dateFormat.label" approved="yes">
         <source>Date format</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Formato da Data</target>
+        <target state="final">Formato da Data</target>
       </trans-unit>
-      <trans-unit id="flexform.dateFormat.description">
+      <trans-unit id="flexform.dateFormat.description" approved="yes">
         <source>Use PHP's strftime() function format (empty = Defined by TypoScript)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Usar formato de função strftime() do PHP (vazio = definido pelo TypoScript)</target>
+        <target state="final">Usar formato de função strftime() do PHP (vazio = definido pelo TypoScript)</target>
       </trans-unit>
-      <trans-unit id="flexform.stripTags.label">
+      <trans-unit id="flexform.stripTags.label" approved="yes">
         <source>Strip tags</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Remover etiquetas</target>
+        <target state="final">Remover etiquetas</target>
       </trans-unit>
-      <trans-unit id="flexform.stripTags.description">
+      <trans-unit id="flexform.stripTags.description" approved="yes">
         <source>Remove HTML tags from the feed content</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Remover tags HTML do conteúdo do feed</target>
+        <target state="final">Remover tags HTML do conteúdo do feed</target>
       </trans-unit>
-      <trans-unit id="flexform.stripTags.I.yes">
+      <trans-unit id="flexform.stripTags.I.yes" approved="yes">
         <source>yes</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Sim</target>
+        <target state="final">Sim</target>
       </trans-unit>
-      <trans-unit id="flexform.stripTags.I.no">
+      <trans-unit id="flexform.stripTags.I.no" approved="yes">
         <source>no</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Não</target>
+        <target state="final">Não</target>
       </trans-unit>
-      <trans-unit id="flexform.cacheDuration.label">
+      <trans-unit id="flexform.cacheDuration.label" approved="yes">
         <source>Feed cache</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Cache de feed</target>
+        <target state="final">Cache de feed</target>
       </trans-unit>
-      <trans-unit id="flexform.cacheDuration.description">
+      <trans-unit id="flexform.cacheDuration.description" approved="yes">
         <source>Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache, empty = Defined by TypoScript)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Tempo em segundos em que os dados serão lidos do cache até a próxima renovação do cache. (0 = nenhum cache, vazio = Definido pelo TypoScript)</target>
+        <target state="final">Tempo em segundos em que os dados serão lidos do cache até a próxima renovação do cache. (0 = nenhum cache, vazio = Definido pelo TypoScript)</target>
       </trans-unit>
-      <trans-unit id="flexform.placeholder.feed">
+      <trans-unit id="flexform.placeholder.feed" approved="yes">
         <source>Defined by Feed or TypoScript (default)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Definido pelo Feed ou TypoScript (padrão)</target>
+        <target state="final">Definido pelo Feed ou TypoScript (padrão)</target>
       </trans-unit>
-      <trans-unit id="flexform.placeholder.typoscript">
+      <trans-unit id="flexform.placeholder.typoscript" approved="yes">
         <source>Defined by TypoScript (default)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Definido pelo TypoScript (padrão)</target>
+        <target state="final">Definido pelo TypoScript (padrão)</target>
       </trans-unit>
-      <trans-unit id="flexform.sheet_getFields.title">
+      <trans-unit id="flexform.sheet_getFields.title" approved="yes">
         <source>Get Fields</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Obter campos</target>
+        <target state="final">Obter campos</target>
       </trans-unit>
-      <trans-unit id="flexform.sheet_getFields.description">
+      <trans-unit id="flexform.sheet_getFields.description" approved="yes">
         <source>Select here which fields from the feed and feed items should be read using the SimplePie library and should be available as variables in the fluid template. If no fields were selected, then the TypoScript configuration is used.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Selecione aqui quais campos do feed e do feed itens devem ser lidos usando a biblioteca SimplePie e devem estar disponíveis como variáveis no template fluido. Se nenhum campo foi selecionado, então a configuração TypoScript é usada.</target>
+        <target state="final">Selecione aqui quais campos do feed e do feed itens devem ser lidos usando a biblioteca SimplePie e devem estar disponíveis como variáveis no template fluido. Se nenhum campo foi selecionado, então a configuração TypoScript é usada.</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.label">
+      <trans-unit id="flexform.getFields.feed.label" approved="yes">
         <source>Get fields from feed</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Obter campos do feed</target>
+        <target state="final">Obter campos do feed</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.description">
+      <trans-unit id="flexform.getFields.feed.description" approved="yes">
         <source>Selection of the fields to be read from the feed.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Seleção dos campos a serem lidos do feed</target>
+        <target state="final">Seleção dos campos a serem lidos do feed</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.group.feed">
+      <trans-unit id="flexform.getFields.group.feed" approved="yes">
         <source>Feed</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Alimentar</target>
+        <target state="final">Alimentar</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.author">
+      <trans-unit id="flexform.getFields.feed.I.author" approved="yes">
         <source>Author</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Autor</target>
+        <target state="final">Autor</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.authors">
+      <trans-unit id="flexform.getFields.feed.I.authors" approved="yes">
         <source>Authors</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Autores</target>
+        <target state="final">Autores</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.contributor">
+      <trans-unit id="flexform.getFields.feed.I.contributor" approved="yes">
         <source>Contributor</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Colaborador</target>
+        <target state="final">Colaborador</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.contributors">
+      <trans-unit id="flexform.getFields.feed.I.contributors" approved="yes">
         <source>Contributors</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Colaboradores</target>
+        <target state="final">Colaboradores</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.copyright">
+      <trans-unit id="flexform.getFields.feed.I.copyright" approved="yes">
         <source>Copyright</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Direitos autorais</target>
+        <target state="final">Direitos autorais</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.description">
+      <trans-unit id="flexform.getFields.feed.I.description" approved="yes">
         <source>Description</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Descrição:</target>
+        <target state="final">Descrição:</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.encoding">
+      <trans-unit id="flexform.getFields.feed.I.encoding" approved="yes">
         <source>Encoding</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Codificação</target>
+        <target state="final">Codificação</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.favicon">
+      <trans-unit id="flexform.getFields.feed.I.favicon" approved="yes">
         <source>Favicon</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Favicon:</target>
+        <target state="final">Favicon:</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.items">
+      <trans-unit id="flexform.getFields.feed.I.items" approved="yes">
         <source>Items</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">itens</target>
+        <target state="final">itens</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.item_quantity">
+      <trans-unit id="flexform.getFields.feed.I.item_quantity" approved="yes">
         <source>Item_quantity</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">quantidade_item</target>
+        <target state="final">quantidade_item</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.language">
+      <trans-unit id="flexform.getFields.feed.I.language" approved="yes">
         <source>Language</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">IDIOMA</target>
+        <target state="final">IDIOMA</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.link">
+      <trans-unit id="flexform.getFields.feed.I.link" approved="yes">
         <source>Link</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Vincular</target>
+        <target state="final">Vincular</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.links">
+      <trans-unit id="flexform.getFields.feed.I.links" approved="yes">
         <source>Links</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Links</target>
+        <target state="final">Links</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.permalink">
+      <trans-unit id="flexform.getFields.feed.I.permalink" approved="yes">
         <source>Permalink</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">permalink</target>
+        <target state="final">permalink</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.title">
+      <trans-unit id="flexform.getFields.feed.I.title" approved="yes">
         <source>Title</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Título</target>
+        <target state="final">Título</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.type">
+      <trans-unit id="flexform.getFields.feed.I.type" approved="yes">
         <source>Type</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">tipo</target>
+        <target state="final">tipo</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.latitude">
+      <trans-unit id="flexform.getFields.feed.I.latitude" approved="yes">
         <source>Latitude</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Latitude</target>
+        <target state="final">Latitude</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.longitude">
+      <trans-unit id="flexform.getFields.feed.I.longitude" approved="yes">
         <source>Longitude</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Longitude</target>
+        <target state="final">Longitude</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.image_height">
+      <trans-unit id="flexform.getFields.feed.I.image_height" approved="yes">
         <source>Image Height</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Altura da Imagem</target>
+        <target state="final">Altura da Imagem</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.image_link">
+      <trans-unit id="flexform.getFields.feed.I.image_link" approved="yes">
         <source>Image Link</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Link da imagem</target>
+        <target state="final">Link da imagem</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.image_title">
+      <trans-unit id="flexform.getFields.feed.I.image_title" approved="yes">
         <source>Image Title</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Título da Imagem</target>
+        <target state="final">Título da Imagem</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.image_url">
+      <trans-unit id="flexform.getFields.feed.I.image_url" approved="yes">
         <source>Image URL</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">URL da imagem</target>
+        <target state="final">URL da imagem</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.image_width">
+      <trans-unit id="flexform.getFields.feed.I.image_width" approved="yes">
         <source>Image Width</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Largura da imagem</target>
+        <target state="final">Largura da imagem</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.all_discovered_feeds">
+      <trans-unit id="flexform.getFields.feed.I.all_discovered_feeds" approved="yes">
         <source>All Discovered Feeds</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Todos os Feeds Descobertos</target>
+        <target state="final">Todos os Feeds Descobertos</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.base">
+      <trans-unit id="flexform.getFields.feed.I.base" approved="yes">
         <source>Base</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Base</target>
+        <target state="final">Base</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.subscribe_url">
+      <trans-unit id="flexform.getFields.feed.I.subscribe_url" approved="yes">
         <source>Subscribe URL</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Subscribe URL</target>
+        <target state="final">Subscribe URL</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.label">
+      <trans-unit id="flexform.getFields.items.label" approved="yes">
         <source>Get fields from feed items</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Obter campos de itens do feed</target>
+        <target state="final">Obter campos de itens do feed</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.description">
+      <trans-unit id="flexform.getFields.items.description" approved="yes">
         <source>Selection of the fields to be read from the feed items.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Seleção dos campos a serem lidos dos itens do feed</target>
+        <target state="final">Seleção dos campos a serem lidos dos itens do feed</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.group.items">
+      <trans-unit id="flexform.getFields.group.items" approved="yes">
         <source>Items</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">itens</target>
+        <target state="final">itens</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.author">
+      <trans-unit id="flexform.getFields.items.I.author" approved="yes">
         <source>Author</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Autor</target>
+        <target state="final">Autor</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.authors">
+      <trans-unit id="flexform.getFields.items.I.authors" approved="yes">
         <source>Authors</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Autores</target>
+        <target state="final">Autores</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.categories">
+      <trans-unit id="flexform.getFields.items.I.categories" approved="yes">
         <source>Categories</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">categorias</target>
+        <target state="final">categorias</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.category">
+      <trans-unit id="flexform.getFields.items.I.category" approved="yes">
         <source>Category</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">categoria</target>
+        <target state="final">categoria</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.content">
+      <trans-unit id="flexform.getFields.items.I.content" approved="yes">
         <source>Content</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Conteúdo</target>
+        <target state="final">Conteúdo</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.contributor">
+      <trans-unit id="flexform.getFields.items.I.contributor" approved="yes">
         <source>Contributor</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Colaborador</target>
+        <target state="final">Colaborador</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.contributors">
+      <trans-unit id="flexform.getFields.items.I.contributors" approved="yes">
         <source>Contributors</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Colaboradores</target>
+        <target state="final">Colaboradores</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.copyright">
+      <trans-unit id="flexform.getFields.items.I.copyright" approved="yes">
         <source>Copyright</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Direitos autorais</target>
+        <target state="final">Direitos autorais</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.date|U">
+      <trans-unit id="flexform.getFields.items.I.date|U" approved="yes">
         <source>Date (with parameter "U")</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Data (com o parâmetro "U")</target>
+        <target state="final">Data (com o parâmetro "U")</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.description">
+      <trans-unit id="flexform.getFields.items.I.description" approved="yes">
         <source>Description</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Descrição:</target>
+        <target state="final">Descrição:</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.enclosure">
+      <trans-unit id="flexform.getFields.items.I.enclosure" approved="yes">
         <source>Enclosure</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Anexo</target>
+        <target state="final">Anexo</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.enclosures">
+      <trans-unit id="flexform.getFields.items.I.enclosures" approved="yes">
         <source>Enclosures</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Fechas</target>
+        <target state="final">Fechas</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.feed">
+      <trans-unit id="flexform.getFields.items.I.feed" approved="yes">
         <source>Feed</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Alimentar</target>
+        <target state="final">Alimentar</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.id">
+      <trans-unit id="flexform.getFields.items.I.id" approved="yes">
         <source>ID</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">ID</target>
+        <target state="final">ID</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.link">
+      <trans-unit id="flexform.getFields.items.I.link" approved="yes">
         <source>Link</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Vincular</target>
+        <target state="final">Vincular</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.links">
+      <trans-unit id="flexform.getFields.items.I.links" approved="yes">
         <source>Links</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Links</target>
+        <target state="final">Links</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.local_date|">
+      <trans-unit id="flexform.getFields.items.I.local_date|" approved="yes">
         <source>Local Date (with empty parameter)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Data local (com parâmetro vazio)</target>
+        <target state="final">Data local (com parâmetro vazio)</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.permalink">
+      <trans-unit id="flexform.getFields.items.I.permalink" approved="yes">
         <source>Permalink</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">permalink</target>
+        <target state="final">permalink</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.source">
+      <trans-unit id="flexform.getFields.items.I.source" approved="yes">
         <source>Source</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">fonte</target>
+        <target state="final">fonte</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.title">
+      <trans-unit id="flexform.getFields.items.I.title" approved="yes">
         <source>Title</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Título</target>
+        <target state="final">Título</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.latitude">
+      <trans-unit id="flexform.getFields.items.I.latitude" approved="yes">
         <source>Latitude</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Latitude</target>
+        <target state="final">Latitude</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.longitude">
+      <trans-unit id="flexform.getFields.items.I.longitude" approved="yes">
         <source>Longitude</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Longitude</target>
+        <target state="final">Longitude</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.base">
+      <trans-unit id="flexform.getFields.items.I.base" approved="yes">
         <source>Base</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Base</target>
+        <target state="final">Base</target>
       </trans-unit>
-      <trans-unit id="constants.customcategory.plugin.tx_feeddisplay_pi1">
+      <trans-unit id="constants.customcategory.plugin.tx_feeddisplay_pi1" approved="yes">
         <source>Feed Display</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Exibição de Feed</target>
+        <target state="final">Exibição de Feed</target>
       </trans-unit>
-      <trans-unit id="constants.subcategory.general">
+      <trans-unit id="constants.subcategory.general" approved="yes">
         <source>General</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Gerais</target>
+        <target state="final">Gerais</target>
       </trans-unit>
-      <trans-unit id="constants.subcategory.advanced">
+      <trans-unit id="constants.subcategory.advanced" approved="yes">
         <source>Advanced</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Avançado</target>
+        <target state="final">Avançado</target>
       </trans-unit>
-      <trans-unit id="constants.subcategory.getFields">
+      <trans-unit id="constants.subcategory.getFields" approved="yes">
         <source>Fields to get from Feed and Items</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Campos para obter do Feed e Itens</target>
+        <target state="final">Campos para obter do Feed e Itens</target>
       </trans-unit>
-      <trans-unit id="constants.view.templateRootPath">
+      <trans-unit id="constants.view.templateRootPath" approved="yes">
         <source>Path to template root (FE)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Caminho para a raiz do modelo (FE)</target>
+        <target state="final">Caminho para a raiz do modelo (FE)</target>
       </trans-unit>
-      <trans-unit id="constants.view.partialRootPath">
+      <trans-unit id="constants.view.partialRootPath" approved="yes">
         <source>Path to template partials (FE)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Caminho para os Parceiros dos Temas (FE)</target>
+        <target state="final">Caminho para os Parceiros dos Temas (FE)</target>
       </trans-unit>
-      <trans-unit id="constants.view.layoutRootPath">
+      <trans-unit id="constants.view.layoutRootPath" approved="yes">
         <source>Path to template layouts (FE)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Caminho para layouts do modelo (FE)</target>
+        <target state="final">Caminho para layouts do modelo (FE)</target>
       </trans-unit>
-      <trans-unit id="constants.settings.feedUrl">
+      <trans-unit id="constants.settings.feedUrl" approved="yes">
         <source>Feed URL:URL that is fetched by the service</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">URL de feed:URL que é capturado pelo serviço</target>
+        <target state="final">URL de feed:URL que é capturado pelo serviço</target>
       </trans-unit>
-      <trans-unit id="constants.settings.maxFeedCount">
+      <trans-unit id="constants.settings.maxFeedCount" approved="yes">
         <source>Max. items:Maximum feed items to show</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Máx. de itens:Máximo de itens agregados</target>
+        <target state="final">Máx. de itens:Máximo de itens agregados</target>
       </trans-unit>
-      <trans-unit id="constants.settings.maxContentLength">
+      <trans-unit id="constants.settings.maxContentLength" approved="yes">
         <source>Max. content length:Crop the characters of the feed content to the configured length</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Comprimento máx. do conteúdo: Cortar os caracteres do feed com o comprimento configurado</target>
+        <target state="final">Comprimento máx. do conteúdo: Cortar os caracteres do feed com o comprimento configurado</target>
       </trans-unit>
-      <trans-unit id="constants.settings.maxHeaderLength">
+      <trans-unit id="constants.settings.maxHeaderLength" approved="yes">
         <source>Max. header length:Crop the characters of the feed header to the configured length</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Tamanho máximo do cabeçalho: Corte os caracteres do cabeçalho do feed para o comprimento configurado</target>
+        <target state="final">Tamanho máximo do cabeçalho: Corte os caracteres do cabeçalho do feed para o comprimento configurado</target>
       </trans-unit>
-      <trans-unit id="constants.settings.linkTarget">
+      <trans-unit id="constants.settings.linkTarget" approved="yes">
         <source>Target:Target attribute to define the feed link behavior</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Destino: Atributo alvo para definir o comportamento do link do feed</target>
+        <target state="final">Destino: Atributo alvo para definir o comportamento do link do feed</target>
       </trans-unit>
-      <trans-unit id="constants.settings.linkTarget.I.default">
+      <trans-unit id="constants.settings.linkTarget.I.default" approved="yes">
         <source>Defined by TypoScript (default)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Definido pelo TypoScript (padrão)</target>
+        <target state="final">Definido pelo TypoScript (padrão)</target>
       </trans-unit>
-      <trans-unit id="constants.settings.linkTarget.I.blank">
+      <trans-unit id="constants.settings.linkTarget.I.blank" approved="yes">
         <source>Opens in a new window or tab</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Abre em uma nova janela ou aba</target>
+        <target state="final">Abre em uma nova janela ou aba</target>
       </trans-unit>
-      <trans-unit id="constants.settings.linkTarget.I.self">
+      <trans-unit id="constants.settings.linkTarget.I.self" approved="yes">
         <source>Opens in the same frame as it was clicked</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Abre no mesmo quadro que foi clicado</target>
+        <target state="final">Abre no mesmo quadro que foi clicado</target>
       </trans-unit>
-      <trans-unit id="constants.settings.linkTarget.I.parent">
+      <trans-unit id="constants.settings.linkTarget.I.parent" approved="yes">
         <source>Opens in the parent frame</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Abre no quadro-pai</target>
+        <target state="final">Abre no quadro-pai</target>
       </trans-unit>
-      <trans-unit id="constants.settings.linkTarget.I.top">
+      <trans-unit id="constants.settings.linkTarget.I.top" approved="yes">
         <source>Opens in the full body of the window</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Abre em todo o corpo da janela</target>
+        <target state="final">Abre em todo o corpo da janela</target>
       </trans-unit>
-      <trans-unit id="constants.settings.logoMaxWidth">
+      <trans-unit id="constants.settings.logoMaxWidth" approved="yes">
         <source>Logo width:Width of the feeds logo image</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Largura do logo:Largura do logo dos feeds</target>
+        <target state="final">Largura do logo:Largura do logo dos feeds</target>
       </trans-unit>
-      <trans-unit id="constants.settings.logoMaxHeight">
+      <trans-unit id="constants.settings.logoMaxHeight" approved="yes">
         <source>Logo height:Height of the feeds logo image</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Altura do logotipo da imagem do logotipo da fonte</target>
+        <target state="final">Altura do logotipo da imagem do logotipo da fonte</target>
       </trans-unit>
-      <trans-unit id="constants.settings.feedIconMaxWidth">
+      <trans-unit id="constants.settings.feedIconMaxWidth" approved="yes">
         <source>Feed icon width:Width of the feeds icon image</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Feed largura do ícone: Largura do ícone de feeds da imagem</target>
+        <target state="final">Feed largura do ícone: Largura do ícone de feeds da imagem</target>
       </trans-unit>
-      <trans-unit id="constants.settings.feedIconMaxHeight">
+      <trans-unit id="constants.settings.feedIconMaxHeight" approved="yes">
         <source>Feed icon height:Height of the feeds icon image</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Fonte de altura do ícone: Altura da imagem do ícone de feeds</target>
+        <target state="final">Fonte de altura do ícone: Altura da imagem do ícone de feeds</target>
       </trans-unit>
-      <trans-unit id="constants.settings.errorMessage">
+      <trans-unit id="constants.settings.errorMessage" approved="yes">
         <source>Error message:This message is displayed if no feed items could be fetched</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Mensagem de erro: Esta mensagem é exibida se nenhum item de feed puder ser obtido</target>
+        <target state="final">Mensagem de erro: Esta mensagem é exibida se nenhum item de feed puder ser obtido</target>
       </trans-unit>
-      <trans-unit id="constants.settings.dateFormat">
+      <trans-unit id="constants.settings.dateFormat" approved="yes">
         <source>Date format:Use PHP's strftime() function format</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Formato da data: Use formato de função strftime() do PHP</target>
+        <target state="final">Formato da data: Use formato de função strftime() do PHP</target>
       </trans-unit>
-      <trans-unit id="constants.settings.stripTags">
+      <trans-unit id="constants.settings.stripTags" approved="yes">
         <source>Strip tags:Remove HTML tags from the feed content</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Remover tags: Remover tags HTML do feed</target>
+        <target state="final">Remover tags: Remover tags HTML do feed</target>
       </trans-unit>
-      <trans-unit id="constants.settings.cacheDuration">
+      <trans-unit id="constants.settings.cacheDuration" approved="yes">
         <source>Feed cache:Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Cache de feed: Tempo em segundos em que os dados serão lidos do cache até a próxima renovação do cache. (0 = sem cache)</target>
+        <target state="final">Cache de feed: Tempo em segundos em que os dados serão lidos do cache até a próxima renovação do cache. (0 = sem cache)</target>
       </trans-unit>
-      <trans-unit id="constants.settings.ignoreFlexFormSettingsIfEmpty">
+      <trans-unit id="constants.settings.ignoreFlexFormSettingsIfEmpty" approved="yes">
         <source>Ignore FlexForm Settings if empty:Comma separated list of FlexForm settings that will be ignored in the extension settings merge process, if their value is considered empty (either an empty string or a string containing 0).</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ignorar configurações de FlexForm se vazio:Lista separada por vírgulas de configurações de FlexForm que serão ignoradas no processo de mesclagem de configurações de extensão. se seu valor for considerado vazio (uma string vazia ou uma string contendo 0).</target>
+        <target state="final">Ignorar configurações de FlexForm se vazio:Lista separada por vírgulas de configurações de FlexForm que serão ignoradas no processo de mesclagem de configurações de extensão. se seu valor for considerado vazio (uma string vazia ou uma string contendo 0).</target>
       </trans-unit>
-      <trans-unit id="constants.settings.getFields.feed">
+      <trans-unit id="constants.settings.getFields.feed" approved="yes">
         <source>Feed fields to get:Comma-separated list of fields to be read from the feed by SimplePie and made available as variables in Fluid.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Campos de alimentação para receber: Lista de campos separados por vírgula a serem lidos do feed pela SimplePie e disponibilizados como variáveis no Fluid.</target>
+        <target state="final">Campos de alimentação para receber: Lista de campos separados por vírgula a serem lidos do feed pela SimplePie e disponibilizados como variáveis no Fluid.</target>
       </trans-unit>
-      <trans-unit id="constants.settings.getFields.items">
+      <trans-unit id="constants.settings.getFields.items" approved="yes">
         <source>Feed items fields to get:Comma-separated list of fields to be read from the feed items by SimplePie and made available as variables in Fluid.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Campos de feed para receber: Lista de campos separados por vírgula a serem lidos dos itens do feed pela SimplePie e disponibilizada como variáveis no Fluid.</target>
+        <target state="final">Campos de feed para receber: Lista de campos separados por vírgula a serem lidos dos itens do feed pela SimplePie e disponibilizada como variáveis no Fluid.</target>
       </trans-unit>
-      <trans-unit id="sets.feeddisplay.label">
+      <trans-unit id="sets.feeddisplay.label" approved="yes">
         <source>Feed Display</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Exibição de Feed</target>
+        <target state="final">Exibição de Feed</target>
       </trans-unit>
     </body>
   </file>
