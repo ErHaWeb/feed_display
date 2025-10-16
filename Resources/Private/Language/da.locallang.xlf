@@ -77,35 +77,35 @@
       </trans-unit>
       <trans-unit id="item.enclosure">
         <source>Enclosure</source>
-        <target state="needs-translation">Enclosure</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Indlæg</target>
       </trans-unit>
       <trans-unit id="item.enclosures">
         <source>Enclosures</source>
-        <target state="needs-translation">Enclosures</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Anlæg</target>
       </trans-unit>
       <trans-unit id="item.latitude">
         <source>Latitude</source>
-        <target state="needs-translation">Latitude</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Breddegrad</target>
       </trans-unit>
       <trans-unit id="item.longitude">
         <source>Longitude</source>
-        <target state="needs-translation">Longitude</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Længdegrad</target>
       </trans-unit>
       <trans-unit id="item.source">
         <source>Source</source>
-        <target state="needs-translation">Source</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Kilde</target>
       </trans-unit>
       <trans-unit id="errorMessage">
         <source>Sorry, the feed could not be fetched.</source>
-        <target state="needs-translation">Sorry, the feed could not be fetched.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Beklager, feedet kunne ikke hentes.</target>
       </trans-unit>
       <trans-unit id="noTemplateError">
         <source>Feed Display: Please include static TypoScript [EXT:feed_display/Configuration/TypoScript/]</source>
-        <target state="needs-translation">Feed Display: Please include static TypoScript [EXT:feed_display/Configuration/TypoScript/]</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Feed Display: Vær venlig at inkludere statisk TypoScript [EXT:feed_display/Configuration/TypoScript/]</target>
       </trans-unit>
       <trans-unit id="noItemsError">
         <source>Sorry, no items could be fetched.</source>
-        <target state="needs-translation">Sorry, no items could be fetched.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Beklager, ingen elementer kunne hentes.</target>
       </trans-unit>
     </body>
   </file>
