@@ -11,10 +11,9 @@ services:
   ErHaWeb\FeedDisplay\Controller\FeedController:
     arguments:
       $cache: '@cache.feeddisplay'
-      $feed: '@SimplePie\SimplePie'
 
-  SimplePie\SimplePie:
-    public: true
+  # Register the external dependency explicitly so FeedDataService can autowire it.
+  SimplePie\SimplePie: ~
 
   cache.feeddisplay:
     class: TYPO3\CMS\Core\Cache\Frontend\FrontendInterface

@@ -1,0 +1,8 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  ErHaWeb\FeedDisplay\Tests\Functional\Fixtures\EventListener\ModifySingleFeedDataListener:
+    tags:
+      - name: event.listener
