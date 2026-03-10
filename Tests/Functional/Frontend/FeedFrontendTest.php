@@ -454,7 +454,7 @@ final class FeedFrontendTest extends AbstractFeedFrontendTestCase
         self::assertIsArray($cachedData);
 
         if (!is_array($cachedData)) {
-            throw new \LogicException('Expected cached feed data to be available as array.');
+            throw new \LogicException('Expected cached feed data to be available as array.', 5546276907);
         }
 
         return $cachedData;

@@ -103,7 +103,7 @@ Local test runner for the feed_display extension.
 Usage: $0 [options] [file]
 
 Options:
-    -s <composer|composerInstall|functional|unit|clean>
+    -s <composer|composerInstall|functional|rector|unit|clean>
         Specifies which suite or command to run
 
     -t <12|13>
@@ -143,6 +143,10 @@ Options:
     -y <port>
         Xdebug port, default 9003
 
+    -n
+        Only with -s rector
+        Activate dry-run so rector reports required changes without modifying files
+
     -h
         Show this help
 
@@ -150,6 +154,7 @@ Examples:
     Build/Scripts/runTests.sh -s composerInstall
     Build/Scripts/runTests.sh -s unit
     Build/Scripts/runTests.sh -s functional
+    Build/Scripts/runTests.sh -s rector -n
     Build/Scripts/runTests.sh -s functional -d postgres
     Build/Scripts/runTests.sh -s composer -- show typo3/cms-core
 EOF
@@ -174,6 +179,7 @@ PHP_VERSION="8.2"
 PHP_XDEBUG_ON=0
 PHP_XDEBUG_PORT=9003
 EXTRA_TEST_OPTIONS=""
+DRY_RUN=0
 CONTAINER_BIN=""
 CONTAINER_INTERACTIVE="--init"
 HOST_UID=$(id -u)
@@ -186,7 +192,7 @@ USERSET=""
 
 OPTIND=1
 INVALID_OPTIONS=()
-while getopts "a:b:s:d:i:p:e:t:xy:h" OPT; do
+while getopts "a:b:s:d:i:p:e:t:xy:nh" OPT; do
     case ${OPT} in
         s)
             TEST_SUITE=${OPTARG}
@@ -226,6 +232,9 @@ while getopts "a:b:s:d:i:p:e:t:xy:h" OPT; do
             ;;
         y)
             PHP_XDEBUG_PORT=${OPTARG}
+            ;;
+        n)
+            DRY_RUN=1
             ;;
         h)
             loadHelp
@@ -394,6 +403,15 @@ case ${TEST_SUITE} in
                 SUITE_EXIT_CODE=$?
                 ;;
         esac
+        ;;
+    rector)
+        DRY_RUN_OPTIONS=''
+        if [ "${DRY_RUN}" -eq 1 ]; then
+            DRY_RUN_OPTIONS='--dry-run'
+        fi
+        COMMAND="php -dxdebug.mode=off .Build/bin/rector process ${DRY_RUN_OPTIONS} --config=Build/rector/rector.php --no-progress-bar --ansi"
+        ${CONTAINER_BIN} run ${CONTAINER_COMMON_PARAMS} --name rector-${SUFFIX} -e COMPOSER_CACHE_DIR=.cache/composer -e COMPOSER_ROOT_VERSION=${COMPOSER_ROOT_VERSION} ${IMAGE_PHP} /bin/sh -c "${COMMAND}"
+        SUITE_EXIT_CODE=$?
         ;;
     unit)
         COMMAND=(.Build/bin/phpunit -c Build/phpunit/UnitTests.xml --exclude-group not-${DBMS} ${EXTRA_TEST_OPTIONS} "$@")
