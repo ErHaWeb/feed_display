@@ -13,6 +13,7 @@
     "typo3/cms-frontend": "^12.4 || ^13.4"
   },
   "require-dev": {
+    "a9f/typo3-fractor": "^0.5.9",
     "phpunit/phpunit": "^10.5",
     "roave/security-advisories": "dev-latest",
     "ssch/typo3-rector": "^2.15 || ^3.7",
@@ -60,6 +61,7 @@
   },
   "config": {
     "allow-plugins": {
+      "a9f/fractor-extension-installer": true,
       "sbuerk/typo3-cmscomposerinstallers-testingframework-bridge": true,
       "typo3/class-alias-loader": true,
       "typo3/cms-composer-installers": true

@@ -103,7 +103,7 @@ Local test runner for the feed_display extension.
 Usage: $0 [options] [file]
 
 Options:
-    -s <composer|composerInstall|functional|rector|unit|clean>
+    -s <composer|composerInstall|functional|fractor|rector|unit|clean>
         Specifies which suite or command to run
 
     -t <12|13>
@@ -144,8 +144,8 @@ Options:
         Xdebug port, default 9003
 
     -n
-        Only with -s rector
-        Activate dry-run so rector reports required changes without modifying files
+        Only with -s rector|fractor
+        Activate dry-run so rector or fractor report required changes without modifying files
 
     -h
         Show this help
@@ -154,6 +154,7 @@ Examples:
     Build/Scripts/runTests.sh -s composerInstall
     Build/Scripts/runTests.sh -s unit
     Build/Scripts/runTests.sh -s functional
+    Build/Scripts/runTests.sh -s fractor -n
     Build/Scripts/runTests.sh -s rector -n
     Build/Scripts/runTests.sh -s functional -d postgres
     Build/Scripts/runTests.sh -s composer -- show typo3/cms-core
@@ -411,6 +412,15 @@ case ${TEST_SUITE} in
         fi
         COMMAND="php -dxdebug.mode=off .Build/bin/rector process ${DRY_RUN_OPTIONS} --config=Build/rector/rector.php --no-progress-bar --ansi"
         ${CONTAINER_BIN} run ${CONTAINER_COMMON_PARAMS} --name rector-${SUFFIX} -e COMPOSER_CACHE_DIR=.cache/composer -e COMPOSER_ROOT_VERSION=${COMPOSER_ROOT_VERSION} ${IMAGE_PHP} /bin/sh -c "${COMMAND}"
+        SUITE_EXIT_CODE=$?
+        ;;
+    fractor)
+        DRY_RUN_OPTIONS=''
+        if [ "${DRY_RUN}" -eq 1 ]; then
+            DRY_RUN_OPTIONS='--dry-run'
+        fi
+        COMMAND="php -dxdebug.mode=off .Build/bin/fractor process ${DRY_RUN_OPTIONS} --config=Build/fractor/fractor.php --ansi"
+        ${CONTAINER_BIN} run ${CONTAINER_COMMON_PARAMS} --name fractor-${SUFFIX} -e COMPOSER_CACHE_DIR=.cache/composer -e COMPOSER_ROOT_VERSION=${COMPOSER_ROOT_VERSION} ${IMAGE_PHP} /bin/sh -c "${COMMAND}"
         SUITE_EXIT_CODE=$?
         ;;
     unit)
