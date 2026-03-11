@@ -1,0 +1,35 @@
+.. include:: /Includes.rst.txt
+
+2.2.0 - March 11, 2026
+======================
+
+
+.. only:: html
+
+   .. contents::
+        :local:
+        :depth: 3
+
+Breaking changes
+----------------
+No breaking changes!
+
+All Changes
+-----------
+This is a list of all changes in this release: ::
+
+    2026-03-11 [DOCS] Document TYPO3 HTTP client feed retrieval (Commit 7eb2af6 by Eric Harrer)
+    2026-03-11 [TASK] Use TYPO3 HTTP client for remote feeds (Commit 26bb739 by Eric Harrer)
+    2026-03-11 Merge origin/main into devel (Commit 1c093b3 by Eric Harrer)
+    2026-03-11 [TASK] Add live feed smoke test (Commit db25dc3 by Eric Harrer)
+    2026-03-10 [TASK] Add Fractor check to test tooling (Commit 0195668 by Eric Harrer)
+    2026-03-10 [TASK] Add Rector check to test tooling (Commit 0421ceb by Eric Harrer)
+    2026-03-10 [FEATURE] Add test infrastructure and stabilize feed setup (Commit 23f32c0 by Eric Harrer)
+    2025-04-18 [TASK] use simplepie with psr-18 (Commit c262188 by smlng)
+    2025-04-18 [TASK] update simplepie dependency (Commit 520c3f5 by smlng)
+    2025-02-25 [TASK] Refactor locallang files (Commit 199cc51 by Eric Harrer)
+    2025-02-25 [BUGFIX] Add missing FlexForm identifier (#8) (Commit 603e3fa by joh-gp)
+    2024-10-26 [BUGFIX] Fix path in labels.xlf (Commit 66924b2 by Eric Harrer)
+    2024-10-25 [BUGFIX] Fix wrong extension key in labels.xlf (Commit 7ad4c3e by Eric Harrer)
+
+This list has been created by using `git log $(git describe --tags --abbrev=0)..HEAD --abbrev-commit --pretty='%ad %s (Commit %h by %an)' --date=short`.
