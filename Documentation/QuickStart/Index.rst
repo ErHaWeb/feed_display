@@ -46,5 +46,5 @@ Quick start
 
 4.  Done
 
-    The feed output can now be viewed in the frontend on the page where you
+    The feed output can be viewed in the frontend on the page where you
     created the plugin.

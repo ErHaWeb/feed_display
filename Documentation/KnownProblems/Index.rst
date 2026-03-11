@@ -29,3 +29,8 @@ system delivering the feed has been exceeded.
 In this context, please note that the Feed Display extension itself caches the return. This means that in case of doubt
 a faulty feed may persist for a longer period of time until the TYPO3 cache is cleared again, although a direct call to
 the feed URL will work again.
+
+If the feed is loaded from a remote ``http`` or ``https`` URL, also verify the
+TYPO3 HTTP client configuration of the instance. Proxy requirements and
+outbound network restrictions apply through TYPO3's PSR-17/PSR-18 interfaces,
+so a blocked or incomplete TYPO3 HTTP setup can prevent feed retrieval.

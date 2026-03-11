@@ -7,7 +7,7 @@
 Events
 ======
 
-This extension currently provides exactly one PSR-14 event, which can be
+This extension provides exactly one PSR-14 event, which can be
 used to easily change the data retrieved from a feed. This is especially
 useful when the feed is a bit more complex.
 

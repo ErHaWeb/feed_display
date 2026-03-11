@@ -18,6 +18,11 @@ which data is to be read from the feed for the purpose of display.
 Parsing of feed data is done by the `SimplePie <https://simplepie.org/>`__
 library, which is a very fast and easy-to-use feed parser, written in PHP.
 
+Remote ``http`` and ``https`` feeds are fetched through TYPO3's PSR-17/PSR-18
+interfaces. This means instance-wide HTTP client settings such as proxy
+configuration are applied automatically. Local feed files and other non-HTTP
+sources use SimplePie's default transport.
+
 The entire result is stored in its own cache (using the caching framework)
 so that the feed does not have to be parsed with each call. If something has
 changed in the plugin configuration (TypoScript or FlexForm), the cache is

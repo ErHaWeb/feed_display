@@ -83,7 +83,12 @@ Feed URL
     :Default: https://typo3.org/rss
     :Path: plugin.tx_feeddisplay_pi1.settings
 
-    URL that is fetched by the service
+    URL that is fetched by the service.
+
+    Remote ``http`` and ``https`` feeds are requested via TYPO3's HTTP client
+    stack, so TYPO3 proxy and related outbound HTTP settings apply
+    automatically. Local file paths use SimplePie's default
+    transport.
 
 ..  _configuration-typoscript-constants-settings-maxfeedcount:
 
