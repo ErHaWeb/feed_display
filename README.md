@@ -109,6 +109,21 @@ With the GitHub CLI this looks like:
 gh workflow run publish-ter.yml --ref main -f version=2.2.0
 ```
 
+Only one workflow run per release version is allowed at a time. Parallel runs
+for the same tag are serialized by the workflow `concurrency` group.
+
+### Manual dry run for an existing tag
+
+To validate packaging without contacting TER, start the same workflow manually
+and set `dry_run=true`. The workflow then creates the TER artefact zip, uploads
+it as a GitHub Actions artefact, and skips token validation and publication.
+
+With the GitHub CLI this looks like:
+
+```bash
+gh workflow run publish-ter.yml --ref main -f version=2.2.0 -f dry_run=true
+```
+
 ### Local dry run
 
 The helper script validates the checked out release tag and generates the TER

@@ -10,6 +10,15 @@ on:
         description: "Release tag in x.y.z format"
         required: true
         type: string
+      dry_run:
+        description: "Create the TER artefact without publishing it"
+        required: false
+        default: false
+        type: boolean
+
+concurrency:
+  group: ter-publish-${{ github.repository }}-${{ github.event_name == 'workflow_dispatch' && inputs.version || github.ref_name }}
+  cancel-in-progress: false
 
 jobs:
   publish:
@@ -19,7 +28,9 @@ jobs:
       contents: read
     env:
       COMPOSER_HOME: ${{ github.workspace }}/.composer
+      DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && 'true' || 'false' }}
       RELEASE_VERSION: ${{ github.event_name == 'workflow_dispatch' && inputs.version || github.ref_name }}
+      TYPO3_EXTENSION_KEY: feed_display
       TYPO3_API_TOKEN: ${{ secrets.TYPO3_API_TOKEN }}
       TYPO3_EXCLUDE_FROM_PACKAGING: ${{ github.workspace }}/support/Build/Tailor/ExcludeFromPackaging.php
       TAILOR_VERSION: 1.7.0
@@ -64,6 +75,7 @@ jobs:
           bash support/Build/Scripts/prepareTerPublish.sh "${RELEASE_VERSION}" "${GITHUB_ENV}" release
 
       - name: Verify TYPO3 API token
+        if: env.DRY_RUN != 'true'
         run: |
           set -euo pipefail
           if [[ -z "${TYPO3_API_TOKEN:-}" ]]; then
@@ -72,22 +84,45 @@ jobs:
           fi
 
       - name: Verify TER access
+        if: env.DRY_RUN != 'true'
         working-directory: release
         run: |
           set -euo pipefail
-          php "${COMPOSER_HOME}/vendor/bin/tailor" -n ter:details > /dev/null
+          output="$(
+            php "${COMPOSER_HOME}/vendor/bin/tailor" -n ter:details "${TYPO3_EXTENSION_KEY}" 2>&1
+          )" || {
+            printf '%s\n' "${output}"
+            exit 1
+          }
 
       - name: Abort if version already exists in TER
+        if: env.DRY_RUN != 'true'
         working-directory: release
         run: |
           set -euo pipefail
-          if php "${COMPOSER_HOME}/vendor/bin/tailor" -n ter:version "${RELEASE_VERSION}" > /dev/null 2>&1; then
+          if php "${COMPOSER_HOME}/vendor/bin/tailor" -n ter:version "${RELEASE_VERSION}" "${TYPO3_EXTENSION_KEY}" > /dev/null 2>&1; then
             echo "::error::Version ${RELEASE_VERSION} is already published on TER."
             exit 1
           fi
 
-      - name: Publish to TER
+      - name: Create TER artefact
+        if: env.DRY_RUN == 'true'
         working-directory: release
         run: |
           set -euo pipefail
-          php "${COMPOSER_HOME}/vendor/bin/tailor" -n ter:publish "${RELEASE_VERSION}" --path=. --comment "${comment}"
+          php "${COMPOSER_HOME}/vendor/bin/tailor" -n create-artefact "${RELEASE_VERSION}" "${TYPO3_EXTENSION_KEY}" --path=.
+
+      - name: Upload TER artefact
+        if: env.DRY_RUN == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ter-artefact-${{ env.RELEASE_VERSION }}
+          path: release/tailor-version-artefact/*.zip
+          if-no-files-found: error
+
+      - name: Publish to TER
+        if: env.DRY_RUN != 'true'
+        working-directory: release
+        run: |
+          set -euo pipefail
+          php "${COMPOSER_HOME}/vendor/bin/tailor" -n ter:publish "${RELEASE_VERSION}" "${TYPO3_EXTENSION_KEY}" --path=. --comment "${comment}"
