@@ -1,1 +1,10 @@
-Documentation-GENERATED-temp
+/.Build
+/.cache
+/.phpunit.cache
+/config/
+/var/
+/composer.lock
+/composer.json.orig
+/composer.json.testing
+/Documentation-GENERATED-temp
+/Tests/Build/.phpunit.result.cache

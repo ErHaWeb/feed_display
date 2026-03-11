@@ -24,6 +24,12 @@
 			<trans-unit id="feed.items">
 				<source>Items</source>
 			</trans-unit>
+			<trans-unit id="feed.links">
+				<source>Links</source>
+			</trans-unit>
+			<trans-unit id="feed.link">
+				<source>Link</source>
+			</trans-unit>
 			<trans-unit id="item.categories">
 				<source>Categories</source>
 			</trans-unit>

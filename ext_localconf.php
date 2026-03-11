@@ -15,18 +15,15 @@
 
 declare(strict_types=1);
 
+use ErHaWeb\FeedDisplay\Bootstrap\SimplePieBootstrap;
 use ErHaWeb\FeedDisplay\Controller\FeedController;
-use SimplePie\SimplePie;
-use TYPO3\CMS\Core\Core\Environment;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
 defined('TYPO3') or die();
 
 (static function () {
-    /**
-     * Add plugin configuration
-     */
+    // Add plugin configuration.
     ExtensionUtility::configurePlugin(
         'FeedDisplay',
         'Pi1',
@@ -35,15 +32,8 @@ defined('TYPO3') or die();
         ]
     );
 
-    /**
-     * Cache Registration
-     */
+    // Register extension cache.
     $GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['feeddisplay'] ??= [];
 
-    /*
-     * Load SimplePie library from phar file if not in composer mode
-     */
-    if (!class_exists(SimplePie::class) && !Environment::isComposerMode()) {
-        require_once 'phar://' . ExtensionManagementUtility::extPath('feed_display') . 'Libraries/simplepie-simplepie.phar/vendor/autoload.php';
-    }
+    (new SimplePieBootstrap(ExtensionManagementUtility::extPath('feed_display')))->ensureLibraryIsLoaded();
 })();
