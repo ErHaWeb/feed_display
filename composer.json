@@ -5,7 +5,7 @@
   "license": "GPL-2.0-or-later",
   "require": {
     "php": "^8.1 || ^8.2 || ^8.3",
-    "simplepie/simplepie": "^1.8",
+    "simplepie/simplepie": "^1.9",
     "typo3/cms-backend": "^12.4 || ^13.4",
     "typo3/cms-core": "^12.4 || ^13.4",
     "typo3/cms-extbase": "^12.4 || ^13.4",
@@ -75,8 +75,12 @@
     "create-libs": [
       "mkdir -p Libraries",
       "@composer global require clue/phar-composer",
-      "[ -f Libraries/simplepie-simplepie.phar ] || $HOME/.composer/vendor/bin/phar-composer build 'simplepie/simplepie=^1.8' Libraries/simplepie-simplepie.phar",
+      "[ -f Libraries/simplepie-simplepie.phar ] || $HOME/.composer/vendor/bin/phar-composer build 'simplepie/simplepie=1.9.0' Libraries/simplepie-simplepie.phar",
       "chmod -x Libraries/*"
+    ],
+    "rebuild-libs": [
+      "rm -f Libraries/simplepie-simplepie.phar",
+      "@create-libs"
     ],
     "build-extension": [
       "@create-libs"

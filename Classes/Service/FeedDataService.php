@@ -19,8 +19,11 @@ namespace ErHaWeb\FeedDisplay\Service;
 
 use ErHaWeb\FeedDisplay\Event\SingleFeedDataEvent;
 use Psr\EventDispatcher\EventDispatcherInterface;
+use Psr\Http\Message\RequestFactoryInterface;
+use Psr\Http\Message\UriFactoryInterface;
 use SimplePie\SimplePie;
 use TYPO3\CMS\Core\Core\Environment;
+use TYPO3\CMS\Core\Http\Client\GuzzleClientFactory;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**
@@ -30,7 +33,10 @@ class FeedDataService
 {
     public function __construct(
         private readonly SimplePie $feed,
-        private readonly EventDispatcherInterface $eventDispatcher
+        private readonly EventDispatcherInterface $eventDispatcher,
+        private readonly GuzzleClientFactory $guzzleClientFactory,
+        private readonly RequestFactoryInterface $requestFactory,
+        private readonly UriFactoryInterface $uriFactory,
     ) {}
 
     public function buildData(array $settings): array
@@ -150,8 +156,21 @@ class FeedDataService
 
         $feedUrl = stripslashes((string)$feedUrl);
         $this->feed->set_feed_url($feedUrl);
+        if ($this->shouldUseTypo3HttpClient($feedUrl)) {
+            $this->feed->set_http_client(
+                $this->guzzleClientFactory->getClient(),
+                $this->requestFactory,
+                $this->uriFactory
+            );
+        }
         $this->feed->enable_cache(false);
         $this->feed->init();
         return true;
+    }
+
+    private function shouldUseTypo3HttpClient(string $feedUrl): bool
+    {
+        $scheme = parse_url($feedUrl, PHP_URL_SCHEME);
+        return is_string($scheme) && in_array(strtolower($scheme), ['http', 'https'], true);
     }
 }
