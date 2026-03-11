@@ -103,7 +103,7 @@ Local test runner for the feed_display extension.
 Usage: $0 [options] [file]
 
 Options:
-    -s <composer|composerInstall|functional|fractor|rector|unit|clean>
+    -s <composer|composerInstall|functional|liveFeed|fractor|rector|unit|clean>
         Specifies which suite or command to run
 
     -t <12|13>
@@ -154,6 +154,7 @@ Examples:
     Build/Scripts/runTests.sh -s composerInstall
     Build/Scripts/runTests.sh -s unit
     Build/Scripts/runTests.sh -s functional
+    Build/Scripts/runTests.sh -s liveFeed
     Build/Scripts/runTests.sh -s fractor -n
     Build/Scripts/runTests.sh -s rector -n
     Build/Scripts/runTests.sh -s functional -d postgres
@@ -374,7 +375,7 @@ case ${TEST_SUITE} in
         restoreComposerFiles
         ;;
     functional)
-        COMMAND=(.Build/bin/phpunit -c Build/phpunit/FunctionalTests.xml --exclude-group not-${DBMS} ${EXTRA_TEST_OPTIONS} "$@")
+        COMMAND=(.Build/bin/phpunit -c Build/phpunit/FunctionalTests.xml --exclude-group "not-${DBMS},live-feed" ${EXTRA_TEST_OPTIONS} "$@")
         case ${DBMS} in
             mariadb)
                 ${CONTAINER_BIN} run --rm --name mariadb-func-${SUFFIX} --network ${NETWORK} -d -e MYSQL_ROOT_PASSWORD=funcp --tmpfs /var/lib/mysql/:rw,noexec,nosuid ${IMAGE_MARIADB} >/dev/null
@@ -401,6 +402,38 @@ case ${TEST_SUITE} in
                 mkdir -p "${ROOT_DIR}/.Build/Web/typo3temp/var/tests/functional-sqlite-dbs/"
                 CONTAINERPARAMS="-e typo3DatabaseDriver=pdo_sqlite --tmpfs ${ROOT_DIR}/.Build/Web/typo3temp/var/tests/functional-sqlite-dbs/:rw,noexec,nosuid"
                 ${CONTAINER_BIN} run ${CONTAINER_COMMON_PARAMS} --name functional-${SUFFIX} ${XDEBUG_MODE} -e XDEBUG_CONFIG="${XDEBUG_CONFIG}" ${CONTAINERPARAMS} ${IMAGE_PHP} "${COMMAND[@]}"
+                SUITE_EXIT_CODE=$?
+                ;;
+        esac
+        ;;
+    liveFeed)
+        COMMAND=(.Build/bin/phpunit -c Build/phpunit/FunctionalTests.xml --group live-feed --exclude-group not-${DBMS} ${EXTRA_TEST_OPTIONS} "$@")
+        case ${DBMS} in
+            mariadb)
+                ${CONTAINER_BIN} run --rm --name mariadb-func-${SUFFIX} --network ${NETWORK} -d -e MYSQL_ROOT_PASSWORD=funcp --tmpfs /var/lib/mysql/:rw,noexec,nosuid ${IMAGE_MARIADB} >/dev/null
+                waitFor mariadb-func-${SUFFIX} 3306
+                CONTAINERPARAMS="-e typo3DatabaseDriver=${DATABASE_DRIVER} -e typo3DatabaseName=func_test -e typo3DatabaseUsername=root -e typo3DatabaseHost=mariadb-func-${SUFFIX} -e typo3DatabasePassword=funcp"
+                ${CONTAINER_BIN} run ${CONTAINER_COMMON_PARAMS} --name live-feed-${SUFFIX} ${XDEBUG_MODE} -e XDEBUG_CONFIG="${XDEBUG_CONFIG}" ${CONTAINERPARAMS} ${IMAGE_PHP} "${COMMAND[@]}"
+                SUITE_EXIT_CODE=$?
+                ;;
+            mysql)
+                ${CONTAINER_BIN} run --rm --name mysql-func-${SUFFIX} --network ${NETWORK} -d -e MYSQL_ROOT_PASSWORD=funcp --tmpfs /var/lib/mysql/:rw,noexec,nosuid ${IMAGE_MYSQL} >/dev/null
+                waitFor mysql-func-${SUFFIX} 3306
+                CONTAINERPARAMS="-e typo3DatabaseDriver=${DATABASE_DRIVER} -e typo3DatabaseName=func_test -e typo3DatabaseUsername=root -e typo3DatabaseHost=mysql-func-${SUFFIX} -e typo3DatabasePassword=funcp"
+                ${CONTAINER_BIN} run ${CONTAINER_COMMON_PARAMS} --name live-feed-${SUFFIX} ${XDEBUG_MODE} -e XDEBUG_CONFIG="${XDEBUG_CONFIG}" ${CONTAINERPARAMS} ${IMAGE_PHP} "${COMMAND[@]}"
+                SUITE_EXIT_CODE=$?
+                ;;
+            postgres)
+                ${CONTAINER_BIN} run --rm --name postgres-func-${SUFFIX} --network ${NETWORK} -d -e POSTGRES_PASSWORD=funcp -e POSTGRES_USER=funcu --tmpfs /var/lib/postgresql/data:rw,noexec,nosuid ${IMAGE_POSTGRES} >/dev/null
+                waitFor postgres-func-${SUFFIX} 5432
+                CONTAINERPARAMS="-e typo3DatabaseDriver=pdo_pgsql -e typo3DatabaseName=bamboo -e typo3DatabaseUsername=funcu -e typo3DatabaseHost=postgres-func-${SUFFIX} -e typo3DatabasePassword=funcp"
+                ${CONTAINER_BIN} run ${CONTAINER_COMMON_PARAMS} --name live-feed-${SUFFIX} ${XDEBUG_MODE} -e XDEBUG_CONFIG="${XDEBUG_CONFIG}" ${CONTAINERPARAMS} ${IMAGE_PHP} "${COMMAND[@]}"
+                SUITE_EXIT_CODE=$?
+                ;;
+            sqlite)
+                mkdir -p "${ROOT_DIR}/.Build/Web/typo3temp/var/tests/functional-sqlite-dbs/"
+                CONTAINERPARAMS="-e typo3DatabaseDriver=pdo_sqlite --tmpfs ${ROOT_DIR}/.Build/Web/typo3temp/var/tests/functional-sqlite-dbs/:rw,noexec,nosuid"
+                ${CONTAINER_BIN} run ${CONTAINER_COMMON_PARAMS} --name live-feed-${SUFFIX} ${XDEBUG_MODE} -e XDEBUG_CONFIG="${XDEBUG_CONFIG}" ${CONTAINERPARAMS} ${IMAGE_PHP} "${COMMAND[@]}"
                 SUITE_EXIT_CODE=$?
                 ;;
         esac
@@ -444,7 +477,7 @@ echo "Result of ${TEST_SUITE}" >&2
 echo "PHP: ${PHP_VERSION}" >&2
 echo "TYPO3: ${TYPO3_VERSION}" >&2
 echo "CONTAINER_BIN: ${CONTAINER_BIN}" >&2
-if [[ ${TEST_SUITE} =~ ^functional$ ]]; then
+if [[ ${TEST_SUITE} =~ ^(functional|liveFeed)$ ]]; then
     case "${DBMS}" in
         mariadb|mysql)
             echo "DBMS: ${DBMS} version ${DBMS_VERSION} driver ${DATABASE_DRIVER}" >&2
