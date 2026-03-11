@@ -90,4 +90,4 @@ jobs:
         working-directory: release
         run: |
           set -euo pipefail
-          php "${COMPOSER_HOME}/vendor/bin/tailor" -n ter:publish "${RELEASE_VERSION}" --path=. --comment "${COMMENT}"
+          php "${COMPOSER_HOME}/vendor/bin/tailor" -n ter:publish "${RELEASE_VERSION}" --path=. --comment "${comment}"
