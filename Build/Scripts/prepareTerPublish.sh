@@ -4,9 +4,10 @@ set -euo pipefail
 
 readonly VERSION="${1:-}"
 readonly OUTPUT_FILE="${2:-}"
+readonly RELEASE_PATH="${3:-.}"
 
 if [[ -z "${VERSION}" ]]; then
-    echo "Usage: $0 <version> [output-file]" >&2
+    echo "Usage: $0 <version> [output-file] [release-path]" >&2
     exit 1
 fi
 
@@ -14,6 +15,13 @@ if ! [[ "${VERSION}" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
     echo "Version '${VERSION}' must match x.y.z." >&2
     exit 1
 fi
+
+if [[ ! -d "${RELEASE_PATH}" ]]; then
+    echo "Release path '${RELEASE_PATH}' does not exist." >&2
+    exit 1
+fi
+
+cd "${RELEASE_PATH}"
 
 if ! git rev-parse --verify --quiet "refs/tags/${VERSION}^{commit}" >/dev/null; then
     echo "Tag '${VERSION}' does not exist." >&2
