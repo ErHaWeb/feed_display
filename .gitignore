@@ -1,7 +1,9 @@
 /.Build
+/.composer
 /.cache
 /.phpunit.cache
 /config/
+/tailor-version-artefact
 /var/
 /composer.lock
 /composer.json.orig

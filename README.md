@@ -78,3 +78,51 @@ all content elements.
 ## Read more
 
 For more information, see the documentation at [docs.typo3.org](https://docs.typo3.org/p/erhaweb/feed-display/main/en-us/).
+
+## Release automation
+
+Publishing to TER is automated with [`.github/workflows/publish-ter.yml`](.github/workflows/publish-ter.yml)
+and the official TYPO3 Tailor CLI.
+
+### Required repository secret
+
+Add the repository secret `TYPO3_API_TOKEN` with the scopes
+`extension:read,extension:write` and restrict it to `feed_display`.
+
+### Standard release flow
+
+1. Create the release commit and tag it as `x.y.z` without a `v` prefix.
+2. Push the commit and tag to GitHub.
+3. The workflow checks out the tagged commit, validates the version markers in
+   `ext_emconf.php` and `Documentation/Settings.cfg`, generates the TER upload
+   comment from the non-merge commit subjects since the previous release tag,
+   and publishes the package to TER.
+
+### Manual backfill for an existing tag
+
+If a tag already exists and has not been published yet, start the workflow
+manually from `main` and provide the tag name in the `version` input.
+
+With the GitHub CLI this looks like:
+
+```bash
+gh workflow run publish-ter.yml --ref main -f version=2.2.0
+```
+
+### Local dry run
+
+The helper script validates the checked out release tag and generates the TER
+comment locally:
+
+```bash
+bash Build/Scripts/prepareTerPublish.sh 2.2.0
+```
+
+To create a local TER artefact with Tailor, install the pinned version and use
+the packaging exclusions from `Build/Tailor/ExcludeFromPackaging.php`:
+
+```bash
+COMPOSER_HOME="${PWD}/.Build/.composer" composer global require typo3/tailor:1.7.0
+TYPO3_EXCLUDE_FROM_PACKAGING=Build/Tailor/ExcludeFromPackaging.php \
+  php .Build/.composer/vendor/bin/tailor create-artefact 2.2.0 --path=.
+```
