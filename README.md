@@ -140,4 +140,5 @@ the packaging exclusions from `Build/Tailor/ExcludeFromPackaging.php`:
 COMPOSER_HOME="${PWD}/.Build/.composer" composer global require typo3/tailor:1.7.0
 TYPO3_EXCLUDE_FROM_PACKAGING=Build/Tailor/ExcludeFromPackaging.php \
   php .Build/.composer/vendor/bin/tailor create-artefact 2.2.0 --path=.
+bash Build/Scripts/verifyTerArtefact.sh tailor-version-artefact/feed_display_2.2.0.zip
 ```

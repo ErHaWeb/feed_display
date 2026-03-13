@@ -106,11 +106,17 @@ jobs:
           fi
 
       - name: Create TER artefact
-        if: env.DRY_RUN == 'true'
         working-directory: release
         run: |
           set -euo pipefail
           php "${COMPOSER_HOME}/vendor/bin/tailor" -n create-artefact "${RELEASE_VERSION}" "${TYPO3_EXTENSION_KEY}" --path=.
+
+      - name: Verify TER artefact contents
+        working-directory: release
+        run: |
+          set -euo pipefail
+          artefact="$(echo tailor-version-artefact/*.zip)"
+          bash ../support/Build/Scripts/verifyTerArtefact.sh "${artefact}"
 
       - name: Upload TER artefact
         if: env.DRY_RUN == 'true'
@@ -125,4 +131,5 @@ jobs:
         working-directory: release
         run: |
           set -euo pipefail
-          php "${COMPOSER_HOME}/vendor/bin/tailor" -n ter:publish "${RELEASE_VERSION}" "${TYPO3_EXTENSION_KEY}" --path=. --comment "${comment}"
+          artefact="$(echo tailor-version-artefact/*.zip)"
+          php "${COMPOSER_HOME}/vendor/bin/tailor" -n ter:publish "${RELEASE_VERSION}" "${TYPO3_EXTENSION_KEY}" --artefact="${artefact}" --comment "${comment}"
