@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" original="EXT:feed_display/Resources/Private/Language/locallang_be.xlf" datatype="plaintext" product-name="feed_display" date="2025-02-25T11:12:50+01:00" target-language="pl">
+    <header/>
+    <body>
+      <trans-unit id="pi1_title" approved="yes">
+        <source>Feed Display</source>
+        <target state="final">Wyświetlanie kanału</target>
+      </trans-unit>
+      <trans-unit id="pi1_plus_wiz_description" approved="yes">
+        <source>RSS/Atom web feed parsing and frontend display based on Extbase/Fluid</source>
+        <target state="final">Przetwarzanie kanału RSS i wyświetlanie frontendu w oparciu o Extbase/płyn</target>
+      </trans-unit>
+      <trans-unit id="flexform.sheet_general.title" approved="yes">
+        <source>General</source>
+        <target state="final">Ogólny</target>
+      </trans-unit>
+      <trans-unit id="flexform.sheet_general.description" approved="yes">
+        <source>These are general settings for the frontend display of the feed. If no value is given, then the value of the TypoScript configuration is used by default.</source>
+        <target state="final">Są to ogólne ustawienia dla wyświetlania kanału na frontendzie. Jeśli nie podano wartości, domyślnie używana jest wartość konfiguracji TypoScript.</target>
+      </trans-unit>
+      <trans-unit id="flexform.feedUrl.label" approved="yes">
+        <source>Feed URL</source>
+        <target state="final">Adres URL kanału</target>
+      </trans-unit>
+      <trans-unit id="flexform.feedUrl.description" approved="yes">
+        <source>URL that is fetched by the service (empty = Defined by TypoScript)</source>
+        <target state="final">Adres URL, który jest pobierany przez usługę (pusty = zdefiniowany przez TypoScript)</target>
+      </trans-unit>
+      <trans-unit id="flexform.maxFeedCount.label" approved="yes">
+        <source>Max. items</source>
+        <target state="final">Maks. przedmiotów</target>
+      </trans-unit>
+      <trans-unit id="flexform.maxFeedCount.description" approved="yes">
+        <source>Maximum feed items to show (0 or empty = Defined by TypoScript)</source>
+        <target state="final">Maksymalna ilość elementów do pokazania (0 lub puste = zdefiniowane przez TypoScript)</target>
+      </trans-unit>
+      <trans-unit id="flexform.maxContentLength.label" approved="yes">
+        <source>Max. content length</source>
+        <target state="final">Maksymalna długość zawartości</target>
+      </trans-unit>
+      <trans-unit id="flexform.maxContentLength.description" approved="yes">
+        <source>Crop the characters of the feed content to the configured length (0 or empty = Defined by TypoScript)</source>
+        <target state="final">Przytnij znaki treści kanału do skonfigurowanej długości (0 lub puste = zdefiniowane przez TypoScript)</target>
+      </trans-unit>
+      <trans-unit id="flexform.maxHeaderLength.label" approved="yes">
+        <source>Max. header length</source>
+        <target state="final">Maksymalna długość nagłówka</target>
+      </trans-unit>
+      <trans-unit id="flexform.maxHeaderLength.description" approved="yes">
+        <source>Crop the characters of the feed header to the configured length (0 or empty = Defined by TypoScript)</source>
+        <target state="final">Przytnij znaki nagłówka kanału do skonfigurowanej długości (0 lub puste = zdefiniowane przez TypoScript)</target>
+      </trans-unit>
+      <trans-unit id="flexform.linkTarget.label" approved="yes">
+        <source>Target</source>
+        <target state="final">Target</target>
+      </trans-unit>
+      <trans-unit id="flexform.linkTarget.description" approved="yes">
+        <source>Target attribute to define the feed link behavior</source>
+        <target state="final">Atrybut docelowy do zdefiniowania zachowania linku kanału</target>
+      </trans-unit>
+      <trans-unit id="flexform.linkTarget.I.default" approved="yes">
+        <source>Defined by TypoScript (default)</source>
+        <target state="final">Zdefiniowany przez TypoScript (domyślnie)</target>
+      </trans-unit>
+      <trans-unit id="flexform.linkTarget.I.blank" approved="yes">
+        <source>Opens in a new window or tab</source>
+        <target state="final">Otwiera się w nowym oknie lub karcie</target>
+      </trans-unit>
+      <trans-unit id="flexform.linkTarget.I.self" approved="yes">
+        <source>Opens in the same frame as it was clicked</source>
+        <target state="final">Otwiera się w tej samej ramce co kliknięte</target>
+      </trans-unit>
+      <trans-unit id="flexform.linkTarget.I.parent" approved="yes">
+        <source>Opens in the parent frame</source>
+        <target state="final">Otwiera się w ramce nadrzędnej</target>
+      </trans-unit>
+      <trans-unit id="flexform.linkTarget.I.top" approved="yes">
+        <source>Opens in the full body of the window</source>
+        <target state="final">Otwiera się w całym oknie</target>
+      </trans-unit>
+      <trans-unit id="flexform.logoMaxWidth.label" approved="yes">
+        <source>Logo max. width</source>
+        <target state="final">Maksymalna szerokość logo</target>
+      </trans-unit>
+      <trans-unit id="flexform.logoMaxWidth.description" approved="yes">
+        <source>Maximum width of the feeds logo image (0 or empty = Defined by TypoScript)</source>
+        <target state="final">Maksymalna szerokość obrazu logo kanału (0 lub puste = zdefiniowane przez TypoScript)</target>
+      </trans-unit>
+      <trans-unit id="flexform.logoMaxHeight.label" approved="yes">
+        <source>Logo max. height</source>
+        <target state="final">Maksymalna wysokość logo</target>
+      </trans-unit>
+      <trans-unit id="flexform.logoMaxHeight.description" approved="yes">
+        <source>Maximum height of the feeds logo image (0 or empty = Defined by TypoScript)</source>
+        <target state="final">Maksymalna wysokość obrazu logo kanału (0 lub puste = zdefiniowane przez TypoScript)</target>
+      </trans-unit>
+      <trans-unit id="flexform.feedIconMaxWidth.label" approved="yes">
+        <source>Feed icon max. width</source>
+        <target state="final">Maksymalna szerokość ikony kanału</target>
+      </trans-unit>
+      <trans-unit id="flexform.feedIconMaxWidth.description" approved="yes">
+        <source>Maximum width of the feeds icon image (0 or empty = Defined by TypoScript)</source>
+        <target state="final">Maksymalna szerokość obrazu ikony kanału (0 lub puste = zdefiniowane przez TypoScript)</target>
+      </trans-unit>
+      <trans-unit id="flexform.feedIconMaxHeight.label" approved="yes">
+        <source>Feed icon max. height</source>
+        <target state="final">Maksymalna wysokość ikony kanału</target>
+      </trans-unit>
+      <trans-unit id="flexform.feedIconMaxHeight.description" approved="yes">
+        <source>Maximum height of the feeds icon image (0 or empty = Defined by TypoScript)</source>
+        <target state="final">Maksymalna wysokość obrazu ikony kanału (0 lub puste = zdefiniowane przez TypoScript)</target>
+      </trans-unit>
+      <trans-unit id="flexform.errorMessage.label" approved="yes">
+        <source>Error message</source>
+        <target state="final">Komunikat o błędzie</target>
+      </trans-unit>
+      <trans-unit id="flexform.errorMessage.description" approved="yes">
+        <source>This message is displayed if no feed items could be fetched (empty = Defined by TypoScript)</source>
+        <target state="final">Ta wiadomość jest wyświetlana, jeśli żaden kanał nie może być pobrany (pusty = zdefiniowany przez TypoScript)</target>
+      </trans-unit>
+      <trans-unit id="flexform.sheet_advanced.title" approved="yes">
+        <source>Advanced</source>
+        <target state="final">Zaawansowane</target>
+      </trans-unit>
+      <trans-unit id="flexform.sheet_advanced.description" approved="yes">
+        <source>These are advanced settings. If you are unsure, simply use the default values here. If no value is given, then the value of the TypoScript configuration is used by default.</source>
+        <target state="final">Są to ustawienia zaawansowane. Jeśli nie jesteś pewien, po prostu użyj tutaj wartości domyślnych. Jeśli nie podano wartości, domyślnie używana jest wartość konfiguracji TypoScript.</target>
+      </trans-unit>
+      <trans-unit id="flexform.dateFormat.label" approved="yes">
+        <source>Date format</source>
+        <target state="final">Format daty</target>
+      </trans-unit>
+      <trans-unit id="flexform.dateFormat.description" approved="yes">
+        <source>Use PHP's strftime() function format (empty = Defined by TypoScript)</source>
+        <target state="final">Użyj formatu funkcji strftime() PHP (pusty = zdefiniowany przez TypoScript)</target>
+      </trans-unit>
+      <trans-unit id="flexform.stripTags.label" approved="yes">
+        <source>Strip tags</source>
+        <target state="final">Usuń tagi</target>
+      </trans-unit>
+      <trans-unit id="flexform.stripTags.description" approved="yes">
+        <source>Remove HTML tags from the feed content</source>
+        <target state="final">Usuń znaczniki HTML z zawartości kanału</target>
+      </trans-unit>
+      <trans-unit id="flexform.stripTags.I.yes" approved="yes">
+        <source>yes</source>
+        <target state="final">Tak</target>
+      </trans-unit>
+      <trans-unit id="flexform.stripTags.I.no" approved="yes">
+        <source>no</source>
+        <target state="final">nie</target>
+      </trans-unit>
+      <trans-unit id="flexform.cacheDuration.label" approved="yes">
+        <source>Feed cache</source>
+        <target state="final">Pamięć podręczna</target>
+      </trans-unit>
+      <trans-unit id="flexform.cacheDuration.description" approved="yes">
+        <source>Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache, empty = Defined by TypoScript)</source>
+        <target state="final">Czas w sekundach, w których dane mają być odczytane od skrzynki do następnego odnowienia skrzynki. (0 = brak pamięci podręcznej, puste = zdefiniowane przez TypoScript)</target>
+      </trans-unit>
+      <trans-unit id="flexform.placeholder.feed" approved="yes">
+        <source>Defined by Feed or TypoScript (default)</source>
+        <target state="final">Określone przez kanał lub TypoScript (domyślnie)</target>
+      </trans-unit>
+      <trans-unit id="flexform.placeholder.typoscript" approved="yes">
+        <source>Defined by TypoScript (default)</source>
+        <target state="final">Zdefiniowany przez TypoScript (domyślnie)</target>
+      </trans-unit>
+      <trans-unit id="flexform.sheet_getFields.title" approved="yes">
+        <source>Get Fields</source>
+        <target state="final">Pobierz pola</target>
+      </trans-unit>
+      <trans-unit id="flexform.sheet_getFields.description" approved="yes">
+        <source>Select here which fields from the feed and feed items should be read using the SimplePie library and should be available as variables in the fluid template. If no fields were selected, then the TypoScript configuration is used.</source>
+        <target state="final">Wybierz, które pola z kanału i elementów kanału powinny być czytane przy użyciu biblioteki SimplePie i powinny być dostępne jako zmienne w szablonie płynów. Jeśli nie wybrano żadnych pól, konfiguracja TypoScript jest używana.</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.label" approved="yes">
+        <source>Get fields from feed</source>
+        <target state="final">Pobierz pola z kanału</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.description" approved="yes">
+        <source>Selection of the fields to be read from the feed.</source>
+        <target state="final">Wybór pól do odczytu z kanału.</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.group.feed" approved="yes">
+        <source>Feed</source>
+        <target state="final">Kanał</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.author" approved="yes">
+        <source>Author</source>
+        <target state="final">Autor</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.authors" approved="yes">
+        <source>Authors</source>
+        <target state="final">Autorzy</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.contributor" approved="yes">
+        <source>Contributor</source>
+        <target state="final">Współtwórca</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.contributors" approved="yes">
+        <source>Contributors</source>
+        <target state="final">Współtwórcy</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.copyright" approved="yes">
+        <source>Copyright</source>
+        <target state="final">Prawa autorskie</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.description" approved="yes">
+        <source>Description</source>
+        <target state="final">Opis</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.encoding" approved="yes">
+        <source>Encoding</source>
+        <target state="final">Kodowanie</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.favicon" approved="yes">
+        <source>Favicon</source>
+        <target state="final">Favicon</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.items" approved="yes">
+        <source>Items</source>
+        <target state="final">Przedmioty</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.item_quantity" approved="yes">
+        <source>Item_quantity</source>
+        <target state="final">Ilość_produktu</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.language" approved="yes">
+        <source>Language</source>
+        <target state="final">Język</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.link" approved="yes">
+        <source>Link</source>
+        <target state="final">Link</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.links" approved="yes">
+        <source>Links</source>
+        <target state="final">Linki</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.permalink" approved="yes">
+        <source>Permalink</source>
+        <target state="final">Link bezpośredni</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.title" approved="yes">
+        <source>Title</source>
+        <target state="final">Rozporządzenie Rady (EWG) nr 2658/87 z dnia 23 lipca 1987 r. w sprawie nomenklatury taryfowej i statystycznej oraz w sprawie Wspólnej Taryfy Celnej (Dz.U. L 256 z 7.9.1987, s. 1).</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.type" approved="yes">
+        <source>Type</source>
+        <target state="final">Typ</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.latitude" approved="yes">
+        <source>Latitude</source>
+        <target state="final">Szerokość geograficzna</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.longitude" approved="yes">
+        <source>Longitude</source>
+        <target state="final">Długość geograficzna</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.image_height" approved="yes">
+        <source>Image Height</source>
+        <target state="final">Wysokość obrazu</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.image_link" approved="yes">
+        <source>Image Link</source>
+        <target state="final">Link do obrazu</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.image_title" approved="yes">
+        <source>Image Title</source>
+        <target state="final">Tytuł obrazu</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.image_url" approved="yes">
+        <source>Image URL</source>
+        <target state="final">Adres URL obrazu</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.image_width" approved="yes">
+        <source>Image Width</source>
+        <target state="final">Szerokość obrazu</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.all_discovered_feeds" approved="yes">
+        <source>All Discovered Feeds</source>
+        <target state="final">Wszystkie odkryte kanały</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.base" approved="yes">
+        <source>Base</source>
+        <target state="final">Podstawa</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.subscribe_url" approved="yes">
+        <source>Subscribe URL</source>
+        <target state="final">Subscribe URL</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.label" approved="yes">
+        <source>Get fields from feed items</source>
+        <target state="final">Pobierz pola z elementów kanału</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.description" approved="yes">
+        <source>Selection of the fields to be read from the feed items.</source>
+        <target state="final">Wybór pól, które mają być odczytywane z elementów kanałów.</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.group.items" approved="yes">
+        <source>Items</source>
+        <target state="final">Przedmioty</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.author" approved="yes">
+        <source>Author</source>
+        <target state="final">Autor</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.authors" approved="yes">
+        <source>Authors</source>
+        <target state="final">Autorzy</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.categories" approved="yes">
+        <source>Categories</source>
+        <target state="final">Kategorie</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.category" approved="yes">
+        <source>Category</source>
+        <target state="final">Kategoria</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.content" approved="yes">
+        <source>Content</source>
+        <target state="final">Zawartość</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.contributor" approved="yes">
+        <source>Contributor</source>
+        <target state="final">Współtwórca</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.contributors" approved="yes">
+        <source>Contributors</source>
+        <target state="final">Współtwórcy</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.copyright" approved="yes">
+        <source>Copyright</source>
+        <target state="final">Prawa autorskie</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.date|U" approved="yes">
+        <source>Date (with parameter "U")</source>
+        <target state="final">Data (z parametrem "U")</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.description" approved="yes">
+        <source>Description</source>
+        <target state="final">Opis</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.enclosure" approved="yes">
+        <source>Enclosure</source>
+        <target state="final">Pomieszczenie</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.enclosures" approved="yes">
+        <source>Enclosures</source>
+        <target state="final">Pomieszczenia</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.feed" approved="yes">
+        <source>Feed</source>
+        <target state="final">Kanał</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.id" approved="yes">
+        <source>ID</source>
+        <target state="final">ID</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.link" approved="yes">
+        <source>Link</source>
+        <target state="final">Link</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.links" approved="yes">
+        <source>Links</source>
+        <target state="final">Linki</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.local_date|" approved="yes">
+        <source>Local Date (with empty parameter)</source>
+        <target state="final">Data lokalna (z pustym parametrem)</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.permalink" approved="yes">
+        <source>Permalink</source>
+        <target state="final">Link bezpośredni</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.source" approved="yes">
+        <source>Source</source>
+        <target state="final">Źródło</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.title" approved="yes">
+        <source>Title</source>
+        <target state="final">Rozporządzenie Rady (EWG) nr 2658/87 z dnia 23 lipca 1987 r. w sprawie nomenklatury taryfowej i statystycznej oraz w sprawie Wspólnej Taryfy Celnej (Dz.U. L 256 z 7.9.1987, s. 1).</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.latitude" approved="yes">
+        <source>Latitude</source>
+        <target state="final">Szerokość geograficzna</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.longitude" approved="yes">
+        <source>Longitude</source>
+        <target state="final">Długość geograficzna</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.base" approved="yes">
+        <source>Base</source>
+        <target state="final">Podstawa</target>
+      </trans-unit>
+      <trans-unit id="constants.customcategory.plugin.tx_feeddisplay_pi1" approved="yes">
+        <source>Feed Display</source>
+        <target state="final">Wyświetlanie kanału</target>
+      </trans-unit>
+      <trans-unit id="constants.subcategory.general" approved="yes">
+        <source>General</source>
+        <target state="final">Ogólny</target>
+      </trans-unit>
+      <trans-unit id="constants.subcategory.advanced" approved="yes">
+        <source>Advanced</source>
+        <target state="final">Zaawansowane</target>
+      </trans-unit>
+      <trans-unit id="constants.subcategory.getFields" approved="yes">
+        <source>Fields to get from Feed and Items</source>
+        <target state="final">Pola do pobrania z kanału i przedmiotów</target>
+      </trans-unit>
+      <trans-unit id="constants.view.templateRootPath" approved="yes">
+        <source>Path to template root (FE)</source>
+        <target state="final">Ścieżka do katalogu głównego szablonu (FE)</target>
+      </trans-unit>
+      <trans-unit id="constants.view.partialRootPath" approved="yes">
+        <source>Path to template partials (FE)</source>
+        <target state="final">Ścieżka do części szablonu (FE)</target>
+      </trans-unit>
+      <trans-unit id="constants.view.layoutRootPath" approved="yes">
+        <source>Path to template layouts (FE)</source>
+        <target state="final">Ścieżka do układów szablonów (FE)</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.feedUrl" approved="yes">
+        <source>Feed URL:URL that is fetched by the service</source>
+        <target state="final">Adres URL kanału: adres URL pobierany przez usługę</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.maxFeedCount" approved="yes">
+        <source>Max. items:Maximum feed items to show</source>
+        <target state="final">Max. elementy:Maksymalna ilość elementów kanału do pokazania</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.maxContentLength" approved="yes">
+        <source>Max. content length:Crop the characters of the feed content to the configured length</source>
+        <target state="final">Maksymalna długość zawartości:Przytnij znaki zawartości kanału do skonfigurowanej długości</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.maxHeaderLength" approved="yes">
+        <source>Max. header length:Crop the characters of the feed header to the configured length</source>
+        <target state="final">Maksymalna długość nagłówka: Przytnij znaki nagłówka kanału do skonfigurowanej długości</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.linkTarget" approved="yes">
+        <source>Target:Target attribute to define the feed link behavior</source>
+        <target state="final">Cel: Atrybut docelowy do zdefiniowania zachowania linku kanału</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.linkTarget.I.default" approved="yes">
+        <source>Defined by TypoScript (default)</source>
+        <target state="final">Zdefiniowany przez TypoScript (domyślnie)</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.linkTarget.I.blank" approved="yes">
+        <source>Opens in a new window or tab</source>
+        <target state="final">Otwiera się w nowym oknie lub karcie</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.linkTarget.I.self" approved="yes">
+        <source>Opens in the same frame as it was clicked</source>
+        <target state="final">Otwiera się w tej samej ramce co kliknięte</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.linkTarget.I.parent" approved="yes">
+        <source>Opens in the parent frame</source>
+        <target state="final">Otwiera się w ramce nadrzędnej</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.linkTarget.I.top" approved="yes">
+        <source>Opens in the full body of the window</source>
+        <target state="final">Otwiera się w całym oknie</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.logoMaxWidth" approved="yes">
+        <source>Logo width:Width of the feeds logo image</source>
+        <target state="final">Szerokość logo: Szerokość obrazu logo kanału</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.logoMaxHeight" approved="yes">
+        <source>Logo height:Height of the feeds logo image</source>
+        <target state="final">Wysokość logo:Wysokość obrazu logo kanału</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.feedIconMaxWidth" approved="yes">
+        <source>Feed icon width:Width of the feeds icon image</source>
+        <target state="final">Szerokość ikony kanału</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.feedIconMaxHeight" approved="yes">
+        <source>Feed icon height:Height of the feeds icon image</source>
+        <target state="final">Wysokość ikony kanału:Wysokość obrazu kanału</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.errorMessage" approved="yes">
+        <source>Error message:This message is displayed if no feed items could be fetched</source>
+        <target state="final">Komunikat o błędzie: Ta wiadomość jest wyświetlana, jeśli żaden kanał nie może zostać pobrany</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.dateFormat" approved="yes">
+        <source>Date format:Use PHP's strftime() function format</source>
+        <target state="final">Format daty: Użyj formatu funkcji PHP strftime()</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.stripTags" approved="yes">
+        <source>Strip tags:Remove HTML tags from the feed content</source>
+        <target state="final">Usuń tagi:Usuń znaczniki HTML z zawartości kanału</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.cacheDuration" approved="yes">
+        <source>Feed cache:Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</source>
+        <target state="final">Pamięć podręczna:Czas w sekundach, w których dane mają być odczytywane z pamięci podręcznej do następnego odnowienia pamięci podręcznej. (0 = brak skrzynki)</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.ignoreFlexFormSettingsIfEmpty" approved="yes">
+        <source>Ignore FlexForm Settings if empty:Comma separated list of FlexForm settings that will be ignored in the extension settings merge process, if their value is considered empty (either an empty string or a string containing 0).</source>
+        <target state="final">Ignoruj ustawienia FlexForm jeśli puste: lista ustawień FlexForm oddzielona przecinkami, które będą ignorowane w procesie scalania rozszerzeń, jeśli ich wartość jest uważana za pustą (pusty ciąg znaków lub ciąg zawierający 0).</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.getFields.feed" approved="yes">
+        <source>Feed fields to get:Comma-separated list of fields to be read from the feed by SimplePie and made available as variables in Fluid.</source>
+        <target state="final">Pola RSS do uzyskania:Lista pól oddzielonych przecinkami do odczytu z kanału przez SimplePie i udostępnionych jako zmienne w płynie.</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.getFields.items" approved="yes">
+        <source>Feed items fields to get:Comma-separated list of fields to be read from the feed items by SimplePie and made available as variables in Fluid.</source>
+        <target state="final">Pola przedmiotów do uzyskania:Lista pól oddzielonych przecinkami do odczytu z elementów kanału przez SimplePie i udostępnionych jako zmienne w płynie.</target>
+      </trans-unit>
+      <trans-unit id="sets.feeddisplay.label" approved="yes">
+        <source>Feed Display</source>
+        <target state="final">Wyświetlanie kanału</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

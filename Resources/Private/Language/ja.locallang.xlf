@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" original="EXT:feed_display/Resources/Private/Language/locallang.xlf" datatype="plaintext" product-name="feed_display" date="2025-02-25T11:12:27+01:00" target-language="ja">
+    <header/>
+    <body>
+      <trans-unit id="feed.categories" approved="yes">
+        <source>Categories</source>
+        <target state="final">カテゴリ</target>
+      </trans-unit>
+      <trans-unit id="feed.category" approved="yes">
+        <source>Category</source>
+        <target state="final">カテゴリ</target>
+      </trans-unit>
+      <trans-unit id="feed.authors" approved="yes">
+        <source>Authors</source>
+        <target state="final">著者</target>
+      </trans-unit>
+      <trans-unit id="feed.author" approved="yes">
+        <source>Author</source>
+        <target state="final">作成者</target>
+      </trans-unit>
+      <trans-unit id="feed.contributors" approved="yes">
+        <source>Contributors</source>
+        <target state="final">貢献者</target>
+      </trans-unit>
+      <trans-unit id="feed.contributor" approved="yes">
+        <source>Contributor</source>
+        <target state="final">貢献者</target>
+      </trans-unit>
+      <trans-unit id="feed.items" approved="yes">
+        <source>Items</source>
+        <target state="final">アイテム</target>
+      </trans-unit>
+      <trans-unit id="item.categories" approved="yes">
+        <source>Categories</source>
+        <target state="final">カテゴリ</target>
+      </trans-unit>
+      <trans-unit id="item.category" approved="yes">
+        <source>Category</source>
+        <target state="final">カテゴリ</target>
+      </trans-unit>
+      <trans-unit id="item.authors" approved="yes">
+        <source>Authors</source>
+        <target state="final">著者</target>
+      </trans-unit>
+      <trans-unit id="item.author" approved="yes">
+        <source>Author</source>
+        <target state="final">作成者</target>
+      </trans-unit>
+      <trans-unit id="item.contributors" approved="yes">
+        <source>Contributors</source>
+        <target state="final">貢献者</target>
+      </trans-unit>
+      <trans-unit id="item.contributor" approved="yes">
+        <source>Contributor</source>
+        <target state="final">貢献者</target>
+      </trans-unit>
+      <trans-unit id="item.copyright" approved="yes">
+        <source>Copyright</source>
+        <target state="final">著作権</target>
+      </trans-unit>
+      <trans-unit id="item.date" approved="yes">
+        <source>Date</source>
+        <target state="final">日付</target>
+      </trans-unit>
+      <trans-unit id="item.updatedDate" approved="yes">
+        <source>Updated</source>
+        <target state="final">更新日時</target>
+      </trans-unit>
+      <trans-unit id="item.links" approved="yes">
+        <source>Links</source>
+        <target state="final">リンク</target>
+      </trans-unit>
+      <trans-unit id="item.link" approved="yes">
+        <source>Link</source>
+        <target state="final">リンク</target>
+      </trans-unit>
+      <trans-unit id="item.enclosure" approved="yes">
+        <source>Enclosure</source>
+        <target state="final">エンクロージャー</target>
+      </trans-unit>
+      <trans-unit id="item.enclosures" approved="yes">
+        <source>Enclosures</source>
+        <target state="final">エンクロージャー数</target>
+      </trans-unit>
+      <trans-unit id="item.latitude" approved="yes">
+        <source>Latitude</source>
+        <target state="final">緯度：</target>
+      </trans-unit>
+      <trans-unit id="item.longitude" approved="yes">
+        <source>Longitude</source>
+        <target state="final">経度：</target>
+      </trans-unit>
+      <trans-unit id="item.source" approved="yes">
+        <source>Source</source>
+        <target state="final">ソース</target>
+      </trans-unit>
+      <trans-unit id="errorMessage" approved="yes">
+        <source>Sorry, the feed could not be fetched.</source>
+        <target state="final">フィードを取得できませんでした。</target>
+      </trans-unit>
+      <trans-unit id="noTemplateError" approved="yes">
+        <source>Feed Display: Please include static TypoScript [EXT:feed_display/Configuration/TypoScript/]</source>
+        <target state="final">フィード表示: 静的なTypoScriptを含めてください [EXT:feed_display/Configuration/TypoScript/]</target>
+      </trans-unit>
+      <trans-unit id="noItemsError" approved="yes">
+        <source>Sorry, no items could be fetched.</source>
+        <target state="final">アイテムを取得できませんでした。</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
