@@ -12,7 +12,6 @@ return [
         'Build',
         'Documentation-GENERATED-temp',
         'Tests',
-        'config',
         'tailor-version-artefact',
         'var',
     ],
