@@ -97,6 +97,30 @@ final class FeedFrontendTest extends AbstractFeedFrontendTestCase
 
     #[Test]
     #[IgnoreDeprecations]
+    public function objectReturningGettersRemainCacheableInFrontendRequests(): void
+    {
+        $feedUrl = $this->writeFeedFixture('Object rich feed', ['First item']);
+        $this->initializeFrontendRootPage($feedUrl, [
+            'cacheDuration' => 600,
+            'getFields.feed' => 'title,items',
+            'getFields.items' => 'title,feed',
+        ]);
+
+        $firstBody = $this->requestPage();
+        self::assertStringContainsString('Object rich feed', $firstBody);
+        self::assertStringContainsString('First item', $firstBody);
+
+        $cachedData = $this->getCachedFeedData();
+        self::assertIsArray($cachedData);
+        self::assertSame('First item', $cachedData['feed']['items'][0]['title']);
+
+        $secondBody = $this->requestPage();
+        self::assertStringContainsString('Object rich feed', $secondBody);
+        self::assertStringContainsString('First item', $secondBody);
+    }
+
+    #[Test]
+    #[IgnoreDeprecations]
     public function emptyFeedUrlDisplaysConfiguredErrorMessage(): void
     {
         $this->initializeFrontendRootPage('', ['errorMessage' => 'Feed unavailable for test']);

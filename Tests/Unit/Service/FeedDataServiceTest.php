@@ -345,6 +345,55 @@ final class FeedDataServiceTest extends UnitTestCase
         self::assertNull($data['feed']['image']);
     }
 
+    #[Test]
+    public function buildDataReturnsSerializableDataForObjectRichFieldsAndEventInjectedClosures(): void
+    {
+        $feed = $this->getMockBuilder(SimplePie::class)
+            ->disableOriginalConstructor()
+            ->onlyMethods(['set_feed_url', 'enable_cache', 'init', 'get_items'])
+            ->getMock();
+        $eventDispatcher = $this->createMock(EventDispatcherInterface::class);
+        [$guzzleClientFactory, $requestFactory, $uriFactory] = $this->createHttpClientDependencies();
+        $item = new TestFeedItem($this->createRelatedFeedMock());
+
+        $feed->expects($this->once())->method('set_feed_url')->with('https://example.com/feed.xml');
+        $feed->expects($this->once())->method('enable_cache')->with(false);
+        $feed->expects($this->once())->method('init');
+        $feed->expects($this->exactly(2))->method('get_items')->willReturnCallback(
+            static function (int $start, int $end) use ($item): array {
+                self::assertSame(0, $start);
+                self::assertContains($end, [0, 1]);
+                return [$item];
+            }
+        );
+
+        $eventDispatcher->expects($this->once())->method('dispatch')->willReturnCallback(
+            static function (SingleFeedDataEvent $event): SingleFeedDataEvent {
+                $itemProperties = $event->getItemProperties();
+                $itemProperties['callback'] = static fn(): string => 'not serializable';
+                $event->setItemProperties($itemProperties);
+                return $event;
+            }
+        );
+
+        $settings = [
+            'feedUrl' => 'https://example.com/feed.xml',
+            'maxFeedCount' => 1,
+            'getFields' => [
+                'feed' => 'items',
+                'items' => 'feed,title',
+            ],
+        ];
+
+        $subject = $this->createSubject($feed, $eventDispatcher, $guzzleClientFactory, $requestFactory, $uriFactory);
+        $data = $subject->buildData($settings);
+
+        self::assertSame('First item', $data['feed']['items'][0]['title']);
+        self::assertSame('Related feed', $data['items'][0]['feed']['title']);
+        self::assertNull($data['items'][0]['callback']);
+        self::assertIsString(serialize($data));
+    }
+
     private function createSourceImage(string $fileName): string
     {
         $sourceImagePath = Environment::getPublicPath() . '/typo3temp/var/tests/' . $fileName;
@@ -391,13 +440,77 @@ final class FeedDataServiceTest extends UnitTestCase
 
         return [$guzzleClientFactory, $requestFactory, $uriFactory];
     }
+
+    private function createRelatedFeedMock(): SimplePie
+    {
+        $feed = $this->getMockBuilder(SimplePie::class)
+            ->disableOriginalConstructor()
+            ->onlyMethods([
+                'get_all_discovered_feeds',
+                'get_author',
+                'get_authors',
+                'get_base',
+                'get_contributor',
+                'get_contributors',
+                'get_copyright',
+                'get_description',
+                'get_encoding',
+                'get_favicon',
+                'get_image_height',
+                'get_image_link',
+                'get_image_title',
+                'get_image_url',
+                'get_image_width',
+                'get_item_quantity',
+                'get_items',
+                'get_language',
+                'get_latitude',
+                'get_link',
+                'get_links',
+                'get_longitude',
+                'get_permalink',
+                'get_title',
+                'get_type',
+                'subscribe_url',
+            ])
+            ->getMock();
+
+        $feed->method('get_all_discovered_feeds')->willReturn([]);
+        $feed->method('get_author')->willReturn(null);
+        $feed->method('get_authors')->willReturn([]);
+        $feed->method('get_base')->willReturn('');
+        $feed->method('get_contributor')->willReturn(null);
+        $feed->method('get_contributors')->willReturn([]);
+        $feed->method('get_copyright')->willReturn('');
+        $feed->method('get_description')->willReturn('');
+        $feed->method('get_encoding')->willReturn('');
+        $feed->method('get_favicon')->willReturn('');
+        $feed->method('get_image_height')->willReturn(0);
+        $feed->method('get_image_link')->willReturn('');
+        $feed->method('get_image_title')->willReturn('');
+        $feed->method('get_image_url')->willReturn('');
+        $feed->method('get_image_width')->willReturn(0);
+        $feed->method('get_item_quantity')->willReturn(0);
+        $feed->method('get_items')->willReturn([]);
+        $feed->method('get_language')->willReturn('');
+        $feed->method('get_latitude')->willReturn(null);
+        $feed->method('get_link')->willReturn('');
+        $feed->method('get_links')->willReturn([]);
+        $feed->method('get_longitude')->willReturn(null);
+        $feed->method('get_permalink')->willReturn('');
+        $feed->method('get_title')->willReturn('Related feed');
+        $feed->method('get_type')->willReturn('');
+        $feed->method('subscribe_url')->willReturn('');
+
+        return $feed;
+    }
 }
 
 final class TestFeedItem extends Item
 {
-    public function __construct()
+    public function __construct(?SimplePie $feed = null)
     {
-        parent::__construct(new SimplePie(), []);
+        parent::__construct($feed ?? new SimplePie(), []);
     }
 
     public function get_title(): string
