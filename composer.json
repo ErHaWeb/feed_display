@@ -1,10 +1,28 @@
 {
   "name": "erhaweb/feed-display",
-  "type": "typo3-cms-extension",
   "description": "Fetches and parses RSS and Atom web feeds with the SimplePie library and prepares them for frontend display",
   "license": "GPL-2.0-or-later",
+  "type": "typo3-cms-extension",
+  "keywords": [
+    "TYPO3 CMS",
+    "Extension",
+    "Feed",
+    "RSS",
+    "Atom"
+  ],
+  "authors": [
+    {
+      "name": "Eric Harrer",
+      "email": "info@eric-harrer.de",
+      "homepage": "https://www.eric-harrer.de",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/ErHaWeb/feed_display/issues"
+  },
   "require": {
-    "php": "^8.1 || ^8.2 || ^8.3",
+    "php": "^8.1",
     "simplepie/simplepie": "^1.9",
     "typo3/cms-backend": "^12.4 || ^13.4",
     "typo3/cms-core": "^12.4 || ^13.4",
@@ -13,38 +31,30 @@
     "typo3/cms-frontend": "^12.4 || ^13.4"
   },
   "require-dev": {
-    "a9f/typo3-fractor": "^0.5.9",
+    "ergebnis/composer-normalize": "^2.0",
+    "friendsofphp/php-cs-fixer": "^3.0",
+    "helmich/typo3-typoscript-lint": "^3.3",
+    "icanhazstring/composer-unused": "0.8.11 || 0.9.6",
+    "php-parallel-lint/php-parallel-lint": "^1.4",
+    "phpmd/phpmd": "^2.15",
+    "phpstan/extension-installer": "^1.3",
+    "phpstan/phpstan": "^1.12 || ^2.1",
+    "phpstan/phpstan-phpunit": "^1.4 || ^2.0",
+    "phpstan/phpstan-strict-rules": "^1.6 || ^2.0",
     "phpunit/phpunit": "^10.5",
     "roave/security-advisories": "dev-latest",
-    "ssch/typo3-rector": "^2.15 || ^3.7",
+    "saschaegerer/phpstan-typo3": "^1.10 || ^2.1",
+    "seld/jsonlint": "^1.11",
+    "ssch/typo3-rector": "^2.15 || ^3.11",
+    "symfony/translation": "^6.4 || ^7.4",
+    "symfony/yaml": "^6.0 || ^7.0",
     "typo3/cms-fluid-styled-content": "^12.4 || ^13.4",
     "typo3/cms-install": "^12.4 || ^13.4",
+    "typo3/coding-standards": "^0.8",
     "typo3/testing-framework": "^7.0 || ^8.0"
   },
-  "authors": [
-    {
-      "name": "Eric Harrer",
-      "role": "Developer",
-      "email": "info@eric-harrer.de",
-      "homepage": "https://www.eric-harrer.de"
-    }
-  ],
-  "keywords": [
-    "TYPO3 CMS",
-    "Extension",
-    "Feed",
-    "RSS",
-    "Atom"
-  ],
-  "support": {
-    "issues": "https://github.com/ErHaWeb/feed_display/issues"
-  },
-  "extra": {
-    "typo3/cms": {
-      "app-dir": ".Build",
-      "web-dir": ".Build/Web",
-      "extension-key": "feed_display"
-    }
+  "replace": {
+    "typo3-ter/feed-display": "self.version"
   },
   "autoload": {
     "psr-4": {
@@ -53,37 +63,158 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "ErHaWeb\\FeedDisplay\\Tests\\": "Tests"
+      "ErHaWeb\\FeedDisplay\\Tests\\": "Tests/"
     }
-  },
-  "replace": {
-    "typo3-ter/feed-display": "self.version"
   },
   "config": {
     "allow-plugins": {
-      "a9f/fractor-extension-installer": true,
+      "ergebnis/composer-normalize": true,
+      "phpstan/extension-installer": true,
       "sbuerk/typo3-cmscomposerinstallers-testingframework-bridge": true,
       "typo3/class-alias-loader": true,
       "typo3/cms-composer-installers": true
     },
     "bin-dir": ".Build/bin",
     "lock": false,
+    "preferred-install": {
+      "*": "dist"
+    },
     "sort-packages": true,
     "vendor-dir": ".Build/vendor"
   },
+  "extra": {
+    "typo3/cms": {
+      "app-dir": ".Build",
+      "extension-key": "feed_display",
+      "web-dir": ".Build/Web"
+    }
+  },
   "scripts": {
+    "build-extension": [
+      "@create-libs"
+    ],
+    "check:composer:normalize": "@composer normalize --no-check-lock --dry-run",
+    "check:composer:psr-verify": "@composer dumpautoload --optimize --strict-psr --no-plugins",
+    "check:composer:unused": "composer-unused --configuration=Build/composer-unused/composer-unused.php",
+    "check:composer:validate": "composer validate --no-check-lock",
+    "check:coverage": [
+      "@check:coverage:unit",
+      "@check:coverage:functional"
+    ],
+    "check:coverage:functional": [
+      "@check:tests:create-directories",
+      "@coverage:create-directories",
+      "phpunit -c Build/phpunit/FunctionalTests.xml --coverage-php=.Build/coverage/functional.cov"
+    ],
+    "check:coverage:merge": [
+      "@coverage:create-directories",
+      "@php tools/phpcov merge --clover=.Build/logs/clover.xml .Build/coverage/"
+    ],
+    "check:coverage:unit": [
+      "@coverage:create-directories",
+      "phpunit -c Build/phpunit/UnitTests.xml --coverage-php=.Build/coverage/unit.cov"
+    ],
+    "check:json:lint": "find . ! -path '*/.cache/*' ! -path '*/.Build/*' ! -path '*/node_modules/*' -name '*.json' | xargs -r php .Build/bin/jsonlint -q",
+    "check:php": [
+      "@check:php:cs-fixer",
+      "@check:php:lint",
+      "@check:php:stan"
+    ],
+    "check:php:cs-fixer": "php-cs-fixer fix --config ./Build/php-cs-fixer/config.php -v --dry-run --diff",
+    "check:php:lint": "parallel-lint *.php Build Classes Configuration Tests",
+    "check:php:mess": [
+      "Composer\\\\Config::disableProcessTimeout",
+      "if [ -d Classes ] || [ -d Configuration ]; then php -d error_reporting='E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED' .Build/bin/phpmd Classes,Configuration ansi codesize,design,naming,unusedcode --exclude '*/Fixtures/*,*/Tests/*'; else echo 'No PHP directories for PHPMD'; fi"
+    ],
+    "check:php:stan": "phpstan --no-progress -v --configuration=Build/phpstan/phpstan.neon",
+    "check:static": [
+      "@check:composer:normalize",
+      "@check:composer:unused",
+      "@check:json:lint",
+      "@check:php:lint",
+      "@check:composer:psr-verify",
+      "@check:php:stan",
+      "@check:php:cs-fixer",
+      "@check:typoscript:lint",
+      "@check:xliff:lint",
+      "@check:yaml:lint"
+    ],
+    "check:tests:create-directories": "mkdir -p .Build/public/typo3temp/var/tests",
+    "check:tests:functional": [
+      "@check:tests:create-directories",
+      "phpunit -c Build/phpunit/FunctionalTests.xml"
+    ],
+    "check:tests:unit": "phpunit -c Build/phpunit/UnitTests.xml",
+    "check:typoscript:lint": "typoscript-lint -c Build/typoscript-lint/config.yml --ansi -n --fail-on-warnings -vvv Configuration/TypoScript Tests/Functional/Controller/Fixtures/TypoScript",
+    "check:xliff:lint": "find . ! -path '*/.Build/*' ! -path '*/node_modules/*' \\( -name '*.xlf' -o -name '*.xliff' \\) -print0 | xargs -0 -r php Build/Scripts/xliffLint.sh lint:xliff",
+    "check:yaml:lint": "find . ! -path '*/.Build/*' ! -path '*/node_modules/*' \\( -name '*.yaml' -o -name '*.yml' \\) | xargs -r php ./.Build/bin/yaml-lint",
+    "check:yaml:services-lint": "[ -f Configuration/Services.yaml ] && .Build/bin/yaml-lint Configuration/Services.yaml || true",
+    "coverage:create-directories": "mkdir -p .Build/coverage .Build/logs",
     "create-libs": [
       "mkdir -p Libraries",
       "@composer global require clue/phar-composer",
       "[ -f Libraries/simplepie-simplepie.phar ] || $HOME/.composer/vendor/bin/phar-composer build 'simplepie/simplepie=1.9.0' Libraries/simplepie-simplepie.phar",
       "chmod -x Libraries/*"
     ],
+    "docs:generate": "docker run --rm --pull always -v $(pwd):/project -it ghcr.io/typo3-documentation/render-guides:latest --config=Documentation",
+    "fix": [
+      "@fix:composer:normalize",
+      "@fix:php"
+    ],
+    "fix:composer:normalize": "@composer normalize --no-check-lock",
+    "fix:php": [
+      "@fix:php:cs-fixer"
+    ],
+    "fix:php:cs-fixer": "php-cs-fixer fix --config ./Build/php-cs-fixer/config.php",
+    "phpstan:baseline": "phpstan --generate-baseline=Build/phpstan/phpstan-baseline.neon --allow-empty-baseline --configuration=Build/phpstan/phpstan.neon --memory-limit=1G",
+    "prepare-release": [
+      "rm -rf .Build",
+      "rm -rf .ddev",
+      "rm -rf .github",
+      "rm -rf Build",
+      "rm -rf Tests",
+      "rm -rf tools",
+      "rm .editorconfig",
+      "rm .gitattributes",
+      "rm .gitignore",
+      "rm .npmrc",
+      "rm .nvmrc",
+      "rm package-lock.json",
+      "rm package.json",
+      "rm phive.xml"
+    ],
     "rebuild-libs": [
       "rm -f Libraries/simplepie-simplepie.phar",
       "@create-libs"
-    ],
-    "build-extension": [
-      "@create-libs"
     ]
+  },
+  "scripts-descriptions": {
+    "check:composer:normalize": "Checks the composer.json.",
+    "check:composer:psr-verify": "Verifies PSR-4 namespace correctness.",
+    "check:composer:unused": "Finds unused Composer packages required in composer.json.",
+    "check:coverage:functional": "Generates the code coverage report for functional tests.",
+    "check:coverage:merge": "Merges the code coverage reports for unit and functional tests.",
+    "check:coverage:unit": "Generates the code coverage report for unit tests.",
+    "check:json:lint": "Lints the JSON files.",
+    "check:php": "Runs all static checks for the PHP files.",
+    "check:php:cs-fixer": "Checks the code style with the PHP Coding Standards Fixer (PHP-CS-Fixer).",
+    "check:php:lint": "Lints the PHP files for syntax errors.",
+    "check:php:mess": "Runs PHP mess detection.",
+    "check:php:stan": "Checks the PHP types using PHPStan.",
+    "check:static": "Runs all static code checks (syntax, style, types).",
+    "check:tests:create-directories": "Creates the directories required to smoothely run the functional tests.",
+    "check:tests:functional": "Runs the functional tests.",
+    "check:tests:unit": "Runs the unit tests.",
+    "check:typoscript:lint": "Lints the TypoScript files.",
+    "check:xliff:lint": "Lints the XLIFF files.",
+    "check:yaml:lint": "Lints the YAML files.",
+    "coverage:create-directories": "Creates the directories needed for recording and merging the code coverage reports.",
+    "docs:generate": "Renders the extension ReST documentation.",
+    "fix": "Runs all automatic code style fixes.",
+    "fix:composer:normalize": "Normalizes composer.json file content.",
+    "fix:php": "Runs all fixers for the PHP code.",
+    "fix:php:cs-fixer": "Fixes the code style with PHP-CS-Fixer.",
+    "phpstan:baseline": "Updates the PHPStan baseline file to match the code.",
+    "prepare-release": "Removes development-only files in preparation of a TER release."
   }
 }

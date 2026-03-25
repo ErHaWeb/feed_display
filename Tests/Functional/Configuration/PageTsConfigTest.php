@@ -17,7 +17,6 @@ declare(strict_types=1);
 
 namespace ErHaWeb\FeedDisplay\Tests\Functional\Configuration;
 
-use JsonException;
 use PHPUnit\Framework\Attributes\IgnoreDeprecations;
 use PHPUnit\Framework\Attributes\Test;
 use TYPO3\CMS\Core\Site\Entity\NullSite;
@@ -31,7 +30,7 @@ final class PageTsConfigTest extends FunctionalTestCase
     ];
 
     /**
-     * @throws JsonException
+     * @throws \JsonException
      */
     #[Test]
     #[IgnoreDeprecations]

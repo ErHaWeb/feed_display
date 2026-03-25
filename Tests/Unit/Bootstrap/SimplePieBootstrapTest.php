@@ -31,8 +31,8 @@ final class SimplePieBootstrapTest extends UnitTestCase
             ->onlyMethods(['isSimplePieAvailable', 'requireAutoloadFile'])
             ->getMock();
 
-        $subject->expects($this->once())->method('isSimplePieAvailable')->willReturn(true);
-        $subject->expects($this->never())->method('requireAutoloadFile');
+        $subject->expects(self::once())->method('isSimplePieAvailable')->willReturn(true);
+        $subject->expects(self::never())->method('requireAutoloadFile');
 
         $subject->ensureLibraryIsLoaded();
     }
@@ -45,8 +45,8 @@ final class SimplePieBootstrapTest extends UnitTestCase
             ->onlyMethods(['isSimplePieAvailable', 'requireAutoloadFile'])
             ->getMock();
 
-        $subject->expects($this->once())->method('isSimplePieAvailable')->willReturn(false);
-        $subject->expects($this->once())
+        $subject->expects(self::once())->method('isSimplePieAvailable')->willReturn(false);
+        $subject->expects(self::once())
             ->method('requireAutoloadFile')
             ->with('phar:///var/www/feed_display/Libraries/simplepie-simplepie.phar/vendor/autoload.php');
 

@@ -1,0 +1,38 @@
+name: CI maintenance tools
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-maintenance-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  rector:
+    name: Rector dry-run (TYPO3 13 / PHP 8.4)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run Rector dry-run
+        run: Build/Scripts/runTests.sh -s rector -p 8.4 -b docker -n
+
+  fractor:
+    name: Fractor dry-run (TYPO3 13 / PHP 8.4)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run Fractor dry-run
+        run: Build/Scripts/runTests.sh -s fractor -p 8.4 -b docker -n

@@ -1,0 +1,19 @@
+includes:
+  # Keep manual includes lean. With phpstan/extension-installer enabled, the
+  # active vendor tree already loads phpstan-phpunit, strict-rules, and
+  # phpstan-typo3 automatically for the current package runtime.
+  - phpstan-baseline.neon
+parameters:
+  level: 8
+  paths:
+    - ../../Classes
+    - ../../Configuration
+    - ../../Tests
+    - ../../ext_localconf.php
+  parallel:
+    maximumNumberOfProcesses: 1
+  tmpDir: ../../.cache/phpstan
+  excludePaths:
+    - '**/node_modules/*'
+    - '**/ext_emconf.php'
+  reportUnmatchedIgnoredErrors: true
