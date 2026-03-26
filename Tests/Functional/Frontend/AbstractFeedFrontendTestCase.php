@@ -17,14 +17,13 @@ declare(strict_types=1);
 
 namespace ErHaWeb\FeedDisplay\Tests\Functional\Frontend;
 
-use LogicException;
 use ErHaWeb\FeedDisplay\Tests\Functional\Support\SiteBasedTestTrait;
 use TYPO3\CMS\Core\Cache\CacheManager;
 use TYPO3\CMS\Core\Cache\Exception\NoSuchCacheException;
 use TYPO3\CMS\Core\Configuration\FlexForm\FlexFormTools;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
 use TYPO3\TestingFramework\Core\Functional\Framework\Frontend\InternalRequest;
+use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
 
 abstract class AbstractFeedFrontendTestCase extends FunctionalTestCase
 {
@@ -32,6 +31,7 @@ abstract class AbstractFeedFrontendTestCase extends FunctionalTestCase
 
     protected const ROOT_PAGE_ID = 1;
     protected const CONTENT_ELEMENT_UID = 100;
+    /** @var array<string, array{id: int, title: string, locale: string}> */
     protected const LANGUAGE_PRESETS = [
         'EN' => ['id' => 0, 'title' => 'English', 'locale' => 'en_US.UTF8'],
     ];
@@ -75,6 +75,9 @@ abstract class AbstractFeedFrontendTestCase extends FunctionalTestCase
         );
     }
 
+    /**
+     * @param array<string, scalar> $settings
+     */
     protected function initializeFrontendRootPage(string $feedUrl, array $settings = []): void
     {
         $this->setUpFrontendRootPage(
@@ -95,13 +98,13 @@ abstract class AbstractFeedFrontendTestCase extends FunctionalTestCase
         // unrelated feed metadata such as favicon handling in the default TypoScript.
         $typoScriptLines = [
             'plugin.tx_feeddisplay_pi1.settings.feedUrl = ' . $feedUrl,
-            'plugin.tx_feeddisplay_pi1.settings.getFields.feed = title,subscribe_url,image_url',
+            'plugin.tx_feeddisplay_pi1.settings.getFields.feed = title,subscribe_url',
             'plugin.tx_feeddisplay_pi1.settings.getFields.items = title',
         ];
         foreach ($settings as $settingName => $settingValue) {
             $typoScriptLines[] = 'plugin.tx_feeddisplay_pi1.settings.' . $settingName . ' = ' . $settingValue;
         }
-        $this->addTypoScriptToTemplateRecord(self::ROOT_PAGE_ID, implode(LF, $typoScriptLines));
+        $this->addTypoScriptToTemplateRecord(self::ROOT_PAGE_ID, implode(PHP_EOL, $typoScriptLines));
     }
 
     protected function requestPage(): string
@@ -111,6 +114,9 @@ abstract class AbstractFeedFrontendTestCase extends FunctionalTestCase
         )->getBody();
     }
 
+    /**
+     * @param list<string> $itemTitles
+     */
     protected function writeFeedFixture(string $feedTitle, array $itemTitles, bool $includeImage = false): string
     {
         $imageUrl = '';
@@ -153,6 +159,9 @@ abstract class AbstractFeedFrontendTestCase extends FunctionalTestCase
         return $feedPath;
     }
 
+    /**
+     * @param array<string, array<string, scalar|null>> $sheetFieldValues
+     */
     protected function setFlexFormValues(array $sheetFieldValues): void
     {
         if ($sheetFieldValues === []) {
@@ -181,12 +190,15 @@ abstract class AbstractFeedFrontendTestCase extends FunctionalTestCase
             );
     }
 
+    /**
+     * @return array<string, mixed>|false
+     */
     protected function getCachedFeedData(): array|false
     {
         try {
             return $this->get(CacheManager::class)->getCache('feeddisplay')->get('feeddisplay');
         } catch (NoSuchCacheException $exception) {
-            throw new LogicException(
+            throw new \LogicException(
                 'Cache "feeddisplay" must be available in frontend functional tests.',
                 1741614942,
                 $exception
@@ -194,12 +206,15 @@ abstract class AbstractFeedFrontendTestCase extends FunctionalTestCase
         }
     }
 
+    /**
+     * @param array<string, mixed> $data
+     */
     protected function setCachedFeedData(array $data, int $lifetime = 600): void
     {
         try {
             $this->get(CacheManager::class)->getCache('feeddisplay')->set('feeddisplay', $data, [], $lifetime);
         } catch (NoSuchCacheException $exception) {
-            throw new LogicException(
+            throw new \LogicException(
                 'Cache "feeddisplay" must be available in frontend functional tests.',
                 1741614943,
                 $exception

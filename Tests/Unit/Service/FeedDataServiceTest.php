@@ -19,6 +19,7 @@ namespace ErHaWeb\FeedDisplay\Tests\Unit\Service;
 
 use ErHaWeb\FeedDisplay\Event\SingleFeedDataEvent;
 use ErHaWeb\FeedDisplay\Service\FeedDataService;
+use ErHaWeb\FeedDisplay\Service\FeedRuntimeInitializer;
 use GuzzleHttp\Client;
 use PHPUnit\Framework\Attributes\Test;
 use Psr\EventDispatcher\EventDispatcherInterface;
@@ -39,10 +40,10 @@ final class FeedDataServiceTest extends UnitTestCase
         $eventDispatcher = $this->createMock(EventDispatcherInterface::class);
         [$guzzleClientFactory, $requestFactory, $uriFactory] = $this->createHttpClientDependencies(false);
 
-        $feed->expects($this->never())->method('set_feed_url');
-        $feed->expects($this->never())->method('enable_cache');
-        $feed->expects($this->never())->method('init');
-        $eventDispatcher->expects($this->never())->method('dispatch');
+        $feed->expects(self::never())->method('set_feed_url');
+        $feed->expects(self::never())->method('enable_cache');
+        $feed->expects(self::never())->method('init');
+        $eventDispatcher->expects(self::never())->method('dispatch');
 
         $settings = [
             'feedUrl' => '',
@@ -70,11 +71,11 @@ final class FeedDataServiceTest extends UnitTestCase
         $eventDispatcher = $this->createMock(EventDispatcherInterface::class);
         [$guzzleClientFactory, $requestFactory, $uriFactory] = $this->createHttpClientDependencies(false);
 
-        $feed->expects($this->once())->method('set_feed_url')->with('/var/www/public/fileadmin/feed.xml');
-        $feed->expects($this->once())->method('enable_cache')->with(false);
-        $feed->expects($this->once())->method('init');
-        $feed->expects($this->once())->method('get_items')->with(0, 0)->willReturn([]);
-        $eventDispatcher->expects($this->never())->method('dispatch');
+        $feed->expects(self::once())->method('set_feed_url')->with('/var/www/public/fileadmin/feed.xml');
+        $feed->expects(self::once())->method('enable_cache')->with(false);
+        $feed->expects(self::once())->method('init');
+        $feed->expects(self::once())->method('get_items')->with(0, 0)->willReturn([]);
+        $eventDispatcher->expects(self::never())->method('dispatch');
 
         $settings = [
             'feedUrl' => '/var/www/public/fileadmin/feed.xml',
@@ -105,15 +106,15 @@ final class FeedDataServiceTest extends UnitTestCase
         $eventDispatcher = $this->createMock(EventDispatcherInterface::class);
         [$guzzleClientFactory, $requestFactory, $uriFactory] = $this->createHttpClientDependencies();
 
-        $feed->expects($this->once())->method('set_feed_url')->with('https://example.com/feed.xml');
-        $feed->expects($this->once())->method('enable_cache')->with(false);
-        $feed->expects($this->once())->method('init');
-        $feed->expects($this->once())->method('get_title')->willReturn('Feed title');
-        $feed->expects($this->once())->method('subscribe_url')->willReturn('https://example.com/subscribe');
-        $feed->expects($this->once())->method('get_image_url')->willReturn('file://' . $sourceImagePath);
-        $feed->expects($this->once())->method('get_items')->with(0, 1)->willReturn([$item]);
+        $feed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed.xml');
+        $feed->expects(self::once())->method('enable_cache')->with(false);
+        $feed->expects(self::once())->method('init');
+        $feed->expects(self::once())->method('get_title')->willReturn('Feed title');
+        $feed->expects(self::once())->method('subscribe_url')->willReturn('https://example.com/subscribe');
+        $feed->expects(self::once())->method('get_image_url')->willReturn('file://' . $sourceImagePath);
+        $feed->expects(self::once())->method('get_items')->with(0, 1)->willReturn([$item]);
 
-        $eventDispatcher->expects($this->once())->method('dispatch')->willReturnCallback(
+        $eventDispatcher->expects(self::once())->method('dispatch')->willReturnCallback(
             static function (SingleFeedDataEvent $event): SingleFeedDataEvent {
                 $itemProperties = $event->getItemProperties();
                 $itemProperties['custom'] = 'changed by event';
@@ -139,7 +140,7 @@ final class FeedDataServiceTest extends UnitTestCase
         self::assertSame('file://' . $sourceImagePath, $data['feed']['imageUrl']);
         self::assertSame('typo3temp/assets/images/' . basename($expectedImageTarget), $data['feed']['image']);
         self::assertSame('First item', $data['items'][0]['title']);
-        self::assertSame('1700000000', $data['items'][0]['date']);
+        self::assertSame(1700000000, $data['items'][0]['date']);
         self::assertSame('changed by event', $data['items'][0]['custom']);
         self::assertFileExists($expectedImageTarget);
     }
@@ -155,11 +156,11 @@ final class FeedDataServiceTest extends UnitTestCase
         $eventDispatcher = $this->createMock(EventDispatcherInterface::class);
         [$guzzleClientFactory, $requestFactory, $uriFactory] = $this->createHttpClientDependencies();
 
-        $feed->expects($this->once())->method('set_feed_url')->with('https://example.com/feed.xml');
-        $feed->expects($this->once())->method('enable_cache')->with(false);
-        $feed->expects($this->once())->method('init');
-        $feed->expects($this->once())->method('get_items')->with(0, 1)->willReturn([$item]);
-        $eventDispatcher->expects($this->once())->method('dispatch')->willReturnArgument(0);
+        $feed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed.xml');
+        $feed->expects(self::once())->method('enable_cache')->with(false);
+        $feed->expects(self::once())->method('init');
+        $feed->expects(self::once())->method('get_items')->with(0, 1)->willReturn([$item]);
+        $eventDispatcher->expects(self::once())->method('dispatch')->willReturnArgument(0);
 
         $settings = [
             'feedUrl' => 'https://example.com/feed.xml',
@@ -191,12 +192,12 @@ final class FeedDataServiceTest extends UnitTestCase
         $eventDispatcher = $this->createMock(EventDispatcherInterface::class);
         [$guzzleClientFactory, $requestFactory, $uriFactory] = $this->createHttpClientDependencies();
 
-        $feed->expects($this->once())->method('set_feed_url')->with('https://example.com/feed.xml');
-        $feed->expects($this->once())->method('enable_cache')->with(false);
-        $feed->expects($this->once())->method('init');
-        $feed->expects($this->once())->method('get_image_url')->willReturn('file://' . $sourceImagePath);
-        $feed->expects($this->once())->method('get_items')->with(0, 0)->willReturn([]);
-        $eventDispatcher->expects($this->never())->method('dispatch');
+        $feed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed.xml');
+        $feed->expects(self::once())->method('enable_cache')->with(false);
+        $feed->expects(self::once())->method('init');
+        $feed->expects(self::once())->method('get_image_url')->willReturn('file://' . $sourceImagePath);
+        $feed->expects(self::once())->method('get_items')->with(0, 0)->willReturn([]);
+        $eventDispatcher->expects(self::never())->method('dispatch');
 
         $settings = [
             'feedUrl' => 'https://example.com/feed.xml',
@@ -224,11 +225,11 @@ final class FeedDataServiceTest extends UnitTestCase
         $eventDispatcher = $this->createMock(EventDispatcherInterface::class);
         [$guzzleClientFactory, $requestFactory, $uriFactory] = $this->createHttpClientDependencies();
 
-        $feed->expects($this->once())->method('set_feed_url')->with('https://example.com/feed.xml');
-        $feed->expects($this->once())->method('enable_cache')->with(false);
-        $feed->expects($this->once())->method('init');
-        $feed->expects($this->once())->method('get_items')->with(0, 0)->willReturn([]);
-        $eventDispatcher->expects($this->never())->method('dispatch');
+        $feed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed.xml');
+        $feed->expects(self::once())->method('enable_cache')->with(false);
+        $feed->expects(self::once())->method('init');
+        $feed->expects(self::once())->method('get_items')->with(0, 0)->willReturn([]);
+        $eventDispatcher->expects(self::never())->method('dispatch');
 
         $settings = [
             'feedUrl' => 'https:\\/\\/example.com\\/feed.xml',
@@ -255,11 +256,11 @@ final class FeedDataServiceTest extends UnitTestCase
         $eventDispatcher = $this->createMock(EventDispatcherInterface::class);
         [$guzzleClientFactory, $requestFactory, $uriFactory] = $this->createHttpClientDependencies();
 
-        $feed->expects($this->once())->method('set_feed_url')->with('https://example.com/feed.xml');
-        $feed->expects($this->once())->method('enable_cache')->with(false);
-        $feed->expects($this->once())->method('init');
-        $feed->expects($this->once())->method('get_items')->with(0, 1)->willReturn([$item]);
-        $eventDispatcher->expects($this->once())->method('dispatch')->willReturnArgument(0);
+        $feed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed.xml');
+        $feed->expects(self::once())->method('enable_cache')->with(false);
+        $feed->expects(self::once())->method('init');
+        $feed->expects(self::once())->method('get_items')->with(0, 1)->willReturn([$item]);
+        $eventDispatcher->expects(self::once())->method('dispatch')->willReturnArgument(0);
 
         $settings = [
             'feedUrl' => 'https://example.com/feed.xml',
@@ -289,12 +290,12 @@ final class FeedDataServiceTest extends UnitTestCase
         $eventDispatcher = $this->createMock(EventDispatcherInterface::class);
         [$guzzleClientFactory, $requestFactory, $uriFactory] = $this->createHttpClientDependencies();
 
-        $feed->expects($this->once())->method('set_feed_url')->with('https://example.com/feed.xml');
-        $feed->expects($this->once())->method('enable_cache')->with(false);
-        $feed->expects($this->once())->method('init');
-        $feed->expects($this->once())->method('get_image_url')->willReturn('file:///path/to/non-existing.svg');
-        $feed->expects($this->once())->method('get_items')->with(0, 0)->willReturn([]);
-        $eventDispatcher->expects($this->never())->method('dispatch');
+        $feed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed.xml');
+        $feed->expects(self::once())->method('enable_cache')->with(false);
+        $feed->expects(self::once())->method('init');
+        $feed->expects(self::once())->method('get_image_url')->willReturn('file:///path/to/non-existing.svg');
+        $feed->expects(self::once())->method('get_items')->with(0, 0)->willReturn([]);
+        $eventDispatcher->expects(self::never())->method('dispatch');
 
         $settings = [
             'feedUrl' => 'https://example.com/feed.xml',
@@ -322,12 +323,12 @@ final class FeedDataServiceTest extends UnitTestCase
         $eventDispatcher = $this->createMock(EventDispatcherInterface::class);
         [$guzzleClientFactory, $requestFactory, $uriFactory] = $this->createHttpClientDependencies();
 
-        $feed->expects($this->once())->method('set_feed_url')->with('https://example.com/feed.xml');
-        $feed->expects($this->once())->method('enable_cache')->with(false);
-        $feed->expects($this->once())->method('init');
-        $feed->expects($this->once())->method('get_image_url')->willReturn('https://example.com/images/');
-        $feed->expects($this->once())->method('get_items')->with(0, 0)->willReturn([]);
-        $eventDispatcher->expects($this->never())->method('dispatch');
+        $feed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed.xml');
+        $feed->expects(self::once())->method('enable_cache')->with(false);
+        $feed->expects(self::once())->method('init');
+        $feed->expects(self::once())->method('get_image_url')->willReturn('https://example.com/images/');
+        $feed->expects(self::once())->method('get_items')->with(0, 0)->willReturn([]);
+        $eventDispatcher->expects(self::never())->method('dispatch');
 
         $settings = [
             'feedUrl' => 'https://example.com/feed.xml',
@@ -356,10 +357,10 @@ final class FeedDataServiceTest extends UnitTestCase
         [$guzzleClientFactory, $requestFactory, $uriFactory] = $this->createHttpClientDependencies();
         $item = new TestFeedItem($this->createRelatedFeedMock());
 
-        $feed->expects($this->once())->method('set_feed_url')->with('https://example.com/feed.xml');
-        $feed->expects($this->once())->method('enable_cache')->with(false);
-        $feed->expects($this->once())->method('init');
-        $feed->expects($this->exactly(2))->method('get_items')->willReturnCallback(
+        $feed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed.xml');
+        $feed->expects(self::once())->method('enable_cache')->with(false);
+        $feed->expects(self::once())->method('init');
+        $feed->expects(self::exactly(2))->method('get_items')->willReturnCallback(
             static function (int $start, int $end) use ($item): array {
                 self::assertSame(0, $start);
                 self::assertContains($end, [0, 1]);
@@ -367,10 +368,10 @@ final class FeedDataServiceTest extends UnitTestCase
             }
         );
 
-        $eventDispatcher->expects($this->once())->method('dispatch')->willReturnCallback(
+        $eventDispatcher->expects(self::once())->method('dispatch')->willReturnCallback(
             static function (SingleFeedDataEvent $event): SingleFeedDataEvent {
                 $itemProperties = $event->getItemProperties();
-                $itemProperties['callback'] = static fn(): string => 'not serializable';
+                $itemProperties['callback'] = static fn (): string => 'not serializable';
                 $event->setItemProperties($itemProperties);
                 return $event;
             }
@@ -391,7 +392,7 @@ final class FeedDataServiceTest extends UnitTestCase
         self::assertSame('First item', $data['feed']['items'][0]['title']);
         self::assertSame('Related feed', $data['items'][0]['feed']['title']);
         self::assertNull($data['items'][0]['callback']);
-        self::assertIsString(serialize($data));
+        self::assertNotSame('', serialize($data));
     }
 
     private function createSourceImage(string $fileName): string
@@ -406,7 +407,7 @@ final class FeedDataServiceTest extends UnitTestCase
 
     private function getExpectedTemporaryImagePath(string $sourceImagePath): string
     {
-        $temporaryFileName = md5((string)pathinfo($sourceImagePath, PATHINFO_FILENAME)) . '.' . pathinfo($sourceImagePath, PATHINFO_EXTENSION);
+        $temporaryFileName = md5(pathinfo($sourceImagePath, PATHINFO_FILENAME)) . '.' . pathinfo($sourceImagePath, PATHINFO_EXTENSION);
         $targetPath = Environment::getPublicPath() . '/typo3temp/assets/images/' . $temporaryFileName;
         if (!is_dir(dirname($targetPath))) {
             mkdir(dirname($targetPath), 0777, true);
@@ -421,7 +422,9 @@ final class FeedDataServiceTest extends UnitTestCase
         RequestFactoryInterface $requestFactory,
         UriFactoryInterface $uriFactory,
     ): FeedDataService {
-        return new FeedDataService($feed, $eventDispatcher, $guzzleClientFactory, $requestFactory, $uriFactory);
+        $feedRuntimeInitializer = new FeedRuntimeInitializer($guzzleClientFactory, $requestFactory, $uriFactory);
+
+        return new FeedDataService($feed, $eventDispatcher, $feedRuntimeInitializer);
     }
 
     /**
@@ -434,7 +437,7 @@ final class FeedDataServiceTest extends UnitTestCase
         $requestFactory = $this->createMock(RequestFactoryInterface::class);
         $uriFactory = $this->createMock(UriFactoryInterface::class);
 
-        $guzzleClientFactory->expects($expectUsage ? $this->once() : $this->never())
+        $guzzleClientFactory->expects($expectUsage ? self::once() : self::never())
             ->method('getClient')
             ->willReturn($guzzleClient);
 
@@ -518,9 +521,16 @@ final class TestFeedItem extends Item
         return 'First item';
     }
 
-    public function get_date(string $date_format = ''): string
+    /**
+     * @return ($date_format is 'U' ? int|null : string|null)
+     */
+    public function get_date(string $date_format = '')
     {
-        return $date_format === 'U' ? '1700000000' : 'Tue, 14 Nov 2023 22:13:20 +0000';
+        if ($date_format === '__missing__') {
+            return null;
+        }
+
+        return $date_format === 'U' ? 1700000000 : 'Tue, 14 Nov 2023 22:13:20 +0000';
     }
 
     /** @noinspection PhpUnused */

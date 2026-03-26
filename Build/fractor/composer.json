@@ -1,0 +1,27 @@
+{
+  "name": "erhaweb/feed-display-fractor-tools",
+  "description": "Dedicated Rector tooling for feed_display",
+  "license": "GPL-2.0-or-later",
+  "type": "project",
+  "require": {
+    "php": "^8.2"
+  },
+  "require-dev": {
+    "a9f/typo3-fractor": "^0.5"
+  },
+  "config": {
+    "vendor-dir": "../../.Build/fractor/vendor",
+    "bin-dir": "../../.Build/fractor/bin",
+    "allow-plugins": {
+      "a9f/fractor-extension-installer": true
+    },
+    "preferred-install": {
+      "*": "dist"
+    },
+    "sort-packages": true
+  },
+  "scripts": {
+    "check": "fractor process --config=fractor.php --ansi --dry-run",
+    "fix": "fractor process --config=fractor.php --ansi"
+  }
+}

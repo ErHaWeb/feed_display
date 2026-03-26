@@ -31,21 +31,24 @@ class FeedController extends ActionController
 
     public function displayAction(): ResponseInterface
     {
-        if ($this->settings) {
-            $cacheIdentifier = 'feeddisplay';
-            $data = $this->cache->get($cacheIdentifier);
-            $cacheDuration = (int)$this->settings['cacheDuration'];
-
-            if ($cacheDuration === 0) {
-                $data = $this->feedDataService->buildData($this->settings);
-                $this->cache->remove($cacheIdentifier);
-            } elseif ($data === false || $data['settings'] !== $this->settings) {
-                $data = $this->feedDataService->buildData($this->settings);
-                $this->cache->set($cacheIdentifier, $data, [], $cacheDuration);
-            }
-
-            $this->view->assign('data', $data);
+        if ($this->settings === []) {
+            return $this->htmlResponse();
         }
+
+        $cacheIdentifier = 'feeddisplay';
+        $data = $this->cache->get($cacheIdentifier);
+        $cacheDuration = (int)$this->settings['cacheDuration'];
+
+        if ($cacheDuration === 0) {
+            $data = $this->feedDataService->buildData($this->settings);
+            $this->cache->remove($cacheIdentifier);
+        } elseif ($data === false || $data['settings'] !== $this->settings) {
+            $data = $this->feedDataService->buildData($this->settings);
+            $this->cache->set($cacheIdentifier, $data, [], $cacheDuration);
+        }
+
+        $this->view->assign('data', $data);
+
         return $this->htmlResponse();
     }
 }

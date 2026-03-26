@@ -1,0 +1,73 @@
+name: CI static + unit
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-static-unit-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  composer-validate:
+    name: Composer validate
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate composer.json
+        run: Build/Scripts/runTests.sh -s composerValidate -b docker
+
+  static-and-unit:
+    name: TYPO3 ${{ matrix.typo3 }} / PHP ${{ matrix.php }} static + unit
+    runs-on: ubuntu-24.04
+    needs: composer-validate
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - typo3: '12'
+            php: '8.1'
+          - typo3: '12'
+            php: '8.2'
+          - typo3: '12'
+            php: '8.3'
+          - typo3: '12'
+            php: '8.4'
+          - typo3: '13'
+            php: '8.2'
+          - typo3: '13'
+            php: '8.3'
+          - typo3: '13'
+            php: '8.4'
+          - typo3: '13'
+            php: '8.5'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install TYPO3 test setup
+        run: Build/Scripts/runTests.sh -s composerInstall -t ${{ matrix.typo3 }} -p ${{ matrix.php }} -b docker
+
+      - name: Run static suites and unit tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          Build/Scripts/runTests.sh -s lintPhp -p ${{ matrix.php }} -b docker
+          Build/Scripts/runTests.sh -s lintJson -p ${{ matrix.php }} -b docker
+          Build/Scripts/runTests.sh -s lintYaml -p ${{ matrix.php }} -b docker
+          Build/Scripts/runTests.sh -s lintTypoScript -p ${{ matrix.php }} -b docker
+          Build/Scripts/runTests.sh -s lintXliff -p ${{ matrix.php }} -b docker
+          Build/Scripts/runTests.sh -s lintServicesYaml -p ${{ matrix.php }} -b docker
+          PHP_CS_FIXER_IGNORE_ENV=1 Build/Scripts/runTests.sh -s cgl -p ${{ matrix.php }} -b docker
+          Build/Scripts/runTests.sh -s phpstan -p ${{ matrix.php }} -b docker
+          Build/Scripts/runTests.sh -s unit -p ${{ matrix.php }} -b docker

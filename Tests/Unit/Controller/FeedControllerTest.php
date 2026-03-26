@@ -23,8 +23,8 @@ use PHPUnit\Framework\Attributes\Test;
 use Psr\Http\Message\ResponseInterface;
 use TYPO3\CMS\Core\Cache\Frontend\FrontendInterface;
 use TYPO3\CMS\Core\Http\HtmlResponse;
-use TYPO3\CMS\Core\View\ViewInterface;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
+use TYPO3Fluid\Fluid\View\ViewInterface;
 
 final class FeedControllerTest extends UnitTestCase
 {
@@ -34,8 +34,8 @@ final class FeedControllerTest extends UnitTestCase
         $cache = $this->createMock(FrontendInterface::class);
         $feedDataService = $this->createMock(FeedDataService::class);
 
-        $cache->expects($this->never())->method('get');
-        $feedDataService->expects($this->never())->method('buildData');
+        $cache->expects(self::never())->method('get');
+        $feedDataService->expects(self::never())->method('buildData');
 
         $subject = new TestableFeedController($cache, $feedDataService);
         $subject->setSettings([]);
@@ -60,12 +60,12 @@ final class FeedControllerTest extends UnitTestCase
         $feedDataService = $this->createMock(FeedDataService::class);
         $view = new RecordingView();
 
-        $cache->expects($this->once())->method('get')->with('feeddisplay')->willReturn([
+        $cache->expects(self::once())->method('get')->with('feeddisplay')->willReturn([
             'settings' => ['cacheDuration' => 600],
         ]);
-        $cache->expects($this->once())->method('remove')->with('feeddisplay');
-        $cache->expects($this->never())->method('set');
-        $feedDataService->expects($this->once())->method('buildData')->with($settings)->willReturn($data);
+        $cache->expects(self::once())->method('remove')->with('feeddisplay');
+        $cache->expects(self::never())->method('set');
+        $feedDataService->expects(self::once())->method('buildData')->with($settings)->willReturn($data);
 
         $subject = new TestableFeedController($cache, $feedDataService);
         $subject->setSettings($settings);
@@ -91,10 +91,10 @@ final class FeedControllerTest extends UnitTestCase
         $feedDataService = $this->createMock(FeedDataService::class);
         $view = new RecordingView();
 
-        $cache->expects($this->once())->method('get')->with('feeddisplay')->willReturn(false);
-        $cache->expects($this->once())->method('set')->with('feeddisplay', $data, [], 600);
-        $cache->expects($this->never())->method('remove');
-        $feedDataService->expects($this->once())->method('buildData')->with($settings)->willReturn($data);
+        $cache->expects(self::once())->method('get')->with('feeddisplay')->willReturn(false);
+        $cache->expects(self::once())->method('set')->with('feeddisplay', $data, [], 600);
+        $cache->expects(self::never())->method('remove');
+        $feedDataService->expects(self::once())->method('buildData')->with($settings)->willReturn($data);
 
         $subject = new TestableFeedController($cache, $feedDataService);
         $subject->setSettings($settings);
@@ -120,10 +120,10 @@ final class FeedControllerTest extends UnitTestCase
         $feedDataService = $this->createMock(FeedDataService::class);
         $view = new RecordingView();
 
-        $cache->expects($this->once())->method('get')->with('feeddisplay')->willReturn($cachedData);
-        $cache->expects($this->never())->method('set');
-        $cache->expects($this->never())->method('remove');
-        $feedDataService->expects($this->never())->method('buildData');
+        $cache->expects(self::once())->method('get')->with('feeddisplay')->willReturn($cachedData);
+        $cache->expects(self::never())->method('set');
+        $cache->expects(self::never())->method('remove');
+        $feedDataService->expects(self::never())->method('buildData');
 
         $subject = new TestableFeedController($cache, $feedDataService);
         $subject->setSettings($settings);
@@ -157,10 +157,10 @@ final class FeedControllerTest extends UnitTestCase
         $feedDataService = $this->createMock(FeedDataService::class);
         $view = new RecordingView();
 
-        $cache->expects($this->once())->method('get')->with('feeddisplay')->willReturn($cachedData);
-        $cache->expects($this->once())->method('set')->with('feeddisplay', $rebuiltData, [], 600);
-        $cache->expects($this->never())->method('remove');
-        $feedDataService->expects($this->once())->method('buildData')->with($settings)->willReturn($rebuiltData);
+        $cache->expects(self::once())->method('get')->with('feeddisplay')->willReturn($cachedData);
+        $cache->expects(self::once())->method('set')->with('feeddisplay', $rebuiltData, [], 600);
+        $cache->expects(self::never())->method('remove');
+        $feedDataService->expects(self::once())->method('buildData')->with($settings)->willReturn($rebuiltData);
 
         $subject = new TestableFeedController($cache, $feedDataService);
         $subject->setSettings($settings);
@@ -173,12 +173,15 @@ final class FeedControllerTest extends UnitTestCase
 
 final class TestableFeedController extends FeedController
 {
+    /**
+     * @param array<string, mixed> $settings
+     */
     public function setSettings(array $settings): void
     {
         $this->settings = $settings;
     }
 
-    public function setView(object $view): void
+    public function setView(ViewInterface $view): void
     {
         $this->view = $view;
     }
@@ -191,6 +194,7 @@ final class TestableFeedController extends FeedController
 
 final class RecordingView implements ViewInterface
 {
+    /** @var array<string, mixed> */
     public array $assigned = [];
 
     public function assign(string $key, mixed $value): self
@@ -199,6 +203,9 @@ final class RecordingView implements ViewInterface
         return $this;
     }
 
+    /**
+     * @param array<array-key, mixed> $values
+     */
     public function assignMultiple(array $values): self
     {
         foreach ($values as $key => $value) {
@@ -208,6 +215,22 @@ final class RecordingView implements ViewInterface
     }
 
     public function render(string $templateFileName = ''): string
+    {
+        return '';
+    }
+
+    /**
+     * @param array<array-key, mixed> $variables
+     */
+    public function renderSection($sectionName, array $variables = [], $ignoreUnknown = false): string
+    {
+        return '';
+    }
+
+    /**
+     * @param array<array-key, mixed> $variables
+     */
+    public function renderPartial($partialName, $sectionName, array $variables, $ignoreUnknown = false): string
     {
         return '';
     }

@@ -1,12 +1,33 @@
-/.Build
-/.composer
-/.cache
+# macOS
+.DS_Store
+
+# Local caches
 /.phpunit.cache
-/config/
-/tailor-version-artefact
+/.php-cs-fixer.cache
+/Tests/Build/.phpunit.result.cache
+/.cache/
+
+# Generated build artifacts
+/.Build/
 /var/
-/composer.lock
+/Documentation-GENERATED-temp
+/tailor-version-artefact
+
+# Temporary Composer files
+/.composer/
 /composer.json.orig
 /composer.json.testing
-/Documentation-GENERATED-temp
-/Tests/Build/.phpunit.result.cache
+
+# Dependency directories
+/node_modules/
+
+# Browser test artifacts
+/playwright/.auth/
+/playwright-report/
+/test-results/
+
+# Local/generated config
+/config/
+
+# Root lockfile is intentionally not versioned for this extension
+/composer.lock

@@ -135,7 +135,7 @@ final class FeedFrontendTest extends AbstractFeedFrontendTestCase
     public function feedImageGetsPublishedToTemporaryAssets(): void
     {
         $feedUrl = $this->writeFeedFixture('Feed with image', ['First item'], true);
-        $this->initializeFrontendRootPage($feedUrl);
+        $this->initializeFrontendRootPage($feedUrl, ['getFields.feed' => 'title,subscribe_url,image_url']);
 
         $body = $this->requestPage();
 
@@ -356,16 +356,16 @@ final class FeedFrontendTest extends AbstractFeedFrontendTestCase
         self::assertStringContainsString('48.00', $body);
         self::assertStringContainsString('11.00', $body);
         self::assertStringContainsString('42.00', $body);
-        self::assertRenderedLabelCount($body, 'Category', 2);
-        self::assertRenderedLabelCount($body, 'Author', 2);
-        self::assertRenderedLabelCount($body, 'Contributor', 2);
-        self::assertRenderedLabelCount($body, 'Link', 2);
-        self::assertRenderedLabelCount($body, 'Enclosure', 1);
-        self::assertRenderedLabelCount($body, 'Categories', 0);
-        self::assertRenderedLabelCount($body, 'Authors', 0);
-        self::assertRenderedLabelCount($body, 'Contributors', 0);
-        self::assertRenderedLabelCount($body, 'Links', 0);
-        self::assertRenderedLabelCount($body, 'Enclosures', 0);
+        $this->assertRenderedLabelCount($body, 'Category', 2);
+        $this->assertRenderedLabelCount($body, 'Author', 2);
+        $this->assertRenderedLabelCount($body, 'Contributor', 2);
+        $this->assertRenderedLabelCount($body, 'Link', 2);
+        $this->assertRenderedLabelCount($body, 'Enclosure', 1);
+        $this->assertRenderedLabelCount($body, 'Categories', 0);
+        $this->assertRenderedLabelCount($body, 'Authors', 0);
+        $this->assertRenderedLabelCount($body, 'Contributors', 0);
+        $this->assertRenderedLabelCount($body, 'Links', 0);
+        $this->assertRenderedLabelCount($body, 'Enclosures', 0);
     }
 
     #[Test]
@@ -454,32 +454,31 @@ final class FeedFrontendTest extends AbstractFeedFrontendTestCase
         self::assertStringContainsString('https://example.com/item-third', $body);
         self::assertStringContainsString('https://example.com/item-enclosure-two.mp3', $body);
         self::assertStringContainsString('https://example.com/item-enclosure-three.mp3', $body);
-        self::assertRenderedLabelCount($body, 'Categories', 2);
-        self::assertRenderedLabelCount($body, 'Authors', 2);
-        self::assertRenderedLabelCount($body, 'Contributors', 2);
-        self::assertRenderedLabelCount($body, 'Links', 2);
-        self::assertRenderedLabelCount($body, 'Enclosures', 1);
-        self::assertRenderedLabelCount($body, 'Category', 0);
-        self::assertRenderedLabelCount($body, 'Author', 0);
-        self::assertRenderedLabelCount($body, 'Contributor', 0);
-        self::assertRenderedLabelCount($body, 'Link', 0);
-        self::assertRenderedLabelCount($body, 'Enclosure', 0);
+        $this->assertRenderedLabelCount($body, 'Categories', 2);
+        $this->assertRenderedLabelCount($body, 'Authors', 2);
+        $this->assertRenderedLabelCount($body, 'Contributors', 2);
+        $this->assertRenderedLabelCount($body, 'Links', 2);
+        $this->assertRenderedLabelCount($body, 'Enclosures', 1);
+        $this->assertRenderedLabelCount($body, 'Category', 0);
+        $this->assertRenderedLabelCount($body, 'Author', 0);
+        $this->assertRenderedLabelCount($body, 'Contributor', 0);
+        $this->assertRenderedLabelCount($body, 'Link', 0);
+        $this->assertRenderedLabelCount($body, 'Enclosure', 0);
     }
 
-    private static function assertRenderedLabelCount(string $body, string $label, int $expectedCount): void
+    private function assertRenderedLabelCount(string $body, string $label, int $expectedCount): void
     {
         preg_match_all('/<strong>\s*' . preg_quote($label, '/') . '\s*<\/strong>/', $body, $matches);
         self::assertCount($expectedCount, $matches[0]);
     }
 
+    /**
+     * @return array<string, mixed>
+     */
     private function getRequiredCachedFeedData(): array
     {
         $cachedData = $this->getCachedFeedData();
         self::assertIsArray($cachedData);
-
-        if (!is_array($cachedData)) {
-            throw new \LogicException('Expected cached feed data to be available as array.', 5546276907);
-        }
 
         return $cachedData;
     }
