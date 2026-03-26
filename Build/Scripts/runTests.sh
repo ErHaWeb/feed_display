@@ -203,8 +203,8 @@ Package-local TYPO3 extension test runner for feed_display.
 Usage: Build/Scripts/runTests.sh [options] [-- extra-args]
 
 Options:
-    -s <composer|composerInstall|composerValidate|lintPhp|lintJson|lintYaml|lintTypoScript|lintXliff|phpstanGenerateBaseline|coverageUnit|coverageFunctional|phpmd|unitRandom|cleanBuild|cleanCache|cleanTests|cleanContainers|lintServicesYaml|cgl|phpstan|functional|fractor|rector|unit|clean>
-        Specifies which suite or command to run
+    -s <composer|composerInstall|composerValidate|lintPhp|lintJson|lintYaml|lintServicesYaml|lintTypoScript|lintXliff|cgl|phpstan|phpstanGenerateBaseline|coverageUnit|coverageFunctional|phpmd|unit|unitRandom|functional|rector|fractor|npm|build>
+        Specifies which suite to run
 
     -t <12|13>
         TYPO3 major to use for composerInstall
@@ -220,32 +220,29 @@ Options:
             - 8.5
 
     -d <sqlite|mariadb|mysql|postgres>
-        Only with -s functional
-        Database engine for functional tests
+        Only with -s functional|coverageFunctional
+        Database engine for functional test suites
             - sqlite (default)
             - mariadb
             - mysql
             - postgres
 
     -a <mysqli|pdo_mysql>
-        Only with -s functional and -d mariadb|mysql
+        Only with -s functional|coverageFunctional and -d mariadb|mysql
 
     -i <version>
         Optional database version for mariadb/mysql/postgres
+        Only with -s functional|coverageFunctional
 
     -b <host|docker|podman>
         Execution backend
 
     -e "<tool options>"
-        Pass-through options for phpunit/phpstan/php-cs-fixer/playwright
+        Pass-through options for the underlying tool or test runner
 
     -n
         Only with -s rector|fractor
         Activate dry-run mode
-
-    -u <base-url>
-        Only with -s playwright|e2e|accessibility
-        Base URL for Playwright browser tests
 
     -x
         Enable xdebug
@@ -260,24 +257,24 @@ Examples:
     Build/Scripts/runTests.sh -s composerInstall
     Build/Scripts/runTests.sh -s composerValidate
     Build/Scripts/runTests.sh -s lintPhp
+    Build/Scripts/runTests.sh -s lintJson
+    Build/Scripts/runTests.sh -s lintYaml
+    Build/Scripts/runTests.sh -s lintServicesYaml
+    Build/Scripts/runTests.sh -s lintTypoScript
+    Build/Scripts/runTests.sh -s lintXliff
     Build/Scripts/runTests.sh -s cgl
     Build/Scripts/runTests.sh -s phpstan
     Build/Scripts/runTests.sh -s phpstanGenerateBaseline
     Build/Scripts/runTests.sh -s unit
     Build/Scripts/runTests.sh -s unitRandom
-    Build/Scripts/runTests.sh -s functional
-    Build/Scripts/runTests.sh -s lintJson
-    Build/Scripts/runTests.sh -s lintYaml
-    Build/Scripts/runTests.sh -s lintTypoScript
-    Build/Scripts/runTests.sh -s lintXliff
-    Build/Scripts/runTests.sh -s coverageUnit
-    Build/Scripts/runTests.sh -s coverageFunctional
-    Build/Scripts/runTests.sh -s phpmd
-    Build/Scripts/runTests.sh -s lintServicesYaml
-    Build/Scripts/runTests.sh -s fractor -n
-    Build/Scripts/runTests.sh -s rector -n
     Build/Scripts/runTests.sh -s functional -d postgres
-    Build/Scripts/runTests.sh -s cleanContainers
+    Build/Scripts/runTests.sh -s coverageUnit
+    Build/Scripts/runTests.sh -s coverageFunctional -d mariadb -a mysqli
+    Build/Scripts/runTests.sh -s phpmd
+    Build/Scripts/runTests.sh -s rector -n
+    Build/Scripts/runTests.sh -s fractor -n
+    Build/Scripts/runTests.sh -s npm
+    Build/Scripts/runTests.sh -s build
 EOF
 }
 
