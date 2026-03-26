@@ -14,6 +14,7 @@
   "config": {
     "vendor-dir": "../../.Build/rector/vendor",
     "bin-dir": "../../.Build/rector/bin",
+    "lock": false,
     "preferred-install": {
       "*": "dist"
     },

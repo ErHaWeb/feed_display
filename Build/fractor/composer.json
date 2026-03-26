@@ -12,6 +12,7 @@
   "config": {
     "vendor-dir": "../../.Build/fractor/vendor",
     "bin-dir": "../../.Build/fractor/bin",
+    "lock": false,
     "allow-plugins": {
       "a9f/fractor-extension-installer": true
     },

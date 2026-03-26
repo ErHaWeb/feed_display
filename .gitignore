@@ -30,4 +30,4 @@
 /config/
 
 # Root lockfile is intentionally not versioned for this extension
-/composer.lock
+composer.lock
