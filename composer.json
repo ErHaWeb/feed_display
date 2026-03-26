@@ -173,15 +173,9 @@
       "rm -rf .github",
       "rm -rf Build",
       "rm -rf Tests",
-      "rm -rf tools",
       "rm .editorconfig",
       "rm .gitattributes",
-      "rm .gitignore",
-      "rm .npmrc",
-      "rm .nvmrc",
-      "rm package-lock.json",
-      "rm package.json",
-      "rm phive.xml"
+      "rm .gitignore"
     ],
     "rebuild-libs": [
       "rm -f Libraries/simplepie-simplepie.phar",
