@@ -13,7 +13,6 @@ return [
         'Build',
         'Documentation-GENERATED-temp',
         'Tests',
-        'config',
         'node_modules',
         'playwright/.auth',
         'playwright-report',
