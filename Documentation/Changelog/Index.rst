@@ -19,6 +19,7 @@ List of versions
    :titlesonly:
    :glob:
 
+   2-2-5
    2-2-4
    2-2-3
    2-2-2
