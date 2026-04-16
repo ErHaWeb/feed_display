@@ -31,13 +31,13 @@
         <source>Items</source>
         <target state="final">Emner</target>
       </trans-unit>
-      <trans-unit id="feed.links">
+      <trans-unit id="feed.links" approved="yes">
         <source>Links</source>
-        <target state="needs-translation">Links</target>
+        <target state="final">Links</target>
       </trans-unit>
-      <trans-unit id="feed.link">
+      <trans-unit id="feed.link" approved="yes">
         <source>Link</source>
-        <target state="needs-translation">Link</target>
+        <target state="final">Link</target>
       </trans-unit>
       <trans-unit id="item.categories" approved="yes">
         <source>Categories</source>
