@@ -33,11 +33,11 @@
       </trans-unit>
       <trans-unit id="feed.links">
         <source>Links</source>
-        <target state="needs-translation">Links</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Enlaces</target>
       </trans-unit>
       <trans-unit id="feed.link">
         <source>Link</source>
-        <target state="needs-translation">Link</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Enlace</target>
       </trans-unit>
       <trans-unit id="item.categories" approved="yes">
         <source>Categories</source>
