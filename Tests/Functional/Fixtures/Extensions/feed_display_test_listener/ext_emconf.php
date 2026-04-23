@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * This file is part of the "feed_display" Extension for TYPO3 CMS.
  *
@@ -12,7 +14,6 @@
  *
  * The TYPO3 project - inspiring people to share!
  */
-
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Feed display test listener',
     'description' => 'Functional test fixture for feed_display',
