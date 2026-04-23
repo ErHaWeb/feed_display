@@ -1,6 +1,12 @@
 # macOS
 .DS_Store
 
+# IDE / editor metadata
+.idea
+.vscode
+nbproject
+.fleet
+
 # Local caches
 /.phpunit.cache
 /.php-cs-fixer.cache
