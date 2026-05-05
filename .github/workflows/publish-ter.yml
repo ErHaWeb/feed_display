@@ -3,15 +3,15 @@ name: Publish to TER
 on:
   push:
     tags:
-      - "*.*.*"
+      - '*.*.*'
   workflow_dispatch:
     inputs:
       version:
-        description: "Release tag in x.y.z format"
+        description: 'Release tag in x.y.z format'
         required: true
         type: string
       dry_run:
-        description: "Create the TER artefact without publishing it"
+        description: 'Create the TER artefact without publishing it'
         required: false
         default: false
         type: boolean
@@ -23,7 +23,7 @@ concurrency:
 jobs:
   publish:
     name: Publish new version to TER
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       contents: read
     env:
@@ -44,14 +44,14 @@ jobs:
           fi
 
       - name: Checkout workflow support files
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
           ref: ${{ github.event.repository.default_branch }}
           path: support
 
       - name: Checkout tagged release
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
           ref: ${{ github.event_name == 'workflow_dispatch' && format('refs/tags/{0}', inputs.version) || github.ref }}
@@ -60,7 +60,7 @@ jobs:
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: "8.3"
+          php-version: '8.3'
           extensions: curl, json, zip
           tools: composer:v2
 
@@ -120,7 +120,7 @@ jobs:
 
       - name: Upload TER artefact
         if: env.DRY_RUN == 'true'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: ter-artefact-${{ env.RELEASE_VERSION }}
           path: release/tailor-version-artefact/*.zip
