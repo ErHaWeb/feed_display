@@ -3,12 +3,9 @@
 1.3.6 - March 12, 2024
 ======================
 
-
-.. only:: html
-
-   .. contents::
-        :local:
-        :depth: 3
+.. contents::
+   :local:
+   :depth: 3
 
 Breaking changes
 ----------------

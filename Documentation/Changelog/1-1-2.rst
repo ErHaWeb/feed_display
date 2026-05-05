@@ -3,12 +3,9 @@
 1.1.2 - November 09, 2022
 =========================
 
-
-.. only:: html
-
-   .. contents::
-        :local:
-        :depth: 3
+.. contents::
+   :local:
+   :depth: 3
 
 Breaking changes
 ----------------

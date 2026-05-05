@@ -3,12 +3,9 @@
 1.0.3 - October 19, 2022
 ========================
 
-
-.. only:: html
-
-   .. contents::
-        :local:
-        :depth: 3
+.. contents::
+   :local:
+   :depth: 3
 
 Breaking changes
 ----------------

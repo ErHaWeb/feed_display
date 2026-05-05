@@ -3,12 +3,9 @@
 2.0.1 - April 11, 2024
 ======================
 
-
-.. only:: html
-
-   .. contents::
-        :local:
-        :depth: 3
+.. contents::
+   :local:
+   :depth: 3
 
 Breaking changes
 ----------------

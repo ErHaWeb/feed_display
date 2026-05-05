@@ -3,12 +3,9 @@
 2.2.3 - March 26, 2026
 ======================
 
-
-.. only:: html
-
-   .. contents::
-        :local:
-        :depth: 3
+.. contents::
+   :local:
+   :depth: 3
 
 Breaking changes
 ----------------
