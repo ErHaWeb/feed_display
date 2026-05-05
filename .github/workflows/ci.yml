@@ -25,8 +25,56 @@ jobs:
       - name: Validate composer.json
         run: Build/Scripts/runTests.sh -s composerValidate -b docker
 
-  static-and-unit:
-    name: TYPO3 ${{ matrix.typo3 }} / PHP ${{ matrix.php }} static + unit
+  lint:
+    name: TYPO3 13 / PHP 8.4 lint
+    runs-on: ubuntu-24.04
+    needs: composer-validate
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Install TYPO3 test setup
+        run: Build/Scripts/runTests.sh -s composerInstall -t 13 -p 8.4 -b docker
+
+      - name: Lint PHP files
+        run: Build/Scripts/runTests.sh -s lintPhp -t 13 -p 8.4 -b docker
+
+      - name: Lint JSON files
+        run: Build/Scripts/runTests.sh -s lintJson -t 13 -p 8.4 -b docker
+
+      - name: Lint YAML files
+        run: Build/Scripts/runTests.sh -s lintYaml -t 13 -p 8.4 -b docker
+
+      - name: Lint Services.yaml files
+        run: Build/Scripts/runTests.sh -s lintServicesYaml -t 13 -p 8.4 -b docker
+
+      - name: Lint TypoScript files
+        run: Build/Scripts/runTests.sh -s lintTypoScript -t 13 -p 8.4 -b docker
+
+      - name: Lint XLIFF files
+        run: Build/Scripts/runTests.sh -s lintXliff -t 13 -p 8.4 -b docker
+
+  static-analysis:
+    name: TYPO3 13 / PHP 8.4 static analysis
+    runs-on: ubuntu-24.04
+    needs: composer-validate
+    timeout-minutes: 45
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Install TYPO3 test setup
+        run: Build/Scripts/runTests.sh -s composerInstall -t 13 -p 8.4 -b docker
+
+      - name: Run PHP-CS-Fixer dry-run
+        run: PHP_CS_FIXER_IGNORE_ENV=1 Build/Scripts/runTests.sh -s cgl -t 13 -p 8.4 -b docker
+
+      - name: Run PHPStan
+        run: Build/Scripts/runTests.sh -s phpstan -t 13 -p 8.4 -b docker
+
+  unit:
+    name: TYPO3 ${{ matrix.typo3 }} / PHP ${{ matrix.php }} unit
     runs-on: ubuntu-24.04
     needs: composer-validate
     timeout-minutes: 45
@@ -57,30 +105,6 @@ jobs:
 
       - name: Install TYPO3 test setup
         run: Build/Scripts/runTests.sh -s composerInstall -t ${{ matrix.typo3 }} -p ${{ matrix.php }} -b docker
-
-      - name: Lint PHP files
-        run: Build/Scripts/runTests.sh -s lintPhp -t ${{ matrix.typo3 }} -p ${{ matrix.php }} -b docker
-
-      - name: Lint JSON files
-        run: Build/Scripts/runTests.sh -s lintJson -t ${{ matrix.typo3 }} -p ${{ matrix.php }} -b docker
-
-      - name: Lint YAML files
-        run: Build/Scripts/runTests.sh -s lintYaml -t ${{ matrix.typo3 }} -p ${{ matrix.php }} -b docker
-
-      - name: Lint TypoScript files
-        run: Build/Scripts/runTests.sh -s lintTypoScript -t ${{ matrix.typo3 }} -p ${{ matrix.php }} -b docker
-
-      - name: Lint XLIFF files
-        run: Build/Scripts/runTests.sh -s lintXliff -t ${{ matrix.typo3 }} -p ${{ matrix.php }} -b docker
-
-      - name: Lint Services.yaml files
-        run: Build/Scripts/runTests.sh -s lintServicesYaml -t ${{ matrix.typo3 }} -p ${{ matrix.php }} -b docker
-
-      - name: Run PHP-CS-Fixer dry-run
-        run: PHP_CS_FIXER_IGNORE_ENV=1 Build/Scripts/runTests.sh -s cgl -t ${{ matrix.typo3 }} -p ${{ matrix.php }} -b docker
-
-      - name: Run PHPStan
-        run: Build/Scripts/runTests.sh -s phpstan -t ${{ matrix.typo3 }} -p ${{ matrix.php }} -b docker
 
       - name: Run unit tests
         run: Build/Scripts/runTests.sh -s unit -t ${{ matrix.typo3 }} -p ${{ matrix.php }} -b docker
