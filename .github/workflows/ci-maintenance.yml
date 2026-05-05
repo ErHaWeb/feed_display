@@ -1,11 +1,9 @@
-name: CI maintenance tools
+name: CI Maintenance
 
 on:
-  pull_request:
-  push:
-    branches:
-      - main
   workflow_dispatch:
+  schedule:
+    - cron: '0 3 * * 1'
 
 permissions:
   contents: read
@@ -16,23 +14,49 @@ concurrency:
 
 jobs:
   rector:
-    name: Rector dry-run (TYPO3 13 / PHP 8.4)
+    name: TYPO3 ${{ matrix.typo3 }} / PHP ${{ matrix.php }} rector dry-run
     runs-on: ubuntu-24.04
     timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - typo3: '13'
+            php: '8.4'
+
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
+
+      - name: Install TYPO3 test setup
+        run: Build/Scripts/runTests.sh -s composerInstall -t ${{ matrix.typo3 }} -p ${{ matrix.php }} -b docker
+
+      - name: Update Rector dependencies
+        run: Build/Scripts/runTests.sh -s composer -t ${{ matrix.typo3 }} -p ${{ matrix.php }} -b docker -- --working-dir=Build/rector update --with-all-dependencies --no-ansi --no-interaction --no-progress
 
       - name: Run Rector dry-run
-        run: Build/Scripts/runTests.sh -s rector -p 8.4 -b docker -n
+        run: Build/Scripts/runTests.sh -s rector -t ${{ matrix.typo3 }} -p ${{ matrix.php }} -b docker -n
 
   fractor:
-    name: Fractor dry-run (TYPO3 13 / PHP 8.4)
+    name: TYPO3 ${{ matrix.typo3 }} / PHP ${{ matrix.php }} fractor dry-run
     runs-on: ubuntu-24.04
     timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - typo3: '13'
+            php: '8.4'
+
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
+
+      - name: Install TYPO3 test setup
+        run: Build/Scripts/runTests.sh -s composerInstall -t ${{ matrix.typo3 }} -p ${{ matrix.php }} -b docker
+
+      - name: Update Fractor dependencies
+        run: Build/Scripts/runTests.sh -s composer -t ${{ matrix.typo3 }} -p ${{ matrix.php }} -b docker -- --working-dir=Build/fractor update --with-all-dependencies --no-ansi --no-interaction --no-progress
 
       - name: Run Fractor dry-run
-        run: Build/Scripts/runTests.sh -s fractor -p 8.4 -b docker -n
+        run: Build/Scripts/runTests.sh -s fractor -t ${{ matrix.typo3 }} -p ${{ matrix.php }} -b docker -n
