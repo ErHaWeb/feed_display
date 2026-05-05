@@ -1,0 +1,23 @@
+.. include:: /Includes.rst.txt
+
+2.2.7 - May 05, 2026
+====================
+
+.. contents::
+   :local:
+   :depth: 3
+
+Breaking changes
+----------------
+No breaking changes!
+
+All Changes
+-----------
+This is a list of all changes in this release: ::
+
+    2026-05-05 [DOCS] Fix documentation rendering errors (Commit 4f0ad97 by Eric Harrer)
+    2026-05-05 [TASK] Split static checks from test matrix (Commit f56fe09 by Eric Harrer)
+    2026-05-05 [TASK] Consolidate feed_display GitHub workflows (Commit de1c6dd by Eric Harrer)
+    2026-05-05 [TASK] Update TER publishing workflow (Commit 8a9a469 by Eric Harrer)
+
+This list has been created by using `git log $(git describe --tags --abbrev=0)..HEAD --abbrev-commit --pretty='%ad %s (Commit %h by %an)' --date=short`.
