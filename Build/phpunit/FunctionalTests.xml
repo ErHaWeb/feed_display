@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.5/phpunit.xsd"
+    xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/11.5/phpunit.xsd"
     backupGlobals="true"
     beStrictAboutOutputDuringTests="true"
     bootstrap="FunctionalTestsBootstrap.php"
@@ -24,7 +24,7 @@
         <env name="TYPO3_CONTEXT" value="Testing"/>
         <env name="TYPO3_PATH_APP" value="../../.Build/Web"/>
     </php>
-    <source restrictDeprecations="true" restrictNotices="true" restrictWarnings="true">
+    <source restrictNotices="true" restrictWarnings="true">
         <include>
             <directory>../../Classes</directory>
         </include>
@@ -37,4 +37,9 @@
             <directory>../../Tests/Functional</directory>
         </testsuite>
     </testsuites>
+    <groups>
+        <exclude>
+            <group>live-feed</group>
+        </exclude>
+    </groups>
 </phpunit>

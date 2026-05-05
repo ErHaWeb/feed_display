@@ -8,8 +8,9 @@ use a9f\Typo3Fractor\Set\Typo3LevelSetList;
 return FractorConfiguration::configure()
     ->withPaths([
         __DIR__ . '/../../Configuration',
+        __DIR__ . '/../../Resources',
         __DIR__ . '/../../Tests',
     ])
     ->withSets([
-        Typo3LevelSetList::UP_TO_TYPO3_12,
+        Typo3LevelSetList::UP_TO_TYPO3_13,
     ]);

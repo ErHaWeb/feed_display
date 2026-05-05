@@ -9,13 +9,13 @@ use PHPUnit\Framework\TestCase;
 
 final class CompatibilityDeclarationTest extends TestCase
 {
-    private const EXPECTED_TYPO3_CONSTRAINT = '^12.4 || ^13.4';
-    private const EXPECTED_TYPO3_EMCONF_RANGE = '12.4.0-13.4.99';
-    private const EXPECTED_PHP_CONSTRAINT = '^8.1';
-    private const EXPECTED_PHP_EMCONF_RANGE = '8.1.0-8.5.99';
+    private const EXPECTED_TYPO3_CONSTRAINT = '^13.4 || ^14.3';
+    private const EXPECTED_TYPO3_EMCONF_RANGE = '13.4.0-14.3.99';
+    private const EXPECTED_PHP_CONSTRAINT = '>=8.2 <8.6';
+    private const EXPECTED_PHP_EMCONF_RANGE = '8.2.0-8.5.99';
 
     #[Test]
-    public function composerManifestPreservesMixedTypo3Support(): void
+    public function composerManifestPreservesTypo3Support(): void
     {
         $composer = $this->readComposerManifest();
 
@@ -36,7 +36,8 @@ final class CompatibilityDeclarationTest extends TestCase
             self::assertSame(self::EXPECTED_TYPO3_CONSTRAINT, $composer['require-dev'][$packageName]);
         }
 
-        self::assertSame('^7.0 || ^8.0', $composer['require-dev']['typo3/testing-framework']);
+        self::assertSame('^9.0', $composer['require-dev']['typo3/testing-framework']);
+        self::assertSame('^11.5', $composer['require-dev']['phpunit/phpunit']);
         self::assertSame(self::EXPECTED_PHP_CONSTRAINT, $composer['require']['php']);
     }
 

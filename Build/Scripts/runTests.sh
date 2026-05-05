@@ -206,14 +206,13 @@ Options:
     -s <composer|composerInstall|composerValidate|lintPhp|lintJson|lintYaml|lintServicesYaml|lintTypoScript|lintXliff|cgl|phpstan|phpstanGenerateBaseline|coverageUnit|coverageFunctional|phpmd|unit|unitRandom|functional|rector|fractor|npm|build>
         Specifies which suite to run
 
-    -t <12|13>
+    -t <13|14>
         TYPO3 major to use for composerInstall
-            - 12: use TYPO3 12.4
-            - 13: use TYPO3 13.4 (default)
+            - 13: use TYPO3 13.4
+            - 14: use TYPO3 14.3 (default)
 
-    -p <8.1|8.2|8.3|8.4|8.5>
+    -p <8.2|8.3|8.4|8.5>
         PHP minor version to use
-            - 8.1
             - 8.2 (default)
             - 8.3
             - 8.4
@@ -283,22 +282,22 @@ runPhpCommand() {
     shift
     local COMMAND=("$@")
     if [ "${CONTAINER_BIN}" = "host" ]; then
-        "${COMMAND[@]}"
+        COMPOSER_ROOT_VERSION="${COMPOSER_ROOT_VERSION:-14.0.0-dev}" "${COMMAND[@]}"
         return
     fi
-    ${CONTAINER_BIN} run ${CONTAINER_COMMON_PARAMS} --name "${CONTAINER_NAME}" ${XDEBUG_MODE} -e XDEBUG_CONFIG="${XDEBUG_CONFIG}" ${EXTRA_ENV_PARAMS:-} ${IMAGE_PHP} "${COMMAND[@]}"
+    ${CONTAINER_BIN} run ${CONTAINER_COMMON_PARAMS} --name "${CONTAINER_NAME}" ${XDEBUG_MODE} -e XDEBUG_CONFIG="${XDEBUG_CONFIG}" -e COMPOSER_ROOT_VERSION="${COMPOSER_ROOT_VERSION:-14.0.0-dev}" ${EXTRA_ENV_PARAMS:-} ${IMAGE_PHP} "${COMMAND[@]}"
 }
 
 runPhpShellCommand() {
     local CONTAINER_NAME=${1}
     local COMMAND=${2}
     if [ "${CONTAINER_BIN}" = "host" ]; then
-        local ENV_EXPORTS=""
+        local ENV_EXPORTS="export COMPOSER_ROOT_VERSION=${COMPOSER_ROOT_VERSION:-14.0.0-dev};"
         local HOST_COMMAND=${COMMAND}
         if [ ${PHP_XDEBUG_ON} -eq 0 ]; then
-            ENV_EXPORTS="export XDEBUG_MODE=off;"
+            ENV_EXPORTS="${ENV_EXPORTS} export XDEBUG_MODE=off;"
         else
-            ENV_EXPORTS="export XDEBUG_MODE=debug XDEBUG_TRIGGER=feed_display XDEBUG_CONFIG=client_port=${PHP_XDEBUG_PORT};"
+            ENV_EXPORTS="${ENV_EXPORTS} export XDEBUG_MODE=debug XDEBUG_TRIGGER=feed_display XDEBUG_CONFIG=client_port=${PHP_XDEBUG_PORT};"
         fi
         if [ -n "${EXTRA_ENV_PARAMS:-}" ]; then
             ENV_EXPORTS="${ENV_EXPORTS} export ${EXTRA_ENV_PARAMS};"
@@ -311,7 +310,7 @@ runPhpShellCommand() {
         bash -lc "${ENV_EXPORTS} ${HOST_COMMAND}"
         return
     fi
-    ${CONTAINER_BIN} run ${CONTAINER_COMMON_PARAMS} --name "${CONTAINER_NAME}" ${XDEBUG_MODE} -e XDEBUG_CONFIG="${XDEBUG_CONFIG}" ${EXTRA_ENV_PARAMS:-} ${IMAGE_PHP} /bin/sh -lc "${COMMAND}"
+    ${CONTAINER_BIN} run ${CONTAINER_COMMON_PARAMS} --name "${CONTAINER_NAME}" ${XDEBUG_MODE} -e XDEBUG_CONFIG="${XDEBUG_CONFIG}" -e COMPOSER_ROOT_VERSION="${COMPOSER_ROOT_VERSION:-14.0.0-dev}" ${EXTRA_ENV_PARAMS:-} ${IMAGE_PHP} /bin/sh -lc "${COMMAND}"
 }
 
 runComposerInstallInWorkingDir() {
@@ -454,7 +453,7 @@ cd "${THIS_SCRIPT_DIR}/../../" || exit 1
 ROOT_DIR="${PWD}"
 
 TEST_SUITE=""
-TYPO3_VERSION="13"
+TYPO3_VERSION="14"
 DBMS="sqlite"
 DBMS_VERSION=""
 DATABASE_DRIVER=""
@@ -499,7 +498,7 @@ while getopts "a:b:s:d:i:p:e:t:u:nxy:h" OPT; do
 done
 shift $((OPTIND - 1))
 
-if ! [[ ${TYPO3_VERSION} =~ ^(12|13)$ ]]; then
+if ! [[ ${TYPO3_VERSION} =~ ^(13|14)$ ]]; then
     echo "Unsupported TYPO3 major: ${TYPO3_VERSION}" >&2
     exit 1
 fi
@@ -509,7 +508,7 @@ if [ -n "${CONTAINER_BIN}" ] && ! [[ ${CONTAINER_BIN} =~ ^(host|docker|podman)$ 
     exit 1
 fi
 
-if ! [[ ${PHP_VERSION} =~ ^(8.1|8.2|8.3|8.4|8.5)$ ]]; then
+if ! [[ ${PHP_VERSION} =~ ^(8.2|8.3|8.4|8.5)$ ]]; then
     echo "Unsupported PHP version: ${PHP_VERSION}" >&2
     exit 1
 fi
@@ -606,21 +605,6 @@ case ${TEST_SUITE} in
         stashComposerFiles
         COMPOSER_FILES_STASHED=1
         case ${TYPO3_VERSION} in
-            12)
-                TYPO3_REQUIREMENTS=(
-                    typo3/cms-backend:^12.4
-                    typo3/cms-core:^12.4
-                    typo3/cms-extbase:^12.4
-                    typo3/cms-fluid:^12.4
-                    typo3/cms-frontend:^12.4
-                )
-                TYPO3_DEV_REQUIREMENTS=(
-                    typo3/cms-fluid-styled-content:^12.4
-                    typo3/cms-install:^12.4
-                    typo3/testing-framework:^7.0
-                    phpunit/phpunit:^10.5
-                )
-                ;;
             13)
                 TYPO3_REQUIREMENTS=(
                     typo3/cms-backend:^13.4
@@ -632,8 +616,23 @@ case ${TEST_SUITE} in
                 TYPO3_DEV_REQUIREMENTS=(
                     typo3/cms-fluid-styled-content:^13.4
                     typo3/cms-install:^13.4
-                    typo3/testing-framework:^8.0
-                    phpunit/phpunit:^10.5
+                    typo3/testing-framework:^9.0
+                    phpunit/phpunit:^11.5
+                )
+                ;;
+            14)
+                TYPO3_REQUIREMENTS=(
+                    typo3/cms-backend:^14.3
+                    typo3/cms-core:^14.3
+                    typo3/cms-extbase:^14.3
+                    typo3/cms-fluid:^14.3
+                    typo3/cms-frontend:^14.3
+                )
+                TYPO3_DEV_REQUIREMENTS=(
+                    typo3/cms-fluid-styled-content:^14.3
+                    typo3/cms-install:^14.3
+                    typo3/testing-framework:^9.0
+                    phpunit/phpunit:^11.5
                 )
                 ;;
             *)
@@ -782,10 +781,6 @@ case ${TEST_SUITE} in
     fractor)
         FRACTOR_DRY_RUN=""
         [ ${DRY_RUN} -eq 1 ] && FRACTOR_DRY_RUN="--dry-run"
-
-        if [ "${PHP_VERSION}" = "8.1" ]; then
-            PHP_VERSION="8.2"
-        fi
 
         runComposerInstallInWorkingDir "Build/fractor"
 
