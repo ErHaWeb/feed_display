@@ -19,6 +19,13 @@ so that the feed does not have to be parsed with each call. If something has
 changed in the plugin configuration (TypoScript or FlexForm), the cache is
 renewed immediately, otherwise only after a configurable time has elapsed.
 
+## Compatibility
+
+This branch supports TYPO3 `^13.4 || ^14.3` and PHP `>=8.2 <8.6`.
+For TYPO3 v13/v14 projects, include the Site Set `erhaweb/feed-display`.
+The legacy static TypoScript include is still available as a fallback for
+migrated installations.
+
 Older records that used `CType=list` with `list_type=feeddisplay_pi1` must be
 migrated to the dedicated `CType=feeddisplay_pi1`. Run the upgrade wizard
 `feedDisplayCTypeMigration` after updating existing projects.
@@ -60,8 +67,9 @@ constant editor.
 ### Constant Editor
 
 Below you can find screenshots of all available constants in the constant
-editor. Use these options if you want to make settings on a global level for
-all content elements.
+editor. In TYPO3 v13/v14 Site Set integrations, use Site Settings for global
+configuration. The constant editor remains useful for projects that still use
+static TypoScript template records.
 
 #### Files
 

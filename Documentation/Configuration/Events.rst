@@ -27,8 +27,10 @@ Finally, these custom properties can be used in Fluid:
     namespace VendorName\Sitepackage\EventListener;
 
     use ErHaWeb\FeedDisplay\Event\SingleFeedDataEvent;
+    use TYPO3\CMS\Core\Attribute\AsEventListener;
 
-    class SingleFeedDisplayListener
+    #[AsEventListener(identifier: 'sitepackage/feed-display-listener')]
+    final class SingleFeedDisplayListener
     {
         public function __invoke(SingleFeedDataEvent $event): void
         {
@@ -57,10 +59,11 @@ Finally, these custom properties can be used in Fluid:
         }
     }
 
-Register the event listener
----------------------------
+Register the event listener without attributes
+----------------------------------------------
 
-To register your event listener, simply add the following lines to your
+The attribute-based registration above is recommended for TYPO3 v13 and v14.
+If you prefer YAML service tags, add the following lines to your
 :file:`Configuration/Services.yaml` file:
 
 ..  code-block:: yaml

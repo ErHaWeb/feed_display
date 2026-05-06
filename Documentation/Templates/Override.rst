@@ -74,8 +74,12 @@ We suggest that you use a sitepackage extension. Learn how to
     updated with future extension updates. This way you only have to worry
     about updating the files you have copied.
 
-In the constant editor under `Web` → `Template` → `Constant Editor` you can
-define your own fluid paths in addition to the default paths.
+In TYPO3 v13/v14 projects using the Site Set, define your own Fluid paths as
+Site Settings. Projects using static TypoScript records can still use the
+constant editor under the TypoScript module:
+
+* TYPO3 v13: :guilabel:`Site Management` → :guilabel:`TypoScript`
+* TYPO3 v14: :guilabel:`Sites` → :guilabel:`TypoScript`
 
 ..  figure:: /Images/ConstantEditor-FluidPaths.png
     :alt: Constant Editor: Fluid Template Paths

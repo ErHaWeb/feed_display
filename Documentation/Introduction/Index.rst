@@ -69,8 +69,9 @@ Plugin Settings
 Below you can find screenshots of all available plugin options. Use these
 options if you want to make settings on content element level.
 Alternatively, these can also be configured by
-:ref:`TypoScript Constants <configuration-typoscript-constants>` in the
-constant editor.
+:ref:`Site Settings <configuration-site-set>` or, in projects using the
+static TypoScript include, by :ref:`TypoScript Constants
+<configuration-typoscript-constants>` in the constant editor.
 
 ..  tabs::
 
@@ -111,8 +112,9 @@ Constant Editor
 ---------------
 
 Below you can find screenshots of all available constants in the constant
-editor. Use these options if you want to make settings on a global level for
-all content elements.
+editor. In TYPO3 v13/v14 Site Set integrations, use Site Settings for global
+configuration. The constant editor remains available for projects that still
+use static TypoScript template records.
 
 ..  figure:: /Images/ConstantEditor-Options.png
     :class: with-shadow

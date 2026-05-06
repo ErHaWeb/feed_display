@@ -10,6 +10,7 @@ Configuration
    :maxdepth: 5
    :titlesonly:
 
+   SiteSet
    TypoScriptReference/Index
    TSconfig
    Events

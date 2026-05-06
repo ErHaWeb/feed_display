@@ -10,23 +10,31 @@ Quick start
 
 1.  :ref:`Install <installation>` the Extension
 
-2.  Include the static TypoScript
+2.  Include the Site Set
 
-    #.  Go to the TypoScript module under `Site Management` → `TypoScript`.
+    #.  Open the site configuration.
 
-    #.  Select `Edit TypoScript Record` in the module header.
+        * TYPO3 v13: :guilabel:`Site Management` → :guilabel:`Sites`
+        * TYPO3 v14: :guilabel:`Sites` → :guilabel:`Setup`
 
-    #.  Click the button `Edit the whole template record`.
+    #.  Edit the site where the feed should be displayed.
 
-    #.  Switch to the tab `Advanced Options`.
+    #.  Add the Site Set `Feed Display` (`erhaweb/feed-display`).
 
-    #.  Select `Feed Display: Static TypoScript Include (feed_display)` under `Include TypoScript sets` → `Available Items`.
+    #.  Save the site configuration.
 
-    #.  Click `Save` and `Close`.
+    ..  tip::
+
+        Existing projects that still use TypoScript template records can use
+        the static include `Feed Display: Static TypoScript Include
+        (feed_display)` as a fallback. Prefer the Site Set for TYPO3 v13/v14.
 
 3.  Create the plugin content element
 
-    #.  Go to the Page module under `Web` → `Page`.
+    #.  Go to the page content module.
+
+        * TYPO3 v13: :guilabel:`Web` → :guilabel:`Page`
+        * TYPO3 v14: :guilabel:`Content` → :guilabel:`Layout`
 
     #.  In the pagetree view click on the page where you want the feed to be displayed.
 

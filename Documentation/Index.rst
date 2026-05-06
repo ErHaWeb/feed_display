@@ -47,6 +47,7 @@ TypoScript or directly in the plugin options.
 
     Introduction/Index
     Installation/Index
+    Compatibility/Index
     QuickStart/Index
     Configuration/Index
     Templates/Index

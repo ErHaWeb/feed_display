@@ -6,6 +6,10 @@
 Installation
 ============
 
+Feed Display supports TYPO3 v13 and v14. Composer installation is recommended.
+See :ref:`compatibility` for the exact TYPO3/PHP version range and for renamed
+TYPO3 v14 backend module paths.
+
 ..  tabs::
 
     ..  group-tab:: Composer
@@ -24,7 +28,11 @@ Installation
             plugin configuration. For this, the tables `cache_feeddisplay`
             and `cache_feeddisplay_tags` must be created.
 
-            These tables can be created under `Admin Tools` → `Maintenance` → `Analyze Database Structure` → `Apply selected changes`.
+            These tables can be created in the Maintenance module under
+            :guilabel:`Analyze Database Structure` → :guilabel:`Apply selected changes`.
+
+            * TYPO3 v13: :guilabel:`Admin Tools` → :guilabel:`Maintenance`
+            * TYPO3 v14: :guilabel:`System` → :guilabel:`Maintenance`
 
             ..  figure:: /Images/Maintenance-AnalyzeDatabaseStructure.png
                 :class: with-shadow
@@ -32,14 +40,6 @@ Installation
                 :width: 993px
 
                 Maintenance: Analyze Database Structure
-
-            ..  tip::
-
-                If you have installed the `TYPO3 Console Extension by Helmut Hummel <https://extensions.typo3.org/extension/typo3_console>`__, you can also create the missing tables with the following command:
-
-                ..  code-block:: bash
-
-                    typo3 database:updateschema "*.add,*.change"
 
     ..  group-tab:: Composer/DDEV
 
@@ -57,7 +57,11 @@ Installation
             plugin configuration. For this, the tables `cache_feeddisplay`
             and `cache_feeddisplay_tags` must be created.
 
-            These tables can be created under `Admin Tools` → `Maintenance` → `Analyze Database Structure` → `Apply selected changes`.
+            These tables can be created in the Maintenance module under
+            :guilabel:`Analyze Database Structure` → :guilabel:`Apply selected changes`.
+
+            * TYPO3 v13: :guilabel:`Admin Tools` → :guilabel:`Maintenance`
+            * TYPO3 v14: :guilabel:`System` → :guilabel:`Maintenance`
 
             ..  figure:: /Images/Maintenance-AnalyzeDatabaseStructure.png
                 :class: with-shadow
@@ -66,21 +70,16 @@ Installation
 
                 Maintenance: Analyze Database Structure
 
-            ..  tip::
-
-                If you have installed the `TYPO3 Console Extension by Helmut Hummel <https://extensions.typo3.org/extension/typo3_console>`__, you can also create the missing tables with the following command:
-
-                ..  code-block:: bash
-
-                    ddev typo3 database:updateschema "*.add,*.change"
-
     ..  group-tab:: Classic
 
         **Install the extension in the classic way**
 
         #.  Open the TYPO3 backend.
 
-        #.  Go to the Extension Manager under `Admin Tools` → `Extensions`.
+        #.  Go to the Extension Manager.
+
+            * TYPO3 v13: :guilabel:`Admin Tools` → :guilabel:`Extensions`
+            * TYPO3 v14: :guilabel:`System` → :guilabel:`Extensions`
 
         #.  Select `Get Extensions` in the module header.
 

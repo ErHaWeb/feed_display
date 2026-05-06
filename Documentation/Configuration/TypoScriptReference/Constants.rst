@@ -348,7 +348,8 @@ Ignore Flexform Settings if empty
     plugin settings value is either empty or 0.
 
     ..  attention::
-        This property has been introduced as a native property for Extbase-based frontend plugins since TYPO3 v12 and
-        replaces the previous custom property `plugin.tx_feeddisplay_pi1.settings.overrideFlexformSettingsIfEmpty`.
+        This is the native Extbase property for frontend plugins in TYPO3 v13
+        and v14. It replaces the previous custom property
+        `plugin.tx_feeddisplay_pi1.settings.overrideFlexformSettingsIfEmpty`.
 
         See also :ref:`ignoreFlexFormSettingsIfEmpty <t3tsref:setup-plugin-configuration-ignoreFlexFormSettingsIfEmpty>`.
