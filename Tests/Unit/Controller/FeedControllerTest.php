@@ -23,8 +23,8 @@ use PHPUnit\Framework\Attributes\Test;
 use Psr\Http\Message\ResponseInterface;
 use TYPO3\CMS\Core\Cache\Frontend\FrontendInterface;
 use TYPO3\CMS\Core\Http\HtmlResponse;
+use TYPO3\CMS\Core\View\ViewInterface;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
-use TYPO3Fluid\Fluid\View\ViewInterface;
 
 final class FeedControllerTest extends UnitTestCase
 {
@@ -222,7 +222,7 @@ final class RecordingView implements ViewInterface
     /**
      * @param array<array-key, mixed> $variables
      */
-    public function renderSection($sectionName, array $variables = [], $ignoreUnknown = false): string
+    public function renderSection(string $sectionName, array $variables = [], bool $ignoreUnknown = false): string
     {
         return '';
     }
@@ -230,7 +230,7 @@ final class RecordingView implements ViewInterface
     /**
      * @param array<array-key, mixed> $variables
      */
-    public function renderPartial($partialName, $sectionName, array $variables, $ignoreUnknown = false): string
+    public function renderPartial(string $partialName, string $sectionName, array $variables, bool $ignoreUnknown = false): string
     {
         return '';
     }

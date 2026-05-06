@@ -17,7 +17,6 @@ declare(strict_types=1);
 
 namespace ErHaWeb\FeedDisplay\Tests\Functional\Frontend;
 
-use PHPUnit\Framework\Attributes\IgnoreDeprecations;
 use PHPUnit\Framework\Attributes\Test;
 
 final class FeedEventListenerTest extends AbstractFeedFrontendTestCase
@@ -28,7 +27,6 @@ final class FeedEventListenerTest extends AbstractFeedFrontendTestCase
     ];
 
     #[Test]
-    #[IgnoreDeprecations]
     public function eventListenerCanModifyAndSuppressItems(): void
     {
         $feedUrl = $this->writeFeedFixture('Event feed', ['First item', 'Second item']);

@@ -17,13 +17,11 @@ declare(strict_types=1);
 
 namespace ErHaWeb\FeedDisplay\Tests\Functional\Frontend;
 
-use PHPUnit\Framework\Attributes\IgnoreDeprecations;
 use PHPUnit\Framework\Attributes\Test;
 
 final class FeedFrontendTest extends AbstractFeedFrontendTestCase
 {
     #[Test]
-    #[IgnoreDeprecations]
     public function frontendRequestRendersConfiguredFeedData(): void
     {
         $feedUrl = $this->writeFeedFixture('Feed display test feed', ['First item', 'Second item']);
@@ -37,7 +35,6 @@ final class FeedFrontendTest extends AbstractFeedFrontendTestCase
     }
 
     #[Test]
-    #[IgnoreDeprecations]
     public function flexFormOverridesTypoScriptAndChangedSettingsInvalidateTheFeedCache(): void
     {
         $feedUrl = $this->writeFeedFixture('Feed display test feed', ['First item', 'Second item']);
@@ -65,7 +62,6 @@ final class FeedFrontendTest extends AbstractFeedFrontendTestCase
     }
 
     #[Test]
-    #[IgnoreDeprecations]
     public function cachedFeedDataIsReusedWhenFeedContentChanges(): void
     {
         $feedUrl = $this->writeFeedFixture('Initial title', ['First item']);
@@ -81,7 +77,6 @@ final class FeedFrontendTest extends AbstractFeedFrontendTestCase
     }
 
     #[Test]
-    #[IgnoreDeprecations]
     public function zeroCacheDurationBypassesTheExtensionCache(): void
     {
         $feedUrl = $this->writeFeedFixture('Initial title', ['First item']);
@@ -96,7 +91,6 @@ final class FeedFrontendTest extends AbstractFeedFrontendTestCase
     }
 
     #[Test]
-    #[IgnoreDeprecations]
     public function objectReturningGettersRemainCacheableInFrontendRequests(): void
     {
         $feedUrl = $this->writeFeedFixture('Object rich feed', ['First item']);
@@ -120,7 +114,6 @@ final class FeedFrontendTest extends AbstractFeedFrontendTestCase
     }
 
     #[Test]
-    #[IgnoreDeprecations]
     public function emptyFeedUrlDisplaysConfiguredErrorMessage(): void
     {
         $this->initializeFrontendRootPage('', ['errorMessage' => 'Feed unavailable for test']);
@@ -131,7 +124,6 @@ final class FeedFrontendTest extends AbstractFeedFrontendTestCase
     }
 
     #[Test]
-    #[IgnoreDeprecations]
     public function feedImageGetsPublishedToTemporaryAssets(): void
     {
         $feedUrl = $this->writeFeedFixture('Feed with image', ['First item'], true);
@@ -143,7 +135,6 @@ final class FeedFrontendTest extends AbstractFeedFrontendTestCase
     }
 
     #[Test]
-    #[IgnoreDeprecations]
     public function invalidFeedDisplaysTheDefaultErrorMessage(): void
     {
         $this->initializeFrontendRootPage($this->instancePath . '/fileadmin/missing-feed.xml', [
@@ -156,7 +147,6 @@ final class FeedFrontendTest extends AbstractFeedFrontendTestCase
     }
 
     #[Test]
-    #[IgnoreDeprecations]
     public function invalidFeedRendersConfiguredHtmlErrorMessageWithoutEscaping(): void
     {
         $this->initializeFrontendRootPage(
@@ -174,7 +164,6 @@ final class FeedFrontendTest extends AbstractFeedFrontendTestCase
     }
 
     #[Test]
-    #[IgnoreDeprecations]
     public function feedWithoutItemsDisplaysTheTranslatedNoItemsMessage(): void
     {
         $feedUrl = $this->writeFeedXmlFixture(
@@ -188,7 +177,6 @@ final class FeedFrontendTest extends AbstractFeedFrontendTestCase
     }
 
     #[Test]
-    #[IgnoreDeprecations]
     public function frontendRequestAppliesFormattingAndLinkSettingsToRenderedItems(): void
     {
         $feedUrl = $this->writeFeedXmlFixture(
@@ -217,7 +205,6 @@ final class FeedFrontendTest extends AbstractFeedFrontendTestCase
     }
 
     #[Test]
-    #[IgnoreDeprecations]
     public function frontendRequestCanRenderHtmlContentWithoutStrippingTags(): void
     {
         $feedUrl = $this->writeFeedXmlFixture(
@@ -236,7 +223,6 @@ final class FeedFrontendTest extends AbstractFeedFrontendTestCase
     }
 
     #[Test]
-    #[IgnoreDeprecations]
     public function missingPluginSettingsDisplayTheStaticTypoScriptHint(): void
     {
         $feedUrl = $this->writeFeedFixture('Feed display test feed', ['First item']);
@@ -252,7 +238,6 @@ final class FeedFrontendTest extends AbstractFeedFrontendTestCase
     }
 
     #[Test]
-    #[IgnoreDeprecations]
     public function frontendRequestAppliesConfiguredImageDimensionsToFeedIconAndLogo(): void
     {
         $feedImagePath = $this->instancePath . '/fileadmin/rectangular-feed-image.svg';
@@ -280,7 +265,6 @@ final class FeedFrontendTest extends AbstractFeedFrontendTestCase
     }
 
     #[Test]
-    #[IgnoreDeprecations]
     public function frontendRequestRendersSingularMetadataBranchesFromCachedFeedData(): void
     {
         $feedUrl = $this->writeFeedFixture('Cached metadata feed', ['Initial item']);
@@ -369,7 +353,6 @@ final class FeedFrontendTest extends AbstractFeedFrontendTestCase
     }
 
     #[Test]
-    #[IgnoreDeprecations]
     public function frontendRequestRendersPluralMetadataBranchesFromCachedFeedData(): void
     {
         $feedUrl = $this->writeFeedFixture('Cached metadata feed', ['Initial item']);

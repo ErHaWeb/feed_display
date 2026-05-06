@@ -1,8 +1,13 @@
 {
   "name": "erhaweb/feed-display-test-listener",
-  "description": "Fixture extension for testing feed_display event listeners",
+  "description": "Feed display test listener - Functional test fixture for feed_display",
   "license": "GPL-2.0-or-later",
   "type": "typo3-cms-extension",
+  "require": {
+    "php": ">=8.2 <8.6",
+    "erhaweb/feed-display": "*",
+    "typo3/cms-core": "^13.4 || ^14.3"
+  },
   "autoload": {
     "psr-4": {
       "ErHaWeb\\FeedDisplayTestListener\\": "Classes/"

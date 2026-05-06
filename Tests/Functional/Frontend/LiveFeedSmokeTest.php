@@ -18,7 +18,6 @@ declare(strict_types=1);
 namespace ErHaWeb\FeedDisplay\Tests\Functional\Frontend;
 
 use PHPUnit\Framework\Attributes\Group;
-use PHPUnit\Framework\Attributes\IgnoreDeprecations;
 use PHPUnit\Framework\Attributes\Test;
 
 final class LiveFeedSmokeTest extends AbstractFeedFrontendTestCase
@@ -27,7 +26,6 @@ final class LiveFeedSmokeTest extends AbstractFeedFrontendTestCase
 
     #[Test]
     #[Group('live-feed')]
-    #[IgnoreDeprecations]
     public function liveTypo3NewsFeedRendersWithoutExtensionErrorState(): void
     {
         $this->initializeFrontendRootPage(self::TYPO3_NEWS_RSS_URL, [
