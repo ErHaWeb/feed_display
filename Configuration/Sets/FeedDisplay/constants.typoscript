@@ -30,7 +30,7 @@ plugin.tx_feeddisplay_pi1 {
         # cat=plugin.tx_feeddisplay_pi1/100_general/270; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.feedIconMaxHeight
         feedIconMaxHeight = 26
         # cat=plugin.tx_feeddisplay_pi1/200_advanced/300; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.dateFormat
-        dateFormat = %d. %B %Y
+        dateFormat = d. F Y
         # cat=plugin.tx_feeddisplay_pi1/200_advanced/310; type=boolean; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.stripTags
         stripTags = 1
         # cat=plugin.tx_feeddisplay_pi1/200_advanced/320; type=options[_blank,_self,_parent,_top]; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.linkTarget
@@ -82,7 +82,7 @@ plugin.tx_feeddisplay_pi1 {
             # Item-Level Data (Basic)
             # cat=plugin.tx_feeddisplay_pi1/300_getfields/200; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.getFields.items
             items := addToList(author,authors,categories,category,content,contributor,contributors,copyright,date|U,description,enclosure,enclosures,feed,id,link,links,local_date|,permalink,source,title)
-            # Attention: Adding field "local_date" without an empty parameter in PHP 8.1 leads to a deprecation notice "strftime() is deprecated" in simplepie/src/Item.php
+            # Keep the empty local_date argument to avoid SimplePie's locale date formatting path.
 
             # Item-Level GeoData
             items := addToList(latitude,longitude)

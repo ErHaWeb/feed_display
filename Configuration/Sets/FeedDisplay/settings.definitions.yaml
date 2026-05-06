@@ -60,7 +60,7 @@ settings:
     category: feeddisplay.advanced
   plugin.tx_feeddisplay_pi1.settings.dateFormat:
     type: string
-    default: '%d. %B %Y'
+    default: 'd. F Y'
     category: feeddisplay.advanced
   plugin.tx_feeddisplay_pi1.settings.stripTags:
     type: int

@@ -188,12 +188,13 @@ Date format
 
 ..  confval:: dateFormat
 
-    :type: DateTime
-    :Default: %d. %B %Y
+    :type: string
+    :Default: d. F Y
     :Path: plugin.tx_feeddisplay_pi1.settings
 
-    Use PHP's `strftime() <https://www.php.net/manual/en/function.strftime.php#refsect1-function.strftime-parameters>`__
-    function to define the format for dates.
+    Use a PHP date format compatible with
+    `DateTimeInterface::format() <https://www.php.net/manual/en/datetime.format.php>`__
+    to define the format for dates.
 
 ..  _configuration-typoscript-constants-settings-striptags:
 
