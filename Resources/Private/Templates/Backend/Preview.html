@@ -1,47 +1,61 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true" lang="en">
 <table>
+    <f:comment><!--
+        TYPO3 v13/v14 compatibility:
+        v13 provides pi_flexform_transformed; v14 provides record.pi_flexform.
+        Drop v13: remove the pi_flexform_transformed branch.
+        Never use record.pi_flexform.sheets; use path access like sheet/field.index.
+    --></f:comment>
+
     <f:if condition="{pi_flexform_transformed}">
         <f:then>
-            <f:comment><!-- TYPO3 v13 compatible listing --></f:comment>
+            <f:comment><!-- TYPO3 v13: flattened FlexForm values; getFields are comma-separated strings. --></f:comment>
             <f:for each="{pi_flexform_transformed.settings}" key="key" as="value">
                 <f:if condition="{value} != '' && {value} != '0' && {key} != 'getFields'">
                     <f:variable name="label" value="{f:translate(key:'LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.{key}.label')}"/>
-                    <f:render section="TableRow" arguments="{label:label,value:value}"></f:render>
+                    <f:render section="TableRow" arguments="{label:label,value:value}"/>
                 </f:if>
             </f:for>
-            <f:variable name="getFieldsTypes" value="{0:'feed',1:'items'}"/>
-            <f:for each="{getFieldsTypes}" as="getFieldsType">
-                <f:if condition="{pi_flexform_transformed.settings.getFields.{getFieldsType}}">
+
+            <f:for each="{0:'feed',1:'items'}" as="getFieldsType">
+                <f:variable name="fields" value="{pi_flexform_transformed.settings.getFields.{getFieldsType}}"/>
+                <f:if condition="{fields}">
                     <f:variable name="label" value="{f:translate(key:'LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.{getFieldsType}.label')}"/>
-                    <f:variable name="value">
-                        <f:for each="{pi_flexform_transformed.settings.getFields.{getFieldsType} -> f:split(separator: ',')}" as="field" iteration="iterator">
-                            <f:translate key="LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.{getFieldsType}.I.{field}"/><f:if condition="!{iterator.isLast}">,</f:if>
-                        </f:for>
-                    </f:variable>
-                    <f:render section="TableRow" arguments="{label:label,value:value}"></f:render>
+                    <tr>
+                        <th style="padding-right: 5px;">{label}</th>
+                        <td>
+                            <f:for each="{fields -> f:split(separator: ',')}" as="field" iteration="iterator">
+                                <f:translate key="LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.{getFieldsType}.I.{field}"/><f:if condition="!{iterator.isLast}">,</f:if>
+                            </f:for>
+                        </td>
+                    </tr>
                 </f:if>
             </f:for>
         </f:then>
         <f:else>
-            <f:variable name="sheets" value="{0:'general',1:'advanced'}"/>
-            <f:for each="{sheets}" as="sheet">
-                <f:for each="{record.pi_flexform.sheets.{sheet}.settings}" key="key" as="value">
+            <f:comment><!-- TYPO3 v14: Record API with path-based FlexForm access. --></f:comment>
+            <f:for each="{0:'general/settings',1:'advanced/settings'}" as="settingsPath">
+                <f:for each="{record.pi_flexform.{settingsPath}}" key="key" as="value">
                     <f:if condition="{value} != '' && {value} != '0' && {key} != 'getFields'">
                         <f:variable name="label" value="{f:translate(key:'LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.{key}.label')}"/>
-                        <f:render section="TableRow" arguments="{label:label,value:value}"></f:render>
+                        <f:render section="TableRow" arguments="{label:label,value:value}"/>
                     </f:if>
                 </f:for>
             </f:for>
-            <f:variable name="getFieldsTypes" value="{0:'feed',1:'items'}"/>
-            <f:for each="{getFieldsTypes}" as="getFieldsType">
-                <f:if condition="{record.pi_flexform.sheets.getFields.settings.getFields.{getFieldsType}}">
+
+            <f:comment><!-- TYPO3 v14 returns getFields multi-select values as arrays. --></f:comment>
+            <f:for each="{feed:'getFields/settings.getFields.feed',items:'getFields/settings.getFields.items'}" key="getFieldsType" as="getFieldsPath">
+                <f:variable name="fields" value="{record.pi_flexform.{getFieldsPath}}"/>
+                <f:if condition="{fields}">
                     <f:variable name="label" value="{f:translate(key:'LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.{getFieldsType}.label')}"/>
-                    <f:variable name="value">
-                        <f:for each="{record.pi_flexform.sheets.getFields.settings.getFields.{getFieldsType}}" as="field" iteration="iterator">
-                            <f:translate key="LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.{getFieldsType}.I.{field}"/><f:if condition="!{iterator.isLast}">,</f:if>
-                        </f:for>
-                    </f:variable>
-                    <f:render section="TableRow" arguments="{label:label,value:value}"></f:render>
+                    <tr>
+                        <th style="padding-right: 5px;">{label}</th>
+                        <td>
+                            <f:for each="{fields}" as="field" iteration="iterator">
+                                <f:translate key="LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.{getFieldsType}.I.{field}"/><f:if condition="!{iterator.isLast}">,</f:if>
+                            </f:for>
+                        </td>
+                    </tr>
                 </f:if>
             </f:for>
         </f:else>
