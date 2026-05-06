@@ -114,7 +114,7 @@ class FeedDataService
         $fieldName = $fieldParts[0] ?? $getFeedField;
 
         if ($fieldName === 'subscribe_url') {
-            return $this->feed->subscribe_url();
+            return $this->callSimplePieGetter($this->feed->subscribe_url(...));
         }
 
         // Avoid calling SimplePie's deprecated favicon handling for legacy configurations.
@@ -176,13 +176,22 @@ class FeedDataService
 
         $method = \Closure::fromCallable($callable);
 
-        return match (count($fieldParts)) {
+        return $this->callSimplePieGetter(static fn (): mixed => match (count($fieldParts)) {
             1 => $method(),
             2 => $method($fieldParts[1]),
             3 => $method($fieldParts[1], $fieldParts[2]),
             4 => $method($fieldParts[1], $fieldParts[2], $fieldParts[3]),
             default => null,
-        };
+        });
+    }
+
+    /**
+     * @param callable(): mixed $getter
+     */
+    private function callSimplePieGetter(callable $getter): mixed
+    {
+        // Some getters sanitize URLs lazily and can trigger the same IRI path.
+        return SimplePieDeprecationHandler::run($getter);
     }
 
     private function getImage(mixed $fileUrl): ?string
