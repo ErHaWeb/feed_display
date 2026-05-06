@@ -52,7 +52,8 @@ final class FeedRuntimeInitializer
             $feed->set_http_client($httpClient, $this->requestFactory, $this->uriFactory);
         }
         $feed->enable_cache(false);
-        $feed->init();
+        // Feed autodiscovery can hit SimplePie's IRI handling before getters run.
+        SimplePieDeprecationHandler::run($feed->init(...));
 
         return true;
     }

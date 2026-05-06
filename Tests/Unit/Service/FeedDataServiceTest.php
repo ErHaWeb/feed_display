@@ -180,6 +180,89 @@ final class FeedDataServiceTest extends UnitTestCase
     }
 
     #[Test]
+    public function buildDataKeepsFeedGetterValueWhenKnownSimplePieIriDeprecationIsTriggered(): void
+    {
+        $deprecationFile = $this->createSimplePieIriDeprecationTriggerFile('Feed description');
+        $feed = $this->getMockBuilder(SimplePie::class)
+            ->disableOriginalConstructor()
+            ->onlyMethods(['set_feed_url', 'enable_cache', 'init', 'get_description', 'get_items'])
+            ->getMock();
+
+        $eventDispatcher = $this->createMock(EventDispatcherInterface::class);
+        [$guzzleClientFactory, $requestFactory, $uriFactory] = $this->createHttpClientDependencies();
+
+        $feed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed.xml');
+        $feed->expects(self::once())->method('enable_cache')->with(false);
+        $feed->expects(self::once())->method('init');
+        $feed->expects(self::once())->method('get_description')->willReturnCallback(
+            static fn (): string => require $deprecationFile
+        );
+        $feed->expects(self::once())->method('get_items')->with(0, 0)->willReturn([]);
+
+        $eventDispatcher->expects(self::never())->method('dispatch');
+
+        $settings = [
+            'feedUrl' => 'https://example.com/feed.xml',
+            'maxFeedCount' => 0,
+            'getFields' => [
+                'feed' => 'description',
+                'items' => '',
+            ],
+        ];
+
+        try {
+            $subject = $this->createSubject($feed, $eventDispatcher, $guzzleClientFactory, $requestFactory, $uriFactory);
+            $data = $subject->buildData($settings);
+        } finally {
+            $this->removeTemporaryDirectory(dirname($deprecationFile, 4));
+        }
+
+        self::assertArrayHasKey('description', $data['feed']);
+        self::assertSame('Feed description', $data['feed']['description']);
+    }
+
+    #[Test]
+    public function buildDataKeepsFeedInitializedWhenKnownSimplePieIriDeprecationIsTriggeredDuringInit(): void
+    {
+        $deprecationFile = $this->createSimplePieIriDeprecationTriggerFile(true);
+        $feed = $this->getMockBuilder(SimplePie::class)
+            ->disableOriginalConstructor()
+            ->onlyMethods(['set_feed_url', 'enable_cache', 'init', 'get_title', 'get_items'])
+            ->getMock();
+
+        $eventDispatcher = $this->createMock(EventDispatcherInterface::class);
+        [$guzzleClientFactory, $requestFactory, $uriFactory] = $this->createHttpClientDependencies();
+
+        $feed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed.xml');
+        $feed->expects(self::once())->method('enable_cache')->with(false);
+        $feed->expects(self::once())->method('init')->willReturnCallback(
+            static fn (): bool => require $deprecationFile
+        );
+        $feed->expects(self::once())->method('get_title')->willReturn('Feed title');
+        $feed->expects(self::once())->method('get_items')->with(0, 0)->willReturn([]);
+
+        $eventDispatcher->expects(self::never())->method('dispatch');
+
+        $settings = [
+            'feedUrl' => 'https://example.com/feed.xml',
+            'maxFeedCount' => 0,
+            'getFields' => [
+                'feed' => 'title',
+                'items' => '',
+            ],
+        ];
+
+        try {
+            $subject = $this->createSubject($feed, $eventDispatcher, $guzzleClientFactory, $requestFactory, $uriFactory);
+            $data = $subject->buildData($settings);
+        } finally {
+            $this->removeTemporaryDirectory(dirname($deprecationFile, 4));
+        }
+
+        self::assertSame('Feed title', $data['feed']['title']);
+    }
+
+    #[Test]
     public function buildDataSupportsGetterCallsWithThreeAndFourFieldParts(): void
     {
         $item = new TestFeedItem();
@@ -538,6 +621,45 @@ final class FeedDataServiceTest extends UnitTestCase
         $feed->method('subscribe_url')->willReturn('');
 
         return $feed;
+    }
+
+    private function createSimplePieIriDeprecationTriggerFile(string|bool $returnValue): string
+    {
+        $temporaryDirectory = sys_get_temp_dir() . '/feed-display-simplepie-iri-' . bin2hex(random_bytes(8));
+        $simplePieDirectory = $temporaryDirectory . '/simplepie/simplepie/src';
+        $simplePieIriFile = $simplePieDirectory . '/IRI.php';
+
+        mkdir($simplePieDirectory, 0777, true);
+        file_put_contents(
+            $simplePieIriFile,
+            "<?php\n\ntrigger_error('Using null as an array offset is deprecated, use an empty string instead', E_USER_DEPRECATED);\n\nreturn "
+                . var_export($returnValue, true)
+                . ";\n"
+        );
+
+        return $simplePieIriFile;
+    }
+
+    private function removeTemporaryDirectory(string $directory): void
+    {
+        if (!is_dir($directory)) {
+            return;
+        }
+
+        $iterator = new \RecursiveIteratorIterator(
+            new \RecursiveDirectoryIterator($directory, \FilesystemIterator::SKIP_DOTS),
+            \RecursiveIteratorIterator::CHILD_FIRST
+        );
+
+        foreach ($iterator as $fileInfo) {
+            if ($fileInfo->isDir()) {
+                @rmdir($fileInfo->getPathname());
+            } else {
+                @unlink($fileInfo->getPathname());
+            }
+        }
+
+        @rmdir($directory);
     }
 }
 
