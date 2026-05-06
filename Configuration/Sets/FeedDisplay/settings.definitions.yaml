@@ -57,7 +57,7 @@ settings:
   plugin.tx_feeddisplay_pi1.settings.feedIconMaxHeight:
     type: int
     default: 26
-    category: feeddisplay.advanced
+    category: feeddisplay.general
   plugin.tx_feeddisplay_pi1.settings.dateFormat:
     type: string
     default: 'd. F Y'
