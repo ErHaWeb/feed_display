@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file source-language="en" original="EXT:feed_display/Resources/Private/Language/locallang_be.xlf" datatype="plaintext" product-name="feed_display" date="2025-02-25T11:12:50+01:00" target-language="fr">
+  <file source-language="en" original="EXT:feed_display/Resources/Private/Language/locallang_be.xlf" datatype="plaintext" product-name="feed_display" date="2026-05-06T10:39:35+02:00" target-language="fr">
     <header/>
     <body>
       <trans-unit id="pi1_title" approved="yes">
@@ -131,9 +131,9 @@
         <source>Date format</source>
         <target state="final">Format de la date</target>
       </trans-unit>
-      <trans-unit id="flexform.dateFormat.description" approved="yes">
-        <source>Use PHP's strftime() function format (empty = Defined by TypoScript)</source>
-        <target state="final">Utiliser le format de fonction PHP strftime() (vide = défini par TypoScript)</target>
+      <trans-unit id="flexform.dateFormat.description">
+        <source>Use a PHP date format compatible with DateTimeInterface::format() (empty = Defined by TypoScript)</source>
+        <target state="needs-translation">Use a PHP date format compatible with DateTimeInterface::format() (empty = Defined by TypoScript)</target>
       </trans-unit>
       <trans-unit id="flexform.stripTags.label" approved="yes">
         <source>Strip tags</source>
@@ -214,10 +214,6 @@
       <trans-unit id="flexform.getFields.feed.I.encoding" approved="yes">
         <source>Encoding</source>
         <target state="final">Encodage</target>
-      </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.favicon" approved="yes">
-        <source>Favicon</source>
-        <target state="final">Favicon</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.items" approved="yes">
         <source>Items</source>
@@ -483,9 +479,9 @@
         <source>Error message:This message is displayed if no feed items could be fetched</source>
         <target state="final">Message d'erreur : Ce message est affiché si aucun élément de flux ne peut être récupéré</target>
       </trans-unit>
-      <trans-unit id="constants.settings.dateFormat" approved="yes">
-        <source>Date format:Use PHP's strftime() function format</source>
-        <target state="final">Format de la date : Utiliser le format de la fonction PHP strftime()</target>
+      <trans-unit id="constants.settings.dateFormat">
+        <source>Date format:Use a PHP date format compatible with DateTimeInterface::format()</source>
+        <target state="needs-translation">Date format:Use a PHP date format compatible with DateTimeInterface::format()</target>
       </trans-unit>
       <trans-unit id="constants.settings.stripTags" approved="yes">
         <source>Strip tags:Remove HTML tags from the feed content</source>
