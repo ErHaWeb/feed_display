@@ -17,7 +17,6 @@ declare(strict_types=1);
 
 namespace ErHaWeb\FeedDisplay\Tests\Functional\Configuration;
 
-use PHPUnit\Framework\Attributes\IgnoreDeprecations;
 use PHPUnit\Framework\Attributes\Test;
 use TYPO3\CMS\Core\Site\Entity\NullSite;
 use TYPO3\CMS\Core\TypoScript\PageTsConfigFactory;
@@ -33,7 +32,6 @@ final class PageTsConfigTest extends FunctionalTestCase
      * @throws \JsonException
      */
     #[Test]
-    #[IgnoreDeprecations]
     public function pageTsConfigContainsWizardAndPreviewConfigurationForThePlugin(): void
     {
         $pageTsConfig = $this->get(PageTsConfigFactory::class)->create([], new NullSite())->getPageTsConfigArray();
@@ -44,11 +42,11 @@ final class PageTsConfigTest extends FunctionalTestCase
         );
         self::assertSame(
             'feeddisplay_pi1',
-            $pageTsConfig['mod.']['wizards.']['newContentElement.']['wizardItems.']['plugins.']['elements.']['feeddisplay_pi1.']['tt_content_defValues.']['list_type']
+            $pageTsConfig['mod.']['wizards.']['newContentElement.']['wizardItems.']['plugins.']['elements.']['feeddisplay_pi1.']['tt_content_defValues.']['CType']
         );
         self::assertSame(
             'EXT:feed_display/Resources/Private/Templates/Backend/Preview.html',
-            $pageTsConfig['mod.']['web_layout.']['tt_content.']['preview.']['list.']['feeddisplay_pi1']
+            $pageTsConfig['mod.']['web_layout.']['tt_content.']['preview.']['feeddisplay_pi1']
         );
     }
 }

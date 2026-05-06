@@ -19,6 +19,10 @@ so that the feed does not have to be parsed with each call. If something has
 changed in the plugin configuration (TypoScript or FlexForm), the cache is
 renewed immediately, otherwise only after a configurable time has elapsed.
 
+Older records that used `CType=list` with `list_type=feeddisplay_pi1` must be
+migrated to the dedicated `CType=feeddisplay_pi1`. Run the upgrade wizard
+`feedDisplayCTypeMigration` after updating existing projects.
+
 ## Screenshots
 
 Here you can find screenshots of all application areas of this extension.

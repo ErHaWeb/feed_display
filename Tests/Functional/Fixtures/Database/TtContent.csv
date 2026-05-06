@@ -1,3 +1,3 @@
 tt_content
-,uid,pid,CType,list_type,colPos,sorting,header,deleted,hidden,sys_language_uid,pi_flexform
-,100,1,list,feeddisplay_pi1,0,128,Feed Display,0,0,0,
+,uid,pid,CType,colPos,sorting,header,deleted,hidden,sys_language_uid,pi_flexform
+,100,1,feeddisplay_pi1,0,128,Feed Display,0,0,0,

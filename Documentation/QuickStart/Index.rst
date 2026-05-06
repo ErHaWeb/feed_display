@@ -48,3 +48,10 @@ Quick start
 
     The feed output can be viewed in the frontend on the page where you
     created the plugin.
+
+..  note::
+
+    After upgrading from an older Feed Display version, run the upgrade wizard
+    `feedDisplayCTypeMigration` once. It migrates existing content elements
+    from `CType = list` / `list_type = feeddisplay_pi1` to
+    `CType = feeddisplay_pi1`.

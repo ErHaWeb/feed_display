@@ -22,14 +22,16 @@ use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
 defined('TYPO3') || die();
 
-(static function () {
+(static function (): void {
     // Add plugin configuration.
     ExtensionUtility::configurePlugin(
         'FeedDisplay',
         'Pi1',
         [
             FeedController::class => 'display',
-        ]
+        ],
+        [],
+        ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT,
     );
 
     // Register extension cache.
