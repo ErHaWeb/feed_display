@@ -1,0 +1,40 @@
+.. include:: /Includes.rst.txt
+
+3.0.0 - May 05, 2026
+====================
+
+.. contents::
+   :local:
+   :depth: 3
+
+Breaking changes
+----------------
+
+* TYPO3 v12 support has been removed. Feed Display now supports TYPO3 v13.4
+  and TYPO3 v14.3.
+* The frontend plugin is now registered as dedicated content element type
+  `feeddisplay_pi1` instead of the deprecated `CType=list` /
+  `list_type=feeddisplay_pi1` combination.
+* The default date format changed from the old `strftime()` style
+  `%d. %B %Y` to the `DateTimeInterface::format()` style `d. F Y`.
+
+Upgrade
+-------
+
+Run the upgrade wizard `feedDisplayCTypeMigration` after updating existing
+projects. The wizard migrates existing content elements and backend group
+permissions from `list_type=feeddisplay_pi1` to `CType=feeddisplay_pi1`.
+
+Project-specific Page TSconfig must use the new preview path
+`mod.web_layout.tt_content.preview.feeddisplay_pi1`.
+
+All Changes
+-----------
+
+* Add TYPO3 v13/v14 compatibility metadata.
+* Update the test runner, CI matrix, PHPUnit configuration, Rector and Fractor
+  tooling to TYPO3 v13/v14 and PHP 8.2-8.5.
+* Replace deprecated plugin subtype registration with a dedicated `CType`.
+* Add upgrade wizard for existing plugin records.
+* Update Site Set, TypoScript, TSconfig, Fluid preview handling and
+  documentation for the current extension state.
