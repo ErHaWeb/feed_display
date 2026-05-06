@@ -166,7 +166,7 @@
 				<source>Items</source>
 			</trans-unit>
 			<trans-unit id="flexform.getFields.feed.I.item_quantity">
-				<source>Item_quantity</source>
+				<source>Item quantity</source>
 			</trans-unit>
 			<trans-unit id="flexform.getFields.feed.I.language">
 				<source>Language</source>
