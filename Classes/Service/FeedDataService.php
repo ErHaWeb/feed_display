@@ -53,7 +53,9 @@ class FeedDataService
             'settings' => $settings,
         ];
 
-        if (!$this->initializer->initializeFeed($this->feed, $settings)) {
+        if (!SimplePieDeprecationHandler::run(
+            fn (): bool => $this->initializer->initializeFeed($this->feed, $settings)
+        )) {
             return $data;
         }
 
@@ -83,7 +85,9 @@ class FeedDataService
                 $data['feed']['image'] = $this->getImage($value);
             }
 
-            $data['feed'][$field] = $this->valueNormalizer->normalizeValue($value);
+            $data['feed'][$field] = SimplePieDeprecationHandler::run(
+                fn (): mixed => $this->valueNormalizer->normalizeValue($value)
+            );
         }
     }
 
@@ -96,7 +100,12 @@ class FeedDataService
         $maxFeedCount = (int)($settings['maxFeedCount'] ?? 0);
         $getItemsFields = GeneralUtility::trimExplode(',', (string)($settings['getFields']['items'] ?? ''));
 
-        foreach ($this->feed->get_items(0, $maxFeedCount) as $item) {
+        /** @var list<Item> $items */
+        $items = SimplePieDeprecationHandler::run(
+            fn (): array => $this->feed->get_items(0, $maxFeedCount)
+        );
+
+        foreach ($items as $item) {
             $itemProperties = $this->buildNormalizedItemProperties($item, $getItemsFields);
             $itemProperties = $this->dispatchSingleFeedDataEvent($itemProperties, $item, $settings);
 
@@ -140,7 +149,11 @@ class FeedDataService
 
             $fieldParts = GeneralUtility::trimExplode('|', $getItemsField);
             $field = GeneralUtility::underscoredToLowerCamelCase($fieldParts[0]);
-            $itemProperties[$field] = $this->valueNormalizer->normalizeValue($this->getValue($item, $fieldParts));
+            $value = $this->getValue($item, $fieldParts);
+
+            $itemProperties[$field] = SimplePieDeprecationHandler::run(
+                fn (): mixed => $this->valueNormalizer->normalizeValue($value)
+            );
         }
 
         return $itemProperties;
@@ -157,7 +170,9 @@ class FeedDataService
             new SingleFeedDataEvent($itemProperties, $item, $settings, $this->feed)
         );
         /** @var SingleFeedDataEvent $event */
-        $normalizedProps = $this->valueNormalizer->normalizeValue($event->getItemProperties());
+        $normalizedProps = SimplePieDeprecationHandler::run(
+            fn (): mixed => $this->valueNormalizer->normalizeValue($event->getItemProperties())
+        );
 
         return is_array($normalizedProps) ? $normalizedProps : [];
     }
@@ -223,5 +238,4 @@ class FeedDataService
 
         return $tempFilePath;
     }
-
 }
