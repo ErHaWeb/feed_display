@@ -249,7 +249,7 @@
 			<trans-unit id="flexform.getFields.items.I.copyright">
 				<source>Copyright</source>
 			</trans-unit>
-			<trans-unit id="flexform.getFields.items.I.date|U">
+			<trans-unit id="flexform.getFields.items.I.date">
 				<source>Date (with parameter &#34;U&#34;)</source>
 			</trans-unit>
 			<trans-unit id="flexform.getFields.items.I.description">
@@ -273,7 +273,7 @@
 			<trans-unit id="flexform.getFields.items.I.links">
 				<source>Links</source>
 			</trans-unit>
-			<trans-unit id="flexform.getFields.items.I.local_date|">
+			<trans-unit id="flexform.getFields.items.I.local_date">
 				<source>Local Date (with empty parameter)</source>
 			</trans-unit>
 			<trans-unit id="flexform.getFields.items.I.permalink">
