@@ -13,11 +13,13 @@
  * The TYPO3 project - inspiring people to share!
  */
 
+declare(strict_types=1);
+
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 defined('TYPO3') || die();
 
-(static function () {
+(static function (): void {
     $extensionKey = 'feed_display';
     ExtensionManagementUtility::addStaticFile(
         $extensionKey,
