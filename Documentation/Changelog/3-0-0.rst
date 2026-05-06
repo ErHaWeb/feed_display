@@ -30,11 +30,18 @@ Project-specific Page TSconfig must use the new preview path
 
 All Changes
 -----------
+This is a list of all changes in this release: ::
 
-* Add TYPO3 v13/v14 compatibility metadata.
-* Update the test runner, CI matrix, PHPUnit configuration, Rector and Fractor
-  tooling to TYPO3 v13/v14 and PHP 8.2-8.5.
-* Replace deprecated plugin subtype registration with a dedicated `CType`.
-* Add upgrade wizard for existing plugin records.
-* Update Site Set, TypoScript, TSconfig, Fluid preview handling and
-  documentation for the current extension state.
+    2026-05-06 [DOCS] Update TYPO3 v13 and v14 documentation (Commit 56d6c23 by Eric Harrer)
+    2026-05-06 [TASK] Move feed icon height setting to general category (Commit f021d0a by Eric Harrer)
+    2026-05-06 [TASK] Add strict types to sys template override (Commit 03b305a by Eric Harrer)
+    2026-05-06 [TASK] Clarify legacy TypoScript include comments (Commit 4b35906 by Eric Harrer)
+    2026-05-06 [BUGFIX] Fix Fluid condition in feed display template (Commit d868657 by Eric Harrer)
+    2026-05-06 [BUGFIX] Fix feed display backend preview settings (Commit 8929708 by Eric Harrer)
+    2026-05-06 [TASK] Clean up functional test deprecation handling (Commit 59f7493 by Eric Harrer)
+    2026-05-06 [BUGFIX] Use DateTime format for default date setting (Commit 09b7ea4 by Eric Harrer)
+    2026-05-06 [BUGFIX] Remove deprecated SimplePie favicon handling (Commit e9891fa by Eric Harrer)
+    2026-05-06 [TASK] Migrate Feed Display plugin to CType (Commit 6176030 by Eric Harrer)
+    2026-05-05 [TASK] Update dependencies and test infrastructure for TYPO3 13/14 (Commit 69cc1f8 by Eric Harrer)
+
+This list has been created by using `git log $(git describe --tags --abbrev=0)..HEAD --abbrev-commit --pretty='%ad %s (Commit %h by %an)' --date=short`.
