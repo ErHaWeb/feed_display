@@ -118,7 +118,7 @@ manually from `main` and provide the tag name in the `version` input.
 With the GitHub CLI this looks like:
 
 ```bash
-gh workflow run publish-ter.yml --ref main -f version=3.0.0
+gh workflow run publish-ter.yml --ref main -f version=3.0.1
 ```
 
 Only one workflow run per release version is allowed at a time. Parallel runs
@@ -133,7 +133,7 @@ it as a GitHub Actions artefact, and skips token validation and publication.
 With the GitHub CLI this looks like:
 
 ```bash
-gh workflow run publish-ter.yml --ref main -f version=3.0.0 -f dry_run=true
+gh workflow run publish-ter.yml --ref main -f version=3.0.1 -f dry_run=true
 ```
 
 ### Local dry run
@@ -142,7 +142,7 @@ The helper script validates the checked out release tag and generates the TER
 comment locally:
 
 ```bash
-bash Build/Scripts/prepareTerPublish.sh 3.0.0
+bash Build/Scripts/prepareTerPublish.sh 3.0.1
 ```
 
 To create a local TER artefact with Tailor, install the pinned version and use
@@ -151,6 +151,6 @@ the packaging exclusions from `Build/Tailor/ExcludeFromPackaging.php`:
 ```bash
 COMPOSER_HOME="${PWD}/.Build/.composer" composer global require typo3/tailor:1.7.0
 TYPO3_EXCLUDE_FROM_PACKAGING=Build/Tailor/ExcludeFromPackaging.php \
-  php .Build/.composer/vendor/bin/tailor create-artefact 3.0.0 --path=.
-bash Build/Scripts/verifyTerArtefact.sh tailor-version-artefact/feed_display_3.0.0.zip
+  php .Build/.composer/vendor/bin/tailor create-artefact 3.0.1 --path=.
+bash Build/Scripts/verifyTerArtefact.sh tailor-version-artefact/feed_display_3.0.1.zip
 ```

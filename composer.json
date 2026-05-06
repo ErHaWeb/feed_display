@@ -90,7 +90,7 @@
       },
       "app-dir": ".Build",
       "extension-key": "feed_display",
-      "version": "3.0.0",
+      "version": "3.0.1",
       "web-dir": ".Build/Web"
     }
   },

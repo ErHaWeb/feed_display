@@ -1,0 +1,29 @@
+.. include:: /Includes.rst.txt
+
+3.0.1 - May 06, 2026
+====================
+
+.. contents::
+   :local:
+   :depth: 3
+
+Breaking changes
+----------------
+No breaking changes!
+
+All Changes
+-----------
+This is a list of all changes in this release: ::
+
+    2026-05-06 [TASK] Update changelog for version 3.0.0 (Commit 5ed8e9d by Eric Harrer)
+    2026-05-06 [BUGFIX] Fix backend preview FlexForm rendering (Commit ddd5dc3 by Eric Harrer)
+    2026-05-06 [TASK] Make PHPStan happy for FlexForm registration (Commit b8e6e96 by Eric Harrer)
+    2026-05-06 [BUGFIX] Adjust FlexFormFieldValues test condition (Commit aa8afdc by Eric Harrer)
+    2026-05-06 [TASK] Suppress SimplePie PHP 8.5 IRI deprecations (Commit eddf14f by Eric Harrer)
+    2026-05-06 [TASK] Add backend preview template test (Commit 6bcaa7c by Eric Harrer)
+    2026-05-06 [BUGFIX] Fix backend preview for TYPO3 v13/14 (Commit 54f04be by Eric Harrer)
+    2026-05-06 [TASK] Update backend label keys (Commit efa3e00 by Eric Harrer)
+    2026-05-06 [BUGFIX] Fix typo in label (Commit 485dc54 by Eric Harrer)
+    2026-05-06 [BUGFIX] Handle SimplePie IRI null offset deprecations (Commit f8c436e by Eric Harrer)
+
+This list has been created by using `git log $(git describe --tags --abbrev=0)..HEAD --abbrev-commit --pretty='%ad %s (Commit %h by %an)' --date=short`.
