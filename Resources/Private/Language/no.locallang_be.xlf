@@ -219,9 +219,9 @@
         <source>Items</source>
         <target state="final">Elementer</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.item_quantity" approved="yes">
-        <source>Item_quantity</source>
-        <target state="final">Produkt_antall</target>
+      <trans-unit id="flexform.getFields.feed.I.item_quantity">
+        <source>Item quantity</source>
+        <target state="needs-translation">Item quantity</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.language" approved="yes">
         <source>Language</source>
@@ -331,9 +331,9 @@
         <source>Copyright</source>
         <target state="final">Opphavsrett</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.date|U" approved="yes">
+      <trans-unit id="flexform.getFields.items.I.date">
         <source>Date (with parameter "U")</source>
-        <target state="final">Dato (med parameter "U")</target>
+        <target state="needs-translation">Date (with parameter "U")</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.description" approved="yes">
         <source>Description</source>
@@ -363,9 +363,9 @@
         <source>Links</source>
         <target state="final">Lenker</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.local_date|" approved="yes">
+      <trans-unit id="flexform.getFields.items.I.local_date">
         <source>Local Date (with empty parameter)</source>
-        <target state="final">Lokal dato (med tom parameter)</target>
+        <target state="needs-translation">Local Date (with empty parameter)</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.permalink" approved="yes">
         <source>Permalink</source>
