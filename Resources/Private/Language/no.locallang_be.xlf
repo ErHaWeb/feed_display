@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" original="EXT:feed_display/Resources/Private/Language/locallang_be.xlf" datatype="plaintext" product-name="feed_display" date="2026-05-06T10:39:35+02:00" target-language="no">
+    <header/>
+    <body>
+      <trans-unit id="pi1_title" approved="yes">
+        <source>Feed Display</source>
+        <target state="final">Visning av nyhetsmating</target>
+      </trans-unit>
+      <trans-unit id="pi1_plus_wiz_description" approved="yes">
+        <source>RSS/Atom web feed parsing and frontend display based on Extbase/Fluid</source>
+        <target state="final">RSS/Atom nettstrøm analysering og frontend skjerm basert på Extbase/Fluid</target>
+      </trans-unit>
+      <trans-unit id="flexform.sheet_general.title" approved="yes">
+        <source>General</source>
+        <target state="final">Generelt</target>
+      </trans-unit>
+      <trans-unit id="flexform.sheet_general.description" approved="yes">
+        <source>These are general settings for the frontend display of the feed. If no value is given, then the value of the TypoScript configuration is used by default.</source>
+        <target state="final">Disse er generelle innstillingene for visning av visning på brukersiden. Hvis ingen verdi er gitt, brukes verdien av TypoScript-konfigurasjonen som standard.</target>
+      </trans-unit>
+      <trans-unit id="flexform.feedUrl.label" approved="yes">
+        <source>Feed URL</source>
+        <target state="final">Feed URL</target>
+      </trans-unit>
+      <trans-unit id="flexform.feedUrl.description" approved="yes">
+        <source>URL that is fetched by the service (empty = Defined by TypoScript)</source>
+        <target state="final">URL som hentes av tjenesten (tom = Definert av TypoScript)</target>
+      </trans-unit>
+      <trans-unit id="flexform.maxFeedCount.label" approved="yes">
+        <source>Max. items</source>
+        <target state="final">Max. ting</target>
+      </trans-unit>
+      <trans-unit id="flexform.maxFeedCount.description" approved="yes">
+        <source>Maximum feed items to show (0 or empty = Defined by TypoScript)</source>
+        <target state="final">Maksimum matingselementer å vise (0 eller tom = Definert av TypoScript)</target>
+      </trans-unit>
+      <trans-unit id="flexform.maxContentLength.label" approved="yes">
+        <source>Max. content length</source>
+        <target state="final">Maks innholdslengde</target>
+      </trans-unit>
+      <trans-unit id="flexform.maxContentLength.description" approved="yes">
+        <source>Crop the characters of the feed content to the configured length (0 or empty = Defined by TypoScript)</source>
+        <target state="final">Beskjær tegnene i feedinnholdet til den konfigurerte lengden (0 eller tom = Definert av TypoScript)</target>
+      </trans-unit>
+      <trans-unit id="flexform.maxHeaderLength.label" approved="yes">
+        <source>Max. header length</source>
+        <target state="final">Maks topptekstlengde</target>
+      </trans-unit>
+      <trans-unit id="flexform.maxHeaderLength.description" approved="yes">
+        <source>Crop the characters of the feed header to the configured length (0 or empty = Defined by TypoScript)</source>
+        <target state="final">Beskjær tegnene i matingshodet til den konfigurerte lengden (0 eller tom = Definert av TypoScript)</target>
+      </trans-unit>
+      <trans-unit id="flexform.linkTarget.label" approved="yes">
+        <source>Target</source>
+        <target state="final">Target</target>
+      </trans-unit>
+      <trans-unit id="flexform.linkTarget.description" approved="yes">
+        <source>Target attribute to define the feed link behavior</source>
+        <target state="final">Målattributtet for å definere feedlink virkemåte</target>
+      </trans-unit>
+      <trans-unit id="flexform.linkTarget.I.default" approved="yes">
+        <source>Defined by TypoScript (default)</source>
+        <target state="final">Definert av TypoScript (standard)</target>
+      </trans-unit>
+      <trans-unit id="flexform.linkTarget.I.blank" approved="yes">
+        <source>Opens in a new window or tab</source>
+        <target state="final">Åpner i nytt vindu eller fane</target>
+      </trans-unit>
+      <trans-unit id="flexform.linkTarget.I.self" approved="yes">
+        <source>Opens in the same frame as it was clicked</source>
+        <target state="final">Åpner i samme ramme som det ble klikket på</target>
+      </trans-unit>
+      <trans-unit id="flexform.linkTarget.I.parent" approved="yes">
+        <source>Opens in the parent frame</source>
+        <target state="final">Åpnes i overordnet ramme</target>
+      </trans-unit>
+      <trans-unit id="flexform.linkTarget.I.top" approved="yes">
+        <source>Opens in the full body of the window</source>
+        <target state="final">Åpnes i hele kroppen av vinduet</target>
+      </trans-unit>
+      <trans-unit id="flexform.logoMaxWidth.label" approved="yes">
+        <source>Logo max. width</source>
+        <target state="final">Logo maks bredde</target>
+      </trans-unit>
+      <trans-unit id="flexform.logoMaxWidth.description" approved="yes">
+        <source>Maximum width of the feeds logo image (0 or empty = Defined by TypoScript)</source>
+        <target state="final">Maksimum bredde på bilde av feeds logo (0 eller tom = Definert av TypoScript)</target>
+      </trans-unit>
+      <trans-unit id="flexform.logoMaxHeight.label" approved="yes">
+        <source>Logo max. height</source>
+        <target state="final">Logo maks høyde</target>
+      </trans-unit>
+      <trans-unit id="flexform.logoMaxHeight.description" approved="yes">
+        <source>Maximum height of the feeds logo image (0 or empty = Defined by TypoScript)</source>
+        <target state="final">Maksimum høyde på bilde av feeds logo (0 eller tom = Definert av TypoScript)</target>
+      </trans-unit>
+      <trans-unit id="flexform.feedIconMaxWidth.label" approved="yes">
+        <source>Feed icon max. width</source>
+        <target state="final">Feed-ikon maks bredde</target>
+      </trans-unit>
+      <trans-unit id="flexform.feedIconMaxWidth.description" approved="yes">
+        <source>Maximum width of the feeds icon image (0 or empty = Defined by TypoScript)</source>
+        <target state="final">Maksimum bredde på feeds-ikonet bilde (0 eller tom = Definert av TypoScript)</target>
+      </trans-unit>
+      <trans-unit id="flexform.feedIconMaxHeight.label" approved="yes">
+        <source>Feed icon max. height</source>
+        <target state="final">Feed ikon maks. høyde</target>
+      </trans-unit>
+      <trans-unit id="flexform.feedIconMaxHeight.description" approved="yes">
+        <source>Maximum height of the feeds icon image (0 or empty = Defined by TypoScript)</source>
+        <target state="final">Maksimum høyde for feeds ikon bilde (0 eller tom = Definert av TypoScript)</target>
+      </trans-unit>
+      <trans-unit id="flexform.errorMessage.label" approved="yes">
+        <source>Error message</source>
+        <target state="final">Feil melding</target>
+      </trans-unit>
+      <trans-unit id="flexform.errorMessage.description" approved="yes">
+        <source>This message is displayed if no feed items could be fetched (empty = Defined by TypoScript)</source>
+        <target state="final">Denne meldingen vises dersom ingen mating elementer kan hentes (tom = Definert av TypoScript)</target>
+      </trans-unit>
+      <trans-unit id="flexform.sheet_advanced.title" approved="yes">
+        <source>Advanced</source>
+        <target state="final">Avansert</target>
+      </trans-unit>
+      <trans-unit id="flexform.sheet_advanced.description" approved="yes">
+        <source>These are advanced settings. If you are unsure, simply use the default values here. If no value is given, then the value of the TypoScript configuration is used by default.</source>
+        <target state="final">Disse er avanserte innstillinger. Hvis du er usikker, bruk standardverdiene her. Hvis ingen verdi er gitt, brukes verdien av TypoScript-konfigurasjonen som standard.</target>
+      </trans-unit>
+      <trans-unit id="flexform.dateFormat.label" approved="yes">
+        <source>Date format</source>
+        <target state="final">Dato format</target>
+      </trans-unit>
+      <trans-unit id="flexform.dateFormat.description">
+        <source>Use a PHP date format compatible with DateTimeInterface::format() (empty = Defined by TypoScript)</source>
+        <target state="needs-translation">Use a PHP date format compatible with DateTimeInterface::format() (empty = Defined by TypoScript)</target>
+      </trans-unit>
+      <trans-unit id="flexform.stripTags.label" approved="yes">
+        <source>Strip tags</source>
+        <target state="final">Ta bort tagger</target>
+      </trans-unit>
+      <trans-unit id="flexform.stripTags.description" approved="yes">
+        <source>Remove HTML tags from the feed content</source>
+        <target state="final">Fjern HTML-koder fra kanalinnhold</target>
+      </trans-unit>
+      <trans-unit id="flexform.stripTags.I.yes" approved="yes">
+        <source>yes</source>
+        <target state="final">ja</target>
+      </trans-unit>
+      <trans-unit id="flexform.stripTags.I.no" approved="yes">
+        <source>no</source>
+        <target state="final">nei</target>
+      </trans-unit>
+      <trans-unit id="flexform.cacheDuration.label" approved="yes">
+        <source>Feed cache</source>
+        <target state="final">Mellomlager for nyhetsmating</target>
+      </trans-unit>
+      <trans-unit id="flexform.cacheDuration.description" approved="yes">
+        <source>Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache, empty = Defined by TypoScript)</source>
+        <target state="final">Tid i sekunder der dataene skal leses fra hurtigbufferen til neste fornyelse av cachen. (0 = ingen cache, tom = Definert av TypoScript)</target>
+      </trans-unit>
+      <trans-unit id="flexform.placeholder.feed" approved="yes">
+        <source>Defined by Feed or TypoScript (default)</source>
+        <target state="final">Definert ved Feed eller TypoScript (standard)</target>
+      </trans-unit>
+      <trans-unit id="flexform.placeholder.typoscript" approved="yes">
+        <source>Defined by TypoScript (default)</source>
+        <target state="final">Definert av TypoScript (standard)</target>
+      </trans-unit>
+      <trans-unit id="flexform.sheet_getFields.title" approved="yes">
+        <source>Get Fields</source>
+        <target state="final">Få felt</target>
+      </trans-unit>
+      <trans-unit id="flexform.sheet_getFields.description" approved="yes">
+        <source>Select here which fields from the feed and feed items should be read using the SimplePie library and should be available as variables in the fluid template. If no fields were selected, then the TypoScript configuration is used.</source>
+        <target state="final">Velg her hvilke felt fra fôr og fôrelementer skal leses ved hjelp av SimplePie biblioteket og skal være tilgjengelige som variabler i væskemalen. Dersom ingen felter er valgt, brukes TypoScript-konfigurasjonen.</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.label" approved="yes">
+        <source>Get fields from feed</source>
+        <target state="final">Få felt fra feed</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.description" approved="yes">
+        <source>Selection of the fields to be read from the feed.</source>
+        <target state="final">Valg av felt som skal leses fra nyhetsmatingen.</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.group.feed" approved="yes">
+        <source>Feed</source>
+        <target state="final">MATE</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.author" approved="yes">
+        <source>Author</source>
+        <target state="final">Forfatter</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.authors" approved="yes">
+        <source>Authors</source>
+        <target state="final">Forfattere</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.contributor" approved="yes">
+        <source>Contributor</source>
+        <target state="final">Bidragsyter</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.contributors" approved="yes">
+        <source>Contributors</source>
+        <target state="final">Bidragsytere</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.copyright" approved="yes">
+        <source>Copyright</source>
+        <target state="final">Opphavsrett</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.description" approved="yes">
+        <source>Description</source>
+        <target state="final">Beskrivelse</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.encoding" approved="yes">
+        <source>Encoding</source>
+        <target state="final">Koding</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.items" approved="yes">
+        <source>Items</source>
+        <target state="final">Elementer</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.item_quantity">
+        <source>Item quantity</source>
+        <target state="needs-translation">Item quantity</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.language" approved="yes">
+        <source>Language</source>
+        <target state="final">Språk</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.link" approved="yes">
+        <source>Link</source>
+        <target state="final">Lenke</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.links" approved="yes">
+        <source>Links</source>
+        <target state="final">Lenker</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.permalink" approved="yes">
+        <source>Permalink</source>
+        <target state="final">Permalenke</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.title" approved="yes">
+        <source>Title</source>
+        <target state="final">Tittel</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.type" approved="yes">
+        <source>Type</source>
+        <target state="final">Type:</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.latitude" approved="yes">
+        <source>Latitude</source>
+        <target state="final">Breddegrad</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.longitude" approved="yes">
+        <source>Longitude</source>
+        <target state="final">Lengdegrad</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.image_height" approved="yes">
+        <source>Image Height</source>
+        <target state="final">Bilde høyde</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.image_link" approved="yes">
+        <source>Image Link</source>
+        <target state="final">Bilde Lenke</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.image_title" approved="yes">
+        <source>Image Title</source>
+        <target state="final">Bilde Tittel</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.image_url" approved="yes">
+        <source>Image URL</source>
+        <target state="final">Bilde URL</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.image_width" approved="yes">
+        <source>Image Width</source>
+        <target state="final">Bilde bredde</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.all_discovered_feeds" approved="yes">
+        <source>All Discovered Feeds</source>
+        <target state="final">Alle oppdaget Feeder</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.base" approved="yes">
+        <source>Base</source>
+        <target state="final">Grunnlag</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.subscribe_url" approved="yes">
+        <source>Subscribe URL</source>
+        <target state="final">Subscribe URL</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.label" approved="yes">
+        <source>Get fields from feed items</source>
+        <target state="final">Hent felt fra feeditems</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.description" approved="yes">
+        <source>Selection of the fields to be read from the feed items.</source>
+        <target state="final">Valg av felt som skal leses fra feedelementene.</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.group.items" approved="yes">
+        <source>Items</source>
+        <target state="final">Elementer</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.author" approved="yes">
+        <source>Author</source>
+        <target state="final">Forfatter</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.authors" approved="yes">
+        <source>Authors</source>
+        <target state="final">Forfattere</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.categories" approved="yes">
+        <source>Categories</source>
+        <target state="final">Kategorier</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.category" approved="yes">
+        <source>Category</source>
+        <target state="final">Kategori</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.content" approved="yes">
+        <source>Content</source>
+        <target state="final">Innhold</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.contributor" approved="yes">
+        <source>Contributor</source>
+        <target state="final">Bidragsyter</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.contributors" approved="yes">
+        <source>Contributors</source>
+        <target state="final">Bidragsytere</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.copyright" approved="yes">
+        <source>Copyright</source>
+        <target state="final">Opphavsrett</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.date">
+        <source>Date (with parameter "U")</source>
+        <target state="needs-translation">Date (with parameter "U")</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.description" approved="yes">
+        <source>Description</source>
+        <target state="final">Beskrivelse</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.enclosure" approved="yes">
+        <source>Enclosure</source>
+        <target state="final">Kabinett</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.enclosures" approved="yes">
+        <source>Enclosures</source>
+        <target state="final">Vedlegg</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.feed" approved="yes">
+        <source>Feed</source>
+        <target state="final">MATE</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.id" approved="yes">
+        <source>ID</source>
+        <target state="final">ID</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.link" approved="yes">
+        <source>Link</source>
+        <target state="final">Lenke</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.links" approved="yes">
+        <source>Links</source>
+        <target state="final">Lenker</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.local_date">
+        <source>Local Date (with empty parameter)</source>
+        <target state="needs-translation">Local Date (with empty parameter)</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.permalink" approved="yes">
+        <source>Permalink</source>
+        <target state="final">Permalenke</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.source" approved="yes">
+        <source>Source</source>
+        <target state="final">Kilde</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.title" approved="yes">
+        <source>Title</source>
+        <target state="final">Tittel</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.latitude" approved="yes">
+        <source>Latitude</source>
+        <target state="final">Breddegrad</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.longitude" approved="yes">
+        <source>Longitude</source>
+        <target state="final">Lengdegrad</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.base" approved="yes">
+        <source>Base</source>
+        <target state="final">Grunnlag</target>
+      </trans-unit>
+      <trans-unit id="constants.customcategory.plugin.tx_feeddisplay_pi1" approved="yes">
+        <source>Feed Display</source>
+        <target state="final">Visning av nyhetsmating</target>
+      </trans-unit>
+      <trans-unit id="constants.subcategory.general" approved="yes">
+        <source>General</source>
+        <target state="final">Generelt</target>
+      </trans-unit>
+      <trans-unit id="constants.subcategory.advanced" approved="yes">
+        <source>Advanced</source>
+        <target state="final">Avansert</target>
+      </trans-unit>
+      <trans-unit id="constants.subcategory.getFields" approved="yes">
+        <source>Fields to get from Feed and Items</source>
+        <target state="final">Felter å hente fra Feed og elementer</target>
+      </trans-unit>
+      <trans-unit id="constants.view.templateRootPath" approved="yes">
+        <source>Path to template root (FE)</source>
+        <target state="final">Sti til mal-rot (FE)</target>
+      </trans-unit>
+      <trans-unit id="constants.view.partialRootPath" approved="yes">
+        <source>Path to template partials (FE)</source>
+        <target state="final">Sti til malpartialer (FE)</target>
+      </trans-unit>
+      <trans-unit id="constants.view.layoutRootPath" approved="yes">
+        <source>Path to template layouts (FE)</source>
+        <target state="final">Bane til maloppsett (FE)</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.feedUrl" approved="yes">
+        <source>Feed URL:URL that is fetched by the service</source>
+        <target state="final">Feed URL:URL som er hentet av tjenesten</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.maxFeedCount" approved="yes">
+        <source>Max. items:Maximum feed items to show</source>
+        <target state="final">Maks gjenstander:Maksimum teksting som skal vises</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.maxContentLength" approved="yes">
+        <source>Max. content length:Crop the characters of the feed content to the configured length</source>
+        <target state="final">Maks innholdslengde:Beskjær tegnene i feedinnholdet til den konfigurerte lengden</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.maxHeaderLength" approved="yes">
+        <source>Max. header length:Crop the characters of the feed header to the configured length</source>
+        <target state="final">Maks topptekstlengde:Beskjær tegnene i feedheader til den konfigurerte lengden</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.linkTarget" approved="yes">
+        <source>Target:Target attribute to define the feed link behavior</source>
+        <target state="final">Mål:Mål attributtet for å definere feedlink virkemåte</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.linkTarget.I.default" approved="yes">
+        <source>Defined by TypoScript (default)</source>
+        <target state="final">Definert av TypoScript (standard)</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.linkTarget.I.blank" approved="yes">
+        <source>Opens in a new window or tab</source>
+        <target state="final">Åpner i nytt vindu eller fane</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.linkTarget.I.self" approved="yes">
+        <source>Opens in the same frame as it was clicked</source>
+        <target state="final">Åpner i samme ramme som det ble klikket på</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.linkTarget.I.parent" approved="yes">
+        <source>Opens in the parent frame</source>
+        <target state="final">Åpnes i overordnet ramme</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.linkTarget.I.top" approved="yes">
+        <source>Opens in the full body of the window</source>
+        <target state="final">Åpnes i hele kroppen av vinduet</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.logoMaxWidth" approved="yes">
+        <source>Logo width:Width of the feeds logo image</source>
+        <target state="final">Logobilde: Bredde på feeds logobilde</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.logoMaxHeight" approved="yes">
+        <source>Logo height:Height of the feeds logo image</source>
+        <target state="final">Logobilde: Høyde på feeds logo</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.feedIconMaxWidth" approved="yes">
+        <source>Feed icon width:Width of the feeds icon image</source>
+        <target state="final">Feed-ikon bredde: Bredde på feeds ikon bilde</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.feedIconMaxHeight" approved="yes">
+        <source>Feed icon height:Height of the feeds icon image</source>
+        <target state="final">Feed ikonet høyde: Høyde på feeds ikon bildet</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.errorMessage" approved="yes">
+        <source>Error message:This message is displayed if no feed items could be fetched</source>
+        <target state="final">Feilmeldingen:Denne meldingen vises hvis ingen feed elementer kan hentes</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.dateFormat">
+        <source>Date format:Use a PHP date format compatible with DateTimeInterface::format()</source>
+        <target state="needs-translation">Date format:Use a PHP date format compatible with DateTimeInterface::format()</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.stripTags" approved="yes">
+        <source>Strip tags:Remove HTML tags from the feed content</source>
+        <target state="final">Fjern tagger:Fjern HTML-koder fra feedinnholdet</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.cacheDuration" approved="yes">
+        <source>Feed cache:Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</source>
+        <target state="final">Feed cache:Time i sekunder hvor dataene skal leses fra hurtigbufferen til den neste fornyelsen av cachen. (0 = ingen cache)</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.ignoreFlexFormSettingsIfEmpty" approved="yes">
+        <source>Ignore FlexForm Settings if empty:Comma separated list of FlexForm settings that will be ignored in the extension settings merge process, if their value is considered empty (either an empty string or a string containing 0).</source>
+        <target state="final">Ignorer FlexForm innstillinger hvis tom:Komma separert liste over FlexForm innstillinger som vil bli ignorert i utvidelsesinnstillingene, hvis verdien av dem er tom (enten en tom streng eller en streng som inneholder 0).</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.getFields.feed" approved="yes">
+        <source>Feed fields to get:Comma-separated list of fields to be read from the feed by SimplePie and made available as variables in Fluid.</source>
+        <target state="final">Feed felt å finne:Comma-separert liste over felter som skal leses fra feedet av SimplePie og gjøres tilgjengelige som variabler i væsken.</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.getFields.items" approved="yes">
+        <source>Feed items fields to get:Comma-separated list of fields to be read from the feed items by SimplePie and made available as variables in Fluid.</source>
+        <target state="final">Feed elementer felt for å få :Comma-separert liste over felter som skal leses fra feed-items av SimplePie og gjøres tilgjengelige som variabler i Fluid.</target>
+      </trans-unit>
+      <trans-unit id="sets.feeddisplay.label" approved="yes">
+        <source>Feed Display</source>
+        <target state="final">Visning av nyhetsmating</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

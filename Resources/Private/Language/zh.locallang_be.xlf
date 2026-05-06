@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" original="EXT:feed_display/Resources/Private/Language/locallang_be.xlf" datatype="plaintext" product-name="feed_display" date="2026-05-06T10:39:35+02:00" target-language="zh-CN">
+    <header/>
+    <body>
+      <trans-unit id="pi1_title" approved="yes">
+        <source>Feed Display</source>
+        <target state="final">新闻源显示</target>
+      </trans-unit>
+      <trans-unit id="pi1_plus_wiz_description" approved="yes">
+        <source>RSS/Atom web feed parsing and frontend display based on Extbase/Fluid</source>
+        <target state="final">基于 Extbase/Fluid 的 RSS/Atom 网络源解析和前端显示</target>
+      </trans-unit>
+      <trans-unit id="flexform.sheet_general.title" approved="yes">
+        <source>General</source>
+        <target state="final">A. 概况</target>
+      </trans-unit>
+      <trans-unit id="flexform.sheet_general.description" approved="yes">
+        <source>These are general settings for the frontend display of the feed. If no value is given, then the value of the TypoScript configuration is used by default.</source>
+        <target state="final">这些是新闻源前端显示的一般设置。 如果没有给定值，则默认使用 TypoScript 配置的值。</target>
+      </trans-unit>
+      <trans-unit id="flexform.feedUrl.label" approved="yes">
+        <source>Feed URL</source>
+        <target state="final">Feed URL</target>
+      </trans-unit>
+      <trans-unit id="flexform.feedUrl.description" approved="yes">
+        <source>URL that is fetched by the service (empty = Defined by TypoScript)</source>
+        <target state="final">由服务获取的 URL (空 = 由TypoScript定义)</target>
+      </trans-unit>
+      <trans-unit id="flexform.maxFeedCount.label" approved="yes">
+        <source>Max. items</source>
+        <target state="final">最大项目</target>
+      </trans-unit>
+      <trans-unit id="flexform.maxFeedCount.description" approved="yes">
+        <source>Maximum feed items to show (0 or empty = Defined by TypoScript)</source>
+        <target state="final">显示的最大种子项目 (0或为空 = 由TypoScript定义)</target>
+      </trans-unit>
+      <trans-unit id="flexform.maxContentLength.label" approved="yes">
+        <source>Max. content length</source>
+        <target state="final">最大内容长度</target>
+      </trans-unit>
+      <trans-unit id="flexform.maxContentLength.description" approved="yes">
+        <source>Crop the characters of the feed content to the configured length (0 or empty = Defined by TypoScript)</source>
+        <target state="final">裁剪种子内容的字符到配置长度 (0或为空 = 由TypoScript定义)</target>
+      </trans-unit>
+      <trans-unit id="flexform.maxHeaderLength.label" approved="yes">
+        <source>Max. header length</source>
+        <target state="final">最大页眉长度</target>
+      </trans-unit>
+      <trans-unit id="flexform.maxHeaderLength.description" approved="yes">
+        <source>Crop the characters of the feed header to the configured length (0 or empty = Defined by TypoScript)</source>
+        <target state="final">裁剪新闻源头的字符到配置长度(0或空=由TypoScript定义)</target>
+      </trans-unit>
+      <trans-unit id="flexform.linkTarget.label" approved="yes">
+        <source>Target</source>
+        <target state="final">Target</target>
+      </trans-unit>
+      <trans-unit id="flexform.linkTarget.description" approved="yes">
+        <source>Target attribute to define the feed link behavior</source>
+        <target state="final">定义Feed链接行为的目标属性</target>
+      </trans-unit>
+      <trans-unit id="flexform.linkTarget.I.default" approved="yes">
+        <source>Defined by TypoScript (default)</source>
+        <target state="final">由 TypoScript 定义(默认)</target>
+      </trans-unit>
+      <trans-unit id="flexform.linkTarget.I.blank" approved="yes">
+        <source>Opens in a new window or tab</source>
+        <target state="final">在新窗口或标签中打开</target>
+      </trans-unit>
+      <trans-unit id="flexform.linkTarget.I.self" approved="yes">
+        <source>Opens in the same frame as it was clicked</source>
+        <target state="final">在单击时在相同的框架中打开</target>
+      </trans-unit>
+      <trans-unit id="flexform.linkTarget.I.parent" approved="yes">
+        <source>Opens in the parent frame</source>
+        <target state="final">在父帧中打开</target>
+      </trans-unit>
+      <trans-unit id="flexform.linkTarget.I.top" approved="yes">
+        <source>Opens in the full body of the window</source>
+        <target state="final">在窗口正文中打开</target>
+      </trans-unit>
+      <trans-unit id="flexform.logoMaxWidth.label" approved="yes">
+        <source>Logo max. width</source>
+        <target state="final">标志最大宽度</target>
+      </trans-unit>
+      <trans-unit id="flexform.logoMaxWidth.description" approved="yes">
+        <source>Maximum width of the feeds logo image (0 or empty = Defined by TypoScript)</source>
+        <target state="final">种源标志图像的最大宽度 (0或为空 = 由TypoScript)</target>
+      </trans-unit>
+      <trans-unit id="flexform.logoMaxHeight.label" approved="yes">
+        <source>Logo max. height</source>
+        <target state="final">标志最大高度</target>
+      </trans-unit>
+      <trans-unit id="flexform.logoMaxHeight.description" approved="yes">
+        <source>Maximum height of the feeds logo image (0 or empty = Defined by TypoScript)</source>
+        <target state="final">种源标志图像的最大高度 (0或空 = 由TypoScript定义)</target>
+      </trans-unit>
+      <trans-unit id="flexform.feedIconMaxWidth.label" approved="yes">
+        <source>Feed icon max. width</source>
+        <target state="final">Feed 图标最大宽度</target>
+      </trans-unit>
+      <trans-unit id="flexform.feedIconMaxWidth.description" approved="yes">
+        <source>Maximum width of the feeds icon image (0 or empty = Defined by TypoScript)</source>
+        <target state="final">Feed图标图像的最大宽度 (0或为空 = 由TypoScript)</target>
+      </trans-unit>
+      <trans-unit id="flexform.feedIconMaxHeight.label" approved="yes">
+        <source>Feed icon max. height</source>
+        <target state="final">新闻源图标最大高度</target>
+      </trans-unit>
+      <trans-unit id="flexform.feedIconMaxHeight.description" approved="yes">
+        <source>Maximum height of the feeds icon image (0 or empty = Defined by TypoScript)</source>
+        <target state="final">种子图标图像的最大高度 (0或空 = 由TypoScript定义)</target>
+      </trans-unit>
+      <trans-unit id="flexform.errorMessage.label" approved="yes">
+        <source>Error message</source>
+        <target state="final">错误消息</target>
+      </trans-unit>
+      <trans-unit id="flexform.errorMessage.description" approved="yes">
+        <source>This message is displayed if no feed items could be fetched (empty = Defined by TypoScript)</source>
+        <target state="final">如果无法获取订阅，则显示此消息(空=TypoScript定义)</target>
+      </trans-unit>
+      <trans-unit id="flexform.sheet_advanced.title" approved="yes">
+        <source>Advanced</source>
+        <target state="final">高级版</target>
+      </trans-unit>
+      <trans-unit id="flexform.sheet_advanced.description" approved="yes">
+        <source>These are advanced settings. If you are unsure, simply use the default values here. If no value is given, then the value of the TypoScript configuration is used by default.</source>
+        <target state="final">这些是高级设置。如果您不确定，只需在这里使用默认值。 如果没有给定值，则默认使用 TypoScript 配置的值。</target>
+      </trans-unit>
+      <trans-unit id="flexform.dateFormat.label" approved="yes">
+        <source>Date format</source>
+        <target state="final">日期格式</target>
+      </trans-unit>
+      <trans-unit id="flexform.dateFormat.description">
+        <source>Use a PHP date format compatible with DateTimeInterface::format() (empty = Defined by TypoScript)</source>
+        <target state="needs-translation">Use a PHP date format compatible with DateTimeInterface::format() (empty = Defined by TypoScript)</target>
+      </trans-unit>
+      <trans-unit id="flexform.stripTags.label" approved="yes">
+        <source>Strip tags</source>
+        <target state="final">删除标签</target>
+      </trans-unit>
+      <trans-unit id="flexform.stripTags.description" approved="yes">
+        <source>Remove HTML tags from the feed content</source>
+        <target state="final">从订阅内容中删除 HTML 标签</target>
+      </trans-unit>
+      <trans-unit id="flexform.stripTags.I.yes" approved="yes">
+        <source>yes</source>
+        <target state="final">是的</target>
+      </trans-unit>
+      <trans-unit id="flexform.stripTags.I.no" approved="yes">
+        <source>no</source>
+        <target state="final">否</target>
+      </trans-unit>
+      <trans-unit id="flexform.cacheDuration.label" approved="yes">
+        <source>Feed cache</source>
+        <target state="final">新闻源缓存</target>
+      </trans-unit>
+      <trans-unit id="flexform.cacheDuration.description" approved="yes">
+        <source>Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache, empty = Defined by TypoScript)</source>
+        <target state="final">从缓存读取数据到下次更新缓存的秒数。 (0= 没有缓存，空= 由TypoScript定义)</target>
+      </trans-unit>
+      <trans-unit id="flexform.placeholder.feed" approved="yes">
+        <source>Defined by Feed or TypoScript (default)</source>
+        <target state="final">由 Feed 或 TypoScript 定义 (默认)</target>
+      </trans-unit>
+      <trans-unit id="flexform.placeholder.typoscript" approved="yes">
+        <source>Defined by TypoScript (default)</source>
+        <target state="final">由 TypoScript 定义(默认)</target>
+      </trans-unit>
+      <trans-unit id="flexform.sheet_getFields.title" approved="yes">
+        <source>Get Fields</source>
+        <target state="final">获取字段</target>
+      </trans-unit>
+      <trans-unit id="flexform.sheet_getFields.description" approved="yes">
+        <source>Select here which fields from the feed and feed items should be read using the SimplePie library and should be available as variables in the fluid template. If no fields were selected, then the TypoScript configuration is used.</source>
+        <target state="final">在此选择应该使用 SimplePie 库读取源自哪个字段的内容，并且应该在流体模板中作为变量提供。 如果没有选定字段，则使用 TypoScript 配置。</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.label" approved="yes">
+        <source>Get fields from feed</source>
+        <target state="final">从订阅源获取字段</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.description" approved="yes">
+        <source>Selection of the fields to be read from the feed.</source>
+        <target state="final">从种子中选择要读取的字段。</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.group.feed" approved="yes">
+        <source>Feed</source>
+        <target state="final">订阅源</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.author" approved="yes">
+        <source>Author</source>
+        <target state="final">作者</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.authors" approved="yes">
+        <source>Authors</source>
+        <target state="final">作者</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.contributor" approved="yes">
+        <source>Contributor</source>
+        <target state="final">贡献者</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.contributors" approved="yes">
+        <source>Contributors</source>
+        <target state="final">贡献者</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.copyright" approved="yes">
+        <source>Copyright</source>
+        <target state="final">版权所有</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.description" approved="yes">
+        <source>Description</source>
+        <target state="final">描述</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.encoding" approved="yes">
+        <source>Encoding</source>
+        <target state="final">编码</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.items" approved="yes">
+        <source>Items</source>
+        <target state="final">项目</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.item_quantity">
+        <source>Item quantity</source>
+        <target state="needs-translation">Item quantity</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.language" approved="yes">
+        <source>Language</source>
+        <target state="final">语言</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.link" approved="yes">
+        <source>Link</source>
+        <target state="final">链接</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.links" approved="yes">
+        <source>Links</source>
+        <target state="final">链接</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.permalink" approved="yes">
+        <source>Permalink</source>
+        <target state="final">永久链接</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.title" approved="yes">
+        <source>Title</source>
+        <target state="final">标题</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.type" approved="yes">
+        <source>Type</source>
+        <target state="final">类型</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.latitude" approved="yes">
+        <source>Latitude</source>
+        <target state="final">纬度</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.longitude" approved="yes">
+        <source>Longitude</source>
+        <target state="final">经度</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.image_height" approved="yes">
+        <source>Image Height</source>
+        <target state="final">图像高度</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.image_link" approved="yes">
+        <source>Image Link</source>
+        <target state="final">图片链接</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.image_title" approved="yes">
+        <source>Image Title</source>
+        <target state="final">图片标题</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.image_url" approved="yes">
+        <source>Image URL</source>
+        <target state="final">图片URL</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.image_width" approved="yes">
+        <source>Image Width</source>
+        <target state="final">图像宽度</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.all_discovered_feeds" approved="yes">
+        <source>All Discovered Feeds</source>
+        <target state="final">所有发现的Feeds</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.base" approved="yes">
+        <source>Base</source>
+        <target state="final">基数</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.subscribe_url" approved="yes">
+        <source>Subscribe URL</source>
+        <target state="final">Subscribe URL</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.label" approved="yes">
+        <source>Get fields from feed items</source>
+        <target state="final">从Feed项目获取字段</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.description" approved="yes">
+        <source>Selection of the fields to be read from the feed items.</source>
+        <target state="final">选择要从新闻源项读取的字段。</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.group.items" approved="yes">
+        <source>Items</source>
+        <target state="final">项目</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.author" approved="yes">
+        <source>Author</source>
+        <target state="final">作者</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.authors" approved="yes">
+        <source>Authors</source>
+        <target state="final">作者</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.categories" approved="yes">
+        <source>Categories</source>
+        <target state="final">类别管理</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.category" approved="yes">
+        <source>Category</source>
+        <target state="final">类别</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.content" approved="yes">
+        <source>Content</source>
+        <target state="final">内容</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.contributor" approved="yes">
+        <source>Contributor</source>
+        <target state="final">贡献者</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.contributors" approved="yes">
+        <source>Contributors</source>
+        <target state="final">贡献者</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.copyright" approved="yes">
+        <source>Copyright</source>
+        <target state="final">版权所有</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.date">
+        <source>Date (with parameter "U")</source>
+        <target state="needs-translation">Date (with parameter "U")</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.description" approved="yes">
+        <source>Description</source>
+        <target state="final">描述</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.enclosure" approved="yes">
+        <source>Enclosure</source>
+        <target state="final">附文</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.enclosures" approved="yes">
+        <source>Enclosures</source>
+        <target state="final">附文</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.feed" approved="yes">
+        <source>Feed</source>
+        <target state="final">订阅源</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.id" approved="yes">
+        <source>ID</source>
+        <target state="final">ID</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.link" approved="yes">
+        <source>Link</source>
+        <target state="final">链接</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.links" approved="yes">
+        <source>Links</source>
+        <target state="final">链接</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.local_date">
+        <source>Local Date (with empty parameter)</source>
+        <target state="needs-translation">Local Date (with empty parameter)</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.permalink" approved="yes">
+        <source>Permalink</source>
+        <target state="final">永久链接</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.source" approved="yes">
+        <source>Source</source>
+        <target state="final">来源</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.title" approved="yes">
+        <source>Title</source>
+        <target state="final">标题</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.latitude" approved="yes">
+        <source>Latitude</source>
+        <target state="final">纬度</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.longitude" approved="yes">
+        <source>Longitude</source>
+        <target state="final">经度</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.base" approved="yes">
+        <source>Base</source>
+        <target state="final">基数</target>
+      </trans-unit>
+      <trans-unit id="constants.customcategory.plugin.tx_feeddisplay_pi1" approved="yes">
+        <source>Feed Display</source>
+        <target state="final">新闻源显示</target>
+      </trans-unit>
+      <trans-unit id="constants.subcategory.general" approved="yes">
+        <source>General</source>
+        <target state="final">A. 概况</target>
+      </trans-unit>
+      <trans-unit id="constants.subcategory.advanced" approved="yes">
+        <source>Advanced</source>
+        <target state="final">高级版</target>
+      </trans-unit>
+      <trans-unit id="constants.subcategory.getFields" approved="yes">
+        <source>Fields to get from Feed and Items</source>
+        <target state="final">从订阅源和项目获取的字段</target>
+      </trans-unit>
+      <trans-unit id="constants.view.templateRootPath" approved="yes">
+        <source>Path to template root (FE)</source>
+        <target state="final">模板根路径 (FE)</target>
+      </trans-unit>
+      <trans-unit id="constants.view.partialRootPath" approved="yes">
+        <source>Path to template partials (FE)</source>
+        <target state="final">模板partials (FE)</target>
+      </trans-unit>
+      <trans-unit id="constants.view.layoutRootPath" approved="yes">
+        <source>Path to template layouts (FE)</source>
+        <target state="final">模板布局路径 (FE)</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.feedUrl" approved="yes">
+        <source>Feed URL:URL that is fetched by the service</source>
+        <target state="final">通过服务获取的 URL:URL</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.maxFeedCount" approved="yes">
+        <source>Max. items:Maximum feed items to show</source>
+        <target state="final">最大项目:最多可显示的新闻源项目</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.maxContentLength" approved="yes">
+        <source>Max. content length:Crop the characters of the feed content to the configured length</source>
+        <target state="final">最大内容长度：裁剪种子内容的字符到配置长度</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.maxHeaderLength" approved="yes">
+        <source>Max. header length:Crop the characters of the feed header to the configured length</source>
+        <target state="final">最大页眉长度：裁剪新闻源头的字符到配置长度</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.linkTarget" approved="yes">
+        <source>Target:Target attribute to define the feed link behavior</source>
+        <target state="final">目标:目标属性来定义饲料链接行为</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.linkTarget.I.default" approved="yes">
+        <source>Defined by TypoScript (default)</source>
+        <target state="final">由 TypoScript 定义(默认)</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.linkTarget.I.blank" approved="yes">
+        <source>Opens in a new window or tab</source>
+        <target state="final">在新窗口或标签中打开</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.linkTarget.I.self" approved="yes">
+        <source>Opens in the same frame as it was clicked</source>
+        <target state="final">在单击时在相同的框架中打开</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.linkTarget.I.parent" approved="yes">
+        <source>Opens in the parent frame</source>
+        <target state="final">在父帧中打开</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.linkTarget.I.top" approved="yes">
+        <source>Opens in the full body of the window</source>
+        <target state="final">在窗口正文中打开</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.logoMaxWidth" approved="yes">
+        <source>Logo width:Width of the feeds logo image</source>
+        <target state="final">信息源标志图像的宽度：</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.logoMaxHeight" approved="yes">
+        <source>Logo height:Height of the feeds logo image</source>
+        <target state="final">Logo 高度:种源标志图像高度</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.feedIconMaxWidth" approved="yes">
+        <source>Feed icon width:Width of the feeds icon image</source>
+        <target state="final">种子图标宽度：种子图标图像</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.feedIconMaxHeight" approved="yes">
+        <source>Feed icon height:Height of the feeds icon image</source>
+        <target state="final">Feed 图标高度：种子图标图像</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.errorMessage" approved="yes">
+        <source>Error message:This message is displayed if no feed items could be fetched</source>
+        <target state="final">错误消息：如果无法获取订阅项，则显示此消息</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.dateFormat">
+        <source>Date format:Use a PHP date format compatible with DateTimeInterface::format()</source>
+        <target state="needs-translation">Date format:Use a PHP date format compatible with DateTimeInterface::format()</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.stripTags" approved="yes">
+        <source>Strip tags:Remove HTML tags from the feed content</source>
+        <target state="final">除去标签：从订阅内容中删除 HTML 标签</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.cacheDuration" approved="yes">
+        <source>Feed cache:Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</source>
+        <target state="final">Feed 缓存：从缓存中读取数据到下次更新缓存的时间（秒）。 (0=无缓存)</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.ignoreFlexFormSettingsIfEmpty" approved="yes">
+        <source>Ignore FlexForm Settings if empty:Comma separated list of FlexForm settings that will be ignored in the extension settings merge process, if their value is considered empty (either an empty string or a string containing 0).</source>
+        <target state="final">忽略FlexForm 设置，如果是空的：逗号分隔的FlexForm 设置列表，这些设置将在扩展设置合并过程中被忽略。 如果他们的值被认为是空的(空字符串或包含0的字符串)。</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.getFields.feed" approved="yes">
+        <source>Feed fields to get:Comma-separated list of fields to be read from the feed by SimplePie and made available as variables in Fluid.</source>
+        <target state="final">Feed 字段以获取：逗号分隔的字段列表应从 SimplePie 读取，并作为变量在 Fluid 中提供。</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.getFields.items" approved="yes">
+        <source>Feed items fields to get:Comma-separated list of fields to be read from the feed items by SimplePie and made available as variables in Fluid.</source>
+        <target state="final">Feed 项目字段以获取:Comma 分隔的字段列表，由 SimplePie 读取，并以 Fluid 中的变量提供。</target>
+      </trans-unit>
+      <trans-unit id="sets.feeddisplay.label" approved="yes">
+        <source>Feed Display</source>
+        <target state="final">新闻源显示</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

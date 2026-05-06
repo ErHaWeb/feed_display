@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" original="EXT:feed_display/Configuration/Sets/FeedDisplay/labels.xlf" datatype="plaintext" product-name="feed_display" date="2024-10-25T17:35:40+02:00" target-language="zh-CN">
+    <header/>
+    <body>
+      <trans-unit id="label" resname="label" approved="yes">
+        <source>Feed Display</source>
+        <target state="final">新闻源显示</target>
+      </trans-unit>
+      <trans-unit id="categories.feeddisplay" resname="categories.feeddisplay" approved="yes">
+        <source>Feed Display</source>
+        <target state="final">新闻源显示</target>
+      </trans-unit>
+      <trans-unit id="categories.feeddisplay.templates" resname="categories.feeddisplay.templates" approved="yes">
+        <source>Templates</source>
+        <target state="final">模板</target>
+      </trans-unit>
+      <trans-unit id="categories.feeddisplay.general" resname="categories.feeddisplay.general" approved="yes">
+        <source>General</source>
+        <target state="final">A. 概况</target>
+      </trans-unit>
+      <trans-unit id="categories.feeddisplay.advanced" resname="categories.feeddisplay.advanced" approved="yes">
+        <source>Advanced</source>
+        <target state="final">高级版</target>
+      </trans-unit>
+      <trans-unit id="categories.feeddisplay.getFields" resname="categories.feeddisplay.getFields" approved="yes">
+        <source>Get Fields</source>
+        <target state="final">获取字段</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.view.templateRootPath" resname="settings.plugin.tx_feeddisplay_pi1.view.templateRootPath" approved="yes">
+        <source>Path to template root (FE)</source>
+        <target state="final">模板根路径 (FE)</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.view.partialRootPath" resname="settings.plugin.tx_feeddisplay_pi1.view.partialRootPath" approved="yes">
+        <source>Path to template partials (FE)</source>
+        <target state="final">模板partials (FE)</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.view.layoutRootPath" resname="settings.plugin.tx_feeddisplay_pi1.view.layoutRootPath" approved="yes">
+        <source>Path to template layouts (FE)</source>
+        <target state="final">模板布局路径 (FE)</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.feedUrl" resname="settings.plugin.tx_feeddisplay_pi1.settings.feedUrl" approved="yes">
+        <source>Feed URL</source>
+        <target state="final">Feed URL</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.feedUrl" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.feedUrl" approved="yes">
+        <source>URL that is fetched by the service</source>
+        <target state="final">通过服务获取的 URL</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.maxFeedCount" resname="settings.plugin.tx_feeddisplay_pi1.settings.maxFeedCount" approved="yes">
+        <source>Max. items</source>
+        <target state="final">最大项目</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.maxFeedCount" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.maxFeedCount" approved="yes">
+        <source>Maximum feed items to show</source>
+        <target state="final">显示的最大饲料项</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.maxContentLength" resname="settings.plugin.tx_feeddisplay_pi1.settings.maxContentLength" approved="yes">
+        <source>Max. content length</source>
+        <target state="final">最大内容长度</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.maxContentLength" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.maxContentLength" approved="yes">
+        <source>Crop the characters of the feed content to the configured length</source>
+        <target state="final">裁剪种子内容的字符到配置长度</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.maxHeaderLength" resname="settings.plugin.tx_feeddisplay_pi1.settings.maxHeaderLength" approved="yes">
+        <source>Max. header length</source>
+        <target state="final">最大页眉长度</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.maxHeaderLength" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.maxHeaderLength" approved="yes">
+        <source>Crop the characters of the feed header to the configured length</source>
+        <target state="final">裁剪新闻源头的字符到配置长度</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget" approved="yes">
+        <source>Target</source>
+        <target state="final">Target</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.linkTarget" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.linkTarget" approved="yes">
+        <source>Target attribute to define the feed link behavior</source>
+        <target state="final">定义Feed链接行为的目标属性</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.default" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.default" approved="yes">
+        <source>Defined by TypoScript (default)</source>
+        <target state="final">由 TypoScript 定义(默认)</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.blank" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.blank" approved="yes">
+        <source>Opens in a new window or tab</source>
+        <target state="final">在新窗口或标签中打开</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.self" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.self" approved="yes">
+        <source>Opens in the same frame as it was clicked</source>
+        <target state="final">在单击时在相同的框架中打开</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.parent" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.parent" approved="yes">
+        <source>Opens in the parent frame</source>
+        <target state="final">在父帧中打开</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.top" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.top" approved="yes">
+        <source>Opens in the full body of the window</source>
+        <target state="final">在窗口正文中打开</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.logoMaxWidth" resname="settings.plugin.tx_feeddisplay_pi1.settings.logoMaxWidth" approved="yes">
+        <source>Logo width</source>
+        <target state="final">标志宽度</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.logoMaxWidth" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.logoMaxWidth" approved="yes">
+        <source>Width of the feeds logo image</source>
+        <target state="final">种源标志图像的宽度</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.logoMaxHeight" resname="settings.plugin.tx_feeddisplay_pi1.settings.logoMaxHeight" approved="yes">
+        <source>Logo height</source>
+        <target state="final">标志高度</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.logoMaxHeight" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.logoMaxHeight" approved="yes">
+        <source>Height of the feeds logo image</source>
+        <target state="final">种源标志图像高度</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.feedIconMaxWidth" resname="settings.plugin.tx_feeddisplay_pi1.settings.feedIconMaxWidth" approved="yes">
+        <source>Feed icon width</source>
+        <target state="final">Feed图标宽度</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.feedIconMaxWidth" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.feedIconMaxWidth" approved="yes">
+        <source>Width of the feeds icon image</source>
+        <target state="final">种子图标图像宽度</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.feedIconMaxHeight" resname="settings.plugin.tx_feeddisplay_pi1.settings.feedIconMaxHeight" approved="yes">
+        <source>Feed icon height</source>
+        <target state="final">新闻源图标高度</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.feedIconMaxHeight" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.feedIconMaxHeight" approved="yes">
+        <source>Height of the feeds icon image</source>
+        <target state="final">种子图标图像高度</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.errorMessage" resname="settings.plugin.tx_feeddisplay_pi1.settings.errorMessage" approved="yes">
+        <source>Error message</source>
+        <target state="final">错误消息</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.errorMessage" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.errorMessage" approved="yes">
+        <source>This message is displayed if no feed items could be fetched</source>
+        <target state="final">如果不能获取订阅项，则显示此消息</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.dateFormat" resname="settings.plugin.tx_feeddisplay_pi1.settings.dateFormat" approved="yes">
+        <source>Date format</source>
+        <target state="final">日期格式</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.dateFormat" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.dateFormat">
+        <source>Use a PHP date format compatible with DateTimeInterface::format()</source>
+        <target state="needs-translation">Use a PHP date format compatible with DateTimeInterface::format()</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.stripTags" resname="settings.plugin.tx_feeddisplay_pi1.settings.stripTags" approved="yes">
+        <source>Strip tags</source>
+        <target state="final">删除标签</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.stripTags" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.stripTags" approved="yes">
+        <source>Remove HTML tags from the feed content</source>
+        <target state="final">从订阅内容中删除 HTML 标签</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.cacheDuration" resname="settings.plugin.tx_feeddisplay_pi1.settings.cacheDuration" approved="yes">
+        <source>Feed cache</source>
+        <target state="final">新闻源缓存</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.cacheDuration" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.cacheDuration" approved="yes">
+        <source>Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</source>
+        <target state="final">从缓存读取数据到下次更新缓存的时间（0=无缓存）</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty" resname="settings.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty" approved="yes">
+        <source>Ignore FlexForm Settings if empty</source>
+        <target state="final">忽略FlexForm 设置，如果为空</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty" approved="yes">
+        <source>Comma separated list of FlexForm settings that will be ignored in the extension settings merge process, if their value is considered empty (either an empty string or a string containing 0).</source>
+        <target state="final">逗号分隔的 FlexForm 设置列表，这些设置将在扩展设置合并过程中被忽略 如果他们的值被认为是空的(空字符串或包含0的字符串)。</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.getFields.feed" resname="settings.plugin.tx_feeddisplay_pi1.settings.getFields.feed" approved="yes">
+        <source>Feed fields to get</source>
+        <target state="final">要获取的新闻源字段</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.getFields.feed" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.getFields.feed" approved="yes">
+        <source>Comma-separated list of fields to be read from the feed by SimplePie and made available as variables in Fluid.</source>
+        <target state="final">用逗号分隔的字段列表，由 SimplePie 读取，并在 Fluid 中以变量形式提供。</target>
+      </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.getFields.items" resname="settings.plugin.tx_feeddisplay_pi1.settings.getFields.items" approved="yes">
+        <source>Feed items fields to get</source>
+        <target state="final">订阅要获取的项目字段</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.getFields.items" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.getFields.items" approved="yes">
+        <source>Comma-separated list of fields to be read from the feed items by SimplePie and made available as variables in Fluid.</source>
+        <target state="final">由 SimplePie 读取并以 Fluid 变量提供的逗号分隔的字段列表。</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

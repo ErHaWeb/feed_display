@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" original="EXT:feed_display/Resources/Private/Language/locallang.xlf" datatype="plaintext" product-name="feed_display" date="2025-02-25T11:12:27+01:00" target-language="no">
+    <header/>
+    <body>
+      <trans-unit id="feed.categories" approved="yes">
+        <source>Categories</source>
+        <target state="final">Kategorier</target>
+      </trans-unit>
+      <trans-unit id="feed.category" approved="yes">
+        <source>Category</source>
+        <target state="final">Kategori</target>
+      </trans-unit>
+      <trans-unit id="feed.authors" approved="yes">
+        <source>Authors</source>
+        <target state="final">Forfattere</target>
+      </trans-unit>
+      <trans-unit id="feed.author" approved="yes">
+        <source>Author</source>
+        <target state="final">Forfatter</target>
+      </trans-unit>
+      <trans-unit id="feed.contributors" approved="yes">
+        <source>Contributors</source>
+        <target state="final">Bidragsytere</target>
+      </trans-unit>
+      <trans-unit id="feed.contributor" approved="yes">
+        <source>Contributor</source>
+        <target state="final">Bidragsyter</target>
+      </trans-unit>
+      <trans-unit id="feed.items" approved="yes">
+        <source>Items</source>
+        <target state="final">Elementer</target>
+      </trans-unit>
+      <trans-unit id="feed.links">
+        <source>Links</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Lenker</target>
+      </trans-unit>
+      <trans-unit id="feed.link">
+        <source>Link</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Lenke</target>
+      </trans-unit>
+      <trans-unit id="item.categories" approved="yes">
+        <source>Categories</source>
+        <target state="final">Kategorier</target>
+      </trans-unit>
+      <trans-unit id="item.category" approved="yes">
+        <source>Category</source>
+        <target state="final">Kategori</target>
+      </trans-unit>
+      <trans-unit id="item.authors" approved="yes">
+        <source>Authors</source>
+        <target state="final">Forfattere</target>
+      </trans-unit>
+      <trans-unit id="item.author" approved="yes">
+        <source>Author</source>
+        <target state="final">Forfatter</target>
+      </trans-unit>
+      <trans-unit id="item.contributors" approved="yes">
+        <source>Contributors</source>
+        <target state="final">Bidragsytere</target>
+      </trans-unit>
+      <trans-unit id="item.contributor" approved="yes">
+        <source>Contributor</source>
+        <target state="final">Bidragsyter</target>
+      </trans-unit>
+      <trans-unit id="item.copyright" approved="yes">
+        <source>Copyright</source>
+        <target state="final">Opphavsrett</target>
+      </trans-unit>
+      <trans-unit id="item.date" approved="yes">
+        <source>Date</source>
+        <target state="final">Dato</target>
+      </trans-unit>
+      <trans-unit id="item.updatedDate" approved="yes">
+        <source>Updated</source>
+        <target state="final">Oppdatert</target>
+      </trans-unit>
+      <trans-unit id="item.links" approved="yes">
+        <source>Links</source>
+        <target state="final">Lenker</target>
+      </trans-unit>
+      <trans-unit id="item.link" approved="yes">
+        <source>Link</source>
+        <target state="final">Lenke</target>
+      </trans-unit>
+      <trans-unit id="item.enclosure" approved="yes">
+        <source>Enclosure</source>
+        <target state="final">Kabinett</target>
+      </trans-unit>
+      <trans-unit id="item.enclosures" approved="yes">
+        <source>Enclosures</source>
+        <target state="final">Vedlegg</target>
+      </trans-unit>
+      <trans-unit id="item.latitude" approved="yes">
+        <source>Latitude</source>
+        <target state="final">Breddegrad</target>
+      </trans-unit>
+      <trans-unit id="item.longitude" approved="yes">
+        <source>Longitude</source>
+        <target state="final">Lengdegrad</target>
+      </trans-unit>
+      <trans-unit id="item.source" approved="yes">
+        <source>Source</source>
+        <target state="final">Kilde</target>
+      </trans-unit>
+      <trans-unit id="errorMessage" approved="yes">
+        <source>Sorry, the feed could not be fetched.</source>
+        <target state="final">Beklager, matingen kan ikke hentes.</target>
+      </trans-unit>
+      <trans-unit id="noTemplateError" approved="yes">
+        <source>Feed Display: Please include static TypoScript [EXT:feed_display/Configuration/TypoScript/]</source>
+        <target state="final">Feed visning: Vennligst inkluder statisk TypoScript [EXT:feed_display/Configuration/TypoScript/]</target>
+      </trans-unit>
+      <trans-unit id="noItemsError" approved="yes">
+        <source>Sorry, no items could be fetched.</source>
+        <target state="final">Beklager, ingen elementer kan hentes.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
