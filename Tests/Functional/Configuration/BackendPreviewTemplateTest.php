@@ -91,10 +91,7 @@ final class BackendPreviewTemplateTest extends FunctionalTestCase
      */
     private static function createFlexFormFieldValues(array $sheets): object
     {
-        if (
-            class_exists(FlexFormFieldValues::class)
-            && method_exists(FlexFormFieldValues::class, 'getSheets')
-        ) {
+        if (class_exists(FlexFormFieldValues::class)) {
             return new FlexFormFieldValues($sheets);
         }
 
