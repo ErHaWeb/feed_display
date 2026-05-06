@@ -111,8 +111,15 @@ class FeedDataService
      */
     private function getFeedFieldValue(string $getFeedField, array $fieldParts): mixed
     {
-        if ($getFeedField === 'subscribe_url') {
+        $fieldName = $fieldParts[0] ?? $getFeedField;
+
+        if ($fieldName === 'subscribe_url') {
             return $this->feed->subscribe_url();
+        }
+
+        // Avoid calling SimplePie's deprecated favicon handling for legacy configurations.
+        if ($fieldName === 'favicon') {
+            return null;
         }
 
         return $this->getValue($this->feed, $fieldParts);

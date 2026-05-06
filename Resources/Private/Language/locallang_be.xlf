@@ -162,9 +162,6 @@
 			<trans-unit id="flexform.getFields.feed.I.encoding">
 				<source>Encoding</source>
 			</trans-unit>
-			<trans-unit id="flexform.getFields.feed.I.favicon">
-				<source>Favicon</source>
-			</trans-unit>
 			<trans-unit id="flexform.getFields.feed.I.items">
 				<source>Items</source>
 			</trans-unit>

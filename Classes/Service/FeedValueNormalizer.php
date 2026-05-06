@@ -229,7 +229,6 @@ final class FeedValueNormalizer
                     'copyright' => $value->get_copyright(...),
                     'description' => $value->get_description(...),
                     'encoding' => $value->get_encoding(...),
-                    'favicon' => $value->get_favicon(...),
                     'imageHeight' => $value->get_image_height(...),
                     'imageLink' => $value->get_image_link(...),
                     'imageTitle' => $value->get_image_title(...),

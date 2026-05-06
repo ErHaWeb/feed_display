@@ -66,7 +66,7 @@ plugin.tx_feeddisplay_pi1 {
 
             # Feed-Level Data (Basic)
             # cat=plugin.tx_feeddisplay_pi1/300_getfields/100; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.getFields.feed
-            feed := addToList(author,authors,contributor,contributors,copyright,description,encoding,favicon,items,item_quantity,language,link,links,permalink,title,type,subscribe_url)
+            feed := addToList(author,authors,contributor,contributors,copyright,description,encoding,items,item_quantity,language,link,links,permalink,title,type,subscribe_url)
             # For field "item" you must parse the feed-dependent arguments
 
             # Feed-Level GeoData

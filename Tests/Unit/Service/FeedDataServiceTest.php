@@ -146,6 +146,40 @@ final class FeedDataServiceTest extends UnitTestCase
     }
 
     #[Test]
+    public function buildDataIgnoresLegacyFaviconFeedFieldWithoutCallingSimplePieFaviconHandling(): void
+    {
+        $feed = $this->getMockBuilder(SimplePie::class)
+            ->disableOriginalConstructor()
+            ->onlyMethods(['set_feed_url', 'enable_cache', 'init', 'get_items', 'get_favicon'])
+            ->getMock();
+
+        $eventDispatcher = $this->createMock(EventDispatcherInterface::class);
+        [$guzzleClientFactory, $requestFactory, $uriFactory] = $this->createHttpClientDependencies();
+
+        $feed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed.xml');
+        $feed->expects(self::once())->method('enable_cache')->with(false);
+        $feed->expects(self::once())->method('init');
+        $feed->expects(self::never())->method('get_favicon');
+        $feed->expects(self::once())->method('get_items')->with(0, 0)->willReturn([]);
+
+        $eventDispatcher->expects(self::never())->method('dispatch');
+
+        $settings = [
+            'feedUrl' => 'https://example.com/feed.xml',
+            'maxFeedCount' => 0,
+            'getFields' => [
+                'feed' => 'favicon,favicon|legacy',
+                'items' => '',
+            ],
+        ];
+
+        $subject = $this->createSubject($feed, $eventDispatcher, $guzzleClientFactory, $requestFactory, $uriFactory);
+        $data = $subject->buildData($settings);
+
+        self::assertNull($data['feed']['favicon']);
+    }
+
+    #[Test]
     public function buildDataSupportsGetterCallsWithThreeAndFourFieldParts(): void
     {
         $item = new TestFeedItem();
@@ -458,7 +492,6 @@ final class FeedDataServiceTest extends UnitTestCase
                 'get_copyright',
                 'get_description',
                 'get_encoding',
-                'get_favicon',
                 'get_image_height',
                 'get_image_link',
                 'get_image_title',
@@ -487,7 +520,6 @@ final class FeedDataServiceTest extends UnitTestCase
         $feed->method('get_copyright')->willReturn('');
         $feed->method('get_description')->willReturn('');
         $feed->method('get_encoding')->willReturn('');
-        $feed->method('get_favicon')->willReturn('');
         $feed->method('get_image_height')->willReturn(0);
         $feed->method('get_image_link')->willReturn('');
         $feed->method('get_image_title')->willReturn('');

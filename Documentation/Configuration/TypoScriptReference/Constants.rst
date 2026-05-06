@@ -282,7 +282,7 @@ Get Fields: Feed
 ..  confval:: getFields.feed
 
     :type: list of strings, separated by comma
-    :Default: author, authors, contributor, contributors, copyright, description, encoding, favicon, items, item_quantity, language, link, links, permalink, title, type, subscribe_url, latitude, longitude, image_height, image_link, image_title, image_url, image_width, all_discovered_feeds, base
+    :Default: author, authors, contributor, contributors, copyright, description, encoding, items, item_quantity, language, link, links, permalink, title, type, subscribe_url, latitude, longitude, image_height, image_link, image_title, image_url, image_width, all_discovered_feeds, base
     :Path: plugin.tx_feeddisplay_pi1.settings
 
     Comma-separated list of fields to be read from the feed by SimplePie
