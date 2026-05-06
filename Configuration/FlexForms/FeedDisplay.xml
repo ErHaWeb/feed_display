@@ -501,7 +501,7 @@
                                 </numIndex>
                                 <numIndex index="8" type="array">
                                     <numIndex index="label">
-                                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.items.I.date|U
+                                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.items.I.date
                                     </numIndex>
                                     <numIndex index="value">date|U</numIndex>
                                     <numIndex index="group">items</numIndex>
@@ -557,7 +557,7 @@
                                 </numIndex>
                                 <numIndex index="16" type="array">
                                     <numIndex index="label">
-                                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.items.I.local_date|
+                                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.getFields.items.I.local_date
                                     </numIndex>
                                     <numIndex index="value">local_date|</numIndex>
                                     <numIndex index="group">items</numIndex>
