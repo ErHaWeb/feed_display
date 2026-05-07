@@ -54,7 +54,7 @@ class FeedDataService
         ];
 
         if (!SimplePieDeprecationHandler::run(
-            fn (): bool => $this->initializer->initializeFeed($this->feed, $settings)
+            fn(): bool => $this->initializer->initializeFeed($this->feed, $settings)
         )) {
             return $data;
         }
@@ -86,7 +86,7 @@ class FeedDataService
             }
 
             $data['feed'][$field] = SimplePieDeprecationHandler::run(
-                fn (): mixed => $this->valueNormalizer->normalizeValue($value)
+                fn(): mixed => $this->valueNormalizer->normalizeValue($value)
             );
         }
     }
@@ -102,7 +102,7 @@ class FeedDataService
 
         /** @var list<Item> $items */
         $items = SimplePieDeprecationHandler::run(
-            fn (): array => $this->feed->get_items(0, $maxFeedCount)
+            fn(): array => $this->feed->get_items(0, $maxFeedCount)
         );
 
         foreach ($items as $item) {
@@ -152,7 +152,7 @@ class FeedDataService
             $value = $this->getValue($item, $fieldParts);
 
             $itemProperties[$field] = SimplePieDeprecationHandler::run(
-                fn (): mixed => $this->valueNormalizer->normalizeValue($value)
+                fn(): mixed => $this->valueNormalizer->normalizeValue($value)
             );
         }
 
@@ -171,7 +171,7 @@ class FeedDataService
         );
         /** @var SingleFeedDataEvent $event */
         $normalizedProps = SimplePieDeprecationHandler::run(
-            fn (): mixed => $this->valueNormalizer->normalizeValue($event->getItemProperties())
+            fn(): mixed => $this->valueNormalizer->normalizeValue($event->getItemProperties())
         );
 
         return is_array($normalizedProps) ? $normalizedProps : [];
@@ -191,7 +191,7 @@ class FeedDataService
 
         $method = \Closure::fromCallable($callable);
 
-        return $this->callSimplePieGetter(static fn (): mixed => match (count($fieldParts)) {
+        return $this->callSimplePieGetter(static fn(): mixed => match (count($fieldParts)) {
             1 => $method(),
             2 => $method($fieldParts[1]),
             3 => $method($fieldParts[1], $fieldParts[2]),

@@ -196,9 +196,9 @@ final class FeedValueNormalizer
                     'description' => $value->get_description(...),
                     'enclosure' => $value->get_enclosure(...),
                     'enclosures' => $value->get_enclosures(...),
-                    'id' => static fn (): mixed => $value->get_id(),
+                    'id' => static fn(): mixed => $value->get_id(),
                     'latitude' => $value->get_latitude(...),
-                    'link' => static fn (): mixed => $value->get_link(),
+                    'link' => static fn(): mixed => $value->get_link(),
                     'links' => $value->get_links(...),
                     'longitude' => $value->get_longitude(...),
                     'permalink' => $value->get_permalink(...),
@@ -235,10 +235,10 @@ final class FeedValueNormalizer
                     'imageUrl' => $value->get_image_url(...),
                     'imageWidth' => $value->get_image_width(...),
                     'itemQuantity' => $value->get_item_quantity(...),
-                    'items' => static fn (): mixed => $value->get_items(),
+                    'items' => static fn(): mixed => $value->get_items(),
                     'language' => $value->get_language(...),
                     'latitude' => $value->get_latitude(...),
-                    'link' => static fn (): mixed => $value->get_link(),
+                    'link' => static fn(): mixed => $value->get_link(),
                     'links' => $value->get_links(...),
                     'longitude' => $value->get_longitude(...),
                     'permalink' => $value->get_permalink(...),
@@ -292,7 +292,7 @@ final class FeedValueNormalizer
     {
         return array_filter(
             $values,
-            static fn (mixed $normalizedValue): bool => $normalizedValue !== null && $normalizedValue !== ''
+            static fn(mixed $normalizedValue): bool => $normalizedValue !== null && $normalizedValue !== ''
         );
     }
 }

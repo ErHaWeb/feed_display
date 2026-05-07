@@ -195,7 +195,7 @@ final class FeedDataServiceTest extends UnitTestCase
         $feed->expects(self::once())->method('enable_cache')->with(false);
         $feed->expects(self::once())->method('init');
         $feed->expects(self::once())->method('get_description')->willReturnCallback(
-            static fn (): string => require $deprecationFile
+            static fn(): string => require $deprecationFile
         );
         $feed->expects(self::once())->method('get_items')->with(0, 0)->willReturn([]);
 
@@ -236,7 +236,7 @@ final class FeedDataServiceTest extends UnitTestCase
         $feed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed.xml');
         $feed->expects(self::once())->method('enable_cache')->with(false);
         $feed->expects(self::once())->method('init')->willReturnCallback(
-            static fn (): bool => require $deprecationFile
+            static fn(): bool => require $deprecationFile
         );
         $feed->expects(self::once())->method('get_title')->willReturn('Feed title');
         $feed->expects(self::once())->method('get_items')->with(0, 0)->willReturn([]);
@@ -488,7 +488,7 @@ final class FeedDataServiceTest extends UnitTestCase
         $eventDispatcher->expects(self::once())->method('dispatch')->willReturnCallback(
             static function (SingleFeedDataEvent $event): SingleFeedDataEvent {
                 $itemProperties = $event->getItemProperties();
-                $itemProperties['callback'] = static fn (): string => 'not serializable';
+                $itemProperties['callback'] = static fn(): string => 'not serializable';
                 $event->setItemProperties($itemProperties);
                 return $event;
             }

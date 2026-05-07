@@ -127,7 +127,7 @@ trait SiteBasedTestTrait
 
         if ($fallbackIdentifiers !== []) {
             $fallbackIds = array_map(
-                fn (string $fallbackIdentifier): int => $this->resolveLanguagePreset($fallbackIdentifier)['id'],
+                fn(string $fallbackIdentifier): int => $this->resolveLanguagePreset($fallbackIdentifier)['id'],
                 $fallbackIdentifiers,
             );
             $configuration['fallbackType'] = $fallbackType ?? 'fallback';
