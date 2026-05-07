@@ -18,10 +18,12 @@ declare(strict_types=1);
 namespace ErHaWeb\FeedDisplay\Tests\Unit\Upgrades;
 
 use ErHaWeb\FeedDisplay\Upgrades\FeedDisplayCTypeMigration;
+use PHPUnit\Framework\Attributes\AllowMockObjectsWithoutExpectations;
 use PHPUnit\Framework\Attributes\Test;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 
+#[AllowMockObjectsWithoutExpectations]
 final class FeedDisplayCTypeMigrationTest extends UnitTestCase
 {
     #[Test]

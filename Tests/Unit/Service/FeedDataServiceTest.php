@@ -21,6 +21,7 @@ use ErHaWeb\FeedDisplay\Event\SingleFeedDataEvent;
 use ErHaWeb\FeedDisplay\Service\FeedDataService;
 use ErHaWeb\FeedDisplay\Service\FeedRuntimeInitializer;
 use GuzzleHttp\Client;
+use PHPUnit\Framework\Attributes\AllowMockObjectsWithoutExpectations;
 use PHPUnit\Framework\Attributes\Test;
 use Psr\EventDispatcher\EventDispatcherInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -31,6 +32,7 @@ use TYPO3\CMS\Core\Core\Environment;
 use TYPO3\CMS\Core\Http\Client\GuzzleClientFactory;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 
+#[AllowMockObjectsWithoutExpectations]
 final class FeedDataServiceTest extends UnitTestCase
 {
     #[Test]

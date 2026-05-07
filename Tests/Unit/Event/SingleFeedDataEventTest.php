@@ -18,11 +18,13 @@ declare(strict_types=1);
 namespace ErHaWeb\FeedDisplay\Tests\Unit\Event;
 
 use ErHaWeb\FeedDisplay\Event\SingleFeedDataEvent;
+use PHPUnit\Framework\Attributes\AllowMockObjectsWithoutExpectations;
 use PHPUnit\Framework\Attributes\Test;
 use SimplePie\Item;
 use SimplePie\SimplePie;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 
+#[AllowMockObjectsWithoutExpectations]
 final class SingleFeedDataEventTest extends UnitTestCase
 {
     #[Test]
