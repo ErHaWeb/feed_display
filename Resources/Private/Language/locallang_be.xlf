@@ -19,7 +19,13 @@
 				<source>Feed URL</source>
 			</trans-unit>
 			<trans-unit id="flexform.feedUrl.description">
-				<source>URL that is fetched by the service (empty = Defined by TypoScript)</source>
+				<source>Deprecated legacy feed URL. Use feeds instead.</source>
+			</trans-unit>
+			<trans-unit id="flexform.feeds.label">
+				<source>Feeds</source>
+			</trans-unit>
+			<trans-unit id="flexform.feeds.description">
+				<source>RSS or Atom feeds used by this plugin instance (empty = Defined by TypoScript)</source>
 			</trans-unit>
 			<trans-unit id="flexform.maxFeedCount.label">
 				<source>Max. items</source>
@@ -119,6 +125,36 @@
 			</trans-unit>
 			<trans-unit id="flexform.cacheDuration.description">
 				<source>Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache, empty = Defined by TypoScript)</source>
+			</trans-unit>
+			<trans-unit id="flexform.sortBy.label">
+				<source>Sort by</source>
+			</trans-unit>
+			<trans-unit id="flexform.sortBy.description">
+				<source>Item field used for sorting the combined feed list (empty = Defined by TypoScript)</source>
+			</trans-unit>
+			<trans-unit id="flexform.sortDirection.label">
+				<source>Sort direction</source>
+			</trans-unit>
+			<trans-unit id="flexform.sortDirection.description">
+				<source>Sort direction for the combined feed list</source>
+			</trans-unit>
+			<trans-unit id="flexform.sortDirection.I.desc">
+				<source>Descending</source>
+			</trans-unit>
+			<trans-unit id="flexform.sortDirection.I.asc">
+				<source>Ascending</source>
+			</trans-unit>
+			<trans-unit id="flexform.removeDuplicates.label">
+				<source>Remove duplicates</source>
+			</trans-unit>
+			<trans-unit id="flexform.removeDuplicates.description">
+				<source>Remove duplicate items across configured feeds</source>
+			</trans-unit>
+			<trans-unit id="flexform.removeDuplicates.I.yes">
+				<source>yes</source>
+			</trans-unit>
+			<trans-unit id="flexform.removeDuplicates.I.no">
+				<source>no</source>
 			</trans-unit>
 			<trans-unit id="flexform.placeholder.feed">
 				<source>Defined by Feed or TypoScript (default)</source>
@@ -316,7 +352,10 @@
 				<source>Path to template layouts (FE)</source>
 			</trans-unit>
 			<trans-unit id="constants.settings.feedUrl">
-				<source>Feed URL:URL that is fetched by the service</source>
+				<source>Deprecated Feed URL:Legacy fallback. Use Feed URLs instead.</source>
+			</trans-unit>
+			<trans-unit id="constants.settings.feeds">
+				<source>Feed URLs:Comma-separated list of RSS or Atom feed URLs</source>
 			</trans-unit>
 			<trans-unit id="constants.settings.maxFeedCount">
 				<source>Max. items:Maximum feed items to show</source>
@@ -369,6 +408,15 @@
 			<trans-unit id="constants.settings.cacheDuration">
 				<source>Feed cache:Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</source>
 			</trans-unit>
+			<trans-unit id="constants.settings.sortBy">
+				<source>Sort by:Item field used for sorting the combined feed list</source>
+			</trans-unit>
+			<trans-unit id="constants.settings.sortDirection">
+				<source>Sort direction:Sort direction for the combined feed list</source>
+			</trans-unit>
+			<trans-unit id="constants.settings.removeDuplicates">
+				<source>Remove duplicates:Remove duplicate items across configured feeds</source>
+			</trans-unit>
 			<trans-unit id="constants.settings.ignoreFlexFormSettingsIfEmpty">
 				<source>Ignore FlexForm Settings if empty:Comma separated list of FlexForm settings that will be ignored in the extension settings merge process, if their value is considered empty (either an empty string or a string containing 0).</source>
 			</trans-unit>
@@ -380,6 +428,12 @@
 			</trans-unit>
 			<trans-unit id="sets.feeddisplay.label">
 				<source>Feed Display</source>
+			</trans-unit>
+			<trans-unit id="tx_feeddisplay_domain_model_feed">
+				<source>Feed</source>
+			</trans-unit>
+			<trans-unit id="tx_feeddisplay_domain_model_feed.url">
+				<source>Feed URL</source>
 			</trans-unit>
 		</body>
 	</file>

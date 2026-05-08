@@ -14,8 +14,11 @@ plugin.tx_feeddisplay_pi1 {
     }
 
     settings {
-        # cat=plugin.tx_feeddisplay_pi1/100_general/200; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.feedUrl
-        feedUrl = https://typo3.org/rss
+        # cat=plugin.tx_feeddisplay_pi1/100_general/200; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.feeds
+        feeds =
+        # Deprecated legacy fallback. Use settings.feeds instead.
+        # cat=plugin.tx_feeddisplay_pi1/100_general/205; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.feedUrl
+        feedUrl =
         # cat=plugin.tx_feeddisplay_pi1/100_general/210; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.maxFeedCount
         maxFeedCount = 10
         # cat=plugin.tx_feeddisplay_pi1/100_general/220; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.maxContentLength
@@ -40,6 +43,12 @@ plugin.tx_feeddisplay_pi1 {
         errorMessage =
         # cat=plugin.tx_feeddisplay_pi1/200_advanced/340; type=int+; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.cacheDuration
         cacheDuration = 3600
+        # cat=plugin.tx_feeddisplay_pi1/200_advanced/345; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.sortBy
+        sortBy = date
+        # cat=plugin.tx_feeddisplay_pi1/200_advanced/346; type=options[desc,asc]; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.sortDirection
+        sortDirection = desc
+        # cat=plugin.tx_feeddisplay_pi1/200_advanced/347; type=boolean; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.removeDuplicates
+        removeDuplicates = 0
 
         getFields {
             # Each field is internally converted to a SimplePie getter method.
@@ -95,5 +104,5 @@ plugin.tx_feeddisplay_pi1 {
     }
 
     # cat=plugin.tx_feeddisplay_pi1/200_advanced/350; type=string; label=LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:constants.settings.ignoreFlexFormSettingsIfEmpty
-    ignoreFlexFormSettingsIfEmpty = feedUrl,maxFeedCount,maxContentLength,maxHeaderLength,logoMaxWidth,logoMaxHeight,feedIconMaxWidth,feedIconMaxHeight,dateFormat,stripTags,linkTarget,errorMessage,cacheDuration,getFields.feed,getFields.items
+    ignoreFlexFormSettingsIfEmpty = feeds,feedUrl,maxFeedCount,maxContentLength,maxHeaderLength,logoMaxWidth,logoMaxHeight,feedIconMaxWidth,feedIconMaxHeight,dateFormat,stripTags,linkTarget,errorMessage,cacheDuration,sortBy,sortDirection,removeDuplicates,getFields.feed,getFields.items
 }

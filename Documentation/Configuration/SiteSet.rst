@@ -29,10 +29,16 @@ Project-specific settings are stored by TYPO3 in
 Example
 =======
 
+..  versionadded:: 3.1
+    `plugin.tx_feeddisplay_pi1.settings.feeds` is available as a string list
+    and can contain one or more RSS/Atom feed URLs.
+
 ..  code-block:: yaml
     :caption: config/sites/<site-identifier>/settings.yaml
 
-    plugin.tx_feeddisplay_pi1.settings.feedUrl: 'https://typo3.org/rss'
+    plugin.tx_feeddisplay_pi1.settings.feeds:
+      - 'https://example.org/news/rss.xml'
+      - 'https://blog.example.org/feed.atom'
     plugin.tx_feeddisplay_pi1.settings.maxFeedCount: 10
     plugin.tx_feeddisplay_pi1.settings.dateFormat: 'd. F Y'
 

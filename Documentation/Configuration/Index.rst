@@ -11,6 +11,7 @@ Configuration
    :titlesonly:
 
    SiteSet
+   Feeds
    TypoScriptReference/Index
    TSconfig
    Events

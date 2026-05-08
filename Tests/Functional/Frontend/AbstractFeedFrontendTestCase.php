@@ -97,7 +97,7 @@ abstract class AbstractFeedFrontendTestCase extends FunctionalTestCase
         // Keep the functional fixtures focused on extension-owned fields and avoid
         // unrelated feed metadata such as favicon handling in the default TypoScript.
         $typoScriptLines = [
-            'plugin.tx_feeddisplay_pi1.settings.feedUrl = ' . $feedUrl,
+            'plugin.tx_feeddisplay_pi1.settings.feeds = ' . $feedUrl,
             'plugin.tx_feeddisplay_pi1.settings.getFields.feed = title,subscribe_url',
             'plugin.tx_feeddisplay_pi1.settings.getFields.items = title',
         ];
@@ -117,8 +117,12 @@ abstract class AbstractFeedFrontendTestCase extends FunctionalTestCase
     /**
      * @param list<string> $itemTitles
      */
-    protected function writeFeedFixture(string $feedTitle, array $itemTitles, bool $includeImage = false): string
-    {
+    protected function writeFeedFixture(
+        string $feedTitle,
+        array $itemTitles,
+        bool $includeImage = false,
+        string $fileName = 'feed.xml',
+    ): string {
         $imageUrl = '';
         if ($includeImage) {
             $imageUrl = 'file://' . $this->instancePath . '/fileadmin/feed-image.svg';
@@ -148,7 +152,7 @@ abstract class AbstractFeedFrontendTestCase extends FunctionalTestCase
             $items
         );
 
-        return $this->writeFeedXmlFixture($feedXml);
+        return $this->writeFeedXmlFixture($feedXml, $fileName);
     }
 
     protected function writeFeedXmlFixture(string $feedXml, string $fileName = 'feed.xml'): string

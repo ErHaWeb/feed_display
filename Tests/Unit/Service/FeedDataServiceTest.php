@@ -21,7 +21,6 @@ use ErHaWeb\FeedDisplay\Event\SingleFeedDataEvent;
 use ErHaWeb\FeedDisplay\Service\FeedDataService;
 use ErHaWeb\FeedDisplay\Service\FeedRuntimeInitializer;
 use GuzzleHttp\Client;
-use PHPUnit\Framework\Attributes\AllowMockObjectsWithoutExpectations;
 use PHPUnit\Framework\Attributes\Test;
 use Psr\EventDispatcher\EventDispatcherInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -32,7 +31,6 @@ use TYPO3\CMS\Core\Core\Environment;
 use TYPO3\CMS\Core\Http\Client\GuzzleClientFactory;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 
-#[AllowMockObjectsWithoutExpectations]
 final class FeedDataServiceTest extends UnitTestCase
 {
     #[Test]
@@ -145,6 +143,194 @@ final class FeedDataServiceTest extends UnitTestCase
         self::assertSame(1700000000, $data['items'][0]['date']);
         self::assertSame('changed by event', $data['items'][0]['custom']);
         self::assertFileExists($expectedImageTarget);
+    }
+
+    #[Test]
+    public function buildDataAggregatesConfiguredFeedsSortsLimitsAndAddsSourceInformation(): void
+    {
+        $firstFeed = $this->getMockBuilder(SimplePie::class)
+            ->disableOriginalConstructor()
+            ->onlyMethods(['set_feed_url', 'enable_cache', 'init', 'get_title', 'get_items'])
+            ->getMock();
+        $secondFeed = $this->getMockBuilder(SimplePie::class)
+            ->disableOriginalConstructor()
+            ->onlyMethods(['set_feed_url', 'enable_cache', 'init', 'get_title', 'get_items'])
+            ->getMock();
+        $eventDispatcher = $this->createMock(EventDispatcherInterface::class);
+        [$guzzleClientFactory, $requestFactory, $uriFactory] = $this->createHttpClientDependencies(2);
+
+        $firstFeed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed-a.xml');
+        $firstFeed->expects(self::once())->method('enable_cache')->with(false);
+        $firstFeed->expects(self::once())->method('init');
+        $firstFeed->expects(self::once())->method('get_title')->willReturn('First feed');
+        $firstFeed->expects(self::once())->method('get_items')->with(0, 3)->willReturn([
+            new TestFeedItem(title: 'Older item', date: 1000, id: 'older', link: 'https://example.com/older'),
+            new TestFeedItem(title: 'Newest item', date: 4000, id: 'newest', link: 'https://example.com/newest'),
+        ]);
+
+        $secondFeed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed-b.xml');
+        $secondFeed->expects(self::once())->method('enable_cache')->with(false);
+        $secondFeed->expects(self::once())->method('init');
+        $secondFeed->expects(self::once())->method('get_title')->willReturn('Second feed');
+        $secondFeed->expects(self::once())->method('get_items')->with(0, 3)->willReturn([
+            new TestFeedItem(title: 'Middle item', date: 3000, id: 'middle', link: 'https://example.com/middle'),
+            new TestFeedItem(title: 'Skipped item', date: 500, id: 'skipped', link: 'https://example.com/skipped'),
+        ]);
+
+        $eventDispatcher->expects(self::exactly(4))->method('dispatch')->willReturnArgument(0);
+
+        $settings = [
+            'feeds' => [
+                10 => [
+                    'url' => 'https://example.com/feed-a.xml',
+                ],
+                20 => [
+                    'url' => 'https://example.com/feed-b.xml',
+                ],
+            ],
+            'maxFeedCount' => 3,
+            'sortBy' => 'date',
+            'sortDirection' => 'desc',
+            'getFields' => [
+                'feed' => 'title',
+                'items' => 'id,title,date|U,link',
+            ],
+        ];
+
+        $subject = $this->createAggregatingSubject(
+            [$firstFeed, $secondFeed],
+            $eventDispatcher,
+            $guzzleClientFactory,
+            $requestFactory,
+            $uriFactory,
+        );
+        $data = $subject->buildData($settings);
+
+        self::assertSame('First feed', $data['feed']['title']);
+        self::assertSame('Second feed', $data['feeds'][1]['title']);
+        self::assertSame(
+            ['Newest item', 'Middle item', 'Older item'],
+            array_column($data['items'], 'title')
+        );
+        self::assertSame('https://example.com/feed-a.xml', $data['items'][0]['feedSource']['url']);
+        self::assertSame('https://example.com/feed-b.xml', $data['items'][1]['feedSource']['url']);
+    }
+
+    #[Test]
+    public function buildDataCanRemoveDuplicatesAcrossConfiguredFeeds(): void
+    {
+        $firstFeed = $this->getMockBuilder(SimplePie::class)
+            ->disableOriginalConstructor()
+            ->onlyMethods(['set_feed_url', 'enable_cache', 'init', 'get_items'])
+            ->getMock();
+        $secondFeed = $this->getMockBuilder(SimplePie::class)
+            ->disableOriginalConstructor()
+            ->onlyMethods(['set_feed_url', 'enable_cache', 'init', 'get_items'])
+            ->getMock();
+        $eventDispatcher = $this->createMock(EventDispatcherInterface::class);
+        [$guzzleClientFactory, $requestFactory, $uriFactory] = $this->createHttpClientDependencies(2);
+
+        $firstFeed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed-a.xml');
+        $firstFeed->expects(self::once())->method('enable_cache')->with(false);
+        $firstFeed->expects(self::once())->method('init');
+        $firstFeed->expects(self::once())->method('get_items')->with(0, 0)->willReturn([
+            new TestFeedItem(title: 'Older duplicate', date: 1000, id: 'shared', link: 'https://example.com/shared'),
+        ]);
+
+        $secondFeed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed-b.xml');
+        $secondFeed->expects(self::once())->method('enable_cache')->with(false);
+        $secondFeed->expects(self::once())->method('init');
+        $secondFeed->expects(self::once())->method('get_items')->with(0, 0)->willReturn([
+            new TestFeedItem(title: 'Newer duplicate', date: 3000, id: 'shared', link: 'https://example.com/shared'),
+        ]);
+
+        $eventDispatcher->expects(self::exactly(2))->method('dispatch')->willReturnArgument(0);
+
+        $settings = [
+            'feeds' => [
+                10 => [
+                    'url' => 'https://example.com/feed-a.xml',
+                ],
+                20 => [
+                    'url' => 'https://example.com/feed-b.xml',
+                ],
+            ],
+            'maxFeedCount' => 0,
+            'sortBy' => 'date',
+            'sortDirection' => 'desc',
+            'removeDuplicates' => 1,
+            'getFields' => [
+                'feed' => '',
+                'items' => 'id,title,date|U,link',
+            ],
+        ];
+
+        $subject = $this->createAggregatingSubject(
+            [$firstFeed, $secondFeed],
+            $eventDispatcher,
+            $guzzleClientFactory,
+            $requestFactory,
+            $uriFactory,
+        );
+        $data = $subject->buildData($settings);
+
+        self::assertSame(['Newer duplicate'], array_column($data['items'], 'title'));
+    }
+
+    #[Test]
+    public function buildDataContinuesWithUsableSourcesIfOneConfiguredFeedCannotBeInitialized(): void
+    {
+        $failedFeed = $this->getMockBuilder(SimplePie::class)
+            ->disableOriginalConstructor()
+            ->onlyMethods(['set_feed_url', 'enable_cache', 'init', 'get_items'])
+            ->getMock();
+        $workingFeed = $this->getMockBuilder(SimplePie::class)
+            ->disableOriginalConstructor()
+            ->onlyMethods(['set_feed_url', 'enable_cache', 'init', 'get_items'])
+            ->getMock();
+        $eventDispatcher = $this->createMock(EventDispatcherInterface::class);
+        [$guzzleClientFactory, $requestFactory, $uriFactory] = $this->createHttpClientDependencies(2);
+
+        $failedFeed->expects(self::once())->method('set_feed_url')->with('https://example.com/broken.xml');
+        $failedFeed->expects(self::once())->method('enable_cache')->with(false);
+        $failedFeed->expects(self::once())->method('init')->willReturn(false);
+        $failedFeed->expects(self::never())->method('get_items');
+
+        $workingFeed->expects(self::once())->method('set_feed_url')->with('https://example.com/working.xml');
+        $workingFeed->expects(self::once())->method('enable_cache')->with(false);
+        $workingFeed->expects(self::once())->method('init');
+        $workingFeed->expects(self::once())->method('get_items')->with(0, 1)->willReturn([
+            new TestFeedItem(title: 'Working item', date: 2000),
+        ]);
+
+        $eventDispatcher->expects(self::once())->method('dispatch')->willReturnArgument(0);
+
+        $settings = [
+            'feeds' => [
+                10 => [
+                    'url' => 'https://example.com/broken.xml',
+                ],
+                20 => [
+                    'url' => 'https://example.com/working.xml',
+                ],
+            ],
+            'maxFeedCount' => 1,
+            'getFields' => [
+                'feed' => '',
+                'items' => 'title,date|U',
+            ],
+        ];
+
+        $subject = $this->createAggregatingSubject(
+            [$failedFeed, $workingFeed],
+            $eventDispatcher,
+            $guzzleClientFactory,
+            $requestFactory,
+            $uriFactory,
+        );
+        $data = $subject->buildData($settings);
+
+        self::assertSame(['Working item'], array_column($data['items'], 'title'));
     }
 
     #[Test]
@@ -547,16 +733,34 @@ final class FeedDataServiceTest extends UnitTestCase
     }
 
     /**
+     * @param non-empty-list<SimplePie> $feeds
+     */
+    private function createAggregatingSubject(
+        array $feeds,
+        EventDispatcherInterface $eventDispatcher,
+        GuzzleClientFactory $guzzleClientFactory,
+        RequestFactoryInterface $requestFactory,
+        UriFactoryInterface $uriFactory,
+    ): FeedDataService {
+        $feedRuntimeInitializer = new FeedRuntimeInitializer($guzzleClientFactory, $requestFactory, $uriFactory);
+
+        return new AggregatingFeedDataService($feeds, $eventDispatcher, $feedRuntimeInitializer);
+    }
+
+    /**
      * @return array{0: GuzzleClientFactory, 1: RequestFactoryInterface, 2: UriFactoryInterface}
      */
-    private function createHttpClientDependencies(bool $expectUsage = true): array
+    private function createHttpClientDependencies(bool|int $expectUsage = true): array
     {
         $guzzleClient = new Client();
         $guzzleClientFactory = $this->createMock(GuzzleClientFactory::class);
         $requestFactory = $this->createMock(RequestFactoryInterface::class);
         $uriFactory = $this->createMock(UriFactoryInterface::class);
 
-        $guzzleClientFactory->expects($expectUsage ? self::once() : self::never())
+        $expectation = is_int($expectUsage)
+            ? self::exactly($expectUsage)
+            : ($expectUsage ? self::once() : self::never());
+        $guzzleClientFactory->expects($expectation)
             ->method('getClient')
             ->willReturn($guzzleClient);
 
@@ -665,28 +869,62 @@ final class FeedDataServiceTest extends UnitTestCase
     }
 }
 
+final class AggregatingFeedDataService extends FeedDataService
+{
+    /**
+     * @param non-empty-list<SimplePie> $feeds
+     */
+    public function __construct(
+        private readonly array $feeds,
+        EventDispatcherInterface $eventDispatcher,
+        FeedRuntimeInitializer $initializer,
+    ) {
+        parent::__construct($feeds[0], $eventDispatcher, $initializer);
+    }
+
+    protected function createFeed(int $sourceIndex): SimplePie
+    {
+        return $this->feeds[$sourceIndex] ?? parent::createFeed($sourceIndex);
+    }
+}
+
 final class TestFeedItem extends Item
 {
-    public function __construct(?SimplePie $feed = null)
-    {
+    public function __construct(
+        ?SimplePie $feed = null,
+        private readonly string $title = 'First item',
+        private readonly int $date = 1700000000,
+        private readonly string $id = 'item-1',
+        private readonly string $link = 'https://example.com/item-1',
+    ) {
         parent::__construct($feed ?? new SimplePie(), []);
     }
 
     public function get_title(): string
     {
-        return 'First item';
+        return $this->title;
+    }
+
+    public function get_id(bool $hash = false, $fn = 'md5'): string
+    {
+        return $this->id;
+    }
+
+    public function get_link(int $key = 0, string $rel = 'alternate'): string
+    {
+        return $this->link;
     }
 
     /**
      * @return ($date_format is 'U' ? int|null : string|null)
      */
-    public function get_date(string $date_format = '')
+    public function get_date(string $date_format = 'j F Y, g:i a')
     {
         if ($date_format === '__missing__') {
             return null;
         }
 
-        return $date_format === 'U' ? 1700000000 : 'Tue, 14 Nov 2023 22:13:20 +0000';
+        return $date_format === 'U' ? $this->date : date('r', $this->date);
     }
 
     /** @noinspection PhpUnused */

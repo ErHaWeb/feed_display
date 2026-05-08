@@ -10,19 +10,28 @@
                     LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.sheet_general.description
                 </sheetDescription>
                 <el>
-                    <settings.feedUrl>
+                    <settings.feeds>
                         <label>
-                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.feedUrl.label
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.feeds.label
                         </label>
                         <description>
-                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.feedUrl.description
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.feeds.description
                         </description>
                         <config>
-                            <type>input</type>
-                            <placeholder>https://typo3.org/rss</placeholder>
-                            <eval>nospace</eval>
+                            <type>inline</type>
+                            <foreign_table>tx_feeddisplay_domain_model_feed</foreign_table>
+                            <foreign_field>tt_content</foreign_field>
+                            <foreign_sortby>sorting</foreign_sortby>
+                            <appearance>
+                                <collapseAll>1</collapseAll>
+                                <expandSingle>1</expandSingle>
+                                <newRecordLinkAddTitle>1</newRecordLinkAddTitle>
+                                <useSortable>1</useSortable>
+                            </appearance>
+                            <minitems>0</minitems>
+                            <maxitems>999</maxitems>
                         </config>
-                    </settings.feedUrl>
+                    </settings.feeds>
                     <settings.maxFeedCount>
                         <label>
                             LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.maxFeedCount.label
@@ -226,6 +235,81 @@
                             <type>number</type>
                         </config>
                     </settings.cacheDuration>
+                    <settings.sortBy>
+                        <label>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.sortBy.label
+                        </label>
+                        <description>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.sortBy.description
+                        </description>
+                        <config>
+                            <type>input</type>
+                            <eval>trim</eval>
+                            <placeholder>date</placeholder>
+                        </config>
+                    </settings.sortBy>
+                    <settings.sortDirection>
+                        <label>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.sortDirection.label
+                        </label>
+                        <description>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.sortDirection.description
+                        </description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingle</renderType>
+                            <items type="array">
+                                <numIndex index="0" type="array">
+                                    <numIndex index="label">
+                                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.placeholder.typoscript
+                                    </numIndex>
+                                    <numIndex index="value"/></numIndex>
+                                <numIndex index="1" type="array">
+                                    <numIndex index="label">
+                                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.sortDirection.I.desc
+                                    </numIndex>
+                                    <numIndex index="value">desc</numIndex>
+                                </numIndex>
+                                <numIndex index="2" type="array">
+                                    <numIndex index="label">
+                                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.sortDirection.I.asc
+                                    </numIndex>
+                                    <numIndex index="value">asc</numIndex>
+                                </numIndex>
+                            </items>
+                        </config>
+                    </settings.sortDirection>
+                    <settings.removeDuplicates>
+                        <label>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.removeDuplicates.label
+                        </label>
+                        <description>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.removeDuplicates.description
+                        </description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingle</renderType>
+                            <items type="array">
+                                <numIndex index="0" type="array">
+                                    <numIndex index="label">
+                                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.placeholder.typoscript
+                                    </numIndex>
+                                    <numIndex index="value"/></numIndex>
+                                <numIndex index="1" type="array">
+                                    <numIndex index="label">
+                                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.removeDuplicates.I.yes
+                                    </numIndex>
+                                    <numIndex index="value">1</numIndex>
+                                </numIndex>
+                                <numIndex index="2" type="array">
+                                    <numIndex index="label">
+                                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.removeDuplicates.I.no
+                                    </numIndex>
+                                    <numIndex index="value">0</numIndex>
+                                </numIndex>
+                            </items>
+                        </config>
+                    </settings.removeDuplicates>
                 </el>
             </ROOT>
         </advanced>

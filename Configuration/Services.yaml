@@ -12,6 +12,15 @@ services:
     arguments:
       $cache: '@cache.feeddisplay'
 
+  ErHaWeb\FeedDisplay\Service\FeedDataService:
+    arguments:
+      $feedResolver: '@ErHaWeb\FeedDisplay\Service\ConfiguredFeedResolver'
+      $itemProcessor: '@ErHaWeb\FeedDisplay\Service\FeedItemPostProcessor'
+
+  ErHaWeb\FeedDisplay\Service\ConfiguredFeedResolver:
+    arguments:
+      $connectionPool: '@TYPO3\CMS\Core\Database\ConnectionPool'
+
   # Register the external dependency explicitly so FeedDataService can autowire it.
   SimplePie\SimplePie: ~
 

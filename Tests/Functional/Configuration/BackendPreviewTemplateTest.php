@@ -23,7 +23,7 @@ final class BackendPreviewTemplateTest extends FunctionalTestCase
         $html = $this->renderBackendPreview([
             'pi_flexform_transformed' => [
                 'settings' => [
-                    'feedUrl' => 'https://example.com/feed.xml',
+                    'feeds' => '1',
                     'maxFeedCount' => '5',
                     'dateFormat' => 'Y-m-d',
                     'getFields' => [
@@ -44,7 +44,7 @@ final class BackendPreviewTemplateTest extends FunctionalTestCase
                 'pi_flexform' => self::createFlexFormFieldValues([
                     'general' => [
                         'settings' => [
-                            'feedUrl' => 'https://example.com/feed.xml',
+                            'feeds' => '1',
                             'maxFeedCount' => '5',
                         ],
                     ],
@@ -115,7 +115,7 @@ final class BackendPreviewTemplateTest extends FunctionalTestCase
 
     private static function assertExpectedFlexFormOutput(string $html): void
     {
-        self::assertStringContainsString('https://example.com/feed.xml', $html);
+        self::assertStringContainsString('1', $html);
         self::assertStringContainsString('5', $html);
         self::assertStringContainsString('Y-m-d', $html);
         self::assertStringNotContainsString('id,title,link', $html);

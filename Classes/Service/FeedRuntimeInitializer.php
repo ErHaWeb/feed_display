@@ -37,9 +37,9 @@ final class FeedRuntimeInitializer
     /**
      * @param FeedSettings $settings
      */
-    public function initializeFeed(SimplePie $feed, array $settings): bool
+    public function initializeFeed(SimplePie $feed, array $settings, ?string $feedUrl = null): bool
     {
-        $feedUrl = $settings['feedUrl'] ?? '';
+        $feedUrl ??= $settings['feedUrl'] ?? '';
         if ($feedUrl === '') {
             return false;
         }
@@ -53,9 +53,9 @@ final class FeedRuntimeInitializer
         }
         $feed->enable_cache(false);
         // Feed autodiscovery can hit SimplePie's IRI handling before getters run.
-        SimplePieDeprecationHandler::run($feed->init(...));
+        $initialized = SimplePieDeprecationHandler::run($feed->init(...));
 
-        return true;
+        return $initialized !== false;
     }
 
     private function shouldUseTypo3HttpClient(string $feedUrl): bool

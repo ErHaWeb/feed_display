@@ -22,13 +22,17 @@ settings:
     type: string
     default: ''
     category: feeddisplay.templates
-  plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty:
+  plugin.tx_feeddisplay_pi1.ignoreFlexFormSettingsIfEmpty:
     type: string
-    default: 'feedUrl,maxFeedCount,maxContentLength,maxHeaderLength,logoMaxWidth,logoMaxHeight,feedIconMaxWidth,feedIconMaxHeight,dateFormat,stripTags,linkTarget,errorMessage,cacheDuration,getFields.feed,getFields.items'
+    default: 'feeds,feedUrl,maxFeedCount,maxContentLength,maxHeaderLength,logoMaxWidth,logoMaxHeight,feedIconMaxWidth,feedIconMaxHeight,dateFormat,stripTags,linkTarget,errorMessage,cacheDuration,sortBy,sortDirection,removeDuplicates,getFields.feed,getFields.items'
+    category: feeddisplay.general
+  plugin.tx_feeddisplay_pi1.settings.feeds:
+    type: stringlist
+    default: ''
     category: feeddisplay.general
   plugin.tx_feeddisplay_pi1.settings.feedUrl:
     type: string
-    default: https://typo3.org/rss
+    default: ''
     category: feeddisplay.general
   plugin.tx_feeddisplay_pi1.settings.maxFeedCount:
     type: int
@@ -77,6 +81,18 @@ settings:
   plugin.tx_feeddisplay_pi1.settings.cacheDuration:
     type: int
     default: 3600
+    category: feeddisplay.advanced
+  plugin.tx_feeddisplay_pi1.settings.sortBy:
+    type: string
+    default: date
+    category: feeddisplay.advanced
+  plugin.tx_feeddisplay_pi1.settings.sortDirection:
+    type: string
+    default: desc
+    category: feeddisplay.advanced
+  plugin.tx_feeddisplay_pi1.settings.removeDuplicates:
+    type: bool
+    default: false
     category: feeddisplay.advanced
   plugin.tx_feeddisplay_pi1.settings.getFields.feed:
     type: string

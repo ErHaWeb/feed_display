@@ -1,0 +1,33 @@
+.. include:: /Includes.rst.txt
+
+3.1.0 - May 08, 2026
+====================
+
+.. contents::
+   :local:
+   :depth: 3
+
+Features
+--------
+
+* Added `settings.feeds` as the intended feed configuration.
+* Added aggregation of multiple RSS or Atom feeds in one plugin instance.
+* Added sorting, final `maxFeedCount` limiting and optional duplicate removal
+  for aggregated feed items.
+* Added FlexForm IRRE feed records for a real 1:n relation between a plugin
+  instance and its feed URLs.
+* Added the upgrade wizard `feedDisplayFeedUrlFlexFormMigration` to migrate
+  legacy FlexForm `settings.feedUrl` values to feed records referenced by
+  `settings.feeds`.
+
+Deprecation
+-----------
+
+The top-level `settings.feedUrl` is deprecated. Use `settings.feeds` for new
+TypoScript, Site Settings and FlexForm configuration.
+
+Breaking changes
+----------------
+
+No breaking changes. Legacy `settings.feedUrl` is still supported as a fallback
+when no usable `settings.feeds` value exists.

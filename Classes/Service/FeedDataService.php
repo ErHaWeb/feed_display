@@ -27,20 +27,28 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 /**
  * @internal
  * @phpstan-type FeedSettings array<string, mixed>
+ * @phpstan-type ConfiguredFeed array{identifier: string, url: string}
  * @phpstan-type FeedItem array<string, mixed>
  * @phpstan-type FeedData array<string, mixed>
+ * @SuppressWarnings("PHPMD.CouplingBetweenObjects")
  */
 class FeedDataService
 {
     private readonly FeedValueNormalizer $valueNormalizer;
+    private readonly ConfiguredFeedResolver $feedResolver;
+    private readonly FeedItemPostProcessor $itemProcessor;
 
     public function __construct(
         private readonly SimplePie $feed,
         private readonly EventDispatcherInterface $eventDispatcher,
         private readonly FeedRuntimeInitializer $initializer,
         ?FeedValueNormalizer $valueNormalizer = null,
+        ?ConfiguredFeedResolver $feedResolver = null,
+        ?FeedItemPostProcessor $itemProcessor = null,
     ) {
         $this->valueNormalizer = $valueNormalizer ?? new FeedValueNormalizer();
+        $this->feedResolver = $feedResolver ?? new ConfiguredFeedResolver();
+        $this->itemProcessor = $itemProcessor ?? new FeedItemPostProcessor();
     }
 
     /**
@@ -52,24 +60,57 @@ class FeedDataService
         $data = [
             'settings' => $settings,
         ];
-
-        if (!SimplePieDeprecationHandler::run(
-            fn(): bool => $this->initializer->initializeFeed($this->feed, $settings)
-        )) {
+        $configuredFeeds = $this->feedResolver->resolve($settings);
+        if ($configuredFeeds === []) {
             return $data;
         }
 
-        $this->appendFeedProperties($data, $settings);
-        $this->appendItemProperties($data, $settings);
+        $items = [];
+        foreach ($configuredFeeds as $feedIndex => $configuredFeed) {
+            $feed = $this->createFeed($feedIndex);
+            if (!SimplePieDeprecationHandler::run(
+                fn(): bool => $this->initializer->initializeFeed($feed, $settings, $configuredFeed['url'])
+            )) {
+                continue;
+            }
+
+            $feedData = [];
+            $this->appendFeedProperties($feedData, $settings, $feed);
+            if (isset($feedData['feed']) && is_array($feedData['feed'])) {
+                $feedProperties = $feedData['feed'];
+                $feedProperties['sourceIdentifier'] = $configuredFeed['identifier'];
+                $feedProperties['sourceUrl'] = $configuredFeed['url'];
+                $data['feeds'][] = $feedProperties;
+                $data['feed'] ??= $feedProperties;
+            }
+
+            foreach ($this->buildItemProperties($feed, $settings, $configuredFeed) as $itemProperties) {
+                $items[] = $itemProperties;
+            }
+        }
+
+        $items = $this->itemProcessor->process($items, $settings);
+        if ($items !== []) {
+            $data['items'] = $items;
+        }
 
         return $data;
+    }
+
+    protected function createFeed(int $sourceIndex): SimplePie
+    {
+        if ($sourceIndex === 0) {
+            return $this->feed;
+        }
+
+        return GeneralUtility::makeInstance(SimplePie::class);
     }
 
     /**
      * @param FeedSettings $settings
      * @param FeedData $data
      */
-    private function appendFeedProperties(array &$data, array $settings): void
+    private function appendFeedProperties(array &$data, array $settings, SimplePie $feed): void
     {
         $getFeedFields = GeneralUtility::trimExplode(',', (string)($settings['getFields']['feed'] ?? ''));
         foreach ($getFeedFields as $getFeedField) {
@@ -79,7 +120,7 @@ class FeedDataService
 
             $fieldParts = GeneralUtility::trimExplode('|', $getFeedField);
             $field = GeneralUtility::underscoredToLowerCamelCase($fieldParts[0]);
-            $value = $this->getFeedFieldValue($getFeedField, $fieldParts);
+            $value = $this->getFeedFieldValue($feed, $getFeedField, $fieldParts);
 
             if ($getFeedField === 'image_url') {
                 $data['feed']['image'] = $this->getImage($value);
@@ -93,37 +134,45 @@ class FeedDataService
 
     /**
      * @param FeedSettings $settings
-     * @param FeedData $data
+     * @param ConfiguredFeed $configuredFeed
+     * @return list<FeedItem>
      */
-    private function appendItemProperties(array &$data, array $settings): void
+    private function buildItemProperties(SimplePie $feed, array $settings, array $configuredFeed): array
     {
+        $itemData = [];
         $maxFeedCount = (int)($settings['maxFeedCount'] ?? 0);
         $getItemsFields = GeneralUtility::trimExplode(',', (string)($settings['getFields']['items'] ?? ''));
 
         /** @var list<Item> $items */
         $items = SimplePieDeprecationHandler::run(
-            fn(): array => $this->feed->get_items(0, $maxFeedCount)
+            fn(): array => $feed->get_items(0, $maxFeedCount)
         );
 
         foreach ($items as $item) {
             $itemProperties = $this->buildNormalizedItemProperties($item, $getItemsFields);
-            $itemProperties = $this->dispatchSingleFeedDataEvent($itemProperties, $item, $settings);
+            $itemProperties = $this->dispatchSingleFeedDataEvent($itemProperties, $item, $settings, $feed);
 
             if ($itemProperties !== []) {
-                $data['items'][] = $itemProperties;
+                $itemProperties['feedSource'] = [
+                    'identifier' => $configuredFeed['identifier'],
+                    'url' => $configuredFeed['url'],
+                ];
+                $itemData[] = $itemProperties;
             }
         }
+
+        return $itemData;
     }
 
     /**
      * @param list<string> $fieldParts
      */
-    private function getFeedFieldValue(string $getFeedField, array $fieldParts): mixed
+    private function getFeedFieldValue(SimplePie $feed, string $getFeedField, array $fieldParts): mixed
     {
         $fieldName = $fieldParts[0] ?? $getFeedField;
 
         if ($fieldName === 'subscribe_url') {
-            return $this->callSimplePieGetter($this->feed->subscribe_url(...));
+            return $this->callSimplePieGetter($feed->subscribe_url(...));
         }
 
         // Avoid calling SimplePie's deprecated favicon handling for legacy configurations.
@@ -131,7 +180,7 @@ class FeedDataService
             return null;
         }
 
-        return $this->getValue($this->feed, $fieldParts);
+        return $this->getValue($feed, $fieldParts);
     }
 
     /**
@@ -164,10 +213,10 @@ class FeedDataService
      * @param array<string, mixed> $itemProperties
      * @return array<string, mixed>
      */
-    private function dispatchSingleFeedDataEvent(array $itemProperties, Item $item, array $settings): array
+    private function dispatchSingleFeedDataEvent(array $itemProperties, Item $item, array $settings, SimplePie $feed): array
     {
         $event = $this->eventDispatcher->dispatch(
-            new SingleFeedDataEvent($itemProperties, $item, $settings, $this->feed)
+            new SingleFeedDataEvent($itemProperties, $item, $settings, $feed)
         );
         /** @var SingleFeedDataEvent $event */
         $normalizedProps = SimplePieDeprecationHandler::run(

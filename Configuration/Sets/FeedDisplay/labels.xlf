@@ -31,10 +31,16 @@
 				<source>Path to template layouts (FE)</source>
 			</trans-unit>
 			<trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.feedUrl" resname="settings.plugin.tx_feeddisplay_pi1.settings.feedUrl">
-				<source>Feed URL</source>
+				<source>Deprecated Feed URL</source>
 			</trans-unit>
 			<trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.feedUrl" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.feedUrl">
-				<source>URL that is fetched by the service</source>
+				<source>Legacy fallback. Use Feed URLs instead.</source>
+			</trans-unit>
+			<trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.feeds" resname="settings.plugin.tx_feeddisplay_pi1.settings.feeds">
+				<source>Feed URLs</source>
+			</trans-unit>
+			<trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.feeds" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.feeds">
+				<source>Comma-separated list of RSS or Atom feed URLs</source>
 			</trans-unit>
 			<trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.maxFeedCount" resname="settings.plugin.tx_feeddisplay_pi1.settings.maxFeedCount">
 				<source>Max. items</source>
@@ -123,10 +129,28 @@
 			<trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.cacheDuration" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.cacheDuration">
 				<source>Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</source>
 			</trans-unit>
-			<trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty" resname="settings.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty">
+			<trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.sortBy" resname="settings.plugin.tx_feeddisplay_pi1.settings.sortBy">
+				<source>Sort by</source>
+			</trans-unit>
+			<trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.sortBy" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.sortBy">
+				<source>Item field used for sorting the combined feed list</source>
+			</trans-unit>
+			<trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.sortDirection" resname="settings.plugin.tx_feeddisplay_pi1.settings.sortDirection">
+				<source>Sort direction</source>
+			</trans-unit>
+			<trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.sortDirection" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.sortDirection">
+				<source>Sort direction for the combined feed list</source>
+			</trans-unit>
+			<trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.removeDuplicates" resname="settings.plugin.tx_feeddisplay_pi1.settings.removeDuplicates">
+				<source>Remove duplicates</source>
+			</trans-unit>
+			<trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.removeDuplicates" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.removeDuplicates">
+				<source>Remove duplicate items across configured feeds</source>
+			</trans-unit>
+			<trans-unit id="settings.plugin.tx_feeddisplay_pi1.ignoreFlexFormSettingsIfEmpty" resname="settings.plugin.tx_feeddisplay_pi1.ignoreFlexFormSettingsIfEmpty">
 				<source>Ignore FlexForm Settings if empty</source>
 			</trans-unit>
-			<trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty">
+			<trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.ignoreFlexFormSettingsIfEmpty" resname="settings.description.plugin.tx_feeddisplay_pi1.ignoreFlexFormSettingsIfEmpty">
 				<source>Comma separated list of FlexForm settings that will be ignored in the extension settings merge process, if their value is considered empty (either an empty string or a string containing 0).</source>
 			</trans-unit>
 			<trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.getFields.feed" resname="settings.plugin.tx_feeddisplay_pi1.settings.getFields.feed">

@@ -48,7 +48,11 @@ Quick start
 
     #.  Switch to tab `Plugin`.
 
-    #.  Under `Plugin Options` → `General` → `Feed URL` enter the full URL of your Feed. (By default `https://typo3.org/rss` is used here.)
+    #.  Under `Plugin Options` → `General` → `Feeds` add one or more feed records and enter the feed URL for each record.
+
+        ..  versionadded:: 3.1
+            The plugin FlexForm stores feed URLs as feed records, so one
+            plugin instance can aggregate any number of feeds.
 
     #.  Click `Save` and `Close`.
 
@@ -63,3 +67,7 @@ Quick start
     `feedDisplayCTypeMigration` once. It migrates existing content elements
     from `CType = list` / `list_type = feeddisplay_pi1` to
     `CType = feeddisplay_pi1`.
+
+    Version 3.1 also provides the upgrade wizard
+    `feedDisplayFeedUrlFlexFormMigration`. It migrates existing FlexForm
+    `settings.feedUrl` values to feed records referenced by `settings.feeds`.

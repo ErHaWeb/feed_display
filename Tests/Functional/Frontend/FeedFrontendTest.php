@@ -35,6 +35,80 @@ final class FeedFrontendTest extends AbstractFeedFrontendTestCase
     }
 
     #[Test]
+    public function frontendRequestRendersAggregatedFeedItemsFromConfiguredFeedList(): void
+    {
+        $firstFeedUrl = $this->writeFeedXmlFixture(
+            '<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>First aggregate feed</title><link>https://example.com/</link><description>Test feed</description><item><title>Older item</title><link>https://example.com/older</link><guid>older</guid><pubDate>Tue, 10 Mar 2026 10:01:00 +0000</pubDate></item><item><title>Newest item</title><link>https://example.com/newest</link><guid>newest</guid><pubDate>Tue, 10 Mar 2026 10:04:00 +0000</pubDate></item></channel></rss>',
+            'aggregate-feed-a.xml'
+        );
+        $secondFeedUrl = $this->writeFeedXmlFixture(
+            '<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Second aggregate feed</title><link>https://example.org/</link><description>Test feed</description><item><title>Middle item</title><link>https://example.org/middle</link><guid>middle</guid><pubDate>Tue, 10 Mar 2026 10:03:00 +0000</pubDate></item><item><title>Skipped item</title><link>https://example.org/skipped</link><guid>skipped</guid><pubDate>Tue, 10 Mar 2026 10:00:00 +0000</pubDate></item></channel></rss>',
+            'aggregate-feed-b.xml'
+        );
+        $this->initializeFrontendRootPage($firstFeedUrl, [
+            'feeds' => $firstFeedUrl . ',' . $secondFeedUrl,
+            'getFields.items' => 'title,date|U',
+            'maxFeedCount' => 3,
+        ]);
+
+        $body = $this->requestPage();
+
+        self::assertStringContainsString('First aggregate feed', $body);
+        self::assertStringContainsString('Newest item', $body);
+        self::assertStringContainsString('Middle item', $body);
+        self::assertStringContainsString('Older item', $body);
+        self::assertStringNotContainsString('Skipped item', $body);
+        self::assertLessThan(strpos($body, 'Middle item'), strpos($body, 'Newest item'));
+        self::assertLessThan(strpos($body, 'Older item'), strpos($body, 'Middle item'));
+    }
+
+    #[Test]
+    public function flexFormIrreFeedsRenderAsAggregatedFeedItems(): void
+    {
+        $firstFeedUrl = $this->writeFeedFixture('First IRRE feed', ['First IRRE item']);
+        $secondFeedUrl = $this->writeFeedFixture('Second IRRE feed', ['Second IRRE item'], false, 'irre-feed-b.xml');
+        $this->initializeFrontendRootPage('', [
+            'getFields.items' => 'title',
+        ]);
+
+        $feedConnection = $this->getConnectionPool()
+            ->getConnectionForTable('tx_feeddisplay_domain_model_feed');
+        $feedConnection->insert(
+            'tx_feeddisplay_domain_model_feed',
+            [
+                'pid' => self::ROOT_PAGE_ID,
+                'tt_content' => self::CONTENT_ELEMENT_UID,
+                'url' => $firstFeedUrl,
+                'sorting' => 1,
+                'hidden' => 0,
+            ]
+        );
+        $firstFeedUid = (int)$feedConnection->lastInsertId();
+        $feedConnection->insert(
+            'tx_feeddisplay_domain_model_feed',
+            [
+                'pid' => self::ROOT_PAGE_ID,
+                'tt_content' => self::CONTENT_ELEMENT_UID,
+                'url' => $secondFeedUrl,
+                'sorting' => 2,
+                'hidden' => 0,
+            ]
+        );
+        $secondFeedUid = (int)$feedConnection->lastInsertId();
+
+        $this->setFlexFormValues([
+            'general' => [
+                'settings.feeds' => $firstFeedUid . ',' . $secondFeedUid,
+            ],
+        ]);
+
+        $body = $this->requestPage();
+
+        self::assertStringContainsString('First IRRE item', $body);
+        self::assertStringContainsString('Second IRRE item', $body);
+    }
+
+    #[Test]
     public function flexFormOverridesTypoScriptAndChangedSettingsInvalidateTheFeedCache(): void
     {
         $feedUrl = $this->writeFeedFixture('Feed display test feed', ['First item', 'Second item']);

@@ -72,23 +72,62 @@ The following options are located under the following path:
 Use these settings if you want to define values globally for all Feed
 Display Plugin content elements.
 
-..  _configuration-typoscript-constants-settings-feedurl:
+..  _configuration-typoscript-constants-settings-feeds:
 
-Feed URL
-~~~~~~~~
+Feeds
+~~~~~
 
-..  confval:: feedUrl
+..  confval:: feeds
 
-    :type: string
-    :Default: https://typo3.org/rss
+    :type: stringlist
+    :Default: empty
     :Path: plugin.tx_feeddisplay_pi1.settings
 
-    URL that is fetched by the service.
+    ..  versionadded:: 3.1
+        `settings.feeds` is the intended configuration model for feed URLs.
+        It supports one URL and aggregated lists with multiple URLs.
+
+    Comma-separated list of RSS or Atom feed URLs. This Site Setting is mapped
+    to `settings.feeds` and can contain one or many feed URLs.
+
+    For TypoScript-only configuration, the same runtime model also supports a
+    structured feed list:
+
+    ..  code-block:: typoscript
+
+        plugin.tx_feeddisplay_pi1.settings.feeds {
+            10 {
+                url = https://example.org/news/rss.xml
+            }
+
+            20 {
+                url = https://blog.example.org/feed.atom
+            }
+        }
 
     Remote ``http`` and ``https`` feeds are requested via TYPO3's HTTP client
     stack, so TYPO3 proxy and related outbound HTTP settings apply
     automatically. Local file paths use SimplePie's default
     transport.
+
+..  _configuration-typoscript-constants-settings-feedurl:
+
+Legacy Feed URL
+~~~~~~~~~~~~~~~
+
+..  confval:: feedUrl
+
+    :type: string
+    :Default: empty
+    :Path: plugin.tx_feeddisplay_pi1.settings
+
+    ..  versionadded:: 3.1
+        `settings.feedUrl` became a deprecated compatibility fallback. Use
+        `settings.feeds` for new configuration.
+
+    Deprecated fallback for older TypoScript configurations. Use
+    :confval:`feeds <feeds>` for new configuration. The value is only used if
+    no usable `settings.feeds` value is configured.
 
 ..  _configuration-typoscript-constants-settings-maxfeedcount:
 
@@ -260,6 +299,58 @@ Cache duration
     Time in seconds in which the data is to be read from the
     cache until the next renewal of the cache. (0 = no cache)
 
+..  _configuration-typoscript-constants-settings-sortby:
+
+Sort by
+~~~~~~~
+
+..  confval:: sortBy
+
+    :type: string
+    :Default: date
+    :Path: plugin.tx_feeddisplay_pi1.settings
+
+    ..  versionadded:: 3.1
+        Aggregated feed items can be sorted before the final item limit is
+        applied.
+
+    Item field used for sorting the combined feed list. Set this to an empty
+    value to keep the source order.
+
+..  _configuration-typoscript-constants-settings-sortdirection:
+
+Sort direction
+~~~~~~~~~~~~~~
+
+..  confval:: sortDirection
+
+    :type: string
+    :Default: desc
+    :Path: plugin.tx_feeddisplay_pi1.settings
+
+    ..  versionadded:: 3.1
+        Controls the sort direction for aggregated feed items.
+
+    Sort direction for the combined feed list. Supported values are `desc` and
+    `asc`.
+
+..  _configuration-typoscript-constants-settings-removeduplicates:
+
+Remove duplicates
+~~~~~~~~~~~~~~~~~
+
+..  confval:: removeDuplicates
+
+    :type: boolean
+    :Default: 0
+    :Path: plugin.tx_feeddisplay_pi1.settings
+
+    ..  versionadded:: 3.1
+        Duplicate feed items can be removed across all configured feeds.
+
+    If enabled, duplicate items across configured feeds are removed after
+    sorting and before the final `maxFeedCount` limit is applied.
+
 ..  _configuration-typoscript-constants-settings-getfields:
 
 Get Fields
@@ -341,7 +432,7 @@ Ignore Flexform Settings if empty
 ..  confval:: ignoreFlexFormSettingsIfEmpty
 
     :type: list of strings, separated by comma
-    :Default: feedUrl, maxFeedCount, maxContentLength, maxHeaderLength, logoMaxWidth, logoMaxHeight, feedIconMaxWidth, feedIconMaxHeight, dateFormat, stripTags, linkTarget, errorMessage, cacheDuration, getFields.feed, getFields.items
+    :Default: feeds, feedUrl, maxFeedCount, maxContentLength, maxHeaderLength, logoMaxWidth, logoMaxHeight, feedIconMaxWidth, feedIconMaxHeight, dateFormat, stripTags, linkTarget, errorMessage, cacheDuration, sortBy, sortDirection, removeDuplicates, getFields.feed, getFields.items
     :Path: plugin.tx_feeddisplay_pi1
 
     Comma separated list of settings to be overridden by TypoScript if the

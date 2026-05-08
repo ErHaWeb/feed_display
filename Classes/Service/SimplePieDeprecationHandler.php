@@ -36,29 +36,22 @@ final class SimplePieDeprecationHandler
      */
     public static function run(callable $callback): mixed
     {
-        return (new self())->runCallback($callback);
-    }
-
-    /**
-     * @template T
-     * @param callable(): T $callback
-     * @return T
-     */
-    private function runCallback(callable $callback): mixed
-    {
+        $handler = new self();
         // Scope the custom handler to one SimplePie call and restore TYPO3's
         // global error handling immediately afterwards.
-        $this->previousHandler = set_error_handler($this->handleError(...));
+        $handler->previousHandler = set_error_handler(
+            fn(int $severity, string $message, string $file, int $line): bool => $handler->handleError($severity, $message, $file, $line)
+        );
 
         try {
             return $callback();
         } finally {
             restore_error_handler();
-            $this->previousHandler = null;
+            $handler->previousHandler = null;
         }
     }
 
-    private function handleError(int $severity, string $message, string $file, int $line): bool
+    public function handleError(int $severity, string $message, string $file, int $line): bool
     {
         if ($this->isKnownSimplePieDeprecation($severity, $message, $file)) {
             return true;
