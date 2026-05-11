@@ -23,6 +23,7 @@ return RectorConfig::configure()
         ],
         SafeDeclareStrictTypesRector::class => [
             __DIR__ . '/../../ext_emconf.php',
+            __DIR__ . '/../../Tests/Functional/Fixtures/Extensions/feed_display_test_listener/ext_emconf.php',
         ],
     ])
     ->withPreparedSets(deadCode: true, codeQuality: true, typeDeclarations: false)
