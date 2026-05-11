@@ -33,7 +33,7 @@ final class BackendPreviewTemplateTest extends FunctionalTestCase
             ],
         ]);
 
-        self::assertExpectedFlexFormOutput($html);
+        $this->assertExpectedFlexFormOutput($html);
     }
 
     #[Test]
@@ -41,7 +41,7 @@ final class BackendPreviewTemplateTest extends FunctionalTestCase
     {
         $html = $this->renderBackendPreview([
             'record' => [
-                'pi_flexform' => self::createFlexFormFieldValues([
+                'pi_flexform' => $this->createFlexFormFieldValues([
                     'general' => [
                         'settings' => [
                             'feedUrl' => 'https://example.com/feed.xml',
@@ -64,7 +64,7 @@ final class BackendPreviewTemplateTest extends FunctionalTestCase
             ],
         ]);
 
-        self::assertExpectedFlexFormOutput($html);
+        $this->assertExpectedFlexFormOutput($html);
     }
 
     /**
@@ -89,7 +89,7 @@ final class BackendPreviewTemplateTest extends FunctionalTestCase
     /**
      * @param array<string, mixed> $sheets
      */
-    private static function createFlexFormFieldValues(array $sheets): object
+    private function createFlexFormFieldValues(array $sheets): object
     {
         if (class_exists(FlexFormFieldValues::class)) {
             return new FlexFormFieldValues($sheets);
@@ -113,7 +113,7 @@ final class BackendPreviewTemplateTest extends FunctionalTestCase
         };
     }
 
-    private static function assertExpectedFlexFormOutput(string $html): void
+    private function assertExpectedFlexFormOutput(string $html): void
     {
         self::assertStringContainsString('https://example.com/feed.xml', $html);
         self::assertStringContainsString('5', $html);
