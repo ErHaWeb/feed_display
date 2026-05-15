@@ -1,156 +1,63 @@
 # Feed Display
 
-## What does it do?
+[![CI](https://github.com/ErHaWeb/feed_display/actions/workflows/ci.yml/badge.svg)](https://github.com/ErHaWeb/feed_display/actions/workflows/ci.yml)
+[![Packagist Version](https://img.shields.io/packagist/v/erhaweb/feed-display.svg?label=Packagist)](https://packagist.org/packages/erhaweb/feed-display)
+[![License](https://img.shields.io/packagist/l/erhaweb/feed-display.svg)](LICENSE)
+[![TYPO3](https://img.shields.io/badge/TYPO3-v13%20%7C%20v14-ff8700.svg?logo=typo3&logoColor=white)](https://docs.typo3.org/p/erhaweb/feed-display/main/en-us/Compatibility/)
 
-The aim of this extension is to provide a way to display RSS and Atom web
-feed data retrieved from any URL in the frontend. It is possible to configure
-which data is to be read from the feed for the purpose of display.
+Feed Display fetches RSS and Atom web feeds and renders selected feed data in
+TYPO3 frontend content elements. It uses the
+[SimplePie](https://simplepie.org/) feed parser and exposes feed and item data
+to Fluid templates.
 
-Parsing of feed data is done by the [SimplePie](https://simplepie.org/)
-library, which is a very fast and easy-to-use feed parser, written in PHP.
+Remote `http` and `https` feeds are fetched through TYPO3's PSR-17/PSR-18 HTTP
+client, so instance-wide HTTP settings such as proxy configuration are applied
+automatically. Parsed results are cached through TYPO3's caching framework and
+refreshed when plugin configuration changes or the configured cache lifetime
+expires.
 
-Remote `http` and `https` feeds are fetched through TYPO3's PSR-17/PSR-18
-interfaces. This means instance-wide HTTP client settings such as proxy
-configuration are applied automatically. Local feed files and other non-HTTP
-sources use SimplePie's default transport.
+## At a glance
 
-The entire result is stored in its own cache (using the caching framework)
-so that the feed does not have to be parsed with each call. If something has
-changed in the plugin configuration (TypoScript or FlexForm), the cache is
-renewed immediately, otherwise only after a configurable time has elapsed.
+| Item | Value |
+|------|-------|
+| Extension key | `feed_display` |
+| Composer package | [`erhaweb/feed-display`](https://packagist.org/packages/erhaweb/feed-display) |
+| TYPO3 support | <code>^13.4 &#124;&#124; ^14.3</code> |
+| PHP support | `>=8.2 <8.6` |
+| Documentation | [docs.typo3.org](https://docs.typo3.org/p/erhaweb/feed-display/main/en-us/) |
+| TER | [extensions.typo3.org](https://extensions.typo3.org/extension/feed_display) |
+| Source | [GitHub](https://github.com/ErHaWeb/feed_display) |
+| Issues | [GitHub Issues](https://github.com/ErHaWeb/feed_display/issues) |
 
-## Compatibility
+## Highlights
 
-This branch supports TYPO3 `^13.4 || ^14.3` and PHP `>=8.2 <8.6`.
-For TYPO3 v13/v14 projects, include the Site Set `erhaweb/feed-display`.
-The legacy static TypoScript include is still available as a fallback for
-migrated installations.
+- RSS and Atom frontend rendering powered by SimplePie.
+- TYPO3 HTTP client integration for remote feeds.
+- Configurable feed and item fields for Fluid templates.
+- Site Set support for TYPO3 v13 and v14, with a static TypoScript fallback.
+- Content-element FlexForm settings plus Site Settings and TypoScript constants.
+- Dedicated cache for parsed feed data and plugin configuration.
 
-Older records that used `CType=list` with `list_type=feeddisplay_pi1` must be
-migrated to the dedicated `CType=feeddisplay_pi1`. Run the upgrade wizard
-`feedDisplayCTypeMigration` after updating existing projects.
-
-## Screenshots
-
-Here you can find screenshots of all application areas of this extension.
-
-### Frontend View
-
-Below you can find an example of the frontend output of the official TYPO3
-news feed. Styling and structure can be customized as you like.
-
-![Frontend View](Documentation/Images/FrontendView.png)
-
-### New Content Element Wizard
-
-![New Content Element Wizard](Documentation/Images/NewContentElementWizard.png)
-
-### Plugin Settings
-
-Below you can find screenshots of all available plugin options. Use these
-options if you want to make settings on content element level.
-Alternatively, these can also be configured by TypoScript Constants in the
-constant editor.
-
-#### General
-
-![Plugin Options: General Tab](Documentation/Images/PluginOptions-General.png)
-
-#### Advanced
-
-![Plugin Options: Advanced Tab](Documentation/Images/PluginOptions-Advanced.png)
-
-#### Get Fields
-
-![Plugin Options: Get Fields Tab](Documentation/Images/PluginOptions-GetFields.png)
-
-### Constant Editor
-
-Below you can find screenshots of all available constants in the constant
-editor. In TYPO3 v13/v14 Site Set integrations, use Site Settings for global
-configuration. The constant editor remains useful for projects that still use
-static TypoScript template records.
-
-#### Files
-
-![Plugin Options: General Tab](Documentation/Images/ConstantEditor-Files.png)
-
-#### General
-
-![Plugin Options: General Tab](Documentation/Images/ConstantEditor-General.png)
-
-#### Advanced
-
-![Plugin Options: General Tab](Documentation/Images/ConstantEditor-Advanced.png)
-
-#### Get Fields
-
-![Plugin Options: General Tab](Documentation/Images/ConstantEditor-GetFields.png)
-
-## Read more
-
-For more information, see the documentation at [docs.typo3.org](https://docs.typo3.org/p/erhaweb/feed-display/main/en-us/).
-
-## Release automation
-
-Publishing to TER is automated with [`.github/workflows/publish-ter.yml`](.github/workflows/publish-ter.yml)
-and the official TYPO3 Tailor CLI.
-
-### Required repository secret
-
-Add the repository secret `TYPO3_API_TOKEN` with the scopes
-`extension:read,extension:write` and restrict it to `feed_display`.
-
-### Standard release flow
-
-1. Create the release commit and tag it as `x.y.z` without a `v` prefix.
-2. Push the commit and tag to GitHub.
-3. The workflow checks out the tagged commit, validates the version markers in
-   `ext_emconf.php` and `Documentation/Settings.cfg`, generates the TER upload
-   comment from the non-merge commit subjects since the previous release tag,
-   and publishes the package to TER.
-
-### Manual backfill for an existing tag
-
-If a tag already exists and has not been published yet, start the workflow
-manually from `main` and provide the tag name in the `version` input.
-
-With the GitHub CLI this looks like:
+## Installation
 
 ```bash
-gh workflow run publish-ter.yml --ref main -f version=3.0.1
+composer require erhaweb/feed-display
 ```
 
-Only one workflow run per release version is allowed at a time. Parallel runs
-for the same tag are serialized by the workflow `concurrency` group.
+Continue with the
+[Composer installation guide](https://docs.typo3.org/p/erhaweb/feed-display/main/en-us/Installation/)
+and the
+[Quick start](https://docs.typo3.org/p/erhaweb/feed-display/main/en-us/QuickStart/).
 
-### Manual dry run for an existing tag
+## Preview
 
-To validate packaging without contacting TER, start the same workflow manually
-and set `dry_run=true`. The workflow then creates the TER artefact zip, uploads
-it as a GitHub Actions artefact, and skips token validation and publication.
+![Rendered RSS and Atom feed output in the TYPO3 frontend](Documentation/Images/FrontendView.png)
 
-With the GitHub CLI this looks like:
+![TYPO3 backend plugin settings for Feed Display](Documentation/Images/PluginOptions-General.png)
 
-```bash
-gh workflow run publish-ter.yml --ref main -f version=3.0.1 -f dry_run=true
-```
+## Documentation and support
 
-### Local dry run
-
-The helper script validates the checked out release tag and generates the TER
-comment locally:
-
-```bash
-bash Build/Scripts/prepareTerPublish.sh 3.0.1
-```
-
-To create a local TER artefact with Tailor, install the pinned version and use
-the packaging exclusions from `Build/Tailor/ExcludeFromPackaging.php`:
-
-```bash
-COMPOSER_HOME="${PWD}/.Build/.composer" composer global require typo3/tailor:1.7.0
-TYPO3_EXCLUDE_FROM_PACKAGING=Build/Tailor/ExcludeFromPackaging.php \
-  php .Build/.composer/vendor/bin/tailor create-artefact 3.0.1 --path=.
-bash Build/Scripts/verifyTerArtefact.sh tailor-version-artefact/feed_display_3.0.1.zip
-```
+- [Official documentation](https://docs.typo3.org/p/erhaweb/feed-display/main/en-us/)
+- [TYPO3 Extension Repository](https://extensions.typo3.org/extension/feed_display)
+- [GitHub issues](https://github.com/ErHaWeb/feed_display/issues)
+- [Source code](https://github.com/ErHaWeb/feed_display)
