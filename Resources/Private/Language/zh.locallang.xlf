@@ -31,13 +31,13 @@
         <source>Items</source>
         <target state="final">项目</target>
       </trans-unit>
-      <trans-unit id="feed.links">
+      <trans-unit id="feed.links" approved="yes">
         <source>Links</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">链接</target>
+        <target state="final">链接</target>
       </trans-unit>
-      <trans-unit id="feed.link">
+      <trans-unit id="feed.link" approved="yes">
         <source>Link</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">链接</target>
+        <target state="final">链接</target>
       </trans-unit>
       <trans-unit id="item.categories" approved="yes">
         <source>Categories</source>
