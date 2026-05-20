@@ -131,9 +131,9 @@
         <source>Date format</source>
         <target state="final">Format de la date</target>
       </trans-unit>
-      <trans-unit id="flexform.dateFormat.description">
+      <trans-unit id="flexform.dateFormat.description" approved="yes">
         <source>Use a PHP date format compatible with DateTimeInterface::format() (empty = Defined by TypoScript)</source>
-        <target state="needs-translation">Use a PHP date format compatible with DateTimeInterface::format() (empty = Defined by TypoScript)</target>
+        <target state="final">Utiliser un format de date PHP compatible avec DateTimeInterface::format() (vide = défini par TypoScript)</target>
       </trans-unit>
       <trans-unit id="flexform.stripTags.label" approved="yes">
         <source>Strip tags</source>
@@ -219,9 +219,9 @@
         <source>Items</source>
         <target state="final">Éléments</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.item_quantity">
+      <trans-unit id="flexform.getFields.feed.I.item_quantity" approved="yes">
         <source>Item quantity</source>
-        <target state="needs-translation">Item quantity</target>
+        <target state="final">Quantité d'articles</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.language" approved="yes">
         <source>Language</source>
@@ -331,9 +331,9 @@
         <source>Copyright</source>
         <target state="final">Droit d'auteur</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.date">
+      <trans-unit id="flexform.getFields.items.I.date" approved="yes">
         <source>Date (with parameter "U")</source>
-        <target state="needs-translation">Date (with parameter "U")</target>
+        <target state="final">Date (avec paramètre "U")</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.description" approved="yes">
         <source>Description</source>
@@ -363,9 +363,9 @@
         <source>Links</source>
         <target state="final">Liens</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.local_date">
+      <trans-unit id="flexform.getFields.items.I.local_date" approved="yes">
         <source>Local Date (with empty parameter)</source>
-        <target state="needs-translation">Local Date (with empty parameter)</target>
+        <target state="final">Date locale (avec paramètre vide)</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.permalink" approved="yes">
         <source>Permalink</source>
@@ -479,9 +479,9 @@
         <source>Error message:This message is displayed if no feed items could be fetched</source>
         <target state="final">Message d'erreur : Ce message est affiché si aucun élément de flux ne peut être récupéré</target>
       </trans-unit>
-      <trans-unit id="constants.settings.dateFormat">
+      <trans-unit id="constants.settings.dateFormat" approved="yes">
         <source>Date format:Use a PHP date format compatible with DateTimeInterface::format()</source>
-        <target state="needs-translation">Date format:Use a PHP date format compatible with DateTimeInterface::format()</target>
+        <target state="final">Format de date: Utilisez un format de date PHP compatible avec DateTimeInterface::format()</target>
       </trans-unit>
       <trans-unit id="constants.settings.stripTags" approved="yes">
         <source>Strip tags:Remove HTML tags from the feed content</source>
