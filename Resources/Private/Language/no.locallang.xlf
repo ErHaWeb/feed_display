@@ -31,13 +31,13 @@
         <source>Items</source>
         <target state="final">Elementer</target>
       </trans-unit>
-      <trans-unit id="feed.links">
+      <trans-unit id="feed.links" approved="yes">
         <source>Links</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Lenker</target>
+        <target state="final">Lenker</target>
       </trans-unit>
-      <trans-unit id="feed.link">
+      <trans-unit id="feed.link" approved="yes">
         <source>Link</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Lenke</target>
+        <target state="final">Lenke</target>
       </trans-unit>
       <trans-unit id="item.categories" approved="yes">
         <source>Categories</source>
