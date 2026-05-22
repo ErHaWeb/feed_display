@@ -37,3 +37,9 @@ nbproject
 
 # Root lockfile is intentionally not versioned for this extension
 composer.lock
+
+# Crowdin translations
+/Resources/Private/Language/*.locallang.xlf
+/Resources/Private/Language/*.locallang_be.xlf
+/Resources/Private/Language/*.locallang_db.xlf
+/Configuration/Sets/*/*.labels.xlf
