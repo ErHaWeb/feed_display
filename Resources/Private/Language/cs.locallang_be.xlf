@@ -3,509 +3,509 @@
   <file source-language="en" original="EXT:feed_display/Resources/Private/Language/locallang_be.xlf" datatype="plaintext" product-name="feed_display" date="2026-05-06T10:39:35+02:00" target-language="cs">
     <header/>
     <body>
-      <trans-unit id="pi1_title" approved="yes">
+      <trans-unit id="pi1_title">
         <source>Feed Display</source>
-        <target state="final">Zobrazení kanálu</target>
+        <target state="needs-translation">Feed Display</target>
       </trans-unit>
-      <trans-unit id="pi1_plus_wiz_description" approved="yes">
+      <trans-unit id="pi1_plus_wiz_description">
         <source>RSS/Atom web feed parsing and frontend display based on Extbase/Fluid</source>
-        <target state="final">Webové parsování RSS/Atom a zobrazení frontendu na základě Extbase/Fluid</target>
+        <target state="needs-translation">RSS/Atom web feed parsing and frontend display based on Extbase/Fluid</target>
       </trans-unit>
-      <trans-unit id="flexform.sheet_general.title" approved="yes">
+      <trans-unit id="flexform.sheet_general.title">
         <source>General</source>
-        <target state="final">Obecná ustanovení</target>
+        <target state="needs-translation">General</target>
       </trans-unit>
-      <trans-unit id="flexform.sheet_general.description" approved="yes">
+      <trans-unit id="flexform.sheet_general.description">
         <source>These are general settings for the frontend display of the feed. If no value is given, then the value of the TypoScript configuration is used by default.</source>
-        <target state="final">Toto jsou obecná nastavení pro zobrazení kanálu na webu. Pokud není zadána žádná hodnota, pak je výchozí hodnota konfigurace TypoScriptu.</target>
+        <target state="needs-translation">These are general settings for the frontend display of the feed. If no value is given, then the value of the TypoScript configuration is used by default.</target>
       </trans-unit>
-      <trans-unit id="flexform.feedUrl.label" approved="yes">
+      <trans-unit id="flexform.feedUrl.label">
         <source>Feed URL</source>
-        <target state="final">URL kanálu</target>
+        <target state="needs-translation">Feed URL</target>
       </trans-unit>
-      <trans-unit id="flexform.feedUrl.description" approved="yes">
+      <trans-unit id="flexform.feedUrl.description">
         <source>URL that is fetched by the service (empty = Defined by TypoScript)</source>
-        <target state="final">URL, která je načtena službou (prázdná = definovaná TypoScriptem)</target>
+        <target state="needs-translation">URL that is fetched by the service (empty = Defined by TypoScript)</target>
       </trans-unit>
-      <trans-unit id="flexform.maxFeedCount.label" approved="yes">
+      <trans-unit id="flexform.maxFeedCount.label">
         <source>Max. items</source>
-        <target state="final">Max. položek</target>
+        <target state="needs-translation">Max. items</target>
       </trans-unit>
-      <trans-unit id="flexform.maxFeedCount.description" approved="yes">
+      <trans-unit id="flexform.maxFeedCount.description">
         <source>Maximum feed items to show (0 or empty = Defined by TypoScript)</source>
-        <target state="final">Maximální počet zobrazených položek kanálu (0 nebo prázdné = definováno TypoScript)</target>
+        <target state="needs-translation">Maximum feed items to show (0 or empty = Defined by TypoScript)</target>
       </trans-unit>
-      <trans-unit id="flexform.maxContentLength.label" approved="yes">
+      <trans-unit id="flexform.maxContentLength.label">
         <source>Max. content length</source>
-        <target state="final">Max. délka obsahu</target>
+        <target state="needs-translation">Max. content length</target>
       </trans-unit>
-      <trans-unit id="flexform.maxContentLength.description" approved="yes">
+      <trans-unit id="flexform.maxContentLength.description">
         <source>Crop the characters of the feed content to the configured length (0 or empty = Defined by TypoScript)</source>
-        <target state="final">Ořízněte znaky obsahu kanálu na nastavenou délku (0 nebo prázdné = definováno TypoScript)</target>
+        <target state="needs-translation">Crop the characters of the feed content to the configured length (0 or empty = Defined by TypoScript)</target>
       </trans-unit>
-      <trans-unit id="flexform.maxHeaderLength.label" approved="yes">
+      <trans-unit id="flexform.maxHeaderLength.label">
         <source>Max. header length</source>
-        <target state="final">Max. délka záhlaví</target>
+        <target state="needs-translation">Max. header length</target>
       </trans-unit>
-      <trans-unit id="flexform.maxHeaderLength.description" approved="yes">
+      <trans-unit id="flexform.maxHeaderLength.description">
         <source>Crop the characters of the feed header to the configured length (0 or empty = Defined by TypoScript)</source>
-        <target state="final">Ořízněte znaky hlavičky kanálu na nastavenou délku (0 nebo prázdné = definováno TypoScript)</target>
+        <target state="needs-translation">Crop the characters of the feed header to the configured length (0 or empty = Defined by TypoScript)</target>
       </trans-unit>
-      <trans-unit id="flexform.linkTarget.label" approved="yes">
+      <trans-unit id="flexform.linkTarget.label">
         <source>Target</source>
-        <target state="final">Target</target>
+        <target state="needs-translation">Target</target>
       </trans-unit>
-      <trans-unit id="flexform.linkTarget.description" approved="yes">
+      <trans-unit id="flexform.linkTarget.description">
         <source>Target attribute to define the feed link behavior</source>
-        <target state="final">Cílový atribut pro definování chování kanálu</target>
+        <target state="needs-translation">Target attribute to define the feed link behavior</target>
       </trans-unit>
-      <trans-unit id="flexform.linkTarget.I.default" approved="yes">
+      <trans-unit id="flexform.linkTarget.I.default">
         <source>Defined by TypoScript (default)</source>
-        <target state="final">Definováno TypoScriptem (výchozí)</target>
+        <target state="needs-translation">Defined by TypoScript (default)</target>
       </trans-unit>
-      <trans-unit id="flexform.linkTarget.I.blank" approved="yes">
+      <trans-unit id="flexform.linkTarget.I.blank">
         <source>Opens in a new window or tab</source>
-        <target state="final">Otevře se v novém okně nebo záložce</target>
+        <target state="needs-translation">Opens in a new window or tab</target>
       </trans-unit>
-      <trans-unit id="flexform.linkTarget.I.self" approved="yes">
+      <trans-unit id="flexform.linkTarget.I.self">
         <source>Opens in the same frame as it was clicked</source>
-        <target state="final">Otevře se ve stejném rámečku, na který byl kliknut</target>
+        <target state="needs-translation">Opens in the same frame as it was clicked</target>
       </trans-unit>
-      <trans-unit id="flexform.linkTarget.I.parent" approved="yes">
+      <trans-unit id="flexform.linkTarget.I.parent">
         <source>Opens in the parent frame</source>
-        <target state="final">Otevře se v nadřazeném snímku</target>
+        <target state="needs-translation">Opens in the parent frame</target>
       </trans-unit>
-      <trans-unit id="flexform.linkTarget.I.top" approved="yes">
+      <trans-unit id="flexform.linkTarget.I.top">
         <source>Opens in the full body of the window</source>
-        <target state="final">Otevře se v úplném těle okna</target>
+        <target state="needs-translation">Opens in the full body of the window</target>
       </trans-unit>
-      <trans-unit id="flexform.logoMaxWidth.label" approved="yes">
+      <trans-unit id="flexform.logoMaxWidth.label">
         <source>Logo max. width</source>
-        <target state="final">Maximální šířka loga</target>
+        <target state="needs-translation">Logo max. width</target>
       </trans-unit>
-      <trans-unit id="flexform.logoMaxWidth.description" approved="yes">
+      <trans-unit id="flexform.logoMaxWidth.description">
         <source>Maximum width of the feeds logo image (0 or empty = Defined by TypoScript)</source>
-        <target state="final">Maximální šířka loga kanálu (0 nebo prázdné = definováno TypoScript)</target>
+        <target state="needs-translation">Maximum width of the feeds logo image (0 or empty = Defined by TypoScript)</target>
       </trans-unit>
-      <trans-unit id="flexform.logoMaxHeight.label" approved="yes">
+      <trans-unit id="flexform.logoMaxHeight.label">
         <source>Logo max. height</source>
-        <target state="final">Logo max. výška</target>
+        <target state="needs-translation">Logo max. height</target>
       </trans-unit>
-      <trans-unit id="flexform.logoMaxHeight.description" approved="yes">
+      <trans-unit id="flexform.logoMaxHeight.description">
         <source>Maximum height of the feeds logo image (0 or empty = Defined by TypoScript)</source>
-        <target state="final">Maximální výška loga kanálu (0 nebo prázdné = definováno TypoScript)</target>
+        <target state="needs-translation">Maximum height of the feeds logo image (0 or empty = Defined by TypoScript)</target>
       </trans-unit>
-      <trans-unit id="flexform.feedIconMaxWidth.label" approved="yes">
+      <trans-unit id="flexform.feedIconMaxWidth.label">
         <source>Feed icon max. width</source>
-        <target state="final">Maximální šířka ikony kanálu</target>
+        <target state="needs-translation">Feed icon max. width</target>
       </trans-unit>
-      <trans-unit id="flexform.feedIconMaxWidth.description" approved="yes">
+      <trans-unit id="flexform.feedIconMaxWidth.description">
         <source>Maximum width of the feeds icon image (0 or empty = Defined by TypoScript)</source>
-        <target state="final">Maximální šířka ikony kanálů (0 nebo prázdné = definováno TypoScriptem)</target>
+        <target state="needs-translation">Maximum width of the feeds icon image (0 or empty = Defined by TypoScript)</target>
       </trans-unit>
-      <trans-unit id="flexform.feedIconMaxHeight.label" approved="yes">
+      <trans-unit id="flexform.feedIconMaxHeight.label">
         <source>Feed icon max. height</source>
-        <target state="final">Maximální výška ikony kanálu</target>
+        <target state="needs-translation">Feed icon max. height</target>
       </trans-unit>
-      <trans-unit id="flexform.feedIconMaxHeight.description" approved="yes">
+      <trans-unit id="flexform.feedIconMaxHeight.description">
         <source>Maximum height of the feeds icon image (0 or empty = Defined by TypoScript)</source>
-        <target state="final">Maximální výška ikony kanálů (0 nebo prázdné = definováno TypoScriptem)</target>
+        <target state="needs-translation">Maximum height of the feeds icon image (0 or empty = Defined by TypoScript)</target>
       </trans-unit>
-      <trans-unit id="flexform.errorMessage.label" approved="yes">
+      <trans-unit id="flexform.errorMessage.label">
         <source>Error message</source>
-        <target state="final">Chybová zpráva</target>
+        <target state="needs-translation">Error message</target>
       </trans-unit>
-      <trans-unit id="flexform.errorMessage.description" approved="yes">
+      <trans-unit id="flexform.errorMessage.description">
         <source>This message is displayed if no feed items could be fetched (empty = Defined by TypoScript)</source>
-        <target state="final">Tato zpráva se zobrazí, pokud nelze načíst žádné položky (prázdné = definováno TypoScriptem)</target>
+        <target state="needs-translation">This message is displayed if no feed items could be fetched (empty = Defined by TypoScript)</target>
       </trans-unit>
-      <trans-unit id="flexform.sheet_advanced.title" approved="yes">
+      <trans-unit id="flexform.sheet_advanced.title">
         <source>Advanced</source>
-        <target state="final">Rozšířené</target>
+        <target state="needs-translation">Advanced</target>
       </trans-unit>
-      <trans-unit id="flexform.sheet_advanced.description" approved="yes">
+      <trans-unit id="flexform.sheet_advanced.description">
         <source>These are advanced settings. If you are unsure, simply use the default values here. If no value is given, then the value of the TypoScript configuration is used by default.</source>
-        <target state="final">Toto jsou pokročilá nastavení. Pokud si nejste jisti, jednoduše použijte výchozí hodnoty. Pokud není zadána žádná hodnota, pak je výchozí hodnota konfigurace TypoScriptu.</target>
+        <target state="needs-translation">These are advanced settings. If you are unsure, simply use the default values here. If no value is given, then the value of the TypoScript configuration is used by default.</target>
       </trans-unit>
-      <trans-unit id="flexform.dateFormat.label" approved="yes">
+      <trans-unit id="flexform.dateFormat.label">
         <source>Date format</source>
-        <target state="final">Formát data</target>
+        <target state="needs-translation">Date format</target>
       </trans-unit>
-      <trans-unit id="flexform.dateFormat.description" approved="yes">
+      <trans-unit id="flexform.dateFormat.description">
         <source>Use a PHP date format compatible with DateTimeInterface::format() (empty = Defined by TypoScript)</source>
-        <target state="final">Použít PHP formát data kompatibilní s DateTimeInterface::format() (prázdný = definovaný TypoScript)</target>
+        <target state="needs-translation">Use a PHP date format compatible with DateTimeInterface::format() (empty = Defined by TypoScript)</target>
       </trans-unit>
-      <trans-unit id="flexform.stripTags.label" approved="yes">
+      <trans-unit id="flexform.stripTags.label">
         <source>Strip tags</source>
-        <target state="final">Odstranit značky</target>
+        <target state="needs-translation">Strip tags</target>
       </trans-unit>
-      <trans-unit id="flexform.stripTags.description" approved="yes">
+      <trans-unit id="flexform.stripTags.description">
         <source>Remove HTML tags from the feed content</source>
-        <target state="final">Odstranit HTML tagy z obsahu kanálu</target>
+        <target state="needs-translation">Remove HTML tags from the feed content</target>
       </trans-unit>
-      <trans-unit id="flexform.stripTags.I.yes" approved="yes">
+      <trans-unit id="flexform.stripTags.I.yes">
         <source>yes</source>
-        <target state="final">Ano</target>
+        <target state="needs-translation">yes</target>
       </trans-unit>
-      <trans-unit id="flexform.stripTags.I.no" approved="yes">
+      <trans-unit id="flexform.stripTags.I.no">
         <source>no</source>
-        <target state="final">Ne</target>
+        <target state="needs-translation">no</target>
       </trans-unit>
-      <trans-unit id="flexform.cacheDuration.label" approved="yes">
+      <trans-unit id="flexform.cacheDuration.label">
         <source>Feed cache</source>
-        <target state="final">Mezipaměť zdrojů</target>
+        <target state="needs-translation">Feed cache</target>
       </trans-unit>
-      <trans-unit id="flexform.cacheDuration.description" approved="yes">
+      <trans-unit id="flexform.cacheDuration.description">
         <source>Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache, empty = Defined by TypoScript)</source>
-        <target state="final">Čas v sekundách, kdy se data mají číst z mezipaměti až do dalšího obnovení mezipaměti. (0 = žádná keše, prázdná = definovaná TypoScript)</target>
+        <target state="needs-translation">Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache, empty = Defined by TypoScript)</target>
       </trans-unit>
-      <trans-unit id="flexform.placeholder.feed" approved="yes">
+      <trans-unit id="flexform.placeholder.feed">
         <source>Defined by Feed or TypoScript (default)</source>
-        <target state="final">Definováno kanálem nebo TypoScriptem (výchozí)</target>
+        <target state="needs-translation">Defined by Feed or TypoScript (default)</target>
       </trans-unit>
-      <trans-unit id="flexform.placeholder.typoscript" approved="yes">
+      <trans-unit id="flexform.placeholder.typoscript">
         <source>Defined by TypoScript (default)</source>
-        <target state="final">Definováno TypoScriptem (výchozí)</target>
+        <target state="needs-translation">Defined by TypoScript (default)</target>
       </trans-unit>
-      <trans-unit id="flexform.sheet_getFields.title" approved="yes">
+      <trans-unit id="flexform.sheet_getFields.title">
         <source>Get Fields</source>
-        <target state="final">Získat pole</target>
+        <target state="needs-translation">Get Fields</target>
       </trans-unit>
-      <trans-unit id="flexform.sheet_getFields.description" approved="yes">
+      <trans-unit id="flexform.sheet_getFields.description">
         <source>Select here which fields from the feed and feed items should be read using the SimplePie library and should be available as variables in the fluid template. If no fields were selected, then the TypoScript configuration is used.</source>
-        <target state="final">Zde vyberte, která pole z položek kanálu a kanálů by měla být přečtena pomocí knihovny SimplePie a měla by být k dispozici jako proměnné v šabloně tekutiny. Pokud nebyla vybrána žádná pole, pak je použita konfigurace TypoScriptu.</target>
+        <target state="needs-translation">Select here which fields from the feed and feed items should be read using the SimplePie library and should be available as variables in the fluid template. If no fields were selected, then the TypoScript configuration is used.</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.label" approved="yes">
+      <trans-unit id="flexform.getFields.feed.label">
         <source>Get fields from feed</source>
-        <target state="final">Získat pole z kanálu</target>
+        <target state="needs-translation">Get fields from feed</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.description" approved="yes">
+      <trans-unit id="flexform.getFields.feed.description">
         <source>Selection of the fields to be read from the feed.</source>
-        <target state="final">Výběr polí, která mají být přečtena z kanálu.</target>
+        <target state="needs-translation">Selection of the fields to be read from the feed.</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.group.feed" approved="yes">
+      <trans-unit id="flexform.getFields.group.feed">
         <source>Feed</source>
-        <target state="final">Zdroj</target>
+        <target state="needs-translation">Feed</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.author" approved="yes">
+      <trans-unit id="flexform.getFields.feed.I.author">
         <source>Author</source>
-        <target state="final">Autor</target>
+        <target state="needs-translation">Author</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.authors" approved="yes">
+      <trans-unit id="flexform.getFields.feed.I.authors">
         <source>Authors</source>
-        <target state="final">Autoři</target>
+        <target state="needs-translation">Authors</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.contributor" approved="yes">
+      <trans-unit id="flexform.getFields.feed.I.contributor">
         <source>Contributor</source>
-        <target state="final">Přispěvatel</target>
+        <target state="needs-translation">Contributor</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.contributors" approved="yes">
+      <trans-unit id="flexform.getFields.feed.I.contributors">
         <source>Contributors</source>
-        <target state="final">Přispěvatelé</target>
+        <target state="needs-translation">Contributors</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.copyright" approved="yes">
+      <trans-unit id="flexform.getFields.feed.I.copyright">
         <source>Copyright</source>
-        <target state="final">Autorská práva</target>
+        <target state="needs-translation">Copyright</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.description" approved="yes">
+      <trans-unit id="flexform.getFields.feed.I.description">
         <source>Description</source>
-        <target state="final">L 343, 22.12.2009, s. 1).</target>
+        <target state="needs-translation">Description</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.encoding" approved="yes">
+      <trans-unit id="flexform.getFields.feed.I.encoding">
         <source>Encoding</source>
-        <target state="final">Kódování</target>
+        <target state="needs-translation">Encoding</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.items" approved="yes">
+      <trans-unit id="flexform.getFields.feed.I.items">
         <source>Items</source>
-        <target state="final">Položky</target>
+        <target state="needs-translation">Items</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.item_quantity" approved="yes">
+      <trans-unit id="flexform.getFields.feed.I.item_quantity">
         <source>Item quantity</source>
-        <target state="final">Množství položky</target>
+        <target state="needs-translation">Item quantity</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.language" approved="yes">
+      <trans-unit id="flexform.getFields.feed.I.language">
         <source>Language</source>
-        <target state="final">Jazyk</target>
+        <target state="needs-translation">Language</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.link" approved="yes">
+      <trans-unit id="flexform.getFields.feed.I.link">
         <source>Link</source>
-        <target state="final">Odkaz</target>
+        <target state="needs-translation">Link</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.links" approved="yes">
+      <trans-unit id="flexform.getFields.feed.I.links">
         <source>Links</source>
-        <target state="final">Odkazy</target>
+        <target state="needs-translation">Links</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.permalink" approved="yes">
+      <trans-unit id="flexform.getFields.feed.I.permalink">
         <source>Permalink</source>
-        <target state="final">Trvalý odkaz</target>
+        <target state="needs-translation">Permalink</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.title" approved="yes">
+      <trans-unit id="flexform.getFields.feed.I.title">
         <source>Title</source>
-        <target state="final">Hlava 1 – Celkem</target>
+        <target state="needs-translation">Title</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.type" approved="yes">
+      <trans-unit id="flexform.getFields.feed.I.type">
         <source>Type</source>
-        <target state="final">Typ</target>
+        <target state="needs-translation">Type</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.latitude" approved="yes">
+      <trans-unit id="flexform.getFields.feed.I.latitude">
         <source>Latitude</source>
-        <target state="final">Zeměpisná šířka</target>
+        <target state="needs-translation">Latitude</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.longitude" approved="yes">
+      <trans-unit id="flexform.getFields.feed.I.longitude">
         <source>Longitude</source>
-        <target state="final">Zeměpisná délka</target>
+        <target state="needs-translation">Longitude</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.image_height" approved="yes">
+      <trans-unit id="flexform.getFields.feed.I.image_height">
         <source>Image Height</source>
-        <target state="final">Výška obrázku</target>
+        <target state="needs-translation">Image Height</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.image_link" approved="yes">
+      <trans-unit id="flexform.getFields.feed.I.image_link">
         <source>Image Link</source>
-        <target state="final">Odkaz na obrázek</target>
+        <target state="needs-translation">Image Link</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.image_title" approved="yes">
+      <trans-unit id="flexform.getFields.feed.I.image_title">
         <source>Image Title</source>
-        <target state="final">Název obrázku</target>
+        <target state="needs-translation">Image Title</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.image_url" approved="yes">
+      <trans-unit id="flexform.getFields.feed.I.image_url">
         <source>Image URL</source>
-        <target state="final">URL obrázku</target>
+        <target state="needs-translation">Image URL</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.image_width" approved="yes">
+      <trans-unit id="flexform.getFields.feed.I.image_width">
         <source>Image Width</source>
-        <target state="final">Šířka obrázku</target>
+        <target state="needs-translation">Image Width</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.all_discovered_feeds" approved="yes">
+      <trans-unit id="flexform.getFields.feed.I.all_discovered_feeds">
         <source>All Discovered Feeds</source>
-        <target state="final">Všechny nalezené kanály</target>
+        <target state="needs-translation">All Discovered Feeds</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.base" approved="yes">
+      <trans-unit id="flexform.getFields.feed.I.base">
         <source>Base</source>
-        <target state="final">Základ</target>
+        <target state="needs-translation">Base</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.feed.I.subscribe_url" approved="yes">
+      <trans-unit id="flexform.getFields.feed.I.subscribe_url">
         <source>Subscribe URL</source>
-        <target state="final">Subscribe URL</target>
+        <target state="needs-translation">Subscribe URL</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.label" approved="yes">
+      <trans-unit id="flexform.getFields.items.label">
         <source>Get fields from feed items</source>
-        <target state="final">Získat pole z položek kanálu</target>
+        <target state="needs-translation">Get fields from feed items</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.description" approved="yes">
+      <trans-unit id="flexform.getFields.items.description">
         <source>Selection of the fields to be read from the feed items.</source>
-        <target state="final">Výběr polí, která mají být přečtena z krmných položek.</target>
+        <target state="needs-translation">Selection of the fields to be read from the feed items.</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.group.items" approved="yes">
+      <trans-unit id="flexform.getFields.group.items">
         <source>Items</source>
-        <target state="final">Položky</target>
+        <target state="needs-translation">Items</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.author" approved="yes">
+      <trans-unit id="flexform.getFields.items.I.author">
         <source>Author</source>
-        <target state="final">Autor</target>
+        <target state="needs-translation">Author</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.authors" approved="yes">
+      <trans-unit id="flexform.getFields.items.I.authors">
         <source>Authors</source>
-        <target state="final">Autoři</target>
+        <target state="needs-translation">Authors</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.categories" approved="yes">
+      <trans-unit id="flexform.getFields.items.I.categories">
         <source>Categories</source>
-        <target state="final">Kategorie</target>
+        <target state="needs-translation">Categories</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.category" approved="yes">
+      <trans-unit id="flexform.getFields.items.I.category">
         <source>Category</source>
-        <target state="final">Kategorie</target>
+        <target state="needs-translation">Category</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.content" approved="yes">
+      <trans-unit id="flexform.getFields.items.I.content">
         <source>Content</source>
-        <target state="final">Obsah</target>
+        <target state="needs-translation">Content</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.contributor" approved="yes">
+      <trans-unit id="flexform.getFields.items.I.contributor">
         <source>Contributor</source>
-        <target state="final">Přispěvatel</target>
+        <target state="needs-translation">Contributor</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.contributors" approved="yes">
+      <trans-unit id="flexform.getFields.items.I.contributors">
         <source>Contributors</source>
-        <target state="final">Přispěvatelé</target>
+        <target state="needs-translation">Contributors</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.copyright" approved="yes">
+      <trans-unit id="flexform.getFields.items.I.copyright">
         <source>Copyright</source>
-        <target state="final">Autorská práva</target>
+        <target state="needs-translation">Copyright</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.date" approved="yes">
+      <trans-unit id="flexform.getFields.items.I.date">
         <source>Date (with parameter "U")</source>
-        <target state="final">Datum (s parametrem „U“)</target>
+        <target state="needs-translation">Date (with parameter "U")</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.description" approved="yes">
+      <trans-unit id="flexform.getFields.items.I.description">
         <source>Description</source>
-        <target state="final">L 343, 22.12.2009, s. 1).</target>
+        <target state="needs-translation">Description</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.enclosure" approved="yes">
+      <trans-unit id="flexform.getFields.items.I.enclosure">
         <source>Enclosure</source>
-        <target state="final">Uzavření</target>
+        <target state="needs-translation">Enclosure</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.enclosures" approved="yes">
+      <trans-unit id="flexform.getFields.items.I.enclosures">
         <source>Enclosures</source>
-        <target state="final">Prostory</target>
+        <target state="needs-translation">Enclosures</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.feed" approved="yes">
+      <trans-unit id="flexform.getFields.items.I.feed">
         <source>Feed</source>
-        <target state="final">Zdroj</target>
+        <target state="needs-translation">Feed</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.id" approved="yes">
+      <trans-unit id="flexform.getFields.items.I.id">
         <source>ID</source>
-        <target state="final">ID</target>
+        <target state="needs-translation">ID</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.link" approved="yes">
+      <trans-unit id="flexform.getFields.items.I.link">
         <source>Link</source>
-        <target state="final">Odkaz</target>
+        <target state="needs-translation">Link</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.links" approved="yes">
+      <trans-unit id="flexform.getFields.items.I.links">
         <source>Links</source>
-        <target state="final">Odkazy</target>
+        <target state="needs-translation">Links</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.local_date" approved="yes">
+      <trans-unit id="flexform.getFields.items.I.local_date">
         <source>Local Date (with empty parameter)</source>
-        <target state="final">Místní datum (s prázdným parametrem)</target>
+        <target state="needs-translation">Local Date (with empty parameter)</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.permalink" approved="yes">
+      <trans-unit id="flexform.getFields.items.I.permalink">
         <source>Permalink</source>
-        <target state="final">Trvalý odkaz</target>
+        <target state="needs-translation">Permalink</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.source" approved="yes">
+      <trans-unit id="flexform.getFields.items.I.source">
         <source>Source</source>
-        <target state="final">Zdroj</target>
+        <target state="needs-translation">Source</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.title" approved="yes">
+      <trans-unit id="flexform.getFields.items.I.title">
         <source>Title</source>
-        <target state="final">Hlava 1 – Celkem</target>
+        <target state="needs-translation">Title</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.latitude" approved="yes">
+      <trans-unit id="flexform.getFields.items.I.latitude">
         <source>Latitude</source>
-        <target state="final">Zeměpisná šířka</target>
+        <target state="needs-translation">Latitude</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.longitude" approved="yes">
+      <trans-unit id="flexform.getFields.items.I.longitude">
         <source>Longitude</source>
-        <target state="final">Zeměpisná délka</target>
+        <target state="needs-translation">Longitude</target>
       </trans-unit>
-      <trans-unit id="flexform.getFields.items.I.base" approved="yes">
+      <trans-unit id="flexform.getFields.items.I.base">
         <source>Base</source>
-        <target state="final">Základ</target>
+        <target state="needs-translation">Base</target>
       </trans-unit>
-      <trans-unit id="constants.customcategory.plugin.tx_feeddisplay_pi1" approved="yes">
+      <trans-unit id="constants.customcategory.plugin.tx_feeddisplay_pi1">
         <source>Feed Display</source>
-        <target state="final">Zobrazení kanálu</target>
+        <target state="needs-translation">Feed Display</target>
       </trans-unit>
-      <trans-unit id="constants.subcategory.general" approved="yes">
+      <trans-unit id="constants.subcategory.general">
         <source>General</source>
-        <target state="final">Obecná ustanovení</target>
+        <target state="needs-translation">General</target>
       </trans-unit>
-      <trans-unit id="constants.subcategory.advanced" approved="yes">
+      <trans-unit id="constants.subcategory.advanced">
         <source>Advanced</source>
-        <target state="final">Rozšířené</target>
+        <target state="needs-translation">Advanced</target>
       </trans-unit>
-      <trans-unit id="constants.subcategory.getFields" approved="yes">
+      <trans-unit id="constants.subcategory.getFields">
         <source>Fields to get from Feed and Items</source>
-        <target state="final">Pole pro získání z feedu a položek</target>
+        <target state="needs-translation">Fields to get from Feed and Items</target>
       </trans-unit>
-      <trans-unit id="constants.view.templateRootPath" approved="yes">
+      <trans-unit id="constants.view.templateRootPath">
         <source>Path to template root (FE)</source>
-        <target state="final">Cesta k kořenové složce šablony (FE)</target>
+        <target state="needs-translation">Path to template root (FE)</target>
       </trans-unit>
-      <trans-unit id="constants.view.partialRootPath" approved="yes">
+      <trans-unit id="constants.view.partialRootPath">
         <source>Path to template partials (FE)</source>
-        <target state="final">Cesta k šabloně dílčí (FE)</target>
+        <target state="needs-translation">Path to template partials (FE)</target>
       </trans-unit>
-      <trans-unit id="constants.view.layoutRootPath" approved="yes">
+      <trans-unit id="constants.view.layoutRootPath">
         <source>Path to template layouts (FE)</source>
-        <target state="final">Cesta k šablonám (FE)</target>
+        <target state="needs-translation">Path to template layouts (FE)</target>
       </trans-unit>
-      <trans-unit id="constants.settings.feedUrl" approved="yes">
+      <trans-unit id="constants.settings.feedUrl">
         <source>Feed URL:URL that is fetched by the service</source>
-        <target state="final">URL kanálu:URL, která je načtena službou</target>
+        <target state="needs-translation">Feed URL:URL that is fetched by the service</target>
       </trans-unit>
-      <trans-unit id="constants.settings.maxFeedCount" approved="yes">
+      <trans-unit id="constants.settings.maxFeedCount">
         <source>Max. items:Maximum feed items to show</source>
-        <target state="final">Max. položek: Maximální počet zobrazených položek</target>
+        <target state="needs-translation">Max. items:Maximum feed items to show</target>
       </trans-unit>
-      <trans-unit id="constants.settings.maxContentLength" approved="yes">
+      <trans-unit id="constants.settings.maxContentLength">
         <source>Max. content length:Crop the characters of the feed content to the configured length</source>
-        <target state="final">Max. délka obsahu:Ořízněte znaky obsahu kanálu na nastavenou délku</target>
+        <target state="needs-translation">Max. content length:Crop the characters of the feed content to the configured length</target>
       </trans-unit>
-      <trans-unit id="constants.settings.maxHeaderLength" approved="yes">
+      <trans-unit id="constants.settings.maxHeaderLength">
         <source>Max. header length:Crop the characters of the feed header to the configured length</source>
-        <target state="final">Max. délka záhlaví: Oříznout znaky záhlaví na konfigurovanou délku</target>
+        <target state="needs-translation">Max. header length:Crop the characters of the feed header to the configured length</target>
       </trans-unit>
-      <trans-unit id="constants.settings.linkTarget" approved="yes">
+      <trans-unit id="constants.settings.linkTarget">
         <source>Target:Target attribute to define the feed link behavior</source>
-        <target state="final">Cíl:Cílový atribut pro definování chování odkazu kanálu</target>
+        <target state="needs-translation">Target:Target attribute to define the feed link behavior</target>
       </trans-unit>
-      <trans-unit id="constants.settings.linkTarget.I.default" approved="yes">
+      <trans-unit id="constants.settings.linkTarget.I.default">
         <source>Defined by TypoScript (default)</source>
-        <target state="final">Definováno TypoScriptem (výchozí)</target>
+        <target state="needs-translation">Defined by TypoScript (default)</target>
       </trans-unit>
-      <trans-unit id="constants.settings.linkTarget.I.blank" approved="yes">
+      <trans-unit id="constants.settings.linkTarget.I.blank">
         <source>Opens in a new window or tab</source>
-        <target state="final">Otevře se v novém okně nebo záložce</target>
+        <target state="needs-translation">Opens in a new window or tab</target>
       </trans-unit>
-      <trans-unit id="constants.settings.linkTarget.I.self" approved="yes">
+      <trans-unit id="constants.settings.linkTarget.I.self">
         <source>Opens in the same frame as it was clicked</source>
-        <target state="final">Otevře se ve stejném rámečku, na který byl kliknut</target>
+        <target state="needs-translation">Opens in the same frame as it was clicked</target>
       </trans-unit>
-      <trans-unit id="constants.settings.linkTarget.I.parent" approved="yes">
+      <trans-unit id="constants.settings.linkTarget.I.parent">
         <source>Opens in the parent frame</source>
-        <target state="final">Otevře se v nadřazeném snímku</target>
+        <target state="needs-translation">Opens in the parent frame</target>
       </trans-unit>
-      <trans-unit id="constants.settings.linkTarget.I.top" approved="yes">
+      <trans-unit id="constants.settings.linkTarget.I.top">
         <source>Opens in the full body of the window</source>
-        <target state="final">Otevře se v úplném těle okna</target>
+        <target state="needs-translation">Opens in the full body of the window</target>
       </trans-unit>
-      <trans-unit id="constants.settings.logoMaxWidth" approved="yes">
+      <trans-unit id="constants.settings.logoMaxWidth">
         <source>Logo width:Width of the feeds logo image</source>
-        <target state="final">Šířka loga: Šířka loga kanálů</target>
+        <target state="needs-translation">Logo width:Width of the feeds logo image</target>
       </trans-unit>
-      <trans-unit id="constants.settings.logoMaxHeight" approved="yes">
+      <trans-unit id="constants.settings.logoMaxHeight">
         <source>Logo height:Height of the feeds logo image</source>
-        <target state="final">Výška loga: Výška loga kanálů</target>
+        <target state="needs-translation">Logo height:Height of the feeds logo image</target>
       </trans-unit>
-      <trans-unit id="constants.settings.feedIconMaxWidth" approved="yes">
+      <trans-unit id="constants.settings.feedIconMaxWidth">
         <source>Feed icon width:Width of the feeds icon image</source>
-        <target state="final">Šířka ikony kanálu:Šířka obrázku ikony kanálů</target>
+        <target state="needs-translation">Feed icon width:Width of the feeds icon image</target>
       </trans-unit>
-      <trans-unit id="constants.settings.feedIconMaxHeight" approved="yes">
+      <trans-unit id="constants.settings.feedIconMaxHeight">
         <source>Feed icon height:Height of the feeds icon image</source>
-        <target state="final">Výška ikony kanálu: Výška obrázku ikony kanálů</target>
+        <target state="needs-translation">Feed icon height:Height of the feeds icon image</target>
       </trans-unit>
-      <trans-unit id="constants.settings.errorMessage" approved="yes">
+      <trans-unit id="constants.settings.errorMessage">
         <source>Error message:This message is displayed if no feed items could be fetched</source>
-        <target state="final">Chybová zpráva:Tato zpráva se zobrazí, pokud nelze načíst žádné položky kanálu</target>
+        <target state="needs-translation">Error message:This message is displayed if no feed items could be fetched</target>
       </trans-unit>
-      <trans-unit id="constants.settings.dateFormat" approved="yes">
+      <trans-unit id="constants.settings.dateFormat">
         <source>Date format:Use a PHP date format compatible with DateTimeInterface::format()</source>
-        <target state="final">Formát datumu: Použijte PHP formát data kompatibilní s DateTimeInterface::format()</target>
+        <target state="needs-translation">Date format:Use a PHP date format compatible with DateTimeInterface::format()</target>
       </trans-unit>
-      <trans-unit id="constants.settings.stripTags" approved="yes">
+      <trans-unit id="constants.settings.stripTags">
         <source>Strip tags:Remove HTML tags from the feed content</source>
-        <target state="final">Odstranit značky:Odstranit HTML značky z obsahu kanálu</target>
+        <target state="needs-translation">Strip tags:Remove HTML tags from the feed content</target>
       </trans-unit>
-      <trans-unit id="constants.settings.cacheDuration" approved="yes">
+      <trans-unit id="constants.settings.cacheDuration">
         <source>Feed cache:Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</source>
-        <target state="final">Cache:Čas v sekundách, kdy se data mají číst z mezipaměti až do dalšího obnovení mezipaměti. (0 = žádná keše)</target>
+        <target state="needs-translation">Feed cache:Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</target>
       </trans-unit>
-      <trans-unit id="constants.settings.ignoreFlexFormSettingsIfEmpty" approved="yes">
+      <trans-unit id="constants.settings.ignoreFlexFormSettingsIfEmpty">
         <source>Ignore FlexForm Settings if empty:Comma separated list of FlexForm settings that will be ignored in the extension settings merge process, if their value is considered empty (either an empty string or a string containing 0).</source>
-        <target state="final">Ignorovat nastavení FlexForm v případě, že je prázdný: seznam FlexFormuláře oddělený čárkami, který bude v procesu sloučení rozšíření ignorován, pokud je jejich hodnota považována za prázdnou (buď prázdný řetězec nebo řetězec obsahující 0).</target>
+        <target state="needs-translation">Ignore FlexForm Settings if empty:Comma separated list of FlexForm settings that will be ignored in the extension settings merge process, if their value is considered empty (either an empty string or a string containing 0).</target>
       </trans-unit>
-      <trans-unit id="constants.settings.getFields.feed" approved="yes">
+      <trans-unit id="constants.settings.getFields.feed">
         <source>Feed fields to get:Comma-separated list of fields to be read from the feed by SimplePie and made available as variables in Fluid.</source>
-        <target state="final">Informační pole pro získání:Seznam polí, která budou oddělena čárkou od kanálu od SimplePie a budou k dispozici jako proměnné v Fluid.</target>
+        <target state="needs-translation">Feed fields to get:Comma-separated list of fields to be read from the feed by SimplePie and made available as variables in Fluid.</target>
       </trans-unit>
-      <trans-unit id="constants.settings.getFields.items" approved="yes">
+      <trans-unit id="constants.settings.getFields.items">
         <source>Feed items fields to get:Comma-separated list of fields to be read from the feed items by SimplePie and made available as variables in Fluid.</source>
-        <target state="final">Krmivo políčka pro získání:Čárkou oddělený seznam polí, která mají být přečtena od položek kanálu SimplePie a zpřístupněna jako proměnné v tekutině.</target>
+        <target state="needs-translation">Feed items fields to get:Comma-separated list of fields to be read from the feed items by SimplePie and made available as variables in Fluid.</target>
       </trans-unit>
-      <trans-unit id="sets.feeddisplay.label" approved="yes">
+      <trans-unit id="sets.feeddisplay.label">
         <source>Feed Display</source>
-        <target state="final">Zobrazení kanálu</target>
+        <target state="needs-translation">Feed Display</target>
       </trans-unit>
     </body>
   </file>
