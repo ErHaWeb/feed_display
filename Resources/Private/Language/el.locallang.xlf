@@ -31,6 +31,14 @@
         <source>Items</source>
         <target state="needs-translation">Items</target>
       </trans-unit>
+      <trans-unit id="feed.links">
+        <source>Links</source>
+        <target state="needs-translation">Links</target>
+      </trans-unit>
+      <trans-unit id="feed.link">
+        <source>Link</source>
+        <target state="needs-translation">Link</target>
+      </trans-unit>
       <trans-unit id="item.categories">
         <source>Categories</source>
         <target state="needs-translation">Categories</target>
