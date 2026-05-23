@@ -85,11 +85,11 @@
       </trans-unit>
       <trans-unit id="item.enclosure" approved="yes">
         <source>Enclosure</source>
-        <target state="final">Uzavření</target>
+        <target state="final">Příloha</target>
       </trans-unit>
       <trans-unit id="item.enclosures" approved="yes">
         <source>Enclosures</source>
-        <target state="final">Prostory</target>
+        <target state="final">Přílohy</target>
       </trans-unit>
       <trans-unit id="item.latitude" approved="yes">
         <source>Latitude</source>
