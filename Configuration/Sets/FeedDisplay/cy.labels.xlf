@@ -5,11 +5,11 @@
     <body>
       <trans-unit id="label" resname="label" approved="yes">
         <source>Feed Display</source>
-        <target state="final">Feed Display</target>
+        <target state="final">Dangos Ffrwd</target>
       </trans-unit>
       <trans-unit id="categories.feeddisplay" resname="categories.feeddisplay" approved="yes">
         <source>Feed Display</source>
-        <target state="final">Feed Display</target>
+        <target state="final">Dangos Ffrwd</target>
       </trans-unit>
       <trans-unit id="categories.feeddisplay.templates" resname="categories.feeddisplay.templates" approved="yes">
         <source>Templates</source>
