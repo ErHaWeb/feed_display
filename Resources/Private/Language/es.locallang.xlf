@@ -65,7 +65,7 @@
       </trans-unit>
       <trans-unit id="item.copyright" approved="yes">
         <source>Copyright</source>
-        <target state="final">Copyright</target>
+        <target state="final">Derechos de autor</target>
       </trans-unit>
       <trans-unit id="item.date" approved="yes">
         <source>Date</source>
@@ -85,11 +85,11 @@
       </trans-unit>
       <trans-unit id="item.enclosure" approved="yes">
         <source>Enclosure</source>
-        <target state="final">Armario</target>
+        <target state="final">Adjunto</target>
       </trans-unit>
       <trans-unit id="item.enclosures" approved="yes">
         <source>Enclosures</source>
-        <target state="final">Armarios</target>
+        <target state="final">Adjuntos</target>
       </trans-unit>
       <trans-unit id="item.latitude" approved="yes">
         <source>Latitude</source>
@@ -109,7 +109,7 @@
       </trans-unit>
       <trans-unit id="noTemplateError" approved="yes">
         <source>Feed Display: Please include static TypoScript [EXT:feed_display/Configuration/TypoScript/]</source>
-        <target state="final">Pantalla de alimento: Por favor, incluya TypoScript estático [EXT:feed_display/Configuration/TypoScript/]</target>
+        <target state="final">Feed Display: Por favor, incluya TypoScript estático [EXT:feed_display/Configuration/TypoScript/]</target>
       </trans-unit>
       <trans-unit id="noItemsError" approved="yes">
         <source>Sorry, no items could be fetched.</source>
