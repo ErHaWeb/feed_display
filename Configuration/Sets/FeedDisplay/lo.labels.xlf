@@ -5,11 +5,11 @@
     <body>
       <trans-unit id="label" resname="label" approved="yes">
         <source>Feed Display</source>
-        <target state="final">Feed Display</target>
+        <target state="final">ການສະແດງຟີດ</target>
       </trans-unit>
       <trans-unit id="categories.feeddisplay" resname="categories.feeddisplay" approved="yes">
         <source>Feed Display</source>
-        <target state="final">Feed Display</target>
+        <target state="final">ການສະແດງຟີດ</target>
       </trans-unit>
       <trans-unit id="categories.feeddisplay.templates" resname="categories.feeddisplay.templates" approved="yes">
         <source>Templates</source>
@@ -29,15 +29,15 @@
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.view.templateRootPath" resname="settings.plugin.tx_feeddisplay_pi1.view.templateRootPath" approved="yes">
         <source>Path to template root (FE)</source>
-        <target state="final">Path to template root (FE)</target>
+        <target state="final">ເສັ້ນທາງໄປຫາຮາກແມ່ແບບ (FE)</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.view.partialRootPath" resname="settings.plugin.tx_feeddisplay_pi1.view.partialRootPath" approved="yes">
         <source>Path to template partials (FE)</source>
-        <target state="final">Path to template partials (FE)</target>
+        <target state="final">ເສັ້ນທາງໄປຫາ partial ແມ່ແບບ (FE)</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.view.layoutRootPath" resname="settings.plugin.tx_feeddisplay_pi1.view.layoutRootPath" approved="yes">
         <source>Path to template layouts (FE)</source>
-        <target state="final">Path to template layouts (FE)</target>
+        <target state="final">ເສັ້ນທາງໄປຫາ layout ແມ່ແບບ (FE)</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.feedUrl" resname="settings.plugin.tx_feeddisplay_pi1.settings.feedUrl" approved="yes">
         <source>Feed URL</source>
@@ -45,7 +45,7 @@
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.feedUrl" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.feedUrl" approved="yes">
         <source>URL that is fetched by the service</source>
-        <target state="final">URL that is fetched by the service</target>
+        <target state="final">URL ທີ່ບໍລິການດຶງ</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.maxFeedCount" resname="settings.plugin.tx_feeddisplay_pi1.settings.maxFeedCount" approved="yes">
         <source>Max. items</source>
@@ -53,7 +53,7 @@
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.maxFeedCount" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.maxFeedCount" approved="yes">
         <source>Maximum feed items to show</source>
-        <target state="final">Maximum feed items to show</target>
+        <target state="final">ຈຳນວນລາຍການຟີດສູງສຸດທີ່ຈະສະແດງ</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.maxContentLength" resname="settings.plugin.tx_feeddisplay_pi1.settings.maxContentLength" approved="yes">
         <source>Max. content length</source>
@@ -61,7 +61,7 @@
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.maxContentLength" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.maxContentLength" approved="yes">
         <source>Crop the characters of the feed content to the configured length</source>
-        <target state="final">Crop the characters of the feed content to the configured length</target>
+        <target state="final">ຕັດຕົວອັກສອນຂອງເນື້ອຫາຟີດໃຫ້ຕາມຄວາມຍາວທີ່ກຳນົດ</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.maxHeaderLength" resname="settings.plugin.tx_feeddisplay_pi1.settings.maxHeaderLength" approved="yes">
         <source>Max. header length</source>
@@ -69,7 +69,7 @@
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.maxHeaderLength" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.maxHeaderLength" approved="yes">
         <source>Crop the characters of the feed header to the configured length</source>
-        <target state="final">Crop the characters of the feed header to the configured length</target>
+        <target state="final">ຕັດຕົວອັກສອນຂອງຫົວຟີດໃຫ້ຕາມຄວາມຍາວທີ່ກຳນົດ</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget" approved="yes">
         <source>Target</source>
@@ -77,59 +77,59 @@
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.linkTarget" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.linkTarget" approved="yes">
         <source>Target attribute to define the feed link behavior</source>
-        <target state="final">Target attribute to define the feed link behavior</target>
+        <target state="final">ແອັດທຣິບິວ target ເພື່ອກຳນົດພຶດຕິກຳລິ້ງຟີດ</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.default" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.default" approved="yes">
         <source>Defined by TypoScript (default)</source>
-        <target state="final">Defined by TypoScript (default)</target>
+        <target state="final">ກຳນົດໂດຍ TypoScript (ຄ່າເລີ່ມຕົ້ນ)</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.blank" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.blank" approved="yes">
         <source>Opens in a new window or tab</source>
-        <target state="final">Opens in a new window or tab</target>
+        <target state="final">ເປີດໃນໜ້າຕ່າງ ຫຼືແທັບໃໝ່</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.self" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.self" approved="yes">
         <source>Opens in the same frame as it was clicked</source>
-        <target state="final">Opens in the same frame as it was clicked</target>
+        <target state="final">ເປີດໃນ frame ດຽວກັນທີ່ຖືກຄລິກ</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.parent" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.parent" approved="yes">
         <source>Opens in the parent frame</source>
-        <target state="final">Opens in the parent frame</target>
+        <target state="final">ເປີດໃນ parent frame</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.top" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.top" approved="yes">
         <source>Opens in the full body of the window</source>
-        <target state="final">Opens in the full body of the window</target>
+        <target state="final">ເປີດໃນໜ້າຕ່າງທັງໝົດ</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.logoMaxWidth" resname="settings.plugin.tx_feeddisplay_pi1.settings.logoMaxWidth" approved="yes">
         <source>Logo width</source>
-        <target state="final">Logo width</target>
+        <target state="final">ຄວາມກວ້າງໂລໂກ້</target>
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.logoMaxWidth" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.logoMaxWidth" approved="yes">
         <source>Width of the feeds logo image</source>
-        <target state="final">Width of the feeds logo image</target>
+        <target state="final">ຄວາມກວ້າງຂອງຮູບໂລໂກ້ຟີດ</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.logoMaxHeight" resname="settings.plugin.tx_feeddisplay_pi1.settings.logoMaxHeight" approved="yes">
         <source>Logo height</source>
-        <target state="final">Logo height</target>
+        <target state="final">ຄວາມສູງໂລໂກ້</target>
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.logoMaxHeight" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.logoMaxHeight" approved="yes">
         <source>Height of the feeds logo image</source>
-        <target state="final">Height of the feeds logo image</target>
+        <target state="final">ຄວາມສູງຂອງຮູບໂລໂກ້ຟີດ</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.feedIconMaxWidth" resname="settings.plugin.tx_feeddisplay_pi1.settings.feedIconMaxWidth" approved="yes">
         <source>Feed icon width</source>
-        <target state="final">Feed icon width</target>
+        <target state="final">ຄວາມກວ້າງໄອຄອນຟີດ</target>
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.feedIconMaxWidth" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.feedIconMaxWidth" approved="yes">
         <source>Width of the feeds icon image</source>
-        <target state="final">Width of the feeds icon image</target>
+        <target state="final">ຄວາມກວ້າງຂອງຮູບໄອຄອນຟີດ</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.feedIconMaxHeight" resname="settings.plugin.tx_feeddisplay_pi1.settings.feedIconMaxHeight" approved="yes">
         <source>Feed icon height</source>
-        <target state="final">Feed icon height</target>
+        <target state="final">ຄວາມສູງໄອຄອນຟີດ</target>
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.feedIconMaxHeight" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.feedIconMaxHeight" approved="yes">
         <source>Height of the feeds icon image</source>
-        <target state="final">Height of the feeds icon image</target>
+        <target state="final">ຄວາມສູງຂອງຮູບໄອຄອນຟີດ</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.errorMessage" resname="settings.plugin.tx_feeddisplay_pi1.settings.errorMessage" approved="yes">
         <source>Error message</source>
@@ -137,7 +137,7 @@
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.errorMessage" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.errorMessage" approved="yes">
         <source>This message is displayed if no feed items could be fetched</source>
-        <target state="final">This message is displayed if no feed items could be fetched</target>
+        <target state="final">ຂໍ້ຄວາມນີ້ຈະສະແດງຖ້າບໍ່ສາມາດດຶງລາຍການຟີດໄດ້</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.dateFormat" resname="settings.plugin.tx_feeddisplay_pi1.settings.dateFormat" approved="yes">
         <source>Date format</source>
@@ -145,7 +145,7 @@
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.dateFormat" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.dateFormat" approved="yes">
         <source>Use a PHP date format compatible with DateTimeInterface::format()</source>
-        <target state="final">Use a PHP date format compatible with DateTimeInterface::format()</target>
+        <target state="final">ໃຊ້ຮູບແບບວັນທີ PHP ທີ່ເຂົ້າກັບ DateTimeInterface::format()</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.stripTags" resname="settings.plugin.tx_feeddisplay_pi1.settings.stripTags" approved="yes">
         <source>Strip tags</source>
@@ -153,7 +153,7 @@
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.stripTags" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.stripTags" approved="yes">
         <source>Remove HTML tags from the feed content</source>
-        <target state="final">Remove HTML tags from the feed content</target>
+        <target state="final">ລຶບແທັກ HTML ອອກຈາກເນື້ອຫາຟີດ</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.cacheDuration" resname="settings.plugin.tx_feeddisplay_pi1.settings.cacheDuration" approved="yes">
         <source>Feed cache</source>
@@ -161,31 +161,31 @@
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.cacheDuration" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.cacheDuration" approved="yes">
         <source>Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</source>
-        <target state="final">Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</target>
+        <target state="final">ເວລາເປັນວິນາທີທີ່ຂໍ້ມູນຖືກອ່ານຈາກແຄຊຈົນຮອດການຕໍ່ອາຍຸແຄຊຄັ້ງຕໍ່ໄປ. (0 = ບໍ່ມີແຄຊ)</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty" resname="settings.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty" approved="yes">
         <source>Ignore FlexForm Settings if empty</source>
-        <target state="final">Ignore FlexForm Settings if empty</target>
+        <target state="final">ບໍ່ສົນໃຈການຕັ້ງຄ່າ FlexForm ຖ້າວ່າງ</target>
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty" approved="yes">
         <source>Comma separated list of FlexForm settings that will be ignored in the extension settings merge process, if their value is considered empty (either an empty string or a string containing 0).</source>
-        <target state="final">Comma separated list of FlexForm settings that will be ignored in the extension settings merge process, if their value is considered empty (either an empty string or a string containing 0).</target>
+        <target state="final">ລາຍຊື່ການຕັ້ງຄ່າ FlexForm ທີ່ແຍກດ້ວຍຈຸດຈໍ້າ ທີ່ຈະຖືກບໍ່ສົນໃຈໃນຂັ້ນຕອນຮວມການຕັ້ງຄ່າສ່ວນຂະຫຍາຍ ຖ້າຄ່າຂອງມັນຖືກຖືວ່າວ່າງ (ສະຕຣິງວ່າງ ຫຼືສະຕຣິງທີ່ມີ 0).</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.getFields.feed" resname="settings.plugin.tx_feeddisplay_pi1.settings.getFields.feed" approved="yes">
         <source>Feed fields to get</source>
-        <target state="final">Feed fields to get</target>
+        <target state="final">ຟິວຂອງຟີດທີ່ຈະດຶງ</target>
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.getFields.feed" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.getFields.feed" approved="yes">
         <source>Comma-separated list of fields to be read from the feed by SimplePie and made available as variables in Fluid.</source>
-        <target state="final">Comma-separated list of fields to be read from the feed by SimplePie and made available as variables in Fluid.</target>
+        <target state="final">ລາຍຊື່ຟິວທີ່ແຍກດ້ວຍຈຸດຈໍ້າ ທີ່ SimplePie ອ່ານຈາກຟີດ ແລະເຮັດໃຫ້ໃຊ້ໄດ້ເປັນຕົວແປໃນ Fluid.</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.getFields.items" resname="settings.plugin.tx_feeddisplay_pi1.settings.getFields.items" approved="yes">
         <source>Feed items fields to get</source>
-        <target state="final">Feed items fields to get</target>
+        <target state="final">ຟິວຂອງລາຍການຟີດທີ່ຈະດຶງ</target>
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.getFields.items" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.getFields.items" approved="yes">
         <source>Comma-separated list of fields to be read from the feed items by SimplePie and made available as variables in Fluid.</source>
-        <target state="final">Comma-separated list of fields to be read from the feed items by SimplePie and made available as variables in Fluid.</target>
+        <target state="final">ລາຍຊື່ຟິວທີ່ແຍກດ້ວຍຈຸດຈໍ້າ ທີ່ SimplePie ອ່ານຈາກລາຍການຟີດ ແລະເຮັດໃຫ້ໃຊ້ໄດ້ເປັນຕົວແປໃນ Fluid.</target>
       </trans-unit>
     </body>
   </file>
