@@ -5,7 +5,7 @@
     <body>
       <trans-unit id="feed.categories" approved="yes">
         <source>Categories</source>
-        <target state="final">Categoriechar@@0n</target>
+        <target state="final">Categorieën</target>
       </trans-unit>
       <trans-unit id="feed.category" approved="yes">
         <source>Category</source>
@@ -41,7 +41,7 @@
       </trans-unit>
       <trans-unit id="item.categories" approved="yes">
         <source>Categories</source>
-        <target state="final">Categoriechar@@0n</target>
+        <target state="final">Categorieën</target>
       </trans-unit>
       <trans-unit id="item.category" approved="yes">
         <source>Category</source>
@@ -85,11 +85,11 @@
       </trans-unit>
       <trans-unit id="item.enclosure" approved="yes">
         <source>Enclosure</source>
-        <target state="final">Dichtbij</target>
+        <target state="final">Bijlage</target>
       </trans-unit>
       <trans-unit id="item.enclosures" approved="yes">
         <source>Enclosures</source>
-        <target state="final">Kasten</target>
+        <target state="final">Bijlagen</target>
       </trans-unit>
       <trans-unit id="item.latitude" approved="yes">
         <source>Latitude</source>
