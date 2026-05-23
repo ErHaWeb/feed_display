@@ -53,7 +53,7 @@
       </trans-unit>
       <trans-unit id="flexform.linkTarget.label" approved="yes">
         <source>Target</source>
-        <target state="final">Target</target>
+        <target state="final">ターゲット</target>
       </trans-unit>
       <trans-unit id="flexform.linkTarget.description" approved="yes">
         <source>Target attribute to define the feed link behavior</source>
@@ -133,11 +133,11 @@
       </trans-unit>
       <trans-unit id="flexform.dateFormat.description" approved="yes">
         <source>Use a PHP date format compatible with DateTimeInterface::format() (empty = Defined by TypoScript)</source>
-        <target state="final">DateTimeInterface:::format() (empty = TypoScriptで定義) と互換性のあるPHPの日付フォーマットを使用する</target>
+        <target state="final">DateTimeInterface::format() と互換性のある PHP の日付フォーマットを使用します（空 = TypoScript で定義）</target>
       </trans-unit>
       <trans-unit id="flexform.stripTags.label" approved="yes">
         <source>Strip tags</source>
-        <target state="final">削除タグ</target>
+        <target state="final">タグを削除</target>
       </trans-unit>
       <trans-unit id="flexform.stripTags.description" approved="yes">
         <source>Remove HTML tags from the feed content</source>
@@ -173,7 +173,7 @@
       </trans-unit>
       <trans-unit id="flexform.sheet_getFields.description" approved="yes">
         <source>Select here which fields from the feed and feed items should be read using the SimplePie library and should be available as variables in the fluid template. If no fields were selected, then the TypoScript configuration is used.</source>
-        <target state="final">ここでは、format@@0ライブラリを使用してFeed項目とFeed項目からどの項目を読み込むかを選択し、流体テンプレートの変数として使用できます。 フィールドが選択されていない場合は、TypoScript 構成が使用されます。</target>
+        <target state="final">ここで、SimplePie ライブラリを使用してフィードおよびフィード項目から読み込み、Fluid テンプレートで変数として使用できるフィールドを選択します。フィールドが選択されていない場合は、TypoScript 設定が使用されます。</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.label" approved="yes">
         <source>Get fields from feed</source>
@@ -281,11 +281,11 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.base" approved="yes">
         <source>Base</source>
-        <target state="final">Base</target>
+        <target state="final">ベース</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.subscribe_url" approved="yes">
         <source>Subscribe URL</source>
-        <target state="final">Subscribe URL</target>
+        <target state="final">購読 URL</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.label" approved="yes">
         <source>Get fields from feed items</source>
@@ -345,7 +345,7 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.enclosures" approved="yes">
         <source>Enclosures</source>
-        <target state="final">エンクロージャー数</target>
+        <target state="final">エンクロージャー</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.feed" approved="yes">
         <source>Feed</source>
@@ -389,7 +389,7 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.base" approved="yes">
         <source>Base</source>
-        <target state="final">Base</target>
+        <target state="final">ベース</target>
       </trans-unit>
       <trans-unit id="constants.customcategory.plugin.tx_feeddisplay_pi1" approved="yes">
         <source>Feed Display</source>
@@ -481,7 +481,7 @@
       </trans-unit>
       <trans-unit id="constants.settings.dateFormat" approved="yes">
         <source>Date format:Use a PHP date format compatible with DateTimeInterface::format()</source>
-        <target state="final">日付フォーマット:DateTimeInterface:::format()と互換性のあるPHPの日付フォーマットを使用します。</target>
+        <target state="final">日付フォーマット:DateTimeInterface::format() と互換性のある PHP の日付フォーマットを使用します</target>
       </trans-unit>
       <trans-unit id="constants.settings.stripTags" approved="yes">
         <source>Strip tags:Remove HTML tags from the feed content</source>
@@ -497,11 +497,11 @@
       </trans-unit>
       <trans-unit id="constants.settings.getFields.feed" approved="yes">
         <source>Feed fields to get:Comma-separated list of fields to be read from the feed by SimplePie and made available as variables in Fluid.</source>
-        <target state="final">取得するフィード項目:Commaで区切られたフィードから読み込まれる項目のリストSimplePieによって変数として使用可能になりました。</target>
+        <target state="final">取得するフィードフィールド:SimplePie によってフィードから読み込まれ、Fluid 内で変数として利用できるフィールドのカンマ区切りリスト。</target>
       </trans-unit>
       <trans-unit id="constants.settings.getFields.items" approved="yes">
         <source>Feed items fields to get:Comma-separated list of fields to be read from the feed items by SimplePie and made available as variables in Fluid.</source>
-        <target state="final">取得するフィード項目項目項目項目項目項目をカンマで区切ってフィード項目から読み込む項目のリストSimplePie で変数として使用できるようにしました。</target>
+        <target state="final">取得するフィードアイテムフィールド:SimplePie によってフィードアイテムから読み込まれ、Fluid 内で変数として利用できるフィールドのカンマ区切りリスト。</target>
       </trans-unit>
       <trans-unit id="sets.feeddisplay.label" approved="yes">
         <source>Feed Display</source>
