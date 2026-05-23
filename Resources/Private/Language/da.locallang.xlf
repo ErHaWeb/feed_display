@@ -29,7 +29,7 @@
       </trans-unit>
       <trans-unit id="feed.items" approved="yes">
         <source>Items</source>
-        <target state="final">Emner</target>
+        <target state="final">Elementer</target>
       </trans-unit>
       <trans-unit id="feed.links" approved="yes">
         <source>Links</source>
@@ -85,11 +85,11 @@
       </trans-unit>
       <trans-unit id="item.enclosure" approved="yes">
         <source>Enclosure</source>
-        <target state="final">Indlæg</target>
+        <target state="final">Vedhæftet fil</target>
       </trans-unit>
       <trans-unit id="item.enclosures" approved="yes">
         <source>Enclosures</source>
-        <target state="final">Anlæg</target>
+        <target state="final">Vedhæftede filer</target>
       </trans-unit>
       <trans-unit id="item.latitude" approved="yes">
         <source>Latitude</source>
