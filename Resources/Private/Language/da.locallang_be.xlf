@@ -21,7 +21,7 @@
       </trans-unit>
       <trans-unit id="flexform.feedUrl.label" approved="yes">
         <source>Feed URL</source>
-        <target state="final">Feed URL</target>
+        <target state="final">Feed-URL</target>
       </trans-unit>
       <trans-unit id="flexform.feedUrl.description" approved="yes">
         <source>URL that is fetched by the service (empty = Defined by TypoScript)</source>
@@ -53,7 +53,7 @@
       </trans-unit>
       <trans-unit id="flexform.linkTarget.label" approved="yes">
         <source>Target</source>
-        <target state="final">Target</target>
+        <target state="final">Mål</target>
       </trans-unit>
       <trans-unit id="flexform.linkTarget.description" approved="yes">
         <source>Target attribute to define the feed link behavior</source>
@@ -77,7 +77,7 @@
       </trans-unit>
       <trans-unit id="flexform.linkTarget.I.top" approved="yes">
         <source>Opens in the full body of the window</source>
-        <target state="final">Åbner i hele vinduets krop</target>
+        <target state="final">Åbner i hele vinduet</target>
       </trans-unit>
       <trans-unit id="flexform.logoMaxWidth.label" approved="yes">
         <source>Logo max. width</source>
@@ -133,7 +133,7 @@
       </trans-unit>
       <trans-unit id="flexform.dateFormat.description" approved="yes">
         <source>Use a PHP date format compatible with DateTimeInterface::format() (empty = Defined by TypoScript)</source>
-        <target state="final">Brug et PHP datoformat kompatibelt med DateTimeInterface: format() (tom = Defineret af TypoScript)</target>
+        <target state="final">Brug et PHP-datoformat, der er kompatibelt med DateTimeInterface::format() (tom = defineret af TypoScript)</target>
       </trans-unit>
       <trans-unit id="flexform.stripTags.label" approved="yes">
         <source>Strip tags</source>
@@ -153,7 +153,7 @@
       </trans-unit>
       <trans-unit id="flexform.cacheDuration.label" approved="yes">
         <source>Feed cache</source>
-        <target state="final">Feed cache</target>
+        <target state="final">Feed-cache</target>
       </trans-unit>
       <trans-unit id="flexform.cacheDuration.description" approved="yes">
         <source>Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache, empty = Defined by TypoScript)</source>
@@ -173,7 +173,7 @@
       </trans-unit>
       <trans-unit id="flexform.sheet_getFields.description" approved="yes">
         <source>Select here which fields from the feed and feed items should be read using the SimplePie library and should be available as variables in the fluid template. If no fields were selected, then the TypoScript configuration is used.</source>
-        <target state="final">Vælg her hvilke felter fra feed og feed elementer der skal læses ved hjælp af SimplePie biblioteket og bør være tilgængelige som variabler i flydende skabelonen. Hvis ingen felter blev valgt, så bruges TypoScript konfigurationen.</target>
+        <target state="final">Vælg her, hvilke felter fra feedet og feed-elementerne der skal læses med SimplePie-biblioteket og være tilgængelige som variabler i Fluid-skabelonen. Hvis ingen felter er valgt, bruges TypoScript-konfigurationen.</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.label" approved="yes">
         <source>Get fields from feed</source>
@@ -217,7 +217,7 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.items" approved="yes">
         <source>Items</source>
-        <target state="final">Varer</target>
+        <target state="final">Elementer</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.item_quantity" approved="yes">
         <source>Item quantity</source>
@@ -237,7 +237,7 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.permalink" approved="yes">
         <source>Permalink</source>
-        <target state="final">Permalink</target>
+        <target state="final">Permanent link</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.title" approved="yes">
         <source>Title</source>
@@ -285,7 +285,7 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.subscribe_url" approved="yes">
         <source>Subscribe URL</source>
-        <target state="final">Subscribe URL</target>
+        <target state="final">Abonnements-URL</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.label" approved="yes">
         <source>Get fields from feed items</source>
@@ -297,7 +297,7 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.group.items" approved="yes">
         <source>Items</source>
-        <target state="final">Varer</target>
+        <target state="final">Elementer</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.author" approved="yes">
         <source>Author</source>
@@ -341,11 +341,11 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.enclosure" approved="yes">
         <source>Enclosure</source>
-        <target state="final">Indlæg</target>
+        <target state="final">Vedhæftet fil</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.enclosures" approved="yes">
         <source>Enclosures</source>
-        <target state="final">Anlæg</target>
+        <target state="final">Vedhæftede filer</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.feed" approved="yes">
         <source>Feed</source>
@@ -369,7 +369,7 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.permalink" approved="yes">
         <source>Permalink</source>
-        <target state="final">Permalink</target>
+        <target state="final">Permanent link</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.source" approved="yes">
         <source>Source</source>
@@ -457,7 +457,7 @@
       </trans-unit>
       <trans-unit id="constants.settings.linkTarget.I.top" approved="yes">
         <source>Opens in the full body of the window</source>
-        <target state="final">Åbner i hele vinduets krop</target>
+        <target state="final">Åbner i hele vinduet</target>
       </trans-unit>
       <trans-unit id="constants.settings.logoMaxWidth" approved="yes">
         <source>Logo width:Width of the feeds logo image</source>
@@ -481,7 +481,7 @@
       </trans-unit>
       <trans-unit id="constants.settings.dateFormat" approved="yes">
         <source>Date format:Use a PHP date format compatible with DateTimeInterface::format()</source>
-        <target state="final">Datoformat: Brug et PHP datoformat kompatibelt med DateTimeInterface::format ()</target>
+        <target state="final">Datoformat:Brug et PHP-datoformat, der er kompatibelt med DateTimeInterface::format()</target>
       </trans-unit>
       <trans-unit id="constants.settings.stripTags" approved="yes">
         <source>Strip tags:Remove HTML tags from the feed content</source>
@@ -497,7 +497,7 @@
       </trans-unit>
       <trans-unit id="constants.settings.getFields.feed" approved="yes">
         <source>Feed fields to get:Comma-separated list of fields to be read from the feed by SimplePie and made available as variables in Fluid.</source>
-        <target state="final">Feed felter til at få:Kommasepareret liste over felter, der skal læses fra foderet af SimplePie og gøres tilgængelige som variabler i Fluid.</target>
+        <target state="final">Feedfelter at hente:Kommasepareret liste over felter, som SimplePie skal læse fra feedet og gøre tilgængelige som variabler i Fluid.</target>
       </trans-unit>
       <trans-unit id="constants.settings.getFields.items" approved="yes">
         <source>Feed items fields to get:Comma-separated list of fields to be read from the feed items by SimplePie and made available as variables in Fluid.</source>
