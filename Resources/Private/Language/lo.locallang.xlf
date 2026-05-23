@@ -109,7 +109,7 @@
       </trans-unit>
       <trans-unit id="noTemplateError" approved="yes">
         <source>Feed Display: Please include static TypoScript [EXT:feed_display/Configuration/TypoScript/]</source>
-        <target state="final">Feed Display: Please include static TypoScript [EXT:feed_display/Configuration/TypoScript/]</target>
+        <target state="final">ການສະແດງຟີດ: ກະລຸນາໃສ່ TypoScript ແບບຄົງທີ່ [EXT:feed_display/Configuration/TypoScript/]</target>
       </trans-unit>
       <trans-unit id="noItemsError" approved="yes">
         <source>Sorry, no items could be fetched.</source>
