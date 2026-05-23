@@ -5,7 +5,7 @@
     <body>
       <trans-unit id="pi1_title" approved="yes">
         <source>Feed Display</source>
-        <target state="final">Feed Display</target>
+        <target state="final">Feed 顯示</target>
       </trans-unit>
       <trans-unit id="pi1_plus_wiz_description" approved="yes">
         <source>RSS/Atom web feed parsing and frontend display based on Extbase/Fluid</source>
@@ -173,7 +173,7 @@
       </trans-unit>
       <trans-unit id="flexform.sheet_getFields.description" approved="yes">
         <source>Select here which fields from the feed and feed items should be read using the SimplePie library and should be available as variables in the fluid template. If no fields were selected, then the TypoScript configuration is used.</source>
-        <target state="final">Select here which fields from the feed and feed items should be read using the SimplePie library and should be available as variables in the fluid template. If no fields were selected, then the TypoScript configuration is used.</target>
+        <target state="final">在此選擇要使用 SimplePie 函式庫從 feed 和 feed 項目讀取，並作為 Fluid 範本變數提供的欄位。如果未選取任何欄位，則會使用 TypoScript 設定。</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.label" approved="yes">
         <source>Get fields from feed</source>
@@ -393,7 +393,7 @@
       </trans-unit>
       <trans-unit id="constants.customcategory.plugin.tx_feeddisplay_pi1" approved="yes">
         <source>Feed Display</source>
-        <target state="final">Feed Display</target>
+        <target state="final">Feed 顯示</target>
       </trans-unit>
       <trans-unit id="constants.subcategory.general" approved="yes">
         <source>General</source>
@@ -461,19 +461,19 @@
       </trans-unit>
       <trans-unit id="constants.settings.logoMaxWidth" approved="yes">
         <source>Logo width:Width of the feeds logo image</source>
-        <target state="final">Logo width:Width of the feeds logo image</target>
+        <target state="final">標誌寬度:feed 標誌圖片的寬度</target>
       </trans-unit>
       <trans-unit id="constants.settings.logoMaxHeight" approved="yes">
         <source>Logo height:Height of the feeds logo image</source>
-        <target state="final">Logo height:Height of the feeds logo image</target>
+        <target state="final">標誌高度:feed 標誌圖片的高度</target>
       </trans-unit>
       <trans-unit id="constants.settings.feedIconMaxWidth" approved="yes">
         <source>Feed icon width:Width of the feeds icon image</source>
-        <target state="final">Feed icon width:Width of the feeds icon image</target>
+        <target state="final">Feed 圖示寬度:feed 圖示圖片的寬度</target>
       </trans-unit>
       <trans-unit id="constants.settings.feedIconMaxHeight" approved="yes">
         <source>Feed icon height:Height of the feeds icon image</source>
-        <target state="final">Feed icon height:Height of the feeds icon image</target>
+        <target state="final">Feed 圖示高度:feed 圖示圖片的高度</target>
       </trans-unit>
       <trans-unit id="constants.settings.errorMessage" approved="yes">
         <source>Error message:This message is displayed if no feed items could be fetched</source>
@@ -505,7 +505,7 @@
       </trans-unit>
       <trans-unit id="sets.feeddisplay.label" approved="yes">
         <source>Feed Display</source>
-        <target state="final">Feed Display</target>
+        <target state="final">Feed 顯示</target>
       </trans-unit>
     </body>
   </file>
