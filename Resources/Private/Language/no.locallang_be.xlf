@@ -21,7 +21,7 @@
       </trans-unit>
       <trans-unit id="flexform.feedUrl.label" approved="yes">
         <source>Feed URL</source>
-        <target state="final">Feed URL</target>
+        <target state="final">Feed-URL</target>
       </trans-unit>
       <trans-unit id="flexform.feedUrl.description" approved="yes">
         <source>URL that is fetched by the service (empty = Defined by TypoScript)</source>
@@ -53,7 +53,7 @@
       </trans-unit>
       <trans-unit id="flexform.linkTarget.label" approved="yes">
         <source>Target</source>
-        <target state="final">Target</target>
+        <target state="final">Mål</target>
       </trans-unit>
       <trans-unit id="flexform.linkTarget.description" approved="yes">
         <source>Target attribute to define the feed link behavior</source>
@@ -77,7 +77,7 @@
       </trans-unit>
       <trans-unit id="flexform.linkTarget.I.top" approved="yes">
         <source>Opens in the full body of the window</source>
-        <target state="final">Åpnes i hele kroppen av vinduet</target>
+        <target state="final">Åpnes i hele vinduet</target>
       </trans-unit>
       <trans-unit id="flexform.logoMaxWidth.label" approved="yes">
         <source>Logo max. width</source>
@@ -173,7 +173,7 @@
       </trans-unit>
       <trans-unit id="flexform.sheet_getFields.description" approved="yes">
         <source>Select here which fields from the feed and feed items should be read using the SimplePie library and should be available as variables in the fluid template. If no fields were selected, then the TypoScript configuration is used.</source>
-        <target state="final">Velg her hvilke felt fra fôr og fôrelementer skal leses ved hjelp av SimplePie biblioteket og skal være tilgjengelige som variabler i væskemalen. Dersom ingen felter er valgt, brukes TypoScript-konfigurasjonen.</target>
+        <target state="final">Velg her hvilke felter fra feeden og feed-elementene som skal leses med SimplePie-biblioteket og være tilgjengelige som variabler i Fluid-malen. Hvis ingen felter er valgt, brukes TypoScript-konfigurasjonen.</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.label" approved="yes">
         <source>Get fields from feed</source>
@@ -285,7 +285,7 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.subscribe_url" approved="yes">
         <source>Subscribe URL</source>
-        <target state="final">Subscribe URL</target>
+        <target state="final">Abonnements-URL</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.label" approved="yes">
         <source>Get fields from feed items</source>
@@ -341,7 +341,7 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.enclosure" approved="yes">
         <source>Enclosure</source>
-        <target state="final">Kabinett</target>
+        <target state="final">Vedlegg</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.enclosures" approved="yes">
         <source>Enclosures</source>
@@ -457,7 +457,7 @@
       </trans-unit>
       <trans-unit id="constants.settings.linkTarget.I.top" approved="yes">
         <source>Opens in the full body of the window</source>
-        <target state="final">Åpnes i hele kroppen av vinduet</target>
+        <target state="final">Åpnes i hele vinduet</target>
       </trans-unit>
       <trans-unit id="constants.settings.logoMaxWidth" approved="yes">
         <source>Logo width:Width of the feeds logo image</source>
@@ -497,7 +497,7 @@
       </trans-unit>
       <trans-unit id="constants.settings.getFields.feed" approved="yes">
         <source>Feed fields to get:Comma-separated list of fields to be read from the feed by SimplePie and made available as variables in Fluid.</source>
-        <target state="final">Feed felt å finne:Comma-separert liste over felter som skal leses fra feedet av SimplePie og gjøres tilgjengelige som variabler i væsken.</target>
+        <target state="final">Feed-felter som skal hentes:Kommaseparert liste over felter som skal leses fra feeden av SimplePie og gjøres tilgjengelige som variabler i Fluid.</target>
       </trans-unit>
       <trans-unit id="constants.settings.getFields.items" approved="yes">
         <source>Feed items fields to get:Comma-separated list of fields to be read from the feed items by SimplePie and made available as variables in Fluid.</source>
