@@ -9,7 +9,7 @@
       </trans-unit>
       <trans-unit id="pi1_plus_wiz_description" approved="yes">
         <source>RSS/Atom web feed parsing and frontend display based on Extbase/Fluid</source>
-        <target state="final">Przetwarzanie kanału RSS i wyświetlanie frontendu w oparciu o Extbase/płyn</target>
+        <target state="final">Parsowanie kanałów webowych RSS/Atom i wyświetlanie frontendowe w oparciu o Extbase/Fluid</target>
       </trans-unit>
       <trans-unit id="flexform.sheet_general.title" approved="yes">
         <source>General</source>
@@ -53,7 +53,7 @@
       </trans-unit>
       <trans-unit id="flexform.linkTarget.label" approved="yes">
         <source>Target</source>
-        <target state="final">Target</target>
+        <target state="final">Cel</target>
       </trans-unit>
       <trans-unit id="flexform.linkTarget.description" approved="yes">
         <source>Target attribute to define the feed link behavior</source>
@@ -173,7 +173,7 @@
       </trans-unit>
       <trans-unit id="flexform.sheet_getFields.description" approved="yes">
         <source>Select here which fields from the feed and feed items should be read using the SimplePie library and should be available as variables in the fluid template. If no fields were selected, then the TypoScript configuration is used.</source>
-        <target state="final">Wybierz, które pola z kanału i elementów kanału powinny być czytane przy użyciu biblioteki SimplePie i powinny być dostępne jako zmienne w szablonie płynów. Jeśli nie wybrano żadnych pól, konfiguracja TypoScript jest używana.</target>
+        <target state="final">Wybierz tutaj pola z kanału i elementów kanału, które mają być odczytywane przy użyciu biblioteki SimplePie i dostępne jako zmienne w szablonie Fluid. Jeśli nie wybrano żadnych pól, używana jest konfiguracja TypoScript.</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.label" approved="yes">
         <source>Get fields from feed</source>
@@ -241,7 +241,7 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.title" approved="yes">
         <source>Title</source>
-        <target state="final">Rozporządzenie Rady (EWG) nr 2658/87 z dnia 23 lipca 1987 r. w sprawie nomenklatury taryfowej i statystycznej oraz w sprawie Wspólnej Taryfy Celnej (Dz.U. L 256 z 7.9.1987, s. 1).</target>
+        <target state="final">Tytuł</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.type" approved="yes">
         <source>Type</source>
@@ -285,7 +285,7 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.subscribe_url" approved="yes">
         <source>Subscribe URL</source>
-        <target state="final">Subscribe URL</target>
+        <target state="final">URL subskrypcji</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.label" approved="yes">
         <source>Get fields from feed items</source>
@@ -341,11 +341,11 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.enclosure" approved="yes">
         <source>Enclosure</source>
-        <target state="final">Pomieszczenie</target>
+        <target state="final">Załącznik</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.enclosures" approved="yes">
         <source>Enclosures</source>
-        <target state="final">Pomieszczenia</target>
+        <target state="final">Załączniki</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.feed" approved="yes">
         <source>Feed</source>
@@ -377,7 +377,7 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.title" approved="yes">
         <source>Title</source>
-        <target state="final">Rozporządzenie Rady (EWG) nr 2658/87 z dnia 23 lipca 1987 r. w sprawie nomenklatury taryfowej i statystycznej oraz w sprawie Wspólnej Taryfy Celnej (Dz.U. L 256 z 7.9.1987, s. 1).</target>
+        <target state="final">Tytuł</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.latitude" approved="yes">
         <source>Latitude</source>
@@ -469,7 +469,7 @@
       </trans-unit>
       <trans-unit id="constants.settings.feedIconMaxWidth" approved="yes">
         <source>Feed icon width:Width of the feeds icon image</source>
-        <target state="final">Szerokość ikony kanału</target>
+        <target state="final">Szerokość ikony kanału:Szerokość obrazu ikony kanału</target>
       </trans-unit>
       <trans-unit id="constants.settings.feedIconMaxHeight" approved="yes">
         <source>Feed icon height:Height of the feeds icon image</source>
@@ -497,11 +497,11 @@
       </trans-unit>
       <trans-unit id="constants.settings.getFields.feed" approved="yes">
         <source>Feed fields to get:Comma-separated list of fields to be read from the feed by SimplePie and made available as variables in Fluid.</source>
-        <target state="final">Pola RSS do uzyskania:Lista pól oddzielonych przecinkami do odczytu z kanału przez SimplePie i udostępnionych jako zmienne w płynie.</target>
+        <target state="final">Pola kanału do pobrania:Oddzielona przecinkami lista pól, które SimplePie odczyta z kanału i udostępni jako zmienne w Fluid.</target>
       </trans-unit>
       <trans-unit id="constants.settings.getFields.items" approved="yes">
         <source>Feed items fields to get:Comma-separated list of fields to be read from the feed items by SimplePie and made available as variables in Fluid.</source>
-        <target state="final">Pola przedmiotów do uzyskania:Lista pól oddzielonych przecinkami do odczytu z elementów kanału przez SimplePie i udostępnionych jako zmienne w płynie.</target>
+        <target state="final">Pola elementów kanału do pobrania:Oddzielona przecinkami lista pól, które SimplePie odczyta z elementów kanału i udostępni jako zmienne w Fluid.</target>
       </trans-unit>
       <trans-unit id="sets.feeddisplay.label" approved="yes">
         <source>Feed Display</source>
