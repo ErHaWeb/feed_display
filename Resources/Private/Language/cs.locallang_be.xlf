@@ -53,7 +53,7 @@
       </trans-unit>
       <trans-unit id="flexform.linkTarget.label" approved="yes">
         <source>Target</source>
-        <target state="final">Target</target>
+        <target state="final">Cíl</target>
       </trans-unit>
       <trans-unit id="flexform.linkTarget.description" approved="yes">
         <source>Target attribute to define the feed link behavior</source>
@@ -73,11 +73,11 @@
       </trans-unit>
       <trans-unit id="flexform.linkTarget.I.parent" approved="yes">
         <source>Opens in the parent frame</source>
-        <target state="final">Otevře se v nadřazeném snímku</target>
+        <target state="final">Otevře se v nadřazeném rámci</target>
       </trans-unit>
       <trans-unit id="flexform.linkTarget.I.top" approved="yes">
         <source>Opens in the full body of the window</source>
-        <target state="final">Otevře se v úplném těle okna</target>
+        <target state="final">Otevře se v celém okně</target>
       </trans-unit>
       <trans-unit id="flexform.logoMaxWidth.label" approved="yes">
         <source>Logo max. width</source>
@@ -173,7 +173,7 @@
       </trans-unit>
       <trans-unit id="flexform.sheet_getFields.description" approved="yes">
         <source>Select here which fields from the feed and feed items should be read using the SimplePie library and should be available as variables in the fluid template. If no fields were selected, then the TypoScript configuration is used.</source>
-        <target state="final">Zde vyberte, která pole z položek kanálu a kanálů by měla být přečtena pomocí knihovny SimplePie a měla by být k dispozici jako proměnné v šabloně tekutiny. Pokud nebyla vybrána žádná pole, pak je použita konfigurace TypoScriptu.</target>
+        <target state="final">Zde vyberte, která pole z kanálu a položek kanálu se mají načíst pomocí knihovny SimplePie a být dostupná jako proměnné v šabloně Fluid. Pokud nebyla vybrána žádná pole, použije se konfigurace TypoScript.</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.label" approved="yes">
         <source>Get fields from feed</source>
@@ -209,7 +209,7 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.description" approved="yes">
         <source>Description</source>
-        <target state="final">L 343, 22.12.2009, s. 1).</target>
+        <target state="final">Popis</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.encoding" approved="yes">
         <source>Encoding</source>
@@ -285,7 +285,7 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.subscribe_url" approved="yes">
         <source>Subscribe URL</source>
-        <target state="final">Subscribe URL</target>
+        <target state="final">URL odběru</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.label" approved="yes">
         <source>Get fields from feed items</source>
@@ -337,15 +337,15 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.description" approved="yes">
         <source>Description</source>
-        <target state="final">L 343, 22.12.2009, s. 1).</target>
+        <target state="final">Popis</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.enclosure" approved="yes">
         <source>Enclosure</source>
-        <target state="final">Uzavření</target>
+        <target state="final">Příloha</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.enclosures" approved="yes">
         <source>Enclosures</source>
-        <target state="final">Prostory</target>
+        <target state="final">Přílohy</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.feed" approved="yes">
         <source>Feed</source>
@@ -453,11 +453,11 @@
       </trans-unit>
       <trans-unit id="constants.settings.linkTarget.I.parent" approved="yes">
         <source>Opens in the parent frame</source>
-        <target state="final">Otevře se v nadřazeném snímku</target>
+        <target state="final">Otevře se v nadřazeném rámci</target>
       </trans-unit>
       <trans-unit id="constants.settings.linkTarget.I.top" approved="yes">
         <source>Opens in the full body of the window</source>
-        <target state="final">Otevře se v úplném těle okna</target>
+        <target state="final">Otevře se v celém okně</target>
       </trans-unit>
       <trans-unit id="constants.settings.logoMaxWidth" approved="yes">
         <source>Logo width:Width of the feeds logo image</source>
@@ -497,11 +497,11 @@
       </trans-unit>
       <trans-unit id="constants.settings.getFields.feed" approved="yes">
         <source>Feed fields to get:Comma-separated list of fields to be read from the feed by SimplePie and made available as variables in Fluid.</source>
-        <target state="final">Informační pole pro získání:Seznam polí, která budou oddělena čárkou od kanálu od SimplePie a budou k dispozici jako proměnné v Fluid.</target>
+        <target state="final">Pole kanálu k získání:Seznam polí oddělených čárkami, která budou načtena z kanálu pomocí SimplePie a zpřístupněna jako proměnné ve Fluid.</target>
       </trans-unit>
       <trans-unit id="constants.settings.getFields.items" approved="yes">
         <source>Feed items fields to get:Comma-separated list of fields to be read from the feed items by SimplePie and made available as variables in Fluid.</source>
-        <target state="final">Krmivo políčka pro získání:Čárkou oddělený seznam polí, která mají být přečtena od položek kanálu SimplePie a zpřístupněna jako proměnné v tekutině.</target>
+        <target state="final">Pole položek kanálu k získání:Seznam polí oddělených čárkami, která budou načtena z položek kanálu pomocí SimplePie a zpřístupněna jako proměnné ve Fluid.</target>
       </trans-unit>
       <trans-unit id="sets.feeddisplay.label" approved="yes">
         <source>Feed Display</source>
