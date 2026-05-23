@@ -53,7 +53,7 @@
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.maxFeedCount" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.maxFeedCount" approved="yes">
         <source>Maximum feed items to show</source>
-        <target state="final">Maximale Anzahl anzuzeigender Feeds</target>
+        <target state="final">Maximale Anzahl anzuzeigender Feed-Elemente</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.maxContentLength" resname="settings.plugin.tx_feeddisplay_pi1.settings.maxContentLength" approved="yes">
         <source>Max. content length</source>
@@ -73,7 +73,7 @@
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget" approved="yes">
         <source>Target</source>
-        <target state="final">Target</target>
+        <target state="final">Ziel</target>
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.linkTarget" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.linkTarget" approved="yes">
         <source>Target attribute to define the feed link behavior</source>
@@ -97,7 +97,7 @@
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.top" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.top" approved="yes">
         <source>Opens in the full body of the window</source>
-        <target state="final">Öffnet den gesamten Körper des Fensters</target>
+        <target state="final">Öffnet im gesamten Fenster</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.logoMaxWidth" resname="settings.plugin.tx_feeddisplay_pi1.settings.logoMaxWidth" approved="yes">
         <source>Logo width</source>
@@ -181,11 +181,11 @@
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.getFields.items" resname="settings.plugin.tx_feeddisplay_pi1.settings.getFields.items" approved="yes">
         <source>Feed items fields to get</source>
-        <target state="final">Füge Artikelfelder hinzu, um sie zu erhalten</target>
+        <target state="final">Abzurufende Feed-Element-Felder</target>
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.getFields.items" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.getFields.items" approved="yes">
         <source>Comma-separated list of fields to be read from the feed items by SimplePie and made available as variables in Fluid.</source>
-        <target state="final">Kommaseparierte Liste von Feldern, die von SimplePie gelesen und als Variablen in Fluid zur Verfügung gestellt werden.</target>
+        <target state="final">Kommaseparierte Liste von Feldern, die von SimplePie aus Feed-Elementen gelesen und als Variablen in Fluid zur Verfügung gestellt werden.</target>
       </trans-unit>
     </body>
   </file>
