@@ -85,11 +85,11 @@
       </trans-unit>
       <trans-unit id="item.enclosure" approved="yes">
         <source>Enclosure</source>
-        <target state="final">Allestimento</target>
+        <target state="final">Allegato</target>
       </trans-unit>
       <trans-unit id="item.enclosures" approved="yes">
         <source>Enclosures</source>
-        <target state="final">Stabulari</target>
+        <target state="final">Allegati</target>
       </trans-unit>
       <trans-unit id="item.latitude" approved="yes">
         <source>Latitude</source>
