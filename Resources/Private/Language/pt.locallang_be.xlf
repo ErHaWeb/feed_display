@@ -5,7 +5,7 @@
     <body>
       <trans-unit id="pi1_title" approved="yes">
         <source>Feed Display</source>
-        <target state="final">Feed Display</target>
+        <target state="final">Apresentação do feed</target>
       </trans-unit>
       <trans-unit id="pi1_plus_wiz_description" approved="yes">
         <source>RSS/Atom web feed parsing and frontend display based on Extbase/Fluid</source>
@@ -77,11 +77,11 @@
       </trans-unit>
       <trans-unit id="flexform.linkTarget.I.top" approved="yes">
         <source>Opens in the full body of the window</source>
-        <target state="final">Abre em todo o corpo da janela</target>
+        <target state="final">Abre na janela inteira</target>
       </trans-unit>
       <trans-unit id="flexform.logoMaxWidth.label" approved="yes">
         <source>Logo max. width</source>
-        <target state="final">Logo max. width</target>
+        <target state="final">Largura máx. do logótipo</target>
       </trans-unit>
       <trans-unit id="flexform.logoMaxWidth.description" approved="yes">
         <source>Maximum width of the feeds logo image (0 or empty = Defined by TypoScript)</source>
@@ -89,7 +89,7 @@
       </trans-unit>
       <trans-unit id="flexform.logoMaxHeight.label" approved="yes">
         <source>Logo max. height</source>
-        <target state="final">Logo max. height</target>
+        <target state="final">Altura máx. do logótipo</target>
       </trans-unit>
       <trans-unit id="flexform.logoMaxHeight.description" approved="yes">
         <source>Maximum height of the feeds logo image (0 or empty = Defined by TypoScript)</source>
@@ -97,7 +97,7 @@
       </trans-unit>
       <trans-unit id="flexform.feedIconMaxWidth.label" approved="yes">
         <source>Feed icon max. width</source>
-        <target state="final">Feed icon max. width</target>
+        <target state="final">Largura máx. do ícone do feed</target>
       </trans-unit>
       <trans-unit id="flexform.feedIconMaxWidth.description" approved="yes">
         <source>Maximum width of the feeds icon image (0 or empty = Defined by TypoScript)</source>
@@ -105,7 +105,7 @@
       </trans-unit>
       <trans-unit id="flexform.feedIconMaxHeight.label" approved="yes">
         <source>Feed icon max. height</source>
-        <target state="final">Feed icon max. height</target>
+        <target state="final">Altura máx. do ícone do feed</target>
       </trans-unit>
       <trans-unit id="flexform.feedIconMaxHeight.description" approved="yes">
         <source>Maximum height of the feeds icon image (0 or empty = Defined by TypoScript)</source>
@@ -125,7 +125,7 @@
       </trans-unit>
       <trans-unit id="flexform.sheet_advanced.description" approved="yes">
         <source>These are advanced settings. If you are unsure, simply use the default values here. If no value is given, then the value of the TypoScript configuration is used by default.</source>
-        <target state="final">These are advanced settings. If you are unsure, simply use the default values here. If no value is given, then the value of the TypoScript configuration is used by default.</target>
+        <target state="final">Estas são definições avançadas. Se não tiver a certeza, utilize simplesmente os valores predefinidos aqui. Se nenhum valor for indicado, será utilizado por predefinição o valor da configuração TypoScript.</target>
       </trans-unit>
       <trans-unit id="flexform.dateFormat.label" approved="yes">
         <source>Date format</source>
@@ -173,7 +173,7 @@
       </trans-unit>
       <trans-unit id="flexform.sheet_getFields.description" approved="yes">
         <source>Select here which fields from the feed and feed items should be read using the SimplePie library and should be available as variables in the fluid template. If no fields were selected, then the TypoScript configuration is used.</source>
-        <target state="final">Select here which fields from the feed and feed items should be read using the SimplePie library and should be available as variables in the fluid template. If no fields were selected, then the TypoScript configuration is used.</target>
+        <target state="final">Selecione aqui quais os campos do feed e dos itens do feed que devem ser lidos usando a biblioteca SimplePie e disponibilizados como variáveis no modelo Fluid. Se nenhum campo for selecionado, será utilizada a configuração TypoScript.</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.label" approved="yes">
         <source>Get fields from feed</source>
@@ -181,7 +181,7 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.description" approved="yes">
         <source>Selection of the fields to be read from the feed.</source>
-        <target state="final">Selection of the fields to be read from the feed.</target>
+        <target state="final">Seleção dos campos a ler do feed.</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.group.feed" approved="yes">
         <source>Feed</source>
@@ -229,11 +229,11 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.link" approved="yes">
         <source>Link</source>
-        <target state="final">Link</target>
+        <target state="final">Ligação</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.links" approved="yes">
         <source>Links</source>
-        <target state="final">Links</target>
+        <target state="final">Ligações</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.permalink" approved="yes">
         <source>Permalink</source>
@@ -293,7 +293,7 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.items.description" approved="yes">
         <source>Selection of the fields to be read from the feed items.</source>
-        <target state="final">Selection of the fields to be read from the feed items.</target>
+        <target state="final">Seleção dos campos a ler dos itens do feed.</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.group.items" approved="yes">
         <source>Items</source>
@@ -357,11 +357,11 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.link" approved="yes">
         <source>Link</source>
-        <target state="final">Link</target>
+        <target state="final">Ligação</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.links" approved="yes">
         <source>Links</source>
-        <target state="final">Links</target>
+        <target state="final">Ligações</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.local_date" approved="yes">
         <source>Local Date (with empty parameter)</source>
@@ -393,7 +393,7 @@
       </trans-unit>
       <trans-unit id="constants.customcategory.plugin.tx_feeddisplay_pi1" approved="yes">
         <source>Feed Display</source>
-        <target state="final">Feed Display</target>
+        <target state="final">Apresentação do feed</target>
       </trans-unit>
       <trans-unit id="constants.subcategory.general" approved="yes">
         <source>General</source>
@@ -457,23 +457,23 @@
       </trans-unit>
       <trans-unit id="constants.settings.linkTarget.I.top" approved="yes">
         <source>Opens in the full body of the window</source>
-        <target state="final">Abre em todo o corpo da janela</target>
+        <target state="final">Abre na janela inteira</target>
       </trans-unit>
       <trans-unit id="constants.settings.logoMaxWidth" approved="yes">
         <source>Logo width:Width of the feeds logo image</source>
-        <target state="final">Logo width:Width of the feeds logo image</target>
+        <target state="final">Largura do logótipo:Largura da imagem do logótipo do feed</target>
       </trans-unit>
       <trans-unit id="constants.settings.logoMaxHeight" approved="yes">
         <source>Logo height:Height of the feeds logo image</source>
-        <target state="final">Logo height:Height of the feeds logo image</target>
+        <target state="final">Altura do logótipo:Altura da imagem do logótipo do feed</target>
       </trans-unit>
       <trans-unit id="constants.settings.feedIconMaxWidth" approved="yes">
         <source>Feed icon width:Width of the feeds icon image</source>
-        <target state="final">Feed icon width:Width of the feeds icon image</target>
+        <target state="final">Largura do ícone do feed:Largura da imagem do ícone do feed</target>
       </trans-unit>
       <trans-unit id="constants.settings.feedIconMaxHeight" approved="yes">
         <source>Feed icon height:Height of the feeds icon image</source>
-        <target state="final">Feed icon height:Height of the feeds icon image</target>
+        <target state="final">Altura do ícone do feed:Altura da imagem do ícone do feed</target>
       </trans-unit>
       <trans-unit id="constants.settings.errorMessage" approved="yes">
         <source>Error message:This message is displayed if no feed items could be fetched</source>
@@ -505,7 +505,7 @@
       </trans-unit>
       <trans-unit id="sets.feeddisplay.label" approved="yes">
         <source>Feed Display</source>
-        <target state="final">Feed Display</target>
+        <target state="final">Apresentação do feed</target>
       </trans-unit>
     </body>
   </file>
