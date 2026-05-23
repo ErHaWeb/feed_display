@@ -5,11 +5,11 @@
     <body>
       <trans-unit id="label" resname="label" approved="yes">
         <source>Feed Display</source>
-        <target state="final">Feed Display</target>
+        <target state="final">Shfaqja e feed-it</target>
       </trans-unit>
       <trans-unit id="categories.feeddisplay" resname="categories.feeddisplay" approved="yes">
         <source>Feed Display</source>
-        <target state="final">Feed Display</target>
+        <target state="final">Shfaqja e feed-it</target>
       </trans-unit>
       <trans-unit id="categories.feeddisplay.templates" resname="categories.feeddisplay.templates" approved="yes">
         <source>Templates</source>
@@ -29,15 +29,15 @@
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.view.templateRootPath" resname="settings.plugin.tx_feeddisplay_pi1.view.templateRootPath" approved="yes">
         <source>Path to template root (FE)</source>
-        <target state="final">Path to template root (FE)</target>
+        <target state="final">Shtegu te rrënja e shablloneve (FE)</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.view.partialRootPath" resname="settings.plugin.tx_feeddisplay_pi1.view.partialRootPath" approved="yes">
         <source>Path to template partials (FE)</source>
-        <target state="final">Path to template partials (FE)</target>
+        <target state="final">Shtegu te partial-et e shablloneve (FE)</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.view.layoutRootPath" resname="settings.plugin.tx_feeddisplay_pi1.view.layoutRootPath" approved="yes">
         <source>Path to template layouts (FE)</source>
-        <target state="final">Path to template layouts (FE)</target>
+        <target state="final">Shtegu te layout-et e shablloneve (FE)</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.feedUrl" resname="settings.plugin.tx_feeddisplay_pi1.settings.feedUrl" approved="yes">
         <source>Feed URL</source>
@@ -45,7 +45,7 @@
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.feedUrl" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.feedUrl" approved="yes">
         <source>URL that is fetched by the service</source>
-        <target state="final">URL that is fetched by the service</target>
+        <target state="final">URL-ja që merret nga shërbimi</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.maxFeedCount" resname="settings.plugin.tx_feeddisplay_pi1.settings.maxFeedCount" approved="yes">
         <source>Max. items</source>
@@ -53,7 +53,7 @@
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.maxFeedCount" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.maxFeedCount" approved="yes">
         <source>Maximum feed items to show</source>
-        <target state="final">Maximum feed items to show</target>
+        <target state="final">Numri maksimal i elementeve të feed-it për t’u shfaqur</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.maxContentLength" resname="settings.plugin.tx_feeddisplay_pi1.settings.maxContentLength" approved="yes">
         <source>Max. content length</source>
@@ -61,7 +61,7 @@
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.maxContentLength" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.maxContentLength" approved="yes">
         <source>Crop the characters of the feed content to the configured length</source>
-        <target state="final">Crop the characters of the feed content to the configured length</target>
+        <target state="final">Shkurto karakteret e përmbajtjes së feed-it në gjatësinë e konfiguruar</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.maxHeaderLength" resname="settings.plugin.tx_feeddisplay_pi1.settings.maxHeaderLength" approved="yes">
         <source>Max. header length</source>
@@ -69,7 +69,7 @@
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.maxHeaderLength" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.maxHeaderLength" approved="yes">
         <source>Crop the characters of the feed header to the configured length</source>
-        <target state="final">Crop the characters of the feed header to the configured length</target>
+        <target state="final">Shkurto karakteret e titullit të feed-it në gjatësinë e konfiguruar</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget" approved="yes">
         <source>Target</source>
@@ -77,59 +77,59 @@
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.linkTarget" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.linkTarget" approved="yes">
         <source>Target attribute to define the feed link behavior</source>
-        <target state="final">Target attribute to define the feed link behavior</target>
+        <target state="final">Atributi target për të përcaktuar sjelljen e lidhjes së feed-it</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.default" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.default" approved="yes">
         <source>Defined by TypoScript (default)</source>
-        <target state="final">Defined by TypoScript (default)</target>
+        <target state="final">Përcaktuar nga TypoScript (parazgjedhje)</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.blank" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.blank" approved="yes">
         <source>Opens in a new window or tab</source>
-        <target state="final">Opens in a new window or tab</target>
+        <target state="final">Hapet në një dritare ose skedë të re</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.self" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.self" approved="yes">
         <source>Opens in the same frame as it was clicked</source>
-        <target state="final">Opens in the same frame as it was clicked</target>
+        <target state="final">Hapet në të njëjtën kornizë ku u klikua</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.parent" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.parent" approved="yes">
         <source>Opens in the parent frame</source>
-        <target state="final">Opens in the parent frame</target>
+        <target state="final">Hapet në kornizën prind</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.top" resname="settings.plugin.tx_feeddisplay_pi1.settings.linkTarget.I.top" approved="yes">
         <source>Opens in the full body of the window</source>
-        <target state="final">Opens in the full body of the window</target>
+        <target state="final">Hapet në të gjithë dritaren</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.logoMaxWidth" resname="settings.plugin.tx_feeddisplay_pi1.settings.logoMaxWidth" approved="yes">
         <source>Logo width</source>
-        <target state="final">Logo width</target>
+        <target state="final">Gjerësia e logos</target>
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.logoMaxWidth" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.logoMaxWidth" approved="yes">
         <source>Width of the feeds logo image</source>
-        <target state="final">Width of the feeds logo image</target>
+        <target state="final">Gjerësia e figurës së logos së feed-it</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.logoMaxHeight" resname="settings.plugin.tx_feeddisplay_pi1.settings.logoMaxHeight" approved="yes">
         <source>Logo height</source>
-        <target state="final">Logo height</target>
+        <target state="final">Lartësia e logos</target>
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.logoMaxHeight" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.logoMaxHeight" approved="yes">
         <source>Height of the feeds logo image</source>
-        <target state="final">Height of the feeds logo image</target>
+        <target state="final">Lartësia e figurës së logos së feed-it</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.feedIconMaxWidth" resname="settings.plugin.tx_feeddisplay_pi1.settings.feedIconMaxWidth" approved="yes">
         <source>Feed icon width</source>
-        <target state="final">Feed icon width</target>
+        <target state="final">Gjerësia e ikonës së feed-it</target>
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.feedIconMaxWidth" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.feedIconMaxWidth" approved="yes">
         <source>Width of the feeds icon image</source>
-        <target state="final">Width of the feeds icon image</target>
+        <target state="final">Gjerësia e figurës së ikonës së feed-it</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.feedIconMaxHeight" resname="settings.plugin.tx_feeddisplay_pi1.settings.feedIconMaxHeight" approved="yes">
         <source>Feed icon height</source>
-        <target state="final">Feed icon height</target>
+        <target state="final">Lartësia e ikonës së feed-it</target>
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.feedIconMaxHeight" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.feedIconMaxHeight" approved="yes">
         <source>Height of the feeds icon image</source>
-        <target state="final">Height of the feeds icon image</target>
+        <target state="final">Lartësia e figurës së ikonës së feed-it</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.errorMessage" resname="settings.plugin.tx_feeddisplay_pi1.settings.errorMessage" approved="yes">
         <source>Error message</source>
@@ -137,7 +137,7 @@
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.errorMessage" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.errorMessage" approved="yes">
         <source>This message is displayed if no feed items could be fetched</source>
-        <target state="final">This message is displayed if no feed items could be fetched</target>
+        <target state="final">Ky mesazh shfaqet nëse nuk mund të merren elemente të feed-it</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.dateFormat" resname="settings.plugin.tx_feeddisplay_pi1.settings.dateFormat" approved="yes">
         <source>Date format</source>
@@ -145,7 +145,7 @@
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.dateFormat" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.dateFormat" approved="yes">
         <source>Use a PHP date format compatible with DateTimeInterface::format()</source>
-        <target state="final">Use a PHP date format compatible with DateTimeInterface::format()</target>
+        <target state="final">Përdorni një format date PHP të përputhshëm me DateTimeInterface::format()</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.stripTags" resname="settings.plugin.tx_feeddisplay_pi1.settings.stripTags" approved="yes">
         <source>Strip tags</source>
@@ -153,7 +153,7 @@
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.stripTags" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.stripTags" approved="yes">
         <source>Remove HTML tags from the feed content</source>
-        <target state="final">Remove HTML tags from the feed content</target>
+        <target state="final">Hiq etiketat HTML nga përmbajtja e feed-it</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.cacheDuration" resname="settings.plugin.tx_feeddisplay_pi1.settings.cacheDuration" approved="yes">
         <source>Feed cache</source>
@@ -161,31 +161,31 @@
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.cacheDuration" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.cacheDuration" approved="yes">
         <source>Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</source>
-        <target state="final">Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</target>
+        <target state="final">Koha në sekonda gjatë së cilës të dhënat lexohen nga cache deri në rinovimin tjetër të cache-it. (0 = pa cache)</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty" resname="settings.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty" approved="yes">
         <source>Ignore FlexForm Settings if empty</source>
-        <target state="final">Ignore FlexForm Settings if empty</target>
+        <target state="final">Shpërfill cilësimet FlexForm nëse janë bosh</target>
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty" approved="yes">
         <source>Comma separated list of FlexForm settings that will be ignored in the extension settings merge process, if their value is considered empty (either an empty string or a string containing 0).</source>
-        <target state="final">Comma separated list of FlexForm settings that will be ignored in the extension settings merge process, if their value is considered empty (either an empty string or a string containing 0).</target>
+        <target state="final">Listë e ndarë me presje e cilësimeve FlexForm që do të shpërfillen gjatë bashkimit të cilësimeve të zgjerimit, nëse vlera e tyre konsiderohet bosh (ose një varg bosh, ose një varg që përmban 0).</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.getFields.feed" resname="settings.plugin.tx_feeddisplay_pi1.settings.getFields.feed" approved="yes">
         <source>Feed fields to get</source>
-        <target state="final">Feed fields to get</target>
+        <target state="final">Fushat e feed-it për t’u marrë</target>
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.getFields.feed" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.getFields.feed" approved="yes">
         <source>Comma-separated list of fields to be read from the feed by SimplePie and made available as variables in Fluid.</source>
-        <target state="final">Comma-separated list of fields to be read from the feed by SimplePie and made available as variables in Fluid.</target>
+        <target state="final">Listë fushash të ndara me presje që SimplePie do t’i lexojë nga feed-i dhe do t’i bëjë të disponueshme si variabla në Fluid.</target>
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.getFields.items" resname="settings.plugin.tx_feeddisplay_pi1.settings.getFields.items" approved="yes">
         <source>Feed items fields to get</source>
-        <target state="final">Feed items fields to get</target>
+        <target state="final">Fushat e elementeve të feed-it për t’u marrë</target>
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.getFields.items" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.getFields.items" approved="yes">
         <source>Comma-separated list of fields to be read from the feed items by SimplePie and made available as variables in Fluid.</source>
-        <target state="final">Comma-separated list of fields to be read from the feed items by SimplePie and made available as variables in Fluid.</target>
+        <target state="final">Listë fushash të ndara me presje që SimplePie do t’i lexojë nga elementet e feed-it dhe do t’i bëjë të disponueshme si variabla në Fluid.</target>
       </trans-unit>
     </body>
   </file>
