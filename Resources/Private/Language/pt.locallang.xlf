@@ -33,11 +33,11 @@
       </trans-unit>
       <trans-unit id="feed.links" approved="yes">
         <source>Links</source>
-        <target state="final">Links</target>
+        <target state="final">Ligações</target>
       </trans-unit>
       <trans-unit id="feed.link" approved="yes">
         <source>Link</source>
-        <target state="final">Link</target>
+        <target state="final">Ligação</target>
       </trans-unit>
       <trans-unit id="item.categories" approved="yes">
         <source>Categories</source>
@@ -77,11 +77,11 @@
       </trans-unit>
       <trans-unit id="item.links" approved="yes">
         <source>Links</source>
-        <target state="final">Links</target>
+        <target state="final">Ligações</target>
       </trans-unit>
       <trans-unit id="item.link" approved="yes">
         <source>Link</source>
-        <target state="final">Link</target>
+        <target state="final">Ligação</target>
       </trans-unit>
       <trans-unit id="item.enclosure" approved="yes">
         <source>Enclosure</source>
