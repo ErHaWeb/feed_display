@@ -89,7 +89,7 @@
       </trans-unit>
       <trans-unit id="item.enclosures" approved="yes">
         <source>Enclosures</source>
-        <target state="final">エンクロージャー数</target>
+        <target state="final">エンクロージャー</target>
       </trans-unit>
       <trans-unit id="item.latitude" approved="yes">
         <source>Latitude</source>
