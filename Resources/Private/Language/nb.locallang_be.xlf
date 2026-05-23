@@ -5,7 +5,7 @@
     <body>
       <trans-unit id="pi1_title" approved="yes">
         <source>Feed Display</source>
-        <target state="final">Feed Display</target>
+        <target state="final">Feedvisning</target>
       </trans-unit>
       <trans-unit id="pi1_plus_wiz_description" approved="yes">
         <source>RSS/Atom web feed parsing and frontend display based on Extbase/Fluid</source>
@@ -393,7 +393,7 @@
       </trans-unit>
       <trans-unit id="constants.customcategory.plugin.tx_feeddisplay_pi1" approved="yes">
         <source>Feed Display</source>
-        <target state="final">Feed Display</target>
+        <target state="final">Feedvisning</target>
       </trans-unit>
       <trans-unit id="constants.subcategory.general" approved="yes">
         <source>General</source>
@@ -505,7 +505,7 @@
       </trans-unit>
       <trans-unit id="sets.feeddisplay.label" approved="yes">
         <source>Feed Display</source>
-        <target state="final">Feed Display</target>
+        <target state="final">Feedvisning</target>
       </trans-unit>
     </body>
   </file>
