@@ -9,7 +9,7 @@
       </trans-unit>
       <trans-unit id="pi1_plus_wiz_description" approved="yes">
         <source>RSS/Atom web feed parsing and frontend display based on Extbase/Fluid</source>
-        <target state="final">RSS/Atom-Web-Feed analysiert und Frontend-Anzeige basierend auf Extbase/Fluid</target>
+        <target state="final">Analyse von RSS/Atom-Web-Feeds und Frontend-Ausgabe auf Basis von Extbase/Fluid</target>
       </trans-unit>
       <trans-unit id="flexform.sheet_general.title" approved="yes">
         <source>General</source>
@@ -53,7 +53,7 @@
       </trans-unit>
       <trans-unit id="flexform.linkTarget.label" approved="yes">
         <source>Target</source>
-        <target state="final">Target</target>
+        <target state="final">Ziel</target>
       </trans-unit>
       <trans-unit id="flexform.linkTarget.description" approved="yes">
         <source>Target attribute to define the feed link behavior</source>
@@ -77,7 +77,7 @@
       </trans-unit>
       <trans-unit id="flexform.linkTarget.I.top" approved="yes">
         <source>Opens in the full body of the window</source>
-        <target state="final">Öffnet den gesamten Körper des Fensters</target>
+        <target state="final">Öffnet im gesamten Fenster</target>
       </trans-unit>
       <trans-unit id="flexform.logoMaxWidth.label" approved="yes">
         <source>Logo max. width</source>
@@ -149,7 +149,7 @@
       </trans-unit>
       <trans-unit id="flexform.stripTags.I.no" approved="yes">
         <source>no</source>
-        <target state="final">o</target>
+        <target state="final">nein</target>
       </trans-unit>
       <trans-unit id="flexform.cacheDuration.label" approved="yes">
         <source>Feed cache</source>
@@ -285,7 +285,7 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.subscribe_url" approved="yes">
         <source>Subscribe URL</source>
-        <target state="final">Subscribe URL</target>
+        <target state="final">Abonnement-URL</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.label" approved="yes">
         <source>Get fields from feed items</source>
@@ -457,7 +457,7 @@
       </trans-unit>
       <trans-unit id="constants.settings.linkTarget.I.top" approved="yes">
         <source>Opens in the full body of the window</source>
-        <target state="final">Öffnet den gesamten Körper des Fensters</target>
+        <target state="final">Öffnet im gesamten Fenster</target>
       </trans-unit>
       <trans-unit id="constants.settings.logoMaxWidth" approved="yes">
         <source>Logo width:Width of the feeds logo image</source>
@@ -497,11 +497,11 @@
       </trans-unit>
       <trans-unit id="constants.settings.getFields.feed" approved="yes">
         <source>Feed fields to get:Comma-separated list of fields to be read from the feed by SimplePie and made available as variables in Fluid.</source>
-        <target state="final">Feed-Felder zu get:Komma-getrennte Liste von Feldern, die vom Feed von SimplePie gelesen und als Variablen in Fluid zur Verfügung gestellt werden.</target>
+        <target state="final">Feed-Felder abrufen:Kommagetrennte Liste von Feldern, die SimplePie aus dem Feed liest und als Variablen in Fluid bereitstellt.</target>
       </trans-unit>
       <trans-unit id="constants.settings.getFields.items" approved="yes">
         <source>Feed items fields to get:Comma-separated list of fields to be read from the feed items by SimplePie and made available as variables in Fluid.</source>
-        <target state="final">Füge Felder zu get:Komma-getrennte Liste von Feldern hinzu, die von SimplePie gelesen und als Variablen in Fluid zur Verfügung gestellt werden.</target>
+        <target state="final">Feed-Element-Felder abrufen:Kommagetrennte Liste von Feldern, die SimplePie aus den Feed-Elementen liest und als Variablen in Fluid bereitstellt.</target>
       </trans-unit>
       <trans-unit id="sets.feeddisplay.label" approved="yes">
         <source>Feed Display</source>
