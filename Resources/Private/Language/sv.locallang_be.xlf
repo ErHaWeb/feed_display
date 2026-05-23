@@ -33,7 +33,7 @@
       </trans-unit>
       <trans-unit id="flexform.maxFeedCount.description" approved="yes">
         <source>Maximum feed items to show (0 or empty = Defined by TypoScript)</source>
-        <target state="final">Maximalt antal matningsobjekt att visa (0 eller tomma = Definieras av TypoScript)</target>
+        <target state="final">Maximalt antal feed-objekt att visa (0 eller tomt = definieras av TypoScript)</target>
       </trans-unit>
       <trans-unit id="flexform.maxContentLength.label" approved="yes">
         <source>Max. content length</source>
@@ -53,7 +53,7 @@
       </trans-unit>
       <trans-unit id="flexform.linkTarget.label" approved="yes">
         <source>Target</source>
-        <target state="final">Target</target>
+        <target state="final">Mål</target>
       </trans-unit>
       <trans-unit id="flexform.linkTarget.description" approved="yes">
         <source>Target attribute to define the feed link behavior</source>
@@ -77,7 +77,7 @@
       </trans-unit>
       <trans-unit id="flexform.linkTarget.I.top" approved="yes">
         <source>Opens in the full body of the window</source>
-        <target state="final">Öppnas i hela kroppen av fönstret</target>
+        <target state="final">Öppnas i hela fönstret</target>
       </trans-unit>
       <trans-unit id="flexform.logoMaxWidth.label" approved="yes">
         <source>Logo max. width</source>
@@ -173,7 +173,7 @@
       </trans-unit>
       <trans-unit id="flexform.sheet_getFields.description" approved="yes">
         <source>Select here which fields from the feed and feed items should be read using the SimplePie library and should be available as variables in the fluid template. If no fields were selected, then the TypoScript configuration is used.</source>
-        <target state="final">Välj här vilka fält från foder och matningsobjekt som ska läsas med hjälp av biblioteket SimplePie och ska vara tillgängliga som variabler i den flytande mallen. Om inga fält har valts används TypoScript-konfigurationen.</target>
+        <target state="final">Välj här vilka fält från feeden och feed-objekten som ska läsas med SimplePie-biblioteket och vara tillgängliga som variabler i Fluid-mallen. Om inga fält har valts används TypoScript-konfigurationen.</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.label" approved="yes">
         <source>Get fields from feed</source>
@@ -285,7 +285,7 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.subscribe_url" approved="yes">
         <source>Subscribe URL</source>
-        <target state="final">Subscribe URL</target>
+        <target state="final">Prenumerations-URL</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.label" approved="yes">
         <source>Get fields from feed items</source>
@@ -293,7 +293,7 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.items.description" approved="yes">
         <source>Selection of the fields to be read from the feed items.</source>
-        <target state="final">Val av de fält som ska läsas från foder objekt.</target>
+        <target state="final">Val av fält som ska läsas från feed-objekten.</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.group.items" approved="yes">
         <source>Items</source>
@@ -341,7 +341,7 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.enclosure" approved="yes">
         <source>Enclosure</source>
-        <target state="final">Kapsling</target>
+        <target state="final">Bilaga</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.enclosures" approved="yes">
         <source>Enclosures</source>
@@ -457,7 +457,7 @@
       </trans-unit>
       <trans-unit id="constants.settings.linkTarget.I.top" approved="yes">
         <source>Opens in the full body of the window</source>
-        <target state="final">Öppnas i hela kroppen av fönstret</target>
+        <target state="final">Öppnas i hela fönstret</target>
       </trans-unit>
       <trans-unit id="constants.settings.logoMaxWidth" approved="yes">
         <source>Logo width:Width of the feeds logo image</source>
@@ -501,7 +501,7 @@
       </trans-unit>
       <trans-unit id="constants.settings.getFields.items" approved="yes">
         <source>Feed items fields to get:Comma-separated list of fields to be read from the feed items by SimplePie and made available as variables in Fluid.</source>
-        <target state="final">Mata objekt fält att få:Kommaseparerad lista över fält som ska läsas från foder objekt av SimplePie och görs tillgängliga som variabler i Fluid.</target>
+        <target state="final">Feed-objektfält att hämta:Kommaseparerad lista över fält som SimplePie ska läsa från feed-objekten och göra tillgängliga som variabler i Fluid.</target>
       </trans-unit>
       <trans-unit id="sets.feeddisplay.label" approved="yes">
         <source>Feed Display</source>
