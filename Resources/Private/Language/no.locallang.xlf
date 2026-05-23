@@ -85,7 +85,7 @@
       </trans-unit>
       <trans-unit id="item.enclosure" approved="yes">
         <source>Enclosure</source>
-        <target state="final">Kabinett</target>
+        <target state="final">Vedlegg</target>
       </trans-unit>
       <trans-unit id="item.enclosures" approved="yes">
         <source>Enclosures</source>
