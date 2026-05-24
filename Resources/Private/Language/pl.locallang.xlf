@@ -29,7 +29,7 @@
       </trans-unit>
       <trans-unit id="feed.items" approved="yes">
         <source>Items</source>
-        <target state="final">Przedmioty</target>
+        <target state="final">Elementy</target>
       </trans-unit>
       <trans-unit id="feed.links" approved="yes">
         <source>Links</source>
