@@ -57,7 +57,7 @@
       </trans-unit>
       <trans-unit id="flexform.linkTarget.description" approved="yes">
         <source>Target attribute to define the feed link behavior</source>
-        <target state="final">Целевой атрибут для определения поведения канала ссылки</target>
+        <target state="final">Атрибут цели, определяющий поведение ссылки на ленту</target>
       </trans-unit>
       <trans-unit id="flexform.linkTarget.I.default" approved="yes">
         <source>Defined by TypoScript (default)</source>
@@ -69,11 +69,11 @@
       </trans-unit>
       <trans-unit id="flexform.linkTarget.I.self" approved="yes">
         <source>Opens in the same frame as it was clicked</source>
-        <target state="final">Открывается в том же кадре, что и клик</target>
+        <target state="final">Открывается в том же фрейме, в котором был сделан клик</target>
       </trans-unit>
       <trans-unit id="flexform.linkTarget.I.parent" approved="yes">
         <source>Opens in the parent frame</source>
-        <target state="final">Открывается в родительском кадре</target>
+        <target state="final">Открывается в родительском фрейме</target>
       </trans-unit>
       <trans-unit id="flexform.linkTarget.I.top" approved="yes">
         <source>Opens in the full body of the window</source>
@@ -201,11 +201,11 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.contributors" approved="yes">
         <source>Contributors</source>
-        <target state="final">Авторы</target>
+        <target state="final">Соавторы</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.copyright" approved="yes">
         <source>Copyright</source>
-        <target state="final">Авторство</target>
+        <target state="final">Авторские права</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.description" approved="yes">
         <source>Description</source>
@@ -217,11 +217,11 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.items" approved="yes">
         <source>Items</source>
-        <target state="final">Предметы</target>
+        <target state="final">Элементы</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.item_quantity" approved="yes">
         <source>Item quantity</source>
-        <target state="final">Количество товара</target>
+        <target state="final">Количество элементов</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.language" approved="yes">
         <source>Language</source>
@@ -289,15 +289,15 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.items.label" approved="yes">
         <source>Get fields from feed items</source>
-        <target state="final">Получать поля из ленты новостей</target>
+        <target state="final">Получать поля из элементов ленты</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.description" approved="yes">
         <source>Selection of the fields to be read from the feed items.</source>
-        <target state="final">Выбор полей для чтения из ленты.</target>
+        <target state="final">Выбор полей для чтения из элементов ленты.</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.group.items" approved="yes">
         <source>Items</source>
-        <target state="final">Предметы</target>
+        <target state="final">Элементы</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.author" approved="yes">
         <source>Author</source>
@@ -325,11 +325,11 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.contributors" approved="yes">
         <source>Contributors</source>
-        <target state="final">Авторы</target>
+        <target state="final">Соавторы</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.copyright" approved="yes">
         <source>Copyright</source>
-        <target state="final">Авторство</target>
+        <target state="final">Авторские права</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.date" approved="yes">
         <source>Date (with parameter "U")</source>
@@ -437,7 +437,7 @@
       </trans-unit>
       <trans-unit id="constants.settings.linkTarget" approved="yes">
         <source>Target:Target attribute to define the feed link behavior</source>
-        <target state="final">Целевой атрибут: цель для определения поведения канала ссылки</target>
+        <target state="final">Цель:Атрибут цели, определяющий поведение ссылки на ленту</target>
       </trans-unit>
       <trans-unit id="constants.settings.linkTarget.I.default" approved="yes">
         <source>Defined by TypoScript (default)</source>
@@ -449,11 +449,11 @@
       </trans-unit>
       <trans-unit id="constants.settings.linkTarget.I.self" approved="yes">
         <source>Opens in the same frame as it was clicked</source>
-        <target state="final">Открывается в том же кадре, что и клик</target>
+        <target state="final">Открывается в том же фрейме, в котором был сделан клик</target>
       </trans-unit>
       <trans-unit id="constants.settings.linkTarget.I.parent" approved="yes">
         <source>Opens in the parent frame</source>
-        <target state="final">Открывается в родительском кадре</target>
+        <target state="final">Открывается в родительском фрейме</target>
       </trans-unit>
       <trans-unit id="constants.settings.linkTarget.I.top" approved="yes">
         <source>Opens in the full body of the window</source>
@@ -469,15 +469,15 @@
       </trans-unit>
       <trans-unit id="constants.settings.feedIconMaxWidth" approved="yes">
         <source>Feed icon width:Width of the feeds icon image</source>
-        <target state="final">Ширина значка ленты:Ширина значка ленты</target>
+        <target state="final">Ширина значка ленты:Ширина изображения значка ленты</target>
       </trans-unit>
       <trans-unit id="constants.settings.feedIconMaxHeight" approved="yes">
         <source>Feed icon height:Height of the feeds icon image</source>
-        <target state="final">Высота значка ленты: Высота иконки</target>
+        <target state="final">Высота значка ленты:Высота изображения значка ленты</target>
       </trans-unit>
       <trans-unit id="constants.settings.errorMessage" approved="yes">
         <source>Error message:This message is displayed if no feed items could be fetched</source>
-        <target state="final">Сообщение об ошибке:Это сообщение отображается, если ни один канал не может быть загружен</target>
+        <target state="final">Сообщение об ошибке:Это сообщение отображается, если ни один элемент ленты не может быть загружен</target>
       </trans-unit>
       <trans-unit id="constants.settings.dateFormat" approved="yes">
         <source>Date format:Use a PHP date format compatible with DateTimeInterface::format()</source>
@@ -489,7 +489,7 @@
       </trans-unit>
       <trans-unit id="constants.settings.cacheDuration" approved="yes">
         <source>Feed cache:Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</source>
-        <target state="final">Feed cache:Time in seconds in which the data to be read from the cache until the next renewal of the cache. (0 = нет кэша)</target>
+        <target state="final">Кэш ленты:Время в секундах, в течение которого данные считываются из кэша до следующего обновления кэша. (0 = без кэша)</target>
       </trans-unit>
       <trans-unit id="constants.settings.ignoreFlexFormSettingsIfEmpty" approved="yes">
         <source>Ignore FlexForm Settings if empty:Comma separated list of FlexForm settings that will be ignored in the extension settings merge process, if their value is considered empty (either an empty string or a string containing 0).</source>
