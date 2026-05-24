@@ -13,7 +13,7 @@
       </trans-unit>
       <trans-unit id="flexform.sheet_general.title" approved="yes">
         <source>General</source>
-        <target state="final">Obecná ustanovení</target>
+        <target state="final">Obecné</target>
       </trans-unit>
       <trans-unit id="flexform.sheet_general.description" approved="yes">
         <source>These are general settings for the frontend display of the feed. If no value is given, then the value of the TypoScript configuration is used by default.</source>
@@ -57,7 +57,7 @@
       </trans-unit>
       <trans-unit id="flexform.linkTarget.description" approved="yes">
         <source>Target attribute to define the feed link behavior</source>
-        <target state="final">Cílový atribut pro definování chování kanálu</target>
+        <target state="final">Cílový atribut pro definování chování odkazu kanálu</target>
       </trans-unit>
       <trans-unit id="flexform.linkTarget.I.default" approved="yes">
         <source>Defined by TypoScript (default)</source>
@@ -153,7 +153,7 @@
       </trans-unit>
       <trans-unit id="flexform.cacheDuration.label" approved="yes">
         <source>Feed cache</source>
-        <target state="final">Mezipaměť zdrojů</target>
+        <target state="final">Mezipaměť kanálu</target>
       </trans-unit>
       <trans-unit id="flexform.cacheDuration.description" approved="yes">
         <source>Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache, empty = Defined by TypoScript)</source>
@@ -185,7 +185,7 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.group.feed" approved="yes">
         <source>Feed</source>
-        <target state="final">Zdroj</target>
+        <target state="final">Kanál</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.author" approved="yes">
         <source>Author</source>
@@ -221,7 +221,7 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.item_quantity" approved="yes">
         <source>Item quantity</source>
-        <target state="final">Množství položky</target>
+        <target state="final">Počet položek</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.language" approved="yes">
         <source>Language</source>
@@ -241,7 +241,7 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.title" approved="yes">
         <source>Title</source>
-        <target state="final">Hlava 1 – Celkem</target>
+        <target state="final">Název</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.type" approved="yes">
         <source>Type</source>
@@ -293,7 +293,7 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.items.description" approved="yes">
         <source>Selection of the fields to be read from the feed items.</source>
-        <target state="final">Výběr polí, která mají být přečtena z krmných položek.</target>
+        <target state="final">Výběr polí, která mají být přečtena z položek kanálu.</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.group.items" approved="yes">
         <source>Items</source>
@@ -349,7 +349,7 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.feed" approved="yes">
         <source>Feed</source>
-        <target state="final">Zdroj</target>
+        <target state="final">Kanál</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.id" approved="yes">
         <source>ID</source>
@@ -377,7 +377,7 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.title" approved="yes">
         <source>Title</source>
-        <target state="final">Hlava 1 – Celkem</target>
+        <target state="final">Název</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.latitude" approved="yes">
         <source>Latitude</source>
@@ -397,7 +397,7 @@
       </trans-unit>
       <trans-unit id="constants.subcategory.general" approved="yes">
         <source>General</source>
-        <target state="final">Obecná ustanovení</target>
+        <target state="final">Obecné</target>
       </trans-unit>
       <trans-unit id="constants.subcategory.advanced" approved="yes">
         <source>Advanced</source>
@@ -489,7 +489,7 @@
       </trans-unit>
       <trans-unit id="constants.settings.cacheDuration" approved="yes">
         <source>Feed cache:Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</source>
-        <target state="final">Cache:Čas v sekundách, kdy se data mají číst z mezipaměti až do dalšího obnovení mezipaměti. (0 = žádná keše)</target>
+        <target state="final">Mezipaměť kanálu:Čas v sekundách, kdy se data mají číst z mezipaměti až do dalšího obnovení mezipaměti. (0 = žádná keše)</target>
       </trans-unit>
       <trans-unit id="constants.settings.ignoreFlexFormSettingsIfEmpty" approved="yes">
         <source>Ignore FlexForm Settings if empty:Comma separated list of FlexForm settings that will be ignored in the extension settings merge process, if their value is considered empty (either an empty string or a string containing 0).</source>
