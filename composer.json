@@ -186,6 +186,8 @@
       "rm -f Libraries/simplepie-simplepie.phar",
       "@create-libs"
     ],
+    "docs:generate": "docker run --rm --pull always -v $(pwd):/project -it ghcr.io/typo3-documentation/render-guides:latest --config=Documentation",
+    "docs:watch": "sh -c 'docker ps -q --filter \"publish=5173\" | while read id; do [ -n \"$id\" ] && docker rm -f \"$id\"; done; docker rm -f typo3-docs-watch 2>/dev/null || true; URL=\"http://localhost:5173/Documentation-GENERATED-temp/Index.html\"; (sleep 2 && open \"$URL\") & docker run --rm -it --name typo3-docs-watch --pull always -v \"$(pwd)/Documentation:/project/Documentation\" -v \"$(pwd)/Documentation-GENERATED-temp:/project/Documentation-GENERATED-temp\" -p 5173:5173 ghcr.io/garvinhicking/typo3-documentation-browsersync:latest || test \"$?\" -eq 130'",
     "crowdin:import": [
       "Composer\\Config::disableProcessTimeout",
       "crowdin upload translations --config .crowdin.yml --branch main --import-eq-suggestions --auto-approve-imported"
@@ -225,6 +227,8 @@
     "fix:php:cs-fixer": "Fixes the code style with PHP-CS-Fixer.",
     "phpstan:baseline": "Updates the PHPStan baseline file to match the code.",
     "prepare-release": "Removes development-only files in preparation of a TER release.",
+    "docs:generate": "Renders the extension ReST documentation.",
+    "docs:watch": "Watch the extension ReST documentation with Vite.",
     "crowdin:import": "Import existing local XLIFF translation files into Crowdin and approve imported translations.",
     "crowdin:export": "Export approved Crowdin translations to local ignored XLIFF files."
   }
