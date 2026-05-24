@@ -49,7 +49,7 @@
       </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.maxFeedCount" resname="settings.plugin.tx_feeddisplay_pi1.settings.maxFeedCount" approved="yes">
         <source>Max. items</source>
-        <target state="final">Max. oggetti</target>
+        <target state="final">Max. elementi</target>
       </trans-unit>
       <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.maxFeedCount" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.maxFeedCount" approved="yes">
         <source>Maximum feed items to show</source>
