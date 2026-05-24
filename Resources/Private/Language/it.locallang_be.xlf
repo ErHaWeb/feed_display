@@ -9,7 +9,7 @@
       </trans-unit>
       <trans-unit id="pi1_plus_wiz_description" approved="yes">
         <source>RSS/Atom web feed parsing and frontend display based on Extbase/Fluid</source>
-        <target state="final">RSS/Atom web feed parsing e frontend display basato su Extbase/Fluid</target>
+        <target state="final">Analisi di feed web RSS/Atom e visualizzazione frontend basata su Extbase/Fluid</target>
       </trans-unit>
       <trans-unit id="flexform.sheet_general.title" approved="yes">
         <source>General</source>
@@ -21,7 +21,7 @@
       </trans-unit>
       <trans-unit id="flexform.feedUrl.label" approved="yes">
         <source>Feed URL</source>
-        <target state="final">Url Del Feed</target>
+        <target state="final">URL del feed</target>
       </trans-unit>
       <trans-unit id="flexform.feedUrl.description" approved="yes">
         <source>URL that is fetched by the service (empty = Defined by TypoScript)</source>
@@ -29,7 +29,7 @@
       </trans-unit>
       <trans-unit id="flexform.maxFeedCount.label" approved="yes">
         <source>Max. items</source>
-        <target state="final">Max. oggetti</target>
+        <target state="final">Max. elementi</target>
       </trans-unit>
       <trans-unit id="flexform.maxFeedCount.description" approved="yes">
         <source>Maximum feed items to show (0 or empty = Defined by TypoScript)</source>
@@ -153,7 +153,7 @@
       </trans-unit>
       <trans-unit id="flexform.cacheDuration.label" approved="yes">
         <source>Feed cache</source>
-        <target state="final">Cache dei feed</target>
+        <target state="final">Cache del feed</target>
       </trans-unit>
       <trans-unit id="flexform.cacheDuration.description" approved="yes">
         <source>Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache, empty = Defined by TypoScript)</source>
@@ -169,7 +169,7 @@
       </trans-unit>
       <trans-unit id="flexform.sheet_getFields.title" approved="yes">
         <source>Get Fields</source>
-        <target state="final">Ottieni Campi</target>
+        <target state="final">Ottieni campi</target>
       </trans-unit>
       <trans-unit id="flexform.sheet_getFields.description" approved="yes">
         <source>Select here which fields from the feed and feed items should be read using the SimplePie library and should be available as variables in the fluid template. If no fields were selected, then the TypoScript configuration is used.</source>
@@ -217,11 +217,11 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.items" approved="yes">
         <source>Items</source>
-        <target state="final">Oggetti</target>
+        <target state="final">Elementi</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.item_quantity" approved="yes">
         <source>Item quantity</source>
-        <target state="final">Quantità articolo</target>
+        <target state="final">Numero di elementi</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.language" approved="yes">
         <source>Language</source>
@@ -257,27 +257,27 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.image_height" approved="yes">
         <source>Image Height</source>
-        <target state="final">Altezza Immagine</target>
+        <target state="final">Altezza immagine</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.image_link" approved="yes">
         <source>Image Link</source>
-        <target state="final">Link Immagine</target>
+        <target state="final">Link immagine</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.image_title" approved="yes">
         <source>Image Title</source>
-        <target state="final">Titolo Immagine</target>
+        <target state="final">Titolo immagine</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.image_url" approved="yes">
         <source>Image URL</source>
-        <target state="final">Url Immagine</target>
+        <target state="final">URL immagine</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.image_width" approved="yes">
         <source>Image Width</source>
-        <target state="final">Larghezza Immagine</target>
+        <target state="final">Larghezza immagine</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.all_discovered_feeds" approved="yes">
         <source>All Discovered Feeds</source>
-        <target state="final">Tutti I Feed Scoperti</target>
+        <target state="final">Tutti i feed scoperti</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.base" approved="yes">
         <source>Base</source>
@@ -297,7 +297,7 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.group.items" approved="yes">
         <source>Items</source>
-        <target state="final">Oggetti</target>
+        <target state="final">Elementi</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.author" approved="yes">
         <source>Author</source>
