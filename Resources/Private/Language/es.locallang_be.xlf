@@ -65,15 +65,15 @@
       </trans-unit>
       <trans-unit id="flexform.linkTarget.I.blank" approved="yes">
         <source>Opens in a new window or tab</source>
-        <target state="final">Abre en una nueva ventana o pestaña</target>
+        <target state="final">Se abre en una nueva ventana o pestaña</target>
       </trans-unit>
       <trans-unit id="flexform.linkTarget.I.self" approved="yes">
         <source>Opens in the same frame as it was clicked</source>
-        <target state="final">Abre en el mismo marco en el que se hizo clic</target>
+        <target state="final">Se abre en el mismo marco en el que se hizo clic</target>
       </trans-unit>
       <trans-unit id="flexform.linkTarget.I.parent" approved="yes">
         <source>Opens in the parent frame</source>
-        <target state="final">Abre en el marco padre</target>
+        <target state="final">Se abre en el marco padre</target>
       </trans-unit>
       <trans-unit id="flexform.linkTarget.I.top" approved="yes">
         <source>Opens in the full body of the window</source>
@@ -445,15 +445,15 @@
       </trans-unit>
       <trans-unit id="constants.settings.linkTarget.I.blank" approved="yes">
         <source>Opens in a new window or tab</source>
-        <target state="final">Abre en una nueva ventana o pestaña</target>
+        <target state="final">Se abre en una nueva ventana o pestaña</target>
       </trans-unit>
       <trans-unit id="constants.settings.linkTarget.I.self" approved="yes">
         <source>Opens in the same frame as it was clicked</source>
-        <target state="final">Abre en el mismo marco en el que se hizo clic</target>
+        <target state="final">Se abre en el mismo marco en el que se hizo clic</target>
       </trans-unit>
       <trans-unit id="constants.settings.linkTarget.I.parent" approved="yes">
         <source>Opens in the parent frame</source>
-        <target state="final">Abre en el marco padre</target>
+        <target state="final">Se abre en el marco padre</target>
       </trans-unit>
       <trans-unit id="constants.settings.linkTarget.I.top" approved="yes">
         <source>Opens in the full body of the window</source>
