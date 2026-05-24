@@ -29,7 +29,7 @@
       </trans-unit>
       <trans-unit id="flexform.maxFeedCount.label" approved="yes">
         <source>Max. items</source>
-        <target state="final">Maks. przedmiotów</target>
+        <target state="final">Maks. elementów</target>
       </trans-unit>
       <trans-unit id="flexform.maxFeedCount.description" approved="yes">
         <source>Maximum feed items to show (0 or empty = Defined by TypoScript)</source>
@@ -117,7 +117,7 @@
       </trans-unit>
       <trans-unit id="flexform.errorMessage.description" approved="yes">
         <source>This message is displayed if no feed items could be fetched (empty = Defined by TypoScript)</source>
-        <target state="final">Ta wiadomość jest wyświetlana, jeśli żaden kanał nie może być pobrany (pusty = zdefiniowany przez TypoScript)</target>
+        <target state="final">Ta wiadomość jest wyświetlana, jeśli żadne elementy kanału nie mogły być pobrane (puste = zdefiniowane przez TypoScript)</target>
       </trans-unit>
       <trans-unit id="flexform.sheet_advanced.title" approved="yes">
         <source>Advanced</source>
@@ -153,11 +153,11 @@
       </trans-unit>
       <trans-unit id="flexform.cacheDuration.label" approved="yes">
         <source>Feed cache</source>
-        <target state="final">Pamięć podręczna</target>
+        <target state="final">Pamięć podręczna kanału</target>
       </trans-unit>
       <trans-unit id="flexform.cacheDuration.description" approved="yes">
         <source>Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache, empty = Defined by TypoScript)</source>
-        <target state="final">Czas w sekundach, w których dane mają być odczytane od skrzynki do następnego odnowienia skrzynki. (0 = brak pamięci podręcznej, puste = zdefiniowane przez TypoScript)</target>
+        <target state="final">Czas w sekundach, w którym dane są odczytywane z pamięci podręcznej do następnego odświeżenia pamięci podręcznej. (0 = brak pamięci podręcznej, puste = zdefiniowane przez TypoScript)</target>
       </trans-unit>
       <trans-unit id="flexform.placeholder.feed" approved="yes">
         <source>Defined by Feed or TypoScript (default)</source>
@@ -217,11 +217,11 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.items" approved="yes">
         <source>Items</source>
-        <target state="final">Przedmioty</target>
+        <target state="final">Elementy</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.item_quantity" approved="yes">
         <source>Item quantity</source>
-        <target state="final">Ilość produktu</target>
+        <target state="final">Liczba elementów</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.language" approved="yes">
         <source>Language</source>
@@ -297,7 +297,7 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.group.items" approved="yes">
         <source>Items</source>
-        <target state="final">Przedmioty</target>
+        <target state="final">Elementy</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.author" approved="yes">
         <source>Author</source>
@@ -405,7 +405,7 @@
       </trans-unit>
       <trans-unit id="constants.subcategory.getFields" approved="yes">
         <source>Fields to get from Feed and Items</source>
-        <target state="final">Pola do pobrania z kanału i przedmiotów</target>
+        <target state="final">Pola do pobrania z kanału i elementów</target>
       </trans-unit>
       <trans-unit id="constants.view.templateRootPath" approved="yes">
         <source>Path to template root (FE)</source>
@@ -473,11 +473,11 @@
       </trans-unit>
       <trans-unit id="constants.settings.feedIconMaxHeight" approved="yes">
         <source>Feed icon height:Height of the feeds icon image</source>
-        <target state="final">Wysokość ikony kanału:Wysokość obrazu kanału</target>
+        <target state="final">Wysokość ikony kanału:Wysokość obrazu ikony kanału</target>
       </trans-unit>
       <trans-unit id="constants.settings.errorMessage" approved="yes">
         <source>Error message:This message is displayed if no feed items could be fetched</source>
-        <target state="final">Komunikat o błędzie: Ta wiadomość jest wyświetlana, jeśli żaden kanał nie może zostać pobrany</target>
+        <target state="final">Komunikat o błędzie:Ta wiadomość jest wyświetlana, jeśli żadne elementy kanału nie mogły zostać pobrane</target>
       </trans-unit>
       <trans-unit id="constants.settings.dateFormat" approved="yes">
         <source>Date format:Use a PHP date format compatible with DateTimeInterface::format()</source>
@@ -489,7 +489,7 @@
       </trans-unit>
       <trans-unit id="constants.settings.cacheDuration" approved="yes">
         <source>Feed cache:Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</source>
-        <target state="final">Pamięć podręczna:Czas w sekundach, w których dane mają być odczytywane z pamięci podręcznej do następnego odnowienia pamięci podręcznej. (0 = brak skrzynki)</target>
+        <target state="final">Pamięć podręczna kanału:Czas w sekundach, w którym dane są odczytywane z pamięci podręcznej do następnego odświeżenia pamięci podręcznej. (0 = brak pamięci podręcznej)</target>
       </trans-unit>
       <trans-unit id="constants.settings.ignoreFlexFormSettingsIfEmpty" approved="yes">
         <source>Ignore FlexForm Settings if empty:Comma separated list of FlexForm settings that will be ignored in the extension settings merge process, if their value is considered empty (either an empty string or a string containing 0).</source>
