@@ -25,7 +25,7 @@
       </trans-unit>
       <trans-unit id="flexform.feedUrl.description" approved="yes">
         <source>URL that is fetched by the service (empty = Defined by TypoScript)</source>
-        <target state="final">サービスによって取得されるURL (empty = TypoScriptで定義)</target>
+        <target state="final">サービスによって取得されるURL (空 = TypoScriptで定義)</target>
       </trans-unit>
       <trans-unit id="flexform.maxFeedCount.label" approved="yes">
         <source>Max. items</source>
@@ -41,7 +41,7 @@
       </trans-unit>
       <trans-unit id="flexform.maxContentLength.description" approved="yes">
         <source>Crop the characters of the feed content to the configured length (0 or empty = Defined by TypoScript)</source>
-        <target state="final">フィードコンテンツの文字を設定された長さにトリミングします(0 または empty = TypoScriptで定義)</target>
+        <target state="final">フィードコンテンツの文字を設定された長さにトリミングします(0 または空 = TypoScriptで定義)</target>
       </trans-unit>
       <trans-unit id="flexform.maxHeaderLength.label" approved="yes">
         <source>Max. header length</source>
@@ -221,7 +221,7 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.item_quantity" approved="yes">
         <source>Item quantity</source>
-        <target state="final">商品数量</target>
+        <target state="final">アイテム数</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.language" approved="yes">
         <source>Language</source>
@@ -249,11 +249,11 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.latitude" approved="yes">
         <source>Latitude</source>
-        <target state="final">緯度：</target>
+        <target state="final">緯度</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.longitude" approved="yes">
         <source>Longitude</source>
-        <target state="final">経度：</target>
+        <target state="final">経度</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.image_height" approved="yes">
         <source>Image Height</source>
@@ -289,7 +289,7 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.items.label" approved="yes">
         <source>Get fields from feed items</source>
-        <target state="final">フィード項目から項目を取得する</target>
+        <target state="final">フィードアイテムからフィールドを取得</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.description" approved="yes">
         <source>Selection of the fields to be read from the feed items.</source>
@@ -381,11 +381,11 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.latitude" approved="yes">
         <source>Latitude</source>
-        <target state="final">緯度：</target>
+        <target state="final">緯度</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.longitude" approved="yes">
         <source>Longitude</source>
-        <target state="final">経度：</target>
+        <target state="final">経度</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.base" approved="yes">
         <source>Base</source>
@@ -429,7 +429,7 @@
       </trans-unit>
       <trans-unit id="constants.settings.maxContentLength" approved="yes">
         <source>Max. content length:Crop the characters of the feed content to the configured length</source>
-        <target state="final">Max. content length:フィードコンテンツの文字を構成された長さにトリミングする</target>
+        <target state="final">コンテンツの最大長:フィードコンテンツの文字を設定された長さにトリミングする</target>
       </trans-unit>
       <trans-unit id="constants.settings.maxHeaderLength" approved="yes">
         <source>Max. header length:Crop the characters of the feed header to the configured length</source>
@@ -437,7 +437,7 @@
       </trans-unit>
       <trans-unit id="constants.settings.linkTarget" approved="yes">
         <source>Target:Target attribute to define the feed link behavior</source>
-        <target state="final">ターゲット:Feedリンクの動作を定義するターゲット属性</target>
+        <target state="final">ターゲット:フィードリンクの動作を定義するターゲット属性</target>
       </trans-unit>
       <trans-unit id="constants.settings.linkTarget.I.default" approved="yes">
         <source>Defined by TypoScript (default)</source>
@@ -489,7 +489,7 @@
       </trans-unit>
       <trans-unit id="constants.settings.cacheDuration" approved="yes">
         <source>Feed cache:Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</source>
-        <target state="final">Feed cache:キャッシュの次の更新まで、データがキャッシュから読み取られる時間を秒単位で設定します。 (0 = キャッシュなし)</target>
+        <target state="final">フィードキャッシュ:キャッシュの次の更新まで、データがキャッシュから読み取られる時間を秒単位で設定します。 (0 = キャッシュなし)</target>
       </trans-unit>
       <trans-unit id="constants.settings.ignoreFlexFormSettingsIfEmpty" approved="yes">
         <source>Ignore FlexForm Settings if empty:Comma separated list of FlexForm settings that will be ignored in the extension settings merge process, if their value is considered empty (either an empty string or a string containing 0).</source>
