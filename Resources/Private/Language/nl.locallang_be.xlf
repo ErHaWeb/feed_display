@@ -241,7 +241,7 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.title" approved="yes">
         <source>Title</source>
-        <target state="final">Aanspreektitel</target>
+        <target state="final">Titel</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.feed.I.type" approved="yes">
         <source>Type</source>
@@ -377,7 +377,7 @@
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.title" approved="yes">
         <source>Title</source>
-        <target state="final">Aanspreektitel</target>
+        <target state="final">Titel</target>
       </trans-unit>
       <trans-unit id="flexform.getFields.items.I.latitude" approved="yes">
         <source>Latitude</source>
