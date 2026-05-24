@@ -105,7 +105,7 @@
       </trans-unit>
       <trans-unit id="errorMessage" approved="yes">
         <source>Sorry, the feed could not be fetched.</source>
-        <target state="final">Beklager, matingen kan ikke hentes.</target>
+        <target state="final">Beklager, feeden kunne ikke hentes.</target>
       </trans-unit>
       <trans-unit id="noTemplateError" approved="yes">
         <source>Feed Display: Please include static TypoScript [EXT:feed_display/Configuration/TypoScript/]</source>
