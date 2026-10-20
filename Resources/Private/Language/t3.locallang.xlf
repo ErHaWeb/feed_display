@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" original="EXT:feed_display/Resources/Private/Language/locallang.xlf" datatype="plaintext" product-name="feed_display" date="2025-02-25T11:12:27+01:00" target-language="t3">
+    <header/>
+    <body>
+      <trans-unit id="feed.categories">
+        <source>Categories</source>
+        <target>crwdns409611:0crwdne409611:0</target>
+      </trans-unit>
+      <trans-unit id="feed.category">
+        <source>Category</source>
+        <target>crwdns409613:0crwdne409613:0</target>
+      </trans-unit>
+      <trans-unit id="feed.authors">
+        <source>Authors</source>
+        <target>crwdns409615:0crwdne409615:0</target>
+      </trans-unit>
+      <trans-unit id="feed.author">
+        <source>Author</source>
+        <target>crwdns409617:0crwdne409617:0</target>
+      </trans-unit>
+      <trans-unit id="feed.contributors">
+        <source>Contributors</source>
+        <target>crwdns409619:0crwdne409619:0</target>
+      </trans-unit>
+      <trans-unit id="feed.contributor">
+        <source>Contributor</source>
+        <target>crwdns409621:0crwdne409621:0</target>
+      </trans-unit>
+      <trans-unit id="feed.items">
+        <source>Items</source>
+        <target>crwdns409623:0crwdne409623:0</target>
+      </trans-unit>
+      <trans-unit id="feed.links">
+        <source>Links</source>
+        <target>crwdns409625:0crwdne409625:0</target>
+      </trans-unit>
+      <trans-unit id="feed.link">
+        <source>Link</source>
+        <target>crwdns409627:0crwdne409627:0</target>
+      </trans-unit>
+      <trans-unit id="item.categories">
+        <source>Categories</source>
+        <target>crwdns409629:0crwdne409629:0</target>
+      </trans-unit>
+      <trans-unit id="item.category">
+        <source>Category</source>
+        <target>crwdns409631:0crwdne409631:0</target>
+      </trans-unit>
+      <trans-unit id="item.authors">
+        <source>Authors</source>
+        <target>crwdns409633:0crwdne409633:0</target>
+      </trans-unit>
+      <trans-unit id="item.author">
+        <source>Author</source>
+        <target>crwdns409635:0crwdne409635:0</target>
+      </trans-unit>
+      <trans-unit id="item.contributors">
+        <source>Contributors</source>
+        <target>crwdns409637:0crwdne409637:0</target>
+      </trans-unit>
+      <trans-unit id="item.contributor">
+        <source>Contributor</source>
+        <target>crwdns409639:0crwdne409639:0</target>
+      </trans-unit>
+      <trans-unit id="item.copyright">
+        <source>Copyright</source>
+        <target>crwdns409641:0crwdne409641:0</target>
+      </trans-unit>
+      <trans-unit id="item.date">
+        <source>Date</source>
+        <target>crwdns409643:0crwdne409643:0</target>
+      </trans-unit>
+      <trans-unit id="item.updatedDate">
+        <source>Updated</source>
+        <target>crwdns409645:0crwdne409645:0</target>
+      </trans-unit>
+      <trans-unit id="item.links">
+        <source>Links</source>
+        <target>crwdns409647:0crwdne409647:0</target>
+      </trans-unit>
+      <trans-unit id="item.link">
+        <source>Link</source>
+        <target>crwdns409649:0crwdne409649:0</target>
+      </trans-unit>
+      <trans-unit id="item.enclosure">
+        <source>Enclosure</source>
+        <target>crwdns409651:0crwdne409651:0</target>
+      </trans-unit>
+      <trans-unit id="item.enclosures">
+        <source>Enclosures</source>
+        <target>crwdns409653:0crwdne409653:0</target>
+      </trans-unit>
+      <trans-unit id="item.latitude">
+        <source>Latitude</source>
+        <target>crwdns409655:0crwdne409655:0</target>
+      </trans-unit>
+      <trans-unit id="item.longitude">
+        <source>Longitude</source>
+        <target>crwdns409657:0crwdne409657:0</target>
+      </trans-unit>
+      <trans-unit id="item.source">
+        <source>Source</source>
+        <target>crwdns409659:0crwdne409659:0</target>
+      </trans-unit>
+      <trans-unit id="errorMessage">
+        <source>Sorry, the feed could not be fetched.</source>
+        <target>crwdns409661:0crwdne409661:0</target>
+      </trans-unit>
+      <trans-unit id="noTemplateError">
+        <source>Feed Display: Please include static TypoScript [EXT:feed_display/Configuration/TypoScript/]</source>
+        <target>crwdns409663:0crwdne409663:0</target>
+      </trans-unit>
+      <trans-unit id="noItemsError">
+        <source>Sorry, no items could be fetched.</source>
+        <target>crwdns409665:0crwdne409665:0</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
