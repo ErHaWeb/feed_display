@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" original="EXT:feed_display/Resources/Private/Language/locallang_be.xlf" datatype="plaintext" product-name="feed_display" date="2026-05-06T10:39:35+02:00" target-language="t3">
+    <header/>
+    <body>
+      <trans-unit id="pi1_title">
+        <source>Feed Display</source>
+        <target>crwdns409667:0crwdne409667:0</target>
+      </trans-unit>
+      <trans-unit id="pi1_plus_wiz_description">
+        <source>RSS/Atom web feed parsing and frontend display based on Extbase/Fluid</source>
+        <target>crwdns409669:0crwdne409669:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.sheet_general.title">
+        <source>General</source>
+        <target>crwdns409671:0crwdne409671:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.sheet_general.description">
+        <source>These are general settings for the frontend display of the feed. If no value is given, then the value of the TypoScript configuration is used by default.</source>
+        <target>crwdns409673:0crwdne409673:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.feedUrl.label">
+        <source>Feed URL</source>
+        <target>crwdns409675:0crwdne409675:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.feedUrl.description">
+        <source>URL that is fetched by the service (empty = Defined by TypoScript)</source>
+        <target>crwdns409677:0crwdne409677:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.maxFeedCount.label">
+        <source>Max. items</source>
+        <target>crwdns409679:0crwdne409679:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.maxFeedCount.description">
+        <source>Maximum feed items to show (0 or empty = Defined by TypoScript)</source>
+        <target>crwdns409681:0crwdne409681:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.maxContentLength.label">
+        <source>Max. content length</source>
+        <target>crwdns409683:0crwdne409683:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.maxContentLength.description">
+        <source>Crop the characters of the feed content to the configured length (0 or empty = Defined by TypoScript)</source>
+        <target>crwdns409685:0crwdne409685:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.maxHeaderLength.label">
+        <source>Max. header length</source>
+        <target>crwdns409687:0crwdne409687:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.maxHeaderLength.description">
+        <source>Crop the characters of the feed header to the configured length (0 or empty = Defined by TypoScript)</source>
+        <target>crwdns409689:0crwdne409689:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.linkTarget.label">
+        <source>Target</source>
+        <target>crwdns409691:0crwdne409691:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.linkTarget.description">
+        <source>Target attribute to define the feed link behavior</source>
+        <target>crwdns409693:0crwdne409693:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.linkTarget.I.default">
+        <source>Defined by TypoScript (default)</source>
+        <target>crwdns409695:0crwdne409695:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.linkTarget.I.blank">
+        <source>Opens in a new window or tab</source>
+        <target>crwdns409697:0crwdne409697:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.linkTarget.I.self">
+        <source>Opens in the same frame as it was clicked</source>
+        <target>crwdns409699:0crwdne409699:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.linkTarget.I.parent">
+        <source>Opens in the parent frame</source>
+        <target>crwdns409701:0crwdne409701:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.linkTarget.I.top">
+        <source>Opens in the full body of the window</source>
+        <target>crwdns409703:0crwdne409703:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.logoMaxWidth.label">
+        <source>Logo max. width</source>
+        <target>crwdns409705:0crwdne409705:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.logoMaxWidth.description">
+        <source>Maximum width of the feeds logo image (0 or empty = Defined by TypoScript)</source>
+        <target>crwdns409707:0crwdne409707:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.logoMaxHeight.label">
+        <source>Logo max. height</source>
+        <target>crwdns409709:0crwdne409709:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.logoMaxHeight.description">
+        <source>Maximum height of the feeds logo image (0 or empty = Defined by TypoScript)</source>
+        <target>crwdns409711:0crwdne409711:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.feedIconMaxWidth.label">
+        <source>Feed icon max. width</source>
+        <target>crwdns409713:0crwdne409713:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.feedIconMaxWidth.description">
+        <source>Maximum width of the feeds icon image (0 or empty = Defined by TypoScript)</source>
+        <target>crwdns409715:0crwdne409715:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.feedIconMaxHeight.label">
+        <source>Feed icon max. height</source>
+        <target>crwdns409717:0crwdne409717:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.feedIconMaxHeight.description">
+        <source>Maximum height of the feeds icon image (0 or empty = Defined by TypoScript)</source>
+        <target>crwdns409719:0crwdne409719:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.errorMessage.label">
+        <source>Error message</source>
+        <target>crwdns409721:0crwdne409721:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.errorMessage.description">
+        <source>This message is displayed if no feed items could be fetched (empty = Defined by TypoScript)</source>
+        <target>crwdns409723:0crwdne409723:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.sheet_advanced.title">
+        <source>Advanced</source>
+        <target>crwdns409725:0crwdne409725:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.sheet_advanced.description">
+        <source>These are advanced settings. If you are unsure, simply use the default values here. If no value is given, then the value of the TypoScript configuration is used by default.</source>
+        <target>crwdns409727:0crwdne409727:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.dateFormat.label">
+        <source>Date format</source>
+        <target>crwdns409729:0crwdne409729:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.dateFormat.description">
+        <source>Use a PHP date format compatible with DateTimeInterface::format() (empty = Defined by TypoScript)</source>
+        <target>crwdns409731:0crwdne409731:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.stripTags.label">
+        <source>Strip tags</source>
+        <target>crwdns409733:0crwdne409733:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.stripTags.description">
+        <source>Remove HTML tags from the feed content</source>
+        <target>crwdns409735:0crwdne409735:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.stripTags.I.yes">
+        <source>yes</source>
+        <target>crwdns409737:0crwdne409737:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.stripTags.I.no">
+        <source>no</source>
+        <target>crwdns409739:0crwdne409739:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.cacheDuration.label">
+        <source>Feed cache</source>
+        <target>crwdns409741:0crwdne409741:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.cacheDuration.description">
+        <source>Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache, empty = Defined by TypoScript)</source>
+        <target>crwdns409743:0crwdne409743:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.placeholder.feed">
+        <source>Defined by Feed or TypoScript (default)</source>
+        <target>crwdns409745:0crwdne409745:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.placeholder.typoscript">
+        <source>Defined by TypoScript (default)</source>
+        <target>crwdns409747:0crwdne409747:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.sheet_getFields.title">
+        <source>Get Fields</source>
+        <target>crwdns409749:0crwdne409749:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.sheet_getFields.description">
+        <source>Select here which fields from the feed and feed items should be read using the SimplePie library and should be available as variables in the fluid template. If no fields were selected, then the TypoScript configuration is used.</source>
+        <target>crwdns409751:0crwdne409751:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.label">
+        <source>Get fields from feed</source>
+        <target>crwdns409753:0crwdne409753:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.description">
+        <source>Selection of the fields to be read from the feed.</source>
+        <target>crwdns409755:0crwdne409755:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.group.feed">
+        <source>Feed</source>
+        <target>crwdns409757:0crwdne409757:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.author">
+        <source>Author</source>
+        <target>crwdns409759:0crwdne409759:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.authors">
+        <source>Authors</source>
+        <target>crwdns409761:0crwdne409761:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.contributor">
+        <source>Contributor</source>
+        <target>crwdns409763:0crwdne409763:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.contributors">
+        <source>Contributors</source>
+        <target>crwdns409765:0crwdne409765:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.copyright">
+        <source>Copyright</source>
+        <target>crwdns409767:0crwdne409767:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.description">
+        <source>Description</source>
+        <target>crwdns409769:0crwdne409769:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.encoding">
+        <source>Encoding</source>
+        <target>crwdns409771:0crwdne409771:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.items">
+        <source>Items</source>
+        <target>crwdns409773:0crwdne409773:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.item_quantity">
+        <source>Item quantity</source>
+        <target>crwdns409775:0crwdne409775:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.language">
+        <source>Language</source>
+        <target>crwdns409777:0crwdne409777:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.link">
+        <source>Link</source>
+        <target>crwdns409779:0crwdne409779:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.links">
+        <source>Links</source>
+        <target>crwdns409781:0crwdne409781:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.permalink">
+        <source>Permalink</source>
+        <target>crwdns409783:0crwdne409783:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.title">
+        <source>Title</source>
+        <target>crwdns409785:0crwdne409785:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.type">
+        <source>Type</source>
+        <target>crwdns409787:0crwdne409787:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.latitude">
+        <source>Latitude</source>
+        <target>crwdns409789:0crwdne409789:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.longitude">
+        <source>Longitude</source>
+        <target>crwdns409791:0crwdne409791:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.image_height">
+        <source>Image Height</source>
+        <target>crwdns409793:0crwdne409793:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.image_link">
+        <source>Image Link</source>
+        <target>crwdns409795:0crwdne409795:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.image_title">
+        <source>Image Title</source>
+        <target>crwdns409797:0crwdne409797:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.image_url">
+        <source>Image URL</source>
+        <target>crwdns409799:0crwdne409799:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.image_width">
+        <source>Image Width</source>
+        <target>crwdns409801:0crwdne409801:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.all_discovered_feeds">
+        <source>All Discovered Feeds</source>
+        <target>crwdns409803:0crwdne409803:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.base">
+        <source>Base</source>
+        <target>crwdns409805:0crwdne409805:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.feed.I.subscribe_url">
+        <source>Subscribe URL</source>
+        <target>crwdns409807:0crwdne409807:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.label">
+        <source>Get fields from feed items</source>
+        <target>crwdns409809:0crwdne409809:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.description">
+        <source>Selection of the fields to be read from the feed items.</source>
+        <target>crwdns409811:0crwdne409811:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.group.items">
+        <source>Items</source>
+        <target>crwdns409813:0crwdne409813:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.author">
+        <source>Author</source>
+        <target>crwdns409815:0crwdne409815:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.authors">
+        <source>Authors</source>
+        <target>crwdns409817:0crwdne409817:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.categories">
+        <source>Categories</source>
+        <target>crwdns409819:0crwdne409819:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.category">
+        <source>Category</source>
+        <target>crwdns409821:0crwdne409821:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.content">
+        <source>Content</source>
+        <target>crwdns409823:0crwdne409823:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.contributor">
+        <source>Contributor</source>
+        <target>crwdns409825:0crwdne409825:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.contributors">
+        <source>Contributors</source>
+        <target>crwdns409827:0crwdne409827:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.copyright">
+        <source>Copyright</source>
+        <target>crwdns409829:0crwdne409829:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.date">
+        <source>Date (with parameter "U")</source>
+        <target>crwdns409831:0crwdne409831:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.description">
+        <source>Description</source>
+        <target>crwdns409833:0crwdne409833:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.enclosure">
+        <source>Enclosure</source>
+        <target>crwdns409835:0crwdne409835:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.enclosures">
+        <source>Enclosures</source>
+        <target>crwdns409837:0crwdne409837:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.feed">
+        <source>Feed</source>
+        <target>crwdns409839:0crwdne409839:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.id">
+        <source>ID</source>
+        <target>crwdns409841:0crwdne409841:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.link">
+        <source>Link</source>
+        <target>crwdns409843:0crwdne409843:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.links">
+        <source>Links</source>
+        <target>crwdns409845:0crwdne409845:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.local_date">
+        <source>Local Date (with empty parameter)</source>
+        <target>crwdns409847:0crwdne409847:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.permalink">
+        <source>Permalink</source>
+        <target>crwdns409849:0crwdne409849:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.source">
+        <source>Source</source>
+        <target>crwdns409851:0crwdne409851:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.title">
+        <source>Title</source>
+        <target>crwdns409853:0crwdne409853:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.latitude">
+        <source>Latitude</source>
+        <target>crwdns409855:0crwdne409855:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.longitude">
+        <source>Longitude</source>
+        <target>crwdns409857:0crwdne409857:0</target>
+      </trans-unit>
+      <trans-unit id="flexform.getFields.items.I.base">
+        <source>Base</source>
+        <target>crwdns409859:0crwdne409859:0</target>
+      </trans-unit>
+      <trans-unit id="constants.customcategory.plugin.tx_feeddisplay_pi1">
+        <source>Feed Display</source>
+        <target>crwdns409861:0crwdne409861:0</target>
+      </trans-unit>
+      <trans-unit id="constants.subcategory.general">
+        <source>General</source>
+        <target>crwdns409863:0crwdne409863:0</target>
+      </trans-unit>
+      <trans-unit id="constants.subcategory.advanced">
+        <source>Advanced</source>
+        <target>crwdns409865:0crwdne409865:0</target>
+      </trans-unit>
+      <trans-unit id="constants.subcategory.getFields">
+        <source>Fields to get from Feed and Items</source>
+        <target>crwdns409867:0crwdne409867:0</target>
+      </trans-unit>
+      <trans-unit id="constants.view.templateRootPath">
+        <source>Path to template root (FE)</source>
+        <target>crwdns409869:0crwdne409869:0</target>
+      </trans-unit>
+      <trans-unit id="constants.view.partialRootPath">
+        <source>Path to template partials (FE)</source>
+        <target>crwdns409871:0crwdne409871:0</target>
+      </trans-unit>
+      <trans-unit id="constants.view.layoutRootPath">
+        <source>Path to template layouts (FE)</source>
+        <target>crwdns409873:0crwdne409873:0</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.feedUrl">
+        <source>Feed URL:URL that is fetched by the service</source>
+        <target>crwdns409875:0crwdne409875:0</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.maxFeedCount">
+        <source>Max. items:Maximum feed items to show</source>
+        <target>crwdns409877:0crwdne409877:0</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.maxContentLength">
+        <source>Max. content length:Crop the characters of the feed content to the configured length</source>
+        <target>crwdns409879:0crwdne409879:0</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.maxHeaderLength">
+        <source>Max. header length:Crop the characters of the feed header to the configured length</source>
+        <target>crwdns409881:0crwdne409881:0</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.linkTarget">
+        <source>Target:Target attribute to define the feed link behavior</source>
+        <target>crwdns409883:0crwdne409883:0</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.linkTarget.I.default">
+        <source>Defined by TypoScript (default)</source>
+        <target>crwdns409885:0crwdne409885:0</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.linkTarget.I.blank">
+        <source>Opens in a new window or tab</source>
+        <target>crwdns409887:0crwdne409887:0</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.linkTarget.I.self">
+        <source>Opens in the same frame as it was clicked</source>
+        <target>crwdns409889:0crwdne409889:0</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.linkTarget.I.parent">
+        <source>Opens in the parent frame</source>
+        <target>crwdns409891:0crwdne409891:0</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.linkTarget.I.top">
+        <source>Opens in the full body of the window</source>
+        <target>crwdns409893:0crwdne409893:0</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.logoMaxWidth">
+        <source>Logo width:Width of the feeds logo image</source>
+        <target>crwdns409895:0crwdne409895:0</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.logoMaxHeight">
+        <source>Logo height:Height of the feeds logo image</source>
+        <target>crwdns409897:0crwdne409897:0</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.feedIconMaxWidth">
+        <source>Feed icon width:Width of the feeds icon image</source>
+        <target>crwdns409899:0crwdne409899:0</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.feedIconMaxHeight">
+        <source>Feed icon height:Height of the feeds icon image</source>
+        <target>crwdns409901:0crwdne409901:0</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.errorMessage">
+        <source>Error message:This message is displayed if no feed items could be fetched</source>
+        <target>crwdns409903:0crwdne409903:0</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.dateFormat">
+        <source>Date format:Use a PHP date format compatible with DateTimeInterface::format()</source>
+        <target>crwdns409905:0crwdne409905:0</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.stripTags">
+        <source>Strip tags:Remove HTML tags from the feed content</source>
+        <target>crwdns409907:0crwdne409907:0</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.cacheDuration">
+        <source>Feed cache:Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</source>
+        <target>crwdns409909:0crwdne409909:0</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.ignoreFlexFormSettingsIfEmpty">
+        <source>Ignore FlexForm Settings if empty:Comma separated list of FlexForm settings that will be ignored in the extension settings merge process, if their value is considered empty (either an empty string or a string containing 0).</source>
+        <target>crwdns409911:0crwdne409911:0</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.getFields.feed">
+        <source>Feed fields to get:Comma-separated list of fields to be read from the feed by SimplePie and made available as variables in Fluid.</source>
+        <target>crwdns409913:0crwdne409913:0</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.getFields.items">
+        <source>Feed items fields to get:Comma-separated list of fields to be read from the feed items by SimplePie and made available as variables in Fluid.</source>
+        <target>crwdns409915:0crwdne409915:0</target>
+      </trans-unit>
+      <trans-unit id="sets.feeddisplay.label">
+        <source>Feed Display</source>
+        <target>crwdns409917:0crwdne409917:0</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
