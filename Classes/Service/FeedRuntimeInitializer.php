@@ -53,9 +53,7 @@ final class FeedRuntimeInitializer
         }
         $feed->enable_cache(false);
         // Feed autodiscovery can hit SimplePie's IRI handling before getters run.
-        SimplePieDeprecationHandler::run($feed->init(...));
-
-        return true;
+        return SimplePieDeprecationHandler::run($feed->init(...)) === true;
     }
 
     private function shouldUseTypo3HttpClient(string $feedUrl): bool

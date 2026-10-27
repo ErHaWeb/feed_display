@@ -146,13 +146,13 @@ final class FeedFrontendTest extends AbstractFeedFrontendTestCase
     #[Test]
     public function invalidFeedDisplaysTheDefaultErrorMessage(): void
     {
-        $this->initializeFrontendRootPage($this->instancePath . '/fileadmin/missing-feed.xml', [
-            'getFields.feed' => '',
-        ]);
+        $this->initializeFrontendRootPage($this->instancePath . '/fileadmin/missing-feed.xml');
 
         $body = $this->requestPage();
 
         self::assertStringContainsString('Sorry, the feed could not be fetched.', $body);
+        self::assertStringNotContainsString('class="feed-title"', $body);
+        self::assertStringNotContainsString('class="feed-items"', $body);
     }
 
     #[Test]

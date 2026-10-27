@@ -21,6 +21,11 @@ use ErHaWeb\FeedDisplay\Event\SingleFeedDataEvent;
 use ErHaWeb\FeedDisplay\Service\FeedDataService;
 use ErHaWeb\FeedDisplay\Service\FeedRuntimeInitializer;
 use GuzzleHttp\Client;
+use GuzzleHttp\Handler\MockHandler;
+use GuzzleHttp\HandlerStack;
+use GuzzleHttp\Psr7\HttpFactory;
+use GuzzleHttp\Psr7\Response;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Test;
 use Psr\EventDispatcher\EventDispatcherInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -73,7 +78,7 @@ final class FeedDataServiceTest extends UnitTestCase
 
         $feed->expects(self::once())->method('set_feed_url')->with('/var/www/public/fileadmin/feed.xml');
         $feed->expects(self::once())->method('enable_cache')->with(false);
-        $feed->expects(self::once())->method('init');
+        $feed->expects(self::once())->method('init')->willReturn(true);
         $feed->expects(self::once())->method('get_items')->with(0, 0)->willReturn([]);
         $eventDispatcher->expects(self::never())->method('dispatch');
 
@@ -108,7 +113,7 @@ final class FeedDataServiceTest extends UnitTestCase
 
         $feed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed.xml');
         $feed->expects(self::once())->method('enable_cache')->with(false);
-        $feed->expects(self::once())->method('init');
+        $feed->expects(self::once())->method('init')->willReturn(true);
         $feed->expects(self::once())->method('get_title')->willReturn('Feed title');
         $feed->expects(self::once())->method('subscribe_url')->willReturn('https://example.com/subscribe');
         $feed->expects(self::once())->method('get_image_url')->willReturn('file://' . $sourceImagePath);
@@ -158,7 +163,7 @@ final class FeedDataServiceTest extends UnitTestCase
 
         $feed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed.xml');
         $feed->expects(self::once())->method('enable_cache')->with(false);
-        $feed->expects(self::once())->method('init');
+        $feed->expects(self::once())->method('init')->willReturn(true);
         $feed->expects(self::never())->method('get_favicon');
         $feed->expects(self::once())->method('get_items')->with(0, 0)->willReturn([]);
 
@@ -193,7 +198,7 @@ final class FeedDataServiceTest extends UnitTestCase
 
         $feed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed.xml');
         $feed->expects(self::once())->method('enable_cache')->with(false);
-        $feed->expects(self::once())->method('init');
+        $feed->expects(self::once())->method('init')->willReturn(true);
         $feed->expects(self::once())->method('get_description')->willReturnCallback(
             static fn(): string => require $deprecationFile
         );
@@ -275,7 +280,7 @@ final class FeedDataServiceTest extends UnitTestCase
 
         $feed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed.xml');
         $feed->expects(self::once())->method('enable_cache')->with(false);
-        $feed->expects(self::once())->method('init');
+        $feed->expects(self::once())->method('init')->willReturn(true);
         $feed->expects(self::once())->method('get_items')->with(0, 1)->willReturn([$item]);
         $eventDispatcher->expects(self::once())->method('dispatch')->willReturnArgument(0);
 
@@ -311,7 +316,7 @@ final class FeedDataServiceTest extends UnitTestCase
 
         $feed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed.xml');
         $feed->expects(self::once())->method('enable_cache')->with(false);
-        $feed->expects(self::once())->method('init');
+        $feed->expects(self::once())->method('init')->willReturn(true);
         $feed->expects(self::once())->method('get_image_url')->willReturn('file://' . $sourceImagePath);
         $feed->expects(self::once())->method('get_items')->with(0, 0)->willReturn([]);
         $eventDispatcher->expects(self::never())->method('dispatch');
@@ -344,7 +349,7 @@ final class FeedDataServiceTest extends UnitTestCase
 
         $feed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed.xml');
         $feed->expects(self::once())->method('enable_cache')->with(false);
-        $feed->expects(self::once())->method('init');
+        $feed->expects(self::once())->method('init')->willReturn(true);
         $feed->expects(self::once())->method('get_items')->with(0, 0)->willReturn([]);
         $eventDispatcher->expects(self::never())->method('dispatch');
 
@@ -375,7 +380,7 @@ final class FeedDataServiceTest extends UnitTestCase
 
         $feed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed.xml');
         $feed->expects(self::once())->method('enable_cache')->with(false);
-        $feed->expects(self::once())->method('init');
+        $feed->expects(self::once())->method('init')->willReturn(true);
         $feed->expects(self::once())->method('get_items')->with(0, 1)->willReturn([$item]);
         $eventDispatcher->expects(self::once())->method('dispatch')->willReturnArgument(0);
 
@@ -409,7 +414,7 @@ final class FeedDataServiceTest extends UnitTestCase
 
         $feed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed.xml');
         $feed->expects(self::once())->method('enable_cache')->with(false);
-        $feed->expects(self::once())->method('init');
+        $feed->expects(self::once())->method('init')->willReturn(true);
         $feed->expects(self::once())->method('get_image_url')->willReturn('file:///path/to/non-existing.svg');
         $feed->expects(self::once())->method('get_items')->with(0, 0)->willReturn([]);
         $eventDispatcher->expects(self::never())->method('dispatch');
@@ -442,7 +447,7 @@ final class FeedDataServiceTest extends UnitTestCase
 
         $feed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed.xml');
         $feed->expects(self::once())->method('enable_cache')->with(false);
-        $feed->expects(self::once())->method('init');
+        $feed->expects(self::once())->method('init')->willReturn(true);
         $feed->expects(self::once())->method('get_image_url')->willReturn('https://example.com/images/');
         $feed->expects(self::once())->method('get_items')->with(0, 0)->willReturn([]);
         $eventDispatcher->expects(self::never())->method('dispatch');
@@ -476,7 +481,7 @@ final class FeedDataServiceTest extends UnitTestCase
 
         $feed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed.xml');
         $feed->expects(self::once())->method('enable_cache')->with(false);
-        $feed->expects(self::once())->method('init');
+        $feed->expects(self::once())->method('init')->willReturn(true);
         $feed->expects(self::exactly(2))->method('get_items')->willReturnCallback(
             static function (int $start, int $end) use ($item): array {
                 self::assertSame(0, $start);
@@ -510,6 +515,39 @@ final class FeedDataServiceTest extends UnitTestCase
         self::assertSame('Related feed', $data['items'][0]['feed']['title']);
         self::assertNull($data['items'][0]['callback']);
         self::assertNotSame('', serialize($data));
+    }
+
+    #[Test]
+    #[DataProvider('httpFeedResponses')]
+    public function initializerReportsWhetherTheHttpFeedWasParsed(Response $response, bool $expected): void
+    {
+        $client = new Client(['handler' => HandlerStack::create(new MockHandler([$response]))]);
+        $factory = $this->createMock(GuzzleClientFactory::class);
+        $factory->expects(self::once())->method('getClient')->willReturn($client);
+        $httpFactory = new HttpFactory();
+        $subject = new FeedRuntimeInitializer($factory, $httpFactory, $httpFactory);
+
+        self::assertSame(
+            $expected,
+            $subject->initializeFeed(new SimplePie(), ['feedUrl' => 'https://example.test/feed.xml'])
+        );
+    }
+
+    /**
+     * @return iterable<string, array{Response, bool}>
+     */
+    public static function httpFeedResponses(): iterable
+    {
+        yield 'HTTP failure' => [new Response(503), false];
+        yield 'invalid XML' => [new Response(200, ['Content-Type' => 'application/rss+xml'], '<rss>'), false];
+        yield 'valid empty feed' => [
+            new Response(
+                200,
+                ['Content-Type' => 'application/rss+xml'],
+                '<rss version="2.0"><channel><title>Feed</title><link>https://example.test/</link><description>Empty</description></channel></rss>'
+            ),
+            true,
+        ];
     }
 
     private function createSourceImage(string $fileName): string
