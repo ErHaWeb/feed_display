@@ -42,7 +42,7 @@ final class FeedDataServiceTest extends UnitTestCase
 
         $feed->expects(self::never())->method('set_feed_url');
         $feed->expects(self::never())->method('enable_cache');
-        $feed->expects(self::never())->method('init');
+        $feed->expects(self::never())->method('init')->willReturn(true);
         $eventDispatcher->expects(self::never())->method('dispatch');
 
         $settings = [
@@ -73,7 +73,7 @@ final class FeedDataServiceTest extends UnitTestCase
 
         $feed->expects(self::once())->method('set_feed_url')->with('/var/www/public/fileadmin/feed.xml');
         $feed->expects(self::once())->method('enable_cache')->with(false);
-        $feed->expects(self::once())->method('init');
+        $feed->expects(self::once())->method('init')->willReturn(true);
         $feed->expects(self::once())->method('get_items')->with(0, 0)->willReturn([]);
         $eventDispatcher->expects(self::never())->method('dispatch');
 
@@ -83,6 +83,35 @@ final class FeedDataServiceTest extends UnitTestCase
             'getFields' => [
                 'feed' => '',
                 'items' => '',
+            ],
+        ];
+
+        $subject = $this->createSubject($feed, $eventDispatcher, $guzzleClientFactory, $requestFactory, $uriFactory);
+
+        self::assertSame(['settings' => $settings], $subject->buildData($settings));
+    }
+
+    #[Test]
+    public function buildDataReturnsOnlySettingsIfFeedCouldNotBeFetched(): void
+    {
+        $feed = $this->getMockBuilder(SimplePie::class)
+            ->disableOriginalConstructor()
+            ->onlyMethods(['set_feed_url', 'enable_cache', 'init', 'get_title', 'get_items'])
+            ->getMock();
+        $eventDispatcher = $this->createMock(EventDispatcherInterface::class);
+        [$guzzleClientFactory, $requestFactory, $uriFactory] = $this->createHttpClientDependencies(false);
+
+        $feed->expects(self::once())->method('init')->willReturn(false);
+        $feed->expects(self::never())->method('get_title');
+        $feed->expects(self::never())->method('get_items');
+        $eventDispatcher->expects(self::never())->method('dispatch');
+
+        $settings = [
+            'feedUrl' => '/var/www/public/fileadmin/missing-feed.xml',
+            'maxFeedCount' => 0,
+            'getFields' => [
+                'feed' => 'title',
+                'items' => 'title',
             ],
         ];
 
@@ -108,7 +137,7 @@ final class FeedDataServiceTest extends UnitTestCase
 
         $feed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed.xml');
         $feed->expects(self::once())->method('enable_cache')->with(false);
-        $feed->expects(self::once())->method('init');
+        $feed->expects(self::once())->method('init')->willReturn(true);
         $feed->expects(self::once())->method('get_title')->willReturn('Feed title');
         $feed->expects(self::once())->method('subscribe_url')->willReturn('https://example.com/subscribe');
         $feed->expects(self::once())->method('get_image_url')->willReturn('file://' . $sourceImagePath);
@@ -158,7 +187,7 @@ final class FeedDataServiceTest extends UnitTestCase
 
         $feed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed.xml');
         $feed->expects(self::once())->method('enable_cache')->with(false);
-        $feed->expects(self::once())->method('init');
+        $feed->expects(self::once())->method('init')->willReturn(true);
         $feed->expects(self::never())->method('get_favicon');
         $feed->expects(self::once())->method('get_items')->with(0, 0)->willReturn([]);
 
@@ -193,7 +222,7 @@ final class FeedDataServiceTest extends UnitTestCase
 
         $feed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed.xml');
         $feed->expects(self::once())->method('enable_cache')->with(false);
-        $feed->expects(self::once())->method('init');
+        $feed->expects(self::once())->method('init')->willReturn(true);
         $feed->expects(self::once())->method('get_description')->willReturnCallback(
             static fn(): string => require $deprecationFile
         );
@@ -275,7 +304,7 @@ final class FeedDataServiceTest extends UnitTestCase
 
         $feed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed.xml');
         $feed->expects(self::once())->method('enable_cache')->with(false);
-        $feed->expects(self::once())->method('init');
+        $feed->expects(self::once())->method('init')->willReturn(true);
         $feed->expects(self::once())->method('get_items')->with(0, 1)->willReturn([$item]);
         $eventDispatcher->expects(self::once())->method('dispatch')->willReturnArgument(0);
 
@@ -311,7 +340,7 @@ final class FeedDataServiceTest extends UnitTestCase
 
         $feed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed.xml');
         $feed->expects(self::once())->method('enable_cache')->with(false);
-        $feed->expects(self::once())->method('init');
+        $feed->expects(self::once())->method('init')->willReturn(true);
         $feed->expects(self::once())->method('get_image_url')->willReturn('file://' . $sourceImagePath);
         $feed->expects(self::once())->method('get_items')->with(0, 0)->willReturn([]);
         $eventDispatcher->expects(self::never())->method('dispatch');
@@ -344,7 +373,7 @@ final class FeedDataServiceTest extends UnitTestCase
 
         $feed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed.xml');
         $feed->expects(self::once())->method('enable_cache')->with(false);
-        $feed->expects(self::once())->method('init');
+        $feed->expects(self::once())->method('init')->willReturn(true);
         $feed->expects(self::once())->method('get_items')->with(0, 0)->willReturn([]);
         $eventDispatcher->expects(self::never())->method('dispatch');
 
@@ -375,7 +404,7 @@ final class FeedDataServiceTest extends UnitTestCase
 
         $feed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed.xml');
         $feed->expects(self::once())->method('enable_cache')->with(false);
-        $feed->expects(self::once())->method('init');
+        $feed->expects(self::once())->method('init')->willReturn(true);
         $feed->expects(self::once())->method('get_items')->with(0, 1)->willReturn([$item]);
         $eventDispatcher->expects(self::once())->method('dispatch')->willReturnArgument(0);
 
@@ -409,7 +438,7 @@ final class FeedDataServiceTest extends UnitTestCase
 
         $feed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed.xml');
         $feed->expects(self::once())->method('enable_cache')->with(false);
-        $feed->expects(self::once())->method('init');
+        $feed->expects(self::once())->method('init')->willReturn(true);
         $feed->expects(self::once())->method('get_image_url')->willReturn('file:///path/to/non-existing.svg');
         $feed->expects(self::once())->method('get_items')->with(0, 0)->willReturn([]);
         $eventDispatcher->expects(self::never())->method('dispatch');
@@ -442,7 +471,7 @@ final class FeedDataServiceTest extends UnitTestCase
 
         $feed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed.xml');
         $feed->expects(self::once())->method('enable_cache')->with(false);
-        $feed->expects(self::once())->method('init');
+        $feed->expects(self::once())->method('init')->willReturn(true);
         $feed->expects(self::once())->method('get_image_url')->willReturn('https://example.com/images/');
         $feed->expects(self::once())->method('get_items')->with(0, 0)->willReturn([]);
         $eventDispatcher->expects(self::never())->method('dispatch');
@@ -476,7 +505,7 @@ final class FeedDataServiceTest extends UnitTestCase
 
         $feed->expects(self::once())->method('set_feed_url')->with('https://example.com/feed.xml');
         $feed->expects(self::once())->method('enable_cache')->with(false);
-        $feed->expects(self::once())->method('init');
+        $feed->expects(self::once())->method('init')->willReturn(true);
         $feed->expects(self::exactly(2))->method('get_items')->willReturnCallback(
             static function (int $start, int $end) use ($item): array {
                 self::assertSame(0, $start);

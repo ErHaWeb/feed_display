@@ -45,16 +45,19 @@ class FeedDataService
 
     /**
      * @param FeedSettings $settings
+     * @param string|null $rawData Previously fetched feed response; the feed is fetched from settings.feedUrl if null
      * @return FeedData
      */
-    public function buildData(array $settings): array
+    public function buildData(array $settings, ?string $rawData = null): array
     {
         $data = [
             'settings' => $settings,
         ];
 
         if (!SimplePieDeprecationHandler::run(
-            fn(): bool => $this->initializer->initializeFeed($this->feed, $settings)
+            fn(): bool => $rawData === null
+                ? $this->initializer->initializeFeed($this->feed, $settings)
+                : $this->initializer->initializeFeedFromRawData($this->feed, $settings, $rawData)
         )) {
             return $data;
         }

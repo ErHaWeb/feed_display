@@ -17,9 +17,12 @@ declare(strict_types=1);
 
 namespace ErHaWeb\FeedDisplay\Tests\Functional\Frontend;
 
+use ErHaWeb\FeedDisplay\Controller\FeedController;
 use ErHaWeb\FeedDisplay\Tests\Functional\Support\SiteBasedTestTrait;
+use TYPO3\CMS\Core\Cache\Backend\TaggableBackendInterface;
 use TYPO3\CMS\Core\Cache\CacheManager;
 use TYPO3\CMS\Core\Cache\Exception\NoSuchCacheException;
+use TYPO3\CMS\Core\Cache\Frontend\FrontendInterface;
 use TYPO3\CMS\Core\Configuration\FlexForm\FlexFormTools;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\TestingFramework\Core\Functional\Framework\Frontend\InternalRequest;
@@ -195,28 +198,57 @@ abstract class AbstractFeedFrontendTestCase extends FunctionalTestCase
      */
     protected function getCachedFeedData(): array|false
     {
-        try {
-            return $this->get(CacheManager::class)->getCache('feeddisplay')->get('feeddisplay');
-        } catch (NoSuchCacheException $exception) {
-            throw new \LogicException(
-                'Cache "feeddisplay" must be available in frontend functional tests.',
-                1741614942,
-                $exception
-            );
+        $identifier = $this->findCachedFeedDataIdentifier();
+        if ($identifier === null) {
+            return false;
         }
+
+        $entry = $this->getFeedDataCache()->get($identifier);
+
+        return is_array($entry) && is_array($entry['data'] ?? null) ? $entry['data'] : false;
     }
 
     /**
+     * Replaces the data of the entry written by the previous request.
+     *
      * @param array<string, mixed> $data
      */
     protected function setCachedFeedData(array $data, int $lifetime = 600): void
     {
+        $identifier = $this->findCachedFeedDataIdentifier();
+        if ($identifier === null) {
+            throw new \LogicException('A request must have cached feed data before it can be replaced.', 1741614944);
+        }
+
+        $cache = $this->getFeedDataCache();
+        $entry = $cache->get($identifier);
+        $entry['data'] = $data;
+        $cache->set($identifier, $entry, [FeedController::CACHE_TAG], $lifetime);
+    }
+
+    private function findCachedFeedDataIdentifier(): ?string
+    {
+        $backend = $this->getFeedDataCache()->getBackend();
+        if (!$backend instanceof TaggableBackendInterface) {
+            throw new \LogicException('Cache "feeddisplay" must use a taggable backend in tests.', 1741614945);
+        }
+
+        $identifiers = array_values($backend->findIdentifiersByTag(FeedController::CACHE_TAG));
+        if (count($identifiers) > 1) {
+            throw new \LogicException('Expected at most one cached feed data entry.', 1741614946);
+        }
+
+        return $identifiers[0] ?? null;
+    }
+
+    private function getFeedDataCache(): FrontendInterface
+    {
         try {
-            $this->get(CacheManager::class)->getCache('feeddisplay')->set('feeddisplay', $data, [], $lifetime);
+            return $this->get(CacheManager::class)->getCache('feeddisplay');
         } catch (NoSuchCacheException $exception) {
             throw new \LogicException(
                 'Cache "feeddisplay" must be available in frontend functional tests.',
-                1741614943,
+                1741614942,
                 $exception
             );
         }

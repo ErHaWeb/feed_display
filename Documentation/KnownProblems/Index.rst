@@ -26,9 +26,9 @@ Please verify that the feed is indeed being delivered reliably. I know of cases 
 but an error 500 occurred on some calls. If this error occurs sporadically, it could be that the memory size on the
 system delivering the feed has been exceeded.
 
-In this context, please note that the Feed Display extension itself caches the return. This means that in case of doubt
-a faulty feed may persist for a longer period of time until the TYPO3 cache is cleared again, although a direct call to
-the feed URL will work again.
+In this context, please note that the Feed Display extension stores the last successfully fetched feed and keeps
+rendering it while fetching fails. A feed that delivers a valid but empty response, however, replaces the stored feed.
+The table ``tx_feeddisplay_feed`` shows the last error of each feed in the field ``last_error``.
 
 If the feed is loaded from a remote ``http`` or ``https`` URL, also verify the
 TYPO3 HTTP client configuration of the instance. Proxy requirements and

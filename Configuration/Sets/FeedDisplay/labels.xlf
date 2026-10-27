@@ -123,6 +123,12 @@
 			<trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.cacheDuration" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.cacheDuration">
 				<source>Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</source>
 			</trans-unit>
+			<trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.fetchMode" resname="settings.plugin.tx_feeddisplay_pi1.settings.fetchMode">
+				<source>Fetch mode</source>
+			</trans-unit>
+			<trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.fetchMode" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.fetchMode">
+				<source>live: fetch on page rendering once the stored feed is older than the feed cache time. scheduler: only render the stored feed and let the "feeddisplay:refresh" command fetch it.</source>
+			</trans-unit>
 			<trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty" resname="settings.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty">
 				<source>Ignore FlexForm Settings if empty</source>
 			</trans-unit>

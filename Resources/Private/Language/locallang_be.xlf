@@ -120,6 +120,18 @@
 			<trans-unit id="flexform.cacheDuration.description">
 				<source>Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache, empty = Defined by TypoScript)</source>
 			</trans-unit>
+			<trans-unit id="flexform.fetchMode.label">
+				<source>Fetch mode</source>
+			</trans-unit>
+			<trans-unit id="flexform.fetchMode.description">
+				<source>Live fetches the feed on page rendering once the stored feed is older than the feed cache time. Scheduler only renders the stored feed, the scheduler task "feeddisplay:refresh" fetches it.</source>
+			</trans-unit>
+			<trans-unit id="flexform.fetchMode.I.live">
+				<source>Live (on page rendering)</source>
+			</trans-unit>
+			<trans-unit id="flexform.fetchMode.I.scheduler">
+				<source>Scheduler task</source>
+			</trans-unit>
 			<trans-unit id="flexform.placeholder.feed">
 				<source>Defined by Feed or TypoScript (default)</source>
 			</trans-unit>
@@ -368,6 +380,9 @@
 			</trans-unit>
 			<trans-unit id="constants.settings.cacheDuration">
 				<source>Feed cache:Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</source>
+			</trans-unit>
+			<trans-unit id="constants.settings.fetchMode">
+				<source>Fetch mode:live = fetch on page rendering once the stored feed is older than the feed cache time, scheduler = only the "feeddisplay:refresh" command fetches the feed</source>
 			</trans-unit>
 			<trans-unit id="constants.settings.ignoreFlexFormSettingsIfEmpty">
 				<source>Ignore FlexForm Settings if empty:Comma separated list of FlexForm settings that will be ignored in the extension settings merge process, if their value is considered empty (either an empty string or a string containing 0).</source>

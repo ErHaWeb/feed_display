@@ -226,6 +226,40 @@
                             <type>number</type>
                         </config>
                     </settings.cacheDuration>
+                    <settings.fetchMode>
+                        <label>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.fetchMode.label
+                        </label>
+                        <description>
+                            LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.fetchMode.description
+                        </description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingle</renderType>
+                            <items type="array">
+                                <numIndex index="0" type="array">
+                                    <numIndex index="label">
+                                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.placeholder.typoscript
+                                    </numIndex>
+                                    <numIndex index="value"/></numIndex>
+                                <numIndex index="1" type="array">
+                                    <numIndex index="label">
+                                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.fetchMode.I.live
+                                    </numIndex>
+                                    <numIndex index="value">live</numIndex>
+                                </numIndex>
+                                <numIndex index="2" type="array">
+                                    <numIndex index="label">
+                                        LLL:EXT:feed_display/Resources/Private/Language/locallang_be.xlf:flexform.fetchMode.I.scheduler
+                                    </numIndex>
+                                    <numIndex index="value">scheduler</numIndex>
+                                </numIndex>
+                            </items>
+                            <minitems>0</minitems>
+                            <maxitems>1</maxitems>
+                            <size>1</size>
+                        </config>
+                    </settings.fetchMode>
                 </el>
             </ROOT>
         </advanced>

@@ -244,7 +244,7 @@ Error message
     :Default: empty
     :Path: plugin.tx_feeddisplay_pi1.settings
 
-    This message is displayed if no feed items could be fetched
+    This message is displayed if the feed has never been fetched successfully
 
 ..  _configuration-typoscript-constants-settings-cacheduration:
 
@@ -257,8 +257,40 @@ Cache duration
     :Default: 3600
     :Path: plugin.tx_feeddisplay_pi1.settings
 
-    Time in seconds in which the data is to be read from the
-    cache until the next renewal of the cache. (0 = no cache)
+    Time in seconds in which the stored feed is rendered without fetching
+    the feed again. (0 = fetch on every rendering)
+
+    In :ref:`live mode <configuration-typoscript-constants-settings-fetchmode>`,
+    pages showing the plugin are also cached no longer than this time, so
+    they fetch the feed again in time. If a fetch fails, the last
+    successfully fetched feed is rendered instead of the error message.
+
+..  _configuration-typoscript-constants-settings-fetchmode:
+
+Fetch mode
+~~~~~~~~~~
+
+..  confval:: fetchMode
+
+    :type: string
+    :Default: live
+    :Path: plugin.tx_feeddisplay_pi1.settings
+
+    Who fetches the feed.
+
+    **Possible values:**
+
+    live
+        Page rendering fetches the feed once the stored feed is older than
+        :ref:`cacheDuration <configuration-typoscript-constants-settings-cacheduration>`.
+    scheduler
+        Page rendering only renders the stored feed and never fetches it, except
+        for a feed that has never been fetched successfully. The console command
+        ``feeddisplay:refresh`` fetches the feeds, see
+        :ref:`configuration-scheduler`.
+
+    Both modes share the stored feeds, so plugins with different modes can be
+    combined, and the refresh command can also be used for plugins in live mode.
 
 ..  _configuration-typoscript-constants-settings-getfields:
 
@@ -341,7 +373,7 @@ Ignore Flexform Settings if empty
 ..  confval:: ignoreFlexFormSettingsIfEmpty
 
     :type: list of strings, separated by comma
-    :Default: feedUrl, maxFeedCount, maxContentLength, maxHeaderLength, logoMaxWidth, logoMaxHeight, feedIconMaxWidth, feedIconMaxHeight, dateFormat, stripTags, linkTarget, errorMessage, cacheDuration, getFields.feed, getFields.items
+    :Default: feedUrl, maxFeedCount, maxContentLength, maxHeaderLength, logoMaxWidth, logoMaxHeight, feedIconMaxWidth, feedIconMaxHeight, dateFormat, stripTags, linkTarget, errorMessage, cacheDuration, fetchMode, getFields.feed, getFields.items
     :Path: plugin.tx_feeddisplay_pi1
 
     Comma separated list of settings to be overridden by TypoScript if the

@@ -147,6 +147,16 @@ final class FeedFrontendTest extends AbstractFeedFrontendTestCase
     }
 
     #[Test]
+    public function invalidFeedDisplaysTheErrorMessageEvenIfFeedFieldsAreConfigured(): void
+    {
+        $this->initializeFrontendRootPage($this->instancePath . '/fileadmin/missing-feed.xml');
+
+        $body = $this->requestPage();
+
+        self::assertStringContainsString('Sorry, the feed could not be fetched.', $body);
+    }
+
+    #[Test]
     public function invalidFeedRendersConfiguredHtmlErrorMessageWithoutEscaping(): void
     {
         $this->initializeFrontendRootPage(

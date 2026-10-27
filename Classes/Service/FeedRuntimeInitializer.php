@@ -53,9 +53,36 @@ final class FeedRuntimeInitializer
         }
         $feed->enable_cache(false);
         // Feed autodiscovery can hit SimplePie's IRI handling before getters run.
-        SimplePieDeprecationHandler::run($feed->init(...));
+        return SimplePieDeprecationHandler::run($feed->init(...)) === true;
+    }
 
-        return true;
+    /**
+     * Parses a previously fetched response without any network access.
+     *
+     * @param FeedSettings $settings
+     */
+    public function initializeFeedFromRawData(SimplePie $feed, array $settings, string $rawData): bool
+    {
+        if ($rawData === '') {
+            return false;
+        }
+
+        $feedUrl = stripslashes((string)($settings['feedUrl'] ?? ''));
+        // A set feed URL takes precedence over raw data in SimplePie, so it is
+        // cleared for parsing. The permanent URL resolves relative links.
+        // @phpstan-ignore assign.propertyType (SimplePie itself checks the property for null)
+        $feed->feed_url = null;
+        $feed->permanent_url = $feedUrl !== '' ? $feedUrl : null;
+        $feed->set_raw_data($rawData);
+        $feed->enable_cache(false);
+        $success = SimplePieDeprecationHandler::run($feed->init(...)) === true;
+
+        // Restore the URL afterwards so getters like subscribe_url() keep working.
+        if ($feedUrl !== '') {
+            $feed->set_feed_url($feedUrl);
+        }
+
+        return $success;
     }
 
     private function shouldUseTypo3HttpClient(string $feedUrl): bool
