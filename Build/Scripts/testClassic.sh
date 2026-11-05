@@ -64,8 +64,12 @@ for mode in linked packaged; do
     TYPO3_CONTEXT=Development php -S "127.0.0.1:${port}" -t "${instance}" > "${instance}/server.log" 2>&1 &
     serverPid=$!
     for pass in cold warm; do
-        curl --fail --silent --show-error --retry 10 --retry-connrefused --retry-delay 1 "${base}" -o "${instance}/${pass}.html" \
-            || { cat "${instance}/server.log"; exit 1; }
+        if ! curlOutput="$(curl --fail --silent --show-error --retry 10 --retry-connrefused --retry-delay 1 \
+            "${base}" -o "${instance}/${pass}.html" 2>&1)"; then
+            printf '%s\n' "${curlOutput}" >&2
+            cat "${instance}/server.log" >&2
+            exit 1
+        fi
         if ! grep -q 'Classic bundle integration item' "${instance}/${pass}.html"; then
             cat "${instance}/${pass}.html"
             cat "${instance}/server.log"
