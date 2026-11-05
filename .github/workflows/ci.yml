@@ -40,6 +40,30 @@ jobs:
           path: tailor-version-artefact/*.zip
           if-no-files-found: error
 
+  classic:
+    name: TYPO3 ${{ matrix.typo3 }} / PHP ${{ matrix.php }} Classic
+    runs-on: ubuntu-24.04
+    needs: libraries
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        typo3: ['13', '14']
+        php: ['8.2', '8.5']
+    steps:
+      - uses: actions/checkout@v5
+      - name: Install the Composer reference setup
+        run: Build/Scripts/runTests.sh -s composerInstall -t ${{ matrix.typo3 }} -p ${{ matrix.php }} -b docker
+      - name: Download the TER package
+        uses: actions/download-artifact@v6
+        with:
+          name: classic-ter-package
+          path: .Build/ter-package
+      - name: Build the linked checkout bundle
+        run: Build/Scripts/runTests.sh -s libraries -p ${{ matrix.php }} -b docker
+      - name: Activate and render in isolated Classic installations
+        run: Build/Scripts/runTests.sh -s classic -t ${{ matrix.typo3 }} -p ${{ matrix.php }} -b docker -- "$(echo .Build/ter-package/*.zip)"
+
   lint:
     name: TYPO3 14 / PHP 8.4 lint
     runs-on: ubuntu-24.04
