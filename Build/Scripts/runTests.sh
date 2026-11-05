@@ -208,6 +208,27 @@ cleanComposer() {
     rm -rf .Build composer.lock
 }
 
+cleanBuildArtifacts() {
+    rm -rf -- .Build composer.lock composer.json.orig composer.json.testing
+}
+
+cleanAllArtifacts() {
+    cleanBuildArtifacts
+    # Explicit generated paths only: never use git clean or delete Build/ sources.
+    rm -rf -- .cache .composer var config tailor-version-artefact \
+        Documentation-GENERATED-temp .phpunit.cache .phpunit.result.cache .php-cs-fixer.cache \
+        Tests/Build/.phpunit.result.cache playwright-report test-results playwright/.auth \
+        Build/rector/composer.lock Build/fractor/composer.lock \
+        Resources/Private/Php/ComposerVendor
+    # Remove empty generated parents; preserve any sources/baselines inside them.
+    local DIRECTORY=""
+    for DIRECTORY in playwright Tests/Build Resources/Private/Php Libraries; do
+        if [ -d "${DIRECTORY}" ] && [ ! -L "${DIRECTORY}" ]; then
+            rmdir -- "${DIRECTORY}" 2>/dev/null || true
+        fi
+    done
+}
+
 stashComposerFiles() {
     cp composer.json composer.json.orig
 }
@@ -225,9 +246,14 @@ Package-local TYPO3 extension test runner for feed_display.
 Usage: Build/Scripts/runTests.sh [options] [-- extra-args]
 
 Options:
-    -s <composer|composerInstall|composerValidate|libraries|verifyLibraries|classic|artefact|lintPhp|lintJson|lintYaml|lintServicesYaml|lintTypoScript|lintXliff|cgl|phpstan|phpstanGenerateBaseline|coverageUnit|coverageFunctional|phpmd|unit|unitRandom|functional|rector|fractor|npm|build|testBackend>
+    -s <composer|composerInstall|composerValidate|libraries|verifyLibraries|classic|artefact|lintPhp|lintJson|lintYaml|lintServicesYaml|lintTypoScript|lintXliff|cgl|phpstan|phpstanGenerateBaseline|coverageUnit|coverageFunctional|phpmd|unit|unitRandom|functional|rector|fractor|npm|build|clean|cleanBuild|cleanCache|cleanTests|cleanContainers|testCleanup|testBackend>
         Specifies which suite to run
 
+        cleanBuild: remove .Build and temporary root Composer files
+        clean: additionally remove caches, test config/runtime, TER archives,
+               generated SimplePie bundle, tool lockfiles and browser/doc outputs
+               Classic checkouts need composer build-extension afterwards
+        testCleanup: verify cleanup in a disposable fixture without dependencies
         testBackend: verify backend selection and container networking in fixtures
 
     -t <13|14>
@@ -305,6 +331,9 @@ Examples:
     Build/Scripts/runTests.sh -s fractor -n
     Build/Scripts/runTests.sh -s npm
     Build/Scripts/runTests.sh -s build
+    Build/Scripts/runTests.sh -s cleanBuild
+    Build/Scripts/runTests.sh -s clean
+    Build/Scripts/runTests.sh -s testCleanup -b host
     Build/Scripts/runTests.sh -s testBackend -b host
 EOF
 }
@@ -549,7 +578,7 @@ handleDbmsOptions
 
 case ${TEST_SUITE} in
     cleanBuild)
-        rm -rf .Build composer.lock composer.json.orig composer.json.testing
+        cleanBuildArtifacts
         exit 0
         ;;
     cleanCache)
@@ -565,7 +594,11 @@ case ${TEST_SUITE} in
         exit 0
         ;;
     clean)
-        rm -rf .Build .cache .Build/coverage composer.lock composer.json.orig composer.json.testing .phpunit.cache playwright-report test-results playwright/.auth
+        cleanAllArtifacts
+        exit 0
+        ;;
+    testCleanup)
+        bash Build/Scripts/testCleanup.sh
         exit 0
         ;;
     testBackend)

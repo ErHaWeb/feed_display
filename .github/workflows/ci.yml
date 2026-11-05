@@ -25,6 +25,9 @@ jobs:
       - name: Validate composer.json
         run: Build/Scripts/runTests.sh -s composerValidate -b docker
 
+      - name: Verify cleanup without installed dependencies
+        run: Build/Scripts/runTests.sh -s testCleanup -b host
+
       - name: Verify container backend selection and networking
         run: Build/Scripts/runTests.sh -s testBackend -b host
 
