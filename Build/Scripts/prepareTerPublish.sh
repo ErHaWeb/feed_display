@@ -57,6 +57,12 @@ readonly LICENSE_NAME="$(
     '
 )"
 
+readonly COMPOSER_VERSION="$(php -r '$manifest = json_decode(file_get_contents("composer.json"), true, 512, JSON_THROW_ON_ERROR); echo $manifest["extra"]["typo3/cms"]["version"] ?? $manifest["version"] ?? "";')"
+if [[ -n "${COMPOSER_VERSION}" && "${COMPOSER_VERSION}" != "${VERSION}" ]]; then
+    echo "composer.json version '${COMPOSER_VERSION}' does not match tag '${VERSION}'." >&2
+    exit 1
+fi
+
 if [[ "${EXT_EMCONF_VERSION}" != "${VERSION}" ]]; then
     echo "ext_emconf.php version '${EXT_EMCONF_VERSION}' does not match tag '${VERSION}'." >&2
     exit 1
