@@ -1,0 +1,10 @@
+rootPageId: 1
+base: 'https://feed-display.test/'
+languages:
+  - languageId: 0
+    enabled: true
+    title: English
+    navigationTitle: English
+    base: /
+    locale: en_US.UTF8
+    flag: global

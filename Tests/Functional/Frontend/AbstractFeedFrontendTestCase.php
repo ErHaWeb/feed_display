@@ -17,7 +17,6 @@ declare(strict_types=1);
 
 namespace ErHaWeb\FeedDisplay\Tests\Functional\Frontend;
 
-use ErHaWeb\FeedDisplay\Tests\Functional\Support\SiteBasedTestTrait;
 use TYPO3\CMS\Core\Cache\CacheManager;
 use TYPO3\CMS\Core\Cache\Exception\NoSuchCacheException;
 use TYPO3\CMS\Core\Configuration\FlexForm\FlexFormTools;
@@ -27,14 +26,8 @@ use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
 
 abstract class AbstractFeedFrontendTestCase extends FunctionalTestCase
 {
-    use SiteBasedTestTrait;
-
     protected const ROOT_PAGE_ID = 1;
     protected const CONTENT_ELEMENT_UID = 100;
-    /** @var array<string, array{id: int, title: string, locale: string}> */
-    protected const LANGUAGE_PRESETS = [
-        'EN' => ['id' => 0, 'title' => 'English', 'locale' => 'en_US.UTF8'],
-    ];
 
     protected array $testExtensionsToLoad = [
         'erhaweb/feed-display',
@@ -42,6 +35,10 @@ abstract class AbstractFeedFrontendTestCase extends FunctionalTestCase
 
     protected array $coreExtensionsToLoad = [
         'fluid_styled_content',
+    ];
+
+    protected array $pathsToLinkInTestInstance = [
+        'typo3conf/ext/feed_display/Tests/Functional/Fixtures/Sites' => 'typo3conf/sites',
     ];
 
     protected array $pathsToProvideInTestInstance = [
@@ -66,13 +63,6 @@ abstract class AbstractFeedFrontendTestCase extends FunctionalTestCase
 
         $this->importCSVDataSet(__DIR__ . '/../Fixtures/Database/Pages.csv');
         $this->importCSVDataSet(__DIR__ . '/../Fixtures/Database/TtContent.csv');
-        $this->writeSiteConfiguration(
-            'feed-display',
-            $this->buildSiteConfiguration(self::ROOT_PAGE_ID, 'https://feed-display.test/'),
-            [
-                $this->buildDefaultLanguageConfiguration('EN', '/'),
-            ]
-        );
     }
 
     /**
