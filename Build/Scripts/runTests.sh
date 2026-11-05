@@ -203,7 +203,7 @@ Package-local TYPO3 extension test runner for feed_display.
 Usage: Build/Scripts/runTests.sh [options] [-- extra-args]
 
 Options:
-    -s <composer|composerInstall|composerValidate|libraries|verifyLibraries|lintPhp|lintJson|lintYaml|lintServicesYaml|lintTypoScript|lintXliff|cgl|phpstan|phpstanGenerateBaseline|coverageUnit|coverageFunctional|phpmd|unit|unitRandom|functional|rector|fractor|npm|build>
+    -s <composer|composerInstall|composerValidate|libraries|verifyLibraries|artefact|lintPhp|lintJson|lintYaml|lintServicesYaml|lintTypoScript|lintXliff|cgl|phpstan|phpstanGenerateBaseline|coverageUnit|coverageFunctional|phpmd|unit|unitRandom|functional|rector|fractor|npm|build>
         Specifies which suite to run
 
     -t <13|14>
@@ -258,6 +258,7 @@ Examples:
     Build/Scripts/runTests.sh -s composerValidate
     Build/Scripts/runTests.sh -s libraries
     Build/Scripts/runTests.sh -s verifyLibraries
+    Build/Scripts/runTests.sh -s artefact
     Build/Scripts/runTests.sh -s lintPhp
     Build/Scripts/runTests.sh -s lintJson
     Build/Scripts/runTests.sh -s lintYaml
@@ -655,6 +656,9 @@ case ${TEST_SUITE} in
         ;;
     verifyLibraries)
         runPhpCommand "verify-libraries-${SUFFIX}" php Build/Scripts/verifyLibraries.php "$@"
+        ;;
+    artefact)
+        runPhpCommand "artefact-${SUFFIX}" bash Build/Scripts/testTerArtefact.sh "$@"
         ;;
     composerValidate)
         runPhpCommand "composer-validate-${SUFFIX}" composer validate --no-check-lock "$@"

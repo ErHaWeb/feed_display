@@ -25,6 +25,21 @@ jobs:
       - name: Validate composer.json
         run: Build/Scripts/runTests.sh -s composerValidate -b docker
 
+  libraries:
+    name: Locked Classic bundle and TER artefact
+    runs-on: ubuntu-24.04
+    needs: composer-validate
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - name: Build and verify the TER artefact
+        run: Build/Scripts/runTests.sh -s artefact -p 8.2 -b docker
+      - uses: actions/upload-artifact@v6
+        with:
+          name: classic-ter-package
+          path: tailor-version-artefact/*.zip
+          if-no-files-found: error
+
   lint:
     name: TYPO3 14 / PHP 8.4 lint
     runs-on: ubuntu-24.04
