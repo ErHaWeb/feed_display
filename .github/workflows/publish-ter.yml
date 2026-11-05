@@ -61,7 +61,7 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.3'
-          extensions: curl, json, zip
+          extensions: curl, json, zip, xml, xmlreader
           tools: composer:v2
 
       - name: Install Tailor
@@ -103,6 +103,14 @@ jobs:
           if php "${COMPOSER_HOME}/vendor/bin/tailor" -n ter:version "${RELEASE_VERSION}" "${TYPO3_EXTENSION_KEY}" > /dev/null 2>&1; then
             echo "::error::Version ${RELEASE_VERSION} is already published on TER."
             exit 1
+          fi
+
+      - name: Build the tagged Classic library bundle
+        working-directory: release
+        run: |
+          set -euo pipefail
+          if php -r '$m = json_decode(file_get_contents("composer.json"), true, 512, JSON_THROW_ON_ERROR); exit(($m["extra"]["typo3/cms"]["Package"]["providesPackages"]["simplepie/simplepie"] ?? null) === "Resources/Private/Php/ComposerVendor" ? 0 : 1);'; then
+            bash Build/Scripts/buildLibraries.sh
           fi
 
       - name: Create TER artefact

@@ -203,7 +203,7 @@ Package-local TYPO3 extension test runner for feed_display.
 Usage: Build/Scripts/runTests.sh [options] [-- extra-args]
 
 Options:
-    -s <composer|composerInstall|composerValidate|lintPhp|lintJson|lintYaml|lintServicesYaml|lintTypoScript|lintXliff|cgl|phpstan|phpstanGenerateBaseline|coverageUnit|coverageFunctional|phpmd|unit|unitRandom|functional|rector|fractor|npm|build>
+    -s <composer|composerInstall|composerValidate|libraries|verifyLibraries|lintPhp|lintJson|lintYaml|lintServicesYaml|lintTypoScript|lintXliff|cgl|phpstan|phpstanGenerateBaseline|coverageUnit|coverageFunctional|phpmd|unit|unitRandom|functional|rector|fractor|npm|build>
         Specifies which suite to run
 
     -t <13|14>
@@ -235,6 +235,7 @@ Options:
 
     -b <host|docker|podman>
         Execution backend
+        libraries runs PHP/Composer in the container unless -b host is explicit
 
     -e "<tool options>"
         Pass-through options for the underlying tool or test runner
@@ -255,6 +256,8 @@ Options:
 Examples:
     Build/Scripts/runTests.sh -s composerInstall
     Build/Scripts/runTests.sh -s composerValidate
+    Build/Scripts/runTests.sh -s libraries
+    Build/Scripts/runTests.sh -s verifyLibraries
     Build/Scripts/runTests.sh -s lintPhp
     Build/Scripts/runTests.sh -s lintJson
     Build/Scripts/runTests.sh -s lintYaml
@@ -647,27 +650,33 @@ case ${TEST_SUITE} in
         restoreComposerFiles
         COMPOSER_FILES_STASHED=0
         ;;
+    libraries)
+        runPhpCommand "libraries-${SUFFIX}" bash Build/Scripts/buildLibraries.sh "$@"
+        ;;
+    verifyLibraries)
+        runPhpCommand "verify-libraries-${SUFFIX}" php Build/Scripts/verifyLibraries.php "$@"
+        ;;
     composerValidate)
         runPhpCommand "composer-validate-${SUFFIX}" composer validate --no-check-lock "$@"
         ;;
     lintPhp)
-        runPhpShellCommand "lint-php-${SUFFIX}" ".Build/bin/parallel-lint --exclude .Build --exclude .cache . Build Classes Configuration Tests"
+        runPhpShellCommand "lint-php-${SUFFIX}" ".Build/bin/parallel-lint --exclude .Build --exclude .cache --exclude Resources/Private/Php/ComposerVendor . Build Classes Configuration Tests"
         ;;
     lintJson)
-        runPhpShellCommand "lint-json-${SUFFIX}" "find . ! -path '*/.Build/*' ! -path '*/node_modules/*' -name '*.json' -print0 | xargs -0 -r .Build/bin/jsonlint -q"
+        runPhpShellCommand "lint-json-${SUFFIX}" "find . ! -path '*/.cache/*' ! -path '*/.Build/*' ! -path '*/node_modules/*' ! -path '*/Resources/Private/Php/ComposerVendor/*' -name '*.json' -print0 | xargs -0 -r .Build/bin/jsonlint -q"
         ;;
     lintYaml)
-        runPhpShellCommand "lint-yaml-${SUFFIX}" "find . ! -path '*/.Build/*' ! -path '*/node_modules/*' \\( -name '*.yaml' -o -name '*.yml' \\) -print0 | xargs -0 -r .Build/bin/yaml-lint"
+        runPhpShellCommand "lint-yaml-${SUFFIX}" "find . ! -path '*/.cache/*' ! -path '*/.Build/*' ! -path '*/node_modules/*' ! -path '*/Resources/Private/Php/ComposerVendor/*' \\( -name '*.yaml' -o -name '*.yml' \\) -print0 | xargs -0 -r .Build/bin/yaml-lint"
         ;;
     lintServicesYaml)
         ensureSuiteEnabled "1" "lintServicesYaml"
-        runPhpShellCommand "lint-services-yaml-${SUFFIX}" "find . ! -path '*/.Build/*' ! -path '*/node_modules/*' \\( -name 'Services.yaml' -o -name 'Services.yml' \\) -print0 | xargs -0 -r .Build/bin/yaml-lint"
+        runPhpShellCommand "lint-services-yaml-${SUFFIX}" "find . ! -path '*/.cache/*' ! -path '*/.Build/*' ! -path '*/node_modules/*' ! -path '*/Resources/Private/Php/ComposerVendor/*' \\( -name 'Services.yaml' -o -name 'Services.yml' \\) -print0 | xargs -0 -r .Build/bin/yaml-lint"
         ;;
     lintTypoScript)
-        runPhpShellCommand "lint-typoscript-${SUFFIX}" "find Configuration Tests -type f \\( -name '*.typoscript' -o -name '*.tsconfig' \\) ! -path '*/.Build/*' ! -path '*/node_modules/*' -print0 2>/dev/null | xargs -0 -r .Build/bin/typoscript-lint -c Build/typoscript-lint/config.yml --ansi -n --fail-on-warnings -vvv"
+        runPhpShellCommand "lint-typoscript-${SUFFIX}" "find Configuration Tests -type f \\( -name '*.typoscript' -o -name '*.tsconfig' \\) ! -path '*/.Build/*' ! -path '*/node_modules/*' ! -path '*/Resources/Private/Php/ComposerVendor/*' -print0 2>/dev/null | xargs -0 -r .Build/bin/typoscript-lint -c Build/typoscript-lint/config.yml --ansi -n --fail-on-warnings -vvv"
         ;;
     lintXliff)
-        runPhpShellCommand "lint-xliff-${SUFFIX}" "find Configuration ContentBlocks Resources Tests -type f \\( -name '*.xlf' -o -name '*.xliff' \\) ! -path '*/.Build/*' ! -path '*/node_modules/*' -print0 2>/dev/null | xargs -0 -r php Build/Scripts/xliffLint.sh lint:xliff"
+        runPhpShellCommand "lint-xliff-${SUFFIX}" "find Configuration ContentBlocks Resources Tests -type f \\( -name '*.xlf' -o -name '*.xliff' \\) ! -path '*/.Build/*' ! -path '*/node_modules/*' ! -path '*/Resources/Private/Php/ComposerVendor/*' -print0 2>/dev/null | xargs -0 -r php Build/Scripts/xliffLint.sh lint:xliff"
         ;;
     cgl)
         PHP_CS_FIXER_FLAGS=""

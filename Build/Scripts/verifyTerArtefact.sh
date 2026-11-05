@@ -36,11 +36,12 @@ forbiddenPrefixes=(
     "tailor-version-artefact/"
 )
 
-readonly archiveEntries="$(unzip -Z1 "${ARTEFACT_PATH}")"
+archiveEntries="$(php -r '$zip = new ZipArchive(); if ($zip->open($argv[1]) !== true) { exit(1); } for ($i = 0; $i < $zip->numFiles; ++$i) { echo $zip->getNameIndex($i), PHP_EOL; }' "${ARTEFACT_PATH}")"
+readonly archiveEntries
 
 missingEntries=()
 for requiredEntry in "${requiredEntries[@]}"; do
-    if ! printf '%s\n' "${archiveEntries}" | grep -Fxq "${requiredEntry}"; then
+    if ! grep -Fxq "${requiredEntry}" <<< "${archiveEntries}"; then
         missingEntries+=("${requiredEntry}")
     fi
 done
@@ -53,9 +54,12 @@ fi
 
 unexpectedEntries=()
 for forbiddenPrefix in "${forbiddenPrefixes[@]}"; do
-    if printf '%s\n' "${archiveEntries}" | grep -Eq "^${forbiddenPrefix//\//\\/}"; then
-        unexpectedEntries+=("${forbiddenPrefix}")
-    fi
+    while IFS= read -r archiveEntry; do
+        if [[ "${archiveEntry}" == "${forbiddenPrefix}"* ]]; then
+            unexpectedEntries+=("${forbiddenPrefix}")
+            break
+        fi
+    done <<< "${archiveEntries}"
 done
 
 if [[ ${#unexpectedEntries[@]} -gt 0 ]]; then
@@ -64,4 +68,5 @@ if [[ ${#unexpectedEntries[@]} -gt 0 ]]; then
     exit 1
 fi
 
+php "$(dirname "${BASH_SOURCE[0]}")/verifyTerArtefact.php" "${ARTEFACT_PATH}" "${2:-.}"
 printf 'Verified TER artefact contents: %s\n' "${ARTEFACT_PATH}"

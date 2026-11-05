@@ -15,9 +15,14 @@ $EM_CONF[$_EXTKEY] = [
             'php' => '8.2.0-8.5.99',
         ],
     ],
+    // TYPO3 13 Classic registers the bundled classes here; TYPO3 14 uses providesPackages.
     'autoload' => [
         'psr-4' => [
             'ErHaWeb\\FeedDisplay\\' => 'Classes',
+            'SimplePie\\' => 'Resources/Private/Php/ComposerVendor/simplepie/simplepie/src/',
+        ],
+        'classmap' => [
+            'Resources/Private/Php/ComposerVendor/simplepie/simplepie/library/',
         ],
     ],
 ];

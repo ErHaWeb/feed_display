@@ -86,7 +86,9 @@
   "extra": {
     "typo3/cms": {
       "Package": {
-        "providesPackages": {}
+        "providesPackages": {
+          "simplepie/simplepie": "Resources/Private/Php/ComposerVendor"
+        }
       },
       "app-dir": ".Build",
       "extension-key": "feed_display",
@@ -119,7 +121,7 @@
       "@coverage:create-directories",
       "phpunit -c Build/phpunit/UnitTests.xml --coverage-php=.Build/coverage/unit.cov"
     ],
-    "check:json:lint": "find . ! -path '*/.cache/*' ! -path '*/.Build/*' ! -path '*/node_modules/*' -name '*.json' | xargs -r php .Build/bin/jsonlint -q",
+    "check:json:lint": "find . ! -path '*/.cache/*' ! -path '*/.Build/*' ! -path '*/node_modules/*' ! -path '*/Resources/Private/Php/ComposerVendor/*' -name '*.json' | xargs -r php .Build/bin/jsonlint -q",
     "check:php": [
       "@check:php:cs-fixer",
       "@check:php:lint",
@@ -151,16 +153,11 @@
     ],
     "check:tests:unit": "phpunit -c Build/phpunit/UnitTests.xml",
     "check:typoscript:lint": "typoscript-lint -c Build/typoscript-lint/config.yml --ansi -n --fail-on-warnings -vvv Configuration/TypoScript Tests/Functional/Controller/Fixtures/TypoScript",
-    "check:xliff:lint": "find . ! -path '*/.Build/*' ! -path '*/node_modules/*' \\( -name '*.xlf' -o -name '*.xliff' \\) -print0 | xargs -0 -r php Build/Scripts/xliffLint.sh lint:xliff",
-    "check:yaml:lint": "find . ! -path '*/.Build/*' ! -path '*/node_modules/*' \\( -name '*.yaml' -o -name '*.yml' \\) | xargs -r php ./.Build/bin/yaml-lint",
+    "check:xliff:lint": "find . ! -path '*/.cache/*' ! -path '*/.Build/*' ! -path '*/node_modules/*' ! -path '*/Resources/Private/Php/ComposerVendor/*' \\( -name '*.xlf' -o -name '*.xliff' \\) -print0 | xargs -0 -r php Build/Scripts/xliffLint.sh lint:xliff",
+    "check:yaml:lint": "find . ! -path '*/.cache/*' ! -path '*/.Build/*' ! -path '*/node_modules/*' ! -path '*/Resources/Private/Php/ComposerVendor/*' \\( -name '*.yaml' -o -name '*.yml' \\) | xargs -r php ./.Build/bin/yaml-lint",
     "check:yaml:services-lint": "[ -f Configuration/Services.yaml ] && .Build/bin/yaml-lint Configuration/Services.yaml || true",
     "coverage:create-directories": "mkdir -p .Build/coverage .Build/logs",
-    "create-libs": [
-      "mkdir -p Libraries",
-      "@composer global require clue/phar-composer",
-      "[ -f Libraries/simplepie-simplepie.phar ] || $HOME/.composer/vendor/bin/phar-composer build 'simplepie/simplepie=1.9.0' Libraries/simplepie-simplepie.phar",
-      "chmod -x Libraries/*"
-    ],
+    "create-libs": "bash Build/Scripts/buildLibraries.sh",
     "docs:generate": "docker run --rm --pull always -v $(pwd):/project -it ghcr.io/typo3-documentation/render-guides:latest --config=Documentation",
     "fix": [
       "@fix:composer:normalize",
@@ -173,6 +170,7 @@
     "fix:php:cs-fixer": "php-cs-fixer fix --config ./Build/php-cs-fixer/config.php",
     "phpstan:baseline": "phpstan --generate-baseline=Build/phpstan/phpstan-baseline.neon --allow-empty-baseline --configuration=Build/phpstan/phpstan.neon --memory-limit=1G",
     "prepare-release": [
+      "@build-extension",
       "rm -rf .Build",
       "rm -rf .ddev",
       "rm -rf .github",
@@ -182,10 +180,7 @@
       "rm .gitattributes",
       "rm .gitignore"
     ],
-    "rebuild-libs": [
-      "rm -f Libraries/simplepie-simplepie.phar",
-      "@create-libs"
-    ],
+    "rebuild-libs": "bash Build/Scripts/buildLibraries.sh --rebuild",
     "docs:watch": "sh -c 'docker ps -q --filter \"publish=5173\" | while read id; do [ -n \"$id\" ] && docker rm -f \"$id\"; done; docker rm -f typo3-docs-watch 2>/dev/null || true; URL=\"http://localhost:5173/Documentation-GENERATED-temp/Index.html\"; (sleep 2 && open \"$URL\") & docker run --rm -it --name typo3-docs-watch --pull always -v \"$(pwd)/Documentation:/project/Documentation\" -v \"$(pwd)/Documentation-GENERATED-temp:/project/Documentation-GENERATED-temp\" -p 5173:5173 ghcr.io/garvinhicking/typo3-documentation-browsersync:latest || test \"$?\" -eq 130'",
     "crowdin:import": [
       "Composer\\Config::disableProcessTimeout",

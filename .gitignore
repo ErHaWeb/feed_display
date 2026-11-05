@@ -36,7 +36,10 @@ nbproject
 /config/
 
 # Root lockfile is intentionally not versioned for this extension
-composer.lock
+/composer.lock
+/Build/rector/composer.lock
+/Build/fractor/composer.lock
+/Resources/Private/Php/ComposerVendor/
 
 # Crowdin translations
 /Resources/Private/Language/*.locallang.xlf

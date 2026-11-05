@@ -15,9 +15,7 @@
 
 declare(strict_types=1);
 
-use ErHaWeb\FeedDisplay\Bootstrap\SimplePieBootstrap;
 use ErHaWeb\FeedDisplay\Controller\FeedController;
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
 defined('TYPO3') || die();
@@ -36,6 +34,4 @@ defined('TYPO3') || die();
 
     // Register extension cache.
     $GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['feeddisplay'] ??= [];
-
-    (new SimplePieBootstrap(ExtensionManagementUtility::extPath('feed_display')))->ensureLibraryIsLoaded();
 })();
