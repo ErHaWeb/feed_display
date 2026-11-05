@@ -92,3 +92,32 @@ TYPO3 v14 backend module paths.
             :width: 782px
 
             The "Get Extensions" dialog
+
+        The TER package includes the complete SimplePie library bundle. No
+        Composer command is required on the target server. TYPO3 v14 loads its
+        autoloader through ``providesPackages``; TYPO3 v13 registers the bundled
+        classes through the ``autoload`` section of ``ext_emconf.php``.
+
+Classic Git checkouts and source archives
+=======================================
+
+Git checkouts and GitHub source archives contain the bundle configuration and
+lockfile, but not the generated library files. Before activating such a checkout
+in a Classic installation, run this command in the extension directory:
+
+..  code-block:: bash
+
+    composer build-extension
+
+For local DDEV development, execute the command inside the web container. Build
+the bundle before clearing the TYPO3 caches or activating the extension.
+
+If the Classic Git checkout was already active when its package metadata
+changed, run ``php typo3/sysext/core/bin/typo3 dumpautoload`` from the TYPO3
+installation root and clear the TYPO3 caches. The Extension Manager performs
+this autoload refresh automatically during normal extension activation.
+
+Composer installations obtain SimplePie through their normal project dependency
+and do not require this additional build. Classic installations receive library
+updates with a new extension release; the extension never downloads libraries
+during a request.
