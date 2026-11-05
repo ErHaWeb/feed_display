@@ -118,76 +118,30 @@ jobs:
       - name: Run PHPStan
         run: Build/Scripts/runTests.sh -s phpstan -t 14 -p 8.4 -b docker
 
-  unit:
-    name: TYPO3 ${{ matrix.typo3 }} / PHP ${{ matrix.php }} unit
-    runs-on: ubuntu-24.04
-    needs: composer-validate
-    timeout-minutes: 45
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - typo3: '13'
-            php: '8.2'
-          - typo3: '13'
-            php: '8.3'
-          - typo3: '13'
-            php: '8.4'
-          - typo3: '13'
-            php: '8.5'
-          - typo3: '14'
-            php: '8.2'
-          - typo3: '14'
-            php: '8.3'
-          - typo3: '14'
-            php: '8.4'
-          - typo3: '14'
-            php: '8.5'
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v5
-
-      - name: Install TYPO3 test setup
-        run: Build/Scripts/runTests.sh -s composerInstall -t ${{ matrix.typo3 }} -p ${{ matrix.php }} -b docker
-
-      - name: Run unit tests
-        run: Build/Scripts/runTests.sh -s unit -t ${{ matrix.typo3 }} -p ${{ matrix.php }} -b docker
-
-  functional:
-    name: TYPO3 ${{ matrix.typo3 }} / PHP ${{ matrix.php }} functional
+  tests:
+    name: TYPO3 ${{ matrix.typo3 }} / PHP ${{ matrix.php }} tests
     runs-on: ubuntu-24.04
     needs: composer-validate
     timeout-minutes: 90
     strategy:
       fail-fast: false
       matrix:
-        include:
-          - typo3: '13'
-            php: '8.2'
-          - typo3: '13'
-            php: '8.3'
-          - typo3: '13'
-            php: '8.4'
-          - typo3: '13'
-            php: '8.5'
-          - typo3: '14'
-            php: '8.2'
-          - typo3: '14'
-            php: '8.3'
-          - typo3: '14'
-            php: '8.4'
-          - typo3: '14'
-            php: '8.5'
+        typo3: ['13', '14']
+        php: ['8.2', '8.3', '8.4', '8.5']
 
     steps:
       - name: Checkout
         uses: actions/checkout@v5
 
       - name: Install TYPO3 test setup
+        id: setup
         run: Build/Scripts/runTests.sh -s composerInstall -t ${{ matrix.typo3 }} -p ${{ matrix.php }} -b docker
 
+      - name: Run unit tests
+        run: Build/Scripts/runTests.sh -s unit -t ${{ matrix.typo3 }} -p ${{ matrix.php }} -b docker
+
       - name: Run functional DB matrix
+        if: ${{ !cancelled() && steps.setup.outcome == 'success' }}
         shell: bash
         run: |
           set -euo pipefail
