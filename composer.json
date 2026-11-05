@@ -97,9 +97,7 @@
     }
   },
   "scripts": {
-    "build-extension": [
-      "@create-libs"
-    ],
+    "build-extension": "bash Build/Scripts/buildLibraries.sh",
     "check:composer:normalize": "@composer normalize --no-check-lock --dry-run",
     "check:composer:psr-verify": "@composer dumpautoload --optimize --strict-psr --no-plugins",
     "check:composer:unused": "composer-unused --configuration=Build/composer-unused/composer-unused.php",
@@ -157,7 +155,6 @@
     "check:yaml:lint": "find . ! -path '*/.cache/*' ! -path '*/.Build/*' ! -path '*/node_modules/*' ! -path '*/Resources/Private/Php/ComposerVendor/*' \\( -name '*.yaml' -o -name '*.yml' \\) | xargs -r php ./.Build/bin/yaml-lint",
     "check:yaml:services-lint": "[ -f Configuration/Services.yaml ] && .Build/bin/yaml-lint Configuration/Services.yaml || true",
     "coverage:create-directories": "mkdir -p .Build/coverage .Build/logs",
-    "create-libs": "bash Build/Scripts/buildLibraries.sh",
     "docs:generate": "docker run --rm --pull always -v $(pwd):/project -it ghcr.io/typo3-documentation/render-guides:latest --config=Documentation",
     "fix": [
       "@fix:composer:normalize",

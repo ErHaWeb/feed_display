@@ -115,7 +115,6 @@ Library updates are deliberate maintenance work, never part of a release build:
    vendor files are not committed. Deliver the library through the next
    extension release.
 
-`composer create-libs` remains an alias for the locked build;
 `composer rebuild-libs` recreates only the generated bundle. The library's BSD
 license is retained in the TER package. Old release-tag backfills retain their
 original PHAR and do not resolve dependencies using the current lockfile.
