@@ -632,41 +632,6 @@ case ${TEST_SUITE} in
         ensureHostCoverageDriver
         runPhpShellCommand "coverage-unit-${SUFFIX}" "mkdir -p .Build/Web/typo3temp/var/tests .Build/coverage && XDEBUG_MODE=coverage .Build/bin/phpunit -c Build/phpunit/UnitTests.xml --coverage-clover .Build/coverage/unit.xml ${EXTRA_TEST_OPTIONS} $*"
         ;;
-    coverageFunctional)
-        COVERAGE_HOST_ENV_PREFIX=""
-        if [ "${CONTAINER_BIN}" = "host" ] && [ "${DBMS}" != "sqlite" ]; then
-            echo "Host backend supports only sqlite for functional tests" >&2
-            exit 1
-        fi
-        case ${DBMS} in
-            mariadb)
-                startDbContainer "mariadb-func-${SUFFIX}" -e MYSQL_ROOT_PASSWORD=funcp --tmpfs /var/lib/mysql/:rw,noexec,nosuid ${IMAGE_MARIADB}
-                waitForOrDumpLogs "mariadb-func-${SUFFIX}" 3306 "wait-mariadb-${SUFFIX}" "mariadb-func-${SUFFIX}"
-                EXTRA_ENV_PARAMS="-e typo3DatabaseDriver=${DATABASE_DRIVER} -e typo3DatabaseName=func_test -e typo3DatabaseUsername=root -e typo3DatabaseHost=mariadb-func-${SUFFIX} -e typo3DatabasePassword=funcp"
-                ;;
-            mysql)
-                startDbContainer "mysql-func-${SUFFIX}" -e MYSQL_ROOT_PASSWORD=funcp --tmpfs /var/lib/mysql/:rw,noexec,nosuid ${IMAGE_MYSQL}
-                waitForOrDumpLogs "mysql-func-${SUFFIX}" 3306 "wait-mysql-${SUFFIX}" "mysql-func-${SUFFIX}"
-                EXTRA_ENV_PARAMS="-e typo3DatabaseDriver=${DATABASE_DRIVER} -e typo3DatabaseName=func_test -e typo3DatabaseUsername=root -e typo3DatabaseHost=mysql-func-${SUFFIX} -e typo3DatabasePassword=funcp"
-                ;;
-            postgres)
-                startDbContainer "postgres-func-${SUFFIX}" -e POSTGRES_PASSWORD=funcp -e POSTGRES_USER=funcu --tmpfs /var/lib/postgresql/data:rw,noexec,nosuid ${IMAGE_POSTGRES}
-                waitForOrDumpLogs "postgres-func-${SUFFIX}" 5432 "wait-postgres-${SUFFIX}" "postgres-func-${SUFFIX}"
-                EXTRA_ENV_PARAMS="-e typo3DatabaseDriver=pdo_pgsql -e typo3DatabaseName=func_test -e typo3DatabaseUsername=funcu -e typo3DatabaseHost=postgres-func-${SUFFIX} -e typo3DatabasePassword=funcp"
-                ;;
-            sqlite)
-                mkdir -p "${ROOT_DIR}/.Build/Web/typo3temp/var/tests/functional-sqlite-dbs"
-                if [ "${CONTAINER_BIN}" = "host" ]; then
-                    EXTRA_ENV_PARAMS="typo3DatabaseDriver=pdo_sqlite"
-                    COVERAGE_HOST_ENV_PREFIX="typo3DatabaseDriver=pdo_sqlite "
-                else
-                    EXTRA_ENV_PARAMS="-e typo3DatabaseDriver=pdo_sqlite"
-                fi
-                ;;
-        esac
-        ensureHostCoverageDriver
-        runPhpShellCommand "coverage-functional-${SUFFIX}" "mkdir -p .Build/Web/typo3temp/var/tests .Build/coverage && ${COVERAGE_HOST_ENV_PREFIX}XDEBUG_MODE=coverage .Build/bin/phpunit -c Build/phpunit/FunctionalTests.xml --coverage-clover .Build/coverage/functional.xml ${EXTRA_TEST_OPTIONS} $*"
-        ;;
     phpmd)
         runPhpShellCommand "phpmd-${SUFFIX}" "if [ -d Classes ] || [ -d Configuration ]; then php -d error_reporting='E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED' .Build/bin/phpmd Classes,Configuration ansi codesize,design,naming,unusedcode --exclude '*/Fixtures/*,*/Tests/*'; else echo 'No PHP directories for PHPMD'; fi"
         ;;
@@ -676,7 +641,16 @@ case ${TEST_SUITE} in
     unitRandom)
         runPhpShellCommand "unit-random-${SUFFIX}" ".Build/bin/phpunit -c Build/phpunit/UnitTests.xml --order-by=random ${EXTRA_TEST_OPTIONS} $*"
         ;;
-    functional)
+    functional|coverageFunctional)
+        PHPUNIT_COMMAND=".Build/bin/phpunit"
+        COVERAGE_OPTIONS=""
+        CONTAINER_NAME="functional-${SUFFIX}"
+        if [ "${TEST_SUITE}" = "coverageFunctional" ]; then
+            ensureHostCoverageDriver
+            PHPUNIT_COMMAND="XDEBUG_MODE=coverage ${PHPUNIT_COMMAND}"
+            COVERAGE_OPTIONS="--coverage-clover .Build/coverage/functional.xml"
+            CONTAINER_NAME="coverage-functional-${SUFFIX}"
+        fi
         if [ "${CONTAINER_BIN}" = "host" ] && [ "${DBMS}" != "sqlite" ]; then
             echo "Host backend supports only sqlite for functional tests" >&2
             exit 1
@@ -706,7 +680,7 @@ case ${TEST_SUITE} in
                 fi
                 ;;
         esac
-        runPhpShellCommand "functional-${SUFFIX}" ".Build/bin/phpunit -c Build/phpunit/FunctionalTests.xml ${EXTRA_TEST_OPTIONS} $*"
+        runPhpShellCommand "${CONTAINER_NAME}" "${PHPUNIT_COMMAND} -c Build/phpunit/FunctionalTests.xml ${COVERAGE_OPTIONS} ${EXTRA_TEST_OPTIONS} $*"
         ;;
     rector)
         RECTOR_DRY_RUN=""
