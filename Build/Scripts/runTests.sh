@@ -90,22 +90,44 @@ cleanContainers() {
 }
 
 createContainerNetwork() {
-    if ${CONTAINER_BIN} network create "${NETWORK}" >/dev/null 2>&1; then
+    local NETWORK_ERROR=""
+    if NETWORK_ERROR=$(${CONTAINER_BIN} network create "${NETWORK}" 2>&1); then
         return 0
     fi
-
-    echo "Could not create container network ${NETWORK}" >&2
-    echo "Trying stale container/network cleanup once ..." >&2
-    cleanContainers
-
-    if ${CONTAINER_BIN} network create "${NETWORK}" >/dev/null 2>&1; then
-        echo "Container network ${NETWORK} created after cleanup retry." >&2
-        return 0
-    fi
-
-    echo "Could not create container network ${NETWORK}" >&2
-    echo "Container backend: ${CONTAINER_BIN}" >&2
+    echo "Could not create container network ${NETWORK} (${CONTAINER_BIN})." >&2
+    printf '%s\n' "${NETWORK_ERROR}" >&2
     return 1
+}
+
+selectContainerBackend() {
+    local CANDIDATE=""
+    local DETAILS=""
+    local ERRORS=""
+    if [ -z "${CONTAINER_BIN}" ]; then
+        # An installed CLI alone does not mean its service/VM is running.
+        for CANDIDATE in docker podman; do
+            command -v "${CANDIDATE}" >/dev/null 2>&1 || continue
+            if DETAILS=$("${CANDIDATE}" info 2>&1); then
+                CONTAINER_BIN="${CANDIDATE}"
+                return 0
+            fi
+            ERRORS="${ERRORS}${CANDIDATE}: ${DETAILS}"$'\n'
+        done
+        echo 'No reachable Docker or Podman service. Start Docker/OrbStack or your Podman machine.' >&2
+        if [ -n "${ERRORS}" ]; then printf '%s' "${ERRORS}" >&2; fi
+        return 1
+    fi
+    if [ "${CONTAINER_BIN}" = host ]; then return 0; fi
+    if ! command -v "${CONTAINER_BIN}" >/dev/null 2>&1; then
+        echo "Requested container backend not found: ${CONTAINER_BIN}" >&2
+        return 1
+    fi
+    if ! DETAILS=$("${CONTAINER_BIN}" info 2>&1); then
+        echo "Requested container backend is not reachable: ${CONTAINER_BIN}" >&2
+        printf '%s\n' "${DETAILS}" >&2
+        echo 'Start that service/VM or select another backend with -b docker|podman.' >&2
+        return 1
+    fi
 }
 
 startDbContainer() {
@@ -203,8 +225,10 @@ Package-local TYPO3 extension test runner for feed_display.
 Usage: Build/Scripts/runTests.sh [options] [-- extra-args]
 
 Options:
-    -s <composer|composerInstall|composerValidate|libraries|verifyLibraries|classic|artefact|lintPhp|lintJson|lintYaml|lintServicesYaml|lintTypoScript|lintXliff|cgl|phpstan|phpstanGenerateBaseline|coverageUnit|coverageFunctional|phpmd|unit|unitRandom|functional|rector|fractor|npm|build>
+    -s <composer|composerInstall|composerValidate|libraries|verifyLibraries|classic|artefact|lintPhp|lintJson|lintYaml|lintServicesYaml|lintTypoScript|lintXliff|cgl|phpstan|phpstanGenerateBaseline|coverageUnit|coverageFunctional|phpmd|unit|unitRandom|functional|rector|fractor|npm|build|testBackend>
         Specifies which suite to run
+
+        testBackend: verify backend selection and container networking in fixtures
 
     -t <13|14>
         TYPO3 major to use for composerInstall
@@ -235,6 +259,8 @@ Options:
 
     -b <host|docker|podman>
         Execution backend
+        Default: first reachable service, preferring Docker over Podman
+        FEED_DISPLAY_TEST_BACKEND sets a default; -b overrides it
         libraries runs PHP/Composer in the container unless -b host is explicit
 
     -e "<tool options>"
@@ -279,6 +305,7 @@ Examples:
     Build/Scripts/runTests.sh -s fractor -n
     Build/Scripts/runTests.sh -s npm
     Build/Scripts/runTests.sh -s build
+    Build/Scripts/runTests.sh -s testBackend -b host
 EOF
 }
 
@@ -467,12 +494,12 @@ PHP_XDEBUG_ON=0
 PHP_XDEBUG_PORT=9003
 EXTRA_TEST_OPTIONS=""
 DRY_RUN=0
-CONTAINER_BIN=""
+CONTAINER_BIN="${FEED_DISPLAY_TEST_BACKEND:-}"
 CONTAINER_INTERACTIVE="--init"
 HOST_UID=$(id -u)
 HOST_GID=$(id -g)
 SUFFIX="${RANDOM}-$$"
-NETWORK="feed-display-${SUFFIX}"
+NETWORK=""
 CONTAINER_HOST="host.docker.internal"
 PLAYWRIGHT_BASE_URL="${PLAYWRIGHT_BASE_URL:-${ACCEPTANCE_BASE_URL:-}}"
 USERSET=""
@@ -541,25 +568,18 @@ case ${TEST_SUITE} in
         rm -rf .Build .cache .Build/coverage composer.lock composer.json.orig composer.json.testing .phpunit.cache playwright-report test-results playwright/.auth
         exit 0
         ;;
+    testBackend)
+        bash Build/Scripts/testBackend.sh
+        exit 0
+        ;;
     playwright)
         runPlaywrightSuite "$@"
         exit $?
         ;;
 esac
 
-if [ -z "${CONTAINER_BIN}" ]; then
-    if command -v podman >/dev/null 2>&1; then
-        CONTAINER_BIN="podman"
-    elif command -v docker >/dev/null 2>&1; then
-        CONTAINER_BIN="docker"
-    else
-        echo "This script relies on docker or podman unless -b host is used explicitly" >&2
-        exit 1
-    fi
-elif [ "${CONTAINER_BIN}" != "host" ] && ! command -v "${CONTAINER_BIN}" >/dev/null 2>&1; then
-    echo "Requested container backend not found: ${CONTAINER_BIN}" >&2
-    exit 1
-fi
+selectContainerBackend || exit 1
+echo "Execution backend: ${CONTAINER_BIN}"
 
 if [ "$(uname)" != "Darwin" ] && [ "${CONTAINER_BIN}" = "docker" ]; then
     USERSET="--user ${HOST_UID}:${HOST_GID}"
@@ -569,8 +589,6 @@ if [ -t 0 ] && [ -t 1 ]; then
     CONTAINER_INTERACTIVE="-it --init"
 fi
 
-mkdir -p .cache .Build/Web/typo3temp/var/tests .Build/coverage playwright/.auth
-
 IMAGE_PHP="ghcr.io/typo3/core-testing-php${PHP_VERSION//./}:latest"
 IMAGE_MARIADB="docker.io/mariadb:${DBMS_VERSION}"
 IMAGE_MYSQL="docker.io/mysql:${DBMS_VERSION}"
@@ -578,17 +596,28 @@ IMAGE_POSTGRES="docker.io/postgres:${DBMS_VERSION}-alpine"
 COMPOSER_ROOT_VERSION="${TYPO3_VERSION}.0.0-dev"
 
 if [ "${CONTAINER_BIN}" != "host" ]; then
-    if ! createContainerNetwork; then
-        exit 1
-    fi
+    CONTAINER_NETWORK_PARAMS=""
+    # Only database containers need to share a dedicated network. Single-container
+    # builds (including libraries) use the engine's normal container networking.
+    case ${TEST_SUITE} in
+        functional|coverageFunctional)
+            if [ "${DBMS}" != sqlite ]; then
+                NETWORK="feed-display-${SUFFIX}"
+                createContainerNetwork || exit 1
+                CONTAINER_NETWORK_PARAMS="--network ${NETWORK}"
+            fi
+            ;;
+    esac
 
     if [ "${CONTAINER_BIN}" = "docker" ]; then
-        CONTAINER_COMMON_PARAMS="${CONTAINER_INTERACTIVE} --rm --network ${NETWORK} --add-host ${CONTAINER_HOST}:host-gateway ${USERSET} -v ${ROOT_DIR}:${ROOT_DIR} -w ${ROOT_DIR}"
+        CONTAINER_COMMON_PARAMS="${CONTAINER_INTERACTIVE} --rm ${CONTAINER_NETWORK_PARAMS} --add-host ${CONTAINER_HOST}:host-gateway ${USERSET} -v ${ROOT_DIR}:${ROOT_DIR} -w ${ROOT_DIR}"
     else
         CONTAINER_HOST="host.containers.internal"
-        CONTAINER_COMMON_PARAMS="${CONTAINER_INTERACTIVE} --rm --network ${NETWORK} -v ${ROOT_DIR}:${ROOT_DIR} -w ${ROOT_DIR}"
+        CONTAINER_COMMON_PARAMS="${CONTAINER_INTERACTIVE} --rm ${CONTAINER_NETWORK_PARAMS} -v ${ROOT_DIR}:${ROOT_DIR} -w ${ROOT_DIR}"
     fi
 fi
+
+mkdir -p .cache .Build/Web/typo3temp/var/tests .Build/coverage playwright/.auth
 
 if [ ${PHP_XDEBUG_ON} -eq 0 ]; then
     XDEBUG_MODE="-e XDEBUG_MODE=off"

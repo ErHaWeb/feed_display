@@ -25,6 +25,9 @@ jobs:
       - name: Validate composer.json
         run: Build/Scripts/runTests.sh -s composerValidate -b docker
 
+      - name: Verify container backend selection and networking
+        run: Build/Scripts/runTests.sh -s testBackend -b host
+
   libraries:
     name: Locked Classic bundle and TER artefact
     runs-on: ubuntu-24.04
