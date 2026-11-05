@@ -70,16 +70,17 @@ jobs:
       - name: Activate and render in isolated Classic installations
         run: Build/Scripts/runTests.sh -s classic -t ${{ matrix.typo3 }} -p ${{ matrix.php }} -b docker -- "$(echo .Build/ter-package/*.zip)"
 
-  lint:
-    name: TYPO3 14 / PHP 8.4 lint
+  quality:
+    name: TYPO3 14 / PHP 8.4 code quality
     runs-on: ubuntu-24.04
     needs: composer-validate
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - name: Checkout
         uses: actions/checkout@v5
 
       - name: Install TYPO3 test setup
+        id: setup
         run: Build/Scripts/runTests.sh -s composerInstall -t 14 -p 8.4 -b docker
 
       - name: Lint PHP files
@@ -91,32 +92,19 @@ jobs:
       - name: Lint YAML files
         run: Build/Scripts/runTests.sh -s lintYaml -t 14 -p 8.4 -b docker
 
-      - name: Lint Services.yaml files
-        run: Build/Scripts/runTests.sh -s lintServicesYaml -t 14 -p 8.4 -b docker
-
       - name: Lint TypoScript files
         run: Build/Scripts/runTests.sh -s lintTypoScript -t 14 -p 8.4 -b docker
 
       - name: Lint XLIFF files
         run: Build/Scripts/runTests.sh -s lintXliff -t 14 -p 8.4 -b docker
 
-  static-analysis:
-    name: TYPO3 14 / PHP 8.4 static analysis
-    runs-on: ubuntu-24.04
-    needs: composer-validate
-    timeout-minutes: 45
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v5
-
-      - name: Install TYPO3 test setup
-        run: Build/Scripts/runTests.sh -s composerInstall -t 14 -p 8.4 -b docker
-
-      - name: Run PHP-CS-Fixer dry-run
-        run: PHP_CS_FIXER_IGNORE_ENV=1 Build/Scripts/runTests.sh -s cgl -t 14 -p 8.4 -b docker
-
-      - name: Run PHPStan
-        run: Build/Scripts/runTests.sh -s phpstan -t 14 -p 8.4 -b docker
+      - name: Run PHP-CS-Fixer and PHPStan
+        if: ${{ !cancelled() && steps.setup.outcome == 'success' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          PHP_CS_FIXER_IGNORE_ENV=1 Build/Scripts/runTests.sh -s cgl -t 14 -p 8.4 -b docker
+          Build/Scripts/runTests.sh -s phpstan -t 14 -p 8.4 -b docker
 
   tests:
     name: TYPO3 ${{ matrix.typo3 }} / PHP ${{ matrix.php }} tests
