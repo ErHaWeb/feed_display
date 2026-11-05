@@ -5,8 +5,17 @@ readonly extensionRoot="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 cd "${extensionRoot}"
 readonly major="${1:?TYPO3 major is required}"
 readonly artefact="${2:-}"
-readonly version="$(php -r 'require ".Build/vendor/autoload.php"; echo (new TYPO3\CMS\Core\Information\Typo3Version())->getVersion();')"
-[[ "${version}" == "${major}."* ]] || { echo 'Install the matching Composer test setup first.' >&2; exit 1; }
+readonly setupCommand="Build/Scripts/runTests.sh -s composerInstall -t ${major}"
+if [[ ! -f .Build/vendor/autoload.php ]]; then
+    echo "Composer test setup is missing. Run ${setupCommand}." >&2
+    exit 1
+fi
+
+version="$(php -r 'require ".Build/vendor/autoload.php"; echo (new TYPO3\CMS\Core\Information\Typo3Version())->getVersion();')"
+if [[ "${version}" != "${major}."* ]]; then
+    echo "Composer test setup uses TYPO3 ${version}. Run ${setupCommand}." >&2
+    exit 1
+fi
 mkdir -p .Build/classic-cache
 readonly archive="${extensionRoot}/.Build/classic-cache/typo3-${version}.tar.gz"
 if [[ ! -f "${archive}" ]]; then
