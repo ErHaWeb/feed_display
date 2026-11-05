@@ -84,6 +84,22 @@ container. Library builds and SQLite tests use normal container networking.
 `Build/Scripts/runTests.sh -s testBackend -b host` verifies these selection and
 networking rules with disposable mock engines, without starting containers.
 
+### Local tests
+
+Install the test dependencies for the TYPO3 version you want to test, then run
+the Unit and Functional suites:
+
+```bash
+Build/Scripts/runTests.sh -s composerInstall -t 14
+Build/Scripts/runTests.sh -s unit
+Build/Scripts/runTests.sh -s functional
+```
+
+Use `-t 13` to install the TYPO3 13 test setup. Functional tests use SQLite
+by default. Run the `coverageUnit` or `coverageFunctional` suite to generate
+Clover reports in `.Build/coverage/`. The runner's `-h` lists the lint suites,
+PHPStan and the available database options.
+
 ### Cleaning generated files
 
 `Build/Scripts/runTests.sh -s cleanBuild` removes `.Build` (test dependencies,
