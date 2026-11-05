@@ -246,7 +246,7 @@ Package-local TYPO3 extension test runner for feed_display.
 Usage: Build/Scripts/runTests.sh [options] [-- extra-args]
 
 Options:
-    -s <composer|composerInstall|composerValidate|libraries|verifyLibraries|classic|artefact|lintPhp|lintJson|lintYaml|lintServicesYaml|lintTypoScript|lintXliff|cgl|phpstan|phpstanGenerateBaseline|coverageUnit|coverageFunctional|phpmd|unit|unitRandom|functional|rector|fractor|npm|build|clean|cleanBuild|cleanCache|cleanTests|cleanContainers|testCleanup|testBackend>
+    -s <composer|composerInstall|composerValidate|libraries|verifyLibraries|classic|artefact|lintPhp|lintJson|lintYaml|lintServicesYaml|lintTypoScript|lintXliff|cgl|phpstan|phpstanGenerateBaseline|coverageUnit|coverageFunctional|phpmd|unit|unitRandom|functional|rector|fractor|clean|cleanBuild|cleanCache|cleanTests|cleanContainers|testCleanup|testBackend>
         Specifies which suite to run
 
         cleanBuild: remove .Build and temporary root Composer files
@@ -329,8 +329,6 @@ Examples:
     Build/Scripts/runTests.sh -s phpmd
     Build/Scripts/runTests.sh -s rector -n
     Build/Scripts/runTests.sh -s fractor -n
-    Build/Scripts/runTests.sh -s npm
-    Build/Scripts/runTests.sh -s build
     Build/Scripts/runTests.sh -s cleanBuild
     Build/Scripts/runTests.sh -s clean
     Build/Scripts/runTests.sh -s testCleanup -b host
@@ -387,32 +385,6 @@ runComposerInstallInWorkingDir() {
         "composer --working-dir=${WORKING_DIR} install"
 }
 
-detectPlaywrightCommand() {
-    if [ -n "${PLAYWRIGHT_COMMAND:-}" ]; then
-        printf '%s' "${PLAYWRIGHT_COMMAND}"
-        return
-    fi
-    if [ -f pnpm-lock.yaml ] && command -v pnpm >/dev/null 2>&1; then
-        printf '%s' "pnpm exec playwright"
-        return
-    fi
-    if [ -f yarn.lock ] && command -v yarn >/dev/null 2>&1; then
-        printf '%s' "yarn playwright"
-        return
-    fi
-    if command -v npx >/dev/null 2>&1; then
-        printf '%s' "npx playwright"
-        return
-    fi
-    echo "Could not determine a Playwright command. Install Node.js tooling or set PLAYWRIGHT_COMMAND." >&2
-    exit 1
-}
-
-runHostShellCommand() {
-    local COMMAND=${1}
-    bash -lc "${COMMAND}"
-}
-
 hostCoverageDriverAvailable() {
     php -r 'exit((int)!(extension_loaded("xdebug") || extension_loaded("pcov")));'
 }
@@ -456,59 +428,6 @@ foreach (array_keys(\a9f\FractorExtensionInstaller\Generated\InstalledPackages::
 PHP
 }
 
-ensureSuiteEnabled() {
-    local ENABLED=${1}
-    local SUITE_NAME=${2}
-    if [ "${ENABLED}" != "1" ]; then
-        echo "Suite not available in this scaffold: ${SUITE_NAME}" >&2
-        exit 1
-    fi
-}
-
-detectNodePackageManager() {
-    if [ -f pnpm-lock.yaml ] && command -v pnpm >/dev/null 2>&1; then
-        printf '%s' "pnpm"
-        return
-    fi
-    if [ -f yarn.lock ] && command -v yarn >/dev/null 2>&1; then
-        printf '%s' "yarn"
-        return
-    fi
-    if command -v npm >/dev/null 2>&1; then
-        printf '%s' "npm"
-        return
-    fi
-    echo "Could not determine a Node.js package manager. Install npm, pnpm, or yarn." >&2
-    exit 1
-}
-
-runPackageJsonScript() {
-    local SCRIPT_NAME=${1}
-    shift
-    local NODE_PACKAGE_MANAGER
-    NODE_PACKAGE_MANAGER=$(detectNodePackageManager)
-    runHostShellCommand "${NODE_PACKAGE_MANAGER} run ${SCRIPT_NAME} -- $*"
-}
-
-ensurePlaywrightBaseUrl() {
-    if [ -n "${PLAYWRIGHT_BASE_URL}" ]; then
-        return
-    fi
-    echo "Playwright tests require -u <base-url> or PLAYWRIGHT_BASE_URL" >&2
-    exit 1
-}
-
-runPlaywrightSuite() {
-    ensurePlaywrightBaseUrl
-    if [ ! -f "playwright.config.ts" ] && [ ! -f "playwright.config.js" ]; then
-        echo "Playwright suite requested but no playwright.config.ts/js exists" >&2
-        exit 1
-    fi
-    mkdir -p playwright/.auth
-    PLAYWRIGHT_RUNNER=$(detectPlaywrightCommand)
-    runHostShellCommand "PLAYWRIGHT_BASE_URL=${PLAYWRIGHT_BASE_URL} ${PLAYWRIGHT_RUNNER} test ${EXTRA_TEST_OPTIONS} $*"
-}
-
 THIS_SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null && pwd)"
 cd "${THIS_SCRIPT_DIR}/../../" || exit 1
 ROOT_DIR="${PWD}"
@@ -530,10 +449,9 @@ HOST_GID=$(id -g)
 SUFFIX="${RANDOM}-$$"
 NETWORK=""
 CONTAINER_HOST="host.docker.internal"
-PLAYWRIGHT_BASE_URL="${PLAYWRIGHT_BASE_URL:-${ACCEPTANCE_BASE_URL:-}}"
 USERSET=""
 
-while getopts "a:b:s:d:i:p:e:t:u:nxy:h" OPT; do
+while getopts "a:b:s:d:i:p:e:t:nxy:h" OPT; do
     case ${OPT} in
         s) TEST_SUITE=${OPTARG} ;;
         a) DATABASE_DRIVER=${OPTARG} ;;
@@ -543,7 +461,6 @@ while getopts "a:b:s:d:i:p:e:t:u:nxy:h" OPT; do
         p) PHP_VERSION=${OPTARG} ;;
         e) EXTRA_TEST_OPTIONS=${OPTARG} ;;
         t) TYPO3_VERSION=${OPTARG} ;;
-        u) PLAYWRIGHT_BASE_URL=${OPTARG} ;;
         n) DRY_RUN=1 ;;
         x) PHP_XDEBUG_ON=1 ;;
         y) PHP_XDEBUG_PORT=${OPTARG} ;;
@@ -605,10 +522,6 @@ case ${TEST_SUITE} in
         bash Build/Scripts/testBackend.sh
         exit 0
         ;;
-    playwright)
-        runPlaywrightSuite "$@"
-        exit $?
-        ;;
 esac
 
 selectContainerBackend || exit 1
@@ -650,7 +563,7 @@ if [ "${CONTAINER_BIN}" != "host" ]; then
     fi
 fi
 
-mkdir -p .cache .Build/Web/typo3temp/var/tests .Build/coverage playwright/.auth
+mkdir -p .cache .Build/Web/typo3temp/var/tests .Build/coverage
 
 if [ ${PHP_XDEBUG_ON} -eq 0 ]; then
     XDEBUG_MODE="-e XDEBUG_MODE=off"
@@ -739,7 +652,6 @@ case ${TEST_SUITE} in
         runPhpShellCommand "lint-yaml-${SUFFIX}" "find . ! -path '*/.cache/*' ! -path '*/.Build/*' ! -path '*/node_modules/*' ! -path '*/Resources/Private/Php/ComposerVendor/*' \\( -name '*.yaml' -o -name '*.yml' \\) -print0 | xargs -0 -r .Build/bin/yaml-lint"
         ;;
     lintServicesYaml)
-        ensureSuiteEnabled "1" "lintServicesYaml"
         runPhpShellCommand "lint-services-yaml-${SUFFIX}" "find . ! -path '*/.cache/*' ! -path '*/.Build/*' ! -path '*/node_modules/*' ! -path '*/Resources/Private/Php/ComposerVendor/*' \\( -name 'Services.yaml' -o -name 'Services.yml' \\) -print0 | xargs -0 -r .Build/bin/yaml-lint"
         ;;
     lintTypoScript)
@@ -866,55 +778,6 @@ case ${TEST_SUITE} in
         runPhpShellCommand \
             "fractor-${SUFFIX}" \
             ".Build/fractor/bin/fractor process --config=Build/fractor/fractor.php --ansi ${FRACTOR_DRY_RUN} ${EXTRA_TEST_OPTIONS} $*"
-        ;;
-    npm)
-        ensureSuiteEnabled "0" "npm"
-        NODE_PACKAGE_MANAGER=$(detectNodePackageManager)
-        if [ $# -gt 0 ]; then
-            runHostShellCommand "${NODE_PACKAGE_MANAGER} $*"
-        elif [ "${NODE_PACKAGE_MANAGER}" = "pnpm" ]; then
-            runHostShellCommand "pnpm install --frozen-lockfile"
-        elif [ "${NODE_PACKAGE_MANAGER}" = "yarn" ]; then
-            runHostShellCommand "yarn install --frozen-lockfile"
-        elif [ -f package-lock.json ]; then
-            runHostShellCommand "npm ci"
-        else
-            runHostShellCommand "npm install"
-        fi
-        ;;
-    build)
-        ensureSuiteEnabled "0" "build"
-        runPackageJsonScript "build" "$@"
-        ;;
-    lintScss)
-        ensureSuiteEnabled "0" "lintScss"
-        runPackageJsonScript "check:scss:lint" "$@"
-        ;;
-    lintTypescript)
-        ensureSuiteEnabled "0" "lintTypescript"
-        runPackageJsonScript "check:typescript:lint" "$@"
-        ;;
-    unitJavascript)
-        ensureSuiteEnabled "0" "unitJavascript"
-        runPackageJsonScript "check:tests:unit:javascript" "$@"
-        ;;
-    e2e)
-        ensureSuiteEnabled "0" "e2e"
-        ensurePlaywrightBaseUrl
-        runHostShellCommand "PLAYWRIGHT_BASE_URL=${PLAYWRIGHT_BASE_URL} $(detectNodePackageManager) run check:tests:e2e -- $*"
-        ;;
-    e2e-prepare)
-        ensureSuiteEnabled "0" "e2e-prepare"
-        runPackageJsonScript "check:tests:e2e:prepare" "$@"
-        ;;
-    accessibility)
-        ensureSuiteEnabled "0" "accessibility"
-        ensurePlaywrightBaseUrl
-        runHostShellCommand "PLAYWRIGHT_BASE_URL=${PLAYWRIGHT_BASE_URL} $(detectNodePackageManager) run check:tests:accessibility -- $*"
-        ;;
-    accessibility-prepare)
-        ensureSuiteEnabled "0" "accessibility-prepare"
-        runPackageJsonScript "check:tests:accessibility:prepare" "$@"
         ;;
     *)
         loadHelp >&2
