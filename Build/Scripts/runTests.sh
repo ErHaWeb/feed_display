@@ -6,8 +6,6 @@
 
 set -eu -o pipefail
 
-COMPOSER_FILES_STASHED=0
-
 cleanUp() {
     if [ -n "${CONTAINER_BIN:-}" ] && [ "${CONTAINER_BIN}" != "host" ] && [ -n "${NETWORK:-}" ]; then
         ATTACHED_CONTAINERS=$(${CONTAINER_BIN} ps -a --filter network=${NETWORK} --format='{{.Names}}' 2>/dev/null || true)
@@ -21,10 +19,6 @@ cleanUp() {
 onExit() {
     local EXIT_CODE=$?
     trap - EXIT
-
-    if [ "${COMPOSER_FILES_STASHED:-0}" -eq 1 ]; then
-        restoreComposerFiles || true
-    fi
 
     cleanUp || true
     exit "${EXIT_CODE}"
@@ -204,10 +198,6 @@ handleDbmsOptions() {
     return 0
 }
 
-cleanComposer() {
-    rm -rf .Build composer.lock
-}
-
 cleanBuildArtifacts() {
     rm -rf -- .Build composer.lock composer.json.orig composer.json.testing
 }
@@ -227,16 +217,6 @@ cleanAllArtifacts() {
             rmdir -- "${DIRECTORY}" 2>/dev/null || true
         fi
     done
-}
-
-stashComposerFiles() {
-    cp composer.json composer.json.orig
-}
-
-restoreComposerFiles() {
-    if [ -f composer.json.orig ]; then
-        mv composer.json.orig composer.json
-    fi
 }
 
 loadHelp() {
@@ -581,51 +561,20 @@ case ${TEST_SUITE} in
         runPhpCommand "composer-command-${SUFFIX}" composer "$@"
         ;;
     composerInstall)
-        cleanComposer
-        stashComposerFiles
-        COMPOSER_FILES_STASHED=1
+        rm -rf -- .Build composer.lock
         case ${TYPO3_VERSION} in
-            13)
-                TYPO3_REQUIREMENTS=(
-                    typo3/cms-backend:^13.4
-                    typo3/cms-core:^13.4
-                    typo3/cms-extbase:^13.4
-                    typo3/cms-fluid:^13.4
-                    typo3/cms-frontend:^13.4
-                )
-                TYPO3_DEV_REQUIREMENTS=(
-                    typo3/cms-fluid-styled-content:^13.4
-                    typo3/cms-install:^13.4
-                    typo3/testing-framework:^9.0
-                    phpunit/phpunit:^11.5
-                )
-                ;;
-            14)
-                TYPO3_REQUIREMENTS=(
-                    typo3/cms-backend:^14.3
-                    typo3/cms-core:^14.3
-                    typo3/cms-extbase:^14.3
-                    typo3/cms-fluid:^14.3
-                    typo3/cms-frontend:^14.3
-                )
-                TYPO3_DEV_REQUIREMENTS=(
-                    typo3/cms-fluid-styled-content:^14.3
-                    typo3/cms-install:^14.3
-                    typo3/testing-framework:^9.0
-                    phpunit/phpunit:^11.5
-                )
-                ;;
-            *)
-                echo "Unsupported TYPO3 major for composerInstall: ${TYPO3_VERSION}" >&2
-                exit 1
-                ;;
+            13) TYPO3_CONSTRAINT='^13.4' ;;
+            14) TYPO3_CONSTRAINT='^14.3' ;;
         esac
-        runPhpCommand "composer-require-${SUFFIX}" composer require --no-ansi --no-interaction --no-progress --no-update "${TYPO3_REQUIREMENTS[@]}"
-        runPhpCommand "composer-require-dev-${SUFFIX}" composer require --dev --no-ansi --no-interaction --no-progress --no-update "${TYPO3_DEV_REQUIREMENTS[@]}"
-        runPhpCommand "composer-install-${SUFFIX}" composer install --no-ansi --no-interaction --no-progress "$@"
-        cp composer.json composer.json.testing
-        restoreComposerFiles
-        COMPOSER_FILES_STASHED=0
+        TYPO3_CONSTRAINT_OPTIONS=()
+        for PACKAGE in backend core extbase fluid frontend fluid-styled-content install; do
+            TYPO3_CONSTRAINT_OPTIONS+=(--with "typo3/cms-${PACKAGE}:${TYPO3_CONSTRAINT}")
+        done
+        runPhpCommand "composer-install-${SUFFIX}" composer update --no-ansi --no-interaction --no-progress "${TYPO3_CONSTRAINT_OPTIONS[@]}" "$@"
+        if [ "${TYPO3_VERSION}" = "13" ]; then
+            # TYPO3 13 functional tests scan the bundle's Classic classmap.
+            runPhpCommand "libraries-${SUFFIX}" bash Build/Scripts/buildLibraries.sh
+        fi
         ;;
     libraries)
         runPhpCommand "libraries-${SUFFIX}" bash Build/Scripts/buildLibraries.sh "$@"
