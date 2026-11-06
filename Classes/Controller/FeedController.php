@@ -35,7 +35,7 @@ class FeedController extends ActionController
             return $this->htmlResponse();
         }
 
-        $cacheIdentifier = 'feeddisplay';
+        $cacheIdentifier = 'feeddisplay_' . md5(serialize($this->settings));
         $data = $this->cache->get($cacheIdentifier);
         $cacheDuration = (int)$this->settings['cacheDuration'];
 

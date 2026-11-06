@@ -35,20 +35,22 @@ final class FeedFrontendTest extends AbstractFeedFrontendTestCase
     }
 
     #[Test]
-    public function flexFormOverridesTypoScriptAndChangedSettingsInvalidateTheFeedCache(): void
+    public function flexFormOverridesTypoScriptAndSelectsSeparateCacheEntries(): void
     {
-        $feedUrl = $this->writeFeedFixture('Feed display test feed', ['First item', 'Second item']);
-        $this->initializeFrontendRootPage($feedUrl, ['maxFeedCount' => 2]);
-
-        $this->setFlexFormValues([
+        $feedUrl = $this->writeFeedFixture('Original feed title', ['First item', 'Second item']);
+        $this->initializeFrontendRootPage($feedUrl, ['cacheDuration' => 600, 'maxFeedCount' => 2]);
+        $oneItemFlexForm = [
             'general' => [
                 'settings.maxFeedCount' => 1,
             ],
-        ]);
+        ];
 
+        $this->setFlexFormValues($oneItemFlexForm);
         $body = $this->requestPage();
         self::assertSame(1, substr_count($body, 'class="item-title"'));
+        self::assertStringContainsString('Original feed title', $body);
 
+        $this->writeFeedFixture('Updated feed title', ['First item', 'Second item']);
         $this->setFlexFormValues([
             'general' => [
                 'settings.maxFeedCount' => 2,
@@ -57,8 +59,15 @@ final class FeedFrontendTest extends AbstractFeedFrontendTestCase
 
         $body = $this->requestPage();
         self::assertSame(2, substr_count($body, 'class="item-title"'));
+        self::assertStringContainsString('Updated feed title', $body);
         self::assertStringContainsString('First item', $body);
         self::assertStringContainsString('Second item', $body);
+
+        $this->setFlexFormValues($oneItemFlexForm);
+        $body = $this->requestPage();
+        self::assertSame(1, substr_count($body, 'class="item-title"'));
+        self::assertStringContainsString('Original feed title', $body);
+        self::assertStringNotContainsString('Updated feed title', $body);
     }
 
     #[Test]

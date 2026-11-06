@@ -56,14 +56,13 @@ final class FeedControllerTest extends UnitTestCase
                 ['title' => 'First item'],
             ],
         ];
+        $cacheIdentifier = 'feeddisplay_' . md5(serialize($settings));
         $cache = $this->createMock(FrontendInterface::class);
         $feedDataService = $this->createMock(FeedDataService::class);
         $view = new RecordingView();
 
-        $cache->expects(self::once())->method('get')->with('feeddisplay')->willReturn([
-            'settings' => ['cacheDuration' => 600],
-        ]);
-        $cache->expects(self::once())->method('remove')->with('feeddisplay');
+        $cache->expects(self::once())->method('get')->with($cacheIdentifier)->willReturn(false);
+        $cache->expects(self::once())->method('remove')->with($cacheIdentifier);
         $cache->expects(self::never())->method('set');
         $feedDataService->expects(self::once())->method('buildData')->with($settings)->willReturn($data);
 
@@ -87,12 +86,13 @@ final class FeedControllerTest extends UnitTestCase
                 ['title' => 'Cached item'],
             ],
         ];
+        $cacheIdentifier = 'feeddisplay_' . md5(serialize($settings));
         $cache = $this->createMock(FrontendInterface::class);
         $feedDataService = $this->createMock(FeedDataService::class);
         $view = new RecordingView();
 
-        $cache->expects(self::once())->method('get')->with('feeddisplay')->willReturn(false);
-        $cache->expects(self::once())->method('set')->with('feeddisplay', $data, [], 600);
+        $cache->expects(self::once())->method('get')->with($cacheIdentifier)->willReturn(false);
+        $cache->expects(self::once())->method('set')->with($cacheIdentifier, $data, [], 600);
         $cache->expects(self::never())->method('remove');
         $feedDataService->expects(self::once())->method('buildData')->with($settings)->willReturn($data);
 
@@ -116,11 +116,12 @@ final class FeedControllerTest extends UnitTestCase
                 ['title' => 'Cached item'],
             ],
         ];
+        $cacheIdentifier = 'feeddisplay_' . md5(serialize($settings));
         $cache = $this->createMock(FrontendInterface::class);
         $feedDataService = $this->createMock(FeedDataService::class);
         $view = new RecordingView();
 
-        $cache->expects(self::once())->method('get')->with('feeddisplay')->willReturn($cachedData);
+        $cache->expects(self::once())->method('get')->with($cacheIdentifier)->willReturn($cachedData);
         $cache->expects(self::never())->method('set');
         $cache->expects(self::never())->method('remove');
         $feedDataService->expects(self::never())->method('buildData');
@@ -153,12 +154,13 @@ final class FeedControllerTest extends UnitTestCase
                 ['title' => 'Fresh item'],
             ],
         ];
+        $cacheIdentifier = 'feeddisplay_' . md5(serialize($settings));
         $cache = $this->createMock(FrontendInterface::class);
         $feedDataService = $this->createMock(FeedDataService::class);
         $view = new RecordingView();
 
-        $cache->expects(self::once())->method('get')->with('feeddisplay')->willReturn($cachedData);
-        $cache->expects(self::once())->method('set')->with('feeddisplay', $rebuiltData, [], 600);
+        $cache->expects(self::once())->method('get')->with($cacheIdentifier)->willReturn($cachedData);
+        $cache->expects(self::once())->method('set')->with($cacheIdentifier, $rebuiltData, [], 600);
         $cache->expects(self::never())->method('remove');
         $feedDataService->expects(self::once())->method('buildData')->with($settings)->willReturn($rebuiltData);
 

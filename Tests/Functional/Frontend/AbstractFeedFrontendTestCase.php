@@ -17,8 +17,8 @@ declare(strict_types=1);
 
 namespace ErHaWeb\FeedDisplay\Tests\Functional\Frontend;
 
+use TYPO3\CMS\Core\Cache\Backend\Typo3DatabaseBackend;
 use TYPO3\CMS\Core\Cache\CacheManager;
-use TYPO3\CMS\Core\Cache\Exception\NoSuchCacheException;
 use TYPO3\CMS\Core\Configuration\FlexForm\FlexFormTools;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\TestingFramework\Core\Functional\Framework\Frontend\InternalRequest;
@@ -48,6 +48,13 @@ abstract class AbstractFeedFrontendTestCase extends FunctionalTestCase
     protected array $configurationToUseInTestInstance = [
         'SYS' => [
             'encryptionKey' => '4408d27a916d51e624b69af3554f516dbab61037a9f7b9fd6f81b4d3bedeccb6',
+            'caching' => [
+                'cacheConfigurations' => [
+                    'feeddisplay' => [
+                        'backend' => Typo3DatabaseBackend::class,
+                    ],
+                ],
+            ],
         ],
         'FE' => [
             'cacheHash' => [
@@ -185,15 +192,9 @@ abstract class AbstractFeedFrontendTestCase extends FunctionalTestCase
      */
     protected function getCachedFeedData(): array|false
     {
-        try {
-            return $this->get(CacheManager::class)->getCache('feeddisplay')->get('feeddisplay');
-        } catch (NoSuchCacheException $exception) {
-            throw new \LogicException(
-                'Cache "feeddisplay" must be available in frontend functional tests.',
-                1741614942,
-                $exception
-            );
-        }
+        return $this->get(CacheManager::class)
+            ->getCache('feeddisplay')
+            ->get($this->getSingleCachedFeedIdentifier());
     }
 
     /**
@@ -201,14 +202,20 @@ abstract class AbstractFeedFrontendTestCase extends FunctionalTestCase
      */
     protected function setCachedFeedData(array $data, int $lifetime = 600): void
     {
-        try {
-            $this->get(CacheManager::class)->getCache('feeddisplay')->set('feeddisplay', $data, [], $lifetime);
-        } catch (NoSuchCacheException $exception) {
-            throw new \LogicException(
-                'Cache "feeddisplay" must be available in frontend functional tests.',
-                1741614943,
-                $exception
-            );
-        }
+        $this->get(CacheManager::class)
+            ->getCache('feeddisplay')
+            ->set($this->getSingleCachedFeedIdentifier(), $data, [], $lifetime);
+    }
+
+    private function getSingleCachedFeedIdentifier(): string
+    {
+        $identifiers = $this->getConnectionPool()
+            ->getConnectionForTable('cache_feeddisplay')
+            ->select(['identifier'], 'cache_feeddisplay')
+            ->fetchFirstColumn();
+
+        self::assertCount(1, $identifiers, 'Expected one cached feed entry.');
+
+        return (string)$identifiers[0];
     }
 }
