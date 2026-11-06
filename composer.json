@@ -1,6 +1,6 @@
 {
   "name": "erhaweb/feed-display",
-  "description": "Fetches and parses RSS and Atom web feeds with the SimplePie library and prepares them for frontend display",
+  "description": "Feed Display - Fetches and parses RSS and Atom web feeds with the SimplePie library and prepares them for frontend display",
   "license": "GPL-2.0-or-later",
   "type": "typo3-cms-extension",
   "keywords": [
