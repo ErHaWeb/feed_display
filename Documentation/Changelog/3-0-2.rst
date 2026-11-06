@@ -1,0 +1,61 @@
+.. include:: /Includes.rst.txt
+
+3.0.2 - November 06, 2026
+=========================
+
+.. contents::
+   :local:
+   :depth: 3
+
+Breaking changes
+----------------
+
+Classic installations from a Git checkout or a GitHub source archive now need
+``composer build-extension`` before activation. The TER package includes the
+SimplePie bundle.
+
+Use ``composer build-extension`` in place of ``composer create-libs``.
+Run tests, linters and coverage through ``Build/Scripts/runTests.sh``.
+
+All Changes
+-----------
+This is a list of all changes in this release: ::
+
+    2026-11-06 [BUGFIX] Cache feeds per plugin configuration (#16) (Commit debe265 by Oliver Hauser)
+    2026-11-06 [TASK] Add extension title to Composer description (Commit f2e617a by Eric Harrer)
+    2026-11-06 [TASK] Share CI setup for code quality checks (Commit 5da426a by Eric Harrer)
+    2026-11-06 [TASK] Share CI setup for unit and functional tests (Commit d74c6f6 by Eric Harrer)
+    2026-11-06 [TASK] Use a fixed frontend site fixture (Commit edb934f by Eric Harrer)
+    2026-11-06 [TASK] Use the runner for test and lint commands (Commit 0574030 by Eric Harrer)
+    2026-11-06 [BUGFIX] Report only final Classic HTTP failures (Commit 23c3a15 by Eric Harrer)
+    2026-11-06 [BUGFIX] Explain missing Classic test setup (Commit 07a93ea by Eric Harrer)
+    2026-11-06 [TASK] Share functional database setup (Commit 32d0cb2 by Eric Harrer)
+    2026-11-06 [TASK] Resolve test dependencies in one step (Commit 765e65c by Eric Harrer)
+    2026-11-06 [TASK] Remove unused browser test scaffolding (Commit bd67811 by Eric Harrer)
+    2026-11-06 [TASK] Use one Composer bundle build command (Commit 364d036 by Eric Harrer)
+    2026-11-05 [DOCS] Document Classic builds and maintenance (Commit 594d8a4 by Eric Harrer)
+    2026-11-05 [BUGFIX] Remove generated files during cleanup (Commit 2e9d8bd by Eric Harrer)
+    2026-11-05 [BUGFIX] Detect reachable container backends (Commit 8eb3a16 by Eric Harrer)
+    2026-11-05 [TASK] Test TYPO3 Classic installations in CI (Commit ec44f6a by Eric Harrer)
+    2026-11-05 [TASK] Test TER artefacts in CI (Commit 3af09c9 by Eric Harrer)
+    2026-11-05 [BUGFIX] Ship SimplePie for TYPO3 Classic (Commit bdbacb2 by Eric Harrer)
+    2026-11-05 [BUGFIX] Check Composer version against TER tag (Commit 0481152 by Eric Harrer)
+    2026-11-05 [TASK] Remove duplicate documentation scripts (Commit b70f7b1 by Eric Harrer)
+    2026-05-24 [TASK] Add documentation rendering scripts (Commit 317f58c by Eric Harrer)
+    2026-05-24 [TASK] Add Crowdin translation workflow (Commit 310f1ba by Eric Harrer)
+    2026-05-22 [TASK] Follow recommended TYPO3 Crowdin setup (Commit e695a74 by Eric Harrer)
+    2026-05-22 [TASK] Rename Crowdin config file to .crowdin.yml (Commit 84d5fdd by Eric Harrer)
+    2026-05-22 [TASK] Ignore Crowdin-generated translation files (Commit ba19032 by Eric Harrer)
+    2026-05-22 [BUGFIX] Map Crowdin variants for TYPO3 exports (Commit 161f623 by Eric Harrer)
+    2026-05-22 [BUGFIX] Use locale_with_underscore for Crowdin exports (Commit 579cae7 by Eric Harrer)
+    2026-05-21 [BUGFIX] Fix translation path for site set labels (Commit d0d62e8 by Eric Harrer)
+    2026-05-15 [TASK] Streamline README and release documentation (Commit 67c584e by Eric Harrer)
+    2026-05-11 [BUGFIX] Remove unsupported PHPUnit attributes (Commit f336d38 by Eric Harrer)
+    2026-05-11 [TASK] Change static method and local-only calls to non-static (Commit 4523a37 by Eric Harrer)
+    2026-05-11 [TASK] Suppress strict type declaration in “ext_emconf.php” of test extension (Commit e06e2ab by Eric Harrer)
+    2026-05-08 [TASK] Remove unnecessary CS fixer adjustments (Commit 463e5a9 by Eric Harrer)
+    2026-05-07 [TASK] Allow PHPUnit mocks without expectations (Commit 7599d3b by Eric Harrer)
+    2026-05-07 [TASK] Remove spaces in static fn() calls (Commit 505c0f3 by Eric Harrer)
+    2026-05-07 [TASK] Insert blank lines in Typoscript for better readability (Commit 11d4c37 by Eric Harrer)
+
+This list has been created by using ``git log --no-merges 3.0.1..debe265 --abbrev-commit --pretty='%ad %s (Commit %h by %an)' --date=short``.

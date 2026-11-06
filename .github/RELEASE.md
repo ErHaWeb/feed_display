@@ -30,7 +30,7 @@ manually from `main` and provide the tag name in the `version` input.
 With the GitHub CLI this looks like:
 
 ```bash
-gh workflow run publish-ter.yml --ref main -f version=3.0.1
+gh workflow run publish-ter.yml --ref main -f version=3.0.2
 ```
 
 Only one workflow run per release version is allowed at a time. Parallel runs
@@ -45,7 +45,7 @@ it as a GitHub Actions artefact, and skips token validation and publication.
 With the GitHub CLI this looks like:
 
 ```bash
-gh workflow run publish-ter.yml --ref main -f version=3.0.1 -f dry_run=true
+gh workflow run publish-ter.yml --ref main -f version=3.0.2 -f dry_run=true
 ```
 
 ## Local artefact verification
@@ -54,7 +54,7 @@ The helper script validates the current release tag and generates the TER
 comment locally:
 
 ```bash
-bash Build/Scripts/prepareTerPublish.sh 3.0.1
+bash Build/Scripts/prepareTerPublish.sh 3.0.2
 ```
 
 To create and verify a local TER artefact with Tailor, install the pinned
@@ -64,8 +64,8 @@ version and use the packaging exclusions from
 ```bash
 COMPOSER_HOME="${PWD}/.Build/.composer" composer global require typo3/tailor:1.7.0
 TYPO3_EXCLUDE_FROM_PACKAGING=Build/Tailor/ExcludeFromPackaging.php \
-  php .Build/.composer/vendor/bin/tailor create-artefact 3.0.1 feed_display --path=.
-bash Build/Scripts/verifyTerArtefact.sh tailor-version-artefact/feed_display_3.0.1.zip
+  php .Build/.composer/vendor/bin/tailor create-artefact 3.0.2 feed_display --path=.
+bash Build/Scripts/verifyTerArtefact.sh tailor-version-artefact/feed_display_3.0.2.zip
 ```
 
 Run `composer build-extension` before manually creating an artefact. The complete
@@ -108,7 +108,7 @@ Library updates are deliberate maintenance work, never part of a release build:
 
    ```bash
    Build/Scripts/runTests.sh -s artefact
-   Build/Scripts/runTests.sh -s classic -t 14 -- tailor-version-artefact/feed_display_3.0.1.zip
+   Build/Scripts/runTests.sh -s classic -t 14 -- tailor-version-artefact/feed_display_3.0.2.zip
    ```
 
 5. Commit the bundle manifest and lockfile with the reviewed changes; generated
