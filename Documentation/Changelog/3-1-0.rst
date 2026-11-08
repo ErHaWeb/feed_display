@@ -1,0 +1,39 @@
+.. include:: /Includes.rst.txt
+
+3.1.0 - November 09, 2026
+=========================
+
+.. contents::
+   :local:
+   :depth: 3
+
+Upgrade notes
+-------------
+
+Apply the regular database schema update to create ``tx_feeddisplay_feed``.
+Existing plugins keep live mode; no new plugin configuration or Scheduler job
+is required. Durable protection starts with the first successful fetch after
+updating. Existing display-cache arrays are not converted to feed documents.
+
+The last successful source response is now retained without expiry and survives
+TYPO3 cache flushes, including for zero and negative cache durations. Cache
+flushes rebuild display data without forcing a download; use
+``feeddisplay:refresh`` to force a refresh. Plugins sharing a URL now share its
+current source revision while retaining separate display settings.
+
+Optional scheduler mode fills missing sources once during frontend rendering,
+then uses a recurring refresh command. ``feeddisplay:remove`` manually removes
+explicitly selected sources. See :ref:`configuration-scheduler` for source
+selection, retries, operational limits and administration.
+
+The stored document contains the parser input actually selected by SimplePie.
+Pages with several feeds retain the selected source.
+Scheduled fetches read the configured URL directly without autodiscovery.
+
+All Changes
+-----------
+This is a list of all changes in this release: ::
+
+    2026-11-08 [FEATURE] Add persistent and scheduled feeds (#18) (Commit b31c7a7 by joh-gp)
+
+This list has been created by using ``git log --no-merges 3.0.2..b31c7a7 --abbrev-commit --pretty='%ad %s (Commit %h by %an)' --date=short``.
