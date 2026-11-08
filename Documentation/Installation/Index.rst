@@ -24,9 +24,9 @@ TYPO3 v14 backend module paths.
 
         #.  Apply database changes
 
-            This extension uses the caching framework to cache feed data and
-            plugin configuration. For this, the tables `cache_feeddisplay`
-            and `cache_feeddisplay_tags` must be created.
+            Apply the regular schema update, including ``tx_feeddisplay_feed``
+            for durable responses and ``cache_feeddisplay`` /
+            ``cache_feeddisplay_tags`` for disposable display data.
 
             These tables can be created in the Maintenance module under
             :guilabel:`Analyze Database Structure` → :guilabel:`Apply selected changes`.
@@ -53,9 +53,9 @@ TYPO3 v14 backend module paths.
 
         #.  Apply database changes
 
-            This extension uses the caching framework to cache feed data and
-            plugin configuration. For this, the tables `cache_feeddisplay`
-            and `cache_feeddisplay_tags` must be created.
+            Apply the regular schema update, including ``tx_feeddisplay_feed``
+            for durable responses and ``cache_feeddisplay`` /
+            ``cache_feeddisplay_tags`` for disposable display data.
 
             These tables can be created in the Maintenance module under
             :guilabel:`Analyze Database Structure` → :guilabel:`Apply selected changes`.
@@ -121,3 +121,22 @@ Composer installations obtain SimplePie through their normal project dependency
 and do not require this additional build. Classic installations receive library
 updates with a new extension release; the extension never downloads libraries
 during a request.
+
+Updating from 3.0.2
+==================
+
+Apply the normal database schema update after replacing the extension files,
+for example with ``vendor/bin/typo3 extension:setup`` (Composer) or
+``php typo3/sysext/core/bin/typo3 extension:setup`` (Classic). This creates
+``tx_feeddisplay_feed``. Rebuild deployment/DI caches as usual. Existing plugins
+keep live mode; no Scheduler job or new plugin setting is required.
+
+Without the table, live rendering falls back to fetching and its existing
+display cache, and logs a schema warning. Scheduler rendering cannot persist a
+first response and shows its configured error message. Complete the schema
+update to enable durable protection. No tables are created during requests.
+
+There is no upgrade wizard for converting old display-cache entries: they lack
+the complete feed document. Protection begins with the first successful fetch
+on the new version. See :ref:`configuration-scheduler` for storage and refresh
+semantics. Existing Site Set dependencies remain unchanged.

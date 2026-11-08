@@ -76,6 +76,17 @@ for mode in linked packaged; do
             exit 1
         fi
     done
+    TYPO3_CONTEXT=Development php Build/Scripts/classicFixture.php "${instance}" verifyStored
+    rm "${instance}/fileadmin/feed.xml"
+    (
+        cd "${instance}"
+        TYPO3_CONTEXT=Development php typo3/sysext/core/bin/typo3 cache:flush
+    )
+    curl --fail --silent --show-error "${base}" -o "${instance}/persistent.html"
+    if ! grep -q 'Classic bundle integration item' "${instance}/persistent.html"; then
+        cat "${instance}/server.log" >&2
+        exit 1
+    fi
     kill "${serverPid}"
     wait "${serverPid}" 2>/dev/null || true
     serverPid=''

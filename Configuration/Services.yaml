@@ -8,10 +8,6 @@ services:
     resource: '../Classes/*'
     exclude: '../Classes/Domain/Model/*'
 
-  ErHaWeb\FeedDisplay\Controller\FeedController:
-    arguments:
-      $cache: '@cache.feeddisplay'
-
   # Register the external dependency explicitly so FeedDataService can autowire it.
   SimplePie\SimplePie: ~
 

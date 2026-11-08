@@ -35,6 +35,7 @@ plugin.tx_feeddisplay_pi1 {
         linkTarget = {$plugin.tx_feeddisplay_pi1.settings.linkTarget}
         errorMessage = {$plugin.tx_feeddisplay_pi1.settings.errorMessage}
         cacheDuration = {$plugin.tx_feeddisplay_pi1.settings.cacheDuration}
+        fetchMode = {$plugin.tx_feeddisplay_pi1.settings.fetchMode}
     }
 
     ignoreFlexFormSettingsIfEmpty = {$plugin.tx_feeddisplay_pi1.ignoreFlexFormSettingsIfEmpty}
