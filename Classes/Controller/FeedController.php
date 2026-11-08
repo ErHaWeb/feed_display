@@ -17,17 +17,13 @@ declare(strict_types=1);
 
 namespace ErHaWeb\FeedDisplay\Controller;
 
-use ErHaWeb\FeedDisplay\Service\FeedDataService;
+use ErHaWeb\FeedDisplay\Service\FeedProvider;
 use Psr\Http\Message\ResponseInterface;
-use TYPO3\CMS\Core\Cache\Frontend\FrontendInterface;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 class FeedController extends ActionController
 {
-    public function __construct(
-        private readonly FrontendInterface $cache,
-        private readonly FeedDataService $feedDataService
-    ) {}
+    public function __construct(private readonly FeedProvider $feedProvider) {}
 
     public function displayAction(): ResponseInterface
     {
@@ -35,20 +31,7 @@ class FeedController extends ActionController
             return $this->htmlResponse();
         }
 
-        $cacheIdentifier = 'feeddisplay_' . md5(serialize($this->settings));
-        $data = $this->cache->get($cacheIdentifier);
-        $cacheDuration = (int)$this->settings['cacheDuration'];
-
-        if ($cacheDuration === 0) {
-            $data = $this->feedDataService->buildData($this->settings);
-            $this->cache->remove($cacheIdentifier);
-        } elseif ($data === false || $data['settings'] !== $this->settings) {
-            $data = $this->feedDataService->buildData($this->settings);
-            $this->cache->set($cacheIdentifier, $data, [], $cacheDuration);
-        }
-
-        $this->view->assign('data', $data);
-
+        $this->view->assign('data', $this->feedProvider->getData($this->settings));
         return $this->htmlResponse();
     }
 }

@@ -17,6 +17,7 @@ declare(strict_types=1);
 
 namespace ErHaWeb\FeedDisplay\Service;
 
+use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use SimplePie\SimplePie;
@@ -37,7 +38,7 @@ final class FeedRuntimeInitializer
     /**
      * @param FeedSettings $settings
      */
-    public function initializeFeed(SimplePie $feed, array $settings): bool
+    public function initializeFeed(SimplePie $feed, array $settings, ?ClientInterface $httpClient = null): bool
     {
         $feedUrl = $settings['feedUrl'] ?? '';
         if ($feedUrl === '') {
@@ -47,7 +48,7 @@ final class FeedRuntimeInitializer
         $feedUrl = stripslashes((string)$feedUrl);
         $feed->set_feed_url($feedUrl);
         if ($this->shouldUseTypo3HttpClient($feedUrl)) {
-            $httpClient = $this->guzzleClientFactory->getClient();
+            $httpClient ??= $this->guzzleClientFactory->getClient();
             assert($httpClient instanceof \Psr\Http\Client\ClientInterface);
             $feed->set_http_client($httpClient, $this->requestFactory, $this->uriFactory);
         }

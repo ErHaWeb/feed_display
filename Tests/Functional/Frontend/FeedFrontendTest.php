@@ -59,7 +59,7 @@ final class FeedFrontendTest extends AbstractFeedFrontendTestCase
 
         $body = $this->requestPage();
         self::assertSame(2, substr_count($body, 'class="item-title"'));
-        self::assertStringContainsString('Updated feed title', $body);
+        self::assertStringContainsString('Original feed title', $body);
         self::assertStringContainsString('First item', $body);
         self::assertStringContainsString('Second item', $body);
 
@@ -68,6 +68,9 @@ final class FeedFrontendTest extends AbstractFeedFrontendTestCase
         self::assertSame(1, substr_count($body, 'class="item-title"'));
         self::assertStringContainsString('Original feed title', $body);
         self::assertStringNotContainsString('Updated feed title', $body);
+        // Both settings use one source; a refresh invalidates both display revisions.
+        $this->get(\ErHaWeb\FeedDisplay\Service\FeedRefresher::class)->refresh($feedUrl);
+        self::assertStringContainsString('Updated feed title', $this->requestPage());
     }
 
     #[Test]

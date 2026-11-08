@@ -10,6 +10,9 @@ $sourceRoot = realpath($argv[2] ?? getcwd());
 $manifest = json_decode($zip->getFromName('composer.json'), true, 512, JSON_THROW_ON_ERROR);
 $bundlePath = $manifest['extra']['typo3/cms']['Package']['providesPackages']['simplepie/simplepie'] ?? null;
 $isBundle = $bundlePath === 'Resources/Private/Php/ComposerVendor';
+if (is_file($sourceRoot . '/ext_tables.sql') && $zip->locateName('ext_tables.sql') === false) {
+    throw new RuntimeException('The TER package is missing the extension database schema.');
+}
 $temporary = sys_get_temp_dir() . '/feed-display-artefact-' . bin2hex(random_bytes(8));
 mkdir($temporary);
 try {

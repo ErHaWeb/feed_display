@@ -27,6 +27,16 @@ if ($mode === 'probe') {
     echo 'Classic autoloading resolved both SimplePie APIs from ' . $expectedPath . PHP_EOL;
     exit(0);
 }
+if ($mode === 'verifyStored') {
+    $pool = $container->get(\TYPO3\CMS\Core\Database\ConnectionPool::class);
+    $row = $pool->getConnectionForTable('tx_feeddisplay_feed')->select(['response_data', 'revision'], 'tx_feeddisplay_feed')->fetchAssociative();
+    if (!is_array($row) || !is_string($row['response_data']) || hash('sha256', $row['response_data']) !== $row['revision']) {
+        throw new RuntimeException('Classic rendering did not persist a complete feed document.');
+    }
+    \ErHaWeb\FeedDisplay\Storage\FeedDocument::decode($row['response_data']);
+    echo 'Verified the persistent Classic source document.' . PHP_EOL;
+    exit(0);
+}
 if ($mode !== 'seed') {
     throw new InvalidArgumentException('Expected seed or probe.');
 }
