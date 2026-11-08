@@ -47,29 +47,35 @@ final class FeedProvider
      */
     public function getData(array $settings, bool $scheduler = false): array
     {
+        return $this->provide($settings, $scheduler)->data;
+    }
+
+    /** @param array<string, mixed> $settings */
+    public function provide(array $settings, bool $scheduler = false): ProvidedFeedData
+    {
         $url = trim(stripslashes((string)($settings['feedUrl'] ?? '')));
         $duration = (int)($settings['cacheDuration'] ?? 0);
         $identifier = 'feeddisplay_' . md5(serialize($settings));
         $cached = $this->readCache($identifier, $settings);
         if ($url === '') {
-            return ['settings' => $settings];
+            return new ProvidedFeedData(['settings' => $settings]);
         }
         if (!$scheduler && $duration > 0 && $cached !== false
             && is_string($cached[self::REVISION] ?? null) && str_starts_with($cached[self::REVISION], 'unstored:')
         ) {
             // Persistence failed: retain the successful display result for its original TTL.
-            return $this->displayData($cached);
+            return new ProvidedFeedData($this->displayData($cached));
         }
         try {
             $stored = $this->storage->findState($url);
         } catch (\Throwable $exception) {
             $this->logger->warning('Could not read the persistent feed. Apply the extension database schema.', ['url' => $url, 'exception' => $exception]);
             if (!$scheduler && $duration > 0 && $cached !== false) {
-                return $this->displayData($cached);
+                return new ProvidedFeedData($this->displayData($cached));
             }
             $fetched = $scheduler ? null : $this->fetchWithoutStorage($url);
             if ($fetched === null) {
-                return $this->cacheData($identifier, ['settings' => $settings], '', $duration);
+                return new ProvidedFeedData($this->cacheData($identifier, ['settings' => $settings], '', $duration));
             }
             return $this->fetchedData($identifier, $fetched, $settings, $duration, $scheduler);
         }
@@ -77,7 +83,7 @@ final class FeedProvider
         if (!$scheduler && $duration > 0 && $cached !== false
             && !array_key_exists(self::REVISION, $cached) && !($stored->hasDocument ?? false)
         ) {
-            return $cached;
+            return new ProvidedFeedData($cached);
         }
         if ($stored !== null && $stored->invalidationPending) {
             try {
@@ -118,20 +124,20 @@ final class FeedProvider
                 if (!$scheduler && $result->status === 'locked' && !($stored->hasDocument ?? false)) {
                     $fresh = $this->fetchWithoutStorage($url);
                     if ($fresh !== null) {
-                        return $this->dataService->buildInitializedData($fresh->feed, $settings);
+                        return new ProvidedFeedData($this->dataService->buildInitializedData($fresh->feed, $settings));
                     }
                 }
             }
             if ($duration > 0 && $cached !== false && $stored !== null
                 && $stored->hasDocument && ($cached[self::REVISION] ?? null) === $stored->revision
             ) {
-                return $this->displayData($cached);
+                return new ProvidedFeedData($this->displayData($cached), $stored->revision);
             }
             $feed = $this->restoreFeed($url, $stored, $fetched);
             if ($feed !== null && $stored !== null) {
                 // Public events and getters remain outside transport/storage catches.
                 $data = $this->dataService->buildInitializedData($feed, $settings);
-                return $this->cacheData($identifier, $data, $stored->revision, $duration);
+                return new ProvidedFeedData($this->cacheData($identifier, $data, $stored->revision, $duration), $stored->revision);
             }
             $lastAttempt = $stored->lastAttemptAt ?? 0;
             if ($attempted || !($stored->hasDocument ?? false) || ($lastAttempt !== 0 && $lastAttempt + 60 > $now)) {
@@ -141,9 +147,9 @@ final class FeedProvider
             $needsFetch = true;
         }
         if (!$scheduler && $duration > 0 && $cached !== false && (isset($cached['feed']) || isset($cached['items']))) {
-            return $this->displayData($cached);
+            return new ProvidedFeedData($this->displayData($cached));
         }
-        return $this->cacheData($identifier, ['settings' => $settings], '', $duration);
+        return new ProvidedFeedData($this->cacheData($identifier, ['settings' => $settings], '', $duration));
     }
 
     private function restoreFeed(string $url, ?StoredFeed &$stored, ?FetchedFeed $fetched): ?SimplePie
@@ -170,16 +176,16 @@ final class FeedProvider
         return null;
     }
 
-    /**
-     * @param array<string, mixed> $settings
-     * @return array<string, mixed>
-     */
-    private function fetchedData(string $identifier, FetchedFeed $fetched, array $settings, int $duration, bool $scheduler, bool $persisted = false): array
+    /** @param array<string, mixed> $settings */
+    private function fetchedData(string $identifier, FetchedFeed $fetched, array $settings, int $duration, bool $scheduler, bool $persisted = false): ProvidedFeedData
     {
         $data = $this->dataService->buildInitializedData($fetched->feed, $settings);
         $revision = $fetched->document->revision();
         $cacheRevision = $persisted ? $revision : 'unstored:' . $revision;
-        return $scheduler ? $data : $this->cacheData($identifier, $data, $cacheRevision, $duration);
+        if (!$scheduler) {
+            $data = $this->cacheData($identifier, $data, $cacheRevision, $duration);
+        }
+        return new ProvidedFeedData($data, $persisted ? $revision : null);
     }
 
     private function fetchWithoutStorage(string $url): ?FetchedFeed

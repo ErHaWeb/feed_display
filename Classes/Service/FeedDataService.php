@@ -232,16 +232,16 @@ class FeedDataService
         }
 
         $temporaryFileName = md5($filename) . '.' . $extension;
+        $tempFilePath = 'typo3temp/assets/images/' . $temporaryFileName;
+        $absoluteTempFilePath = Environment::getPublicPath() . '/' . $tempFilePath;
+        if (@is_file($absoluteTempFilePath)) {
+            return $tempFilePath;
+        }
         $content = GeneralUtility::getUrl($fileUrl);
         if ($content === false) {
             return null;
         }
-
-        $tempFilePath = 'typo3temp/assets/images/' . $temporaryFileName;
-        $absoluteTempFilePath = Environment::getPublicPath() . '/' . $tempFilePath;
-        if (!@is_file($absoluteTempFilePath)) {
-            GeneralUtility::writeFileToTypo3tempDir($absoluteTempFilePath, $content);
-        }
+        GeneralUtility::writeFileToTypo3tempDir($absoluteTempFilePath, $content);
 
         return $tempFilePath;
     }

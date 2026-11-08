@@ -18,7 +18,10 @@ declare(strict_types=1);
 namespace ErHaWeb\FeedDisplay\Controller;
 
 use ErHaWeb\FeedDisplay\Service\FeedProvider;
+use ErHaWeb\FeedDisplay\Storage\FeedStorage;
 use Psr\Http\Message\ResponseInterface;
+use TYPO3\CMS\Core\Cache\CacheDataCollector;
+use TYPO3\CMS\Core\Cache\CacheTag;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 class FeedController extends ActionController
@@ -27,11 +30,29 @@ class FeedController extends ActionController
 
     public function displayAction(): ResponseInterface
     {
+        $scheduler = trim((string)($this->settings['fetchMode'] ?? 'live')) === 'scheduler';
+        if (array_key_exists('fetchMode', $this->settings)) {
+            unset($this->settings['fetchMode']);
+            $this->view->assign('settings', $this->settings);
+        }
         if ($this->settings === []) {
             return $this->htmlResponse();
         }
 
-        $this->view->assign('data', $this->feedProvider->getData($this->settings));
+        $url = trim(stripslashes((string)($this->settings['feedUrl'] ?? '')));
+        $collector = $this->request->getAttribute('frontend.cache.collector');
+        if ($scheduler && $url !== '' && $collector instanceof CacheDataCollector) {
+            $collector->addCacheTags(new CacheTag(FeedStorage::cacheTag($url)));
+        }
+        $provided = $this->feedProvider->provide($this->settings, $scheduler);
+        $data = $provided->data;
+        if ($scheduler && $url !== '' && $provided->revision !== null && $collector instanceof CacheDataCollector) {
+            $collector->addCacheTags(new CacheTag(FeedStorage::revisionTag($url, $provided->revision)));
+        }
+        if ($scheduler && !isset($data['feed']) && !isset($data['items']) && $collector instanceof CacheDataCollector) {
+            $collector->restrictMaximumLifetime(60);
+        }
+        $this->view->assign('data', $data);
         return $this->htmlResponse();
     }
 }

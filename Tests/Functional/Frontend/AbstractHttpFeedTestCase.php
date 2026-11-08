@@ -30,6 +30,7 @@ abstract class AbstractHttpFeedTestCase extends AbstractFeedFrontendTestCase
         parent::setUp();
         FeedHttp::$requests = [];
         FeedHttp::$responses = [];
+        FeedHttp::$beforeResponse = [];
         // Frontend Bootstrap::init() reloads HTTP configuration from the test instance.
         file_put_contents($this->instancePath . '/typo3conf/system/additional.php', '<?php $GLOBALS[\'TYPO3_CONF_VARS\'][\'HTTP\'][\'handler\'][\'feed-test\'] = \\' . FeedHttp::class . '::middleware(...);');
         $GLOBALS['TYPO3_CONF_VARS']['HTTP']['handler']['feed-test'] = FeedHttp::middleware(...);

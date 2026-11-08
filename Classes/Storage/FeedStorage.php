@@ -39,6 +39,17 @@ final class FeedStorage
         return 'feeddisplay_url_' . self::hashUrl($url);
     }
 
+    public static function revisionTag(string $url, string $revision): string
+    {
+        return 'feeddisplay_rev_' . self::hashUrl($url) . '_' . $revision;
+    }
+
+    public function findRevisionByHash(string $urlHash): ?string
+    {
+        $revision = $this->connection()->select(['revision'], self::TABLE, ['url_hash' => $urlHash])->fetchOne();
+        return $revision === false ? null : (string)$revision;
+    }
+
     public function find(string $url): ?StoredFeed
     {
         $row = $this->connection()->select(['*'], self::TABLE, ['url_hash' => self::hashUrl($url)])->fetchAssociative();

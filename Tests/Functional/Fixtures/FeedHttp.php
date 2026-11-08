@@ -28,12 +28,17 @@ final class FeedHttp
     public static array $requests = [];
     /** @var array<string, Response> */
     public static array $responses = [];
+    /** @var array<string, \Closure(): void> */
+    public static array $beforeResponse = [];
 
     public static function middleware(callable $next): callable
     {
         return static function (RequestInterface $request, array $options) {
             $uri = (string)$request->getUri();
             self::$requests[] = $uri;
+            $callback = self::$beforeResponse[$uri] ?? null;
+            unset(self::$beforeResponse[$uri]);
+            $callback?->__invoke();
             $response = self::$responses[$uri] ?? new Response(503, [], 'Unavailable');
             // The recorder closes consumed streams. Every request needs a fresh body.
             return Create::promiseFor(new Response($response->getStatusCode(), $response->getHeaders(), (string)$response->getBody()));

@@ -20,6 +20,7 @@ namespace ErHaWeb\FeedDisplay\Tests\Unit\Storage;
 use Doctrine\DBAL\Result;
 use ErHaWeb\FeedDisplay\Storage\FeedStorage;
 use ErHaWeb\FeedDisplay\Tests\Fixtures\StoredDocument;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Test;
 use Psr\Log\NullLogger;
 use TYPO3\CMS\Core\Database\Connection;
@@ -70,6 +71,28 @@ final class FeedStorageTest extends UnitTestCase
         } finally {
             fclose($stream);
         }
+    }
+
+    #[Test]
+    #[DataProvider('storedRevisions')]
+    public function revisionLookupDoesNotLoadTheDocument(string|false $value, ?string $expected): void
+    {
+        $hash = FeedStorage::hashUrl('https://example.test/feed');
+        $result = self::createStub(Result::class);
+        $result->method('fetchOne')->willReturn($value);
+        $connection = $this->createMock(Connection::class);
+        $connection->expects(self::once())->method('select')->with(['revision'], FeedStorage::TABLE, ['url_hash' => $hash])->willReturn($result);
+        $pool = self::createStub(ConnectionPool::class);
+        $pool->method('getConnectionForTable')->willReturn($connection);
+        self::assertSame($expected, (new FeedStorage($pool, new NullLogger()))->findRevisionByHash($hash));
+    }
+
+    /** @return iterable<string, array{string|false, ?string}> */
+    public static function storedRevisions(): iterable
+    {
+        yield 'successful source' => [str_repeat('a', 64), str_repeat('a', 64)];
+        yield 'missing source' => [false, null];
+        yield 'failed first attempt' => ['', ''];
     }
 
 }
