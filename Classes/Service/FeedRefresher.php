@@ -77,6 +77,16 @@ final class FeedRefresher
         $this->storage->markInvalidated($stored->url, $stored->revision);
     }
 
+    public function remove(string $url): RefreshResult
+    {
+        return $this->withLock($url, 'remove', function () use ($url): RefreshResult {
+            $this->storage->remove($url);
+            // Also retry this after a previous deletion whose invalidation failed.
+            $this->cacheManager->flushCachesInGroupByTag('pages', FeedStorage::cacheTag($url));
+            return new RefreshResult('updated');
+        });
+    }
+
     /** @param callable(): RefreshResult $operation */
     private function withLock(string $url, string $name, callable $operation): RefreshResult
     {
