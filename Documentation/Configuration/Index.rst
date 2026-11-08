@@ -12,5 +12,6 @@ Configuration
 
    SiteSet
    TypoScriptReference/Index
+   Scheduler
    TSconfig
    Events

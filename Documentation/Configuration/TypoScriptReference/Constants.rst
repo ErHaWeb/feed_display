@@ -257,8 +257,27 @@ Cache duration
     :Default: 3600
     :Path: plugin.tx_feeddisplay_pi1.settings
 
-    Time in seconds in which the data is to be read from the
-    cache until the next renewal of the cache. (0 = no cache)
+    In live mode, the minimum interval between source refresh attempts and the
+    lifetime of prepared display arrays. Zero and negative values attempt a
+    refresh on every plugin execution. Successful responses remain stored
+    permanently even when this value is zero. In scheduler mode this value
+    affects prepared arrays only. TYPO3's page cache is independent.
+
+..  _configuration-typoscript-constants-settings-fetchmode:
+
+Fetch mode
+~~~~~~~~~~
+
+..  confval:: fetchMode
+
+    :type: string
+    :Default: live
+    :Path: plugin.tx_feeddisplay_pi1.settings
+
+    ``live`` refreshes during page rendering as needed. ``scheduler`` fetches a
+    missing source once, then displays its last successful response until a job
+    refreshes it. Unknown or empty values use live mode. See
+    :ref:`configuration-scheduler` for first-fetch retries and job setup.
 
 ..  _configuration-typoscript-constants-settings-getfields:
 
@@ -341,7 +360,7 @@ Ignore Flexform Settings if empty
 ..  confval:: ignoreFlexFormSettingsIfEmpty
 
     :type: list of strings, separated by comma
-    :Default: feedUrl, maxFeedCount, maxContentLength, maxHeaderLength, logoMaxWidth, logoMaxHeight, feedIconMaxWidth, feedIconMaxHeight, dateFormat, stripTags, linkTarget, errorMessage, cacheDuration, getFields.feed, getFields.items
+    :Default: feedUrl, maxFeedCount, maxContentLength, maxHeaderLength, logoMaxWidth, logoMaxHeight, feedIconMaxWidth, feedIconMaxHeight, dateFormat, stripTags, linkTarget, errorMessage, cacheDuration, fetchMode, getFields.feed, getFields.items
     :Path: plugin.tx_feeddisplay_pi1
 
     Comma separated list of settings to be overridden by TypoScript if the

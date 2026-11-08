@@ -12,9 +12,10 @@ to Fluid templates.
 
 Remote `http` and `https` feeds are fetched through TYPO3's PSR-17/PSR-18 HTTP
 client, so instance-wide HTTP settings such as proxy configuration are applied
-automatically. Parsed results are cached through TYPO3's caching framework and
-refreshed when plugin configuration changes or the configured cache lifetime
-expires.
+automatically. The last successful response per source is stored permanently
+in the database and survives TYPO3 cache flushes. Prepared display data stays
+separate per plugin configuration. Live refresh is the default; an optional
+`feeddisplay:refresh` job can keep scheduler-mode sources current.
 
 ## At a glance
 
@@ -36,13 +37,24 @@ expires.
 - Configurable feed and item fields for Fluid templates.
 - Site Set support for TYPO3 v13 and v14, with a static TypoScript fallback.
 - Content-element FlexForm settings plus Site Settings and TypoScript constants.
-- Dedicated cache for parsed feed data and plugin configuration.
+- Durable last-successful responses with disposable display caches.
+- Optional scheduled refresh and explicit removal of unused sources.
 
 ## Installation
 
 ```bash
 composer require erhaweb/feed-display
 ```
+
+After installation or an update from 3.0.2, apply the regular database schema
+update (`vendor/bin/typo3 extension:setup` in Composer installations). Existing
+plugins remain in live mode; no Scheduler job is required. Durable protection
+starts with the first successful fetch. Cache flushes rebuild display arrays
+without forcing a download. Use `feeddisplay:refresh` to refresh sources and
+`feeddisplay:remove --url='…'` to remove explicitly selected ones. Configured
+sources can be created again afterwards.
+
+See [persistent feeds and Scheduler setup](Documentation/Configuration/Scheduler.rst).
 
 Continue with the
 [Composer installation guide](https://docs.typo3.org/p/erhaweb/feed-display/main/en-us/Installation/)
