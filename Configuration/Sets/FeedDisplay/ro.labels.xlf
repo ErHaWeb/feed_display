@@ -163,6 +163,14 @@
         <source>Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</source>
         <target state="final">Timpul în secunde în care datele vor fi citite din cache până la următoarea reînnoire a cache-ului. (0 = fără cache)</target>
       </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.fetchMode" resname="settings.plugin.tx_feeddisplay_pi1.settings.fetchMode">
+        <source>Fetch mode</source>
+        <target state="needs-translation">Fetch mode</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.fetchMode" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.fetchMode">
+        <source>Fetch the feed during page rendering or through the refresh command.</source>
+        <target state="needs-translation">Fetch the feed during page rendering or through the refresh command.</target>
+      </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty" resname="settings.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty" approved="yes">
         <source>Ignore FlexForm Settings if empty</source>
         <target state="final">Ignoră setările FlexForm dacă sunt goale</target>
