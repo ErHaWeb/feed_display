@@ -155,9 +155,25 @@
         <source>Feed cache</source>
         <target state="final">Plūsmas kešatmiņa</target>
       </trans-unit>
-      <trans-unit id="flexform.cacheDuration.description" approved="yes">
-        <source>Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache, empty = Defined by TypoScript)</source>
-        <target state="final">Laiks sekundēs, cik ilgi dati jālasa no kešatmiņas līdz nākamajai kešatmiņas atjaunošanai. (0 = bez kešatmiņas, tukšs = definēts TypoScript)</target>
+      <trans-unit id="flexform.cacheDuration.description">
+        <source>Minimum interval between live refresh attempts and lifetime of prepared display data, in seconds. Zero or negative: refresh on each plugin execution. Successful responses remain stored permanently. In scheduler mode this controls display caching only. Empty: inherit TypoScript.</source>
+        <target state="needs-translation">Minimum interval between live refresh attempts and lifetime of prepared display data, in seconds. Zero or negative: refresh on each plugin execution. Successful responses remain stored permanently. In scheduler mode this controls display caching only. Empty: inherit TypoScript.</target>
+      </trans-unit>
+      <trans-unit id="flexform.fetchMode.label">
+        <source>Fetch mode</source>
+        <target state="needs-translation">Fetch mode</target>
+      </trans-unit>
+      <trans-unit id="flexform.fetchMode.description">
+        <source>Live refreshes the shared feed source as needed during page rendering and retains the last successful response permanently. Scheduler loads a missing feed once during page rendering; afterwards only feeddisplay:refresh updates it. Configure a regular refresh job. Failed first attempts are retried after 60 seconds. Empty: inherit TypoScript or Site Set settings.</source>
+        <target state="needs-translation">Live refreshes the shared feed source as needed during page rendering and retains the last successful response permanently. Scheduler loads a missing feed once during page rendering; afterwards only feeddisplay:refresh updates it. Configure a regular refresh job. Failed first attempts are retried after 60 seconds. Empty: inherit TypoScript or Site Set settings.</target>
+      </trans-unit>
+      <trans-unit id="flexform.fetchMode.live">
+        <source>Live</source>
+        <target state="needs-translation">Live</target>
+      </trans-unit>
+      <trans-unit id="flexform.fetchMode.scheduler">
+        <source>Scheduler</source>
+        <target state="needs-translation">Scheduler</target>
       </trans-unit>
       <trans-unit id="flexform.placeholder.feed" approved="yes">
         <source>Defined by Feed or TypoScript (default)</source>
@@ -487,9 +503,13 @@
         <source>Strip tags:Remove HTML tags from the feed content</source>
         <target state="final">Noņemt tagus:Remove HTML tags from the feed content</target>
       </trans-unit>
-      <trans-unit id="constants.settings.cacheDuration" approved="yes">
-        <source>Feed cache:Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</source>
-        <target state="final">Plūsmas kešatmiņa:Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</target>
+      <trans-unit id="constants.settings.cacheDuration">
+        <source>Feed cache:Live refresh interval and display cache lifetime in seconds. Zero or negative bypasses these intervals, but successful responses remain stored permanently.</source>
+        <target state="needs-translation">Feed cache:Live refresh interval and display cache lifetime in seconds. Zero or negative bypasses these intervals, but successful responses remain stored permanently.</target>
+      </trans-unit>
+      <trans-unit id="constants.settings.fetchMode">
+        <source>Fetch mode:Fetch the feed during page rendering or through the refresh command.</source>
+        <target state="needs-translation">Fetch mode:Fetch the feed during page rendering or through the refresh command.</target>
       </trans-unit>
       <trans-unit id="constants.settings.ignoreFlexFormSettingsIfEmpty" approved="yes">
         <source>Ignore FlexForm Settings if empty:Comma separated list of FlexForm settings that will be ignored in the extension settings merge process, if their value is considered empty (either an empty string or a string containing 0).</source>
