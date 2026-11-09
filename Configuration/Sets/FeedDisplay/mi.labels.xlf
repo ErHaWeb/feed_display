@@ -163,6 +163,14 @@
         <source>Time in seconds in which the data is to be read from the cache until the next renewal of the cache. (0 = no cache)</source>
         <target state="final">Te wā i roto i ngā hēkona e pānuitia ai ngā raraunga mai i te keteroki tae noa ki te whakahoutanga keteroki e whai ake nei. (0 = kāore he keteroki)</target>
       </trans-unit>
+      <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.fetchMode" resname="settings.plugin.tx_feeddisplay_pi1.settings.fetchMode">
+        <source>Fetch mode</source>
+        <target state="needs-translation">Fetch mode</target>
+      </trans-unit>
+      <trans-unit id="settings.description.plugin.tx_feeddisplay_pi1.settings.fetchMode" resname="settings.description.plugin.tx_feeddisplay_pi1.settings.fetchMode">
+        <source>Fetch the feed during page rendering or through the refresh command.</source>
+        <target state="needs-translation">Fetch the feed during page rendering or through the refresh command.</target>
+      </trans-unit>
       <trans-unit id="settings.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty" resname="settings.plugin.tx_feeddisplay_pi1.settings.ignoreFlexFormSettingsIfEmpty" approved="yes">
         <source>Ignore FlexForm Settings if empty</source>
         <target state="final">Waiho ngā tautuhinga FlexForm mēnā he pātea</target>
